@@ -1,0 +1,34 @@
+name: peshat
+description: Point your camera at any text, get an instant translation.
+publish_to: "none"
+version: 1.0.0+1
+environment:
+  sdk: ">=3.0.0 <4.0.0"
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  camera: ^0.11.0
+  google_mlkit_text_recognition: ^0.13.0
+  google_mlkit_translation: ^0.11.1
+  google_mobile_ads: ^5.1.0
+  in_app_purchase: ^3.2.0
+  shared_preferences: ^2.3.0
+  flutter_native_splash: ^2.4.0
+  google_fonts: ^6.2.1
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+flutter:
+  generate: true
+  assets:
+    - assets/icon/
+    - assets/splash/
+
+flutter_native_splash:
+  color: "#EDEAE2"
+  image: assets/splash/logo.png
+  color_dark: "#14171C"
+  image_dark: assets/splash/logo.png
