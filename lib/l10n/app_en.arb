@@ -1,6 +1,38 @@
 {
   "@@locale": "en",
-  "scanButtonLabel": "Scan",
-  "translationCompleteLabel": "Translation complete",
-  "settingsTitle": "Settings"
+  "appName": "Peshat",
+  "scanButtonLabel": "Scan Document",
+  "resultTitle": "Result",
+  "copyAction": "Copy",
+  "shareAction": "Share",
+  "saveAction": "Save",
+  "readyToScan": "Ready to scan",
+  "selectLanguageTitle": "Select Language",
+  "searchLanguagesHint": "Search languages...",
+  "settingsTitle": "Settings",
+  "proStatusLabel": "Pro Status:",
+  "freeStatus": "Free",
+  "themeLabel": "Theme",
+  "themeLight": "Light",
+  "themeSystem": "System",
+  "themeDark": "Dark",
+  "upgradeToProButton": "Upgrade to Pro (Remove Ads)",
+  "restorePurchaseButton": "Restore Purchase",
+  "privacyPolicyLink": "Privacy Policy",
+  "supportLink": "Support",
+  "proBadge": "PRO",
+  "semanticsAppIcon": "Peshat App Icon",
+  "semanticsScanButton": "Scan Document Button",
+  "semanticsSearchField": "Search languages",
+  "semanticsUpgrade": "Upgrade to Pro",
+  "cameraUsageDescription": "Peshat uses the camera to scan text for translation. Images are processed on-device and are not uploaded.",
+  "trackingUsageDescription": "Used to show relevant, non-personalized ads if you decline; personalized ads if you allow.",
+  "nativeAppName": "Peshat",
+  "semanticsLanguageEntry": "{englishName}, {nativeName}",
+  "@semanticsLanguageEntry": {
+    "placeholders": {
+      "englishName": { "type": "String" },
+      "nativeName": { "type": "String" }
+    }
+  }
 }

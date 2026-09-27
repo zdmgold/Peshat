@@ -3,15 +3,16 @@ import '../core/utils/spacing.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/subscription_provider.dart';
 import '../core/services/iap_service.dart';
+import '../l10n/app_localizations.dart';
 import '../widgets/pro_badge.dart';
 
 class SettingsScreen extends StatefulWidget {
   final ThemeProvider themeProvider;
   final SubscriptionProvider subProvider;
-  
+
   const SettingsScreen({
-    super.key, 
-    required this.themeProvider, 
+    super.key,
+    required this.themeProvider,
     required this.subProvider,
   });
 
@@ -24,8 +25,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
-      appBar: AppBar(title: const Text('Settings')),
+      appBar: AppBar(title: Text(l10n.settingsTitle)),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.all(Spacing.md),
@@ -34,25 +37,26 @@ class _SettingsScreenState extends State<SettingsScreen> {
             children: [
               Row(
                 children: [
-                  const Text('Pro Status:', style: TextStyle(fontWeight: FontWeight.w600)),
+                  Text(l10n.proStatusLabel, style: const TextStyle(fontWeight: FontWeight.w600)),
                   const SizedBox(width: Spacing.sm),
                   ValueListenableBuilder<bool>(
                     valueListenable: widget.subProvider,
-                    builder: (context, isPro, child) => isPro ? const ProBadge() : const Text('Free'),
+                    builder: (context, isPro, child) =>
+                        isPro ? const ProBadge() : Text(l10n.freeStatus),
                   ),
                 ],
               ),
               const SizedBox(height: Spacing.lg),
-              const Text('Theme', style: TextStyle(fontWeight: FontWeight.w600)),
+              Text(l10n.themeLabel, style: const TextStyle(fontWeight: FontWeight.w600)),
               const SizedBox(height: Spacing.sm),
               ValueListenableBuilder<ThemeMode>(
                 valueListenable: widget.themeProvider,
                 builder: (context, currentMode, child) {
                   return SegmentedButton<ThemeMode>(
-                    segments: const [
-                      ButtonSegment(value: ThemeMode.light, label: Text('Light')),
-                      ButtonSegment(value: ThemeMode.system, label: Text('System')),
-                      ButtonSegment(value: ThemeMode.dark, label: Text('Dark')),
+                    segments: [
+                      ButtonSegment(value: ThemeMode.light, label: Text(l10n.themeLight)),
+                      ButtonSegment(value: ThemeMode.system, label: Text(l10n.themeSystem)),
+                      ButtonSegment(value: ThemeMode.dark, label: Text(l10n.themeDark)),
                     ],
                     selected: {currentMode},
                     onSelectionChanged: (Set<ThemeMode> newSelection) {
@@ -71,19 +75,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       if (!isPro) ...[
                         const SizedBox(height: Spacing.sm),
                         Semantics(
-                          label: 'Upgrade to Pro',
+                          label: l10n.semanticsUpgrade,
                           child: ElevatedButton(
                             onPressed: _iapService.buyPro,
-                            child: const Text('Upgrade to Pro (Remove Ads)'),
+                            child: Text(l10n.upgradeToProButton),
                           ),
                         ),
                       ],
                       const SizedBox(height: Spacing.sm),
                       Semantics(
-                        label: 'Restore Purchase',
+                        label: l10n.restorePurchaseButton,
                         child: TextButton(
                           onPressed: _iapService.restore,
-                          child: const Text('Restore Purchase'),
+                          child: Text(l10n.restorePurchaseButton),
                         ),
                       ),
                     ],
@@ -94,8 +98,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
               Center(
                 child: Column(
                   children: [
-                    Semantics(label: 'Privacy Policy', child: TextButton(onPressed: () {}, child: const Text('Privacy Policy'))),
-                    Semantics(label: 'Support', child: TextButton(onPressed: () {}, child: const Text('Support'))),
+                    Semantics(
+                      label: l10n.privacyPolicyLink,
+                      child: TextButton(onPressed: () {}, child: Text(l10n.privacyPolicyLink)),
+                    ),
+                    Semantics(
+                      label: l10n.supportLink,
+                      child: TextButton(onPressed: () {}, child: Text(l10n.supportLink)),
+                    ),
                   ],
                 ),
               ),

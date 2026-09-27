@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../core/models/language.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/spacing.dart';
+import '../l10n/app_localizations.dart';
 
 class LanguagePickerScreen extends StatefulWidget {
   const LanguagePickerScreen({super.key});
@@ -23,24 +24,26 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
-    final filtered = supportedLanguages.where((lang) => 
-      lang.englishName.toLowerCase().contains(_query.toLowerCase()) ||
-      lang.nativeName.toLowerCase().contains(_query.toLowerCase()) // FIX: Case-insensitive
-    ).toList();
+    final l10n = AppLocalizations.of(context)!;
+    final filtered = supportedLanguages
+        .where((lang) =>
+            lang.englishName.toLowerCase().contains(_query.toLowerCase()) ||
+            lang.nativeName.toLowerCase().contains(_query.toLowerCase()))
+        .toList();
 
     return Scaffold(
-      appBar: AppBar(title: const Text('Select Language')),
+      appBar: AppBar(title: Text(l10n.selectLanguageTitle)),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(Spacing.md),
             child: Semantics(
-              label: 'Search languages',
+              label: l10n.semanticsSearchField,
               child: TextField(
                 controller: _searchController,
                 onChanged: (v) => setState(() => _query = v),
                 decoration: InputDecoration(
-                  hintText: 'Search languages...',
+                  hintText: l10n.searchLanguagesHint,
                   prefixIcon: const Icon(Icons.search),
                   filled: true,
                   fillColor: isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight,
@@ -58,7 +61,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
               itemBuilder: (context, index) {
                 final lang = filtered[index];
                 return Semantics(
-                  label: '${lang.englishName}, ${lang.nativeName}',
+                  label: l10n.semanticsLanguageEntry(lang.englishName, lang.nativeName),
                   child: ListTile(
                     leading: const Text('🏳️', style: TextStyle(fontSize: 24)),
                     title: Text(

@@ -3,6 +3,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../core/providers/subscription_provider.dart';
+import '../l10n/app_localizations.dart';
 import '../platform/document_scanner_service.dart';
 import '../widgets/banner_ad_widget.dart';
 import 'result_screen.dart';
@@ -40,6 +41,8 @@ class _ScanScreenState extends State<ScanScreen> {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final l10n = AppLocalizations.of(context)!;
+
     return ValueListenableBuilder<bool>(
       valueListenable: widget.subProvider,
       builder: (context, isPro, child) {
@@ -49,12 +52,16 @@ class _ScanScreenState extends State<ScanScreen> {
               children: [
                 const Spacer(),
                 Semantics(
-                  label: 'Peshat App Icon',
-                  child: Icon(Icons.document_scanner, size: 80, color: isDark ? AppColors.accentDark : AppColors.accentLight),
+                  label: l10n.semanticsAppIcon,
+                  child: Icon(
+                    Icons.document_scanner,
+                    size: 80,
+                    color: isDark ? AppColors.accentDark : AppColors.accentLight,
+                  ),
                 ),
                 const SizedBox(height: Spacing.lg),
                 Text(
-                  'Peshat',
+                  l10n.appName,
                   style: AppTypography.chrome.copyWith(
                     fontSize: 34,
                     fontWeight: FontWeight.w700,
@@ -63,7 +70,7 @@ class _ScanScreenState extends State<ScanScreen> {
                 ),
                 const SizedBox(height: Spacing.xl),
                 Semantics(
-                  label: 'Scan Document Button',
+                  label: l10n.semanticsScanButton,
                   child: SizedBox(
                     width: 200,
                     height: 56,
@@ -74,8 +81,19 @@ class _ScanScreenState extends State<ScanScreen> {
                         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
                       ),
                       child: _isScanning
-                          ? const SizedBox(width: 24, height: 24, child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2))
-                          : Text('Scan Document', style: AppTypography.chrome.copyWith(color: Colors.white, fontSize: 16, fontWeight: FontWeight.w600)),
+                          ? const SizedBox(
+                              width: 24,
+                              height: 24,
+                              child: CircularProgressIndicator(color: Colors.white, strokeWidth: 2),
+                            )
+                          : Text(
+                              l10n.scanButtonLabel,
+                              style: AppTypography.chrome.copyWith(
+                                color: Colors.white,
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                              ),
+                            ),
                     ),
                   ),
                 ),

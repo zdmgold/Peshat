@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:camera/camera.dart';
-import '../core/models/scan_state.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/spacing.dart';
 import '../core/providers/scan_provider.dart';
+import '../core/models/scan_state.dart';
 import '../core/services/text_recognizer_service.dart';
 import '../core/services/translator_service.dart';
+import '../l10n/app_localizations.dart';
 import '../widgets/source_text_chip.dart';
 import '../widgets/translation_panel.dart';
 
@@ -22,7 +23,7 @@ class _ResultScreenState extends State<ResultScreen> {
   final ScanProvider _provider = ScanProvider();
   final TextRecognizerService _ocr = TextRecognizerService();
   final TranslatorService _translator = TranslatorService();
-  final String _targetLang = 'es'; 
+  final String _targetLang = 'es';
 
   @override
   void initState() {
@@ -43,9 +44,14 @@ class _ResultScreenState extends State<ResultScreen> {
 
   @override
   Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final l10n = AppLocalizations.of(context)!;
+
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Result'),
+        title: Text(l10n.resultTitle),
+        backgroundColor: isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight,
+        foregroundColor: isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,
       ),
       body: SafeArea(
         child: ValueListenableBuilder(
@@ -71,16 +77,28 @@ class _ResultScreenState extends State<ResultScreen> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                       children: [
-                        _ActionIconButton(icon: Icons.copy, label: 'Copy', onTap: () => Clipboard.setData(ClipboardData(text: state.translatedText))),
-                        _ActionIconButton(icon: Icons.share, label: 'Share', onTap: () {}),
-                        _ActionIconButton(icon: Icons.save, label: 'Save', onTap: () {}),
+                        _ActionIconButton(
+                          icon: Icons.copy,
+                          label: l10n.copyAction,
+                          onTap: () => Clipboard.setData(ClipboardData(text: state.translatedText)),
+                        ),
+                        _ActionIconButton(
+                          icon: Icons.share,
+                          label: l10n.shareAction,
+                          onTap: () {},
+                        ),
+                        _ActionIconButton(
+                          icon: Icons.save,
+                          label: l10n.saveAction,
+                          onTap: () {},
+                        ),
                       ],
                     ),
                   ],
                 ),
               );
             }
-            return const Center(child: Text('Ready to scan'));
+            return Center(child: Text(l10n.readyToScan));
           },
         ),
       ),
@@ -108,7 +126,13 @@ class _ActionIconButton extends StatelessWidget {
             children: [
               Icon(icon, color: isDark ? AppColors.accentDark : AppColors.accentLight),
               const SizedBox(height: 4),
-              Text(label, style: TextStyle(fontSize: 12, color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight)),
+              Text(
+                label,
+                style: TextStyle(
+                  fontSize: 12,
+                  color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight,
+                ),
+              ),
             ],
           ),
         ),
