@@ -5,7 +5,22 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_localizations_ar.dart';
+import 'app_localizations_bn.dart';
+import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
+import 'app_localizations_es.dart';
+import 'app_localizations_fa.dart';
+import 'app_localizations_fr.dart';
+import 'app_localizations_hi.dart';
+import 'app_localizations_id.dart';
+import 'app_localizations_ja.dart';
+import 'app_localizations_pt.dart';
+import 'app_localizations_ru.dart';
+import 'app_localizations_tr.dart';
+import 'app_localizations_ur.dart';
+import 'app_localizations_vi.dart';
+import 'app_localizations_zh.dart';
 
 // ignore_for_file: type=lint
 
@@ -90,7 +105,22 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
-    Locale('en')
+    Locale('ar'),
+    Locale('bn'),
+    Locale('de'),
+    Locale('en'),
+    Locale('es'),
+    Locale('fa'),
+    Locale('fr'),
+    Locale('hi'),
+    Locale('id'),
+    Locale('ja'),
+    Locale('pt'),
+    Locale('ru'),
+    Locale('tr'),
+    Locale('ur'),
+    Locale('vi'),
+    Locale('zh')
   ];
 
   /// No description provided for @appName.
@@ -153,17 +183,17 @@ abstract class AppLocalizations {
   /// **'Settings'**
   String get settingsTitle;
 
-  /// No description provided for @proStatusLabel.
+  /// No description provided for @adStatusLabel.
   ///
   /// In en, this message translates to:
-  /// **'Pro Status:'**
-  String get proStatusLabel;
+  /// **'Ad Status:'**
+  String get adStatusLabel;
 
-  /// No description provided for @freeStatus.
+  /// No description provided for @adsShownStatus.
   ///
   /// In en, this message translates to:
-  /// **'Free'**
-  String get freeStatus;
+  /// **'Ads Shown'**
+  String get adsShownStatus;
 
   /// No description provided for @themeLabel.
   ///
@@ -189,11 +219,11 @@ abstract class AppLocalizations {
   /// **'Dark'**
   String get themeDark;
 
-  /// No description provided for @upgradeToProButton.
+  /// No description provided for @removeAdsButton.
   ///
   /// In en, this message translates to:
-  /// **'Upgrade to Pro (Remove Ads)'**
-  String get upgradeToProButton;
+  /// **'Remove Ads'**
+  String get removeAdsButton;
 
   /// No description provided for @restorePurchaseButton.
   ///
@@ -213,11 +243,11 @@ abstract class AppLocalizations {
   /// **'Support'**
   String get supportLink;
 
-  /// No description provided for @proBadge.
+  /// No description provided for @adsRemovedBadge.
   ///
   /// In en, this message translates to:
-  /// **'PRO'**
-  String get proBadge;
+  /// **'Ads Removed'**
+  String get adsRemovedBadge;
 
   /// No description provided for @semanticsAppIcon.
   ///
@@ -237,11 +267,11 @@ abstract class AppLocalizations {
   /// **'Search languages'**
   String get semanticsSearchField;
 
-  /// No description provided for @semanticsUpgrade.
+  /// No description provided for @semanticsRemoveAds.
   ///
   /// In en, this message translates to:
-  /// **'Upgrade to Pro'**
-  String get semanticsUpgrade;
+  /// **'Remove Ads'**
+  String get semanticsRemoveAds;
 
   /// No description provided for @cameraUsageDescription.
   ///
@@ -277,7 +307,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['en'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['ar', 'bn', 'de', 'en', 'es', 'fa', 'fr', 'hi', 'id', 'ja', 'pt', 'ru', 'tr', 'ur', 'vi', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -288,7 +318,22 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'ar': return AppLocalizationsAr();
+    case 'bn': return AppLocalizationsBn();
+    case 'de': return AppLocalizationsDe();
     case 'en': return AppLocalizationsEn();
+    case 'es': return AppLocalizationsEs();
+    case 'fa': return AppLocalizationsFa();
+    case 'fr': return AppLocalizationsFr();
+    case 'hi': return AppLocalizationsHi();
+    case 'id': return AppLocalizationsId();
+    case 'ja': return AppLocalizationsJa();
+    case 'pt': return AppLocalizationsPt();
+    case 'ru': return AppLocalizationsRu();
+    case 'tr': return AppLocalizationsTr();
+    case 'ur': return AppLocalizationsUr();
+    case 'vi': return AppLocalizationsVi();
+    case 'zh': return AppLocalizationsZh();
   }
 
   throw FlutterError(

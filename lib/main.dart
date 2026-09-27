@@ -4,7 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/utils/app_theme.dart';
 import 'core/utils/error_handler.dart';
 import 'core/providers/theme_provider.dart';
-import 'core/providers/subscription_provider.dart';
+import 'core/providers/purchase_provider.dart';
 import 'l10n/app_localizations.dart';
 import 'screens/scan_screen.dart';
 
@@ -25,13 +25,13 @@ class PeshatApp extends StatefulWidget {
 
 class _PeshatAppState extends State<PeshatApp> {
   late final ThemeProvider themeProvider;
-  late final SubscriptionProvider subProvider;
+  late final PurchaseProvider purchaseProvider;
 
   @override
   void initState() {
     super.initState();
     themeProvider = ThemeProvider(widget.prefs);
-    subProvider = SubscriptionProvider(widget.prefs);
+    purchaseProvider = PurchaseProvider(widget.prefs);
   }
 
   @override
@@ -45,7 +45,7 @@ class _PeshatAppState extends State<PeshatApp> {
         themeMode: themeProvider.value,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: ScanScreen(subProvider: subProvider),
+        home: ScanScreen(purchaseProvider: purchaseProvider),
       ),
     );
   }

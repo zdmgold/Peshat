@@ -39,10 +39,10 @@ class AppLocalizationsEn extends AppLocalizations {
   String get settingsTitle => 'Settings';
 
   @override
-  String get proStatusLabel => 'Pro Status:';
+  String get adStatusLabel => 'Ad Status:';
 
   @override
-  String get freeStatus => 'Free';
+  String get adsShownStatus => 'Ads Shown';
 
   @override
   String get themeLabel => 'Theme';
@@ -57,7 +57,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get themeDark => 'Dark';
 
   @override
-  String get upgradeToProButton => 'Upgrade to Pro (Remove Ads)';
+  String get removeAdsButton => 'Remove Ads';
 
   @override
   String get restorePurchaseButton => 'Restore Purchase';
@@ -69,7 +69,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get supportLink => 'Support';
 
   @override
-  String get proBadge => 'PRO';
+  String get adsRemovedBadge => 'Ads Removed';
 
   @override
   String get semanticsAppIcon => 'Peshat App Icon';
@@ -81,7 +81,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get semanticsSearchField => 'Search languages';
 
   @override
-  String get semanticsUpgrade => 'Upgrade to Pro';
+  String get semanticsRemoveAds => 'Remove Ads';
 
   @override
   String get cameraUsageDescription => 'Peshat uses the camera to scan text for translation. Images are processed on-device and are not uploaded.';

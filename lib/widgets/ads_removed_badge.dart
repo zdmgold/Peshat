@@ -3,8 +3,8 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 
-class ProBadge extends StatelessWidget {
-  const ProBadge({super.key});
+class AdsRemovedBadge extends StatelessWidget {
+  const AdsRemovedBadge({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,12 +17,11 @@ class ProBadge extends StatelessWidget {
         borderRadius: BorderRadius.circular(Spacing.xs),
       ),
       child: Text(
-        l10n.proBadge,
+        l10n.adsRemovedBadge,
         style: const TextStyle(
           color: Colors.white,
           fontSize: 12,
           fontWeight: FontWeight.bold,
-          letterSpacing: 1.0,
         ),
       ),
     );

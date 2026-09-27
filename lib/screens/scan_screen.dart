@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
-import '../core/providers/subscription_provider.dart';
+import '../core/providers/purchase_provider.dart';
 import '../l10n/app_localizations.dart';
 import '../platform/document_scanner_service.dart';
 import '../widgets/banner_ad_widget.dart';
 import 'result_screen.dart';
 
 class ScanScreen extends StatefulWidget {
-  final SubscriptionProvider subProvider;
-  const ScanScreen({super.key, required this.subProvider});
+  final PurchaseProvider purchaseProvider;
+  const ScanScreen({super.key, required this.purchaseProvider});
 
   @override
   State<ScanScreen> createState() => _ScanScreenState();
@@ -44,8 +44,8 @@ class _ScanScreenState extends State<ScanScreen> {
     final l10n = AppLocalizations.of(context)!;
 
     return ValueListenableBuilder<bool>(
-      valueListenable: widget.subProvider,
-      builder: (context, isPro, child) {
+      valueListenable: widget.purchaseProvider,
+      builder: (context, adsRemoved, child) {
         return Scaffold(
           body: SafeArea(
             child: Column(
@@ -98,7 +98,7 @@ class _ScanScreenState extends State<ScanScreen> {
                   ),
                 ),
                 const Spacer(),
-                if (!isPro) const BannerAdWidget(),
+                if (!adsRemoved) const BannerAdWidget(),
               ],
             ),
           ),

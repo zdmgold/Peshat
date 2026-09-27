@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import '../core/utils/spacing.dart';
 import '../core/providers/theme_provider.dart';
-import '../core/providers/subscription_provider.dart';
+import '../core/providers/purchase_provider.dart';
 import '../core/services/iap_service.dart';
 import '../l10n/app_localizations.dart';
-import '../widgets/pro_badge.dart';
+import '../widgets/ads_removed_badge.dart';
 
 class SettingsScreen extends StatefulWidget {
   final ThemeProvider themeProvider;
-  final SubscriptionProvider subProvider;
+  final PurchaseProvider purchaseProvider;
 
   const SettingsScreen({
     super.key,
     required this.themeProvider,
-    required this.subProvider,
+    required this.purchaseProvider,
   });
 
   @override
@@ -37,12 +37,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
             children: [
               Row(
                 children: [
-                  Text(l10n.proStatusLabel, style: const TextStyle(fontWeight: FontWeight.w600)),
+                  Text(l10n.adStatusLabel, style: const TextStyle(fontWeight: FontWeight.w600)),
                   const SizedBox(width: Spacing.sm),
                   ValueListenableBuilder<bool>(
-                    valueListenable: widget.subProvider,
-                    builder: (context, isPro, child) =>
-                        isPro ? const ProBadge() : Text(l10n.freeStatus),
+                    valueListenable: widget.purchaseProvider,
+                    builder: (context, adsRemoved, child) =>
+                        adsRemoved ? const AdsRemovedBadge() : Text(l10n.adsShownStatus),
                   ),
                 ],
               ),
@@ -67,18 +67,18 @@ class _SettingsScreenState extends State<SettingsScreen> {
               ),
               const SizedBox(height: Spacing.lg),
               ValueListenableBuilder<bool>(
-                valueListenable: widget.subProvider,
-                builder: (context, isPro, child) {
+                valueListenable: widget.purchaseProvider,
+                builder: (context, adsRemoved, child) {
                   return Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
-                      if (!isPro) ...[
+                      if (!adsRemoved) ...[
                         const SizedBox(height: Spacing.sm),
                         Semantics(
-                          label: l10n.semanticsUpgrade,
+                          label: l10n.semanticsRemoveAds,
                           child: ElevatedButton(
-                            onPressed: _iapService.buyPro,
-                            child: Text(l10n.upgradeToProButton),
+                            onPressed: _iapService.buyRemoveAds,
+                            child: Text(l10n.removeAdsButton),
                           ),
                         ),
                       ],
