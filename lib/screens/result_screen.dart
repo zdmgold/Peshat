@@ -1,0 +1,118 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:camera/camera.dart';
+import '../core/models/scan_state.dart';
+import '../core/utils/app_colors.dart';
+import '../core/utils/spacing.dart';
+import '../core/providers/scan_provider.dart';
+import '../core/services/text_recognizer_service.dart';
+import '../core/services/translator_service.dart';
+import '../widgets/source_text_chip.dart';
+import '../widgets/translation_panel.dart';
+
+class ResultScreen extends StatefulWidget {
+  final String imagePath;
+  const ResultScreen({super.key, required this.imagePath});
+
+  @override
+  State<ResultScreen> createState() => _ResultScreenState();
+}
+
+class _ResultScreenState extends State<ResultScreen> {
+  final ScanProvider _provider = ScanProvider();
+  final TextRecognizerService _ocr = TextRecognizerService();
+  final TranslatorService _translator = TranslatorService();
+  final String _targetLang = 'es'; 
+
+  @override
+  void initState() {
+    super.initState();
+    _runPipeline();
+  }
+
+  Future<void> _runPipeline() async {
+    final xFile = XFile(widget.imagePath);
+    await _provider.runPipeline(xFile, _ocr, _translator, _targetLang);
+  }
+
+  @override
+  void dispose() {
+    _ocr.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Result'),
+      ),
+      body: SafeArea(
+        child: ValueListenableBuilder(
+          valueListenable: _provider,
+          builder: (context, state, child) {
+            if (state is ScanRecognizing || state is ScanTranslating) {
+              return const Center(child: CircularProgressIndicator());
+            }
+            if (state is ScanDone) {
+              return Padding(
+                padding: const EdgeInsets.all(Spacing.md),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    const SourceTextChip(languageCode: 'en', confidence: 0.95),
+                    const SizedBox(height: Spacing.md),
+                    Expanded(
+                      child: SingleChildScrollView(
+                        child: TranslationPanel(text: state.translatedText),
+                      ),
+                    ),
+                    const SizedBox(height: Spacing.md),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                      children: [
+                        _ActionIconButton(icon: Icons.copy, label: 'Copy', onTap: () => Clipboard.setData(ClipboardData(text: state.translatedText))),
+                        _ActionIconButton(icon: Icons.share, label: 'Share', onTap: () {}),
+                        _ActionIconButton(icon: Icons.save, label: 'Save', onTap: () {}),
+                      ],
+                    ),
+                  ],
+                ),
+              );
+            }
+            return const Center(child: Text('Ready to scan'));
+          },
+        ),
+      ),
+    );
+  }
+}
+
+class _ActionIconButton extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final VoidCallback onTap;
+  const _ActionIconButton({required this.icon, required this.label, required this.onTap});
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Semantics(
+      label: label,
+      child: InkWell(
+        onTap: onTap,
+        borderRadius: BorderRadius.circular(12),
+        child: Padding(
+          padding: const EdgeInsets.all(Spacing.sm),
+          child: Column(
+            children: [
+              Icon(icon, color: isDark ? AppColors.accentDark : AppColors.accentLight),
+              const SizedBox(height: 4),
+              Text(label, style: TextStyle(fontSize: 12, color: isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight)),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
