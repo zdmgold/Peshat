@@ -5,18 +5,23 @@ import 'package:flutter/widgets.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/intl.dart' as intl;
 
+import 'app_localizations_am.dart';
 import 'app_localizations_ar.dart';
 import 'app_localizations_bn.dart';
 import 'app_localizations_de.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
 import 'app_localizations_fa.dart';
+import 'app_localizations_fil.dart';
 import 'app_localizations_fr.dart';
+import 'app_localizations_he.dart';
 import 'app_localizations_hi.dart';
 import 'app_localizations_id.dart';
 import 'app_localizations_it.dart';
 import 'app_localizations_ja.dart';
 import 'app_localizations_ko.dart';
+import 'app_localizations_my.dart';
+import 'app_localizations_nl.dart';
 import 'app_localizations_pl.dart';
 import 'app_localizations_pt.dart';
 import 'app_localizations_ru.dart';
@@ -110,18 +115,23 @@ abstract class AppLocalizations {
 
   /// A list of this localizations delegate's supported locales.
   static const List<Locale> supportedLocales = <Locale>[
+    Locale('am'),
     Locale('ar'),
     Locale('bn'),
     Locale('de'),
     Locale('en'),
     Locale('es'),
     Locale('fa'),
+    Locale('fil'),
     Locale('fr'),
+    Locale('he'),
     Locale('hi'),
     Locale('id'),
     Locale('it'),
     Locale('ja'),
     Locale('ko'),
+    Locale('my'),
+    Locale('nl'),
     Locale('pl'),
     Locale('pt'),
     Locale('ru'),
@@ -317,7 +327,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['ar', 'bn', 'de', 'en', 'es', 'fa', 'fr', 'hi', 'id', 'it', 'ja', 'ko', 'pl', 'pt', 'ru', 'th', 'tr', 'uk', 'ur', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['am', 'ar', 'bn', 'de', 'en', 'es', 'fa', 'fil', 'fr', 'he', 'hi', 'id', 'it', 'ja', 'ko', 'my', 'nl', 'pl', 'pt', 'ru', 'th', 'tr', 'uk', 'ur', 'vi', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -328,18 +338,23 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
 
   // Lookup logic when only language code is specified.
   switch (locale.languageCode) {
+    case 'am': return AppLocalizationsAm();
     case 'ar': return AppLocalizationsAr();
     case 'bn': return AppLocalizationsBn();
     case 'de': return AppLocalizationsDe();
     case 'en': return AppLocalizationsEn();
     case 'es': return AppLocalizationsEs();
     case 'fa': return AppLocalizationsFa();
+    case 'fil': return AppLocalizationsFil();
     case 'fr': return AppLocalizationsFr();
+    case 'he': return AppLocalizationsHe();
     case 'hi': return AppLocalizationsHi();
     case 'id': return AppLocalizationsId();
     case 'it': return AppLocalizationsIt();
     case 'ja': return AppLocalizationsJa();
     case 'ko': return AppLocalizationsKo();
+    case 'my': return AppLocalizationsMy();
+    case 'nl': return AppLocalizationsNl();
     case 'pl': return AppLocalizationsPl();
     case 'pt': return AppLocalizationsPt();
     case 'ru': return AppLocalizationsRu();
