@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Peshat";
+"NSCameraUsageDescription" = "Peshat používá fotoaparát ke skenování a překladu textu. Obrázky jsou zpracovávány na zařízení a nejsou nahrávány.";
+"NSUserTrackingUsageDescription" = "Používá se k zobrazení relevantních, nepersonalizovaných reklam, pokud odmítnete; personalizovaných reklam, pokud souhlasíte.";

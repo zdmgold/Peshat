@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Peshat";
+"NSCameraUsageDescription" = "Peshat folosește camera pentru a scana și traduce textul. Imaginile sunt procesate pe dispozitiv și nu sunt încărcate.";
+"NSUserTrackingUsageDescription" = "Folosit pentru a afișa reclame relevante, nepersonalizate dacă refuzați; reclame personalizate dacă acceptați.";

@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Peshat";
+"NSCameraUsageDescription" = "Peshat menggunakan kamera untuk memindai dan menerjemahkan teks. Gambar diproses di perangkat dan tidak diunggah.";
+"NSUserTrackingUsageDescription" = "Digunakan untuk menampilkan iklan non-pribadi yang relevan jika Anda menolak; iklan pribadi jika Anda mengizinkan.";

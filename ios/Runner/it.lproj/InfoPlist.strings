@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Peshat";
+"NSCameraUsageDescription" = "Peshat utilizza la fotocamera per scansionare e tradurre il testo. Le immagini vengono elaborate sul dispositivo e non vengono caricate.";
+"NSUserTrackingUsageDescription" = "Utilizzato per mostrare annunci non personalizzati pertinenti se rifiuti; annunci personalizzati se acconsenti.";

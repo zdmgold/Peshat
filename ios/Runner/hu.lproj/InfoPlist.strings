@@ -1,0 +1,3 @@
+"CFBundleDisplayName" = "Peshat";
+"NSCameraUsageDescription" = "A Peshat a kamerát használja a szöveg beolvasására és lefordítására. A képek az eszközön kerülnek feldolgozásra, és nem kerülnek feltöltésre.";
+"NSUserTrackingUsageDescription" = "Arra szolgál, hogy releváns, nem személyre szabott hirdetéseket jelenítsen meg, ha elutasítja; személyre szabott hirdetéseket, ha beleegyezik.";
