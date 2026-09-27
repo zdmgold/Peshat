@@ -1,4 +1,4 @@
-package com.example.peshat
+package com.zdmgold.peshat
 
 import io.flutter.embedding.android.FlutterActivity
 
