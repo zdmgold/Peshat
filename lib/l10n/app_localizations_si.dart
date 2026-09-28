@@ -249,4 +249,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'පෙළ හිස් කරන්නද?';
+
+  @override
+  String get historyEmptySubtitle => 'ඔබ පරිවර්තනය කරන ස්කෑන් මෙහි දිස්වනු ඇත.';
 }

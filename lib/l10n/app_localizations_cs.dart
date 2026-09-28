@@ -249,4 +249,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Vymazat text?';
+
+  @override
+  String get historyEmptySubtitle => 'Zde se objeví skeny, které přeložíte.';
 }

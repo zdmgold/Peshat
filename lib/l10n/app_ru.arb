@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Попробуйте другое написание.",
   "sectionSystemLabel": "Система",
   "appLanguageLabel": "Язык приложения",
-  "clearTextConfirm": "Очистить текст?"
+  "clearTextConfirm": "Очистить текст?",
+  "historyEmptySubtitle": "Отсканированные и переведённые тексты появятся здесь."
 }

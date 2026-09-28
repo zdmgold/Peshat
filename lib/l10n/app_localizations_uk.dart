@@ -249,4 +249,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Очистити текст?';
+
+  @override
+  String get historyEmptySubtitle => 'Відскановані та перекладені тексти з’являться тут.';
 }

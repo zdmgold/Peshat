@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Farklı bir yazım deneyin.",
   "sectionSystemLabel": "Sistem",
   "appLanguageLabel": "Uygulama dili",
-  "clearTextConfirm": "Metin temizlensin mi?"
+  "clearTextConfirm": "Metin temizlensin mi?",
+  "historyEmptySubtitle": "Çevirdiğiniz taramalar burada görünür."
 }

@@ -249,4 +249,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'ጽሑፉን አጽዳ?';
+
+  @override
+  String get historyEmptySubtitle => 'የተረጎሟቸው ስካኖች እዚህ ይታያሉ።';
 }

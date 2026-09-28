@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Tente outra grafia.",
   "sectionSystemLabel": "Sistema",
   "appLanguageLabel": "Idioma do aplicativo",
-  "clearTextConfirm": "Limpar o texto?"
+  "clearTextConfirm": "Limpar o texto?",
+  "historyEmptySubtitle": "As digitalizações que traduzir aparecerão aqui."
 }

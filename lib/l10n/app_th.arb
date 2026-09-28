@@ -79,5 +79,6 @@
   "noResultsSubtitle": "ลองสะกดแบบอื่น",
   "sectionSystemLabel": "ระบบ",
   "appLanguageLabel": "ภาษาของแอป",
-  "clearTextConfirm": "ล้างข้อความหรือไม่"
+  "clearTextConfirm": "ล้างข้อความหรือไม่",
+  "historyEmptySubtitle": "การสแกนที่คุณแปลจะแสดงที่นี่"
 }

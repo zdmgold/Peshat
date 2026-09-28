@@ -249,4 +249,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'متن صاف کریں؟';
+
+  @override
+  String get historyEmptySubtitle => 'آپ کے ترجمہ کردہ اسکین یہاں ظاہر ہوں گے۔';
 }

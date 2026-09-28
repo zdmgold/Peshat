@@ -79,5 +79,6 @@
   "noResultsSubtitle": "အခြားစာလုံးပေါင်းကို စမ်းကြည့်ပါ။",
   "sectionSystemLabel": "စနစ်",
   "appLanguageLabel": "အက်ပ် ဘာသာစကား",
-  "clearTextConfirm": "စာသားကို ရှင်းလင်းမလား?"
+  "clearTextConfirm": "စာသားကို ရှင်းလင်းမလား?",
+  "historyEmptySubtitle": "သင်ဘာသာပြန်ထားသော စကင်များ ဤနေရာတွင် ပေါ်လာပါမည်။"
 }

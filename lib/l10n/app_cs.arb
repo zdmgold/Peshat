@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Zkuste jiný pravopis.",
   "sectionSystemLabel": "Systém",
   "appLanguageLabel": "Jazyk aplikace",
-  "clearTextConfirm": "Vymazat text?"
+  "clearTextConfirm": "Vymazat text?",
+  "historyEmptySubtitle": "Zde se objeví skeny, které přeložíte."
 }

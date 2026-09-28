@@ -249,4 +249,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Törli a szöveget?';
+
+  @override
+  String get historyEmptySubtitle => 'A lefordított beolvasások itt jelennek meg.';
 }

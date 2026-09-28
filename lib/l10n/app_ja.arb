@@ -79,5 +79,6 @@
   "noResultsSubtitle": "別の綴りをお試しください。",
   "sectionSystemLabel": "システム",
   "appLanguageLabel": "アプリの言語",
-  "clearTextConfirm": "テキストを消去しますか？"
+  "clearTextConfirm": "テキストを消去しますか？",
+  "historyEmptySubtitle": "翻訳したスキャンはここに表示されます。"
 }

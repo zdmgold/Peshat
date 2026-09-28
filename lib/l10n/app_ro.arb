@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Încercați altă ortografie.",
   "sectionSystemLabel": "Sistem",
   "appLanguageLabel": "Limba aplicației",
-  "clearTextConfirm": "Ștergeți textul?"
+  "clearTextConfirm": "Ștergeți textul?",
+  "historyEmptySubtitle": "Scanările traduse vor apărea aici."
 }

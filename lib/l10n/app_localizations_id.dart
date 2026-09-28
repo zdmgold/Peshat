@@ -249,4 +249,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Hapus teks?';
+
+  @override
+  String get historyEmptySubtitle => 'Pemindaian yang Anda terjemahkan akan muncul di sini.';
 }

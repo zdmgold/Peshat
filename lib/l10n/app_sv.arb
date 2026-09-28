@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Prova en annan stavning.",
   "sectionSystemLabel": "System",
   "appLanguageLabel": "App-språk",
-  "clearTextConfirm": "Rensa texten?"
+  "clearTextConfirm": "Rensa texten?",
+  "historyEmptySubtitle": "Skanningar du översätter visas här."
 }

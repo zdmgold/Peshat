@@ -249,4 +249,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Rensa texten?';
+
+  @override
+  String get historyEmptySubtitle => 'Skanningar du översätter visas här.';
 }

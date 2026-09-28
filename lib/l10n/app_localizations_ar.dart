@@ -249,4 +249,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'مسح النص؟';
+
+  @override
+  String get historyEmptySubtitle => 'ستظهر هنا عمليات المسح التي تترجمها.';
 }

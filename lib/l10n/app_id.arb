@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Coba ejaan lain.",
   "sectionSystemLabel": "Sistem",
   "appLanguageLabel": "Bahasa aplikasi",
-  "clearTextConfirm": "Hapus teks?"
+  "clearTextConfirm": "Hapus teks?",
+  "historyEmptySubtitle": "Pemindaian yang Anda terjemahkan akan muncul di sini."
 }

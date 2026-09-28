@@ -249,4 +249,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'テキストを消去しますか？';
+
+  @override
+  String get historyEmptySubtitle => '翻訳したスキャンはここに表示されます。';
 }

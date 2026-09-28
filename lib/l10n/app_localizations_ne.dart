@@ -249,4 +249,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'पाठ मेटाउने?';
+
+  @override
+  String get historyEmptySubtitle => 'तपाईंले अनुवाद गरेका स्क्यानहरू यहाँ देखिनेछन्।';
 }

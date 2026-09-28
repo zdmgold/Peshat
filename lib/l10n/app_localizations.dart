@@ -642,6 +642,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Clear the text?'**
   String get clearTextConfirm;
+
+  /// No description provided for @historyEmptySubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Scans you translate will appear here.'**
+  String get historyEmptySubtitle;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Thử cách viết khác.",
   "sectionSystemLabel": "Hệ thống",
   "appLanguageLabel": "Ngôn ngữ ứng dụng",
-  "clearTextConfirm": "Xóa văn bản?"
+  "clearTextConfirm": "Xóa văn bản?",
+  "historyEmptySubtitle": "Các bản quét bạn dịch sẽ xuất hiện ở đây."
 }

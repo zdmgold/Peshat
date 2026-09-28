@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Subukan ang ibang spelling.",
   "sectionSystemLabel": "Sistema",
   "appLanguageLabel": "Wika ng app",
-  "clearTextConfirm": "Burahin ang teksto?"
+  "clearTextConfirm": "Burahin ang teksto?",
+  "historyEmptySubtitle": "Ang mga scan na isinalin mo ay lalabas dito."
 }

@@ -249,4 +249,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'ລຶບຂໍ້ຄວາມບໍ?';
+
+  @override
+  String get historyEmptySubtitle => 'ການສະແກນທີ່ທ່ານແປຈະປາກົດຢູ່ນີ້.';
 }

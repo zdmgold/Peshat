@@ -79,5 +79,6 @@
   "noResultsSubtitle": "សាកល្បងអក្ខរាវិរុទ្ធផ្សេង។",
   "sectionSystemLabel": "ប្រព័ន្ធ",
   "appLanguageLabel": "ភាសាកម្មវិធី",
-  "clearTextConfirm": "សម្អាតអត្ថបទ?"
+  "clearTextConfirm": "សម្អាតអត្ថបទ?",
+  "historyEmptySubtitle": "ការស្កេនដែលអ្នកបកប្រែនឹងបង្ហាញនៅទីនេះ។"
 }

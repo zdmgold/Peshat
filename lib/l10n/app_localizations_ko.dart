@@ -249,4 +249,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get clearTextConfirm => '텍스트를 지우시겠습니까?';
+
+  @override
+  String get historyEmptySubtitle => '번역한 스캔이 여기에 표시됩니다.';
 }

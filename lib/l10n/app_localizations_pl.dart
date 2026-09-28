@@ -249,4 +249,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Wyczyścić tekst?';
+
+  @override
+  String get historyEmptySubtitle => 'Przetłumaczone skany pojawią się tutaj.';
 }

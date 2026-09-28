@@ -79,5 +79,6 @@
   "noResultsSubtitle": "වෙනත් අක්ෂර වින්‍යාසයක් උත්සාහ කරන්න.",
   "sectionSystemLabel": "පද්ධතිය",
   "appLanguageLabel": "යෙදුම් භාෂාව",
-  "clearTextConfirm": "පෙළ හිස් කරන්නද?"
+  "clearTextConfirm": "පෙළ හිස් කරන්නද?",
+  "historyEmptySubtitle": "ඔබ පරිවර්තනය කරන ස්කෑන් මෙහි දිස්වනු ඇත."
 }

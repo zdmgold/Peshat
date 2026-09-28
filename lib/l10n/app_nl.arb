@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Probeer een andere spelling.",
   "sectionSystemLabel": "Systeem",
   "appLanguageLabel": "App-taal",
-  "clearTextConfirm": "Tekst wissen?"
+  "clearTextConfirm": "Tekst wissen?",
+  "historyEmptySubtitle": "Scans die u vertaalt verschijnen hier."
 }

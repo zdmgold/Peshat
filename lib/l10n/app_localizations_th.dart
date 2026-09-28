@@ -249,4 +249,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'ล้างข้อความหรือไม่';
+
+  @override
+  String get historyEmptySubtitle => 'การสแกนที่คุณแปลจะแสดงที่นี่';
 }

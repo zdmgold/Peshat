@@ -249,4 +249,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Cancellare il testo?';
+
+  @override
+  String get historyEmptySubtitle => 'Le scansioni tradotte appariranno qui.';
 }

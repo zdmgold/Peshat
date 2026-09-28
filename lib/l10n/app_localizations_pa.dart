@@ -249,4 +249,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'ਟੈਕਸਟ ਸਾਫ਼ ਕਰੋ?';
+
+  @override
+  String get historyEmptySubtitle => 'ਤੁਹਾਡੇ ਅਨੁਵਾਦ ਕੀਤੇ ਸਕੈਨ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।';
 }

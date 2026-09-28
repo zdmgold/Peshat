@@ -249,4 +249,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'စာသားကို ရှင်းလင်းမလား?';
+
+  @override
+  String get historyEmptySubtitle => 'သင်ဘာသာပြန်ထားသော စကင်များ ဤနေရာတွင် ပေါ်လာပါမည်။';
 }

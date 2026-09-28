@@ -249,4 +249,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Καθαρισμός κειμένου;';
+
+  @override
+  String get historyEmptySubtitle => 'Οι σαρώσεις που μεταφράζετε θα εμφανιστούν εδώ.';
 }

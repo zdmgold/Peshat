@@ -79,5 +79,6 @@
   "noResultsSubtitle": "جرّب تهجئة أخرى.",
   "sectionSystemLabel": "النظام",
   "appLanguageLabel": "لغة التطبيق",
-  "clearTextConfirm": "مسح النص؟"
+  "clearTextConfirm": "مسح النص؟",
+  "historyEmptySubtitle": "ستظهر هنا عمليات المسح التي تترجمها."
 }

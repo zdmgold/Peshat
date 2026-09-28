@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Versuchen Sie eine andere Schreibweise.",
   "sectionSystemLabel": "System",
   "appLanguageLabel": "App-Sprache",
-  "clearTextConfirm": "Text löschen?"
+  "clearTextConfirm": "Text löschen?",
+  "historyEmptySubtitle": "Von Ihnen übersetzte Scans erscheinen hier."
 }

@@ -249,4 +249,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'টেক্সট মুছবেন?';
+
+  @override
+  String get historyEmptySubtitle => 'আপনার অনুবাদ করা স্ক্যান এখানে দেখা যাবে।';
 }

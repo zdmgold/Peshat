@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Δοκιμάστε άλλη ορθογραφία.",
   "sectionSystemLabel": "Σύστημα",
   "appLanguageLabel": "Γλώσσα εφαρμογής",
-  "clearTextConfirm": "Καθαρισμός κειμένου;"
+  "clearTextConfirm": "Καθαρισμός κειμένου;",
+  "historyEmptySubtitle": "Οι σαρώσεις που μεταφράζετε θα εμφανιστούν εδώ."
 }

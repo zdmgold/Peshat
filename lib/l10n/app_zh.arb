@@ -79,5 +79,6 @@
   "noResultsSubtitle": "请尝试其他拼写。",
   "sectionSystemLabel": "系统",
   "appLanguageLabel": "应用语言",
-  "clearTextConfirm": "清除文本？"
+  "clearTextConfirm": "清除文本？",
+  "historyEmptySubtitle": "您翻译的扫描内容将显示在此处。"
 }

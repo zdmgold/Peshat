@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Spróbuj innej pisowni.",
   "sectionSystemLabel": "System",
   "appLanguageLabel": "Język aplikacji",
-  "clearTextConfirm": "Wyczyścić tekst?"
+  "clearTextConfirm": "Wyczyścić tekst?",
+  "historyEmptySubtitle": "Przetłumaczone skany pojawią się tutaj."
 }

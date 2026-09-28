@@ -79,5 +79,6 @@
   "noResultsSubtitle": "다른 철자를 시도해 보세요.",
   "sectionSystemLabel": "시스템",
   "appLanguageLabel": "앱 언어",
-  "clearTextConfirm": "텍스트를 지우시겠습니까?"
+  "clearTextConfirm": "텍스트를 지우시겠습니까?",
+  "historyEmptySubtitle": "번역한 스캔이 여기에 표시됩니다."
 }

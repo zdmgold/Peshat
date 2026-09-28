@@ -249,4 +249,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'לנקות את הטקסט?';
+
+  @override
+  String get historyEmptySubtitle => 'סריקות שתתרגם יופיעו כאן.';
 }

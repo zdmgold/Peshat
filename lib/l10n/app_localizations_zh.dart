@@ -249,4 +249,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get clearTextConfirm => '清除文本？';
+
+  @override
+  String get historyEmptySubtitle => '您翻译的扫描内容将显示在此处。';
 }

@@ -249,4 +249,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Metin temizlensin mi?';
+
+  @override
+  String get historyEmptySubtitle => 'Çevirdiğiniz taramalar burada görünür.';
 }

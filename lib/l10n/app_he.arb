@@ -79,5 +79,6 @@
   "noResultsSubtitle": "נסה איות אחר.",
   "sectionSystemLabel": "מערכת",
   "appLanguageLabel": "שפת האפליקציה",
-  "clearTextConfirm": "לנקות את הטקסט?"
+  "clearTextConfirm": "לנקות את הטקסט?",
+  "historyEmptySubtitle": "סריקות שתתרגם יופיעו כאן."
 }

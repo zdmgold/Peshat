@@ -79,5 +79,6 @@
   "noResultsSubtitle": "ລອງສະກົດແບບອື່ນ.",
   "sectionSystemLabel": "ລະບົບ",
   "appLanguageLabel": "ພາສາແອັບ",
-  "clearTextConfirm": "ລຶບຂໍ້ຄວາມບໍ?"
+  "clearTextConfirm": "ລຶບຂໍ້ຄວາມບໍ?",
+  "historyEmptySubtitle": "ການສະແກນທີ່ທ່ານແປຈະປາກົດຢູ່ນີ້."
 }

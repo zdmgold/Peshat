@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Спробуйте інший правопис.",
   "sectionSystemLabel": "Система",
   "appLanguageLabel": "Мова застосунку",
-  "clearTextConfirm": "Очистити текст?"
+  "clearTextConfirm": "Очистити текст?",
+  "historyEmptySubtitle": "Відскановані та перекладені тексти з’являться тут."
 }

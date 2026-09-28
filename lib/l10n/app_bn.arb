@@ -79,5 +79,6 @@
   "noResultsSubtitle": "অন্য বানান চেষ্টা করুন।",
   "sectionSystemLabel": "সিস্টেম",
   "appLanguageLabel": "অ্যাপের ভাষা",
-  "clearTextConfirm": "টেক্সট মুছবেন?"
+  "clearTextConfirm": "টেক্সট মুছবেন?",
+  "historyEmptySubtitle": "আপনার অনুবাদ করা স্ক্যান এখানে দেখা যাবে।"
 }

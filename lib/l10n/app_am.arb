@@ -79,5 +79,6 @@
   "noResultsSubtitle": "ሌላ የፊደል አጻጻፍ ይሞክሩ።",
   "sectionSystemLabel": "ስርዓት",
   "appLanguageLabel": "የመተግበሪያ ቋንቋ",
-  "clearTextConfirm": "ጽሑፉን አጽዳ?"
+  "clearTextConfirm": "ጽሑፉን አጽዳ?",
+  "historyEmptySubtitle": "የተረጎሟቸው ስካኖች እዚህ ይታያሉ።"
 }

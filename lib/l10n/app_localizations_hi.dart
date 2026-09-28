@@ -249,4 +249,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'टेक्स्ट साफ़ करें?';
+
+  @override
+  String get historyEmptySubtitle => 'आपके द्वारा अनुवादित स्कैन यहाँ दिखेंगे।';
 }

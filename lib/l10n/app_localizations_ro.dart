@@ -249,4 +249,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Ștergeți textul?';
+
+  @override
+  String get historyEmptySubtitle => 'Scanările traduse vor apărea aici.';
 }

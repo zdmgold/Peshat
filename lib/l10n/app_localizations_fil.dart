@@ -249,4 +249,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Burahin ang teksto?';
+
+  @override
+  String get historyEmptySubtitle => 'Ang mga scan na isinalin mo ay lalabas dito.';
 }

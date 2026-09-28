@@ -249,4 +249,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Tekst wissen?';
+
+  @override
+  String get historyEmptySubtitle => 'Scans die u vertaalt verschijnen hier.';
 }

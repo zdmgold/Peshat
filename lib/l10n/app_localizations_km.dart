@@ -249,4 +249,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'សម្អាតអត្ថបទ?';
+
+  @override
+  String get historyEmptySubtitle => 'ការស្កេនដែលអ្នកបកប្រែនឹងបង្ហាញនៅទីនេះ។';
 }

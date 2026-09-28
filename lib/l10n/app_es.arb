@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Prueba con otra ortografía.",
   "sectionSystemLabel": "Sistema",
   "appLanguageLabel": "Idioma de la aplicación",
-  "clearTextConfirm": "¿Borrar el texto?"
+  "clearTextConfirm": "¿Borrar el texto?",
+  "historyEmptySubtitle": "Los escaneos que traduzcas aparecerán aquí."
 }

@@ -89,5 +89,6 @@
   "noResultsSubtitle": "Try a different spelling.",
   "sectionSystemLabel": "System",
   "appLanguageLabel": "App language",
-  "clearTextConfirm": "Clear the text?"
+  "clearTextConfirm": "Clear the text?",
+  "historyEmptySubtitle": "Scans you translate will appear here."
 }

@@ -249,4 +249,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Xóa văn bản?';
+
+  @override
+  String get historyEmptySubtitle => 'Các bản quét bạn dịch sẽ xuất hiện ở đây.';
 }

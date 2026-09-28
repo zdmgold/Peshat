@@ -79,5 +79,6 @@
   "noResultsSubtitle": "ਹੋਰ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।",
   "sectionSystemLabel": "ਸਿਸਟਮ",
   "appLanguageLabel": "ਐਪ ਭਾਸ਼ਾ",
-  "clearTextConfirm": "ਟੈਕਸਟ ਸਾਫ਼ ਕਰੋ?"
+  "clearTextConfirm": "ਟੈਕਸਟ ਸਾਫ਼ ਕਰੋ?",
+  "historyEmptySubtitle": "ਤੁਹਾਡੇ ਅਨੁਵਾਦ ਕੀਤੇ ਸਕੈਨ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।"
 }

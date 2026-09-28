@@ -249,4 +249,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get clearTextConfirm => 'Очистить текст?';
+
+  @override
+  String get historyEmptySubtitle => 'Отсканированные и переведённые тексты появятся здесь.';
 }

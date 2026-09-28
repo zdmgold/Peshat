@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Próbáljon más írásmódot.",
   "sectionSystemLabel": "Rendszer",
   "appLanguageLabel": "Alkalmazás nyelve",
-  "clearTextConfirm": "Törli a szöveget?"
+  "clearTextConfirm": "Törli a szöveget?",
+  "historyEmptySubtitle": "A lefordított beolvasások itt jelennek meg."
 }

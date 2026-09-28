@@ -79,5 +79,6 @@
   "noResultsSubtitle": "املای دیگری را امتحان کنید.",
   "sectionSystemLabel": "سیستم",
   "appLanguageLabel": "زبان برنامه",
-  "clearTextConfirm": "متن پاک شود؟"
+  "clearTextConfirm": "متن پاک شود؟",
+  "historyEmptySubtitle": "اسکن‌هایی که ترجمه می‌کنید اینجا ظاهر می‌شوند."
 }

@@ -79,5 +79,6 @@
   "noResultsSubtitle": "Essayez une autre orthographe.",
   "sectionSystemLabel": "Système",
   "appLanguageLabel": "Langue de l’application",
-  "clearTextConfirm": "Effacer le texte ?"
+  "clearTextConfirm": "Effacer le texte ?",
+  "historyEmptySubtitle": "Les scans que vous traduisez apparaîtront ici."
 }

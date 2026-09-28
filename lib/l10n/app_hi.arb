@@ -79,5 +79,6 @@
   "noResultsSubtitle": "कोई दूसरी वर्तनी आज़माएँ।",
   "sectionSystemLabel": "सिस्टम",
   "appLanguageLabel": "ऐप भाषा",
-  "clearTextConfirm": "टेक्स्ट साफ़ करें?"
+  "clearTextConfirm": "टेक्स्ट साफ़ करें?",
+  "historyEmptySubtitle": "आपके द्वारा अनुवादित स्कैन यहाँ दिखेंगे।"
 }
