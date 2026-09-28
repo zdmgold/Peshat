@@ -13,7 +13,7 @@ import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../platform/document_scanner_service.dart';
-import '../widgets/banner_ad_widget.dart';
+import '../widgets/ad_slot.dart';
 import '../widgets/grouped_card.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
@@ -352,7 +352,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     ),
                   ),
                 ),
-                if (!adsRemoved) const BannerAdWidget() else const SizedBox.shrink(),
+                const AdSlot(),
               ],
             ),
           ),

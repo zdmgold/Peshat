@@ -13,6 +13,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
+import '../widgets/ad_slot.dart';
 import '../widgets/ads_removed_badge.dart';
 import '../widgets/grouped_card.dart';
 import '../widgets/segmented_control.dart';
@@ -128,7 +129,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
       ),
       body: SafeArea(
         top: false,
-        child: ListView(
+        child: Column(
+          children: [
+            Expanded(
+              child: ListView(
           padding: const EdgeInsets.symmetric(
             horizontal: Spacing.md,
             vertical: Spacing.md,
@@ -323,7 +327,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 ),
               ],
             ),
-            const SizedBox(height: Spacing.xl),
+                const SizedBox(height: Spacing.xl),
+              ],
+            ),
+            ),
+            const AdSlot(),
           ],
         ),
       ),

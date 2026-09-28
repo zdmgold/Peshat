@@ -6,6 +6,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
+import '../widgets/ad_slot.dart';
 import 'language_picker_screen.dart';
 import 'result_screen.dart';
 
@@ -216,6 +217,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                   ),
                 ),
               ),
+              const AdSlot(),
             ],
           ),
         ),

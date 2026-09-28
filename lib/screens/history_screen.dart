@@ -5,6 +5,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
+import '../widgets/ad_slot.dart';
 import 'result_screen.dart';
 
 class HistoryScreen extends StatelessWidget {
@@ -46,26 +47,33 @@ class HistoryScreen extends StatelessWidget {
       ),
       body: SafeArea(
         top: false,
-        child: ValueListenableBuilder<List<ScanResult>>(
-          valueListenable: history,
-          builder: (context, items, _) {
-            if (items.isEmpty) {
-              return _EmptyState(
-                l10n: l10n,
-                isDark: isDark,
-              );
-            }
-            final grouped = _groupByDate(items, l10n);
-            return ListView.builder(
-              padding: const EdgeInsets.only(
-                top: Spacing.sm,
-                bottom: Spacing.xl,
+        child: Column(
+          children: [
+            Expanded(
+              child: ValueListenableBuilder<List<ScanResult>>(
+                valueListenable: history,
+                builder: (context, items, _) {
+                  if (items.isEmpty) {
+                    return _EmptyState(
+                      l10n: l10n,
+                      isDark: isDark,
+                    );
+                  }
+                  final grouped = _groupByDate(items, l10n);
+                  return ListView.builder(
+                    padding: const EdgeInsets.only(
+                      top: Spacing.sm,
+                      bottom: Spacing.xl,
+                    ),
+                    itemCount: _sectionItemCount(grouped),
+                    itemBuilder: (context, i) =>
+                        _buildItem(context, i, grouped, l10n, isDark),
+                  );
+                },
               ),
-              itemCount: _sectionItemCount(grouped),
-              itemBuilder: (context, i) =>
-                  _buildItem(context, i, grouped, l10n, isDark),
-            );
-          },
+            ),
+            const AdSlot(),
+          ],
         ),
       ),
     );

@@ -16,6 +16,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
+import '../widgets/ad_slot.dart';
 import '../widgets/segmented_control.dart';
 import 'language_picker_screen.dart';
 
@@ -132,6 +133,12 @@ class _ResultScreenState extends State<ResultScreen> {
     }
   }
 
+  String _currentText(ScanDone state) =>
+      _tab == _ResultTab.original ? state.sourceText : state.translatedText;
+
+  String _currentBaseName() =>
+      _tab == _ResultTab.original ? 'peshat_original' : 'peshat_translation';
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -140,131 +147,158 @@ class _ResultScreenState extends State<ResultScreen> {
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
-          l10n.resultTitle,
-          style: AppTypography.chrome.copyWith(
-            fontSize: 17,
-            fontWeight: FontWeight.w600,
-            color: textPrimary,
+    return ValueListenableBuilder<ScanState>(
+      valueListenable: _provider,
+      builder: (context, state, _) {
+        final ready = state is ScanDone;
+        return Scaffold(
+          appBar: AppBar(
+            title: Text(
+              l10n.resultTitle,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 17,
+                fontWeight: FontWeight.w600,
+                color: textPrimary,
+              ),
+            ),
+            centerTitle: true,
+            actions: [
+              if (ready) ...[
+                IconButton(
+                  icon: const Icon(Icons.copy_outlined, size: 22),
+                  tooltip: l10n.copyAction,
+                  onPressed: () => _copy(_currentText(state)),
+                ),
+                IconButton(
+                  icon: const Icon(Icons.ios_share, size: 22),
+                  tooltip: l10n.shareAction,
+                  onPressed: () => _share(_currentText(state)),
+                ),
+                PopupMenuButton<String>(
+                  icon: const Icon(Icons.more_horiz, size: 22),
+                  tooltip: MaterialLocalizations.of(context)
+                      .showMenuTooltip,
+                  onSelected: (v) {
+                    if (v == 'txt') {
+                      _export(_currentText(state), _currentBaseName(),
+                          asPdf: false);
+                    } else if (v == 'pdf') {
+                      _export(_currentText(state), _currentBaseName(),
+                          asPdf: true);
+                    }
+                  },
+                  itemBuilder: (ctx) => [
+                    PopupMenuItem(
+                      value: 'txt',
+                      child: Row(
+                        children: [
+                          const Icon(Icons.description_outlined, size: 20),
+                          const SizedBox(width: Spacing.md),
+                          Text(l10n.exportTxtAction),
+                        ],
+                      ),
+                    ),
+                    PopupMenuItem(
+                      value: 'pdf',
+                      child: Row(
+                        children: [
+                          const Icon(Icons.picture_as_pdf_outlined, size: 20),
+                          const SizedBox(width: Spacing.md),
+                          Text(l10n.exportPdfAction),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ],
+            ],
           ),
-        ),
-        centerTitle: true,
-        actions: [
-          IconButton(
-            icon: Icon(Icons.translate, size: 22, color: accent),
-            tooltip: l10n.changeLanguageButton,
-            onPressed: _pickLanguage,
+          body: SafeArea(
+            top: false,
+            child: Column(
+              children: [
+                Expanded(child: _buildContent(context, state, l10n, isDark, accent)),
+                const AdSlot(),
+              ],
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  Widget _buildContent(
+    BuildContext context,
+    ScanState state,
+    AppLocalizations l10n,
+    bool isDark,
+    Color accent,
+  ) {
+    if (state is ScanRecognizing) {
+      return _StatusView(message: l10n.statusRecognizing);
+    }
+    if (state is ScanPreparingModel) {
+      return _StatusView(
+        message:
+            '${l10n.statusPreparingModel} ${languageDisplayName(state.targetLanguage)}',
+      );
+    }
+    if (state is ScanTranslating) {
+      return _StatusView(message: l10n.statusTranslating);
+    }
+    if (state is ScanError) {
+      return _ErrorView(
+        message: _errorText(l10n, state.code),
+        detail: kDebugMode ? state.detail : null,
+        onRetry: _runPipeline,
+      );
+    }
+    if (state is ScanDone) {
+      return Column(
+        children: [
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+              Spacing.md,
+              Spacing.sm,
+              Spacing.md,
+              Spacing.sm,
+            ),
+            child: SegmentedControl<_ResultTab>(
+              value: _tab,
+              onChanged: (v) => setState(() => _tab = v),
+              items: [
+                SegmentItem(
+                  value: _ResultTab.original,
+                  label: l10n.sourceLabel,
+                ),
+                SegmentItem(
+                  value: _ResultTab.translation,
+                  label: l10n.translationLabel,
+                ),
+              ],
+            ),
+          ),
+          Expanded(
+            child: IndexedStack(
+              index: _tab.index,
+              children: [
+                _OriginalTab(
+                  sourceText: state.sourceText,
+                  isDark: isDark,
+                ),
+                _TranslationTab(
+                  translatedText: state.translatedText,
+                  targetLanguage: state.targetLanguage,
+                  onPickLanguage: _pickLanguage,
+                  isDark: isDark,
+                ),
+              ],
+            ),
           ),
         ],
-      ),
-      body: SafeArea(
-        top: false,
-        child: ValueListenableBuilder<ScanState>(
-          valueListenable: _provider,
-          builder: (context, state, _) {
-            if (state is ScanRecognizing) {
-              return _StatusView(message: l10n.statusRecognizing);
-            }
-            if (state is ScanPreparingModel) {
-              return _StatusView(
-                message:
-                    '${l10n.statusPreparingModel} ${languageDisplayName(state.targetLanguage)}',
-              );
-            }
-            if (state is ScanTranslating) {
-              return _StatusView(message: l10n.statusTranslating);
-            }
-            if (state is ScanError) {
-              return _ErrorView(
-                message: _errorText(l10n, state.code),
-                detail: kDebugMode ? state.detail : null,
-                onRetry: _runPipeline,
-              );
-            }
-            if (state is ScanDone) {
-              return Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(
-                      Spacing.md,
-                      Spacing.sm,
-                      Spacing.md,
-                      Spacing.sm,
-                    ),
-                    child: SegmentedControl<_ResultTab>(
-                      value: _tab,
-                      onChanged: (v) => setState(() => _tab = v),
-                      items: [
-                        SegmentItem(
-                          value: _ResultTab.original,
-                          label: l10n.sourceLabel,
-                        ),
-                        SegmentItem(
-                          value: _ResultTab.translation,
-                          label: l10n.translationLabel,
-                        ),
-                      ],
-                    ),
-                  ),
-                  Expanded(
-                    child: IndexedStack(
-                      index: _tab.index,
-                      children: [
-                        _OriginalTab(
-                          sourceText: state.sourceText,
-                          sourceLang: state.sourceLanguage,
-                          isDark: isDark,
-                        ),
-                        _TranslationTab(
-                          translatedText: state.translatedText,
-                          targetLanguage: state.targetLanguage,
-                          onPickLanguage: _pickLanguage,
-                          isDark: isDark,
-                        ),
-                      ],
-                    ),
-                  ),
-                  _ActionBar(
-                    isDark: isDark,
-                    onCopy: () => _copy(
-                      _tab == _ResultTab.original
-                          ? state.sourceText
-                          : state.translatedText,
-                    ),
-                    onShare: () => _share(
-                      _tab == _ResultTab.original
-                          ? state.sourceText
-                          : state.translatedText,
-                    ),
-                    onExportTxt: () => _export(
-                      _tab == _ResultTab.original
-                          ? state.sourceText
-                          : state.translatedText,
-                      _tab == _ResultTab.original
-                          ? 'peshat_original'
-                          : 'peshat_translation',
-                      asPdf: false,
-                    ),
-                    onExportPdf: () => _export(
-                      _tab == _ResultTab.original
-                          ? state.sourceText
-                          : state.translatedText,
-                      _tab == _ResultTab.original
-                          ? 'peshat_original'
-                          : 'peshat_translation',
-                      asPdf: true,
-                    ),
-                  ),
-                ],
-              );
-            }
-            return const SizedBox.shrink();
-          },
-        ),
-      ),
-    );
+      );
+    }
+    return const SizedBox.shrink();
   }
 
   void _copy(String text) {
@@ -327,12 +361,10 @@ class _ResultScreenState extends State<ResultScreen> {
 
 class _OriginalTab extends StatelessWidget {
   final String sourceText;
-  final String sourceLang;
   final bool isDark;
 
   const _OriginalTab({
     required this.sourceText,
-    required this.sourceLang,
     required this.isDark,
   });
 
@@ -460,120 +492,6 @@ class _TranslationTab extends StatelessWidget {
         ),
         const SizedBox(height: Spacing.md),
       ],
-    );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Action bar
-// ---------------------------------------------------------------------------
-
-class _ActionBar extends StatelessWidget {
-  final bool isDark;
-  final VoidCallback onCopy;
-  final VoidCallback onShare;
-  final VoidCallback onExportTxt;
-  final VoidCallback onExportPdf;
-
-  const _ActionBar({
-    required this.isDark,
-    required this.onCopy,
-    required this.onShare,
-    required this.onExportTxt,
-    required this.onExportPdf,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final l10n = AppLocalizations.of(context)!;
-    final border =
-        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
-    final bg = isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
-    return Container(
-      height: 64,
-      decoration: BoxDecoration(
-        color: bg,
-        border: Border(top: BorderSide(color: border, width: 0.5)),
-      ),
-      child: Row(
-        children: [
-          _ActionItem(
-            icon: Icons.copy_outlined,
-            label: l10n.copyAction,
-            onTap: onCopy,
-            isDark: isDark,
-          ),
-          _ActionItem(
-            icon: Icons.ios_share,
-            label: l10n.shareAction,
-            onTap: onShare,
-            isDark: isDark,
-          ),
-          _ActionItem(
-            icon: Icons.description_outlined,
-            label: l10n.exportTxtAction,
-            onTap: onExportTxt,
-            isDark: isDark,
-          ),
-          _ActionItem(
-            icon: Icons.picture_as_pdf_outlined,
-            label: l10n.exportPdfAction,
-            onTap: onExportPdf,
-            isDark: isDark,
-          ),
-        ],
-      ),
-    );
-  }
-}
-
-class _ActionItem extends StatelessWidget {
-  final IconData icon;
-  final String label;
-  final VoidCallback onTap;
-  final bool isDark;
-
-  const _ActionItem({
-    required this.icon,
-    required this.label,
-    required this.onTap,
-    required this.isDark,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final textSecondary =
-        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
-    return Expanded(
-      child: Semantics(
-        label: label,
-        button: true,
-        child: InkWell(
-          onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: Spacing.sm),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(icon, size: 22, color: accent),
-                const SizedBox(height: 4),
-                Text(
-                  label,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                  style: AppTypography.chrome.copyWith(
-                    fontSize: 11,
-                    color: textSecondary,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
-      ),
     );
   }
 }

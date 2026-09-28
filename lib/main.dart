@@ -9,6 +9,7 @@ import 'core/providers/settings_provider.dart';
 import 'core/providers/history_provider.dart';
 import 'core/providers/ui_locale_provider.dart';
 import 'l10n/app_localizations.dart';
+import 'widgets/ad_slot.dart';
 import 'screens/scan_screen.dart';
 
 Future<void> main() async {
@@ -41,6 +42,20 @@ class _PeshatAppState extends State<PeshatApp> {
     settingsProvider = SettingsProvider(widget.prefs);
     historyProvider = HistoryProvider(widget.prefs);
     uiLocaleProvider = UiLocaleProvider(widget.prefs);
+
+    // Seed and mirror the shared ad-slot purchase flag.
+    AdSlot.setPurchased(purchaseProvider.value);
+    purchaseProvider.addListener(_syncAdSlot);
+  }
+
+  void _syncAdSlot() {
+    AdSlot.setPurchased(purchaseProvider.value);
+  }
+
+  @override
+  void dispose() {
+    purchaseProvider.removeListener(_syncAdSlot);
+    super.dispose();
   }
 
   @override

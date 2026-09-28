@@ -5,6 +5,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
+import '../widgets/ad_slot.dart';
 
 class LanguagePickerScreen extends StatefulWidget {
   final String? current;
@@ -172,6 +173,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
                       onPick: (code) => Navigator.pop(context, code),
                     ),
             ),
+            const AdSlot(),
           ],
         ),
       ),

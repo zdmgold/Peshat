@@ -4,6 +4,7 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
+import '../widgets/ad_slot.dart';
 
 class UiLanguagePickerScreen extends StatelessWidget {
   final Locale? current;
@@ -105,7 +106,14 @@ class UiLanguagePickerScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: SafeArea(
-        child: CustomScrollView(slivers: slivers),
+        child: Column(
+          children: [
+            Expanded(
+              child: CustomScrollView(slivers: slivers),
+            ),
+            const AdSlot(),
+          ],
+        ),
       ),
     );
   }
