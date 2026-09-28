@@ -68,5 +68,10 @@
   "historyToday": "오늘",
   "historyYesterday": "어제",
   "historyOlder": "이전",
-  "typeTextButtonLabel": "텍스트 입력"
+  "typeTextButtonLabel": "텍스트 입력",
+  "removeAdsSubtitle": "일회성 구매",
+  "removeAdsShortLabel": "제거",
+  "charactersLabel": "자",
+  "clearHistoryLabel": "모든 기록 지우기",
+  "cameraLabel": "카메라"
 }

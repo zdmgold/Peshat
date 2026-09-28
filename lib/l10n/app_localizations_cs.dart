@@ -216,4 +216,19 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Zadat text';
+
+  @override
+  String get removeAdsSubtitle => 'Jednorázový nákup';
+
+  @override
+  String get removeAdsShortLabel => 'Odebrat';
+
+  @override
+  String get charactersLabel => 'znaků';
+
+  @override
+  String get clearHistoryLabel => 'Vymazat celou historii';
+
+  @override
+  String get cameraLabel => 'Fotoaparát';
 }

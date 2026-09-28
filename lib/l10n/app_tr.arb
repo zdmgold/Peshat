@@ -68,5 +68,10 @@
   "historyToday": "Bugün",
   "historyYesterday": "Dün",
   "historyOlder": "Daha eski",
-  "typeTextButtonLabel": "Metin yaz"
+  "typeTextButtonLabel": "Metin yaz",
+  "removeAdsSubtitle": "Tek seferlik satın alma",
+  "removeAdsShortLabel": "Kaldır",
+  "charactersLabel": "karakter",
+  "clearHistoryLabel": "Tüm geçmişi temizle",
+  "cameraLabel": "Kamera"
 }

@@ -68,5 +68,10 @@
   "historyToday": "Σήμερα",
   "historyYesterday": "Χθες",
   "historyOlder": "Παλαιότερα",
-  "typeTextButtonLabel": "Πληκτρολόγηση κειμένου"
+  "typeTextButtonLabel": "Πληκτρολόγηση κειμένου",
+  "removeAdsSubtitle": "Αγορά μία φορά",
+  "removeAdsShortLabel": "Αφαίρεση",
+  "charactersLabel": "χαρακτήρες",
+  "clearHistoryLabel": "Διαγραφή όλου του ιστορικού",
+  "cameraLabel": "Κάμερα"
 }

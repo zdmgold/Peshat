@@ -216,4 +216,19 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Text eingeben';
+
+  @override
+  String get removeAdsSubtitle => 'Einmalkauf';
+
+  @override
+  String get removeAdsShortLabel => 'Entfernen';
+
+  @override
+  String get charactersLabel => 'Zeichen';
+
+  @override
+  String get clearHistoryLabel => 'Gesamten Verlauf löschen';
+
+  @override
+  String get cameraLabel => 'Kamera';
 }

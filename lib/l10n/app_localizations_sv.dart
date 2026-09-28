@@ -216,4 +216,19 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Skriv text';
+
+  @override
+  String get removeAdsSubtitle => 'Engångsköp';
+
+  @override
+  String get removeAdsShortLabel => 'Ta bort';
+
+  @override
+  String get charactersLabel => 'tecken';
+
+  @override
+  String get clearHistoryLabel => 'Rensa all historik';
+
+  @override
+  String get cameraLabel => 'Kamera';
 }

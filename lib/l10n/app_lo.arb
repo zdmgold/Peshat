@@ -68,5 +68,10 @@
   "historyToday": "ມື້ນີ້",
   "historyYesterday": "ມື້ວານ",
   "historyOlder": "ເກົ່າແກ່",
-  "typeTextButtonLabel": "ພິມຂໍ້ຄວາມ"
+  "typeTextButtonLabel": "ພິມຂໍ້ຄວາມ",
+  "removeAdsSubtitle": "ການຊື້ຄັ້ງດຽວ",
+  "removeAdsShortLabel": "ລຶບອອກ",
+  "charactersLabel": "ຕົວອັກສອນ",
+  "clearHistoryLabel": "ລຶບປະຫວັດທັງໝົດ",
+  "cameraLabel": "ກ້ອງ"
 }

@@ -216,4 +216,19 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Type text';
+
+  @override
+  String get removeAdsSubtitle => 'One-time purchase';
+
+  @override
+  String get removeAdsShortLabel => 'Remove';
+
+  @override
+  String get charactersLabel => 'characters';
+
+  @override
+  String get clearHistoryLabel => 'Clear all history';
+
+  @override
+  String get cameraLabel => 'Camera';
 }

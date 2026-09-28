@@ -68,5 +68,10 @@
   "historyToday": "Aujourd’hui",
   "historyYesterday": "Hier",
   "historyOlder": "Plus ancien",
-  "typeTextButtonLabel": "Saisir du texte"
+  "typeTextButtonLabel": "Saisir du texte",
+  "removeAdsSubtitle": "Achat unique",
+  "removeAdsShortLabel": "Retirer",
+  "charactersLabel": "caractères",
+  "clearHistoryLabel": "Effacer tout l’historique",
+  "cameraLabel": "Appareil photo"
 }

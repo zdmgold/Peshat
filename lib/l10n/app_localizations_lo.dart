@@ -216,4 +216,19 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'ພິມຂໍ້ຄວາມ';
+
+  @override
+  String get removeAdsSubtitle => 'ການຊື້ຄັ້ງດຽວ';
+
+  @override
+  String get removeAdsShortLabel => 'ລຶບອອກ';
+
+  @override
+  String get charactersLabel => 'ຕົວອັກສອນ';
+
+  @override
+  String get clearHistoryLabel => 'ລຶບປະຫວັດທັງໝົດ';
+
+  @override
+  String get cameraLabel => 'ກ້ອງ';
 }

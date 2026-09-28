@@ -68,5 +68,10 @@
   "historyToday": "今天",
   "historyYesterday": "昨天",
   "historyOlder": "更早",
-  "typeTextButtonLabel": "输入文字"
+  "typeTextButtonLabel": "输入文字",
+  "removeAdsSubtitle": "一次性购买",
+  "removeAdsShortLabel": "移除",
+  "charactersLabel": "个字符",
+  "clearHistoryLabel": "清除所有历史记录",
+  "cameraLabel": "相机"
 }

@@ -68,5 +68,10 @@
   "historyToday": "Astăzi",
   "historyYesterday": "Ieri",
   "historyOlder": "Mai vechi",
-  "typeTextButtonLabel": "Introduceți text"
+  "typeTextButtonLabel": "Introduceți text",
+  "removeAdsSubtitle": "Achiziție unică",
+  "removeAdsShortLabel": "Elimină",
+  "charactersLabel": "caractere",
+  "clearHistoryLabel": "Șterge tot istoricul",
+  "cameraLabel": "Cameră"
 }

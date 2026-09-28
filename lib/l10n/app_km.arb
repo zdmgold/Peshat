@@ -68,5 +68,10 @@
   "historyToday": "ថ្ងៃនេះ",
   "historyYesterday": "ម្សិលមិញ",
   "historyOlder": "ចាស់ជាង",
-  "typeTextButtonLabel": "វាយអត្ថបទ"
+  "typeTextButtonLabel": "វាយអត្ថបទ",
+  "removeAdsSubtitle": "ការទិញម្តង",
+  "removeAdsShortLabel": "ដកចេញ",
+  "charactersLabel": "តួអក្សរ",
+  "clearHistoryLabel": "លុបប្រវត្តិទាំងអស់",
+  "cameraLabel": "កាមេរ៉ា"
 }

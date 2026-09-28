@@ -216,4 +216,19 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => '输入文字';
+
+  @override
+  String get removeAdsSubtitle => '一次性购买';
+
+  @override
+  String get removeAdsShortLabel => '移除';
+
+  @override
+  String get charactersLabel => '个字符';
+
+  @override
+  String get clearHistoryLabel => '清除所有历史记录';
+
+  @override
+  String get cameraLabel => '相机';
 }

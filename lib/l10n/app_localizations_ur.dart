@@ -216,4 +216,19 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'متن ٹائپ کریں';
+
+  @override
+  String get removeAdsSubtitle => 'ایک بار خرید';
+
+  @override
+  String get removeAdsShortLabel => 'ہٹائیں';
+
+  @override
+  String get charactersLabel => 'حروف';
+
+  @override
+  String get clearHistoryLabel => 'تمام تاریخ صاف کریں';
+
+  @override
+  String get cameraLabel => 'کیمرہ';
 }

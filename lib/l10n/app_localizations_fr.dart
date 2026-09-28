@@ -216,4 +216,19 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Saisir du texte';
+
+  @override
+  String get removeAdsSubtitle => 'Achat unique';
+
+  @override
+  String get removeAdsShortLabel => 'Retirer';
+
+  @override
+  String get charactersLabel => 'caractères';
+
+  @override
+  String get clearHistoryLabel => 'Effacer tout l’historique';
+
+  @override
+  String get cameraLabel => 'Appareil photo';
 }

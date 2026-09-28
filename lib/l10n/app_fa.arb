@@ -68,5 +68,10 @@
   "historyToday": "امروز",
   "historyYesterday": "دیروز",
   "historyOlder": "قدیمی‌تر",
-  "typeTextButtonLabel": "متن تایپ کنید"
+  "typeTextButtonLabel": "متن تایپ کنید",
+  "removeAdsSubtitle": "خرید یکبار",
+  "removeAdsShortLabel": "حذف",
+  "charactersLabel": "کاراکتر",
+  "clearHistoryLabel": "پاک کردن همه تاریخچه",
+  "cameraLabel": "دوربین"
 }

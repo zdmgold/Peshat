@@ -68,5 +68,10 @@
   "historyToday": "今日",
   "historyYesterday": "昨日",
   "historyOlder": "それ以前",
-  "typeTextButtonLabel": "テキストを入力"
+  "typeTextButtonLabel": "テキストを入力",
+  "removeAdsSubtitle": "買い切り",
+  "removeAdsShortLabel": "削除",
+  "charactersLabel": "文字",
+  "clearHistoryLabel": "すべての履歴を消去",
+  "cameraLabel": "カメラ"
 }

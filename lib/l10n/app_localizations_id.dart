@@ -216,4 +216,19 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Ketik teks';
+
+  @override
+  String get removeAdsSubtitle => 'Pembelian satu kali';
+
+  @override
+  String get removeAdsShortLabel => 'Hapus';
+
+  @override
+  String get charactersLabel => 'karakter';
+
+  @override
+  String get clearHistoryLabel => 'Hapus semua riwayat';
+
+  @override
+  String get cameraLabel => 'Kamera';
 }

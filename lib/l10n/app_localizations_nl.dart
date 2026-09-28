@@ -216,4 +216,19 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Tekst typen';
+
+  @override
+  String get removeAdsSubtitle => 'Eenmalige aankoop';
+
+  @override
+  String get removeAdsShortLabel => 'Verwijderen';
+
+  @override
+  String get charactersLabel => 'tekens';
+
+  @override
+  String get clearHistoryLabel => 'Alle geschiedenis wissen';
+
+  @override
+  String get cameraLabel => 'Camera';
 }

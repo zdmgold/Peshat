@@ -68,5 +68,10 @@
   "historyToday": "අද",
   "historyYesterday": "ඊයේ",
   "historyOlder": "පැරණි",
-  "typeTextButtonLabel": "පෙළ ටයිප් කරන්න"
+  "typeTextButtonLabel": "පෙළ ටයිප් කරන්න",
+  "removeAdsSubtitle": "එක් වරක් මිලදී ගැනීම",
+  "removeAdsShortLabel": "ඉවත් කරන්න",
+  "charactersLabel": "අක්ෂර",
+  "clearHistoryLabel": "සියලු ඉතිහාසය මකන්න",
+  "cameraLabel": "කැමරාව"
 }

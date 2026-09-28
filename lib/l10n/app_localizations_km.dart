@@ -216,4 +216,19 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'វាយអត្ថបទ';
+
+  @override
+  String get removeAdsSubtitle => 'ការទិញម្តង';
+
+  @override
+  String get removeAdsShortLabel => 'ដកចេញ';
+
+  @override
+  String get charactersLabel => 'តួអក្សរ';
+
+  @override
+  String get clearHistoryLabel => 'លុបប្រវត្តិទាំងអស់';
+
+  @override
+  String get cameraLabel => 'កាមេរ៉ា';
 }

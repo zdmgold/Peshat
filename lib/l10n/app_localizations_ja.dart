@@ -216,4 +216,19 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'テキストを入力';
+
+  @override
+  String get removeAdsSubtitle => '買い切り';
+
+  @override
+  String get removeAdsShortLabel => '削除';
+
+  @override
+  String get charactersLabel => '文字';
+
+  @override
+  String get clearHistoryLabel => 'すべての履歴を消去';
+
+  @override
+  String get cameraLabel => 'カメラ';
 }

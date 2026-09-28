@@ -216,4 +216,19 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'पाठ टाइप गर्नुहोस्';
+
+  @override
+  String get removeAdsSubtitle => 'एक-पटक खरिद';
+
+  @override
+  String get removeAdsShortLabel => 'हटाउनुहोस्';
+
+  @override
+  String get charactersLabel => 'अक्षरहरू';
+
+  @override
+  String get clearHistoryLabel => 'सबै इतिहास मेटाउनुहोस्';
+
+  @override
+  String get cameraLabel => 'क्यामेरा';
 }

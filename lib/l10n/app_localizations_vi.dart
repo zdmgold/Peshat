@@ -216,4 +216,19 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Nhập văn bản';
+
+  @override
+  String get removeAdsSubtitle => 'Mua một lần';
+
+  @override
+  String get removeAdsShortLabel => 'Gỡ';
+
+  @override
+  String get charactersLabel => 'ký tự';
+
+  @override
+  String get clearHistoryLabel => 'Xóa toàn bộ lịch sử';
+
+  @override
+  String get cameraLabel => 'Máy ảnh';
 }

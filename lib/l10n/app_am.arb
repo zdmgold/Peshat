@@ -68,5 +68,10 @@
   "historyToday": "ዛሬ",
   "historyYesterday": "ትናንት",
   "historyOlder": "የቆየ",
-  "typeTextButtonLabel": "ጽሑፍ ይተይቡ"
+  "typeTextButtonLabel": "ጽሑፍ ይተይቡ",
+  "removeAdsSubtitle": "አንድ ጊዜ ግዢ",
+  "removeAdsShortLabel": "አስወግድ",
+  "charactersLabel": "ቁምፊዎች",
+  "clearHistoryLabel": "ሁሉንም ታሪክ አጽዳ",
+  "cameraLabel": "ካሜራ"
 }

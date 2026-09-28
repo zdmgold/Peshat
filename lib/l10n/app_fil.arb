@@ -68,5 +68,10 @@
   "historyToday": "Ngayon",
   "historyYesterday": "Kahapon",
   "historyOlder": "Mas luma",
-  "typeTextButtonLabel": "Mag-type ng teksto"
+  "typeTextButtonLabel": "Mag-type ng teksto",
+  "removeAdsSubtitle": "Isahang pagbili",
+  "removeAdsShortLabel": "Alisin",
+  "charactersLabel": "mga character",
+  "clearHistoryLabel": "Burahin lahat ng kasaysayan",
+  "cameraLabel": "Camera"
 }

@@ -216,4 +216,19 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Szöveg beírása';
+
+  @override
+  String get removeAdsSubtitle => 'Egyszeri vásárlás';
+
+  @override
+  String get removeAdsShortLabel => 'Eltávolítás';
+
+  @override
+  String get charactersLabel => 'karakter';
+
+  @override
+  String get clearHistoryLabel => 'Teljes előzmények törlése';
+
+  @override
+  String get cameraLabel => 'Kamera';
 }

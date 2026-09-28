@@ -68,5 +68,10 @@
   "historyToday": "आज",
   "historyYesterday": "हिजो",
   "historyOlder": "पुरानो",
-  "typeTextButtonLabel": "पाठ टाइप गर्नुहोस्"
+  "typeTextButtonLabel": "पाठ टाइप गर्नुहोस्",
+  "removeAdsSubtitle": "एक-पटक खरिद",
+  "removeAdsShortLabel": "हटाउनुहोस्",
+  "charactersLabel": "अक्षरहरू",
+  "clearHistoryLabel": "सबै इतिहास मेटाउनुहोस्",
+  "cameraLabel": "क्यामेरा"
 }

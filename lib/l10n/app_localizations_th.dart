@@ -216,4 +216,19 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'พิมพ์ข้อความ';
+
+  @override
+  String get removeAdsSubtitle => 'ซื้อครั้งเดียว';
+
+  @override
+  String get removeAdsShortLabel => 'ลบ';
+
+  @override
+  String get charactersLabel => 'ตัวอักษร';
+
+  @override
+  String get clearHistoryLabel => 'ล้างประวัติทั้งหมด';
+
+  @override
+  String get cameraLabel => 'กล้อง';
 }

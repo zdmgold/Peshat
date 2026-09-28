@@ -216,4 +216,19 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'စာသားရိုက်ထည့်ပါ';
+
+  @override
+  String get removeAdsSubtitle => 'တစ်ကြိမ်တည်းဝယ်ယူမှု';
+
+  @override
+  String get removeAdsShortLabel => 'ဖယ်ရှားရန်';
+
+  @override
+  String get charactersLabel => 'အက္ခရာ';
+
+  @override
+  String get clearHistoryLabel => 'မှတ်တမ်းအားလုံးကို ရှင်းလင်းပါ';
+
+  @override
+  String get cameraLabel => 'ကင်မရာ';
 }

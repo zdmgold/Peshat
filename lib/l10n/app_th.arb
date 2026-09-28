@@ -68,5 +68,10 @@
   "historyToday": "วันนี้",
   "historyYesterday": "เมื่อวาน",
   "historyOlder": "เก่ากว่า",
-  "typeTextButtonLabel": "พิมพ์ข้อความ"
+  "typeTextButtonLabel": "พิมพ์ข้อความ",
+  "removeAdsSubtitle": "ซื้อครั้งเดียว",
+  "removeAdsShortLabel": "ลบ",
+  "charactersLabel": "ตัวอักษร",
+  "clearHistoryLabel": "ล้างประวัติทั้งหมด",
+  "cameraLabel": "กล้อง"
 }

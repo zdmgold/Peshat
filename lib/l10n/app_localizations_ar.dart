@@ -216,4 +216,19 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'اكتب نصاً';
+
+  @override
+  String get removeAdsSubtitle => 'شراء لمرة واحدة';
+
+  @override
+  String get removeAdsShortLabel => 'إزالة';
+
+  @override
+  String get charactersLabel => 'حرف';
+
+  @override
+  String get clearHistoryLabel => 'مسح كل السجل';
+
+  @override
+  String get cameraLabel => 'الكاميرا';
 }

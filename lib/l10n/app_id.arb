@@ -68,5 +68,10 @@
   "historyToday": "Hari ini",
   "historyYesterday": "Kemarin",
   "historyOlder": "Lebih lama",
-  "typeTextButtonLabel": "Ketik teks"
+  "typeTextButtonLabel": "Ketik teks",
+  "removeAdsSubtitle": "Pembelian satu kali",
+  "removeAdsShortLabel": "Hapus",
+  "charactersLabel": "karakter",
+  "clearHistoryLabel": "Hapus semua riwayat",
+  "cameraLabel": "Kamera"
 }

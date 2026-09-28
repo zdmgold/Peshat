@@ -216,4 +216,19 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'පෙළ ටයිප් කරන්න';
+
+  @override
+  String get removeAdsSubtitle => 'එක් වරක් මිලදී ගැනීම';
+
+  @override
+  String get removeAdsShortLabel => 'ඉවත් කරන්න';
+
+  @override
+  String get charactersLabel => 'අක්ෂර';
+
+  @override
+  String get clearHistoryLabel => 'සියලු ඉතිහාසය මකන්න';
+
+  @override
+  String get cameraLabel => 'කැමරාව';
 }

@@ -216,4 +216,19 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Metin yaz';
+
+  @override
+  String get removeAdsSubtitle => 'Tek seferlik satın alma';
+
+  @override
+  String get removeAdsShortLabel => 'Kaldır';
+
+  @override
+  String get charactersLabel => 'karakter';
+
+  @override
+  String get clearHistoryLabel => 'Tüm geçmişi temizle';
+
+  @override
+  String get cameraLabel => 'Kamera';
 }

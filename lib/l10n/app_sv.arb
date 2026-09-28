@@ -68,5 +68,10 @@
   "historyToday": "Idag",
   "historyYesterday": "Igår",
   "historyOlder": "Äldre",
-  "typeTextButtonLabel": "Skriv text"
+  "typeTextButtonLabel": "Skriv text",
+  "removeAdsSubtitle": "Engångsköp",
+  "removeAdsShortLabel": "Ta bort",
+  "charactersLabel": "tecken",
+  "clearHistoryLabel": "Rensa all historik",
+  "cameraLabel": "Kamera"
 }

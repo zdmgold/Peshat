@@ -68,5 +68,10 @@
   "historyToday": "Oggi",
   "historyYesterday": "Ieri",
   "historyOlder": "Più vecchio",
-  "typeTextButtonLabel": "Digita testo"
+  "typeTextButtonLabel": "Digita testo",
+  "removeAdsSubtitle": "Acquisto singolo",
+  "removeAdsShortLabel": "Rimuovi",
+  "charactersLabel": "caratteri",
+  "clearHistoryLabel": "Cancella tutta la cronologia",
+  "cameraLabel": "Fotocamera"
 }

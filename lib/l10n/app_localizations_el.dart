@@ -216,4 +216,19 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Πληκτρολόγηση κειμένου';
+
+  @override
+  String get removeAdsSubtitle => 'Αγορά μία φορά';
+
+  @override
+  String get removeAdsShortLabel => 'Αφαίρεση';
+
+  @override
+  String get charactersLabel => 'χαρακτήρες';
+
+  @override
+  String get clearHistoryLabel => 'Διαγραφή όλου του ιστορικού';
+
+  @override
+  String get cameraLabel => 'Κάμερα';
 }

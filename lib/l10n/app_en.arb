@@ -78,5 +78,10 @@
   "historyToday": "Today",
   "historyYesterday": "Yesterday",
   "historyOlder": "Older",
-  "typeTextButtonLabel": "Type text"
+  "typeTextButtonLabel": "Type text",
+  "removeAdsSubtitle": "One-time purchase",
+  "removeAdsShortLabel": "Remove",
+  "charactersLabel": "characters",
+  "clearHistoryLabel": "Clear all history",
+  "cameraLabel": "Camera"
 }

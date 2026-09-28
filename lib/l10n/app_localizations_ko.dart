@@ -216,4 +216,19 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => '텍스트 입력';
+
+  @override
+  String get removeAdsSubtitle => '일회성 구매';
+
+  @override
+  String get removeAdsShortLabel => '제거';
+
+  @override
+  String get charactersLabel => '자';
+
+  @override
+  String get clearHistoryLabel => '모든 기록 지우기';
+
+  @override
+  String get cameraLabel => '카메라';
 }

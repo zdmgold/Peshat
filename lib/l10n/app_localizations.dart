@@ -576,6 +576,36 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Type text'**
   String get typeTextButtonLabel;
+
+  /// No description provided for @removeAdsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'One-time purchase'**
+  String get removeAdsSubtitle;
+
+  /// No description provided for @removeAdsShortLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Remove'**
+  String get removeAdsShortLabel;
+
+  /// No description provided for @charactersLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'characters'**
+  String get charactersLabel;
+
+  /// No description provided for @clearHistoryLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear all history'**
+  String get clearHistoryLabel;
+
+  /// No description provided for @cameraLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera'**
+  String get cameraLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

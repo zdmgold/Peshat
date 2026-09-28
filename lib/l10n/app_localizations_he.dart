@@ -216,4 +216,19 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'הקלד טקסט';
+
+  @override
+  String get removeAdsSubtitle => 'רכישה חד-פעמית';
+
+  @override
+  String get removeAdsShortLabel => 'הסר';
+
+  @override
+  String get charactersLabel => 'תווים';
+
+  @override
+  String get clearHistoryLabel => 'נקה את כל ההיסטוריה';
+
+  @override
+  String get cameraLabel => 'מצלמה';
 }

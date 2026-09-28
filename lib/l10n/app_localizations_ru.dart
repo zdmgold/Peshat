@@ -216,4 +216,19 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Ввести текст';
+
+  @override
+  String get removeAdsSubtitle => 'Разовая покупка';
+
+  @override
+  String get removeAdsShortLabel => 'Убрать';
+
+  @override
+  String get charactersLabel => 'символов';
+
+  @override
+  String get clearHistoryLabel => 'Очистить всю историю';
+
+  @override
+  String get cameraLabel => 'Камера';
 }

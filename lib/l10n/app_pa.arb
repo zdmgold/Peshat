@@ -68,5 +68,10 @@
   "historyToday": "ਅੱਜ",
   "historyYesterday": "ਕੱਲ੍ਹ",
   "historyOlder": "ਪੁਰਾਣਾ",
-  "typeTextButtonLabel": "ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ"
+  "typeTextButtonLabel": "ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ",
+  "removeAdsSubtitle": "ਇੱਕ ਵਾਰ ਦੀ ਖਰੀਦ",
+  "removeAdsShortLabel": "ਹਟਾਓ",
+  "charactersLabel": "ਅੱਖਰ",
+  "clearHistoryLabel": "ਸਾਰਾ ਇਤਿਹਾਸ ਸਾਫ਼ ਕਰੋ",
+  "cameraLabel": "ਕੈਮਰਾ"
 }

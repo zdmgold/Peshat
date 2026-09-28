@@ -216,4 +216,19 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'টেক্সট টাইপ করুন';
+
+  @override
+  String get removeAdsSubtitle => 'এককালীন ক্রয়';
+
+  @override
+  String get removeAdsShortLabel => 'সরান';
+
+  @override
+  String get charactersLabel => 'অক্ষর';
+
+  @override
+  String get clearHistoryLabel => 'সব ইতিহাস মুছুন';
+
+  @override
+  String get cameraLabel => 'ক্যামেরা';
 }

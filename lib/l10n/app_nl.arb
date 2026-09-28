@@ -68,5 +68,10 @@
   "historyToday": "Vandaag",
   "historyYesterday": "Gisteren",
   "historyOlder": "Ouder",
-  "typeTextButtonLabel": "Tekst typen"
+  "typeTextButtonLabel": "Tekst typen",
+  "removeAdsSubtitle": "Eenmalige aankoop",
+  "removeAdsShortLabel": "Verwijderen",
+  "charactersLabel": "tekens",
+  "clearHistoryLabel": "Alle geschiedenis wissen",
+  "cameraLabel": "Camera"
 }

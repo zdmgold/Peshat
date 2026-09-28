@@ -68,5 +68,10 @@
   "historyToday": "आज",
   "historyYesterday": "कल",
   "historyOlder": "पुराना",
-  "typeTextButtonLabel": "टेक्स्ट टाइप करें"
+  "typeTextButtonLabel": "टेक्स्ट टाइप करें",
+  "removeAdsSubtitle": "एकमुश्त खरीद",
+  "removeAdsShortLabel": "हटाएं",
+  "charactersLabel": "अक्षर",
+  "clearHistoryLabel": "सारा इतिहास साफ़ करें",
+  "cameraLabel": "कैमरा"
 }

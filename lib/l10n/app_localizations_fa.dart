@@ -216,4 +216,19 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'متن تایپ کنید';
+
+  @override
+  String get removeAdsSubtitle => 'خرید یکبار';
+
+  @override
+  String get removeAdsShortLabel => 'حذف';
+
+  @override
+  String get charactersLabel => 'کاراکتر';
+
+  @override
+  String get clearHistoryLabel => 'پاک کردن همه تاریخچه';
+
+  @override
+  String get cameraLabel => 'دوربین';
 }

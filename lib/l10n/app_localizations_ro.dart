@@ -216,4 +216,19 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Introduceți text';
+
+  @override
+  String get removeAdsSubtitle => 'Achiziție unică';
+
+  @override
+  String get removeAdsShortLabel => 'Elimină';
+
+  @override
+  String get charactersLabel => 'caractere';
+
+  @override
+  String get clearHistoryLabel => 'Șterge tot istoricul';
+
+  @override
+  String get cameraLabel => 'Cameră';
 }

@@ -216,4 +216,19 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Wpisz tekst';
+
+  @override
+  String get removeAdsSubtitle => 'Zakup jednorazowy';
+
+  @override
+  String get removeAdsShortLabel => 'Usuń';
+
+  @override
+  String get charactersLabel => 'znaków';
+
+  @override
+  String get clearHistoryLabel => 'Wyczyść całą historię';
+
+  @override
+  String get cameraLabel => 'Aparat';
 }

@@ -68,5 +68,10 @@
   "historyToday": "ယနေ့",
   "historyYesterday": "မနေ့က",
   "historyOlder": "ပိုဟောင်း",
-  "typeTextButtonLabel": "စာသားရိုက်ထည့်ပါ"
+  "typeTextButtonLabel": "စာသားရိုက်ထည့်ပါ",
+  "removeAdsSubtitle": "တစ်ကြိမ်တည်းဝယ်ယူမှု",
+  "removeAdsShortLabel": "ဖယ်ရှားရန်",
+  "charactersLabel": "အက္ခရာ",
+  "clearHistoryLabel": "မှတ်တမ်းအားလုံးကို ရှင်းလင်းပါ",
+  "cameraLabel": "ကင်မရာ"
 }

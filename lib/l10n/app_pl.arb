@@ -68,5 +68,10 @@
   "historyToday": "Dzisiaj",
   "historyYesterday": "Wczoraj",
   "historyOlder": "Starsze",
-  "typeTextButtonLabel": "Wpisz tekst"
+  "typeTextButtonLabel": "Wpisz tekst",
+  "removeAdsSubtitle": "Zakup jednorazowy",
+  "removeAdsShortLabel": "Usuń",
+  "charactersLabel": "znaków",
+  "clearHistoryLabel": "Wyczyść całą historię",
+  "cameraLabel": "Aparat"
 }

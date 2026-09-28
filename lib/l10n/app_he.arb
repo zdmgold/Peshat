@@ -68,5 +68,10 @@
   "historyToday": "היום",
   "historyYesterday": "אתמול",
   "historyOlder": "ישן יותר",
-  "typeTextButtonLabel": "הקלד טקסט"
+  "typeTextButtonLabel": "הקלד טקסט",
+  "removeAdsSubtitle": "רכישה חד-פעמית",
+  "removeAdsShortLabel": "הסר",
+  "charactersLabel": "תווים",
+  "clearHistoryLabel": "נקה את כל ההיסטוריה",
+  "cameraLabel": "מצלמה"
 }

@@ -68,5 +68,10 @@
   "historyToday": "Dnes",
   "historyYesterday": "Včera",
   "historyOlder": "Starší",
-  "typeTextButtonLabel": "Zadat text"
+  "typeTextButtonLabel": "Zadat text",
+  "removeAdsSubtitle": "Jednorázový nákup",
+  "removeAdsShortLabel": "Odebrat",
+  "charactersLabel": "znaků",
+  "clearHistoryLabel": "Vymazat celou historii",
+  "cameraLabel": "Fotoaparát"
 }

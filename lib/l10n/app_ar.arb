@@ -68,5 +68,10 @@
   "historyToday": "اليوم",
   "historyYesterday": "أمس",
   "historyOlder": "أقدم",
-  "typeTextButtonLabel": "اكتب نصاً"
+  "typeTextButtonLabel": "اكتب نصاً",
+  "removeAdsSubtitle": "شراء لمرة واحدة",
+  "removeAdsShortLabel": "إزالة",
+  "charactersLabel": "حرف",
+  "clearHistoryLabel": "مسح كل السجل",
+  "cameraLabel": "الكاميرا"
 }

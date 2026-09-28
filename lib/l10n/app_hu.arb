@@ -68,5 +68,10 @@
   "historyToday": "Ma",
   "historyYesterday": "Tegnap",
   "historyOlder": "Régebbi",
-  "typeTextButtonLabel": "Szöveg beírása"
+  "typeTextButtonLabel": "Szöveg beírása",
+  "removeAdsSubtitle": "Egyszeri vásárlás",
+  "removeAdsShortLabel": "Eltávolítás",
+  "charactersLabel": "karakter",
+  "clearHistoryLabel": "Teljes előzmények törlése",
+  "cameraLabel": "Kamera"
 }

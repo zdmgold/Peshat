@@ -68,5 +68,10 @@
   "historyToday": "Сьогодні",
   "historyYesterday": "Учора",
   "historyOlder": "Раніше",
-  "typeTextButtonLabel": "Ввести текст"
+  "typeTextButtonLabel": "Ввести текст",
+  "removeAdsSubtitle": "Разова купівля",
+  "removeAdsShortLabel": "Прибрати",
+  "charactersLabel": "символів",
+  "clearHistoryLabel": "Очистити всю історію",
+  "cameraLabel": "Камера"
 }

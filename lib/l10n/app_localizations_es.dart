@@ -216,4 +216,19 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Escribir texto';
+
+  @override
+  String get removeAdsSubtitle => 'Compra única';
+
+  @override
+  String get removeAdsShortLabel => 'Quitar';
+
+  @override
+  String get charactersLabel => 'caracteres';
+
+  @override
+  String get clearHistoryLabel => 'Borrar todo el historial';
+
+  @override
+  String get cameraLabel => 'Cámara';
 }

@@ -216,4 +216,19 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ';
+
+  @override
+  String get removeAdsSubtitle => 'ਇੱਕ ਵਾਰ ਦੀ ਖਰੀਦ';
+
+  @override
+  String get removeAdsShortLabel => 'ਹਟਾਓ';
+
+  @override
+  String get charactersLabel => 'ਅੱਖਰ';
+
+  @override
+  String get clearHistoryLabel => 'ਸਾਰਾ ਇਤਿਹਾਸ ਸਾਫ਼ ਕਰੋ';
+
+  @override
+  String get cameraLabel => 'ਕੈਮਰਾ';
 }

@@ -216,4 +216,19 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Ввести текст';
+
+  @override
+  String get removeAdsSubtitle => 'Разова купівля';
+
+  @override
+  String get removeAdsShortLabel => 'Прибрати';
+
+  @override
+  String get charactersLabel => 'символів';
+
+  @override
+  String get clearHistoryLabel => 'Очистити всю історію';
+
+  @override
+  String get cameraLabel => 'Камера';
 }

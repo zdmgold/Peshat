@@ -68,5 +68,10 @@
   "historyToday": "আজ",
   "historyYesterday": "গতকাল",
   "historyOlder": "পুরোনো",
-  "typeTextButtonLabel": "টেক্সট টাইপ করুন"
+  "typeTextButtonLabel": "টেক্সট টাইপ করুন",
+  "removeAdsSubtitle": "এককালীন ক্রয়",
+  "removeAdsShortLabel": "সরান",
+  "charactersLabel": "অক্ষর",
+  "clearHistoryLabel": "সব ইতিহাস মুছুন",
+  "cameraLabel": "ক্যামেরা"
 }

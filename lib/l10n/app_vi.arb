@@ -68,5 +68,10 @@
   "historyToday": "Hôm nay",
   "historyYesterday": "Hôm qua",
   "historyOlder": "Cũ hơn",
-  "typeTextButtonLabel": "Nhập văn bản"
+  "typeTextButtonLabel": "Nhập văn bản",
+  "removeAdsSubtitle": "Mua một lần",
+  "removeAdsShortLabel": "Gỡ",
+  "charactersLabel": "ký tự",
+  "clearHistoryLabel": "Xóa toàn bộ lịch sử",
+  "cameraLabel": "Máy ảnh"
 }

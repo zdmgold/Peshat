@@ -216,4 +216,19 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'टेक्स्ट टाइप करें';
+
+  @override
+  String get removeAdsSubtitle => 'एकमुश्त खरीद';
+
+  @override
+  String get removeAdsShortLabel => 'हटाएं';
+
+  @override
+  String get charactersLabel => 'अक्षर';
+
+  @override
+  String get clearHistoryLabel => 'सारा इतिहास साफ़ करें';
+
+  @override
+  String get cameraLabel => 'कैमरा';
 }

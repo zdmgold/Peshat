@@ -216,4 +216,19 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'ጽሑፍ ይተይቡ';
+
+  @override
+  String get removeAdsSubtitle => 'አንድ ጊዜ ግዢ';
+
+  @override
+  String get removeAdsShortLabel => 'አስወግድ';
+
+  @override
+  String get charactersLabel => 'ቁምፊዎች';
+
+  @override
+  String get clearHistoryLabel => 'ሁሉንም ታሪክ አጽዳ';
+
+  @override
+  String get cameraLabel => 'ካሜራ';
 }

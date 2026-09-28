@@ -68,5 +68,10 @@
   "historyToday": "آج",
   "historyYesterday": "کل",
   "historyOlder": "پرانے",
-  "typeTextButtonLabel": "متن ٹائپ کریں"
+  "typeTextButtonLabel": "متن ٹائپ کریں",
+  "removeAdsSubtitle": "ایک بار خرید",
+  "removeAdsShortLabel": "ہٹائیں",
+  "charactersLabel": "حروف",
+  "clearHistoryLabel": "تمام تاریخ صاف کریں",
+  "cameraLabel": "کیمرہ"
 }

@@ -216,4 +216,19 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get typeTextButtonLabel => 'Mag-type ng teksto';
+
+  @override
+  String get removeAdsSubtitle => 'Isahang pagbili';
+
+  @override
+  String get removeAdsShortLabel => 'Alisin';
+
+  @override
+  String get charactersLabel => 'mga character';
+
+  @override
+  String get clearHistoryLabel => 'Burahin lahat ng kasaysayan';
+
+  @override
+  String get cameraLabel => 'Camera';
 }
