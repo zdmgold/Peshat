@@ -67,5 +67,6 @@
   "uiLanguageLabel": "App-språk",
   "historyToday": "Idag",
   "historyYesterday": "Igår",
-  "historyOlder": "Äldre"
+  "historyOlder": "Äldre",
+  "typeTextButtonLabel": "Skriv text"
 }

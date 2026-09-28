@@ -204,4 +204,16 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Alkalmazás nyelve';
+
+  @override
+  String get historyToday => 'Ma';
+
+  @override
+  String get historyYesterday => 'Tegnap';
+
+  @override
+  String get historyOlder => 'Régebbi';
+
+  @override
+  String get typeTextButtonLabel => 'Szöveg beírása';
 }

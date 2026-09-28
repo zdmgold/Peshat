@@ -67,5 +67,6 @@
   "uiLanguageLabel": "שפת האפליקציה",
   "historyToday": "היום",
   "historyYesterday": "אתמול",
-  "historyOlder": "ישן יותר"
+  "historyOlder": "ישן יותר",
+  "typeTextButtonLabel": "הקלד טקסט"
 }

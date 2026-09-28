@@ -204,4 +204,16 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'ភាសាកម្មវិធី';
+
+  @override
+  String get historyToday => 'ថ្ងៃនេះ';
+
+  @override
+  String get historyYesterday => 'ម្សិលមិញ';
+
+  @override
+  String get historyOlder => 'ចាស់ជាង';
+
+  @override
+  String get typeTextButtonLabel => 'វាយអត្ថបទ';
 }

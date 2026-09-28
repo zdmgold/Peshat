@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Bahasa aplikasi",
   "historyToday": "Hari ini",
   "historyYesterday": "Kemarin",
-  "historyOlder": "Lebih lama"
+  "historyOlder": "Lebih lama",
+  "typeTextButtonLabel": "Ketik teks"
 }

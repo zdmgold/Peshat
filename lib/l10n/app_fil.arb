@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Wika ng app",
   "historyToday": "Ngayon",
   "historyYesterday": "Kahapon",
-  "historyOlder": "Mas luma"
+  "historyOlder": "Mas luma",
+  "typeTextButtonLabel": "Mag-type ng teksto"
 }

@@ -67,5 +67,6 @@
   "uiLanguageLabel": "アプリの言語",
   "historyToday": "今日",
   "historyYesterday": "昨日",
-  "historyOlder": "それ以前"
+  "historyOlder": "それ以前",
+  "typeTextButtonLabel": "テキストを入力"
 }

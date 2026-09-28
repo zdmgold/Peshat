@@ -204,4 +204,16 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Jazyk aplikace';
+
+  @override
+  String get historyToday => 'Dnes';
+
+  @override
+  String get historyYesterday => 'Včera';
+
+  @override
+  String get historyOlder => 'Starší';
+
+  @override
+  String get typeTextButtonLabel => 'Zadat text';
 }

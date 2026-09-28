@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Jazyk aplikace",
   "historyToday": "Dnes",
   "historyYesterday": "Včera",
-  "historyOlder": "Starší"
+  "historyOlder": "Starší",
+  "typeTextButtonLabel": "Zadat text"
 }

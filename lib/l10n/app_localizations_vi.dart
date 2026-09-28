@@ -204,4 +204,16 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Ngôn ngữ ứng dụng';
+
+  @override
+  String get historyToday => 'Hôm nay';
+
+  @override
+  String get historyYesterday => 'Hôm qua';
+
+  @override
+  String get historyOlder => 'Cũ hơn';
+
+  @override
+  String get typeTextButtonLabel => 'Nhập văn bản';
 }

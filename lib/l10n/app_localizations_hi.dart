@@ -204,4 +204,16 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'ऐप भाषा';
+
+  @override
+  String get historyToday => 'आज';
+
+  @override
+  String get historyYesterday => 'कल';
+
+  @override
+  String get historyOlder => 'पुराना';
+
+  @override
+  String get typeTextButtonLabel => 'टेक्स्ट टाइप करें';
 }

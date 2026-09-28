@@ -204,4 +204,16 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'App-taal';
+
+  @override
+  String get historyToday => 'Vandaag';
+
+  @override
+  String get historyYesterday => 'Gisteren';
+
+  @override
+  String get historyOlder => 'Ouder';
+
+  @override
+  String get typeTextButtonLabel => 'Tekst typen';
 }

@@ -67,5 +67,6 @@
   "uiLanguageLabel": "应用语言",
   "historyToday": "今天",
   "historyYesterday": "昨天",
-  "historyOlder": "更早"
+  "historyOlder": "更早",
+  "typeTextButtonLabel": "输入文字"
 }

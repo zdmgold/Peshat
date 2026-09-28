@@ -67,5 +67,6 @@
   "uiLanguageLabel": "एप भाषा",
   "historyToday": "आज",
   "historyYesterday": "हिजो",
-  "historyOlder": "पुरानो"
+  "historyOlder": "पुरानो",
+  "typeTextButtonLabel": "पाठ टाइप गर्नुहोस्"
 }

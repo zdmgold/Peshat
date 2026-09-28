@@ -204,4 +204,16 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'שפת האפליקציה';
+
+  @override
+  String get historyToday => 'היום';
+
+  @override
+  String get historyYesterday => 'אתמול';
+
+  @override
+  String get historyOlder => 'ישן יותר';
+
+  @override
+  String get typeTextButtonLabel => 'הקלד טקסט';
 }

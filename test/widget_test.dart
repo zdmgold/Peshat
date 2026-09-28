@@ -5,17 +5,18 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:peshat/core/providers/history_provider.dart';
 import 'package:peshat/core/providers/purchase_provider.dart';
 import 'package:peshat/core/providers/settings_provider.dart';
-import 'package:peshat/core/providers/ui_locale_provider.dart';
 import 'package:peshat/core/providers/theme_provider.dart';
+import 'package:peshat/core/providers/ui_locale_provider.dart';
 import 'package:peshat/l10n/app_localizations.dart';
 import 'package:peshat/screens/scan_screen.dart';
 
 void main() {
-  testWidgets('ScanScreen renders scan button', (tester) async {
+  testWidgets('ScanScreen renders core controls', (tester) async {
     SharedPreferences.setMockInitialValues({
       'ads_removed': true,
       'theme_mode': 'light',
       'target_language': 'es',
+      'ui_locale': 'system',
     });
     final prefs = await SharedPreferences.getInstance();
 
@@ -32,8 +33,15 @@ void main() {
         ),
       ),
     );
-    await tester.pumpAndSettle();
+    await tester.pump();
 
-    expect(find.text('Scan Document'), findsOneWidget);
+    // The wordmark is 'Peshat' (AppBar title + hero).
+    expect(find.text('Peshat'), findsWidgets);
+    // The Type text pill is visible.
+    expect(find.text('Type text'), findsOneWidget);
+    // The scan cluster is present (icon inside the circle).
+    expect(find.byIcon(Icons.document_scanner_outlined), findsOneWidget);
+    // The import row is visible.
+    expect(find.text('Import a file'), findsOneWidget);
   });
 }

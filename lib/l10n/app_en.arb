@@ -77,5 +77,6 @@
   "uiLanguageLabel": "App language",
   "historyToday": "Today",
   "historyYesterday": "Yesterday",
-  "historyOlder": "Older"
+  "historyOlder": "Older",
+  "typeTextButtonLabel": "Type text"
 }

@@ -204,4 +204,16 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Język aplikacji';
+
+  @override
+  String get historyToday => 'Dzisiaj';
+
+  @override
+  String get historyYesterday => 'Wczoraj';
+
+  @override
+  String get historyOlder => 'Starsze';
+
+  @override
+  String get typeTextButtonLabel => 'Wpisz tekst';
 }

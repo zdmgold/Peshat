@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Мова застосунку",
   "historyToday": "Сьогодні",
   "historyYesterday": "Учора",
-  "historyOlder": "Раніше"
+  "historyOlder": "Раніше",
+  "typeTextButtonLabel": "Ввести текст"
 }

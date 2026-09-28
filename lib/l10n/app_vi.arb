@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Ngôn ngữ ứng dụng",
   "historyToday": "Hôm nay",
   "historyYesterday": "Hôm qua",
-  "historyOlder": "Cũ hơn"
+  "historyOlder": "Cũ hơn",
+  "typeTextButtonLabel": "Nhập văn bản"
 }

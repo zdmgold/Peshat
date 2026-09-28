@@ -204,4 +204,16 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Мова застосунку';
+
+  @override
+  String get historyToday => 'Сьогодні';
+
+  @override
+  String get historyYesterday => 'Учора';
+
+  @override
+  String get historyOlder => 'Раніше';
+
+  @override
+  String get typeTextButtonLabel => 'Ввести текст';
 }

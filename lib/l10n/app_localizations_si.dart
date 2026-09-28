@@ -204,4 +204,16 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'යෙදුම් භාෂාව';
+
+  @override
+  String get historyToday => 'අද';
+
+  @override
+  String get historyYesterday => 'ඊයේ';
+
+  @override
+  String get historyOlder => 'පැරණි';
+
+  @override
+  String get typeTextButtonLabel => 'පෙළ ටයිප් කරන්න';
 }

@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Uygulama dili",
   "historyToday": "Bugün",
   "historyYesterday": "Dün",
-  "historyOlder": "Daha eski"
+  "historyOlder": "Daha eski",
+  "typeTextButtonLabel": "Metin yaz"
 }

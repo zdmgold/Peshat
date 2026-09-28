@@ -67,5 +67,6 @@
   "uiLanguageLabel": "ایپ کی زبان",
   "historyToday": "آج",
   "historyYesterday": "کل",
-  "historyOlder": "پرانے"
+  "historyOlder": "پرانے",
+  "typeTextButtonLabel": "متن ٹائپ کریں"
 }

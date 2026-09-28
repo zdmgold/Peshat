@@ -204,4 +204,16 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'ພາສາແອັບ';
+
+  @override
+  String get historyToday => 'ມື້ນີ້';
+
+  @override
+  String get historyYesterday => 'ມື້ວານ';
+
+  @override
+  String get historyOlder => 'ເກົ່າແກ່';
+
+  @override
+  String get typeTextButtonLabel => 'ພິມຂໍ້ຄວາມ';
 }

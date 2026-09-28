@@ -204,4 +204,16 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'ภาษาของแอป';
+
+  @override
+  String get historyToday => 'วันนี้';
+
+  @override
+  String get historyYesterday => 'เมื่อวาน';
+
+  @override
+  String get historyOlder => 'เก่ากว่า';
+
+  @override
+  String get typeTextButtonLabel => 'พิมพ์ข้อความ';
 }

@@ -204,4 +204,16 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => '앱 언어';
+
+  @override
+  String get historyToday => '오늘';
+
+  @override
+  String get historyYesterday => '어제';
+
+  @override
+  String get historyOlder => '이전';
+
+  @override
+  String get typeTextButtonLabel => '텍스트 입력';
 }

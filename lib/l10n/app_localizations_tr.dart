@@ -204,4 +204,16 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Uygulama dili';
+
+  @override
+  String get historyToday => 'Bugün';
+
+  @override
+  String get historyYesterday => 'Dün';
+
+  @override
+  String get historyOlder => 'Daha eski';
+
+  @override
+  String get typeTextButtonLabel => 'Metin yaz';
 }

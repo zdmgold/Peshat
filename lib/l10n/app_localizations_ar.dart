@@ -204,4 +204,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'لغة التطبيق';
+
+  @override
+  String get historyToday => 'اليوم';
+
+  @override
+  String get historyYesterday => 'أمس';
+
+  @override
+  String get historyOlder => 'أقدم';
+
+  @override
+  String get typeTextButtonLabel => 'اكتب نصاً';
 }

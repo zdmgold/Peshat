@@ -204,4 +204,16 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'ایپ کی زبان';
+
+  @override
+  String get historyToday => 'آج';
+
+  @override
+  String get historyYesterday => 'کل';
+
+  @override
+  String get historyOlder => 'پرانے';
+
+  @override
+  String get typeTextButtonLabel => 'متن ٹائپ کریں';
 }

@@ -67,5 +67,6 @@
   "uiLanguageLabel": "App-Sprache",
   "historyToday": "Heute",
   "historyYesterday": "Gestern",
-  "historyOlder": "Älter"
+  "historyOlder": "Älter",
+  "typeTextButtonLabel": "Text eingeben"
 }

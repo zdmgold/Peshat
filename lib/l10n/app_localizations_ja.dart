@@ -204,4 +204,16 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'アプリの言語';
+
+  @override
+  String get historyToday => '今日';
+
+  @override
+  String get historyYesterday => '昨日';
+
+  @override
+  String get historyOlder => 'それ以前';
+
+  @override
+  String get typeTextButtonLabel => 'テキストを入力';
 }

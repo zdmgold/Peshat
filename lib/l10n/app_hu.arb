@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Alkalmazás nyelve",
   "historyToday": "Ma",
   "historyYesterday": "Tegnap",
-  "historyOlder": "Régebbi"
+  "historyOlder": "Régebbi",
+  "typeTextButtonLabel": "Szöveg beírása"
 }

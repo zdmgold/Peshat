@@ -204,4 +204,16 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Idioma do aplicativo';
+
+  @override
+  String get historyToday => 'Hoje';
+
+  @override
+  String get historyYesterday => 'Ontem';
+
+  @override
+  String get historyOlder => 'Mais antigo';
+
+  @override
+  String get typeTextButtonLabel => 'Digitar texto';
 }

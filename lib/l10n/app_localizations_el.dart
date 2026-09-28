@@ -204,4 +204,16 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Γλώσσα εφαρμογής';
+
+  @override
+  String get historyToday => 'Σήμερα';
+
+  @override
+  String get historyYesterday => 'Χθες';
+
+  @override
+  String get historyOlder => 'Παλαιότερα';
+
+  @override
+  String get typeTextButtonLabel => 'Πληκτρολόγηση κειμένου';
 }

@@ -67,5 +67,6 @@
   "uiLanguageLabel": "অ্যাপের ভাষা",
   "historyToday": "আজ",
   "historyYesterday": "গতকাল",
-  "historyOlder": "পুরোনো"
+  "historyOlder": "পুরোনো",
+  "typeTextButtonLabel": "টেক্সট টাইপ করুন"
 }

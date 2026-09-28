@@ -204,4 +204,16 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'زبان برنامه';
+
+  @override
+  String get historyToday => 'امروز';
+
+  @override
+  String get historyYesterday => 'دیروز';
+
+  @override
+  String get historyOlder => 'قدیمی‌تر';
+
+  @override
+  String get typeTextButtonLabel => 'متن تایپ کنید';
 }

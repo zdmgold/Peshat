@@ -67,5 +67,6 @@
   "uiLanguageLabel": "앱 언어",
   "historyToday": "오늘",
   "historyYesterday": "어제",
-  "historyOlder": "이전"
+  "historyOlder": "이전",
+  "typeTextButtonLabel": "텍스트 입력"
 }

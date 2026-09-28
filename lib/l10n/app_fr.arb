@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Langue de l’application",
   "historyToday": "Aujourd’hui",
   "historyYesterday": "Hier",
-  "historyOlder": "Plus ancien"
+  "historyOlder": "Plus ancien",
+  "typeTextButtonLabel": "Saisir du texte"
 }

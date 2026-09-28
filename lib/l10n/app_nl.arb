@@ -67,5 +67,6 @@
   "uiLanguageLabel": "App-taal",
   "historyToday": "Vandaag",
   "historyYesterday": "Gisteren",
-  "historyOlder": "Ouder"
+  "historyOlder": "Ouder",
+  "typeTextButtonLabel": "Tekst typen"
 }

@@ -204,4 +204,16 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'အက်ပ် ဘာသာစကား';
+
+  @override
+  String get historyToday => 'ယနေ့';
+
+  @override
+  String get historyYesterday => 'မနေ့က';
+
+  @override
+  String get historyOlder => 'ပိုဟောင်း';
+
+  @override
+  String get typeTextButtonLabel => 'စာသားရိုက်ထည့်ပါ';
 }

@@ -204,4 +204,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Язык приложения';
+
+  @override
+  String get historyToday => 'Сегодня';
+
+  @override
+  String get historyYesterday => 'Вчера';
+
+  @override
+  String get historyOlder => 'Раньше';
+
+  @override
+  String get typeTextButtonLabel => 'Ввести текст';
 }

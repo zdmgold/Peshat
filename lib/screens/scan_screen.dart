@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/material.dart';
+import '../core/models/scan_result.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/purchase_provider.dart';
 import '../core/providers/settings_provider.dart';
@@ -17,6 +18,7 @@ import 'history_screen.dart';
 import 'language_picker_screen.dart';
 import 'result_screen.dart';
 import 'settings_screen.dart';
+import 'text_translate_screen.dart';
 import 'ui_language_picker_screen.dart';
 
 class ScanScreen extends StatefulWidget {
@@ -41,14 +43,7 @@ class ScanScreen extends StatefulWidget {
 
 class _ScanScreenState extends State<ScanScreen> {
   final DocumentScannerService _scanner = DocumentScannerService();
-  final TextEditingController _text = TextEditingController();
   bool _isScanning = false;
-
-  @override
-  void dispose() {
-    _text.dispose();
-    super.dispose();
-  }
 
   Future<void> _openSettings() async {
     await Navigator.push(
@@ -70,6 +65,18 @@ class _ScanScreenState extends State<ScanScreen> {
       context,
       MaterialPageRoute(
         builder: (_) => HistoryScreen(history: widget.history),
+      ),
+    );
+  }
+
+  Future<void> _openTextTranslate() async {
+    await Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (_) => TextTranslateScreen(
+          settings: widget.settings,
+          history: widget.history,
+        ),
       ),
     );
   }
@@ -165,16 +172,13 @@ class _ScanScreenState extends State<ScanScreen> {
     } catch (_) {}
   }
 
-  Future<void> _handleText() async {
-    final text = _text.text.trim();
-    if (text.isEmpty) return;
-    _text.clear();
-    await Navigator.push(
+  void _openStored(ScanResult r) {
+    Navigator.push(
       context,
       MaterialPageRoute(
         builder: (_) => ResultScreen(
-          inputText: text,
-          initialTargetLanguage: widget.settings.value,
+          inputText: r.sourceText,
+          initialTargetLanguage: r.targetLang,
           history: widget.history,
         ),
       ),
@@ -191,10 +195,34 @@ class _ScanScreenState extends State<ScanScreen> {
       builder: (context, adsRemoved, _) {
         return Scaffold(
           appBar: AppBar(
-            title: Text(l10n.appName),
+            titleSpacing: Spacing.md,
+            title: Row(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                ClipRRect(
+                  borderRadius: BorderRadius.circular(6),
+                  child: Image.asset(
+                    'assets/icon/icon.png',
+                    width: 28,
+                    height: 28,
+                    filterQuality: FilterQuality.high,
+                  ),
+                ),
+                const SizedBox(width: Spacing.sm),
+                Text(
+                  l10n.appName,
+                  style: AppTypography.brand.copyWith(
+                    fontSize: 24,
+                    color: isDark
+                        ? AppColors.textPrimaryDark
+                        : AppColors.textPrimaryLight,
+                  ),
+                ),
+              ],
+            ),
             actions: [
               IconButton(
-                icon: const Icon(Icons.translate),
+                icon: const Icon(Icons.language),
                 tooltip: l10n.uiLanguageLabel,
                 onPressed: _pickUiLanguage,
               ),
@@ -207,11 +235,6 @@ class _ScanScreenState extends State<ScanScreen> {
                   tooltip: l10n.themeLabel,
                   onPressed: _toggleTheme,
                 ),
-              ),
-              IconButton(
-                icon: const Icon(Icons.folder_outlined),
-                tooltip: l10n.historyLabel,
-                onPressed: _openHistory,
               ),
               IconButton(
                 icon: const Icon(Icons.settings_outlined),
@@ -229,115 +252,90 @@ class _ScanScreenState extends State<ScanScreen> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        const SizedBox(height: Spacing.sm),
+                        const SizedBox(height: Spacing.md),
 
-                        // Hero
+                        // Hero — logo + wordmark + tagline
                         Center(
                           child: Image.asset(
                             'assets/icon/icon.png',
-                            width: 72,
-                            height: 72,
+                            width: 88,
+                            height: 88,
                             filterQuality: FilterQuality.high,
                           ),
                         ),
-                        const SizedBox(height: Spacing.sm),
+                        const SizedBox(height: Spacing.md),
                         Text(
                           l10n.appName,
                           textAlign: TextAlign.center,
-                          style: AppTypography.chrome.copyWith(
-                            fontSize: 26,
-                            fontWeight: FontWeight.w700,
+                          style: AppTypography.brand.copyWith(
+                            fontSize: 34,
                             color: isDark
                                 ? AppColors.textPrimaryDark
                                 : AppColors.textPrimaryLight,
                           ),
                         ),
-                        const SizedBox(height: Spacing.xs),
+                        const SizedBox(height: Spacing.sm),
                         Text(
                           l10n.tagline,
                           textAlign: TextAlign.center,
                           style: AppTypography.body.copyWith(
                             fontSize: 14,
+                            height: 1.5,
                             color: isDark
                                 ? AppColors.textSecondaryDark
                                 : AppColors.textSecondaryLight,
                           ),
                         ),
-                        const SizedBox(height: Spacing.lg),
+                        const SizedBox(height: Spacing.xl),
 
-                        // Target language
-                        _LanguageCard(
-                          label: l10n.translateToLabel,
-                          code: widget.settings.value,
-                          onTap: _pickTargetLanguage,
-                          settings: widget.settings,
-                        ),
-                        const SizedBox(height: Spacing.md),
-
-                        // Text input
-                        TextField(
-                          controller: _text,
-                          minLines: 3,
-                          maxLines: 6,
-                          decoration: InputDecoration(
-                            hintText: l10n.typeTextLabel,
-                            suffixIcon: IconButton(
-                              icon: Icon(Icons.arrow_forward,
-                                  color: isDark
-                                      ? AppColors.accentDark
-                                      : AppColors.accentLight),
-                              onPressed: _handleText,
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: Spacing.md),
-
-                        // Scan + import row
+                        // Scan cluster — big circular button + Type text pill
                         Row(
+                          crossAxisAlignment: CrossAxisAlignment.center,
                           children: [
-                            Expanded(
-                              child: SizedBox(
-                                height: 52,
-                                child: ElevatedButton.icon(
-                                  onPressed: _isScanning ? null : _handleScan,
-                                  icon: _isScanning
-                                      ? const SizedBox(
-                                          width: 18,
-                                          height: 18,
-                                          child: CircularProgressIndicator(
-                                            color: Colors.white,
-                                            strokeWidth: 2,
-                                          ),
-                                        )
-                                      : const Icon(Icons.camera_alt_outlined,
-                                          size: 20),
-                                  label: Text(l10n.scanButtonLabel),
-                                ),
-                              ),
+                            _ScanCircleButton(
+                              onTap: _isScanning ? null : _handleScan,
+                              isScanning: _isScanning,
+                              isDark: isDark,
                             ),
-                            const SizedBox(width: Spacing.sm),
+                            const SizedBox(width: Spacing.md),
                             Expanded(
-                              child: SizedBox(
-                                height: 52,
-                                child: OutlinedButton.icon(
-                                  onPressed: _handleImport,
-                                  icon: const Icon(Icons.upload_file_outlined,
-                                      size: 20),
-                                  label: Text(l10n.importFileLabel),
-                                ),
+                              child: _TypeTextPill(
+                                label: l10n.typeTextButtonLabel,
+                                onTap: _openTextTranslate,
+                                isDark: isDark,
                               ),
                             ),
                           ],
                         ),
+                        const SizedBox(height: Spacing.md),
 
-                        const SizedBox(height: Spacing.xl),
+                        // Import row
+                        SizedBox(
+                          height: 48,
+                          child: OutlinedButton.icon(
+                            onPressed: _handleImport,
+                            icon: const Icon(Icons.upload_file_outlined,
+                                size: 20),
+                            label: Text(l10n.importFileLabel),
+                          ),
+                        ),
+                        const SizedBox(height: Spacing.lg),
 
-                        // Recent scans
-                        ValueListenableBuilder(
+                        // Target language card
+                        _LanguageCard(
+                          label: l10n.translateToLabel,
+                          settings: widget.settings,
+                          onTap: _pickTargetLanguage,
+                          isDark: isDark,
+                        ),
+                        const SizedBox(height: Spacing.lg),
+
+                        // Recent scan preview
+                        ValueListenableBuilder<List<ScanResult>>(
                           valueListenable: widget.history,
                           builder: (context, items, _) {
                             if (items.isEmpty) return const SizedBox.shrink();
-                            final recent = items.take(3).toList();
+                            final last = items.first;
                             return Column(
                               crossAxisAlignment: CrossAxisAlignment.stretch,
                               children: [
@@ -346,11 +344,12 @@ class _ScanScreenState extends State<ScanScreen> {
                                     Text(
                                       l10n.recentScansLabel,
                                       style: AppTypography.chrome.copyWith(
-                                        fontSize: 14,
+                                        fontSize: 13,
                                         fontWeight: FontWeight.w600,
+                                        letterSpacing: 0.4,
                                         color: isDark
-                                            ? AppColors.textPrimaryDark
-                                            : AppColors.textPrimaryLight,
+                                            ? AppColors.textTertiaryDark
+                                            : AppColors.textTertiaryLight,
                                       ),
                                     ),
                                     const Spacer(),
@@ -361,38 +360,48 @@ class _ScanScreenState extends State<ScanScreen> {
                                   ],
                                 ),
                                 const SizedBox(height: Spacing.xs),
-                                ...recent.map((r) => Padding(
-                                      padding: const EdgeInsets.only(
-                                          bottom: Spacing.sm),
-                                      child: Card(
-                                        child: ListTile(
-                                          title: Text(
-                                            r.sourceText,
+                                Card(
+                                  child: InkWell(
+                                    borderRadius: BorderRadius.circular(16),
+                                    onTap: () => _openStored(last),
+                                    child: Padding(
+                                      padding: const EdgeInsets.all(Spacing.md),
+                                      child: Column(
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.start,
+                                        children: [
+                                          Text(
+                                            last.sourceText,
                                             maxLines: 1,
                                             overflow: TextOverflow.ellipsis,
-                                            style: AppTypography.chrome
-                                                .copyWith(fontSize: 14),
-                                          ),
-                                          subtitle: Text(
-                                            r.translatedText,
-                                            maxLines: 1,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: AppTypography.body
-                                                .copyWith(fontSize: 13),
-                                          ),
-                                          trailing: Text(
-                                            '${r.sourceLang.toUpperCase()} → ${r.targetLang.toUpperCase()}',
                                             style:
-                                                AppTypography.sourceChip.copyWith(
-                                              fontSize: 11,
+                                                AppTypography.chrome.copyWith(
+                                              fontSize: 14,
+                                              fontWeight: FontWeight.w500,
                                               color: isDark
-                                                  ? AppColors.textTertiaryDark
-                                                  : AppColors.textTertiaryLight,
+                                                  ? AppColors.textPrimaryDark
+                                                  : AppColors.textPrimaryLight,
                                             ),
                                           ),
-                                        ),
+                                          const SizedBox(height: 4),
+                                          Text(
+                                            last.translatedText,
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                            style: AppTypography.body.copyWith(
+                                              fontSize: 13,
+                                              color: isDark
+                                                  ? AppColors
+                                                      .textSecondaryDark
+                                                  : AppColors
+                                                      .textSecondaryLight,
+                                            ),
+                                          ),
+                                        ],
                                       ),
-                                    )),
+                                    ),
+                                  ),
+                                ),
                               ],
                             );
                           },
@@ -401,7 +410,11 @@ class _ScanScreenState extends State<ScanScreen> {
                     ),
                   ),
                 ),
-                if (!adsRemoved) const BannerAdWidget(),
+                if (!adsRemoved)
+                  const Padding(
+                    padding: EdgeInsets.fromLTRB(4, 0, 4, 4),
+                    child: BannerAdWidget(),
+                  ),
               ],
             ),
           ),
@@ -411,59 +424,168 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 }
 
-class _LanguageCard extends StatelessWidget {
-  final String label;
-  final String code;
-  final VoidCallback onTap;
-  final SettingsProvider settings;
+class _ScanCircleButton extends StatelessWidget {
+  final VoidCallback? onTap;
+  final bool isScanning;
+  final bool isDark;
 
-  const _LanguageCard({
-    required this.label,
-    required this.code,
+  const _ScanCircleButton({
     required this.onTap,
-    required this.settings,
+    required this.isScanning,
+    required this.isDark,
   });
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return ValueListenableBuilder<String>(
-      valueListenable: settings,
-      builder: (context, code, _) => InkWell(
-        borderRadius: BorderRadius.circular(12),
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    return Semantics(
+      label: 'Scan',
+      button: true,
+      child: Material(
+        color: accent,
+        shape: const CircleBorder(),
+        elevation: 2,
+        shadowColor: accent.withValues(alpha: 0.5),
+        child: InkWell(
+          customBorder: const CircleBorder(),
+          onTap: onTap,
+          child: SizedBox(
+            width: 120,
+            height: 120,
+            child: Center(
+              child: isScanning
+                  ? const SizedBox(
+                      width: 32,
+                      height: 32,
+                      child: CircularProgressIndicator(
+                        color: Colors.white,
+                        strokeWidth: 3,
+                      ),
+                    )
+                  : const Icon(
+                      Icons.document_scanner_outlined,
+                      color: Colors.white,
+                      size: 44,
+                    ),
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _TypeTextPill extends StatelessWidget {
+  final String label;
+  final VoidCallback onTap;
+  final bool isDark;
+
+  const _TypeTextPill({
+    required this.label,
+    required this.onTap,
+    required this.isDark,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    return Semantics(
+      label: label,
+      button: true,
+      child: InkWell(
+        borderRadius: BorderRadius.circular(16),
         onTap: onTap,
         child: Container(
-          padding: const EdgeInsets.symmetric(
-              horizontal: Spacing.md, vertical: Spacing.sm),
+          height: 64,
+          padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
           decoration: BoxDecoration(
-            color:
-                isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight,
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(
-              color: isDark
-                  ? AppColors.borderSubtleDark
-                  : AppColors.borderSubtleLight,
-              width: 0.5,
-            ),
+            color: isDark
+                ? AppColors.bgSecondaryDark
+                : AppColors.bgSecondaryLight,
+            borderRadius: BorderRadius.circular(16),
+            border: Border.all(color: accent, width: 1.2),
           ),
           child: Row(
             children: [
-              Icon(Icons.translate,
-                  size: 20,
-                  color: isDark ? AppColors.accentDark : AppColors.accentLight),
-              const SizedBox(width: Spacing.md),
-              Text(
-                label,
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 14,
-                  color: isDark
-                      ? AppColors.textSecondaryDark
-                      : AppColors.textSecondaryLight,
-                ),
-              ),
+              Icon(Icons.edit_note, color: accent, size: 24),
               const SizedBox(width: Spacing.sm),
               Expanded(
                 child: Text(
+                  label,
+                  style: AppTypography.chrome.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    color: isDark
+                        ? AppColors.textPrimaryDark
+                        : AppColors.textPrimaryLight,
+                  ),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _LanguageCard extends StatelessWidget {
+  final String label;
+  final SettingsProvider settings;
+  final VoidCallback onTap;
+  final bool isDark;
+
+  const _LanguageCard({
+    required this.label,
+    required this.settings,
+    required this.onTap,
+    required this.isDark,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      borderRadius: BorderRadius.circular(12),
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.symmetric(
+          horizontal: Spacing.md,
+          vertical: Spacing.sm,
+        ),
+        decoration: BoxDecoration(
+          color: isDark
+              ? AppColors.bgSecondaryDark
+              : AppColors.bgSecondaryLight,
+          borderRadius: BorderRadius.circular(12),
+          border: Border.all(
+            color: isDark
+                ? AppColors.borderSubtleDark
+                : AppColors.borderSubtleLight,
+            width: 0.5,
+          ),
+        ),
+        child: Row(
+          children: [
+            Icon(
+              Icons.translate,
+              size: 20,
+              color: isDark ? AppColors.accentDark : AppColors.accentLight,
+            ),
+            const SizedBox(width: Spacing.md),
+            Text(
+              label,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 14,
+                color: isDark
+                    ? AppColors.textSecondaryDark
+                    : AppColors.textSecondaryLight,
+              ),
+            ),
+            const SizedBox(width: Spacing.sm),
+            Expanded(
+              child: ValueListenableBuilder<String>(
+                valueListenable: settings,
+                builder: (_, code, __) => Text(
                   languageDisplayName(code),
                   textAlign: TextAlign.right,
                   overflow: TextOverflow.ellipsis,
@@ -476,14 +598,16 @@ class _LanguageCard extends StatelessWidget {
                   ),
                 ),
               ),
-              const SizedBox(width: Spacing.xs),
-              Icon(Icons.chevron_right,
-                  size: 20,
-                  color: isDark
-                      ? AppColors.textTertiaryDark
-                      : AppColors.textTertiaryLight),
-            ],
-          ),
+            ),
+            const SizedBox(width: Spacing.xs),
+            Icon(
+              Icons.chevron_right,
+              size: 20,
+              color: isDark
+                  ? AppColors.textTertiaryDark
+                  : AppColors.textTertiaryLight,
+            ),
+          ],
         ),
       ),
     );

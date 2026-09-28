@@ -204,4 +204,16 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'የመተግበሪያ ቋንቋ';
+
+  @override
+  String get historyToday => 'ዛሬ';
+
+  @override
+  String get historyYesterday => 'ትናንት';
+
+  @override
+  String get historyOlder => 'የቆየ';
+
+  @override
+  String get typeTextButtonLabel => 'ጽሑፍ ይተይቡ';
 }

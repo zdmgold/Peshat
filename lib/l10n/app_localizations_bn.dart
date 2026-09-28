@@ -204,4 +204,16 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'অ্যাপের ভাষা';
+
+  @override
+  String get historyToday => 'আজ';
+
+  @override
+  String get historyYesterday => 'গতকাল';
+
+  @override
+  String get historyOlder => 'পুরোনো';
+
+  @override
+  String get typeTextButtonLabel => 'টেক্সট টাইপ করুন';
 }

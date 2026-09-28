@@ -67,5 +67,6 @@
   "uiLanguageLabel": "لغة التطبيق",
   "historyToday": "اليوم",
   "historyYesterday": "أمس",
-  "historyOlder": "أقدم"
+  "historyOlder": "أقدم",
+  "typeTextButtonLabel": "اكتب نصاً"
 }

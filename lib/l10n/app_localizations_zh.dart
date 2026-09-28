@@ -204,4 +204,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => '应用语言';
+
+  @override
+  String get historyToday => '今天';
+
+  @override
+  String get historyYesterday => '昨天';
+
+  @override
+  String get historyOlder => '更早';
+
+  @override
+  String get typeTextButtonLabel => '输入文字';
 }

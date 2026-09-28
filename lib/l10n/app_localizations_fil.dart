@@ -204,4 +204,16 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Wika ng app';
+
+  @override
+  String get historyToday => 'Ngayon';
+
+  @override
+  String get historyYesterday => 'Kahapon';
+
+  @override
+  String get historyOlder => 'Mas luma';
+
+  @override
+  String get typeTextButtonLabel => 'Mag-type ng teksto';
 }

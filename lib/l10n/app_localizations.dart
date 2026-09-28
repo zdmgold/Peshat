@@ -552,6 +552,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'App language'**
   String get uiLanguageLabel;
+
+  /// No description provided for @historyToday.
+  ///
+  /// In en, this message translates to:
+  /// **'Today'**
+  String get historyToday;
+
+  /// No description provided for @historyYesterday.
+  ///
+  /// In en, this message translates to:
+  /// **'Yesterday'**
+  String get historyYesterday;
+
+  /// No description provided for @historyOlder.
+  ///
+  /// In en, this message translates to:
+  /// **'Older'**
+  String get historyOlder;
+
+  /// No description provided for @typeTextButtonLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Type text'**
+  String get typeTextButtonLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

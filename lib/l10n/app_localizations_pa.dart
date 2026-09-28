@@ -204,4 +204,16 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'ਐਪ ਭਾਸ਼ਾ';
+
+  @override
+  String get historyToday => 'ਅੱਜ';
+
+  @override
+  String get historyYesterday => 'ਕੱਲ੍ਹ';
+
+  @override
+  String get historyOlder => 'ਪੁਰਾਣਾ';
+
+  @override
+  String get typeTextButtonLabel => 'ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ';
 }

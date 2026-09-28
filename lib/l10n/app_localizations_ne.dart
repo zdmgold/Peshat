@@ -204,4 +204,16 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'एप भाषा';
+
+  @override
+  String get historyToday => 'आज';
+
+  @override
+  String get historyYesterday => 'हिजो';
+
+  @override
+  String get historyOlder => 'पुरानो';
+
+  @override
+  String get typeTextButtonLabel => 'पाठ टाइप गर्नुहोस्';
 }

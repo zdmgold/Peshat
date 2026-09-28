@@ -67,5 +67,6 @@
   "uiLanguageLabel": "ภาษาของแอป",
   "historyToday": "วันนี้",
   "historyYesterday": "เมื่อวาน",
-  "historyOlder": "เก่ากว่า"
+  "historyOlder": "เก่ากว่า",
+  "typeTextButtonLabel": "พิมพ์ข้อความ"
 }

@@ -204,4 +204,16 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Bahasa aplikasi';
+
+  @override
+  String get historyToday => 'Hari ini';
+
+  @override
+  String get historyYesterday => 'Kemarin';
+
+  @override
+  String get historyOlder => 'Lebih lama';
+
+  @override
+  String get typeTextButtonLabel => 'Ketik teks';
 }

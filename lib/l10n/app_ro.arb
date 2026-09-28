@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Limba aplicației",
   "historyToday": "Astăzi",
   "historyYesterday": "Ieri",
-  "historyOlder": "Mai vechi"
+  "historyOlder": "Mai vechi",
+  "typeTextButtonLabel": "Introduceți text"
 }

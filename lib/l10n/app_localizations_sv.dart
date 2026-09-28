@@ -204,4 +204,16 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'App-språk';
+
+  @override
+  String get historyToday => 'Idag';
+
+  @override
+  String get historyYesterday => 'Igår';
+
+  @override
+  String get historyOlder => 'Äldre';
+
+  @override
+  String get typeTextButtonLabel => 'Skriv text';
 }

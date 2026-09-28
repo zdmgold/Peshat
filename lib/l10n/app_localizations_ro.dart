@@ -204,4 +204,16 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get uiLanguageLabel => 'Limba aplicației';
+
+  @override
+  String get historyToday => 'Astăzi';
+
+  @override
+  String get historyYesterday => 'Ieri';
+
+  @override
+  String get historyOlder => 'Mai vechi';
+
+  @override
+  String get typeTextButtonLabel => 'Introduceți text';
 }

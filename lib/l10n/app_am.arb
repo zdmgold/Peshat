@@ -67,5 +67,6 @@
   "uiLanguageLabel": "የመተግበሪያ ቋንቋ",
   "historyToday": "ዛሬ",
   "historyYesterday": "ትናንት",
-  "historyOlder": "የቆየ"
+  "historyOlder": "የቆየ",
+  "typeTextButtonLabel": "ጽሑፍ ይተይቡ"
 }

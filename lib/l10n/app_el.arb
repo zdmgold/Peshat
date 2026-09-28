@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Γλώσσα εφαρμογής",
   "historyToday": "Σήμερα",
   "historyYesterday": "Χθες",
-  "historyOlder": "Παλαιότερα"
+  "historyOlder": "Παλαιότερα",
+  "typeTextButtonLabel": "Πληκτρολόγηση κειμένου"
 }

@@ -67,5 +67,6 @@
   "uiLanguageLabel": "Idioma do aplicativo",
   "historyToday": "Hoje",
   "historyYesterday": "Ontem",
-  "historyOlder": "Mais antigo"
+  "historyOlder": "Mais antigo",
+  "typeTextButtonLabel": "Digitar texto"
 }
