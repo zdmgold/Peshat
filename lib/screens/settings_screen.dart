@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/purchase_provider.dart';
 import '../core/providers/settings_provider.dart';
+import '../core/providers/ui_locale_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/services/iap_service.dart';
 import '../core/services/language_names.dart';
@@ -13,6 +14,7 @@ import '../l10n/app_localizations.dart';
 import '../widgets/ads_removed_badge.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
+import 'ui_language_picker_screen.dart';
 
 const _privacyUrl = 'https://peshat.zdmgold.workers.dev/privacy.html';
 const _termsUrl = 'https://peshat.zdmgold.workers.dev/terms.html';
@@ -25,6 +27,7 @@ class SettingsScreen extends StatefulWidget {
   final PurchaseProvider purchase;
   final SettingsProvider settings;
   final HistoryProvider history;
+  final UiLocaleProvider uiLocale;
 
   const SettingsScreen({
     super.key,
@@ -32,6 +35,7 @@ class SettingsScreen extends StatefulWidget {
     required this.purchase,
     required this.settings,
     required this.history,
+    required this.uiLocale,
   });
 
   @override
@@ -60,6 +64,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
           const SnackBar(content: Text('Could not open link')),
         );
       }
+    }
+  }
+
+  Future<void> _pickUiLanguage() async {
+    final selected = await Navigator.push<dynamic>(
+      context,
+      MaterialPageRoute(
+        builder: (_) => UiLanguagePickerScreen(current: widget.uiLocale.value),
+      ),
+    );
+    if (selected == null) return;
+    if (selected == 'system') {
+      widget.uiLocale.setLocale(null);
+    } else if (selected is String) {
+      widget.uiLocale.setLocale(Locale(selected));
     }
   }
 
@@ -92,6 +111,21 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 builder: (_, code, __) => Text(languageDisplayName(code)),
               ),
               onTap: _pickLanguage,
+            ),
+
+            // UI language
+            ListTile(
+              leading: const Icon(Icons.language),
+              title: Text(l10n.uiLanguageLabel),
+              subtitle: ValueListenableBuilder<Locale?>(
+                valueListenable: widget.uiLocale,
+                builder: (_, loc, __) => Text(
+                  loc == null
+                      ? 'Follow system'
+                      : languageDisplayName(loc.languageCode),
+                ),
+              ),
+              onTap: _pickUiLanguage,
             ),
 
             // Theme

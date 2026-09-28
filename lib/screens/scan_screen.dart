@@ -59,6 +59,7 @@ class _ScanScreenState extends State<ScanScreen> {
           purchase: widget.purchase,
           settings: widget.settings,
           history: widget.history,
+          uiLocale: widget.uiLocale,
         ),
       ),
     );
@@ -231,12 +232,13 @@ class _ScanScreenState extends State<ScanScreen> {
                         const SizedBox(height: Spacing.sm),
 
                         // Hero
-                        Icon(
-                          Icons.document_scanner_outlined,
-                          size: 56,
-                          color: isDark
-                              ? AppColors.accentDark
-                              : AppColors.accentLight,
+                        Center(
+                          child: Image.asset(
+                            'assets/icon/icon.png',
+                            width: 72,
+                            height: 72,
+                            filterQuality: FilterQuality.high,
+                          ),
                         ),
                         const SizedBox(height: Spacing.sm),
                         Text(
