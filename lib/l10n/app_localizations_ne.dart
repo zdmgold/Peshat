@@ -246,4 +246,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'एप भाषा';
+
+  @override
+  String get clearTextConfirm => 'पाठ मेटाउने?';
 }

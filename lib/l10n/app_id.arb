@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Semua bahasa",
   "noResultsSubtitle": "Coba ejaan lain.",
   "sectionSystemLabel": "Sistem",
-  "appLanguageLabel": "Bahasa aplikasi"
+  "appLanguageLabel": "Bahasa aplikasi",
+  "clearTextConfirm": "Hapus teks?"
 }

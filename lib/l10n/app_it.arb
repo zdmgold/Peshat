@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Tutte le lingue",
   "noResultsSubtitle": "Prova con un’ortografia diversa.",
   "sectionSystemLabel": "Sistema",
-  "appLanguageLabel": "Lingua dell’app"
+  "appLanguageLabel": "Lingua dell’app",
+  "clearTextConfirm": "Cancellare il testo?"
 }

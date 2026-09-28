@@ -246,4 +246,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'App-taal';
+
+  @override
+  String get clearTextConfirm => 'Tekst wissen?';
 }

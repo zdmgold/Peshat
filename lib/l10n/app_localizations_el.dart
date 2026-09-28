@@ -246,4 +246,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Γλώσσα εφαρμογής';
+
+  @override
+  String get clearTextConfirm => 'Καθαρισμός κειμένου;';
 }

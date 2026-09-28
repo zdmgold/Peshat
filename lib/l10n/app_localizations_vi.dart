@@ -246,4 +246,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Ngôn ngữ ứng dụng';
+
+  @override
+  String get clearTextConfirm => 'Xóa văn bản?';
 }

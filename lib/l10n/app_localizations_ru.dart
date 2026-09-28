@@ -246,4 +246,7 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Язык приложения';
+
+  @override
+  String get clearTextConfirm => 'Очистить текст?';
 }

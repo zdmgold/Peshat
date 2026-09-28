@@ -78,5 +78,6 @@
   "allLanguagesLabel": "सभी भाषाएँ",
   "noResultsSubtitle": "कोई दूसरी वर्तनी आज़माएँ।",
   "sectionSystemLabel": "सिस्टम",
-  "appLanguageLabel": "ऐप भाषा"
+  "appLanguageLabel": "ऐप भाषा",
+  "clearTextConfirm": "टेक्स्ट साफ़ करें?"
 }

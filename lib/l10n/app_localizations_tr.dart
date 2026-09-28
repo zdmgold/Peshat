@@ -246,4 +246,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Uygulama dili';
+
+  @override
+  String get clearTextConfirm => 'Metin temizlensin mi?';
 }

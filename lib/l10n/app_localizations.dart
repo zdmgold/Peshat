@@ -636,6 +636,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'App language'**
   String get appLanguageLabel;
+
+  /// No description provided for @clearTextConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Clear the text?'**
+  String get clearTextConfirm;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

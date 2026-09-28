@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Lahat ng wika",
   "noResultsSubtitle": "Subukan ang ibang spelling.",
   "sectionSystemLabel": "Sistema",
-  "appLanguageLabel": "Wika ng app"
+  "appLanguageLabel": "Wika ng app",
+  "clearTextConfirm": "Burahin ang teksto?"
 }

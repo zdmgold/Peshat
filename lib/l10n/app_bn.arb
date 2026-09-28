@@ -78,5 +78,6 @@
   "allLanguagesLabel": "সব ভাষা",
   "noResultsSubtitle": "অন্য বানান চেষ্টা করুন।",
   "sectionSystemLabel": "সিস্টেম",
-  "appLanguageLabel": "অ্যাপের ভাষা"
+  "appLanguageLabel": "অ্যাপের ভাষা",
+  "clearTextConfirm": "টেক্সট মুছবেন?"
 }

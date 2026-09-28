@@ -246,4 +246,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'زبان برنامه';
+
+  @override
+  String get clearTextConfirm => 'متن پاک شود؟';
 }

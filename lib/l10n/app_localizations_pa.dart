@@ -246,4 +246,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'ਐਪ ਭਾਸ਼ਾ';
+
+  @override
+  String get clearTextConfirm => 'ਟੈਕਸਟ ਸਾਫ਼ ਕਰੋ?';
 }

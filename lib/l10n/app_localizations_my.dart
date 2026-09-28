@@ -246,4 +246,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'အက်ပ် ဘာသာစကား';
+
+  @override
+  String get clearTextConfirm => 'စာသားကို ရှင်းလင်းမလား?';
 }

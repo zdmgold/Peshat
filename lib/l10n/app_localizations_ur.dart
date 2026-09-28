@@ -246,4 +246,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'ایپ کی زبان';
+
+  @override
+  String get clearTextConfirm => 'متن صاف کریں؟';
 }

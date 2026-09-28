@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Tất cả ngôn ngữ",
   "noResultsSubtitle": "Thử cách viết khác.",
   "sectionSystemLabel": "Hệ thống",
-  "appLanguageLabel": "Ngôn ngữ ứng dụng"
+  "appLanguageLabel": "Ngôn ngữ ứng dụng",
+  "clearTextConfirm": "Xóa văn bản?"
 }

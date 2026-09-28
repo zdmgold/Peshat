@@ -246,4 +246,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Alkalmazás nyelve';
+
+  @override
+  String get clearTextConfirm => 'Törli a szöveget?';
 }

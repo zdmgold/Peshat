@@ -246,4 +246,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'لغة التطبيق';
+
+  @override
+  String get clearTextConfirm => 'مسح النص؟';
 }

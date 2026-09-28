@@ -246,4 +246,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'የመተግበሪያ ቋንቋ';
+
+  @override
+  String get clearTextConfirm => 'ጽሑፉን አጽዳ?';
 }

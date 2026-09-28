@@ -246,4 +246,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Bahasa aplikasi';
+
+  @override
+  String get clearTextConfirm => 'Hapus teks?';
 }

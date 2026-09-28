@@ -246,4 +246,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get appLanguageLabel => '앱 언어';
+
+  @override
+  String get clearTextConfirm => '텍스트를 지우시겠습니까?';
 }

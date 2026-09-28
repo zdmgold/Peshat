@@ -246,4 +246,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'ភាសាកម្មវិធី';
+
+  @override
+  String get clearTextConfirm => 'សម្អាតអត្ថបទ?';
 }

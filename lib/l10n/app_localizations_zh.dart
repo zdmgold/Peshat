@@ -246,4 +246,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get appLanguageLabel => '应用语言';
+
+  @override
+  String get clearTextConfirm => '清除文本？';
 }

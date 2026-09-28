@@ -78,5 +78,6 @@
   "allLanguagesLabel": "모든 언어",
   "noResultsSubtitle": "다른 철자를 시도해 보세요.",
   "sectionSystemLabel": "시스템",
-  "appLanguageLabel": "앱 언어"
+  "appLanguageLabel": "앱 언어",
+  "clearTextConfirm": "텍스트를 지우시겠습니까?"
 }

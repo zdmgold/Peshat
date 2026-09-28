@@ -78,5 +78,6 @@
   "allLanguagesLabel": "ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ",
   "noResultsSubtitle": "ਹੋਰ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।",
   "sectionSystemLabel": "ਸਿਸਟਮ",
-  "appLanguageLabel": "ਐਪ ਭਾਸ਼ਾ"
+  "appLanguageLabel": "ਐਪ ਭਾਸ਼ਾ",
+  "clearTextConfirm": "ਟੈਕਸਟ ਸਾਫ਼ ਕਰੋ?"
 }

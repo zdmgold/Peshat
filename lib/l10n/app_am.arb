@@ -78,5 +78,6 @@
   "allLanguagesLabel": "ሁሉም ቋንቋዎች",
   "noResultsSubtitle": "ሌላ የፊደል አጻጻፍ ይሞክሩ።",
   "sectionSystemLabel": "ስርዓት",
-  "appLanguageLabel": "የመተግበሪያ ቋንቋ"
+  "appLanguageLabel": "የመተግበሪያ ቋንቋ",
+  "clearTextConfirm": "ጽሑፉን አጽዳ?"
 }

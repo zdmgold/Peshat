@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Alla språk",
   "noResultsSubtitle": "Prova en annan stavning.",
   "sectionSystemLabel": "System",
-  "appLanguageLabel": "App-språk"
+  "appLanguageLabel": "App-språk",
+  "clearTextConfirm": "Rensa texten?"
 }

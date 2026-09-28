@@ -246,4 +246,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'অ্যাপের ভাষা';
+
+  @override
+  String get clearTextConfirm => 'টেক্সট মুছবেন?';
 }

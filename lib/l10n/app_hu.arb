@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Minden nyelv",
   "noResultsSubtitle": "Próbáljon más írásmódot.",
   "sectionSystemLabel": "Rendszer",
-  "appLanguageLabel": "Alkalmazás nyelve"
+  "appLanguageLabel": "Alkalmazás nyelve",
+  "clearTextConfirm": "Törli a szöveget?"
 }

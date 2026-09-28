@@ -78,5 +78,6 @@
   "allLanguagesLabel": "ทุกภาษา",
   "noResultsSubtitle": "ลองสะกดแบบอื่น",
   "sectionSystemLabel": "ระบบ",
-  "appLanguageLabel": "ภาษาของแอป"
+  "appLanguageLabel": "ภาษาของแอป",
+  "clearTextConfirm": "ล้างข้อความหรือไม่"
 }

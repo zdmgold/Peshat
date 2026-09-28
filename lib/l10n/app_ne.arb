@@ -78,5 +78,6 @@
   "allLanguagesLabel": "सबै भाषाहरू",
   "noResultsSubtitle": "अर्को हिज्जे प्रयास गर्नुहोस्।",
   "sectionSystemLabel": "प्रणाली",
-  "appLanguageLabel": "एप भाषा"
+  "appLanguageLabel": "एप भाषा",
+  "clearTextConfirm": "पाठ मेटाउने?"
 }

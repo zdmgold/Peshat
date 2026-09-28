@@ -88,5 +88,6 @@
   "allLanguagesLabel": "All languages",
   "noResultsSubtitle": "Try a different spelling.",
   "sectionSystemLabel": "System",
-  "appLanguageLabel": "App language"
+  "appLanguageLabel": "App language",
+  "clearTextConfirm": "Clear the text?"
 }

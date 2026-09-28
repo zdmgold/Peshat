@@ -78,5 +78,6 @@
   "allLanguagesLabel": "ທຸກພາສາ",
   "noResultsSubtitle": "ລອງສະກົດແບບອື່ນ.",
   "sectionSystemLabel": "ລະບົບ",
-  "appLanguageLabel": "ພາສາແອັບ"
+  "appLanguageLabel": "ພາສາແອັບ",
+  "clearTextConfirm": "ລຶບຂໍ້ຄວາມບໍ?"
 }

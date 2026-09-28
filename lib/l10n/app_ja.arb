@@ -78,5 +78,6 @@
   "allLanguagesLabel": "すべての言語",
   "noResultsSubtitle": "別の綴りをお試しください。",
   "sectionSystemLabel": "システム",
-  "appLanguageLabel": "アプリの言語"
+  "appLanguageLabel": "アプリの言語",
+  "clearTextConfirm": "テキストを消去しますか？"
 }

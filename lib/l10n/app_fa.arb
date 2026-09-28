@@ -78,5 +78,6 @@
   "allLanguagesLabel": "همه زبان‌ها",
   "noResultsSubtitle": "املای دیگری را امتحان کنید.",
   "sectionSystemLabel": "سیستم",
-  "appLanguageLabel": "زبان برنامه"
+  "appLanguageLabel": "زبان برنامه",
+  "clearTextConfirm": "متن پاک شود؟"
 }

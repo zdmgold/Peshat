@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Alle talen",
   "noResultsSubtitle": "Probeer een andere spelling.",
   "sectionSystemLabel": "Systeem",
-  "appLanguageLabel": "App-taal"
+  "appLanguageLabel": "App-taal",
+  "clearTextConfirm": "Tekst wissen?"
 }

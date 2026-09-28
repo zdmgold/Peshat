@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Όλες οι γλώσσες",
   "noResultsSubtitle": "Δοκιμάστε άλλη ορθογραφία.",
   "sectionSystemLabel": "Σύστημα",
-  "appLanguageLabel": "Γλώσσα εφαρμογής"
+  "appLanguageLabel": "Γλώσσα εφαρμογής",
+  "clearTextConfirm": "Καθαρισμός κειμένου;"
 }

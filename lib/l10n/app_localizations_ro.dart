@@ -246,4 +246,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Limba aplicației';
+
+  @override
+  String get clearTextConfirm => 'Ștergeți textul?';
 }

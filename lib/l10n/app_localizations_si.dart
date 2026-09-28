@@ -246,4 +246,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'යෙදුම් භාෂාව';
+
+  @override
+  String get clearTextConfirm => 'පෙළ හිස් කරන්නද?';
 }

@@ -78,5 +78,6 @@
   "allLanguagesLabel": "تمام زبانیں",
   "noResultsSubtitle": "کوئی اور ہجے آزمائیں۔",
   "sectionSystemLabel": "سسٹم",
-  "appLanguageLabel": "ایپ کی زبان"
+  "appLanguageLabel": "ایپ کی زبان",
+  "clearTextConfirm": "متن صاف کریں؟"
 }

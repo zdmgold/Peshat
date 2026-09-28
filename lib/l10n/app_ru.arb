@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Все языки",
   "noResultsSubtitle": "Попробуйте другое написание.",
   "sectionSystemLabel": "Система",
-  "appLanguageLabel": "Язык приложения"
+  "appLanguageLabel": "Язык приложения",
+  "clearTextConfirm": "Очистить текст?"
 }

@@ -246,4 +246,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'ພາສາແອັບ';
+
+  @override
+  String get clearTextConfirm => 'ລຶບຂໍ້ຄວາມບໍ?';
 }

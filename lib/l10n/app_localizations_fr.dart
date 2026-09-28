@@ -246,4 +246,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Langue de l’application';
+
+  @override
+  String get clearTextConfirm => 'Effacer le texte ?';
 }

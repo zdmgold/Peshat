@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Todos os idiomas",
   "noResultsSubtitle": "Tente outra grafia.",
   "sectionSystemLabel": "Sistema",
-  "appLanguageLabel": "Idioma do aplicativo"
+  "appLanguageLabel": "Idioma do aplicativo",
+  "clearTextConfirm": "Limpar o texto?"
 }

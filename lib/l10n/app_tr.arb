@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Tüm diller",
   "noResultsSubtitle": "Farklı bir yazım deneyin.",
   "sectionSystemLabel": "Sistem",
-  "appLanguageLabel": "Uygulama dili"
+  "appLanguageLabel": "Uygulama dili",
+  "clearTextConfirm": "Metin temizlensin mi?"
 }

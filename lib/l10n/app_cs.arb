@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Všechny jazyky",
   "noResultsSubtitle": "Zkuste jiný pravopis.",
   "sectionSystemLabel": "Systém",
-  "appLanguageLabel": "Jazyk aplikace"
+  "appLanguageLabel": "Jazyk aplikace",
+  "clearTextConfirm": "Vymazat text?"
 }

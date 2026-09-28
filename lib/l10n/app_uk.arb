@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Усі мови",
   "noResultsSubtitle": "Спробуйте інший правопис.",
   "sectionSystemLabel": "Система",
-  "appLanguageLabel": "Мова застосунку"
+  "appLanguageLabel": "Мова застосунку",
+  "clearTextConfirm": "Очистити текст?"
 }

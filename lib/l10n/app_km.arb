@@ -78,5 +78,6 @@
   "allLanguagesLabel": "ភាសាទាំងអស់",
   "noResultsSubtitle": "សាកល្បងអក្ខរាវិរុទ្ធផ្សេង។",
   "sectionSystemLabel": "ប្រព័ន្ធ",
-  "appLanguageLabel": "ភាសាកម្មវិធី"
+  "appLanguageLabel": "ភាសាកម្មវិធី",
+  "clearTextConfirm": "សម្អាតអត្ថបទ?"
 }

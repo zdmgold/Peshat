@@ -246,4 +246,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'Wika ng app';
+
+  @override
+  String get clearTextConfirm => 'Burahin ang teksto?';
 }

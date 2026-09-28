@@ -78,5 +78,6 @@
   "allLanguagesLabel": "Wszystkie języki",
   "noResultsSubtitle": "Spróbuj innej pisowni.",
   "sectionSystemLabel": "System",
-  "appLanguageLabel": "Język aplikacji"
+  "appLanguageLabel": "Język aplikacji",
+  "clearTextConfirm": "Wyczyścić tekst?"
 }

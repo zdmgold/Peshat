@@ -246,4 +246,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'ภาษาของแอป';
+
+  @override
+  String get clearTextConfirm => 'ล้างข้อความหรือไม่';
 }

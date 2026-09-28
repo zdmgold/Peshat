@@ -246,4 +246,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get appLanguageLabel => 'App-språk';
+
+  @override
+  String get clearTextConfirm => 'Rensa texten?';
 }

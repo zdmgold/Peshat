@@ -78,5 +78,6 @@
   "allLanguagesLabel": "所有语言",
   "noResultsSubtitle": "请尝试其他拼写。",
   "sectionSystemLabel": "系统",
-  "appLanguageLabel": "应用语言"
+  "appLanguageLabel": "应用语言",
+  "clearTextConfirm": "清除文本？"
 }

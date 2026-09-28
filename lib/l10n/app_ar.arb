@@ -78,5 +78,6 @@
   "allLanguagesLabel": "كل اللغات",
   "noResultsSubtitle": "جرّب تهجئة أخرى.",
   "sectionSystemLabel": "النظام",
-  "appLanguageLabel": "لغة التطبيق"
+  "appLanguageLabel": "لغة التطبيق",
+  "clearTextConfirm": "مسح النص؟"
 }
