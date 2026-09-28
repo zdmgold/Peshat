@@ -14,7 +14,11 @@ sealed class ScanState {
     required String sourceLanguage,
     required String targetLanguage,
   }) = ScanDone;
-  const factory ScanState.error(AppErrorCode code, {String? sourceText}) = ScanError;
+  const factory ScanState.error(
+    AppErrorCode code, {
+    String? sourceText,
+    String? detail,
+  }) = ScanError;
 }
 
 class ScanIdle extends ScanState { const ScanIdle(); }
@@ -47,5 +51,6 @@ class ScanDone extends ScanState {
 class ScanError extends ScanState {
   final AppErrorCode code;
   final String? sourceText;
-  const ScanError(this.code, {this.sourceText});
+  final String? detail;
+  const ScanError(this.code, {this.sourceText, this.detail});
 }

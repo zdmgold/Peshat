@@ -150,6 +150,7 @@ class _ResultScreenState extends State<ResultScreen> {
             if (state is ScanError) {
               return _ErrorView(
                 message: _errorText(l10n, state.code),
+                detail: state.detail,
                 onRetry: _runPipeline,
               );
             }
@@ -208,8 +209,13 @@ class _StatusView extends StatelessWidget {
 
 class _ErrorView extends StatelessWidget {
   final String message;
+  final String? detail;
   final Future<void> Function() onRetry;
-  const _ErrorView({required this.message, required this.onRetry});
+  const _ErrorView({
+    required this.message,
+    required this.onRetry,
+    this.detail,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -239,6 +245,19 @@ class _ErrorView extends StatelessWidget {
               onPressed: onRetry,
               child: Text(l10n.retryButton),
             ),
+            if (detail != null) ...[
+              const SizedBox(height: Spacing.xl),
+              const Divider(),
+              const SizedBox(height: Spacing.md),
+              SelectableText(
+                detail!,
+                style: const TextStyle(
+                  fontFamily: 'monospace',
+                  fontSize: 11,
+                  color: Colors.redAccent,
+                ),
+              ),
+            ],
           ],
         ),
       ),

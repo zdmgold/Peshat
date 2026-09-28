@@ -55,12 +55,16 @@ class ScanProvider extends ValueNotifier<ScanState> {
         sourceLanguage: srcLang,
         targetLanguage: targetLanguage,
       );
-    } on TimeoutException {
-      value = const ScanState.error(AppErrorCode.timeout);
+    } on TimeoutException catch (e) {
+      value = ScanState.error(AppErrorCode.timeout, detail: e.toString());
     } on TranslatorException catch (e) {
-      value = ScanState.error(e.code);
-    } catch (_) {
-      value = const ScanState.error(AppErrorCode.unknown);
+      value = ScanState.error(e.code, detail: e.detail ?? e.toString());
+    } catch (e, st) {
+      final trace = st.toString().split('\n').take(4).join('\n');
+      value = ScanState.error(
+        AppErrorCode.unknown,
+        detail: '$e\n$trace',
+      );
     }
   }
 
