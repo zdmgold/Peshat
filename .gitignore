@@ -41,3 +41,4 @@ app.*.map.json
 # Sensitive files
 **/google-services.json
 **/GoogleService-Info.plist
+*.bak

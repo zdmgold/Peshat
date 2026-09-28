@@ -27,12 +27,10 @@ def png_resize(src, size, out):
     img.resize((size, size), Image.LANCZOS).save(out, "PNG", optimize=True)
     banner(f"{out} ({size}x{size})")
 
-# --- 1. splash logo ---
 ensure("assets/splash/logo.png")
 shutil.copy(ICON_PNG, "assets/splash/logo.png")
 banner("assets/splash/logo.png (copy of 1024)")
 
-# --- 2. website assets ---
 ensure("website/assets/logo.svg")
 shutil.copy(ICON_SVG, "website/assets/logo.svg")
 banner("website/assets/logo.svg")
@@ -43,7 +41,6 @@ svg_to_png(180, "website/assets/apple-touch-icon.png")
 svg_to_png(192, "website/assets/pwa-192.png")
 svg_to_png(512, "website/assets/pwa-512.png")
 
-# OG image 1200x630
 og_path = "website/assets/og-image.png"
 og = Image.new("RGB", (1200, 630), CREAM)
 icon = Image.open(ICON_PNG).convert("RGBA")
@@ -53,7 +50,6 @@ og.paste(icon, ((1200 - ic_w) // 2, (630 - ic_w) // 2), icon)
 og.save(og_path, "PNG", optimize=True)
 banner(f"{og_path} (1200x630)")
 
-# --- 3. store submission assets ---
 ensure("store_submission/icon_play_store.png")
 png_resize(ICON_PNG, 512, "store_submission/icon_play_store.png")
 
