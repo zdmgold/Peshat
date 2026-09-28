@@ -54,5 +54,9 @@
   "historyClearConfirm": "Удалить всю историю?",
   "termsLink": "Условия использования",
   "tagline": "Наведите камеру на любой текст и поймите его мгновенно.",
-  "noResults": "Нет результатов"
+  "noResults": "Нет результатов",
+  "copiedMessage": "Скопировано в буфер обмена",
+  "exportTxtAction": "Экспорт как текст",
+  "exportPdfAction": "Экспорт как PDF",
+  "translatedTo": "Переведено на"
 }

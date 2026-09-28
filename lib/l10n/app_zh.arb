@@ -54,5 +54,9 @@
   "historyClearConfirm": "删除所有历史记录？",
   "termsLink": "服务条款",
   "tagline": "将相机对准任意文字，即刻理解。",
-  "noResults": "无结果"
+  "noResults": "无结果",
+  "copiedMessage": "已复制到剪贴板",
+  "exportTxtAction": "导出为文本",
+  "exportPdfAction": "导出为 PDF",
+  "translatedTo": "翻译为"
 }

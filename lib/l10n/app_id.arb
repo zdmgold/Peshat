@@ -54,5 +54,9 @@
   "historyClearConfirm": "Hapus semua riwayat?",
   "termsLink": "Ketentuan Layanan",
   "tagline": "Arahkan kamera ke teks apa pun, pahami langsung.",
-  "noResults": "Tidak ada hasil"
+  "noResults": "Tidak ada hasil",
+  "copiedMessage": "Disalin ke clipboard",
+  "exportTxtAction": "Ekspor sebagai teks",
+  "exportPdfAction": "Ekspor sebagai PDF",
+  "translatedTo": "Diterjemahkan ke"
 }

@@ -54,5 +54,9 @@
   "historyClearConfirm": "Tüm geçmiş silinsin mi?",
   "termsLink": "Kullanım Koşulları",
   "tagline": "Kameranızı herhangi bir metne doğrultun ve anında anlayın.",
-  "noResults": "Sonuç yok"
+  "noResults": "Sonuç yok",
+  "copiedMessage": "Panoya kopyalandı",
+  "exportTxtAction": "Metin olarak dışa aktar",
+  "exportPdfAction": "PDF olarak dışa aktar",
+  "translatedTo": "Çevrildi"
 }

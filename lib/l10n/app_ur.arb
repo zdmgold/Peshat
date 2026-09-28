@@ -54,5 +54,9 @@
   "historyClearConfirm": "تمام تاریخ حذف کریں؟",
   "termsLink": "شرائطِ خدمت",
   "tagline": "کیمرہ کسی بھی متن کی طرف کریں اور فوراً سمجھیں۔",
-  "noResults": "کوئی نتیجہ نہیں"
+  "noResults": "کوئی نتیجہ نہیں",
+  "copiedMessage": "کلپ بورڈ پر کاپی ہو گیا",
+  "exportTxtAction": "متن کے طور پر ایکسپورٹ کریں",
+  "exportPdfAction": "PDF کے طور پر ایکسپورٹ کریں",
+  "translatedTo": "ترجمہ کیا گیا"
 }

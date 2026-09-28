@@ -54,5 +54,9 @@
   "historyClearConfirm": "همه تاریخچه حذف شود؟",
   "termsLink": "شرایط استفاده از خدمات",
   "tagline": "دوربین را به سمت هر متنی بگیرید و فوراً آن را بفهمید.",
-  "noResults": "نتیجه‌ای یافت نشد"
+  "noResults": "نتیجه‌ای یافت نشد",
+  "copiedMessage": "در کلیپ‌بورد کپی شد",
+  "exportTxtAction": "خروجی به‌صورت متن",
+  "exportPdfAction": "خروجی به‌صورت PDF",
+  "translatedTo": "ترجمه شده به"
 }

@@ -54,5 +54,9 @@
   "historyClearConfirm": "Törli a teljes előzményt?",
   "termsLink": "Szolgáltatási feltételek",
   "tagline": "Irányítsa a kamerát bármilyen szövegre, és azonnal értse meg.",
-  "noResults": "Nincs találat"
+  "noResults": "Nincs találat",
+  "copiedMessage": "Vágólapra másolva",
+  "exportTxtAction": "Exportálás szövegként",
+  "exportPdfAction": "Exportálás PDF-ként",
+  "translatedTo": "Lefordítva"
 }

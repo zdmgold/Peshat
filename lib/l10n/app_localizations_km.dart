@@ -174,4 +174,16 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get noResults => 'គ្មានលទ្ធផល';
+
+  @override
+  String get copiedMessage => 'បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់';
+
+  @override
+  String get exportTxtAction => 'នាំចេញជាអត្ថបទ';
+
+  @override
+  String get exportPdfAction => 'នាំចេញជា PDF';
+
+  @override
+  String get translatedTo => 'បកប្រែជា';
 }

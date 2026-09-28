@@ -174,4 +174,16 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get noResults => 'ບໍ່ມີຜົນໄດ້ຮັບ';
+
+  @override
+  String get copiedMessage => 'ຄັດລອກໃສ່ຄລິບບອດແລ້ວ';
+
+  @override
+  String get exportTxtAction => 'ສົ່ງອອກເປັນຂໍ້ຄວາມ';
+
+  @override
+  String get exportPdfAction => 'ສົ່ງອອກເປັນ PDF';
+
+  @override
+  String get translatedTo => 'ແປເປັນ';
 }

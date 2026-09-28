@@ -54,5 +54,9 @@
   "historyClearConfirm": "លុបប្រវត្តិទាំងអស់?",
   "termsLink": "លក្ខខណ្ឌសេវាកម្ម",
   "tagline": "តម្រង់កាមេរ៉ាទៅអត្ថបទណាមួយ ហើយយល់ភ្លាមៗ។",
-  "noResults": "គ្មានលទ្ធផល"
+  "noResults": "គ្មានលទ្ធផល",
+  "copiedMessage": "បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់",
+  "exportTxtAction": "នាំចេញជាអត្ថបទ",
+  "exportPdfAction": "នាំចេញជា PDF",
+  "translatedTo": "បកប្រែជា"
 }

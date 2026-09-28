@@ -174,4 +174,16 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get noResults => 'نتیجه‌ای یافت نشد';
+
+  @override
+  String get copiedMessage => 'در کلیپ‌بورد کپی شد';
+
+  @override
+  String get exportTxtAction => 'خروجی به‌صورت متن';
+
+  @override
+  String get exportPdfAction => 'خروجی به‌صورت PDF';
+
+  @override
+  String get translatedTo => 'ترجمه شده به';
 }

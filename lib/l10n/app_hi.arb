@@ -54,5 +54,9 @@
   "historyClearConfirm": "सारा इतिहास हटाएं?",
   "termsLink": "सेवा की शर्तें",
   "tagline": "कैमरे को किसी भी टेक्स्ट पर लक्षित करें और तुरंत समझें।",
-  "noResults": "कोई परिणाम नहीं"
+  "noResults": "कोई परिणाम नहीं",
+  "copiedMessage": "क्लिपबोर्ड पर कॉपी किया गया",
+  "exportTxtAction": "टेक्स्ट के रूप में निर्यात करें",
+  "exportPdfAction": "PDF के रूप में निर्यात करें",
+  "translatedTo": "अनुवादित"
 }

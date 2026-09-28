@@ -174,4 +174,16 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get noResults => 'Không có kết quả';
+
+  @override
+  String get copiedMessage => 'Đã sao chép vào clipboard';
+
+  @override
+  String get exportTxtAction => 'Xuất dưới dạng văn bản';
+
+  @override
+  String get exportPdfAction => 'Xuất dưới dạng PDF';
+
+  @override
+  String get translatedTo => 'Đã dịch sang';
 }

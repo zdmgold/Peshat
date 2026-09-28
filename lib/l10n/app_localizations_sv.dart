@@ -174,4 +174,16 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get noResults => 'Inga resultat';
+
+  @override
+  String get copiedMessage => 'Kopierat till urklipp';
+
+  @override
+  String get exportTxtAction => 'Exportera som text';
+
+  @override
+  String get exportPdfAction => 'Exportera som PDF';
+
+  @override
+  String get translatedTo => 'Översatt till';
 }

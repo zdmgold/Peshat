@@ -174,4 +174,16 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get noResults => 'कोई परिणाम नहीं';
+
+  @override
+  String get copiedMessage => 'क्लिपबोर्ड पर कॉपी किया गया';
+
+  @override
+  String get exportTxtAction => 'टेक्स्ट के रूप में निर्यात करें';
+
+  @override
+  String get exportPdfAction => 'PDF के रूप में निर्यात करें';
+
+  @override
+  String get translatedTo => 'अनुवादित';
 }

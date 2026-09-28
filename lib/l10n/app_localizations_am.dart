@@ -174,4 +174,16 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get noResults => 'ውጤት የለም';
+
+  @override
+  String get copiedMessage => 'ወደ ቅንጥብ ሰሌዳ ተቀድቷል';
+
+  @override
+  String get exportTxtAction => 'እንደ ጽሑፍ ወደ ውጭ ላክ';
+
+  @override
+  String get exportPdfAction => 'እንደ PDF ወደ ውጭ ላክ';
+
+  @override
+  String get translatedTo => 'ወደ ተተርጉሟል';
 }

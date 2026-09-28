@@ -54,5 +54,9 @@
   "historyClearConfirm": "すべての履歴を削除しますか？",
   "termsLink": "利用規約",
   "tagline": "カメラを任意のテキストに向けて、すぐに理解しましょう。",
-  "noResults": "結果がありません"
+  "noResults": "結果がありません",
+  "copiedMessage": "クリップボードにコピーしました",
+  "exportTxtAction": "テキストとしてエクスポート",
+  "exportPdfAction": "PDFとしてエクスポート",
+  "translatedTo": "翻訳先"
 }

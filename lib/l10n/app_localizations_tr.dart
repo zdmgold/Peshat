@@ -174,4 +174,16 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get noResults => 'Sonuç yok';
+
+  @override
+  String get copiedMessage => 'Panoya kopyalandı';
+
+  @override
+  String get exportTxtAction => 'Metin olarak dışa aktar';
+
+  @override
+  String get exportPdfAction => 'PDF olarak dışa aktar';
+
+  @override
+  String get translatedTo => 'Çevrildi';
 }

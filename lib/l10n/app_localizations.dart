@@ -492,6 +492,30 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No results'**
   String get noResults;
+
+  /// No description provided for @copiedMessage.
+  ///
+  /// In en, this message translates to:
+  /// **'Copied to clipboard'**
+  String get copiedMessage;
+
+  /// No description provided for @exportTxtAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Export as text'**
+  String get exportTxtAction;
+
+  /// No description provided for @exportPdfAction.
+  ///
+  /// In en, this message translates to:
+  /// **'Export as PDF'**
+  String get exportPdfAction;
+
+  /// No description provided for @translatedTo.
+  ///
+  /// In en, this message translates to:
+  /// **'Translated to'**
+  String get translatedTo;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

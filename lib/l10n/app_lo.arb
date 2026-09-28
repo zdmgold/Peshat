@@ -54,5 +54,9 @@
   "historyClearConfirm": "ລຶບປະຫວັດທັງໝົດບໍ?",
   "termsLink": "ເງື່ອນໄຂການບໍລິການ",
   "tagline": "ເລັ່ງກ້ອງໄປທີ່ຂໍ້ຄວາມໃດກໍ່ໄດ້ ແລະເຂົ້າໃຈທັນທີ.",
-  "noResults": "ບໍ່ມີຜົນໄດ້ຮັບ"
+  "noResults": "ບໍ່ມີຜົນໄດ້ຮັບ",
+  "copiedMessage": "ຄັດລອກໃສ່ຄລິບບອດແລ້ວ",
+  "exportTxtAction": "ສົ່ງອອກເປັນຂໍ້ຄວາມ",
+  "exportPdfAction": "ສົ່ງອອກເປັນ PDF",
+  "translatedTo": "ແປເປັນ"
 }

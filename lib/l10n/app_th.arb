@@ -54,5 +54,9 @@
   "historyClearConfirm": "ลบประวัติทั้งหมดหรือไม่",
   "termsLink": "ข้อกำหนดการให้บริการ",
   "tagline": "หันกล้องไปที่ข้อความใด ๆ แล้วเข้าใจได้ทันที",
-  "noResults": "ไม่พบผลลัพธ์"
+  "noResults": "ไม่พบผลลัพธ์",
+  "copiedMessage": "คัดลอกไปยังคลิปบอร์ดแล้ว",
+  "exportTxtAction": "ส่งออกเป็นข้อความ",
+  "exportPdfAction": "ส่งออกเป็น PDF",
+  "translatedTo": "แปลเป็น"
 }

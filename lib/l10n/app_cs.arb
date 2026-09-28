@@ -54,5 +54,9 @@
   "historyClearConfirm": "Smazat celou historii?",
   "termsLink": "Podmínky služby",
   "tagline": "Namiřte fotoaparát na libovolný text a porozumějte mu okamžitě.",
-  "noResults": "Žádné výsledky"
+  "noResults": "Žádné výsledky",
+  "copiedMessage": "Zkopírováno do schránky",
+  "exportTxtAction": "Exportovat jako text",
+  "exportPdfAction": "Exportovat jako PDF",
+  "translatedTo": "Přeloženo do"
 }

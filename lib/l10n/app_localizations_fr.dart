@@ -174,4 +174,16 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get noResults => 'Aucun résultat';
+
+  @override
+  String get copiedMessage => 'Copié dans le presse-papiers';
+
+  @override
+  String get exportTxtAction => 'Exporter en texte';
+
+  @override
+  String get exportPdfAction => 'Exporter en PDF';
+
+  @override
+  String get translatedTo => 'Traduit en';
 }

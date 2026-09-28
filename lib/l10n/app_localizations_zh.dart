@@ -174,4 +174,16 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get noResults => '无结果';
+
+  @override
+  String get copiedMessage => '已复制到剪贴板';
+
+  @override
+  String get exportTxtAction => '导出为文本';
+
+  @override
+  String get exportPdfAction => '导出为 PDF';
+
+  @override
+  String get translatedTo => '翻译为';
 }

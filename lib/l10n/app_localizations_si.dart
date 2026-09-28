@@ -174,4 +174,16 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get noResults => 'ප්‍රතිඵල නැත';
+
+  @override
+  String get copiedMessage => 'ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී';
+
+  @override
+  String get exportTxtAction => 'පෙළ ලෙස අපනයනය කරන්න';
+
+  @override
+  String get exportPdfAction => 'PDF ලෙස අපනයනය කරන්න';
+
+  @override
+  String get translatedTo => 'පරිවර්තනය කරන ලදී';
 }

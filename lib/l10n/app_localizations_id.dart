@@ -174,4 +174,16 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get noResults => 'Tidak ada hasil';
+
+  @override
+  String get copiedMessage => 'Disalin ke clipboard';
+
+  @override
+  String get exportTxtAction => 'Ekspor sebagai teks';
+
+  @override
+  String get exportPdfAction => 'Ekspor sebagai PDF';
+
+  @override
+  String get translatedTo => 'Diterjemahkan ke';
 }

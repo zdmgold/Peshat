@@ -174,4 +174,16 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get noResults => 'ရလဒ်မရှိပါ';
+
+  @override
+  String get copiedMessage => 'ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ';
+
+  @override
+  String get exportTxtAction => 'စာသားအဖြစ် တင်ပို့ပါ';
+
+  @override
+  String get exportPdfAction => 'PDF အဖြစ် တင်ပို့ပါ';
+
+  @override
+  String get translatedTo => 'သို့ ဘာသာပြန်ထားသည်';
 }

@@ -54,5 +54,9 @@
   "historyClearConfirm": "Radera all historik?",
   "termsLink": "Användarvillkor",
   "tagline": "Rikta kameran mot valfri text och förstå den direkt.",
-  "noResults": "Inga resultat"
+  "noResults": "Inga resultat",
+  "copiedMessage": "Kopierat till urklipp",
+  "exportTxtAction": "Exportera som text",
+  "exportPdfAction": "Exportera som PDF",
+  "translatedTo": "Översatt till"
 }

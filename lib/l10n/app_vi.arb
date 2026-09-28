@@ -54,5 +54,9 @@
   "historyClearConfirm": "Xóa toàn bộ lịch sử?",
   "termsLink": "Điều khoản dịch vụ",
   "tagline": "Hướng camera vào bất kỳ văn bản nào, hiểu ngay lập tức.",
-  "noResults": "Không có kết quả"
+  "noResults": "Không có kết quả",
+  "copiedMessage": "Đã sao chép vào clipboard",
+  "exportTxtAction": "Xuất dưới dạng văn bản",
+  "exportPdfAction": "Xuất dưới dạng PDF",
+  "translatedTo": "Đã dịch sang"
 }

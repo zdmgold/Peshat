@@ -54,5 +54,9 @@
   "historyClearConfirm": "Alle geschiedenis verwijderen?",
   "termsLink": "Servicevoorwaarden",
   "tagline": "Richt je camera op een willekeurige tekst en begrijp die direct.",
-  "noResults": "Geen resultaten"
+  "noResults": "Geen resultaten",
+  "copiedMessage": "Gekopieerd naar klembord",
+  "exportTxtAction": "Exporteren als tekst",
+  "exportPdfAction": "Exporteren als PDF",
+  "translatedTo": "Vertaald naar"
 }

@@ -174,4 +174,16 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get noResults => 'Nincs találat';
+
+  @override
+  String get copiedMessage => 'Vágólapra másolva';
+
+  @override
+  String get exportTxtAction => 'Exportálás szövegként';
+
+  @override
+  String get exportPdfAction => 'Exportálás PDF-ként';
+
+  @override
+  String get translatedTo => 'Lefordítva';
 }

@@ -174,4 +174,16 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get noResults => 'ไม่พบผลลัพธ์';
+
+  @override
+  String get copiedMessage => 'คัดลอกไปยังคลิปบอร์ดแล้ว';
+
+  @override
+  String get exportTxtAction => 'ส่งออกเป็นข้อความ';
+
+  @override
+  String get exportPdfAction => 'ส่งออกเป็น PDF';
+
+  @override
+  String get translatedTo => 'แปลเป็น';
 }

@@ -174,4 +174,16 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get noResults => 'Walang resulta';
+
+  @override
+  String get copiedMessage => 'Kinopya sa clipboard';
+
+  @override
+  String get exportTxtAction => 'I-export bilang teksto';
+
+  @override
+  String get exportPdfAction => 'I-export bilang PDF';
+
+  @override
+  String get translatedTo => 'Isinalin sa';
 }

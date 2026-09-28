@@ -174,4 +174,16 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noResults => 'لا توجد نتائج';
+
+  @override
+  String get copiedMessage => 'تم النسخ إلى الحافظة';
+
+  @override
+  String get exportTxtAction => 'تصدير كنص';
+
+  @override
+  String get exportPdfAction => 'تصدير كـ PDF';
+
+  @override
+  String get translatedTo => 'تمت الترجمة إلى';
 }

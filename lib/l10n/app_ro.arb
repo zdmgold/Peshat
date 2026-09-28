@@ -54,5 +54,9 @@
   "historyClearConfirm": "Ștergeți tot istoricul?",
   "termsLink": "Termeni și condiții",
   "tagline": "Îndreptați camera spre orice text și înțelegeți-l instant.",
-  "noResults": "Fără rezultate"
+  "noResults": "Fără rezultate",
+  "copiedMessage": "Copiat în clipboard",
+  "exportTxtAction": "Exportați ca text",
+  "exportPdfAction": "Exportați ca PDF",
+  "translatedTo": "Tradus în"
 }

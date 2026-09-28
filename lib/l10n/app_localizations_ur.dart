@@ -174,4 +174,16 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get noResults => 'کوئی نتیجہ نہیں';
+
+  @override
+  String get copiedMessage => 'کلپ بورڈ پر کاپی ہو گیا';
+
+  @override
+  String get exportTxtAction => 'متن کے طور پر ایکسپورٹ کریں';
+
+  @override
+  String get exportPdfAction => 'PDF کے طور پر ایکسپورٹ کریں';
+
+  @override
+  String get translatedTo => 'ترجمہ کیا گیا';
 }

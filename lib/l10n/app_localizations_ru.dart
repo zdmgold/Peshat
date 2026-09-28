@@ -174,4 +174,16 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get noResults => 'Нет результатов';
+
+  @override
+  String get copiedMessage => 'Скопировано в буфер обмена';
+
+  @override
+  String get exportTxtAction => 'Экспорт как текст';
+
+  @override
+  String get exportPdfAction => 'Экспорт как PDF';
+
+  @override
+  String get translatedTo => 'Переведено на';
 }

@@ -64,5 +64,9 @@
   "historyClearConfirm": "Delete all history?",
   "termsLink": "Terms of Service",
   "tagline": "Point your camera at any text, understand it instantly.",
-  "noResults": "No results"
+  "noResults": "No results",
+  "copiedMessage": "Copied to clipboard",
+  "exportTxtAction": "Export as text",
+  "exportPdfAction": "Export as PDF",
+  "translatedTo": "Translated to"
 }

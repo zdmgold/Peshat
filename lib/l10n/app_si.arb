@@ -54,5 +54,9 @@
   "historyClearConfirm": "සියලු ඉතිහාසය මකන්නද?",
   "termsLink": "සේවා කොන්දේසි",
   "tagline": "කැමරාව ඕනෑම පෙළකට යොමු කර ක්ෂණිකව තේරුම් ගන්න.",
-  "noResults": "ප්‍රතිඵල නැත"
+  "noResults": "ප්‍රතිඵල නැත",
+  "copiedMessage": "ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී",
+  "exportTxtAction": "පෙළ ලෙස අපනයනය කරන්න",
+  "exportPdfAction": "PDF ලෙස අපනයනය කරන්න",
+  "translatedTo": "පරිවර්තනය කරන ලදී"
 }

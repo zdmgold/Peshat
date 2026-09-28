@@ -54,5 +54,9 @@
   "historyClearConfirm": "ሁሉንም ታሪክ ሰርዝ?",
   "termsLink": "የአገልግሎት ውሎች",
   "tagline": "ካሜራዎን ወደ ማንኛውም ጽሑፍ ያመላክቱ እና ወዲያውኑ ይረዱ።",
-  "noResults": "ውጤት የለም"
+  "noResults": "ውጤት የለም",
+  "copiedMessage": "ወደ ቅንጥብ ሰሌዳ ተቀድቷል",
+  "exportTxtAction": "እንደ ጽሑፍ ወደ ውጭ ላክ",
+  "exportPdfAction": "እንደ PDF ወደ ውጭ ላክ",
+  "translatedTo": "ወደ ተተርጉሟል"
 }

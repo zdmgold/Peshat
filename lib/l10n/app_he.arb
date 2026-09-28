@@ -54,5 +54,9 @@
   "historyClearConfirm": "למחוק את כל ההיסטוריה?",
   "termsLink": "תנאי שירות",
   "tagline": "כוונו את המצלמה לכל טקסט והבינו אותו מיד.",
-  "noResults": "אין תוצאות"
+  "noResults": "אין תוצאות",
+  "copiedMessage": "הועתק ללוח",
+  "exportTxtAction": "ייצוא כטקסט",
+  "exportPdfAction": "ייצוא כ-PDF",
+  "translatedTo": "תורגם ל"
 }

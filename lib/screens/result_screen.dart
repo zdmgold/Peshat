@@ -1,5 +1,9 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:path_provider/path_provider.dart';
+import 'package:pdf/pdf.dart';
+import 'package:pdf/widgets.dart' as pw;
 import 'package:share_plus/share_plus.dart';
 import '../core/models/app_error_code.dart';
 import '../core/models/scan_result.dart';
@@ -29,15 +33,18 @@ class ResultScreen extends StatefulWidget {
   State<ResultScreen> createState() => _ResultScreenState();
 }
 
-class _ResultScreenState extends State<ResultScreen> {
+class _ResultScreenState extends State<ResultScreen>
+    with SingleTickerProviderStateMixin {
   final ScanProvider _provider = ScanProvider();
   late String _targetLanguage;
+  late TabController _tabs;
   bool _saved = false;
 
   @override
   void initState() {
     super.initState();
     _targetLanguage = widget.initialTargetLanguage;
+    _tabs = TabController(length: 2, vsync: this);
     _provider.addListener(_onStateChanged);
     WidgetsBinding.instance.addPostFrameCallback((_) => _runPipeline());
   }
@@ -46,6 +53,7 @@ class _ResultScreenState extends State<ResultScreen> {
   void dispose() {
     _provider.removeListener(_onStateChanged);
     _provider.dispose();
+    _tabs.dispose();
     super.dispose();
   }
 
@@ -62,6 +70,7 @@ class _ResultScreenState extends State<ResultScreen> {
         timestamp: DateTime.now(),
         confidence: 1.0,
       ));
+      if (mounted) _tabs.animateTo(1);
     }
   }
 
@@ -90,22 +99,14 @@ class _ResultScreenState extends State<ResultScreen> {
 
   String _errorText(AppLocalizations l10n, AppErrorCode code) {
     switch (code) {
-      case AppErrorCode.noTextDetected:
-        return l10n.errorNoTextDetected;
-      case AppErrorCode.imageUnreadable:
-        return l10n.errorImageUnreadable;
-      case AppErrorCode.modelDownloadFailed:
-        return l10n.errorModelDownloadFailed;
-      case AppErrorCode.unsupportedLanguage:
-        return l10n.errorUnsupportedLanguage;
-      case AppErrorCode.ocrFailed:
-        return l10n.errorOcrFailed;
-      case AppErrorCode.translationFailed:
-        return l10n.errorTranslationFailed;
-      case AppErrorCode.timeout:
-        return l10n.errorTimeout;
-      case AppErrorCode.unknown:
-        return l10n.errorUnknown;
+      case AppErrorCode.noTextDetected: return l10n.errorNoTextDetected;
+      case AppErrorCode.imageUnreadable: return l10n.errorImageUnreadable;
+      case AppErrorCode.modelDownloadFailed: return l10n.errorModelDownloadFailed;
+      case AppErrorCode.unsupportedLanguage: return l10n.errorUnsupportedLanguage;
+      case AppErrorCode.ocrFailed: return l10n.errorOcrFailed;
+      case AppErrorCode.translationFailed: return l10n.errorTranslationFailed;
+      case AppErrorCode.timeout: return l10n.errorTimeout;
+      case AppErrorCode.unknown: return l10n.errorUnknown;
     }
   }
 
@@ -115,13 +116,25 @@ class _ResultScreenState extends State<ResultScreen> {
     return Scaffold(
       appBar: AppBar(
         title: Text(l10n.resultTitle),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.translate),
-            tooltip: l10n.changeLanguageButton,
-            onPressed: _pickLanguage,
+        bottom: PreferredSize(
+          preferredSize: const Size.fromHeight(48),
+          child: ValueListenableBuilder<ScanState>(
+            valueListenable: _provider,
+            builder: (context, state, _) {
+              final enabled = state is ScanDone;
+              return TabBar(
+                controller: _tabs,
+                tabs: [
+                  Tab(text: l10n.sourceLabel),
+                  Tab(text: l10n.translationLabel),
+                ],
+                onTap: (i) {
+                  if (!enabled) _tabs.index = 0;
+                },
+              );
+            },
           ),
-        ],
+        ),
       ),
       body: SafeArea(
         child: ValueListenableBuilder<ScanState>(
@@ -139,19 +152,58 @@ class _ResultScreenState extends State<ResultScreen> {
             if (state is ScanTranslating) {
               return _StatusView(message: l10n.statusTranslating);
             }
-            if (state is ScanDone) {
-              return _DoneView(
-                state: state,
-                onCopySource: () => _copy(state.sourceText),
-                onCopyTranslation: () => _copy(state.translatedText),
-                onShare: () => _share(state, l10n),
-              );
-            }
             if (state is ScanError) {
               return _ErrorView(
                 message: _errorText(l10n, state.code),
                 detail: state.detail,
                 onRetry: _runPipeline,
+              );
+            }
+            if (state is ScanDone) {
+              return TabBarView(
+                controller: _tabs,
+                children: [
+                  _PanelView(
+                    text: state.sourceText,
+                    subtitle: languageDisplayName(state.sourceLanguage),
+                    onCopy: () => _copy(state.sourceText, l10n),
+                    onShareText: () => _shareText(state.sourceText),
+                    onExportTxt: () => _export(
+                      state.sourceText,
+                      'peshat_original_${state.sourceLanguage}',
+                      l10n,
+                      asPdf: false,
+                    ),
+                    onExportPdf: () => _export(
+                      state.sourceText,
+                      'peshat_original_${state.sourceLanguage}',
+                      l10n,
+                      asPdf: true,
+                    ),
+                    actionsLabel: l10n.copyAction,
+                    exportTxtLabel: l10n.exportTxtAction,
+                    exportPdfLabel: l10n.exportPdfAction,
+                    shareLabel: l10n.shareAction,
+                  ),
+                  _TranslationTab(
+                    state: state,
+                    onCopy: () => _copy(state.translatedText, l10n),
+                    onShareText: () => _shareText(state.translatedText),
+                    onExportTxt: () => _export(
+                      state.translatedText,
+                      'peshat_translation_${state.targetLanguage}',
+                      l10n,
+                      asPdf: false,
+                    ),
+                    onExportPdf: () => _export(
+                      state.translatedText,
+                      'peshat_translation_${state.targetLanguage}',
+                      l10n,
+                      asPdf: true,
+                    ),
+                    onChangeLanguage: _pickLanguage,
+                  ),
+                ],
               );
             }
             return const Center(child: CircularProgressIndicator());
@@ -161,20 +213,58 @@ class _ResultScreenState extends State<ResultScreen> {
     );
   }
 
-  void _copy(String text) {
+  void _copy(String text, AppLocalizations l10n) {
     Clipboard.setData(ClipboardData(text: text));
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(AppLocalizations.of(context)!.copyAction),
+        content: Text(l10n.copiedMessage),
         duration: const Duration(seconds: 1),
       ),
     );
   }
 
-  void _share(ScanDone state, AppLocalizations l10n) {
-    Share.share(
-      '${state.sourceText}\n\n— ${l10n.translationLabel} —\n\n${state.translatedText}',
-    );
+  Future<void> _shareText(String text) async {
+    await Share.share(text);
+  }
+
+  Future<void> _export(
+    String text,
+    String baseName,
+    AppLocalizations l10n, {
+    required bool asPdf,
+  }) async {
+    try {
+      final dir = await getTemporaryDirectory();
+      late final File file;
+      if (asPdf) {
+        final doc = pw.Document();
+        doc.addPage(
+          pw.MultiPage(
+            pageFormat: PdfPageFormat.a4,
+            build: (ctx) => [
+              pw.Paragraph(
+                text: text,
+                style: const pw.TextStyle(fontSize: 12),
+              ),
+            ],
+          ),
+        );
+        final path = '${dir.path}/$baseName.pdf';
+        file = File(path);
+        await file.writeAsBytes(await doc.save());
+      } else {
+        final path = '${dir.path}/$baseName.txt';
+        file = File(path);
+        await file.writeAsString(text);
+      }
+      await Share.shareXFiles([XFile(file.path)]);
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text(e.toString())),
+        );
+      }
+    }
   }
 }
 
@@ -221,184 +311,336 @@ class _ErrorView extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(Spacing.xl),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.error_outline,
-                size: 56,
-                color: isDark ? AppColors.errorDark : AppColors.errorLight),
-            const SizedBox(height: Spacing.lg),
-            Text(
-              message,
-              textAlign: TextAlign.center,
-              style: AppTypography.body.copyWith(
-                color: isDark
-                    ? AppColors.textPrimaryDark
-                    : AppColors.textPrimaryLight,
-              ),
+    return SingleChildScrollView(
+      padding: const EdgeInsets.all(Spacing.xl),
+      child: Column(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          Icon(Icons.error_outline,
+              size: 56,
+              color: isDark ? AppColors.errorDark : AppColors.errorLight),
+          const SizedBox(height: Spacing.lg),
+          Text(
+            message,
+            textAlign: TextAlign.center,
+            style: AppTypography.body.copyWith(
+              color: isDark
+                  ? AppColors.textPrimaryDark
+                  : AppColors.textPrimaryLight,
             ),
+          ),
+          const SizedBox(height: Spacing.xl),
+          ElevatedButton(
+            onPressed: onRetry,
+            child: Text(l10n.retryButton),
+          ),
+          if (detail != null) ...[
             const SizedBox(height: Spacing.xl),
-            ElevatedButton(
-              onPressed: onRetry,
-              child: Text(l10n.retryButton),
-            ),
-            if (detail != null) ...[
-              const SizedBox(height: Spacing.xl),
-              const Divider(),
-              const SizedBox(height: Spacing.md),
-              SelectableText(
-                detail!,
-                style: const TextStyle(
-                  fontFamily: 'monospace',
-                  fontSize: 11,
-                  color: Colors.redAccent,
-                ),
+            const Divider(),
+            const SizedBox(height: Spacing.md),
+            SelectableText(
+              detail!,
+              style: const TextStyle(
+                fontFamily: 'monospace',
+                fontSize: 11,
+                color: Colors.redAccent,
               ),
-            ],
+            ),
           ],
-        ),
+        ],
       ),
     );
   }
 }
 
-class _DoneView extends StatelessWidget {
+class _PanelView extends StatelessWidget {
+  final String text;
+  final String subtitle;
+  final VoidCallback onCopy;
+  final VoidCallback onShareText;
+  final VoidCallback onExportTxt;
+  final VoidCallback onExportPdf;
+  final String actionsLabel;
+  final String exportTxtLabel;
+  final String exportPdfLabel;
+  final String shareLabel;
+
+  const _PanelView({
+    required this.text,
+    required this.subtitle,
+    required this.onCopy,
+    required this.onShareText,
+    required this.onExportTxt,
+    required this.onExportPdf,
+    required this.actionsLabel,
+    required this.exportTxtLabel,
+    required this.exportPdfLabel,
+    required this.shareLabel,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Expanded(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.all(Spacing.md),
+            child: SelectableText(
+              text,
+              style: AppTypography.sourceChip.copyWith(
+                fontSize: 14,
+                height: 1.6,
+                color: isDark
+                    ? AppColors.textPrimaryDark
+                    : AppColors.textPrimaryLight,
+              ),
+            ),
+          ),
+        ),
+        _ActionBar(
+          subtitle: subtitle,
+          onCopy: onCopy,
+          onShareText: onShareText,
+          onExportTxt: onExportTxt,
+          onExportPdf: onExportPdf,
+          copyLabel: actionsLabel,
+          shareLabel: shareLabel,
+          exportTxtLabel: exportTxtLabel,
+          exportPdfLabel: exportPdfLabel,
+        ),
+      ],
+    );
+  }
+}
+
+class _TranslationTab extends StatelessWidget {
   final ScanDone state;
-  final VoidCallback onCopySource;
-  final VoidCallback onCopyTranslation;
-  final VoidCallback onShare;
-  const _DoneView({
+  final VoidCallback onCopy;
+  final VoidCallback onShareText;
+  final VoidCallback onExportTxt;
+  final VoidCallback onExportPdf;
+  final VoidCallback onChangeLanguage;
+
+  const _TranslationTab({
     required this.state,
-    required this.onCopySource,
-    required this.onCopyTranslation,
-    required this.onShare,
+    required this.onCopy,
+    required this.onShareText,
+    required this.onExportTxt,
+    required this.onExportPdf,
+    required this.onChangeLanguage,
   });
 
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
-    return SingleChildScrollView(
-      padding: const EdgeInsets.all(Spacing.md),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          _Panel(
-            label: l10n.sourceLabel,
-            subtitle: languageDisplayName(state.sourceLanguage),
-            text: state.sourceText,
-            onCopy: onCopySource,
-            isDark: isDark,
-            mono: true,
-          ),
-          const SizedBox(height: Spacing.md),
-          _Panel(
-            label: l10n.translationLabel,
-            subtitle: languageDisplayName(state.targetLanguage),
-            text: state.translatedText,
-            onCopy: onCopyTranslation,
-            isDark: isDark,
-            mono: false,
-          ),
-          const SizedBox(height: Spacing.lg),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              OutlinedButton.icon(
-                onPressed: onShare,
-                icon: const Icon(Icons.share_outlined, size: 18),
-                label: Text(l10n.shareAction),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Padding(
+          padding: const EdgeInsets.fromLTRB(
+              Spacing.md, Spacing.md, Spacing.md, Spacing.sm),
+          child: InkWell(
+            borderRadius: BorderRadius.circular(12),
+            onTap: onChangeLanguage,
+            child: Container(
+              padding: const EdgeInsets.symmetric(
+                  horizontal: Spacing.md, vertical: Spacing.sm),
+              decoration: BoxDecoration(
+                color: isDark
+                    ? AppColors.bgSecondaryDark
+                    : AppColors.bgSecondaryLight,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(
+                  color: isDark
+                      ? AppColors.borderSubtleDark
+                      : AppColors.borderSubtleLight,
+                  width: 0.5,
+                ),
               ),
-            ],
+              child: Row(
+                children: [
+                  Icon(Icons.translate,
+                      size: 18,
+                      color: isDark
+                          ? AppColors.accentDark
+                          : AppColors.accentLight),
+                  const SizedBox(width: Spacing.sm),
+                  Text(
+                    l10n.translatedTo,
+                    style: AppTypography.chrome.copyWith(
+                      fontSize: 13,
+                      color: isDark
+                          ? AppColors.textSecondaryDark
+                          : AppColors.textSecondaryLight,
+                    ),
+                  ),
+                  const SizedBox(width: Spacing.xs),
+                  Expanded(
+                    child: Text(
+                      languageDisplayName(state.targetLanguage),
+                      style: AppTypography.chrome.copyWith(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w600,
+                        color: isDark
+                            ? AppColors.textPrimaryDark
+                            : AppColors.textPrimaryLight,
+                      ),
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ),
+                  Icon(Icons.chevron_right,
+                      size: 20,
+                      color: isDark
+                          ? AppColors.textTertiaryDark
+                          : AppColors.textTertiaryLight),
+                ],
+              ),
+            ),
           ),
+        ),
+        Expanded(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.fromLTRB(
+                Spacing.md, Spacing.sm, Spacing.md, Spacing.md),
+            child: SelectableText(
+              state.translatedText,
+              style: AppTypography.body.copyWith(
+                fontSize: 17,
+                height: 1.6,
+                color: isDark
+                    ? AppColors.textPrimaryDark
+                    : AppColors.textPrimaryLight,
+              ),
+            ),
+          ),
+        ),
+        _ActionBar(
+          subtitle: languageDisplayName(state.targetLanguage),
+          onCopy: onCopy,
+          onShareText: onShareText,
+          onExportTxt: onExportTxt,
+          onExportPdf: onExportPdf,
+          copyLabel: l10n.copyAction,
+          shareLabel: l10n.shareAction,
+          exportTxtLabel: l10n.exportTxtAction,
+          exportPdfLabel: l10n.exportPdfAction,
+        ),
+      ],
+    );
+  }
+}
+
+class _ActionBar extends StatelessWidget {
+  final String subtitle;
+  final VoidCallback onCopy;
+  final VoidCallback onShareText;
+  final VoidCallback onExportTxt;
+  final VoidCallback onExportPdf;
+  final String copyLabel;
+  final String shareLabel;
+  final String exportTxtLabel;
+  final String exportPdfLabel;
+
+  const _ActionBar({
+    required this.subtitle,
+    required this.onCopy,
+    required this.onShareText,
+    required this.onExportTxt,
+    required this.onExportPdf,
+    required this.copyLabel,
+    required this.shareLabel,
+    required this.exportTxtLabel,
+    required this.exportPdfLabel,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Container(
+      padding: const EdgeInsets.symmetric(
+          horizontal: Spacing.sm, vertical: Spacing.sm),
+      decoration: BoxDecoration(
+        color: isDark
+            ? AppColors.bgSecondaryDark
+            : AppColors.bgSecondaryLight,
+        border: Border(
+          top: BorderSide(
+            color: isDark
+                ? AppColors.borderSubtleDark
+                : AppColors.borderSubtleLight,
+            width: 0.5,
+          ),
+        ),
+      ),
+      child: Row(
+        children: [
+          _ActionButton(icon: Icons.copy, label: copyLabel, onTap: onCopy),
+          _ActionButton(
+              icon: Icons.ios_share, label: shareLabel, onTap: onShareText),
+          _ActionButton(
+              icon: Icons.description_outlined,
+              label: exportTxtLabel,
+              onTap: onExportTxt),
+          _ActionButton(
+              icon: Icons.picture_as_pdf_outlined,
+              label: exportPdfLabel,
+              onTap: onExportPdf),
         ],
       ),
     );
   }
 }
 
-class _Panel extends StatelessWidget {
+class _ActionButton extends StatelessWidget {
+  final IconData icon;
   final String label;
-  final String subtitle;
-  final String text;
-  final VoidCallback onCopy;
-  final bool isDark;
-  final bool mono;
-  const _Panel({
+  final VoidCallback onTap;
+  const _ActionButton({
+    required this.icon,
     required this.label,
-    required this.subtitle,
-    required this.text,
-    required this.onCopy,
-    required this.isDark,
-    required this.mono,
+    required this.onTap,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: double.infinity,
-      padding: const EdgeInsets.all(Spacing.md),
-      decoration: BoxDecoration(
-        color: isDark
-            ? AppColors.bgSecondaryDark
-            : AppColors.bgSecondaryLight,
-        borderRadius: BorderRadius.circular(16),
-        border: Border.all(
-          color: isDark
-              ? AppColors.borderSubtleDark
-              : AppColors.borderSubtleLight,
-          width: 0.5,
-        ),
-      ),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Row(
-            children: [
-              Text(
-                label.toUpperCase(),
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 11,
-                  letterSpacing: 0.8,
-                  fontWeight: FontWeight.w600,
-                  color: isDark
-                      ? AppColors.textTertiaryDark
-                      : AppColors.textTertiaryLight,
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    return Expanded(
+      child: Semantics(
+        label: label,
+        button: true,
+        child: InkWell(
+          borderRadius: BorderRadius.circular(12),
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: Spacing.sm),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(icon,
+                    size: 20,
+                    color: isDark
+                        ? AppColors.accentDark
+                        : AppColors.accentLight),
+                const SizedBox(height: 4),
+                Text(
+                  label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: AppTypography.chrome.copyWith(
+                    fontSize: 10,
+                    color: isDark
+                        ? AppColors.textSecondaryDark
+                        : AppColors.textSecondaryLight,
+                  ),
                 ),
-              ),
-              const SizedBox(width: Spacing.sm),
-              Text(
-                subtitle,
-                style: AppTypography.sourceChip.copyWith(
-                  fontSize: 11,
-                  color: isDark
-                      ? AppColors.textTertiaryDark
-                      : AppColors.textTertiaryLight,
-                ),
-              ),
-              const Spacer(),
-              IconButton(
-                icon: const Icon(Icons.copy, size: 18),
-                tooltip: MaterialLocalizations.of(context).copyButtonLabel,
-                onPressed: onCopy,
-              ),
-            ],
-          ),
-          const SizedBox(height: Spacing.xs),
-          SelectableText(
-            text,
-            style: (mono ? AppTypography.sourceChip : AppTypography.body)
-                .copyWith(
-              fontSize: mono ? 14 : 17,
-              color: isDark
-                  ? AppColors.textPrimaryDark
-                  : AppColors.textPrimaryLight,
+              ],
             ),
           ),
-        ],
+        ),
       ),
     );
   }

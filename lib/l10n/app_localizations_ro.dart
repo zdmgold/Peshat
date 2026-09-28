@@ -174,4 +174,16 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get noResults => 'Fără rezultate';
+
+  @override
+  String get copiedMessage => 'Copiat în clipboard';
+
+  @override
+  String get exportTxtAction => 'Exportați ca text';
+
+  @override
+  String get exportPdfAction => 'Exportați ca PDF';
+
+  @override
+  String get translatedTo => 'Tradus în';
 }

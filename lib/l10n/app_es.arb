@@ -54,5 +54,9 @@
   "historyClearConfirm": "¿Eliminar todo el historial?",
   "termsLink": "Términos del servicio",
   "tagline": "Apunta tu cámara a cualquier texto y entiéndelo al instante.",
-  "noResults": "Sin resultados"
+  "noResults": "Sin resultados",
+  "copiedMessage": "Copiado al portapapeles",
+  "exportTxtAction": "Exportar como texto",
+  "exportPdfAction": "Exportar como PDF",
+  "translatedTo": "Traducido a"
 }

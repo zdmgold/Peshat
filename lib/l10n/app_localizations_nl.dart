@@ -174,4 +174,16 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get noResults => 'Geen resultaten';
+
+  @override
+  String get copiedMessage => 'Gekopieerd naar klembord';
+
+  @override
+  String get exportTxtAction => 'Exporteren als tekst';
+
+  @override
+  String get exportPdfAction => 'Exporteren als PDF';
+
+  @override
+  String get translatedTo => 'Vertaald naar';
 }

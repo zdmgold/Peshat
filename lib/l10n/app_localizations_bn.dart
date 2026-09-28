@@ -174,4 +174,16 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get noResults => 'কোনো ফলাফল নেই';
+
+  @override
+  String get copiedMessage => 'ক্লিপবোর্ডে কপি করা হয়েছে';
+
+  @override
+  String get exportTxtAction => 'টেক্সট হিসেবে রপ্তানি করুন';
+
+  @override
+  String get exportPdfAction => 'PDF হিসেবে রপ্তানি করুন';
+
+  @override
+  String get translatedTo => 'অনুবাদ করা হয়েছে';
 }

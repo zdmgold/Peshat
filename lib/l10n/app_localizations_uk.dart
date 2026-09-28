@@ -174,4 +174,16 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get noResults => 'Немає результатів';
+
+  @override
+  String get copiedMessage => 'Скопійовано в буфер обміну';
+
+  @override
+  String get exportTxtAction => 'Експорт як текст';
+
+  @override
+  String get exportPdfAction => 'Експорт як PDF';
+
+  @override
+  String get translatedTo => 'Перекладено на';
 }

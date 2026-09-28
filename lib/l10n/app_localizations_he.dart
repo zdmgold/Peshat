@@ -174,4 +174,16 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get noResults => 'אין תוצאות';
+
+  @override
+  String get copiedMessage => 'הועתק ללוח';
+
+  @override
+  String get exportTxtAction => 'ייצוא כטקסט';
+
+  @override
+  String get exportPdfAction => 'ייצוא כ-PDF';
+
+  @override
+  String get translatedTo => 'תורגם ל';
 }

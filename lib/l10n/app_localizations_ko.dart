@@ -174,4 +174,16 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get noResults => '결과 없음';
+
+  @override
+  String get copiedMessage => '클립보드에 복사됨';
+
+  @override
+  String get exportTxtAction => '텍스트로 내보내기';
+
+  @override
+  String get exportPdfAction => 'PDF로 내보내기';
+
+  @override
+  String get translatedTo => '번역 대상';
 }

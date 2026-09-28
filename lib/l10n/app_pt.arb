@@ -54,5 +54,9 @@
   "historyClearConfirm": "Excluir todo o histórico?",
   "termsLink": "Termos de Serviço",
   "tagline": "Aponte a câmera para qualquer texto e entenda na hora.",
-  "noResults": "Sem resultados"
+  "noResults": "Sem resultados",
+  "copiedMessage": "Copiado para a área de transferência",
+  "exportTxtAction": "Exportar como texto",
+  "exportPdfAction": "Exportar como PDF",
+  "translatedTo": "Traduzido para"
 }

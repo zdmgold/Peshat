@@ -174,4 +174,16 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get noResults => 'Δεν βρέθηκαν αποτελέσματα';
+
+  @override
+  String get copiedMessage => 'Αντιγράφηκε στο πρόχειρο';
+
+  @override
+  String get exportTxtAction => 'Εξαγωγή ως κείμενο';
+
+  @override
+  String get exportPdfAction => 'Εξαγωγή ως PDF';
+
+  @override
+  String get translatedTo => 'Μεταφράστηκε σε';
 }

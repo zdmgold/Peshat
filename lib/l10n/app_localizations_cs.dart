@@ -174,4 +174,16 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get noResults => 'Žádné výsledky';
+
+  @override
+  String get copiedMessage => 'Zkopírováno do schránky';
+
+  @override
+  String get exportTxtAction => 'Exportovat jako text';
+
+  @override
+  String get exportPdfAction => 'Exportovat jako PDF';
+
+  @override
+  String get translatedTo => 'Přeloženo do';
 }

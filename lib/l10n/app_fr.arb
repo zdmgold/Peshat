@@ -54,5 +54,9 @@
   "historyClearConfirm": "Supprimer tout l’historique ?",
   "termsLink": "Conditions d’utilisation",
   "tagline": "Pointez votre appareil photo vers un texte et comprenez-le instantanément.",
-  "noResults": "Aucun résultat"
+  "noResults": "Aucun résultat",
+  "copiedMessage": "Copié dans le presse-papiers",
+  "exportTxtAction": "Exporter en texte",
+  "exportPdfAction": "Exporter en PDF",
+  "translatedTo": "Traduit en"
 }

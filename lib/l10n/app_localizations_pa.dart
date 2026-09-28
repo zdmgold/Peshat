@@ -174,4 +174,16 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get noResults => 'ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ';
+
+  @override
+  String get copiedMessage => 'ਕਲਿੱਪਬੋਰਡ \'ਤੇ ਕਾਪੀ ਕੀਤਾ';
+
+  @override
+  String get exportTxtAction => 'ਟੈਕਸਟ ਵਜੋਂ ਐਕਸਪੋਰਟ ਕਰੋ';
+
+  @override
+  String get exportPdfAction => 'PDF ਵਜੋਂ ਐਕਸਪੋਰਟ ਕਰੋ';
+
+  @override
+  String get translatedTo => 'ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ';
 }

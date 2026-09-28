@@ -54,5 +54,9 @@
   "historyClearConfirm": "সব ইতিহাস মুছবেন?",
   "termsLink": "পরিষেবার শর্তাবলী",
   "tagline": "ক্যামেরা যেকোনো টেক্সটে ধরুন, সাথে সাথে বুঝুন।",
-  "noResults": "কোনো ফলাফল নেই"
+  "noResults": "কোনো ফলাফল নেই",
+  "copiedMessage": "ক্লিপবোর্ডে কপি করা হয়েছে",
+  "exportTxtAction": "টেক্সট হিসেবে রপ্তানি করুন",
+  "exportPdfAction": "PDF হিসেবে রপ্তানি করুন",
+  "translatedTo": "অনুবাদ করা হয়েছে"
 }
