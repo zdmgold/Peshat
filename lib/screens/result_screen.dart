@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
@@ -15,7 +16,10 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
+import '../widgets/segmented_control.dart';
 import 'language_picker_screen.dart';
+
+enum _ResultTab { original, translation }
 
 class ResultScreen extends StatefulWidget {
   final String? imagePath;
@@ -36,18 +40,16 @@ class ResultScreen extends StatefulWidget {
   State<ResultScreen> createState() => _ResultScreenState();
 }
 
-class _ResultScreenState extends State<ResultScreen>
-    with SingleTickerProviderStateMixin {
+class _ResultScreenState extends State<ResultScreen> {
   final ScanProvider _provider = ScanProvider();
   late String _targetLanguage;
-  late TabController _tabs;
+  _ResultTab _tab = _ResultTab.original;
   bool _saved = false;
 
   @override
   void initState() {
     super.initState();
     _targetLanguage = widget.initialTargetLanguage;
-    _tabs = TabController(length: 2, vsync: this);
     _provider.addListener(_onStateChanged);
     WidgetsBinding.instance.addPostFrameCallback((_) => _runPipeline());
   }
@@ -56,7 +58,6 @@ class _ResultScreenState extends State<ResultScreen>
   void dispose() {
     _provider.removeListener(_onStateChanged);
     _provider.dispose();
-    _tabs.dispose();
     super.dispose();
   }
 
@@ -73,7 +74,7 @@ class _ResultScreenState extends State<ResultScreen>
         timestamp: DateTime.now(),
         confidence: 1.0,
       ));
-      if (mounted) _tabs.animateTo(1);
+      if (mounted) setState(() => _tab = _ResultTab.translation);
     }
   }
 
@@ -95,13 +96,16 @@ class _ResultScreenState extends State<ResultScreen>
     final selected = await Navigator.push<String>(
       context,
       MaterialPageRoute(
-        builder: (_) => LanguagePickerScreen(current: _targetLanguage),
+        builder: (_) => LanguagePickerScreen(
+          current: _targetLanguage,
+        ),
       ),
     );
     if (selected != null && selected != _targetLanguage) {
       setState(() {
         _targetLanguage = selected;
         _saved = false;
+        _tab = _ResultTab.original;
       });
       _runPipeline();
     }
@@ -109,44 +113,54 @@ class _ResultScreenState extends State<ResultScreen>
 
   String _errorText(AppLocalizations l10n, AppErrorCode code) {
     switch (code) {
-      case AppErrorCode.noTextDetected: return l10n.errorNoTextDetected;
-      case AppErrorCode.imageUnreadable: return l10n.errorImageUnreadable;
-      case AppErrorCode.modelDownloadFailed: return l10n.errorModelDownloadFailed;
-      case AppErrorCode.unsupportedLanguage: return l10n.errorUnsupportedLanguage;
-      case AppErrorCode.ocrFailed: return l10n.errorOcrFailed;
-      case AppErrorCode.translationFailed: return l10n.errorTranslationFailed;
-      case AppErrorCode.timeout: return l10n.errorTimeout;
-      case AppErrorCode.unknown: return l10n.errorUnknown;
+      case AppErrorCode.noTextDetected:
+        return l10n.errorNoTextDetected;
+      case AppErrorCode.imageUnreadable:
+        return l10n.errorImageUnreadable;
+      case AppErrorCode.modelDownloadFailed:
+        return l10n.errorModelDownloadFailed;
+      case AppErrorCode.unsupportedLanguage:
+        return l10n.errorUnsupportedLanguage;
+      case AppErrorCode.ocrFailed:
+        return l10n.errorOcrFailed;
+      case AppErrorCode.translationFailed:
+        return l10n.errorTranslationFailed;
+      case AppErrorCode.timeout:
+        return l10n.errorTimeout;
+      case AppErrorCode.unknown:
+        return l10n.errorUnknown;
     }
   }
 
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textPrimary =
+        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+
     return Scaffold(
       appBar: AppBar(
-        title: Text(l10n.resultTitle),
-        bottom: PreferredSize(
-          preferredSize: const Size.fromHeight(48),
-          child: ValueListenableBuilder<ScanState>(
-            valueListenable: _provider,
-            builder: (context, state, _) {
-              final enabled = state is ScanDone;
-              return TabBar(
-                controller: _tabs,
-                tabs: [
-                  Tab(text: l10n.sourceLabel),
-                  Tab(text: l10n.translationLabel),
-                ],
-                onTap: (i) {
-                  if (!enabled) _tabs.index = 0;
-                },
-              );
-            },
+        title: Text(
+          l10n.resultTitle,
+          style: AppTypography.chrome.copyWith(
+            fontSize: 17,
+            fontWeight: FontWeight.w600,
+            color: textPrimary,
           ),
         ),
+        centerTitle: true,
+        actions: [
+          IconButton(
+            icon: Icon(Icons.translate, size: 22, color: accent),
+            tooltip: l10n.changeLanguageButton,
+            onPressed: _pickLanguage,
+          ),
+        ],
       ),
       body: SafeArea(
+        top: false,
         child: ValueListenableBuilder<ScanState>(
           valueListenable: _provider,
           builder: (context, state, _) {
@@ -165,82 +179,111 @@ class _ResultScreenState extends State<ResultScreen>
             if (state is ScanError) {
               return _ErrorView(
                 message: _errorText(l10n, state.code),
-                detail: state.detail,
+                detail: kDebugMode ? state.detail : null,
                 onRetry: _runPipeline,
               );
             }
             if (state is ScanDone) {
-              return TabBarView(
-                controller: _tabs,
+              return Column(
                 children: [
-                  _PanelView(
-                    text: state.sourceText,
-                    subtitle: languageDisplayName(state.sourceLanguage),
-                    onCopy: () => _copy(state.sourceText, l10n),
-                    onShareText: () => _shareText(state.sourceText),
-                    onExportTxt: () => _export(
-                      state.sourceText,
-                      'peshat_original_${state.sourceLanguage}',
-                      l10n,
-                      asPdf: false,
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(
+                      Spacing.md,
+                      Spacing.sm,
+                      Spacing.md,
+                      Spacing.sm,
                     ),
-                    onExportPdf: () => _export(
-                      state.sourceText,
-                      'peshat_original_${state.sourceLanguage}',
-                      l10n,
-                      asPdf: true,
+                    child: SegmentedControl<_ResultTab>(
+                      value: _tab,
+                      onChanged: (v) => setState(() => _tab = v),
+                      items: [
+                        SegmentItem(
+                          value: _ResultTab.original,
+                          label: l10n.sourceLabel,
+                        ),
+                        SegmentItem(
+                          value: _ResultTab.translation,
+                          label: l10n.translationLabel,
+                        ),
+                      ],
                     ),
-                    actionsLabel: l10n.copyAction,
-                    exportTxtLabel: l10n.exportTxtAction,
-                    exportPdfLabel: l10n.exportPdfAction,
-                    shareLabel: l10n.shareAction,
                   ),
-                  _TranslationTab(
-                    state: state,
-                    onCopy: () => _copy(state.translatedText, l10n),
-                    onShareText: () => _shareText(state.translatedText),
+                  Expanded(
+                    child: IndexedStack(
+                      index: _tab.index,
+                      children: [
+                        _OriginalTab(
+                          sourceText: state.sourceText,
+                          sourceLang: state.sourceLanguage,
+                          isDark: isDark,
+                        ),
+                        _TranslationTab(
+                          translatedText: state.translatedText,
+                          targetLanguage: state.targetLanguage,
+                          onPickLanguage: _pickLanguage,
+                          isDark: isDark,
+                        ),
+                      ],
+                    ),
+                  ),
+                  _ActionBar(
+                    isDark: isDark,
+                    onCopy: () => _copy(
+                      _tab == _ResultTab.original
+                          ? state.sourceText
+                          : state.translatedText,
+                    ),
+                    onShare: () => _share(
+                      _tab == _ResultTab.original
+                          ? state.sourceText
+                          : state.translatedText,
+                    ),
                     onExportTxt: () => _export(
-                      state.translatedText,
-                      'peshat_translation_${state.targetLanguage}',
-                      l10n,
+                      _tab == _ResultTab.original
+                          ? state.sourceText
+                          : state.translatedText,
+                      _tab == _ResultTab.original
+                          ? 'peshat_original'
+                          : 'peshat_translation',
                       asPdf: false,
                     ),
                     onExportPdf: () => _export(
-                      state.translatedText,
-                      'peshat_translation_${state.targetLanguage}',
-                      l10n,
+                      _tab == _ResultTab.original
+                          ? state.sourceText
+                          : state.translatedText,
+                      _tab == _ResultTab.original
+                          ? 'peshat_original'
+                          : 'peshat_translation',
                       asPdf: true,
                     ),
-                    onChangeLanguage: _pickLanguage,
                   ),
                 ],
               );
             }
-            return const Center(child: CircularProgressIndicator());
+            return const SizedBox.shrink();
           },
         ),
       ),
     );
   }
 
-  void _copy(String text, AppLocalizations l10n) {
+  void _copy(String text) {
     Clipboard.setData(ClipboardData(text: text));
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
-        content: Text(l10n.copiedMessage),
-        duration: const Duration(seconds: 1),
+        content: Text(AppLocalizations.of(context)!.copiedMessage),
+        duration: const Duration(seconds: 2),
       ),
     );
   }
 
-  Future<void> _shareText(String text) async {
+  Future<void> _share(String text) async {
     await Share.share(text);
   }
 
   Future<void> _export(
     String text,
-    String baseName,
-    AppLocalizations l10n, {
+    String baseName, {
     required bool asPdf,
   }) async {
     try {
@@ -278,6 +321,267 @@ class _ResultScreenState extends State<ResultScreen>
   }
 }
 
+// ---------------------------------------------------------------------------
+// Original tab
+// ---------------------------------------------------------------------------
+
+class _OriginalTab extends StatelessWidget {
+  final String sourceText;
+  final String sourceLang;
+  final bool isDark;
+
+  const _OriginalTab({
+    required this.sourceText,
+    required this.sourceLang,
+    required this.isDark,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final textPrimary =
+        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    return SingleChildScrollView(
+      padding: const EdgeInsets.fromLTRB(
+        Spacing.md,
+        Spacing.md,
+        Spacing.md,
+        Spacing.md,
+      ),
+      child: SelectableText(
+        sourceText,
+        style: AppTypography.sourceChip.copyWith(
+          fontSize: 14,
+          height: 1.5,
+          color: textPrimary,
+        ),
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Translation tab
+// ---------------------------------------------------------------------------
+
+class _TranslationTab extends StatelessWidget {
+  final String translatedText;
+  final String targetLanguage;
+  final VoidCallback onPickLanguage;
+  final bool isDark;
+
+  const _TranslationTab({
+    required this.translatedText,
+    required this.targetLanguage,
+    required this.onPickLanguage,
+    required this.isDark,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final textPrimary =
+        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    final textTertiary =
+        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final border =
+        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
+    final cardBg =
+        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
+
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+          child: Material(
+            color: cardBg,
+            borderRadius: BorderRadius.circular(12),
+            child: InkWell(
+              borderRadius: BorderRadius.circular(12),
+              onTap: onPickLanguage,
+              child: Container(
+                constraints: const BoxConstraints(minHeight: 56),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: Spacing.md,
+                  vertical: Spacing.sm,
+                ),
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: border, width: 0.5),
+                ),
+                child: Row(
+                  children: [
+                    Icon(Icons.translate, size: 18, color: accent),
+                    const SizedBox(width: Spacing.sm),
+                    Text(
+                      l10n.translatedTo,
+                      style: AppTypography.chrome.copyWith(
+                        fontSize: 13,
+                        color: textSecondary,
+                      ),
+                    ),
+                    const Spacer(),
+                    Flexible(
+                      child: Text(
+                        languageDisplayName(targetLanguage),
+                        textAlign: TextAlign.right,
+                        overflow: TextOverflow.ellipsis,
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: textPrimary,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(width: Spacing.xs),
+                    Icon(Icons.chevron_right,
+                        size: 18, color: textTertiary),
+                  ],
+                ),
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: Spacing.md),
+        Expanded(
+          child: SingleChildScrollView(
+            padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+            child: SelectableText(
+              translatedText,
+              style: AppTypography.body.copyWith(
+                fontSize: 17,
+                height: 1.6,
+                color: textPrimary,
+              ),
+            ),
+          ),
+        ),
+        const SizedBox(height: Spacing.md),
+      ],
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Action bar
+// ---------------------------------------------------------------------------
+
+class _ActionBar extends StatelessWidget {
+  final bool isDark;
+  final VoidCallback onCopy;
+  final VoidCallback onShare;
+  final VoidCallback onExportTxt;
+  final VoidCallback onExportPdf;
+
+  const _ActionBar({
+    required this.isDark,
+    required this.onCopy,
+    required this.onShare,
+    required this.onExportTxt,
+    required this.onExportPdf,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final l10n = AppLocalizations.of(context)!;
+    final border =
+        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
+    final bg = isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
+    return Container(
+      height: 64,
+      decoration: BoxDecoration(
+        color: bg,
+        border: Border(top: BorderSide(color: border, width: 0.5)),
+      ),
+      child: Row(
+        children: [
+          _ActionItem(
+            icon: Icons.copy_outlined,
+            label: l10n.copyAction,
+            onTap: onCopy,
+            isDark: isDark,
+          ),
+          _ActionItem(
+            icon: Icons.ios_share,
+            label: l10n.shareAction,
+            onTap: onShare,
+            isDark: isDark,
+          ),
+          _ActionItem(
+            icon: Icons.description_outlined,
+            label: l10n.exportTxtAction,
+            onTap: onExportTxt,
+            isDark: isDark,
+          ),
+          _ActionItem(
+            icon: Icons.picture_as_pdf_outlined,
+            label: l10n.exportPdfAction,
+            onTap: onExportPdf,
+            isDark: isDark,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _ActionItem extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final VoidCallback onTap;
+  final bool isDark;
+
+  const _ActionItem({
+    required this.icon,
+    required this.label,
+    required this.onTap,
+    required this.isDark,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    return Expanded(
+      child: Semantics(
+        label: label,
+        button: true,
+        child: InkWell(
+          onTap: onTap,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(vertical: Spacing.sm),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Icon(icon, size: 22, color: accent),
+                const SizedBox(height: 4),
+                Text(
+                  label,
+                  maxLines: 1,
+                  overflow: TextOverflow.ellipsis,
+                  textAlign: TextAlign.center,
+                  style: AppTypography.chrome.copyWith(
+                    fontSize: 11,
+                    color: textSecondary,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Status + error views
+// ---------------------------------------------------------------------------
+
 class _StatusView extends StatelessWidget {
   final String message;
   const _StatusView({required this.message});
@@ -285,23 +589,34 @@ class _StatusView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
     return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          CircularProgressIndicator(
-            color: isDark ? AppColors.accentDark : AppColors.accentLight,
-          ),
-          const SizedBox(height: Spacing.lg),
-          Text(
-            message,
-            style: AppTypography.body.copyWith(
-              color: isDark
-                  ? AppColors.textSecondaryDark
-                  : AppColors.textSecondaryLight,
+      child: Padding(
+        padding: const EdgeInsets.all(Spacing.xl),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            SizedBox(
+              width: 24,
+              height: 24,
+              child: CircularProgressIndicator(
+                color: accent,
+                strokeWidth: 2.5,
+              ),
             ),
-          ),
-        ],
+            const SizedBox(height: Spacing.md),
+            Text(
+              message,
+              textAlign: TextAlign.center,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 15,
+                color: textSecondary,
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
@@ -321,28 +636,31 @@ class _ErrorView extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
+    final textPrimary =
+        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final error = isDark ? AppColors.errorDark : AppColors.errorLight;
     return SingleChildScrollView(
       padding: const EdgeInsets.all(Spacing.xl),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.error_outline,
-              size: 56,
-              color: isDark ? AppColors.errorDark : AppColors.errorLight),
-          const SizedBox(height: Spacing.lg),
+          Icon(Icons.error_outline, size: 48, color: error),
+          const SizedBox(height: Spacing.md),
           Text(
             message,
             textAlign: TextAlign.center,
-            style: AppTypography.body.copyWith(
-              color: isDark
-                  ? AppColors.textPrimaryDark
-                  : AppColors.textPrimaryLight,
+            style: AppTypography.chrome.copyWith(
+              fontSize: 16,
+              color: textPrimary,
             ),
           ),
-          const SizedBox(height: Spacing.xl),
-          ElevatedButton(
-            onPressed: onRetry,
-            child: Text(l10n.retryButton),
+          const SizedBox(height: Spacing.lg),
+          SizedBox(
+            height: 48,
+            child: OutlinedButton(
+              onPressed: onRetry,
+              child: Text(l10n.retryButton),
+            ),
           ),
           if (detail != null) ...[
             const SizedBox(height: Spacing.xl),
@@ -358,299 +676,6 @@ class _ErrorView extends StatelessWidget {
             ),
           ],
         ],
-      ),
-    );
-  }
-}
-
-class _PanelView extends StatelessWidget {
-  final String text;
-  final String subtitle;
-  final VoidCallback onCopy;
-  final VoidCallback onShareText;
-  final VoidCallback onExportTxt;
-  final VoidCallback onExportPdf;
-  final String actionsLabel;
-  final String exportTxtLabel;
-  final String exportPdfLabel;
-  final String shareLabel;
-
-  const _PanelView({
-    required this.text,
-    required this.subtitle,
-    required this.onCopy,
-    required this.onShareText,
-    required this.onExportTxt,
-    required this.onExportPdf,
-    required this.actionsLabel,
-    required this.exportTxtLabel,
-    required this.exportPdfLabel,
-    required this.shareLabel,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Expanded(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.all(Spacing.md),
-            child: SelectableText(
-              text,
-              style: AppTypography.sourceChip.copyWith(
-                fontSize: 14,
-                height: 1.6,
-                color: isDark
-                    ? AppColors.textPrimaryDark
-                    : AppColors.textPrimaryLight,
-              ),
-            ),
-          ),
-        ),
-        _ActionBar(
-          subtitle: subtitle,
-          onCopy: onCopy,
-          onShareText: onShareText,
-          onExportTxt: onExportTxt,
-          onExportPdf: onExportPdf,
-          copyLabel: actionsLabel,
-          shareLabel: shareLabel,
-          exportTxtLabel: exportTxtLabel,
-          exportPdfLabel: exportPdfLabel,
-        ),
-      ],
-    );
-  }
-}
-
-class _TranslationTab extends StatelessWidget {
-  final ScanDone state;
-  final VoidCallback onCopy;
-  final VoidCallback onShareText;
-  final VoidCallback onExportTxt;
-  final VoidCallback onExportPdf;
-  final VoidCallback onChangeLanguage;
-
-  const _TranslationTab({
-    required this.state,
-    required this.onCopy,
-    required this.onShareText,
-    required this.onExportTxt,
-    required this.onExportPdf,
-    required this.onChangeLanguage,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final l10n = AppLocalizations.of(context)!;
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.stretch,
-      children: [
-        Padding(
-          padding: const EdgeInsets.fromLTRB(
-              Spacing.md, Spacing.md, Spacing.md, Spacing.sm),
-          child: InkWell(
-            borderRadius: BorderRadius.circular(12),
-            onTap: onChangeLanguage,
-            child: Container(
-              padding: const EdgeInsets.symmetric(
-                  horizontal: Spacing.md, vertical: Spacing.sm),
-              decoration: BoxDecoration(
-                color: isDark
-                    ? AppColors.bgSecondaryDark
-                    : AppColors.bgSecondaryLight,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(
-                  color: isDark
-                      ? AppColors.borderSubtleDark
-                      : AppColors.borderSubtleLight,
-                  width: 0.5,
-                ),
-              ),
-              child: Row(
-                children: [
-                  Icon(Icons.translate,
-                      size: 18,
-                      color: isDark
-                          ? AppColors.accentDark
-                          : AppColors.accentLight),
-                  const SizedBox(width: Spacing.sm),
-                  Text(
-                    l10n.translatedTo,
-                    style: AppTypography.chrome.copyWith(
-                      fontSize: 13,
-                      color: isDark
-                          ? AppColors.textSecondaryDark
-                          : AppColors.textSecondaryLight,
-                    ),
-                  ),
-                  const SizedBox(width: Spacing.xs),
-                  Expanded(
-                    child: Text(
-                      languageDisplayName(state.targetLanguage),
-                      style: AppTypography.chrome.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w600,
-                        color: isDark
-                            ? AppColors.textPrimaryDark
-                            : AppColors.textPrimaryLight,
-                      ),
-                      overflow: TextOverflow.ellipsis,
-                    ),
-                  ),
-                  Icon(Icons.chevron_right,
-                      size: 20,
-                      color: isDark
-                          ? AppColors.textTertiaryDark
-                          : AppColors.textTertiaryLight),
-                ],
-              ),
-            ),
-          ),
-        ),
-        Expanded(
-          child: SingleChildScrollView(
-            padding: const EdgeInsets.fromLTRB(
-                Spacing.md, Spacing.sm, Spacing.md, Spacing.md),
-            child: SelectableText(
-              state.translatedText,
-              style: AppTypography.body.copyWith(
-                fontSize: 17,
-                height: 1.6,
-                color: isDark
-                    ? AppColors.textPrimaryDark
-                    : AppColors.textPrimaryLight,
-              ),
-            ),
-          ),
-        ),
-        _ActionBar(
-          subtitle: languageDisplayName(state.targetLanguage),
-          onCopy: onCopy,
-          onShareText: onShareText,
-          onExportTxt: onExportTxt,
-          onExportPdf: onExportPdf,
-          copyLabel: l10n.copyAction,
-          shareLabel: l10n.shareAction,
-          exportTxtLabel: l10n.exportTxtAction,
-          exportPdfLabel: l10n.exportPdfAction,
-        ),
-      ],
-    );
-  }
-}
-
-class _ActionBar extends StatelessWidget {
-  final String subtitle;
-  final VoidCallback onCopy;
-  final VoidCallback onShareText;
-  final VoidCallback onExportTxt;
-  final VoidCallback onExportPdf;
-  final String copyLabel;
-  final String shareLabel;
-  final String exportTxtLabel;
-  final String exportPdfLabel;
-
-  const _ActionBar({
-    required this.subtitle,
-    required this.onCopy,
-    required this.onShareText,
-    required this.onExportTxt,
-    required this.onExportPdf,
-    required this.copyLabel,
-    required this.shareLabel,
-    required this.exportTxtLabel,
-    required this.exportPdfLabel,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Container(
-      padding: const EdgeInsets.symmetric(
-          horizontal: Spacing.sm, vertical: Spacing.sm),
-      decoration: BoxDecoration(
-        color: isDark
-            ? AppColors.bgSecondaryDark
-            : AppColors.bgSecondaryLight,
-        border: Border(
-          top: BorderSide(
-            color: isDark
-                ? AppColors.borderSubtleDark
-                : AppColors.borderSubtleLight,
-            width: 0.5,
-          ),
-        ),
-      ),
-      child: Row(
-        children: [
-          _ActionButton(icon: Icons.copy, label: copyLabel, onTap: onCopy),
-          _ActionButton(
-              icon: Icons.ios_share, label: shareLabel, onTap: onShareText),
-          _ActionButton(
-              icon: Icons.description_outlined,
-              label: exportTxtLabel,
-              onTap: onExportTxt),
-          _ActionButton(
-              icon: Icons.picture_as_pdf_outlined,
-              label: exportPdfLabel,
-              onTap: onExportPdf),
-        ],
-      ),
-    );
-  }
-}
-
-class _ActionButton extends StatelessWidget {
-  final IconData icon;
-  final String label;
-  final VoidCallback onTap;
-  const _ActionButton({
-    required this.icon,
-    required this.label,
-    required this.onTap,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    return Expanded(
-      child: Semantics(
-        label: label,
-        button: true,
-        child: InkWell(
-          borderRadius: BorderRadius.circular(12),
-          onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: Spacing.sm),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: [
-                Icon(icon,
-                    size: 20,
-                    color: isDark
-                        ? AppColors.accentDark
-                        : AppColors.accentLight),
-                const SizedBox(height: 4),
-                Text(
-                  label,
-                  maxLines: 1,
-                  overflow: TextOverflow.ellipsis,
-                  textAlign: TextAlign.center,
-                  style: AppTypography.chrome.copyWith(
-                    fontSize: 10,
-                    color: isDark
-                        ? AppColors.textSecondaryDark
-                        : AppColors.textSecondaryLight,
-                  ),
-                ),
-              ],
-            ),
-          ),
-        ),
       ),
     );
   }
