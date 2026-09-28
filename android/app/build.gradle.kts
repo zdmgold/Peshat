@@ -57,12 +57,10 @@ android {
             } else {
                 signingConfigs.getByName("debug")
             }
-            isMinifyEnabled = true
-            isShrinkResources = true
-            proguardFiles(
-                getDefaultProguardFile("proguard-android-optimize.txt"),
-                "proguard-rules.pro"
-            )
+            // Temporarily disabled to diagnose launch crash.
+            // Re-enable after the app runs on-device.
+            isMinifyEnabled = false
+            isShrinkResources = false
         }
     }
 }

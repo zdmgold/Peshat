@@ -76,6 +76,9 @@ jobs:
       - name: Build AAB
         run: flutter build appbundle --release --obfuscate --split-debug-info=symbols
 
+      - name: Build APK (arm64 only, for on-device testing)
+        run: flutter build apk --release --target-platform android-arm64 --obfuscate --split-debug-info=symbols-arm64
+
       - name: Build APK
         run: flutter build apk --release --obfuscate --split-debug-info=symbols
 
@@ -97,6 +100,13 @@ jobs:
           name: peshat-android-apk
           path: build/app/outputs/flutter-apk/*.apk
           if-no-files-found: error
+
+      - name: Upload APK (arm64)
+        uses: actions/upload-artifact@v4
+        with:
+          name: peshat-android-apk-arm64
+          path: build/app/outputs/flutter-apk/*arm64*.apk
+          if-no-files-found: warn
 
       - name: Upload symbols
         uses: actions/upload-artifact@v4
