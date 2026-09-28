@@ -96,4 +96,67 @@ class AppLocalizationsVi extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'Không tìm thấy văn bản trong ảnh';
+
+  @override
+  String get errorImageUnreadable => 'Không thể đọc ảnh';
+
+  @override
+  String get errorModelDownloadFailed => 'Không thể tải xuống mô hình dịch';
+
+  @override
+  String get errorUnsupportedLanguage => 'Ngôn ngữ này chưa được hỗ trợ';
+
+  @override
+  String get errorOcrFailed => 'Nhận dạng văn bản thất bại';
+
+  @override
+  String get errorTranslationFailed => 'Dịch thất bại';
+
+  @override
+  String get errorTimeout => 'Thao tác mất quá nhiều thời gian';
+
+  @override
+  String get errorUnknown => 'Đã xảy ra lỗi';
+
+  @override
+  String get statusRecognizing => 'Đang đọc văn bản…';
+
+  @override
+  String get statusPreparingModel => 'Đang chuẩn bị dịch…';
+
+  @override
+  String get statusTranslating => 'Đang dịch…';
+
+  @override
+  String get sourceLabel => 'Bản gốc';
+
+  @override
+  String get translationLabel => 'Bản dịch';
+
+  @override
+  String get retryButton => 'Thử lại';
+
+  @override
+  String get changeLanguageButton => 'Đổi ngôn ngữ';
+
+  @override
+  String get historyLabel => 'Lịch sử';
+
+  @override
+  String get defaultLanguageLabel => 'Ngôn ngữ dịch mặc định';
+
+  @override
+  String get aboutLabel => 'Giới thiệu';
+
+  @override
+  String get licensesLabel => 'Giấy phép mã nguồn mở';
+
+  @override
+  String get shareAppLabel => 'Chia sẻ ứng dụng này';
+
+  @override
+  String get versionLabel => 'Phiên bản';
 }

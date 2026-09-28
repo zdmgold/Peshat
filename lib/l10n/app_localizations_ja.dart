@@ -96,4 +96,67 @@ class AppLocalizationsJa extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName、$nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => '画像にテキストが見つかりません';
+
+  @override
+  String get errorImageUnreadable => '画像を読み取れませんでした';
+
+  @override
+  String get errorModelDownloadFailed => '翻訳モデルをダウンロードできませんでした';
+
+  @override
+  String get errorUnsupportedLanguage => 'この言語はまだ対応していません';
+
+  @override
+  String get errorOcrFailed => 'テキスト認識に失敗しました';
+
+  @override
+  String get errorTranslationFailed => '翻訳に失敗しました';
+
+  @override
+  String get errorTimeout => '操作に時間がかかりすぎました';
+
+  @override
+  String get errorUnknown => '問題が発生しました';
+
+  @override
+  String get statusRecognizing => 'テキストを読み取り中…';
+
+  @override
+  String get statusPreparingModel => '翻訳を準備中…';
+
+  @override
+  String get statusTranslating => '翻訳中…';
+
+  @override
+  String get sourceLabel => '原文';
+
+  @override
+  String get translationLabel => '翻訳';
+
+  @override
+  String get retryButton => '再試行';
+
+  @override
+  String get changeLanguageButton => '言語を変更';
+
+  @override
+  String get historyLabel => '履歴';
+
+  @override
+  String get defaultLanguageLabel => 'デフォルトの翻訳先言語';
+
+  @override
+  String get aboutLabel => 'このアプリについて';
+
+  @override
+  String get licensesLabel => 'オープンソースライセンス';
+
+  @override
+  String get shareAppLabel => 'このアプリを共有';
+
+  @override
+  String get versionLabel => 'バージョン';
 }

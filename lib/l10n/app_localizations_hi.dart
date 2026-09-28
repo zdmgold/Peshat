@@ -96,4 +96,67 @@ class AppLocalizationsHi extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'छवि में कोई टेक्स्ट नहीं मिला';
+
+  @override
+  String get errorImageUnreadable => 'छवि पढ़ी नहीं जा सकी';
+
+  @override
+  String get errorModelDownloadFailed => 'अनुवाद मॉडल डाउनलोड नहीं हो सका';
+
+  @override
+  String get errorUnsupportedLanguage => 'यह भाषा अभी समर्थित नहीं है';
+
+  @override
+  String get errorOcrFailed => 'टेक्स्ट पहचान विफल';
+
+  @override
+  String get errorTranslationFailed => 'अनुवाद विफल';
+
+  @override
+  String get errorTimeout => 'कार्रवाई में बहुत समय लगा';
+
+  @override
+  String get errorUnknown => 'कुछ गलत हो गया';
+
+  @override
+  String get statusRecognizing => 'टेक्स्ट पढ़ा जा रहा है…';
+
+  @override
+  String get statusPreparingModel => 'अनुवाद तैयार किया जा रहा है…';
+
+  @override
+  String get statusTranslating => 'अनुवाद हो रहा है…';
+
+  @override
+  String get sourceLabel => 'मूल';
+
+  @override
+  String get translationLabel => 'अनुवाद';
+
+  @override
+  String get retryButton => 'पुनः प्रयास करें';
+
+  @override
+  String get changeLanguageButton => 'भाषा बदलें';
+
+  @override
+  String get historyLabel => 'इतिहास';
+
+  @override
+  String get defaultLanguageLabel => 'डिफ़ॉल्ट अनुवाद भाषा';
+
+  @override
+  String get aboutLabel => 'परिचय';
+
+  @override
+  String get licensesLabel => 'ओपन-सोर्स लाइसेंस';
+
+  @override
+  String get shareAppLabel => 'यह ऐप साझा करें';
+
+  @override
+  String get versionLabel => 'संस्करण';
 }

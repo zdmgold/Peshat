@@ -96,4 +96,67 @@ class AppLocalizationsRu extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'В изображении не найден текст';
+
+  @override
+  String get errorImageUnreadable => 'Не удалось прочитать изображение';
+
+  @override
+  String get errorModelDownloadFailed => 'Не удалось скачать модель перевода';
+
+  @override
+  String get errorUnsupportedLanguage => 'Этот язык пока не поддерживается';
+
+  @override
+  String get errorOcrFailed => 'Распознавание текста не удалось';
+
+  @override
+  String get errorTranslationFailed => 'Перевод не удался';
+
+  @override
+  String get errorTimeout => 'Операция заняла слишком много времени';
+
+  @override
+  String get errorUnknown => 'Что-то пошло не так';
+
+  @override
+  String get statusRecognizing => 'Чтение текста…';
+
+  @override
+  String get statusPreparingModel => 'Подготовка перевода…';
+
+  @override
+  String get statusTranslating => 'Перевод…';
+
+  @override
+  String get sourceLabel => 'Оригинал';
+
+  @override
+  String get translationLabel => 'Перевод';
+
+  @override
+  String get retryButton => 'Повторить';
+
+  @override
+  String get changeLanguageButton => 'Сменить язык';
+
+  @override
+  String get historyLabel => 'История';
+
+  @override
+  String get defaultLanguageLabel => 'Язык перевода по умолчанию';
+
+  @override
+  String get aboutLabel => 'О приложении';
+
+  @override
+  String get licensesLabel => 'Лицензии открытого исходного кода';
+
+  @override
+  String get shareAppLabel => 'Поделиться приложением';
+
+  @override
+  String get versionLabel => 'Версия';
 }

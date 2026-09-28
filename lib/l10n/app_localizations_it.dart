@@ -96,4 +96,67 @@ class AppLocalizationsIt extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'Nessun testo trovato nell’immagine';
+
+  @override
+  String get errorImageUnreadable => 'Impossibile leggere l’immagine';
+
+  @override
+  String get errorModelDownloadFailed => 'Impossibile scaricare il modello di traduzione';
+
+  @override
+  String get errorUnsupportedLanguage => 'Questa lingua non è ancora supportata';
+
+  @override
+  String get errorOcrFailed => 'Riconoscimento del testo non riuscito';
+
+  @override
+  String get errorTranslationFailed => 'Traduzione non riuscita';
+
+  @override
+  String get errorTimeout => 'L’operazione ha impiegato troppo tempo';
+
+  @override
+  String get errorUnknown => 'Qualcosa è andato storto';
+
+  @override
+  String get statusRecognizing => 'Lettura del testo…';
+
+  @override
+  String get statusPreparingModel => 'Preparazione della traduzione…';
+
+  @override
+  String get statusTranslating => 'Traduzione…';
+
+  @override
+  String get sourceLabel => 'Originale';
+
+  @override
+  String get translationLabel => 'Traduzione';
+
+  @override
+  String get retryButton => 'Riprova';
+
+  @override
+  String get changeLanguageButton => 'Cambia lingua';
+
+  @override
+  String get historyLabel => 'Cronologia';
+
+  @override
+  String get defaultLanguageLabel => 'Lingua di traduzione predefinita';
+
+  @override
+  String get aboutLabel => 'Informazioni';
+
+  @override
+  String get licensesLabel => 'Licenze open source';
+
+  @override
+  String get shareAppLabel => 'Condividi questa app';
+
+  @override
+  String get versionLabel => 'Versione';
 }

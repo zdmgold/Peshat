@@ -38,5 +38,26 @@
         "type": "String"
       }
     }
-  }
+  },
+  "errorNoTextDetected": "No text found in the image",
+  "errorImageUnreadable": "The image could not be read",
+  "errorModelDownloadFailed": "Translation model could not be downloaded",
+  "errorUnsupportedLanguage": "This language is not supported yet",
+  "errorOcrFailed": "Text recognition failed",
+  "errorTranslationFailed": "Translation failed",
+  "errorTimeout": "The operation took too long",
+  "errorUnknown": "Something went wrong",
+  "statusRecognizing": "Reading text…",
+  "statusPreparingModel": "Preparing translation…",
+  "statusTranslating": "Translating…",
+  "sourceLabel": "Original",
+  "translationLabel": "Translation",
+  "retryButton": "Try again",
+  "changeLanguageButton": "Change language",
+  "historyLabel": "History",
+  "defaultLanguageLabel": "Default translation language",
+  "aboutLabel": "About",
+  "licensesLabel": "Open-source licenses",
+  "shareAppLabel": "Share this app",
+  "versionLabel": "Version"
 }

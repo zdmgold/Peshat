@@ -96,4 +96,67 @@ class AppLocalizationsMy extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'ပုံတွင် စာသားမတွေ့ပါ';
+
+  @override
+  String get errorImageUnreadable => 'ပုံကို ဖတ်၍မရပါ';
+
+  @override
+  String get errorModelDownloadFailed => 'ဘာသာပြန်မော်ဒယ်ကို ဒေါင်းလုဒ်လုပ်၍မရပါ';
+
+  @override
+  String get errorUnsupportedLanguage => 'ဤဘာသာစကားကို မထောက်ပံ့သေးပါ';
+
+  @override
+  String get errorOcrFailed => 'စာသားမှတ်မိမှု မအောင်မြင်ပါ';
+
+  @override
+  String get errorTranslationFailed => 'ဘာသာပြန်မှု မအောင်မြင်ပါ';
+
+  @override
+  String get errorTimeout => 'လုပ်ဆောင်မှု အချိန်ကြာလွန်းသည်';
+
+  @override
+  String get errorUnknown => 'တစ်ခုခု မှားသွားသည်';
+
+  @override
+  String get statusRecognizing => 'စာသားဖတ်နေသည်…';
+
+  @override
+  String get statusPreparingModel => 'ဘာသာပြန်ရန် ပြင်ဆင်နေသည်…';
+
+  @override
+  String get statusTranslating => 'ဘာသာပြန်နေသည်…';
+
+  @override
+  String get sourceLabel => 'မူရင်း';
+
+  @override
+  String get translationLabel => 'ဘာသာပြန်';
+
+  @override
+  String get retryButton => 'ထပ်စမ်းပါ';
+
+  @override
+  String get changeLanguageButton => 'ဘာသာစကားပြောင်းရန်';
+
+  @override
+  String get historyLabel => 'မှတ်တမ်း';
+
+  @override
+  String get defaultLanguageLabel => 'မူရင်း ဘာသာပြန်ဘာသာစကား';
+
+  @override
+  String get aboutLabel => 'အကြောင်း';
+
+  @override
+  String get licensesLabel => 'အိုပင်ဆော့ လိုင်စင်များ';
+
+  @override
+  String get shareAppLabel => 'ဤအက်ပ်ကို မျှဝေပါ';
+
+  @override
+  String get versionLabel => 'ဗားရှင်း';
 }

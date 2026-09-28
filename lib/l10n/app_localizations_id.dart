@@ -96,4 +96,67 @@ class AppLocalizationsId extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'Tidak ada teks dalam gambar';
+
+  @override
+  String get errorImageUnreadable => 'Gambar tidak dapat dibaca';
+
+  @override
+  String get errorModelDownloadFailed => 'Model terjemahan tidak dapat diunduh';
+
+  @override
+  String get errorUnsupportedLanguage => 'Bahasa ini belum didukung';
+
+  @override
+  String get errorOcrFailed => 'Pengenalan teks gagal';
+
+  @override
+  String get errorTranslationFailed => 'Terjemahan gagal';
+
+  @override
+  String get errorTimeout => 'Operasi memakan waktu terlalu lama';
+
+  @override
+  String get errorUnknown => 'Terjadi kesalahan';
+
+  @override
+  String get statusRecognizing => 'Membaca teks…';
+
+  @override
+  String get statusPreparingModel => 'Menyiapkan terjemahan…';
+
+  @override
+  String get statusTranslating => 'Menerjemahkan…';
+
+  @override
+  String get sourceLabel => 'Asli';
+
+  @override
+  String get translationLabel => 'Terjemahan';
+
+  @override
+  String get retryButton => 'Coba lagi';
+
+  @override
+  String get changeLanguageButton => 'Ubah bahasa';
+
+  @override
+  String get historyLabel => 'Riwayat';
+
+  @override
+  String get defaultLanguageLabel => 'Bahasa terjemahan bawaan';
+
+  @override
+  String get aboutLabel => 'Tentang';
+
+  @override
+  String get licensesLabel => 'Lisensi sumber terbuka';
+
+  @override
+  String get shareAppLabel => 'Bagikan aplikasi ini';
+
+  @override
+  String get versionLabel => 'Versi';
 }

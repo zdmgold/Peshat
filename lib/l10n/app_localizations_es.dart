@@ -96,4 +96,67 @@ class AppLocalizationsEs extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'No se encontró texto en la imagen';
+
+  @override
+  String get errorImageUnreadable => 'No se pudo leer la imagen';
+
+  @override
+  String get errorModelDownloadFailed => 'No se pudo descargar el modelo de traducción';
+
+  @override
+  String get errorUnsupportedLanguage => 'Este idioma aún no es compatible';
+
+  @override
+  String get errorOcrFailed => 'Falló el reconocimiento de texto';
+
+  @override
+  String get errorTranslationFailed => 'Falló la traducción';
+
+  @override
+  String get errorTimeout => 'La operación tardó demasiado';
+
+  @override
+  String get errorUnknown => 'Algo salió mal';
+
+  @override
+  String get statusRecognizing => 'Leyendo texto…';
+
+  @override
+  String get statusPreparingModel => 'Preparando traducción…';
+
+  @override
+  String get statusTranslating => 'Traduciendo…';
+
+  @override
+  String get sourceLabel => 'Original';
+
+  @override
+  String get translationLabel => 'Traducción';
+
+  @override
+  String get retryButton => 'Reintentar';
+
+  @override
+  String get changeLanguageButton => 'Cambiar idioma';
+
+  @override
+  String get historyLabel => 'Historial';
+
+  @override
+  String get defaultLanguageLabel => 'Idioma de traducción predeterminado';
+
+  @override
+  String get aboutLabel => 'Acerca de';
+
+  @override
+  String get licensesLabel => 'Licencias de código abierto';
+
+  @override
+  String get shareAppLabel => 'Compartir esta aplicación';
+
+  @override
+  String get versionLabel => 'Versión';
 }

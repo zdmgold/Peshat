@@ -96,4 +96,67 @@ class AppLocalizationsZh extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName、$nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => '图像中未找到文本';
+
+  @override
+  String get errorImageUnreadable => '无法读取图像';
+
+  @override
+  String get errorModelDownloadFailed => '无法下载翻译模型';
+
+  @override
+  String get errorUnsupportedLanguage => '暂不支持此语言';
+
+  @override
+  String get errorOcrFailed => '文字识别失败';
+
+  @override
+  String get errorTranslationFailed => '翻译失败';
+
+  @override
+  String get errorTimeout => '操作耗时过长';
+
+  @override
+  String get errorUnknown => '出现错误';
+
+  @override
+  String get statusRecognizing => '正在读取文字…';
+
+  @override
+  String get statusPreparingModel => '正在准备翻译…';
+
+  @override
+  String get statusTranslating => '正在翻译…';
+
+  @override
+  String get sourceLabel => '原文';
+
+  @override
+  String get translationLabel => '译文';
+
+  @override
+  String get retryButton => '重试';
+
+  @override
+  String get changeLanguageButton => '切换语言';
+
+  @override
+  String get historyLabel => '历史记录';
+
+  @override
+  String get defaultLanguageLabel => '默认翻译语言';
+
+  @override
+  String get aboutLabel => '关于';
+
+  @override
+  String get licensesLabel => '开源许可';
+
+  @override
+  String get shareAppLabel => '分享此应用';
+
+  @override
+  String get versionLabel => '版本';
 }

@@ -96,4 +96,67 @@ class AppLocalizationsHe extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'לא נמצא טקסט בתמונה';
+
+  @override
+  String get errorImageUnreadable => 'לא ניתן לקרוא את התמונה';
+
+  @override
+  String get errorModelDownloadFailed => 'לא ניתן להוריד את מודל התרגום';
+
+  @override
+  String get errorUnsupportedLanguage => 'שפה זו עדיין לא נתמכת';
+
+  @override
+  String get errorOcrFailed => 'זיהוי הטקסט נכשל';
+
+  @override
+  String get errorTranslationFailed => 'התרגום נכשל';
+
+  @override
+  String get errorTimeout => 'הפעולה ארכה זמן רב מדי';
+
+  @override
+  String get errorUnknown => 'משהו השתבש';
+
+  @override
+  String get statusRecognizing => 'קורא טקסט…';
+
+  @override
+  String get statusPreparingModel => 'מכין תרגום…';
+
+  @override
+  String get statusTranslating => 'מתרגם…';
+
+  @override
+  String get sourceLabel => 'מקור';
+
+  @override
+  String get translationLabel => 'תרגום';
+
+  @override
+  String get retryButton => 'נסה שוב';
+
+  @override
+  String get changeLanguageButton => 'שנה שפה';
+
+  @override
+  String get historyLabel => 'היסטוריה';
+
+  @override
+  String get defaultLanguageLabel => 'שפת תרגום ברירת מחדל';
+
+  @override
+  String get aboutLabel => 'אודות';
+
+  @override
+  String get licensesLabel => 'רישיונות קוד פתוח';
+
+  @override
+  String get shareAppLabel => 'שתף אפליקציה זו';
+
+  @override
+  String get versionLabel => 'גרסה';
 }

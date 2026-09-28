@@ -96,4 +96,67 @@ class AppLocalizationsUr extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName، $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'تصویر میں کوئی متن نہیں ملا';
+
+  @override
+  String get errorImageUnreadable => 'تصویر پڑھی نہیں جا سکی';
+
+  @override
+  String get errorModelDownloadFailed => 'ترجمہ ماڈل ڈاؤن لوڈ نہیں ہو سکا';
+
+  @override
+  String get errorUnsupportedLanguage => 'یہ زبان ابھی معاون نہیں';
+
+  @override
+  String get errorOcrFailed => 'متن کی شناخت ناکام';
+
+  @override
+  String get errorTranslationFailed => 'ترجمہ ناکام';
+
+  @override
+  String get errorTimeout => 'عمل میں بہت وقت لگا';
+
+  @override
+  String get errorUnknown => 'کچھ غلط ہو گیا';
+
+  @override
+  String get statusRecognizing => 'متن پڑھا جا رہا ہے…';
+
+  @override
+  String get statusPreparingModel => 'ترجمہ تیار کیا جا رہا ہے…';
+
+  @override
+  String get statusTranslating => 'ترجمہ ہو رہا ہے…';
+
+  @override
+  String get sourceLabel => 'اصل';
+
+  @override
+  String get translationLabel => 'ترجمہ';
+
+  @override
+  String get retryButton => 'دوبارہ کوشش کریں';
+
+  @override
+  String get changeLanguageButton => 'زبان تبدیل کریں';
+
+  @override
+  String get historyLabel => 'تاریخ';
+
+  @override
+  String get defaultLanguageLabel => 'پہلے سے طے شدہ ترجمہ زبان';
+
+  @override
+  String get aboutLabel => 'کے بارے میں';
+
+  @override
+  String get licensesLabel => 'اوپن سورس لائسنس';
+
+  @override
+  String get shareAppLabel => 'یہ ایپ شیئر کریں';
+
+  @override
+  String get versionLabel => 'ورژن';
 }

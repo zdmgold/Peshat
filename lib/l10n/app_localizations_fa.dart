@@ -96,4 +96,67 @@ class AppLocalizationsFa extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName، $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'متنی در تصویر یافت نشد';
+
+  @override
+  String get errorImageUnreadable => 'تصویر خوانده نشد';
+
+  @override
+  String get errorModelDownloadFailed => 'مدل ترجمه دانلود نشد';
+
+  @override
+  String get errorUnsupportedLanguage => 'این زبان هنوز پشتیبانی نمی‌شود';
+
+  @override
+  String get errorOcrFailed => 'تشخیص متن ناموفق بود';
+
+  @override
+  String get errorTranslationFailed => 'ترجمه ناموفق بود';
+
+  @override
+  String get errorTimeout => 'عملیات بیش از حد طول کشید';
+
+  @override
+  String get errorUnknown => 'خطایی رخ داد';
+
+  @override
+  String get statusRecognizing => 'در حال خواندن متن…';
+
+  @override
+  String get statusPreparingModel => 'در حال آماده‌سازی ترجمه…';
+
+  @override
+  String get statusTranslating => 'در حال ترجمه…';
+
+  @override
+  String get sourceLabel => 'اصل';
+
+  @override
+  String get translationLabel => 'ترجمه';
+
+  @override
+  String get retryButton => 'دوباره تلاش کنید';
+
+  @override
+  String get changeLanguageButton => 'تغییر زبان';
+
+  @override
+  String get historyLabel => 'تاریخچه';
+
+  @override
+  String get defaultLanguageLabel => 'زبان ترجمه پیش‌فرض';
+
+  @override
+  String get aboutLabel => 'درباره';
+
+  @override
+  String get licensesLabel => 'مجوزهای متن‌باز';
+
+  @override
+  String get shareAppLabel => 'اشتراک‌گذاری این برنامه';
+
+  @override
+  String get versionLabel => 'نسخه';
 }

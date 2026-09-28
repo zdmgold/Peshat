@@ -96,4 +96,67 @@ class AppLocalizationsKo extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => '이미지에서 텍스트를 찾을 수 없습니다';
+
+  @override
+  String get errorImageUnreadable => '이미지를 읽을 수 없습니다';
+
+  @override
+  String get errorModelDownloadFailed => '번역 모델을 다운로드할 수 없습니다';
+
+  @override
+  String get errorUnsupportedLanguage => '이 언어는 아직 지원되지 않습니다';
+
+  @override
+  String get errorOcrFailed => '텍스트 인식 실패';
+
+  @override
+  String get errorTranslationFailed => '번역 실패';
+
+  @override
+  String get errorTimeout => '작업이 너무 오래 걸렸습니다';
+
+  @override
+  String get errorUnknown => '문제가 발생했습니다';
+
+  @override
+  String get statusRecognizing => '텍스트 읽는 중…';
+
+  @override
+  String get statusPreparingModel => '번역 준비 중…';
+
+  @override
+  String get statusTranslating => '번역 중…';
+
+  @override
+  String get sourceLabel => '원문';
+
+  @override
+  String get translationLabel => '번역';
+
+  @override
+  String get retryButton => '다시 시도';
+
+  @override
+  String get changeLanguageButton => '언어 변경';
+
+  @override
+  String get historyLabel => '기록';
+
+  @override
+  String get defaultLanguageLabel => '기본 번역 언어';
+
+  @override
+  String get aboutLabel => '정보';
+
+  @override
+  String get licensesLabel => '오픈 소스 라이선스';
+
+  @override
+  String get shareAppLabel => '이 앱 공유';
+
+  @override
+  String get versionLabel => '버전';
 }

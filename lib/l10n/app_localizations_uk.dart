@@ -96,4 +96,67 @@ class AppLocalizationsUk extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'У зображенні не знайдено тексту';
+
+  @override
+  String get errorImageUnreadable => 'Не вдалося прочитати зображення';
+
+  @override
+  String get errorModelDownloadFailed => 'Не вдалося завантажити модель перекладу';
+
+  @override
+  String get errorUnsupportedLanguage => 'Ця мова поки не підтримується';
+
+  @override
+  String get errorOcrFailed => 'Розпізнавання тексту не вдалося';
+
+  @override
+  String get errorTranslationFailed => 'Переклад не вдався';
+
+  @override
+  String get errorTimeout => 'Операція тривала занадто довго';
+
+  @override
+  String get errorUnknown => 'Щось пішло не так';
+
+  @override
+  String get statusRecognizing => 'Читання тексту…';
+
+  @override
+  String get statusPreparingModel => 'Підготовка перекладу…';
+
+  @override
+  String get statusTranslating => 'Переклад…';
+
+  @override
+  String get sourceLabel => 'Оригінал';
+
+  @override
+  String get translationLabel => 'Переклад';
+
+  @override
+  String get retryButton => 'Спробувати ще раз';
+
+  @override
+  String get changeLanguageButton => 'Змінити мову';
+
+  @override
+  String get historyLabel => 'Історія';
+
+  @override
+  String get defaultLanguageLabel => 'Мова перекладу за замовчуванням';
+
+  @override
+  String get aboutLabel => 'Про застосунок';
+
+  @override
+  String get licensesLabel => 'Ліцензії з відкритим кодом';
+
+  @override
+  String get shareAppLabel => 'Поділитися застосунком';
+
+  @override
+  String get versionLabel => 'Версія';
 }

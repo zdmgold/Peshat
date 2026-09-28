@@ -1,0 +1,162 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Sinhala Sinhalese (`si`).
+class AppLocalizationsSi extends AppLocalizations {
+  AppLocalizationsSi([String locale = 'si']) : super(locale);
+
+  @override
+  String get appName => 'Peshat';
+
+  @override
+  String get scanButtonLabel => 'ලේඛනය ස්කෑන් කරන්න';
+
+  @override
+  String get resultTitle => 'ප්‍රතිඵලය';
+
+  @override
+  String get copyAction => 'පිටපත් කරන්න';
+
+  @override
+  String get shareAction => 'බෙදාගන්න';
+
+  @override
+  String get saveAction => 'සුරකින්න';
+
+  @override
+  String get readyToScan => 'ස්කෑන් කිරීමට සූදානම්';
+
+  @override
+  String get selectLanguageTitle => 'භාෂාව තෝරන්න';
+
+  @override
+  String get searchLanguagesHint => 'භාෂා සොයන්න...';
+
+  @override
+  String get settingsTitle => 'සැකසුම්';
+
+  @override
+  String get adStatusLabel => 'දැන්වීම් තත්ත්වය:';
+
+  @override
+  String get adsShownStatus => 'දැන්වීම් පෙන්වයි';
+
+  @override
+  String get themeLabel => 'තේමාව';
+
+  @override
+  String get themeLight => 'ආලෝකමත්';
+
+  @override
+  String get themeSystem => 'පද්ධතිය';
+
+  @override
+  String get themeDark => 'අඳුරු';
+
+  @override
+  String get removeAdsButton => 'දැන්වීම් ඉවත් කරන්න';
+
+  @override
+  String get restorePurchaseButton => 'මිලදී ගැනීම ප්‍රතිස්ථාපනය කරන්න';
+
+  @override
+  String get privacyPolicyLink => 'පෞද්ගලිකත්ව ප්‍රතිපත්තිය';
+
+  @override
+  String get supportLink => 'සහාය';
+
+  @override
+  String get adsRemovedBadge => 'දැන්වීම් ඉවත් කරන ලදී';
+
+  @override
+  String get semanticsAppIcon => 'Peshat යෙදුම් නිරූපකය';
+
+  @override
+  String get semanticsScanButton => 'ලේඛනය ස්කෑන් කරන්න බොත්තම';
+
+  @override
+  String get semanticsSearchField => 'භාෂා සොයන්න';
+
+  @override
+  String get semanticsRemoveAds => 'දැන්වීම් ඉවත් කරන්න';
+
+  @override
+  String get cameraUsageDescription => 'Peshat පෙළ ස්කෑන් කිරීමට සහ පරිවර්තනය කිරීමට කැමරාව භාවිතා කරයි. රූප උපාංගය තුළ සැකසෙන අතර අප්ලෝඩ් නොකෙරේ.';
+
+  @override
+  String get trackingUsageDescription => 'ඔබ ප්‍රතික්ෂේප කරන්නේ නම් අදාළ පුද්ගලීකරණය නොකළ දැන්වීම් පෙන්වීමට භාවිතා වේ; ඔබ එකඟ වන්නේ නම් පුද්ගලීකරණය කළ දැන්වීම්.';
+
+  @override
+  String get nativeAppName => 'Peshat';
+
+  @override
+  String semanticsLanguageEntry(String englishName, String nativeName) {
+    return '$englishName, $nativeName';
+  }
+
+  @override
+  String get errorNoTextDetected => 'රූපයේ පෙළක් හමු නොවිණි';
+
+  @override
+  String get errorImageUnreadable => 'රූපය කියවිය නොහැක';
+
+  @override
+  String get errorModelDownloadFailed => 'පරිවර්තන ආකෘතිය බාගත කළ නොහැක';
+
+  @override
+  String get errorUnsupportedLanguage => 'මෙම භාෂාව තවම සහාය නොදක්වයි';
+
+  @override
+  String get errorOcrFailed => 'පෙළ හඳුනා ගැනීම අසාර්ථකයි';
+
+  @override
+  String get errorTranslationFailed => 'පරිවර්තනය අසාර්ථකයි';
+
+  @override
+  String get errorTimeout => 'ක්‍රියාවලිය බොහෝ කල් ගත විය';
+
+  @override
+  String get errorUnknown => 'යම් දෙයක් වැරදී ඇත';
+
+  @override
+  String get statusRecognizing => 'පෙළ කියවමින්…';
+
+  @override
+  String get statusPreparingModel => 'පරිවර්තනය සූදානම් කරමින්…';
+
+  @override
+  String get statusTranslating => 'පරිවර්තනය කරමින්…';
+
+  @override
+  String get sourceLabel => 'මුල්';
+
+  @override
+  String get translationLabel => 'පරිවර්තනය';
+
+  @override
+  String get retryButton => 'නැවත උත්සාහ කරන්න';
+
+  @override
+  String get changeLanguageButton => 'භාෂාව වෙනස් කරන්න';
+
+  @override
+  String get historyLabel => 'ඉතිහාසය';
+
+  @override
+  String get defaultLanguageLabel => 'පෙරනිමි පරිවර්තන භාෂාව';
+
+  @override
+  String get aboutLabel => 'පිළිබඳව';
+
+  @override
+  String get licensesLabel => 'විවෘත මූලාශ්‍ර බලපත්‍ර';
+
+  @override
+  String get shareAppLabel => 'මෙම යෙදුම බෙදාගන්න';
+
+  @override
+  String get versionLabel => 'අනුවාදය';
+}

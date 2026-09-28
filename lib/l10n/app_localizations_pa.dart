@@ -1,0 +1,162 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Panjabi Punjabi (`pa`).
+class AppLocalizationsPa extends AppLocalizations {
+  AppLocalizationsPa([String locale = 'pa']) : super(locale);
+
+  @override
+  String get appName => 'Peshat';
+
+  @override
+  String get scanButtonLabel => 'ਦਸਤਾਵੇਜ਼ ਸਕੈਨ ਕਰੋ';
+
+  @override
+  String get resultTitle => 'ਨਤੀਜਾ';
+
+  @override
+  String get copyAction => 'ਕਾਪੀ ਕਰੋ';
+
+  @override
+  String get shareAction => 'ਸਾਂਝਾ ਕਰੋ';
+
+  @override
+  String get saveAction => 'ਸੇਵ ਕਰੋ';
+
+  @override
+  String get readyToScan => 'ਸਕੈਨ ਕਰਨ ਲਈ ਤਿਆਰ';
+
+  @override
+  String get selectLanguageTitle => 'ਭਾਸ਼ਾ ਚੁਣੋ';
+
+  @override
+  String get searchLanguagesHint => 'ਭਾਸ਼ਾਵਾਂ ਲੱਭੋ...';
+
+  @override
+  String get settingsTitle => 'ਸੈਟਿੰਗਾਂ';
+
+  @override
+  String get adStatusLabel => 'ਵਿਗਿਆਪਨ ਸਥਿਤੀ:';
+
+  @override
+  String get adsShownStatus => 'ਵਿਗਿਆਪਨ ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ';
+
+  @override
+  String get themeLabel => 'ਥੀਮ';
+
+  @override
+  String get themeLight => 'ਹਲਕਾ';
+
+  @override
+  String get themeSystem => 'ਸਿਸਟਮ';
+
+  @override
+  String get themeDark => 'ਗੂੜ੍ਹਾ';
+
+  @override
+  String get removeAdsButton => 'ਵਿਗਿਆਪਨ ਹਟਾਓ';
+
+  @override
+  String get restorePurchaseButton => 'ਖਰੀਦਾਰੀ ਬਹਾਲ ਕਰੋ';
+
+  @override
+  String get privacyPolicyLink => 'ਗੋਪਨੀਯਤਾ ਨੀਤੀ';
+
+  @override
+  String get supportLink => 'ਸਹਾਇਤਾ';
+
+  @override
+  String get adsRemovedBadge => 'ਵਿਗਿਆਪਨ ਹਟਾ ਦਿੱਤੇ ਗਏ';
+
+  @override
+  String get semanticsAppIcon => 'Peshat ਐਪ ਆਈਕਨ';
+
+  @override
+  String get semanticsScanButton => 'ਦਸਤਾਵੇਜ਼ ਸਕੈਨ ਬਟਨ';
+
+  @override
+  String get semanticsSearchField => 'ਭਾਸ਼ਾਵਾਂ ਲੱਭੋ';
+
+  @override
+  String get semanticsRemoveAds => 'ਵਿਗਿਆਪਨ ਹਟਾਓ';
+
+  @override
+  String get cameraUsageDescription => 'Peshat ਪਾਠ ਨੂੰ ਸਕੈਨ ਅਤੇ ਅਨੁਵਾਦ ਕਰਨ ਲਈ ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ। ਚਿੱਤਰ ਡਿਵਾਈਸ \'ਤੇ ਪ੍ਰੋਸੈਸ ਕੀਤੇ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅੱਪਲੋਡ ਨਹੀਂ ਕੀਤੇ ਜਾਂਦੇ।';
+
+  @override
+  String get trackingUsageDescription => 'ਜੇਕਰ ਤੁਸੀਂ ਇਨਕਾਰ ਕਰਦੇ ਹੋ ਤਾਂ ਸੰਬੰਧਿਤ ਗੈਰ-ਨਿੱਜੀਕਰਨ ਵਿਗਿਆਪਨ ਦਿਖਾਉਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ; ਜੇਕਰ ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਤਾਂ ਨਿੱਜੀਕਰਨ ਵਿਗਿਆਪਨ।';
+
+  @override
+  String get nativeAppName => 'Peshat';
+
+  @override
+  String semanticsLanguageEntry(String englishName, String nativeName) {
+    return '$englishName, $nativeName';
+  }
+
+  @override
+  String get errorNoTextDetected => 'ਚਿੱਤਰ ਵਿੱਚ ਕੋਈ ਟੈਕਸਟ ਨਹੀਂ ਮਿਲਿਆ';
+
+  @override
+  String get errorImageUnreadable => 'ਚਿੱਤਰ ਪੜ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ';
+
+  @override
+  String get errorModelDownloadFailed => 'ਅਨੁਵਾਦ ਮਾਡਲ ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ';
+
+  @override
+  String get errorUnsupportedLanguage => 'ਇਹ ਭਾਸ਼ਾ ਅਜੇ ਸਮਰਥਿਤ ਨਹੀਂ ਹੈ';
+
+  @override
+  String get errorOcrFailed => 'ਟੈਕਸਟ ਪਛਾਣ ਫੇਲ੍ਹ';
+
+  @override
+  String get errorTranslationFailed => 'ਅਨੁਵਾਦ ਫੇਲ੍ਹ';
+
+  @override
+  String get errorTimeout => 'ਕਾਰਵਾਈ ਵਿੱਚ ਬਹੁਤ ਸਮਾਂ ਲੱਗਾ';
+
+  @override
+  String get errorUnknown => 'ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ';
+
+  @override
+  String get statusRecognizing => 'ਟੈਕਸਟ ਪੜ੍ਹਿਆ ਜਾ ਰਿਹਾ ਹੈ…';
+
+  @override
+  String get statusPreparingModel => 'ਅਨੁਵਾਦ ਤਿਆਰ ਕੀਤਾ ਜਾ ਰਿਹਾ ਹੈ…';
+
+  @override
+  String get statusTranslating => 'ਅਨੁਵਾਦ ਹੋ ਰਿਹਾ ਹੈ…';
+
+  @override
+  String get sourceLabel => 'ਅਸਲ';
+
+  @override
+  String get translationLabel => 'ਅਨੁਵਾਦ';
+
+  @override
+  String get retryButton => 'ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ';
+
+  @override
+  String get changeLanguageButton => 'ਭਾਸ਼ਾ ਬਦਲੋ';
+
+  @override
+  String get historyLabel => 'ਇਤਿਹਾਸ';
+
+  @override
+  String get defaultLanguageLabel => 'ਡਿਫਾਲਟ ਅਨੁਵਾਦ ਭਾਸ਼ਾ';
+
+  @override
+  String get aboutLabel => 'ਬਾਰੇ';
+
+  @override
+  String get licensesLabel => 'ਓਪਨ ਸੋਰਸ ਲਾਇਸੰਸ';
+
+  @override
+  String get shareAppLabel => 'ਇਹ ਐਪ ਸਾਂਝੀ ਕਰੋ';
+
+  @override
+  String get versionLabel => 'ਵਰਜਨ';
+}

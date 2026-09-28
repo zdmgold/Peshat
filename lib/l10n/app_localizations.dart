@@ -8,7 +8,9 @@ import 'package:intl/intl.dart' as intl;
 import 'app_localizations_am.dart';
 import 'app_localizations_ar.dart';
 import 'app_localizations_bn.dart';
+import 'app_localizations_cs.dart';
 import 'app_localizations_de.dart';
+import 'app_localizations_el.dart';
 import 'app_localizations_en.dart';
 import 'app_localizations_es.dart';
 import 'app_localizations_fa.dart';
@@ -16,15 +18,23 @@ import 'app_localizations_fil.dart';
 import 'app_localizations_fr.dart';
 import 'app_localizations_he.dart';
 import 'app_localizations_hi.dart';
+import 'app_localizations_hu.dart';
 import 'app_localizations_id.dart';
 import 'app_localizations_it.dart';
 import 'app_localizations_ja.dart';
+import 'app_localizations_km.dart';
 import 'app_localizations_ko.dart';
+import 'app_localizations_lo.dart';
 import 'app_localizations_my.dart';
+import 'app_localizations_ne.dart';
 import 'app_localizations_nl.dart';
+import 'app_localizations_pa.dart';
 import 'app_localizations_pl.dart';
 import 'app_localizations_pt.dart';
+import 'app_localizations_ro.dart';
 import 'app_localizations_ru.dart';
+import 'app_localizations_si.dart';
+import 'app_localizations_sv.dart';
 import 'app_localizations_th.dart';
 import 'app_localizations_tr.dart';
 import 'app_localizations_uk.dart';
@@ -118,7 +128,9 @@ abstract class AppLocalizations {
     Locale('am'),
     Locale('ar'),
     Locale('bn'),
+    Locale('cs'),
     Locale('de'),
+    Locale('el'),
     Locale('en'),
     Locale('es'),
     Locale('fa'),
@@ -126,15 +138,23 @@ abstract class AppLocalizations {
     Locale('fr'),
     Locale('he'),
     Locale('hi'),
+    Locale('hu'),
     Locale('id'),
     Locale('it'),
     Locale('ja'),
+    Locale('km'),
     Locale('ko'),
+    Locale('lo'),
     Locale('my'),
+    Locale('ne'),
     Locale('nl'),
+    Locale('pa'),
     Locale('pl'),
     Locale('pt'),
+    Locale('ro'),
     Locale('ru'),
+    Locale('si'),
+    Locale('sv'),
     Locale('th'),
     Locale('tr'),
     Locale('uk'),
@@ -316,6 +336,132 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'{englishName}, {nativeName}'**
   String semanticsLanguageEntry(String englishName, String nativeName);
+
+  /// No description provided for @errorNoTextDetected.
+  ///
+  /// In en, this message translates to:
+  /// **'No text found in the image'**
+  String get errorNoTextDetected;
+
+  /// No description provided for @errorImageUnreadable.
+  ///
+  /// In en, this message translates to:
+  /// **'The image could not be read'**
+  String get errorImageUnreadable;
+
+  /// No description provided for @errorModelDownloadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Translation model could not be downloaded'**
+  String get errorModelDownloadFailed;
+
+  /// No description provided for @errorUnsupportedLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'This language is not supported yet'**
+  String get errorUnsupportedLanguage;
+
+  /// No description provided for @errorOcrFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Text recognition failed'**
+  String get errorOcrFailed;
+
+  /// No description provided for @errorTranslationFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Translation failed'**
+  String get errorTranslationFailed;
+
+  /// No description provided for @errorTimeout.
+  ///
+  /// In en, this message translates to:
+  /// **'The operation took too long'**
+  String get errorTimeout;
+
+  /// No description provided for @errorUnknown.
+  ///
+  /// In en, this message translates to:
+  /// **'Something went wrong'**
+  String get errorUnknown;
+
+  /// No description provided for @statusRecognizing.
+  ///
+  /// In en, this message translates to:
+  /// **'Reading text…'**
+  String get statusRecognizing;
+
+  /// No description provided for @statusPreparingModel.
+  ///
+  /// In en, this message translates to:
+  /// **'Preparing translation…'**
+  String get statusPreparingModel;
+
+  /// No description provided for @statusTranslating.
+  ///
+  /// In en, this message translates to:
+  /// **'Translating…'**
+  String get statusTranslating;
+
+  /// No description provided for @sourceLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Original'**
+  String get sourceLabel;
+
+  /// No description provided for @translationLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Translation'**
+  String get translationLabel;
+
+  /// No description provided for @retryButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Try again'**
+  String get retryButton;
+
+  /// No description provided for @changeLanguageButton.
+  ///
+  /// In en, this message translates to:
+  /// **'Change language'**
+  String get changeLanguageButton;
+
+  /// No description provided for @historyLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'History'**
+  String get historyLabel;
+
+  /// No description provided for @defaultLanguageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Default translation language'**
+  String get defaultLanguageLabel;
+
+  /// No description provided for @aboutLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'About'**
+  String get aboutLabel;
+
+  /// No description provided for @licensesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Open-source licenses'**
+  String get licensesLabel;
+
+  /// No description provided for @shareAppLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Share this app'**
+  String get shareAppLabel;
+
+  /// No description provided for @versionLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Version'**
+  String get versionLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {
@@ -327,7 +473,7 @@ class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> 
   }
 
   @override
-  bool isSupported(Locale locale) => <String>['am', 'ar', 'bn', 'de', 'en', 'es', 'fa', 'fil', 'fr', 'he', 'hi', 'id', 'it', 'ja', 'ko', 'my', 'nl', 'pl', 'pt', 'ru', 'th', 'tr', 'uk', 'ur', 'vi', 'zh'].contains(locale.languageCode);
+  bool isSupported(Locale locale) => <String>['am', 'ar', 'bn', 'cs', 'de', 'el', 'en', 'es', 'fa', 'fil', 'fr', 'he', 'hi', 'hu', 'id', 'it', 'ja', 'km', 'ko', 'lo', 'my', 'ne', 'nl', 'pa', 'pl', 'pt', 'ro', 'ru', 'si', 'sv', 'th', 'tr', 'uk', 'ur', 'vi', 'zh'].contains(locale.languageCode);
 
   @override
   bool shouldReload(_AppLocalizationsDelegate old) => false;
@@ -341,7 +487,9 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'am': return AppLocalizationsAm();
     case 'ar': return AppLocalizationsAr();
     case 'bn': return AppLocalizationsBn();
+    case 'cs': return AppLocalizationsCs();
     case 'de': return AppLocalizationsDe();
+    case 'el': return AppLocalizationsEl();
     case 'en': return AppLocalizationsEn();
     case 'es': return AppLocalizationsEs();
     case 'fa': return AppLocalizationsFa();
@@ -349,15 +497,23 @@ AppLocalizations lookupAppLocalizations(Locale locale) {
     case 'fr': return AppLocalizationsFr();
     case 'he': return AppLocalizationsHe();
     case 'hi': return AppLocalizationsHi();
+    case 'hu': return AppLocalizationsHu();
     case 'id': return AppLocalizationsId();
     case 'it': return AppLocalizationsIt();
     case 'ja': return AppLocalizationsJa();
+    case 'km': return AppLocalizationsKm();
     case 'ko': return AppLocalizationsKo();
+    case 'lo': return AppLocalizationsLo();
     case 'my': return AppLocalizationsMy();
+    case 'ne': return AppLocalizationsNe();
     case 'nl': return AppLocalizationsNl();
+    case 'pa': return AppLocalizationsPa();
     case 'pl': return AppLocalizationsPl();
     case 'pt': return AppLocalizationsPt();
+    case 'ro': return AppLocalizationsRo();
     case 'ru': return AppLocalizationsRu();
+    case 'si': return AppLocalizationsSi();
+    case 'sv': return AppLocalizationsSv();
     case 'th': return AppLocalizationsTh();
     case 'tr': return AppLocalizationsTr();
     case 'uk': return AppLocalizationsUk();

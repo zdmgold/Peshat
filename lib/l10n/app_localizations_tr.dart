@@ -96,4 +96,67 @@ class AppLocalizationsTr extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'Görselde metin bulunamadı';
+
+  @override
+  String get errorImageUnreadable => 'Görsel okunamadı';
+
+  @override
+  String get errorModelDownloadFailed => 'Çeviri modeli indirilemedi';
+
+  @override
+  String get errorUnsupportedLanguage => 'Bu dil henüz desteklenmiyor';
+
+  @override
+  String get errorOcrFailed => 'Metin tanıma başarısız';
+
+  @override
+  String get errorTranslationFailed => 'Çeviri başarısız';
+
+  @override
+  String get errorTimeout => 'İşlem çok uzun sürdü';
+
+  @override
+  String get errorUnknown => 'Bir şeyler ters gitti';
+
+  @override
+  String get statusRecognizing => 'Metin okunuyor…';
+
+  @override
+  String get statusPreparingModel => 'Çeviri hazırlanıyor…';
+
+  @override
+  String get statusTranslating => 'Çeviriliyor…';
+
+  @override
+  String get sourceLabel => 'Özgün';
+
+  @override
+  String get translationLabel => 'Çeviri';
+
+  @override
+  String get retryButton => 'Tekrar dene';
+
+  @override
+  String get changeLanguageButton => 'Dili değiştir';
+
+  @override
+  String get historyLabel => 'Geçmiş';
+
+  @override
+  String get defaultLanguageLabel => 'Varsayılan çeviri dili';
+
+  @override
+  String get aboutLabel => 'Hakkında';
+
+  @override
+  String get licensesLabel => 'Açık kaynak lisansları';
+
+  @override
+  String get shareAppLabel => 'Bu uygulamayı paylaş';
+
+  @override
+  String get versionLabel => 'Sürüm';
 }

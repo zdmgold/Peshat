@@ -1,0 +1,162 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Swedish (`sv`).
+class AppLocalizationsSv extends AppLocalizations {
+  AppLocalizationsSv([String locale = 'sv']) : super(locale);
+
+  @override
+  String get appName => 'Peshat';
+
+  @override
+  String get scanButtonLabel => 'Skanna dokument';
+
+  @override
+  String get resultTitle => 'Resultat';
+
+  @override
+  String get copyAction => 'Kopiera';
+
+  @override
+  String get shareAction => 'Dela';
+
+  @override
+  String get saveAction => 'Spara';
+
+  @override
+  String get readyToScan => 'Redo att skanna';
+
+  @override
+  String get selectLanguageTitle => 'Välj språk';
+
+  @override
+  String get searchLanguagesHint => 'Sök efter språk...';
+
+  @override
+  String get settingsTitle => 'Inställningar';
+
+  @override
+  String get adStatusLabel => 'Annonsstatus:';
+
+  @override
+  String get adsShownStatus => 'Annonser visas';
+
+  @override
+  String get themeLabel => 'Tema';
+
+  @override
+  String get themeLight => 'Ljust';
+
+  @override
+  String get themeSystem => 'System';
+
+  @override
+  String get themeDark => 'Mörkt';
+
+  @override
+  String get removeAdsButton => 'Ta bort annonser';
+
+  @override
+  String get restorePurchaseButton => 'Återställ köp';
+
+  @override
+  String get privacyPolicyLink => 'Integritetspolicy';
+
+  @override
+  String get supportLink => 'Support';
+
+  @override
+  String get adsRemovedBadge => 'Annonser borttagna';
+
+  @override
+  String get semanticsAppIcon => 'Peshat app-ikon';
+
+  @override
+  String get semanticsScanButton => 'Skanna dokument-knapp';
+
+  @override
+  String get semanticsSearchField => 'Sök efter språk';
+
+  @override
+  String get semanticsRemoveAds => 'Ta bort annonser';
+
+  @override
+  String get cameraUsageDescription => 'Peshat använder kameran för att skanna och översätta text. Bilder bearbetas på enheten och laddas inte upp.';
+
+  @override
+  String get trackingUsageDescription => 'Används för att visa relevanta, icke-personaliserade annonser om du avböjer; personliga annonser om du godkänner.';
+
+  @override
+  String get nativeAppName => 'Peshat';
+
+  @override
+  String semanticsLanguageEntry(String englishName, String nativeName) {
+    return '$englishName, $nativeName';
+  }
+
+  @override
+  String get errorNoTextDetected => 'Ingen text hittades i bilden';
+
+  @override
+  String get errorImageUnreadable => 'Bilden kunde inte läsas';
+
+  @override
+  String get errorModelDownloadFailed => 'Översättningsmodellen kunde inte laddas ner';
+
+  @override
+  String get errorUnsupportedLanguage => 'Detta språk stöds inte ännu';
+
+  @override
+  String get errorOcrFailed => 'Textigenkänning misslyckades';
+
+  @override
+  String get errorTranslationFailed => 'Översättning misslyckades';
+
+  @override
+  String get errorTimeout => 'Åtgärden tog för lång tid';
+
+  @override
+  String get errorUnknown => 'Något gick fel';
+
+  @override
+  String get statusRecognizing => 'Läser text…';
+
+  @override
+  String get statusPreparingModel => 'Förbereder översättning…';
+
+  @override
+  String get statusTranslating => 'Översätter…';
+
+  @override
+  String get sourceLabel => 'Original';
+
+  @override
+  String get translationLabel => 'Översättning';
+
+  @override
+  String get retryButton => 'Försök igen';
+
+  @override
+  String get changeLanguageButton => 'Byt språk';
+
+  @override
+  String get historyLabel => 'Historik';
+
+  @override
+  String get defaultLanguageLabel => 'Standardöversättningsspråk';
+
+  @override
+  String get aboutLabel => 'Om';
+
+  @override
+  String get licensesLabel => 'Licenser för öppen källkod';
+
+  @override
+  String get shareAppLabel => 'Dela denna app';
+
+  @override
+  String get versionLabel => 'Version';
+}

@@ -96,4 +96,67 @@ class AppLocalizationsAm extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'በምስሉ ውስጥ ጽሑፍ አልተገኘም';
+
+  @override
+  String get errorImageUnreadable => 'ምስሉን ማንበብ አልተቻለም';
+
+  @override
+  String get errorModelDownloadFailed => 'የትርጉም ሞዴል ማውረድ አልተቻለም';
+
+  @override
+  String get errorUnsupportedLanguage => 'ይህ ቋንቋ ገና አልተደገፈም';
+
+  @override
+  String get errorOcrFailed => 'የጽሑፍ ማወቂያ አልተሳካም';
+
+  @override
+  String get errorTranslationFailed => 'ትርጉም አልተሳካም';
+
+  @override
+  String get errorTimeout => 'ክዋኔው በጣም ረጅም ጊዜ ወሰደ';
+
+  @override
+  String get errorUnknown => 'የሆነ ስህተት ተከስቷል';
+
+  @override
+  String get statusRecognizing => 'ጽሑፍ በማንበብ ላይ…';
+
+  @override
+  String get statusPreparingModel => 'ትርጉም በማዘጋጀት ላይ…';
+
+  @override
+  String get statusTranslating => 'በመተርጎም ላይ…';
+
+  @override
+  String get sourceLabel => 'ዋናው';
+
+  @override
+  String get translationLabel => 'ትርጉም';
+
+  @override
+  String get retryButton => 'እንደገና ሞክር';
+
+  @override
+  String get changeLanguageButton => 'ቋንቋ ቀይር';
+
+  @override
+  String get historyLabel => 'ታሪክ';
+
+  @override
+  String get defaultLanguageLabel => 'ነባሪ የትርጉም ቋንቋ';
+
+  @override
+  String get aboutLabel => 'ስለ';
+
+  @override
+  String get licensesLabel => 'ክፍት ምንጭ ፈቃዶች';
+
+  @override
+  String get shareAppLabel => 'ይህን መተግበሪያ አጋራ';
+
+  @override
+  String get versionLabel => 'ስሪት';
 }

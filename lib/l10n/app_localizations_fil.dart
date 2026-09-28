@@ -96,4 +96,67 @@ class AppLocalizationsFil extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'Walang tekstong natagpuan sa larawan';
+
+  @override
+  String get errorImageUnreadable => 'Hindi mabasa ang larawan';
+
+  @override
+  String get errorModelDownloadFailed => 'Hindi ma-download ang modelo ng pagsasalin';
+
+  @override
+  String get errorUnsupportedLanguage => 'Hindi pa sinusuportahan ang wikang ito';
+
+  @override
+  String get errorOcrFailed => 'Nabigo ang pagkilala ng teksto';
+
+  @override
+  String get errorTranslationFailed => 'Nabigo ang pagsasalin';
+
+  @override
+  String get errorTimeout => 'Masyadong matagal ang operasyon';
+
+  @override
+  String get errorUnknown => 'May nangyaring mali';
+
+  @override
+  String get statusRecognizing => 'Binabasa ang teksto…';
+
+  @override
+  String get statusPreparingModel => 'Inihahanda ang pagsasalin…';
+
+  @override
+  String get statusTranslating => 'Isinasalin…';
+
+  @override
+  String get sourceLabel => 'Orihinal';
+
+  @override
+  String get translationLabel => 'Salin';
+
+  @override
+  String get retryButton => 'Subukan muli';
+
+  @override
+  String get changeLanguageButton => 'Palitan ang wika';
+
+  @override
+  String get historyLabel => 'Kasaysayan';
+
+  @override
+  String get defaultLanguageLabel => 'Default na wika ng pagsasalin';
+
+  @override
+  String get aboutLabel => 'Tungkol sa';
+
+  @override
+  String get licensesLabel => 'Mga lisensyang open-source';
+
+  @override
+  String get shareAppLabel => 'Ibahagi ang app na ito';
+
+  @override
+  String get versionLabel => 'Bersyon';
 }

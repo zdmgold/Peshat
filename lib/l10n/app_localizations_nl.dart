@@ -96,4 +96,67 @@ class AppLocalizationsNl extends AppLocalizations {
   String semanticsLanguageEntry(String englishName, String nativeName) {
     return '$englishName, $nativeName';
   }
+
+  @override
+  String get errorNoTextDetected => 'Geen tekst gevonden in de afbeelding';
+
+  @override
+  String get errorImageUnreadable => 'De afbeelding kon niet worden gelezen';
+
+  @override
+  String get errorModelDownloadFailed => 'Vertaalmodel kon niet worden gedownload';
+
+  @override
+  String get errorUnsupportedLanguage => 'Deze taal wordt nog niet ondersteund';
+
+  @override
+  String get errorOcrFailed => 'Tekstherkenning mislukt';
+
+  @override
+  String get errorTranslationFailed => 'Vertaling mislukt';
+
+  @override
+  String get errorTimeout => 'De bewerking duurde te lang';
+
+  @override
+  String get errorUnknown => 'Er is iets misgegaan';
+
+  @override
+  String get statusRecognizing => 'Tekst lezen…';
+
+  @override
+  String get statusPreparingModel => 'Vertaling voorbereiden…';
+
+  @override
+  String get statusTranslating => 'Vertalen…';
+
+  @override
+  String get sourceLabel => 'Origineel';
+
+  @override
+  String get translationLabel => 'Vertaling';
+
+  @override
+  String get retryButton => 'Opnieuw proberen';
+
+  @override
+  String get changeLanguageButton => 'Taal wijzigen';
+
+  @override
+  String get historyLabel => 'Geschiedenis';
+
+  @override
+  String get defaultLanguageLabel => 'Standaard vertaaltaal';
+
+  @override
+  String get aboutLabel => 'Over';
+
+  @override
+  String get licensesLabel => 'Open-source licenties';
+
+  @override
+  String get shareAppLabel => 'Deze app delen';
+
+  @override
+  String get versionLabel => 'Versie';
 }
