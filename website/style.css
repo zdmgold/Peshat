@@ -348,59 +348,79 @@ footer.site .spacer { flex: 1 0 auto; }
   html { scroll-behavior: auto; }
 }
 
-/* Store buttons */
+/* Store badges — vertical stack, App Store / Google Play style */
 .store-buttons {
   display: flex;
-  flex-wrap: wrap;
-  gap: var(--md);
-  justify-content: center;
-  margin-top: var(--lg);
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: var(--xl);
 }
 
-.store-btn {
+.store-badge {
   display: inline-flex;
   align-items: center;
-  min-height: 52px;
-  padding: 0 var(--lg);
-  background: var(--text-primary);
-  color: var(--bg-primary);
-  border-radius: var(--radius-button);
+  gap: 10px;
+  width: 220px;
+  height: 62px;
+  padding: 0 18px;
+  background: #000;
+  color: #fff;
+  border-radius: 14px;
   text-decoration: none;
   font-family: var(--font-chrome);
-  transition: opacity 150ms ease-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
 }
 
-.store-btn:hover { opacity: 0.85; }
+.store-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+}
 
-.store-btn .store-label {
+.store-badge[aria-disabled="true"] {
+  opacity: 0.38;
+  pointer-events: none;
+  cursor: not-allowed;
+  box-shadow: none;
+}
+
+.store-badge-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.store-badge-text {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  line-height: 1.15;
+  line-height: 1.05;
+  text-align: left;
 }
 
-.store-btn .store-label .small {
-  font-size: 0.6875rem;
+.store-badge-eyebrow {
+  font-size: 0.625rem;
   font-weight: 400;
-  opacity: 0.75;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  opacity: 0.9;
+  margin-bottom: 2px;
 }
 
-.store-btn .store-label .big {
-  font-size: 1rem;
+.store-badge-title {
+  font-size: 1.125rem;
   font-weight: 600;
-}
-
-.store-btn[aria-disabled="true"] {
-  opacity: 0.4;
-  cursor: not-allowed;
-  pointer-events: none;
+  letter-spacing: -0.015em;
 }
 
 .store-note {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--text-tertiary);
   text-align: center;
-  margin-top: var(--md);
+  margin-top: var(--lg);
+  max-width: 360px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.5;
 }
