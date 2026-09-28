@@ -106,6 +106,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
         centerTitle: true,
       ),
       body: SafeArea(
+        top: false,
         child: Column(
           children: [
             Expanded(

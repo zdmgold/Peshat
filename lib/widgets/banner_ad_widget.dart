@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import '../core/utils/app_colors.dart';
 
-// Google's official test banner unit ID. Replace before release.
+/// Google's official test banner unit ID. Replace before release.
 const String _kBannerAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
 
-const double _kSlotHeight = 60;
-const double _kHorizontalInset = 8;
-
-/// Reserved-height banner ad slot.
+/// Fixed-height container that reserves space for an anchored adaptive
+/// banner. The height is computed once per width from AdMob's own size
+/// request, so the container never reflows between first frame and ad
+/// load, and the ad never overflows the container horizontally.
 ///
-/// Always renders a fixed-height container, whether the ad loads or not.
-/// This eliminates the layout reflow that used to push the whole screen
-/// upward when the ad arrived a few seconds after first frame.
+/// The parent (AdSlot) owns padding, radius and shadow. This widget is
+/// purely the ad surface and its reserved height.
 class BannerAdWidget extends StatefulWidget {
   const BannerAdWidget({super.key});
 
@@ -24,33 +22,52 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   BannerAd? _bannerAd;
   bool _isLoaded = false;
   bool _isDisposed = false;
+  int? _loadedForWidth;
+  double _reservedHeight = 50;
 
   @override
-  void initState() {
-    super.initState();
-    _loadAd();
+  void didChangeDependencies() {
+    super.didChangeDependencies();
+    final width = MediaQuery.sizeOf(context).width.truncate();
+    if (_loadedForWidth != width) {
+      _loadedForWidth = width;
+      _reloadForWidth(width);
+    }
   }
 
-  void _loadAd() {
-    _bannerAd = BannerAd(
+  Future<void> _reloadForWidth(int width) async {
+    _bannerAd?.dispose();
+    _bannerAd = null;
+    if (mounted) setState(() => _isLoaded = false);
+
+    final requested =
+        await AdSize.getCurrentOrientationAnchoredAdaptiveBannerAdSize(width);
+    final AdSize size = requested ?? AdSize.banner;
+    if (!mounted || _isDisposed) return;
+
+    setState(() => _reservedHeight = size.height.toDouble());
+
+    final ad = BannerAd(
       adUnitId: _kBannerAdUnitId,
-      size: AdSize.banner,
+      size: size,
       request: const AdRequest(),
       listener: BannerAdListener(
-        onAdLoaded: (ad) {
+        onAdLoaded: (loaded) {
           if (!mounted || _isDisposed) {
-            ad.dispose();
+            loaded.dispose();
             return;
           }
           setState(() => _isLoaded = true);
         },
-        onAdFailedToLoad: (ad, error) {
-          ad.dispose();
+        onAdFailedToLoad: (failed, error) {
+          failed.dispose();
           if (!mounted || _isDisposed) return;
           setState(() => _isLoaded = false);
         },
       ),
-    )..load();
+    );
+    _bannerAd = ad;
+    ad.load();
   }
 
   @override
@@ -62,37 +79,12 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final cream = isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
-
-    final showAd = _isLoaded && _bannerAd != null;
-
-    return Container(
-      height: _kSlotHeight,
-      margin: const EdgeInsets.symmetric(horizontal: _kHorizontalInset),
-      decoration: BoxDecoration(
-        color: cream,
-        borderRadius: const BorderRadius.vertical(top: Radius.circular(12)),
-        boxShadow: showAd
-            ? const [
-                BoxShadow(
-                  color: Color(0x80000000),
-                  blurRadius: 8,
-                  offset: Offset(0, -2),
-                ),
-              ]
-            : null,
-      ),
-      alignment: Alignment.center,
-      child: showAd
-          ? SizedBox(
-              width: _bannerAd!.size.width.toDouble(),
-              height: _bannerAd!.size.height.toDouble(),
-              child: AdWidget(ad: _bannerAd!),
-            )
+    return SizedBox(
+      height: _reservedHeight,
+      width: double.infinity,
+      child: _isLoaded && _bannerAd != null
+          ? AdWidget(ad: _bannerAd!)
           : const SizedBox.shrink(),
     );
   }
 }
-
-

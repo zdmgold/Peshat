@@ -132,6 +132,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
         ],
       ),
       body: SafeArea(
+        top: false,
         child: Padding(
           padding: EdgeInsets.only(
             bottom: MediaQuery.of(context).viewInsets.bottom,

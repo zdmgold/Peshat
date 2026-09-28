@@ -92,6 +92,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         centerTitle: true,
       ),
       body: SafeArea(
+        top: false,
         child: Column(
           children: [
             // Search field
