@@ -347,3 +347,60 @@ footer.site .spacer { flex: 1 0 auto; }
   * { transition: none !important; animation: none !important; }
   html { scroll-behavior: auto; }
 }
+
+/* Store buttons */
+.store-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--md);
+  justify-content: center;
+  margin-top: var(--lg);
+}
+
+.store-btn {
+  display: inline-flex;
+  align-items: center;
+  min-height: 52px;
+  padding: 0 var(--lg);
+  background: var(--text-primary);
+  color: var(--bg-primary);
+  border-radius: var(--radius-button);
+  text-decoration: none;
+  font-family: var(--font-chrome);
+  transition: opacity 150ms ease-out;
+}
+
+.store-btn:hover { opacity: 0.85; }
+
+.store-btn .store-label {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.15;
+}
+
+.store-btn .store-label .small {
+  font-size: 0.6875rem;
+  font-weight: 400;
+  opacity: 0.75;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.store-btn .store-label .big {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.store-btn[aria-disabled="true"] {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.store-note {
+  font-size: 0.875rem;
+  color: var(--text-tertiary);
+  text-align: center;
+  margin-top: var(--md);
+}
