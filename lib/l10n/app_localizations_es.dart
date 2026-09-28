@@ -159,4 +159,13 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get versionLabel => 'Versión';
+
+  @override
+  String get historyEmpty => 'Aún no hay escaneos';
+
+  @override
+  String get historyClearConfirm => '¿Eliminar todo el historial?';
+
+  @override
+  String get termsLink => 'Términos del servicio';
 }

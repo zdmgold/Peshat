@@ -49,5 +49,8 @@
   "aboutLabel": "정보",
   "licensesLabel": "오픈 소스 라이선스",
   "shareAppLabel": "이 앱 공유",
-  "versionLabel": "버전"
+  "versionLabel": "버전",
+  "historyEmpty": "아직 스캔 기록이 없습니다",
+  "historyClearConfirm": "모든 기록을 삭제하시겠습니까?",
+  "termsLink": "서비스 약관"
 }

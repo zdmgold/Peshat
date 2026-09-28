@@ -159,4 +159,13 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get versionLabel => 'Versione';
+
+  @override
+  String get historyEmpty => 'Nessuna scansione ancora';
+
+  @override
+  String get historyClearConfirm => 'Eliminare tutta la cronologia?';
+
+  @override
+  String get termsLink => 'Termini di servizio';
 }

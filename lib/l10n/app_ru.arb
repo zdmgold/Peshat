@@ -49,5 +49,8 @@
   "aboutLabel": "О приложении",
   "licensesLabel": "Лицензии открытого исходного кода",
   "shareAppLabel": "Поделиться приложением",
-  "versionLabel": "Версия"
+  "versionLabel": "Версия",
+  "historyEmpty": "Пока нет сканирований",
+  "historyClearConfirm": "Удалить всю историю?",
+  "termsLink": "Условия использования"
 }

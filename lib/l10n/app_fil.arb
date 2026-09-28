@@ -49,5 +49,8 @@
   "aboutLabel": "Tungkol sa",
   "licensesLabel": "Mga lisensyang open-source",
   "shareAppLabel": "Ibahagi ang app na ito",
-  "versionLabel": "Bersyon"
+  "versionLabel": "Bersyon",
+  "historyEmpty": "Wala pang mga scan",
+  "historyClearConfirm": "Burahin lahat ng kasaysayan?",
+  "termsLink": "Mga Tuntunin ng Serbisyo"
 }

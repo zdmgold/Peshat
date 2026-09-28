@@ -462,6 +462,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Version'**
   String get versionLabel;
+
+  /// No description provided for @historyEmpty.
+  ///
+  /// In en, this message translates to:
+  /// **'No scans yet'**
+  String get historyEmpty;
+
+  /// No description provided for @historyClearConfirm.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete all history?'**
+  String get historyClearConfirm;
+
+  /// No description provided for @termsLink.
+  ///
+  /// In en, this message translates to:
+  /// **'Terms of Service'**
+  String get termsLink;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

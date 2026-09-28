@@ -49,5 +49,8 @@
   "aboutLabel": "حول",
   "licensesLabel": "تراخيص المصدر المفتوح",
   "shareAppLabel": "شارك هذا التطبيق",
-  "versionLabel": "الإصدار"
+  "versionLabel": "الإصدار",
+  "historyEmpty": "لا توجد عمليات مسح بعد",
+  "historyClearConfirm": "حذف كل السجل؟",
+  "termsLink": "شروط الخدمة"
 }

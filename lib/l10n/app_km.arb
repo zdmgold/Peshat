@@ -49,5 +49,8 @@
   "aboutLabel": "អំពី",
   "licensesLabel": "អាជ្ញាបណ្ណកូដបើកចំហ",
   "shareAppLabel": "ចែករំលែកកម្មវិធីនេះ",
-  "versionLabel": "កំណែ"
+  "versionLabel": "កំណែ",
+  "historyEmpty": "មិនទាន់មានការស្កេនទេ",
+  "historyClearConfirm": "លុបប្រវត្តិទាំងអស់?",
+  "termsLink": "លក្ខខណ្ឌសេវាកម្ម"
 }

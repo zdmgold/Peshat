@@ -49,5 +49,8 @@
   "aboutLabel": "ກ່ຽວກັບ",
   "licensesLabel": "ໃບອະນຸຍາດໂອເພນຊອດ",
   "shareAppLabel": "ແບ່ງປັນແອັບນີ້",
-  "versionLabel": "ເວີຊັນ"
+  "versionLabel": "ເວີຊັນ",
+  "historyEmpty": "ຍັງບໍ່ມີການສະແກນ",
+  "historyClearConfirm": "ລຶບປະຫວັດທັງໝົດບໍ?",
+  "termsLink": "ເງື່ອນໄຂການບໍລິການ"
 }

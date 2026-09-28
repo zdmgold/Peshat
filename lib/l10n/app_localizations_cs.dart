@@ -159,4 +159,13 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get versionLabel => 'Verze';
+
+  @override
+  String get historyEmpty => 'Zatím žádné skeny';
+
+  @override
+  String get historyClearConfirm => 'Smazat celou historii?';
+
+  @override
+  String get termsLink => 'Podmínky služby';
 }

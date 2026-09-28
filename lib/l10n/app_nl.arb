@@ -49,5 +49,8 @@
   "aboutLabel": "Over",
   "licensesLabel": "Open-source licenties",
   "shareAppLabel": "Deze app delen",
-  "versionLabel": "Versie"
+  "versionLabel": "Versie",
+  "historyEmpty": "Nog geen scans",
+  "historyClearConfirm": "Alle geschiedenis verwijderen?",
+  "termsLink": "Servicevoorwaarden"
 }

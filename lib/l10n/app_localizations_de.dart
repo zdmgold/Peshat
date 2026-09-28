@@ -159,4 +159,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get versionLabel => 'Version';
+
+  @override
+  String get historyEmpty => 'Noch keine Scans';
+
+  @override
+  String get historyClearConfirm => 'Gesamten Verlauf löschen?';
+
+  @override
+  String get termsLink => 'Nutzungsbedingungen';
 }

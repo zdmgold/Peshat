@@ -49,5 +49,8 @@
   "aboutLabel": "Про застосунок",
   "licensesLabel": "Ліцензії з відкритим кодом",
   "shareAppLabel": "Поділитися застосунком",
-  "versionLabel": "Версія"
+  "versionLabel": "Версія",
+  "historyEmpty": "Ще немає сканувань",
+  "historyClearConfirm": "Видалити всю історію?",
+  "termsLink": "Умови використання"
 }

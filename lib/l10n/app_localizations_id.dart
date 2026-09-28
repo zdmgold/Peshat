@@ -159,4 +159,13 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get versionLabel => 'Versi';
+
+  @override
+  String get historyEmpty => 'Belum ada pemindaian';
+
+  @override
+  String get historyClearConfirm => 'Hapus semua riwayat?';
+
+  @override
+  String get termsLink => 'Ketentuan Layanan';
 }

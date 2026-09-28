@@ -159,4 +159,13 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get versionLabel => 'เวอร์ชัน';
+
+  @override
+  String get historyEmpty => 'ยังไม่มีการสแกน';
+
+  @override
+  String get historyClearConfirm => 'ลบประวัติทั้งหมดหรือไม่';
+
+  @override
+  String get termsLink => 'ข้อกำหนดการให้บริการ';
 }

@@ -49,5 +49,8 @@
   "aboutLabel": "O aplikaci",
   "licensesLabel": "Licence open source",
   "shareAppLabel": "Sdílet tuto aplikaci",
-  "versionLabel": "Verze"
+  "versionLabel": "Verze",
+  "historyEmpty": "Zatím žádné skeny",
+  "historyClearConfirm": "Smazat celou historii?",
+  "termsLink": "Podmínky služby"
 }

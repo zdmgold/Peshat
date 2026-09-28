@@ -159,4 +159,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get versionLabel => 'Phiên bản';
+
+  @override
+  String get historyEmpty => 'Chưa có bản quét nào';
+
+  @override
+  String get historyClearConfirm => 'Xóa toàn bộ lịch sử?';
+
+  @override
+  String get termsLink => 'Điều khoản dịch vụ';
 }

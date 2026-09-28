@@ -159,4 +159,13 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get versionLabel => 'संस्करण';
+
+  @override
+  String get historyEmpty => 'अझै कुनै स्क्यान छैन';
+
+  @override
+  String get historyClearConfirm => 'सबै इतिहास मेटाउने?';
+
+  @override
+  String get termsLink => 'सेवाका सर्तहरू';
 }

@@ -159,4 +159,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get versionLabel => 'バージョン';
+
+  @override
+  String get historyEmpty => 'スキャン履歴はまだありません';
+
+  @override
+  String get historyClearConfirm => 'すべての履歴を削除しますか？';
+
+  @override
+  String get termsLink => '利用規約';
 }

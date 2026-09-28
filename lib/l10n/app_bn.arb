@@ -49,5 +49,8 @@
   "aboutLabel": "সম্পর্কে",
   "licensesLabel": "ওপেন সোর্স লাইসেন্স",
   "shareAppLabel": "এই অ্যাপ শেয়ার করুন",
-  "versionLabel": "সংস্করণ"
+  "versionLabel": "সংস্করণ",
+  "historyEmpty": "এখনো কোনো স্ক্যান নেই",
+  "historyClearConfirm": "সব ইতিহাস মুছবেন?",
+  "termsLink": "পরিষেবার শর্তাবলী"
 }

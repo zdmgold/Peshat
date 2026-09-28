@@ -159,4 +159,13 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get versionLabel => 'Versiune';
+
+  @override
+  String get historyEmpty => 'Încă nicio scanare';
+
+  @override
+  String get historyClearConfirm => 'Ștergeți tot istoricul?';
+
+  @override
+  String get termsLink => 'Termeni și condiții';
 }

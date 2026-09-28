@@ -49,5 +49,8 @@
   "aboutLabel": "परिचय",
   "licensesLabel": "ओपन-सोर्स लाइसेंस",
   "shareAppLabel": "यह ऐप साझा करें",
-  "versionLabel": "संस्करण"
+  "versionLabel": "संस्करण",
+  "historyEmpty": "अभी तक कोई स्कैन नहीं",
+  "historyClearConfirm": "सारा इतिहास हटाएं?",
+  "termsLink": "सेवा की शर्तें"
 }

@@ -159,4 +159,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get versionLabel => 'Sürüm';
+
+  @override
+  String get historyEmpty => 'Henüz tarama yok';
+
+  @override
+  String get historyClearConfirm => 'Tüm geçmiş silinsin mi?';
+
+  @override
+  String get termsLink => 'Kullanım Koşulları';
 }

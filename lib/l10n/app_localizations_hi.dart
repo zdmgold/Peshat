@@ -159,4 +159,13 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get versionLabel => 'संस्करण';
+
+  @override
+  String get historyEmpty => 'अभी तक कोई स्कैन नहीं';
+
+  @override
+  String get historyClearConfirm => 'सारा इतिहास हटाएं?';
+
+  @override
+  String get termsLink => 'सेवा की शर्तें';
 }

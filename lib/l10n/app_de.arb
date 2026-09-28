@@ -49,5 +49,8 @@
   "aboutLabel": "Über",
   "licensesLabel": "Open-Source-Lizenzen",
   "shareAppLabel": "Diese App teilen",
-  "versionLabel": "Version"
+  "versionLabel": "Version",
+  "historyEmpty": "Noch keine Scans",
+  "historyClearConfirm": "Gesamten Verlauf löschen?",
+  "termsLink": "Nutzungsbedingungen"
 }

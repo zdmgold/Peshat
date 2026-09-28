@@ -49,5 +49,8 @@
   "aboutLabel": "Despre",
   "licensesLabel": "Licențe open source",
   "shareAppLabel": "Distribuie această aplicație",
-  "versionLabel": "Versiune"
+  "versionLabel": "Versiune",
+  "historyEmpty": "Încă nicio scanare",
+  "historyClearConfirm": "Ștergeți tot istoricul?",
+  "termsLink": "Termeni și condiții"
 }

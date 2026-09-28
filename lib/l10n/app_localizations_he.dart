@@ -159,4 +159,13 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get versionLabel => 'גרסה';
+
+  @override
+  String get historyEmpty => 'אין סריקות עדיין';
+
+  @override
+  String get historyClearConfirm => 'למחוק את כל ההיסטוריה?';
+
+  @override
+  String get termsLink => 'תנאי שירות';
 }

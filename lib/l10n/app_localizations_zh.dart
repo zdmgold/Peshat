@@ -159,4 +159,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get versionLabel => '版本';
+
+  @override
+  String get historyEmpty => '暂无扫描记录';
+
+  @override
+  String get historyClearConfirm => '删除所有历史记录？';
+
+  @override
+  String get termsLink => '服务条款';
 }

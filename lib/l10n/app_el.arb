@@ -49,5 +49,8 @@
   "aboutLabel": "Σχετικά",
   "licensesLabel": "Άδειες ανοιχτού κώδικα",
   "shareAppLabel": "Κοινοποίηση εφαρμογής",
-  "versionLabel": "Έκδοση"
+  "versionLabel": "Έκδοση",
+  "historyEmpty": "Δεν υπάρχουν σαρώσεις ακόμη",
+  "historyClearConfirm": "Διαγραφή όλου του ιστορικού;",
+  "termsLink": "Όροι χρήσης"
 }

@@ -49,5 +49,8 @@
   "aboutLabel": "Sobre",
   "licensesLabel": "Licenças de código aberto",
   "shareAppLabel": "Compartilhar este aplicativo",
-  "versionLabel": "Versão"
+  "versionLabel": "Versão",
+  "historyEmpty": "Nenhuma digitalização ainda",
+  "historyClearConfirm": "Excluir todo o histórico?",
+  "termsLink": "Termos de Serviço"
 }

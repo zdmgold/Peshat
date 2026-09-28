@@ -159,4 +159,13 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get versionLabel => 'Έκδοση';
+
+  @override
+  String get historyEmpty => 'Δεν υπάρχουν σαρώσεις ακόμη';
+
+  @override
+  String get historyClearConfirm => 'Διαγραφή όλου του ιστορικού;';
+
+  @override
+  String get termsLink => 'Όροι χρήσης';
 }

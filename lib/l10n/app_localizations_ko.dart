@@ -159,4 +159,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get versionLabel => '버전';
+
+  @override
+  String get historyEmpty => '아직 스캔 기록이 없습니다';
+
+  @override
+  String get historyClearConfirm => '모든 기록을 삭제하시겠습니까?';
+
+  @override
+  String get termsLink => '서비스 약관';
 }

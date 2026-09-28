@@ -49,5 +49,8 @@
   "aboutLabel": "เกี่ยวกับ",
   "licensesLabel": "สัญญาอนุญาตโอเพนซอร์ส",
   "shareAppLabel": "แชร์แอปนี้",
-  "versionLabel": "เวอร์ชัน"
+  "versionLabel": "เวอร์ชัน",
+  "historyEmpty": "ยังไม่มีการสแกน",
+  "historyClearConfirm": "ลบประวัติทั้งหมดหรือไม่",
+  "termsLink": "ข้อกำหนดการให้บริการ"
 }

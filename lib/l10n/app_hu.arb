@@ -49,5 +49,8 @@
   "aboutLabel": "Névjegy",
   "licensesLabel": "Nyílt forráskódú licencek",
   "shareAppLabel": "Alkalmazás megosztása",
-  "versionLabel": "Verzió"
+  "versionLabel": "Verzió",
+  "historyEmpty": "Még nincsenek beolvasások",
+  "historyClearConfirm": "Törli a teljes előzményt?",
+  "termsLink": "Szolgáltatási feltételek"
 }

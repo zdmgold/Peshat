@@ -159,4 +159,13 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get versionLabel => 'Bersyon';
+
+  @override
+  String get historyEmpty => 'Wala pang mga scan';
+
+  @override
+  String get historyClearConfirm => 'Burahin lahat ng kasaysayan?';
+
+  @override
+  String get termsLink => 'Mga Tuntunin ng Serbisyo';
 }

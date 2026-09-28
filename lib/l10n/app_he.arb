@@ -49,5 +49,8 @@
   "aboutLabel": "אודות",
   "licensesLabel": "רישיונות קוד פתוח",
   "shareAppLabel": "שתף אפליקציה זו",
-  "versionLabel": "גרסה"
+  "versionLabel": "גרסה",
+  "historyEmpty": "אין סריקות עדיין",
+  "historyClearConfirm": "למחוק את כל ההיסטוריה?",
+  "termsLink": "תנאי שירות"
 }

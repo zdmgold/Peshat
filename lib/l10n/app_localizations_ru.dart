@@ -159,4 +159,13 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get versionLabel => 'Версия';
+
+  @override
+  String get historyEmpty => 'Пока нет сканирований';
+
+  @override
+  String get historyClearConfirm => 'Удалить всю историю?';
+
+  @override
+  String get termsLink => 'Условия использования';
 }

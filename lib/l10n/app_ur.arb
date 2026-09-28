@@ -49,5 +49,8 @@
   "aboutLabel": "کے بارے میں",
   "licensesLabel": "اوپن سورس لائسنس",
   "shareAppLabel": "یہ ایپ شیئر کریں",
-  "versionLabel": "ورژن"
+  "versionLabel": "ورژن",
+  "historyEmpty": "ابھی کوئی اسکین نہیں",
+  "historyClearConfirm": "تمام تاریخ حذف کریں؟",
+  "termsLink": "شرائطِ خدمت"
 }

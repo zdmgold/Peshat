@@ -159,4 +159,13 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get versionLabel => 'ورژن';
+
+  @override
+  String get historyEmpty => 'ابھی کوئی اسکین نہیں';
+
+  @override
+  String get historyClearConfirm => 'تمام تاریخ حذف کریں؟';
+
+  @override
+  String get termsLink => 'شرائطِ خدمت';
 }

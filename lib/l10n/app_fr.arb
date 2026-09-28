@@ -49,5 +49,8 @@
   "aboutLabel": "À propos",
   "licensesLabel": "Licences open source",
   "shareAppLabel": "Partager cette application",
-  "versionLabel": "Version"
+  "versionLabel": "Version",
+  "historyEmpty": "Aucun scan pour le moment",
+  "historyClearConfirm": "Supprimer tout l’historique ?",
+  "termsLink": "Conditions d’utilisation"
 }

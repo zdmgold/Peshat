@@ -59,5 +59,8 @@
   "aboutLabel": "About",
   "licensesLabel": "Open-source licenses",
   "shareAppLabel": "Share this app",
-  "versionLabel": "Version"
+  "versionLabel": "Version",
+  "historyEmpty": "No scans yet",
+  "historyClearConfirm": "Delete all history?",
+  "termsLink": "Terms of Service"
 }

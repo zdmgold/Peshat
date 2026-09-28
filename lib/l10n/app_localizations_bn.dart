@@ -159,4 +159,13 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get versionLabel => 'সংস্করণ';
+
+  @override
+  String get historyEmpty => 'এখনো কোনো স্ক্যান নেই';
+
+  @override
+  String get historyClearConfirm => 'সব ইতিহাস মুছবেন?';
+
+  @override
+  String get termsLink => 'পরিষেবার শর্তাবলী';
 }

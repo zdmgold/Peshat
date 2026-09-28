@@ -159,4 +159,13 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get versionLabel => 'الإصدار';
+
+  @override
+  String get historyEmpty => 'لا توجد عمليات مسح بعد';
+
+  @override
+  String get historyClearConfirm => 'حذف كل السجل؟';
+
+  @override
+  String get termsLink => 'شروط الخدمة';
 }

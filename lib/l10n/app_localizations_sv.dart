@@ -159,4 +159,13 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get versionLabel => 'Version';
+
+  @override
+  String get historyEmpty => 'Inga skanningar än';
+
+  @override
+  String get historyClearConfirm => 'Radera all historik?';
+
+  @override
+  String get termsLink => 'Användarvillkor';
 }

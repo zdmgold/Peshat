@@ -49,5 +49,8 @@
   "aboutLabel": "ਬਾਰੇ",
   "licensesLabel": "ਓਪਨ ਸੋਰਸ ਲਾਇਸੰਸ",
   "shareAppLabel": "ਇਹ ਐਪ ਸਾਂਝੀ ਕਰੋ",
-  "versionLabel": "ਵਰਜਨ"
+  "versionLabel": "ਵਰਜਨ",
+  "historyEmpty": "ਹਾਲੇ ਕੋਈ ਸਕੈਨ ਨਹੀਂ",
+  "historyClearConfirm": "ਸਾਰਾ ਇਤਿਹਾਸ ਮਿਟਾਉਣਾ ਹੈ?",
+  "termsLink": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ"
 }

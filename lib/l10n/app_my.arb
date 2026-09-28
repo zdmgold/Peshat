@@ -49,5 +49,8 @@
   "aboutLabel": "အကြောင်း",
   "licensesLabel": "အိုပင်ဆော့ လိုင်စင်များ",
   "shareAppLabel": "ဤအက်ပ်ကို မျှဝေပါ",
-  "versionLabel": "ဗားရှင်း"
+  "versionLabel": "ဗားရှင်း",
+  "historyEmpty": "စကင်ဖတ်မှု မရှိသေးပါ",
+  "historyClearConfirm": "မှတ်တမ်းအားလုံး ဖျက်မလား?",
+  "termsLink": "ဝန်ဆောင်မှု စည်းကမ်းချက်များ"
 }

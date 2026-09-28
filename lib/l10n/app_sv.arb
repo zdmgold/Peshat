@@ -49,5 +49,8 @@
   "aboutLabel": "Om",
   "licensesLabel": "Licenser för öppen källkod",
   "shareAppLabel": "Dela denna app",
-  "versionLabel": "Version"
+  "versionLabel": "Version",
+  "historyEmpty": "Inga skanningar än",
+  "historyClearConfirm": "Radera all historik?",
+  "termsLink": "Användarvillkor"
 }

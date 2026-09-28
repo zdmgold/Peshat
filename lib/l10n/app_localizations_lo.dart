@@ -159,4 +159,13 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get versionLabel => 'ເວີຊັນ';
+
+  @override
+  String get historyEmpty => 'ຍັງບໍ່ມີການສະແກນ';
+
+  @override
+  String get historyClearConfirm => 'ລຶບປະຫວັດທັງໝົດບໍ?';
+
+  @override
+  String get termsLink => 'ເງື່ອນໄຂການບໍລິການ';
 }

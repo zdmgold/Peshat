@@ -49,5 +49,8 @@
   "aboutLabel": "පිළිබඳව",
   "licensesLabel": "විවෘත මූලාශ්‍ර බලපත්‍ර",
   "shareAppLabel": "මෙම යෙදුම බෙදාගන්න",
-  "versionLabel": "අනුවාදය"
+  "versionLabel": "අනුවාදය",
+  "historyEmpty": "තවම ස්කෑන් නැත",
+  "historyClearConfirm": "සියලු ඉතිහාසය මකන්නද?",
+  "termsLink": "සේවා කොන්දේසි"
 }

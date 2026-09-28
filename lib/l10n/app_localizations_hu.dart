@@ -159,4 +159,13 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get versionLabel => 'Verzió';
+
+  @override
+  String get historyEmpty => 'Még nincsenek beolvasások';
+
+  @override
+  String get historyClearConfirm => 'Törli a teljes előzményt?';
+
+  @override
+  String get termsLink => 'Szolgáltatási feltételek';
 }

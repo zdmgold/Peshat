@@ -5,7 +5,8 @@ import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 
 class LanguagePickerScreen extends StatefulWidget {
-  const LanguagePickerScreen({super.key});
+  final String? current;
+  const LanguagePickerScreen({super.key, this.current});
 
   @override
   State<LanguagePickerScreen> createState() => _LanguagePickerScreenState();

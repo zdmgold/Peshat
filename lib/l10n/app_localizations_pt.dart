@@ -159,4 +159,13 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get versionLabel => 'Versão';
+
+  @override
+  String get historyEmpty => 'Nenhuma digitalização ainda';
+
+  @override
+  String get historyClearConfirm => 'Excluir todo o histórico?';
+
+  @override
+  String get termsLink => 'Termos de Serviço';
 }

@@ -49,5 +49,8 @@
   "aboutLabel": "ስለ",
   "licensesLabel": "ክፍት ምንጭ ፈቃዶች",
   "shareAppLabel": "ይህን መተግበሪያ አጋራ",
-  "versionLabel": "ስሪት"
+  "versionLabel": "ስሪት",
+  "historyEmpty": "እስካሁን ስካን የለም",
+  "historyClearConfirm": "ሁሉንም ታሪክ ሰርዝ?",
+  "termsLink": "የአገልግሎት ውሎች"
 }

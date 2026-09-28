@@ -159,4 +159,13 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get versionLabel => 'ስሪት';
+
+  @override
+  String get historyEmpty => 'እስካሁን ስካን የለም';
+
+  @override
+  String get historyClearConfirm => 'ሁሉንም ታሪክ ሰርዝ?';
+
+  @override
+  String get termsLink => 'የአገልግሎት ውሎች';
 }

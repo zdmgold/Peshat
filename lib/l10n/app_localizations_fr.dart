@@ -159,4 +159,13 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get versionLabel => 'Version';
+
+  @override
+  String get historyEmpty => 'Aucun scan pour le moment';
+
+  @override
+  String get historyClearConfirm => 'Supprimer tout l’historique ?';
+
+  @override
+  String get termsLink => 'Conditions d’utilisation';
 }

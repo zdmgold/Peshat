@@ -49,5 +49,8 @@
   "aboutLabel": "このアプリについて",
   "licensesLabel": "オープンソースライセンス",
   "shareAppLabel": "このアプリを共有",
-  "versionLabel": "バージョン"
+  "versionLabel": "バージョン",
+  "historyEmpty": "スキャン履歴はまだありません",
+  "historyClearConfirm": "すべての履歴を削除しますか？",
+  "termsLink": "利用規約"
 }

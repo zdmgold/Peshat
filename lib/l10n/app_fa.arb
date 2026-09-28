@@ -49,5 +49,8 @@
   "aboutLabel": "درباره",
   "licensesLabel": "مجوزهای متن‌باز",
   "shareAppLabel": "اشتراک‌گذاری این برنامه",
-  "versionLabel": "نسخه"
+  "versionLabel": "نسخه",
+  "historyEmpty": "هنوز اسکنی وجود ندارد",
+  "historyClearConfirm": "همه تاریخچه حذف شود؟",
+  "termsLink": "شرایط استفاده از خدمات"
 }

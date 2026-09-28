@@ -159,4 +159,13 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get versionLabel => 'Wersja';
+
+  @override
+  String get historyEmpty => 'Brak skanów';
+
+  @override
+  String get historyClearConfirm => 'Usunąć całą historię?';
+
+  @override
+  String get termsLink => 'Warunki korzystania';
 }

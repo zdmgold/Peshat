@@ -49,5 +49,8 @@
   "aboutLabel": "Hakkında",
   "licensesLabel": "Açık kaynak lisansları",
   "shareAppLabel": "Bu uygulamayı paylaş",
-  "versionLabel": "Sürüm"
+  "versionLabel": "Sürüm",
+  "historyEmpty": "Henüz tarama yok",
+  "historyClearConfirm": "Tüm geçmiş silinsin mi?",
+  "termsLink": "Kullanım Koşulları"
 }

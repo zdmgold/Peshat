@@ -159,4 +159,13 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get versionLabel => 'ਵਰਜਨ';
+
+  @override
+  String get historyEmpty => 'ਹਾਲੇ ਕੋਈ ਸਕੈਨ ਨਹੀਂ';
+
+  @override
+  String get historyClearConfirm => 'ਸਾਰਾ ਇਤਿਹਾਸ ਮਿਟਾਉਣਾ ਹੈ?';
+
+  @override
+  String get termsLink => 'ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ';
 }

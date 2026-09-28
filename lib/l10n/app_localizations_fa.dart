@@ -159,4 +159,13 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get versionLabel => 'نسخه';
+
+  @override
+  String get historyEmpty => 'هنوز اسکنی وجود ندارد';
+
+  @override
+  String get historyClearConfirm => 'همه تاریخچه حذف شود؟';
+
+  @override
+  String get termsLink => 'شرایط استفاده از خدمات';
 }

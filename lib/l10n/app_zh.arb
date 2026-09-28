@@ -49,5 +49,8 @@
   "aboutLabel": "关于",
   "licensesLabel": "开源许可",
   "shareAppLabel": "分享此应用",
-  "versionLabel": "版本"
+  "versionLabel": "版本",
+  "historyEmpty": "暂无扫描记录",
+  "historyClearConfirm": "删除所有历史记录？",
+  "termsLink": "服务条款"
 }

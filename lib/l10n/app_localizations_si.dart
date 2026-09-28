@@ -159,4 +159,13 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get versionLabel => 'අනුවාදය';
+
+  @override
+  String get historyEmpty => 'තවම ස්කෑන් නැත';
+
+  @override
+  String get historyClearConfirm => 'සියලු ඉතිහාසය මකන්නද?';
+
+  @override
+  String get termsLink => 'සේවා කොන්දේසි';
 }

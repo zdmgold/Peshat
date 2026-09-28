@@ -159,4 +159,13 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get versionLabel => 'កំណែ';
+
+  @override
+  String get historyEmpty => 'មិនទាន់មានការស្កេនទេ';
+
+  @override
+  String get historyClearConfirm => 'លុបប្រវត្តិទាំងអស់?';
+
+  @override
+  String get termsLink => 'លក្ខខណ្ឌសេវាកម្ម';
 }

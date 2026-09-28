@@ -159,4 +159,13 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get versionLabel => 'Версія';
+
+  @override
+  String get historyEmpty => 'Ще немає сканувань';
+
+  @override
+  String get historyClearConfirm => 'Видалити всю історію?';
+
+  @override
+  String get termsLink => 'Умови використання';
 }

@@ -159,4 +159,13 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get versionLabel => 'Versie';
+
+  @override
+  String get historyEmpty => 'Nog geen scans';
+
+  @override
+  String get historyClearConfirm => 'Alle geschiedenis verwijderen?';
+
+  @override
+  String get termsLink => 'Servicevoorwaarden';
 }

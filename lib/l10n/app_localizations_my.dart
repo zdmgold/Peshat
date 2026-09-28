@@ -159,4 +159,13 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get versionLabel => 'ဗားရှင်း';
+
+  @override
+  String get historyEmpty => 'စကင်ဖတ်မှု မရှိသေးပါ';
+
+  @override
+  String get historyClearConfirm => 'မှတ်တမ်းအားလုံး ဖျက်မလား?';
+
+  @override
+  String get termsLink => 'ဝန်ဆောင်မှု စည်းကမ်းချက်များ';
 }
