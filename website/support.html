@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Support — Peshat</title>
+<meta name="description" content="Support and frequently asked questions for Peshat.">
+<meta name="theme-color" content="#EDEAE2" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#14171C" media="(prefers-color-scheme: dark)">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site">
+  <div class="container">
+    <a href="/" class="brand">
+      <img src="assets/logo.svg" alt="" class="logo" width="40" height="40">
+    </a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="prose">
+  <div class="container">
+
+    <h1>Support</h1>
+    <p class="meta">Questions, bugs, feature requests</p>
+
+    <p>Email: <a href="mailto:support@peshat.app">support@peshat.app</a></p>
+    <p>Please include your device model, operating system version, and a brief description of the issue. Screenshots help. We read every message.</p>
+
+    <h2>Frequently asked</h2>
+
+    <div class="faq">
+
+      <details>
+        <summary>Does Peshat send my scanned text anywhere?</summary>
+        <p>No. Optical character recognition and translation both run entirely on your device. The app itself makes no network calls. The only network activity comes from the AdMob SDK, which fetches ads and does not receive your scanned content.</p>
+      </details>
+
+      <details>
+        <summary>Why does the app ask for camera permission?</summary>
+        <p>Peshat scans documents through your device's camera. The permission is only used while the scanner is open. You can revoke it at any time in your device settings; the app will simply refuse to scan.</p>
+      </details>
+
+      <details>
+        <summary>Why does iOS ask to track me?</summary>
+        <p>The ad SDK (Google AdMob) may use your advertising identifier to serve personalized ads. If you decline, ads still appear but are non-personalized. The app itself does not track you across other apps or websites.</p>
+      </details>
+
+      <details>
+        <summary>I bought the ad-removal. How do I restore it on a new device?</summary>
+        <p>Open Settings inside the app and tap <em>Restore Purchase</em>. The purchase is tied to the Apple ID or Google account you used at checkout. If the restore fails, ensure you are signed in to the same account.</p>
+      </details>
+
+      <details>
+        <summary>Which languages are supported?</summary>
+        <p>36 languages, including Arabic, Bengali, Burmese, Chinese (Simplified), Czech, Dutch, English, Filipino, French, German, Greek, Hebrew, Hindi, Hungarian, Indonesian, Italian, Japanese, Khmer, Korean, Lao, Nepali, Persian, Polish, Portuguese (Brazilian), Punjabi, Romanian, Russian, Sinhala, Spanish, Swedish, Thai, Turkish, Ukrainian, Urdu, Vietnamese.</p>
+      </details>
+
+      <details>
+        <summary>Does translation work offline?</summary>
+        <p>Yes, after the first launch. The translation models are downloaded once on first use of a given language pair, then cached on the device. Subsequent translations for that pair work without a network connection.</p>
+      </details>
+
+      <details>
+        <summary>Why is the OCR wrong sometimes?</summary>
+        <p>OCR accuracy depends on lighting, camera focus, and text clarity. The built-in scanner auto-detects document edges and corrects perspective, but handwritten or highly stylized text may not be recognized. Try capturing under good, even lighting.</p>
+      </details>
+
+      <details>
+        <summary>Can I submit a translation correction?</summary>
+        <p>Not yet, but it is on the roadmap. If you spot a systematic error in a specific language pair, email us with the source text, the target language, and what the correct translation should be.</p>
+      </details>
+
+    </div>
+
+    <h2>Privacy</h2>
+    <p>See the <a href="privacy.html">privacy policy</a> for a full description of what the app does and does not collect.</p>
+
+  </div>
+</section>
+</main>
+
+<footer class="site">
+  <div class="container">
+    <span>© 2026 Peshat</span>
+    <span class="spacer"></span>
+    <a href="index.html">Home</a>
+    <a href="privacy.html">Privacy</a>
+  </div>
+</footer>
+
+</body>
+</html>
