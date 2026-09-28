@@ -186,4 +186,22 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get translatedTo => 'अनुवादित';
+
+  @override
+  String get translateToLabel => 'इसमें अनुवाद करें';
+
+  @override
+  String get typeTextLabel => 'टेक्स्ट टाइप या पेस्ट करें';
+
+  @override
+  String get importFileLabel => 'फ़ाइल आयात करें';
+
+  @override
+  String get recentScansLabel => 'हाल के स्कैन';
+
+  @override
+  String get seeAllLabel => 'सभी देखें';
+
+  @override
+  String get uiLanguageLabel => 'ऐप भाषा';
 }

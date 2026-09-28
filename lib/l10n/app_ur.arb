@@ -58,5 +58,11 @@
   "copiedMessage": "کلپ بورڈ پر کاپی ہو گیا",
   "exportTxtAction": "متن کے طور پر ایکسپورٹ کریں",
   "exportPdfAction": "PDF کے طور پر ایکسپورٹ کریں",
-  "translatedTo": "ترجمہ کیا گیا"
+  "translatedTo": "ترجمہ کیا گیا",
+  "translateToLabel": "پر ترجمہ کریں",
+  "typeTextLabel": "متن ٹائپ یا پیسٹ کریں",
+  "importFileLabel": "فائل درآمد کریں",
+  "recentScansLabel": "حالیہ اسکین",
+  "seeAllLabel": "سب دیکھیں",
+  "uiLanguageLabel": "ایپ کی زبان"
 }

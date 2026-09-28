@@ -58,5 +58,11 @@
   "copiedMessage": "הועתק ללוח",
   "exportTxtAction": "ייצוא כטקסט",
   "exportPdfAction": "ייצוא כ-PDF",
-  "translatedTo": "תורגם ל"
+  "translatedTo": "תורגם ל",
+  "translateToLabel": "תרגם ל",
+  "typeTextLabel": "הקלד או הדבק טקסט",
+  "importFileLabel": "ייבא קובץ",
+  "recentScansLabel": "סריקות אחרונות",
+  "seeAllLabel": "הצג הכל",
+  "uiLanguageLabel": "שפת האפליקציה"
 }

@@ -516,6 +516,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Translated to'**
   String get translatedTo;
+
+  /// No description provided for @translateToLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Translate to'**
+  String get translateToLabel;
+
+  /// No description provided for @typeTextLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Type or paste text'**
+  String get typeTextLabel;
+
+  /// No description provided for @importFileLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Import a file'**
+  String get importFileLabel;
+
+  /// No description provided for @recentScansLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent scans'**
+  String get recentScansLabel;
+
+  /// No description provided for @seeAllLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'See all'**
+  String get seeAllLabel;
+
+  /// No description provided for @uiLanguageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'App language'**
+  String get uiLanguageLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

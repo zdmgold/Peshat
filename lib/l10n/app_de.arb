@@ -58,5 +58,11 @@
   "copiedMessage": "In die Zwischenablage kopiert",
   "exportTxtAction": "Als Text exportieren",
   "exportPdfAction": "Als PDF exportieren",
-  "translatedTo": "Übersetzt nach"
+  "translatedTo": "Übersetzt nach",
+  "translateToLabel": "Übersetzen nach",
+  "typeTextLabel": "Text eingeben oder einfügen",
+  "importFileLabel": "Datei importieren",
+  "recentScansLabel": "Letzte Scans",
+  "seeAllLabel": "Alle anzeigen",
+  "uiLanguageLabel": "App-Sprache"
 }

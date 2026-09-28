@@ -186,4 +186,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get translatedTo => 'تمت الترجمة إلى';
+
+  @override
+  String get translateToLabel => 'ترجم إلى';
+
+  @override
+  String get typeTextLabel => 'اكتب أو الصق النص';
+
+  @override
+  String get importFileLabel => 'استيراد ملف';
+
+  @override
+  String get recentScansLabel => 'عمليات المسح الأخيرة';
+
+  @override
+  String get seeAllLabel => 'عرض الكل';
+
+  @override
+  String get uiLanguageLabel => 'لغة التطبيق';
 }

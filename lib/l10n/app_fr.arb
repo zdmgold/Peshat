@@ -58,5 +58,11 @@
   "copiedMessage": "Copié dans le presse-papiers",
   "exportTxtAction": "Exporter en texte",
   "exportPdfAction": "Exporter en PDF",
-  "translatedTo": "Traduit en"
+  "translatedTo": "Traduit en",
+  "translateToLabel": "Traduire en",
+  "typeTextLabel": "Saisir ou coller du texte",
+  "importFileLabel": "Importer un fichier",
+  "recentScansLabel": "Analyses récentes",
+  "seeAllLabel": "Voir tout",
+  "uiLanguageLabel": "Langue de l’application"
 }

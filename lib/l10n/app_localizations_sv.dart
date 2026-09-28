@@ -186,4 +186,22 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get translatedTo => 'Översatt till';
+
+  @override
+  String get translateToLabel => 'Översätt till';
+
+  @override
+  String get typeTextLabel => 'Skriv eller klistra in text';
+
+  @override
+  String get importFileLabel => 'Importera en fil';
+
+  @override
+  String get recentScansLabel => 'Senaste skanningar';
+
+  @override
+  String get seeAllLabel => 'Visa alla';
+
+  @override
+  String get uiLanguageLabel => 'App-språk';
 }

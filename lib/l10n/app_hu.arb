@@ -58,5 +58,11 @@
   "copiedMessage": "Vágólapra másolva",
   "exportTxtAction": "Exportálás szövegként",
   "exportPdfAction": "Exportálás PDF-ként",
-  "translatedTo": "Lefordítva"
+  "translatedTo": "Lefordítva",
+  "translateToLabel": "Fordítás erre",
+  "typeTextLabel": "Írjon be vagy illesszen be szöveget",
+  "importFileLabel": "Fájl importálása",
+  "recentScansLabel": "Legutóbbi beolvasások",
+  "seeAllLabel": "Összes megtekintése",
+  "uiLanguageLabel": "Alkalmazás nyelve"
 }

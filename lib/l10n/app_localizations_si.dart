@@ -186,4 +186,22 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get translatedTo => 'පරිවර්තනය කරන ලදී';
+
+  @override
+  String get translateToLabel => 'මෙයට පරිවර්තනය කරන්න';
+
+  @override
+  String get typeTextLabel => 'පෙළ ටයිප් හෝ අලවන්න';
+
+  @override
+  String get importFileLabel => 'ගොනුවක් ආයාත කරන්න';
+
+  @override
+  String get recentScansLabel => 'මෑත ස්කෑන්';
+
+  @override
+  String get seeAllLabel => 'සියල්ල බලන්න';
+
+  @override
+  String get uiLanguageLabel => 'යෙදුම් භාෂාව';
 }

@@ -58,5 +58,11 @@
   "copiedMessage": "ወደ ቅንጥብ ሰሌዳ ተቀድቷል",
   "exportTxtAction": "እንደ ጽሑፍ ወደ ውጭ ላክ",
   "exportPdfAction": "እንደ PDF ወደ ውጭ ላክ",
-  "translatedTo": "ወደ ተተርጉሟል"
+  "translatedTo": "ወደ ተተርጉሟል",
+  "translateToLabel": "ወደ ተርጉም",
+  "typeTextLabel": "ጽሑፍ ይተይቡ ወይም ይለጥፉ",
+  "importFileLabel": "ፋይል አስመጣ",
+  "recentScansLabel": "የቅርብ ጊዜ ስካኖች",
+  "seeAllLabel": "ሁሉንም ይመልከቱ",
+  "uiLanguageLabel": "የመተግበሪያ ቋንቋ"
 }

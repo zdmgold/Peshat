@@ -186,4 +186,22 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get translatedTo => 'แปลเป็น';
+
+  @override
+  String get translateToLabel => 'แปลเป็น';
+
+  @override
+  String get typeTextLabel => 'พิมพ์หรือวางข้อความ';
+
+  @override
+  String get importFileLabel => 'นำเข้าไฟล์';
+
+  @override
+  String get recentScansLabel => 'การสแกนล่าสุด';
+
+  @override
+  String get seeAllLabel => 'ดูทั้งหมด';
+
+  @override
+  String get uiLanguageLabel => 'ภาษาของแอป';
 }

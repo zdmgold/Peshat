@@ -58,5 +58,11 @@
   "copiedMessage": "Скопійовано в буфер обміну",
   "exportTxtAction": "Експорт як текст",
   "exportPdfAction": "Експорт як PDF",
-  "translatedTo": "Перекладено на"
+  "translatedTo": "Перекладено на",
+  "translateToLabel": "Перекласти на",
+  "typeTextLabel": "Введіть або вставте текст",
+  "importFileLabel": "Імпортувати файл",
+  "recentScansLabel": "Недавні сканування",
+  "seeAllLabel": "Показати все",
+  "uiLanguageLabel": "Мова застосунку"
 }

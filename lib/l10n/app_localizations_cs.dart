@@ -186,4 +186,22 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get translatedTo => 'Přeloženo do';
+
+  @override
+  String get translateToLabel => 'Přeložit do';
+
+  @override
+  String get typeTextLabel => 'Zadejte nebo vložte text';
+
+  @override
+  String get importFileLabel => 'Importovat soubor';
+
+  @override
+  String get recentScansLabel => 'Nedávné skeny';
+
+  @override
+  String get seeAllLabel => 'Zobrazit vše';
+
+  @override
+  String get uiLanguageLabel => 'Jazyk aplikace';
 }

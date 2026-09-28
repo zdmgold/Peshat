@@ -58,5 +58,11 @@
   "copiedMessage": "Copiat în clipboard",
   "exportTxtAction": "Exportați ca text",
   "exportPdfAction": "Exportați ca PDF",
-  "translatedTo": "Tradus în"
+  "translatedTo": "Tradus în",
+  "translateToLabel": "Tradu în",
+  "typeTextLabel": "Tastați sau lipiți text",
+  "importFileLabel": "Importați un fișier",
+  "recentScansLabel": "Scanări recente",
+  "seeAllLabel": "Vezi tot",
+  "uiLanguageLabel": "Limba aplicației"
 }

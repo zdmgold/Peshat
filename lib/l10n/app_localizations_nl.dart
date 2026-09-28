@@ -186,4 +186,22 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get translatedTo => 'Vertaald naar';
+
+  @override
+  String get translateToLabel => 'Vertalen naar';
+
+  @override
+  String get typeTextLabel => 'Typ of plak tekst';
+
+  @override
+  String get importFileLabel => 'Een bestand importeren';
+
+  @override
+  String get recentScansLabel => 'Recente scans';
+
+  @override
+  String get seeAllLabel => 'Alles bekijken';
+
+  @override
+  String get uiLanguageLabel => 'App-taal';
 }

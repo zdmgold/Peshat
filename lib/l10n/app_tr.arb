@@ -58,5 +58,11 @@
   "copiedMessage": "Panoya kopyalandı",
   "exportTxtAction": "Metin olarak dışa aktar",
   "exportPdfAction": "PDF olarak dışa aktar",
-  "translatedTo": "Çevrildi"
+  "translatedTo": "Çevrildi",
+  "translateToLabel": "Şuna çevir",
+  "typeTextLabel": "Metin yazın veya yapıştırın",
+  "importFileLabel": "Dosya içe aktar",
+  "recentScansLabel": "Son taramalar",
+  "seeAllLabel": "Tümünü gör",
+  "uiLanguageLabel": "Uygulama dili"
 }

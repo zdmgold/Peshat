@@ -186,4 +186,22 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get translatedTo => 'ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ';
+
+  @override
+  String get translateToLabel => 'ਇਸ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ';
+
+  @override
+  String get typeTextLabel => 'ਟੈਕਸਟ ਟਾਈਪ ਜਾਂ ਪੇਸਟ ਕਰੋ';
+
+  @override
+  String get importFileLabel => 'ਫਾਈਲ ਆਯਾਤ ਕਰੋ';
+
+  @override
+  String get recentScansLabel => 'ਤਾਜ਼ਾ ਸਕੈਨ';
+
+  @override
+  String get seeAllLabel => 'ਸਭ ਦੇਖੋ';
+
+  @override
+  String get uiLanguageLabel => 'ਐਪ ਭਾਸ਼ਾ';
 }

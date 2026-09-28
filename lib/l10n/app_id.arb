@@ -58,5 +58,11 @@
   "copiedMessage": "Disalin ke clipboard",
   "exportTxtAction": "Ekspor sebagai teks",
   "exportPdfAction": "Ekspor sebagai PDF",
-  "translatedTo": "Diterjemahkan ke"
+  "translatedTo": "Diterjemahkan ke",
+  "translateToLabel": "Terjemahkan ke",
+  "typeTextLabel": "Ketik atau tempel teks",
+  "importFileLabel": "Impor file",
+  "recentScansLabel": "Pemindaian terbaru",
+  "seeAllLabel": "Lihat semua",
+  "uiLanguageLabel": "Bahasa aplikasi"
 }

@@ -186,4 +186,22 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get translatedTo => 'Diterjemahkan ke';
+
+  @override
+  String get translateToLabel => 'Terjemahkan ke';
+
+  @override
+  String get typeTextLabel => 'Ketik atau tempel teks';
+
+  @override
+  String get importFileLabel => 'Impor file';
+
+  @override
+  String get recentScansLabel => 'Pemindaian terbaru';
+
+  @override
+  String get seeAllLabel => 'Lihat semua';
+
+  @override
+  String get uiLanguageLabel => 'Bahasa aplikasi';
 }

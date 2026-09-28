@@ -58,5 +58,11 @@
   "copiedMessage": "ຄັດລອກໃສ່ຄລິບບອດແລ້ວ",
   "exportTxtAction": "ສົ່ງອອກເປັນຂໍ້ຄວາມ",
   "exportPdfAction": "ສົ່ງອອກເປັນ PDF",
-  "translatedTo": "ແປເປັນ"
+  "translatedTo": "ແປເປັນ",
+  "translateToLabel": "ແປເປັນ",
+  "typeTextLabel": "ພິມ ຫຼື ວາງຂໍ້ຄວາມ",
+  "importFileLabel": "ນຳເຂົ້າໄຟລ໌",
+  "recentScansLabel": "ການສະແກນທີ່ຜ່ານມາ",
+  "seeAllLabel": "ເບິ່ງທັງໝົດ",
+  "uiLanguageLabel": "ພາສາແອັບ"
 }

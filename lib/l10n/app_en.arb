@@ -68,5 +68,11 @@
   "copiedMessage": "Copied to clipboard",
   "exportTxtAction": "Export as text",
   "exportPdfAction": "Export as PDF",
-  "translatedTo": "Translated to"
+  "translatedTo": "Translated to",
+  "translateToLabel": "Translate to",
+  "typeTextLabel": "Type or paste text",
+  "importFileLabel": "Import a file",
+  "recentScansLabel": "Recent scans",
+  "seeAllLabel": "See all",
+  "uiLanguageLabel": "App language"
 }

@@ -186,4 +186,22 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get translatedTo => 'Traduzido para';
+
+  @override
+  String get translateToLabel => 'Traduzir para';
+
+  @override
+  String get typeTextLabel => 'Digite ou cole o texto';
+
+  @override
+  String get importFileLabel => 'Importar um arquivo';
+
+  @override
+  String get recentScansLabel => 'Digitalizações recentes';
+
+  @override
+  String get seeAllLabel => 'Ver tudo';
+
+  @override
+  String get uiLanguageLabel => 'Idioma do aplicativo';
 }

@@ -58,5 +58,11 @@
   "copiedMessage": "ကလစ်ဘုတ်သို့ ကူးယူပြီးပါပြီ",
   "exportTxtAction": "စာသားအဖြစ် တင်ပို့ပါ",
   "exportPdfAction": "PDF အဖြစ် တင်ပို့ပါ",
-  "translatedTo": "သို့ ဘာသာပြန်ထားသည်"
+  "translatedTo": "သို့ ဘာသာပြန်ထားသည်",
+  "translateToLabel": "သို့ ဘာသာပြန်ပါ",
+  "typeTextLabel": "စာသားရိုက်ထည့် သို့မဟုတ် ကူးထည့်ပါ",
+  "importFileLabel": "ဖိုင်တင်သွင်းပါ",
+  "recentScansLabel": "မကြာသေးမီ စကင်များ",
+  "seeAllLabel": "အားလုံးကြည့်ပါ",
+  "uiLanguageLabel": "အက်ပ် ဘာသာစကား"
 }

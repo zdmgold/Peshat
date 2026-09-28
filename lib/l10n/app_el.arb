@@ -58,5 +58,11 @@
   "copiedMessage": "Αντιγράφηκε στο πρόχειρο",
   "exportTxtAction": "Εξαγωγή ως κείμενο",
   "exportPdfAction": "Εξαγωγή ως PDF",
-  "translatedTo": "Μεταφράστηκε σε"
+  "translatedTo": "Μεταφράστηκε σε",
+  "translateToLabel": "Μετάφραση σε",
+  "typeTextLabel": "Πληκτρολογήστε ή επικολλήστε κείμενο",
+  "importFileLabel": "Εισαγωγή αρχείου",
+  "recentScansLabel": "Πρόσφατες σαρώσεις",
+  "seeAllLabel": "Προβολή όλων",
+  "uiLanguageLabel": "Γλώσσα εφαρμογής"
 }

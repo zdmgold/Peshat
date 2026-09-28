@@ -186,4 +186,22 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get translatedTo => 'Çevrildi';
+
+  @override
+  String get translateToLabel => 'Şuna çevir';
+
+  @override
+  String get typeTextLabel => 'Metin yazın veya yapıştırın';
+
+  @override
+  String get importFileLabel => 'Dosya içe aktar';
+
+  @override
+  String get recentScansLabel => 'Son taramalar';
+
+  @override
+  String get seeAllLabel => 'Tümünü gör';
+
+  @override
+  String get uiLanguageLabel => 'Uygulama dili';
 }

@@ -186,4 +186,22 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get translatedTo => 'Translated to';
+
+  @override
+  String get translateToLabel => 'Translate to';
+
+  @override
+  String get typeTextLabel => 'Type or paste text';
+
+  @override
+  String get importFileLabel => 'Import a file';
+
+  @override
+  String get recentScansLabel => 'Recent scans';
+
+  @override
+  String get seeAllLabel => 'See all';
+
+  @override
+  String get uiLanguageLabel => 'App language';
 }

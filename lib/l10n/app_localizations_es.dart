@@ -186,4 +186,22 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get translatedTo => 'Traducido a';
+
+  @override
+  String get translateToLabel => 'Traducir a';
+
+  @override
+  String get typeTextLabel => 'Escribe o pega texto';
+
+  @override
+  String get importFileLabel => 'Importar un archivo';
+
+  @override
+  String get recentScansLabel => 'Escaneos recientes';
+
+  @override
+  String get seeAllLabel => 'Ver todo';
+
+  @override
+  String get uiLanguageLabel => 'Idioma de la aplicación';
 }

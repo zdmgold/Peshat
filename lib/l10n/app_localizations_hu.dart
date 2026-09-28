@@ -186,4 +186,22 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get translatedTo => 'Lefordítva';
+
+  @override
+  String get translateToLabel => 'Fordítás erre';
+
+  @override
+  String get typeTextLabel => 'Írjon be vagy illesszen be szöveget';
+
+  @override
+  String get importFileLabel => 'Fájl importálása';
+
+  @override
+  String get recentScansLabel => 'Legutóbbi beolvasások';
+
+  @override
+  String get seeAllLabel => 'Összes megtekintése';
+
+  @override
+  String get uiLanguageLabel => 'Alkalmazás nyelve';
 }

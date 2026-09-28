@@ -18,16 +18,19 @@ import '../l10n/app_localizations.dart';
 import 'language_picker_screen.dart';
 
 class ResultScreen extends StatefulWidget {
-  final String imagePath;
+  final String? imagePath;
+  final String? inputText;
   final String initialTargetLanguage;
   final HistoryProvider history;
 
   const ResultScreen({
     super.key,
-    required this.imagePath,
+    this.imagePath,
+    this.inputText,
     required this.initialTargetLanguage,
     required this.history,
-  });
+  }) : assert(imagePath != null || inputText != null,
+            'Either imagePath or inputText must be provided');
 
   @override
   State<ResultScreen> createState() => _ResultScreenState();
@@ -75,10 +78,17 @@ class _ResultScreenState extends State<ResultScreen>
   }
 
   Future<void> _runPipeline() async {
-    await _provider.runPipeline(
-      image: XFile(widget.imagePath),
-      targetLanguage: _targetLanguage,
-    );
+    if (widget.imagePath != null) {
+      await _provider.runImagePipeline(
+        image: XFile(widget.imagePath!),
+        targetLanguage: _targetLanguage,
+      );
+    } else {
+      await _provider.runTextPipeline(
+        text: widget.inputText!,
+        targetLanguage: _targetLanguage,
+      );
+    }
   }
 
   Future<void> _pickLanguage() async {

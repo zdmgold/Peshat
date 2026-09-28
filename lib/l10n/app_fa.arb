@@ -58,5 +58,11 @@
   "copiedMessage": "در کلیپ‌بورد کپی شد",
   "exportTxtAction": "خروجی به‌صورت متن",
   "exportPdfAction": "خروجی به‌صورت PDF",
-  "translatedTo": "ترجمه شده به"
+  "translatedTo": "ترجمه شده به",
+  "translateToLabel": "ترجم به",
+  "typeTextLabel": "متن را تایپ یا جای‌گذاری کنید",
+  "importFileLabel": "وارد کردن فایل",
+  "recentScansLabel": "اسکن‌های اخیر",
+  "seeAllLabel": "مشاهده همه",
+  "uiLanguageLabel": "زبان برنامه"
 }

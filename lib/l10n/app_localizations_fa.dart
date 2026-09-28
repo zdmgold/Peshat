@@ -186,4 +186,22 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get translatedTo => 'ترجمه شده به';
+
+  @override
+  String get translateToLabel => 'ترجم به';
+
+  @override
+  String get typeTextLabel => 'متن را تایپ یا جای‌گذاری کنید';
+
+  @override
+  String get importFileLabel => 'وارد کردن فایل';
+
+  @override
+  String get recentScansLabel => 'اسکن‌های اخیر';
+
+  @override
+  String get seeAllLabel => 'مشاهده همه';
+
+  @override
+  String get uiLanguageLabel => 'زبان برنامه';
 }

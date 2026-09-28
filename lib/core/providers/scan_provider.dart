@@ -22,7 +22,7 @@ class ScanProvider extends ValueNotifier<ScanState> {
         _detector = detector ?? LanguageDetector(),
         super(const ScanState.idle());
 
-  Future<void> runPipeline({
+  Future<void> runImagePipeline({
     required XFile image,
     required String targetLanguage,
   }) async {
@@ -36,36 +36,59 @@ class ScanProvider extends ValueNotifier<ScanState> {
         value = const ScanState.error(AppErrorCode.noTextDetected);
         return;
       }
-      String srcLang = 'en';
-      try {
-        final d = await _detector.detect(src).timeout(const Duration(seconds: 5));
-        if (d.isNotEmpty && d != 'und') srcLang = d;
-      } catch (_) {}
-      value = ScanPreparingModel(targetLanguage);
-      await _translator
-          .ensureModelsReady(fromBcp: srcLang, toBcp: targetLanguage)
-          .timeout(const Duration(minutes: 3));
-      value = ScanTranslating(src, srcLang);
-      final translated = await _translator
-          .translate(text: src, fromBcp: srcLang, toBcp: targetLanguage)
-          .timeout(const Duration(seconds: 60));
-      value = ScanDone(
-        sourceText: src,
-        translatedText: translated,
-        sourceLanguage: srcLang,
-        targetLanguage: targetLanguage,
-      );
+      await _translate(src, targetLanguage);
     } on TimeoutException catch (e) {
       value = ScanState.error(AppErrorCode.timeout, detail: e.toString());
     } on TranslatorException catch (e) {
       value = ScanState.error(e.code, detail: e.detail ?? e.toString());
     } catch (e, st) {
       final trace = st.toString().split('\n').take(4).join('\n');
-      value = ScanState.error(
-        AppErrorCode.unknown,
-        detail: '$e\n$trace',
-      );
+      value = ScanState.error(AppErrorCode.unknown, detail: '$e\n$trace');
     }
+  }
+
+  Future<void> runTextPipeline({
+    required String text,
+    required String targetLanguage,
+  }) async {
+    try {
+      final src = text.trim();
+      if (src.isEmpty) {
+        value = const ScanState.error(AppErrorCode.noTextDetected);
+        return;
+      }
+      value = const ScanState.recognizing();
+      await _translate(src, targetLanguage);
+    } on TimeoutException catch (e) {
+      value = ScanState.error(AppErrorCode.timeout, detail: e.toString());
+    } on TranslatorException catch (e) {
+      value = ScanState.error(e.code, detail: e.detail ?? e.toString());
+    } catch (e, st) {
+      final trace = st.toString().split('\n').take(4).join('\n');
+      value = ScanState.error(AppErrorCode.unknown, detail: '$e\n$trace');
+    }
+  }
+
+  Future<void> _translate(String src, String targetLanguage) async {
+    String srcLang = 'en';
+    try {
+      final d = await _detector.detect(src).timeout(const Duration(seconds: 5));
+      if (d.isNotEmpty && d != 'und') srcLang = d;
+    } catch (_) {}
+    value = ScanPreparingModel(targetLanguage);
+    await _translator
+        .ensureModelsReady(fromBcp: srcLang, toBcp: targetLanguage)
+        .timeout(const Duration(minutes: 3));
+    value = ScanTranslating(src, srcLang);
+    final translated = await _translator
+        .translate(text: src, fromBcp: srcLang, toBcp: targetLanguage)
+        .timeout(const Duration(seconds: 60));
+    value = ScanDone(
+      sourceText: src,
+      translatedText: translated,
+      sourceLanguage: srcLang,
+      targetLanguage: targetLanguage,
+    );
   }
 
   void reset() => value = const ScanState.idle();

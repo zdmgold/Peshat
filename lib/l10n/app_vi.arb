@@ -58,5 +58,11 @@
   "copiedMessage": "Đã sao chép vào clipboard",
   "exportTxtAction": "Xuất dưới dạng văn bản",
   "exportPdfAction": "Xuất dưới dạng PDF",
-  "translatedTo": "Đã dịch sang"
+  "translatedTo": "Đã dịch sang",
+  "translateToLabel": "Dịch sang",
+  "typeTextLabel": "Nhập hoặc dán văn bản",
+  "importFileLabel": "Nhập tệp",
+  "recentScansLabel": "Lần quét gần đây",
+  "seeAllLabel": "Xem tất cả",
+  "uiLanguageLabel": "Ngôn ngữ ứng dụng"
 }

@@ -58,5 +58,11 @@
   "copiedMessage": "ক্লিপবোর্ডে কপি করা হয়েছে",
   "exportTxtAction": "টেক্সট হিসেবে রপ্তানি করুন",
   "exportPdfAction": "PDF হিসেবে রপ্তানি করুন",
-  "translatedTo": "অনুবাদ করা হয়েছে"
+  "translatedTo": "অনুবাদ করা হয়েছে",
+  "translateToLabel": "এতে অনুবাদ করুন",
+  "typeTextLabel": "টেক্সট টাইপ বা পেস্ট করুন",
+  "importFileLabel": "ফাইল আমদানি করুন",
+  "recentScansLabel": "সাম্প্রতিক স্ক্যান",
+  "seeAllLabel": "সব দেখুন",
+  "uiLanguageLabel": "অ্যাপের ভাষা"
 }

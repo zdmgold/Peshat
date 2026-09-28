@@ -186,4 +186,22 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get translatedTo => 'ወደ ተተርጉሟል';
+
+  @override
+  String get translateToLabel => 'ወደ ተርጉም';
+
+  @override
+  String get typeTextLabel => 'ጽሑፍ ይተይቡ ወይም ይለጥፉ';
+
+  @override
+  String get importFileLabel => 'ፋይል አስመጣ';
+
+  @override
+  String get recentScansLabel => 'የቅርብ ጊዜ ስካኖች';
+
+  @override
+  String get seeAllLabel => 'ሁሉንም ይመልከቱ';
+
+  @override
+  String get uiLanguageLabel => 'የመተግበሪያ ቋንቋ';
 }

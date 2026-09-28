@@ -58,5 +58,11 @@
   "copiedMessage": "Zkopírováno do schránky",
   "exportTxtAction": "Exportovat jako text",
   "exportPdfAction": "Exportovat jako PDF",
-  "translatedTo": "Přeloženo do"
+  "translatedTo": "Přeloženo do",
+  "translateToLabel": "Přeložit do",
+  "typeTextLabel": "Zadejte nebo vložte text",
+  "importFileLabel": "Importovat soubor",
+  "recentScansLabel": "Nedávné skeny",
+  "seeAllLabel": "Zobrazit vše",
+  "uiLanguageLabel": "Jazyk aplikace"
 }

@@ -186,4 +186,22 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get translatedTo => '번역 대상';
+
+  @override
+  String get translateToLabel => '번역 대상';
+
+  @override
+  String get typeTextLabel => '텍스트 입력 또는 붙여넣기';
+
+  @override
+  String get importFileLabel => '파일 가져오기';
+
+  @override
+  String get recentScansLabel => '최근 스캔';
+
+  @override
+  String get seeAllLabel => '모두 보기';
+
+  @override
+  String get uiLanguageLabel => '앱 언어';
 }

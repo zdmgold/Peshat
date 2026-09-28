@@ -58,5 +58,11 @@
   "copiedMessage": "تم النسخ إلى الحافظة",
   "exportTxtAction": "تصدير كنص",
   "exportPdfAction": "تصدير كـ PDF",
-  "translatedTo": "تمت الترجمة إلى"
+  "translatedTo": "تمت الترجمة إلى",
+  "translateToLabel": "ترجم إلى",
+  "typeTextLabel": "اكتب أو الصق النص",
+  "importFileLabel": "استيراد ملف",
+  "recentScansLabel": "عمليات المسح الأخيرة",
+  "seeAllLabel": "عرض الكل",
+  "uiLanguageLabel": "لغة التطبيق"
 }

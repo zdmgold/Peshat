@@ -186,4 +186,22 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get translatedTo => 'បកប្រែជា';
+
+  @override
+  String get translateToLabel => 'បកប្រែទៅ';
+
+  @override
+  String get typeTextLabel => 'វាយបញ្ចូល ឬបិទភ្ជាប់អត្ថបទ';
+
+  @override
+  String get importFileLabel => 'នាំចូលឯកសារ';
+
+  @override
+  String get recentScansLabel => 'ការស្កេនថ្មីៗ';
+
+  @override
+  String get seeAllLabel => 'មើលទាំងអស់';
+
+  @override
+  String get uiLanguageLabel => 'ភាសាកម្មវិធី';
 }

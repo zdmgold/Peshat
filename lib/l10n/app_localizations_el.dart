@@ -186,4 +186,22 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get translatedTo => 'Μεταφράστηκε σε';
+
+  @override
+  String get translateToLabel => 'Μετάφραση σε';
+
+  @override
+  String get typeTextLabel => 'Πληκτρολογήστε ή επικολλήστε κείμενο';
+
+  @override
+  String get importFileLabel => 'Εισαγωγή αρχείου';
+
+  @override
+  String get recentScansLabel => 'Πρόσφατες σαρώσεις';
+
+  @override
+  String get seeAllLabel => 'Προβολή όλων';
+
+  @override
+  String get uiLanguageLabel => 'Γλώσσα εφαρμογής';
 }

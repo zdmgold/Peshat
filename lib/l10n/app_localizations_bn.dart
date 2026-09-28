@@ -186,4 +186,22 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get translatedTo => 'অনুবাদ করা হয়েছে';
+
+  @override
+  String get translateToLabel => 'এতে অনুবাদ করুন';
+
+  @override
+  String get typeTextLabel => 'টেক্সট টাইপ বা পেস্ট করুন';
+
+  @override
+  String get importFileLabel => 'ফাইল আমদানি করুন';
+
+  @override
+  String get recentScansLabel => 'সাম্প্রতিক স্ক্যান';
+
+  @override
+  String get seeAllLabel => 'সব দেখুন';
+
+  @override
+  String get uiLanguageLabel => 'অ্যাপের ভাষা';
 }

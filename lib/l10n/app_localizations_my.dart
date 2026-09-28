@@ -186,4 +186,22 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get translatedTo => 'သို့ ဘာသာပြန်ထားသည်';
+
+  @override
+  String get translateToLabel => 'သို့ ဘာသာပြန်ပါ';
+
+  @override
+  String get typeTextLabel => 'စာသားရိုက်ထည့် သို့မဟုတ် ကူးထည့်ပါ';
+
+  @override
+  String get importFileLabel => 'ဖိုင်တင်သွင်းပါ';
+
+  @override
+  String get recentScansLabel => 'မကြာသေးမီ စကင်များ';
+
+  @override
+  String get seeAllLabel => 'အားလုံးကြည့်ပါ';
+
+  @override
+  String get uiLanguageLabel => 'အက်ပ် ဘာသာစကား';
 }

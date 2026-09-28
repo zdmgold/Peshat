@@ -58,5 +58,11 @@
   "copiedMessage": "Kopierat till urklipp",
   "exportTxtAction": "Exportera som text",
   "exportPdfAction": "Exportera som PDF",
-  "translatedTo": "Översatt till"
+  "translatedTo": "Översatt till",
+  "translateToLabel": "Översätt till",
+  "typeTextLabel": "Skriv eller klistra in text",
+  "importFileLabel": "Importera en fil",
+  "recentScansLabel": "Senaste skanningar",
+  "seeAllLabel": "Visa alla",
+  "uiLanguageLabel": "App-språk"
 }

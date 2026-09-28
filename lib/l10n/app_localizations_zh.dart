@@ -186,4 +186,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get translatedTo => '翻译为';
+
+  @override
+  String get translateToLabel => '翻译为';
+
+  @override
+  String get typeTextLabel => '输入或粘贴文本';
+
+  @override
+  String get importFileLabel => '导入文件';
+
+  @override
+  String get recentScansLabel => '最近的扫描';
+
+  @override
+  String get seeAllLabel => '查看全部';
+
+  @override
+  String get uiLanguageLabel => '应用语言';
 }

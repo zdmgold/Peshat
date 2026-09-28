@@ -7,6 +7,7 @@ import 'core/providers/theme_provider.dart';
 import 'core/providers/purchase_provider.dart';
 import 'core/providers/settings_provider.dart';
 import 'core/providers/history_provider.dart';
+import 'core/providers/ui_locale_provider.dart';
 import 'l10n/app_localizations.dart';
 import 'screens/scan_screen.dart';
 
@@ -30,6 +31,7 @@ class _PeshatAppState extends State<PeshatApp> {
   late final PurchaseProvider purchaseProvider;
   late final SettingsProvider settingsProvider;
   late final HistoryProvider historyProvider;
+  late final UiLocaleProvider uiLocaleProvider;
 
   @override
   void initState() {
@@ -38,18 +40,20 @@ class _PeshatAppState extends State<PeshatApp> {
     purchaseProvider = PurchaseProvider(widget.prefs);
     settingsProvider = SettingsProvider(widget.prefs);
     historyProvider = HistoryProvider(widget.prefs);
+    uiLocaleProvider = UiLocaleProvider(widget.prefs);
   }
 
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
-      listenable: themeProvider,
+      listenable: Listenable.merge([themeProvider, uiLocaleProvider]),
       builder: (context, _) => MaterialApp(
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appName,
         debugShowCheckedModeBanner: false,
         theme: buildLightTheme(),
         darkTheme: buildDarkTheme(),
         themeMode: themeProvider.value,
+        locale: uiLocaleProvider.value,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         home: ScanScreen(
@@ -57,6 +61,7 @@ class _PeshatAppState extends State<PeshatApp> {
           purchase: purchaseProvider,
           settings: settingsProvider,
           history: historyProvider,
+          uiLocale: uiLocaleProvider,
         ),
       ),
     );

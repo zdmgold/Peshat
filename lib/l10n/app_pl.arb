@@ -58,5 +58,11 @@
   "copiedMessage": "Skopiowano do schowka",
   "exportTxtAction": "Eksportuj jako tekst",
   "exportPdfAction": "Eksportuj jako PDF",
-  "translatedTo": "Przetłumaczono na"
+  "translatedTo": "Przetłumaczono na",
+  "translateToLabel": "Przetłumacz na",
+  "typeTextLabel": "Wpisz lub wklej tekst",
+  "importFileLabel": "Importuj plik",
+  "recentScansLabel": "Ostatnie skany",
+  "seeAllLabel": "Zobacz wszystko",
+  "uiLanguageLabel": "Język aplikacji"
 }

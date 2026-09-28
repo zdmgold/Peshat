@@ -186,4 +186,22 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get translatedTo => 'अनुवाद गरियो';
+
+  @override
+  String get translateToLabel => 'यसमा अनुवाद गर्नुहोस्';
+
+  @override
+  String get typeTextLabel => 'पाठ टाइप वा टाँस्नुहोस्';
+
+  @override
+  String get importFileLabel => 'फाइल आयात गर्नुहोस्';
+
+  @override
+  String get recentScansLabel => 'हालैका स्क्यान';
+
+  @override
+  String get seeAllLabel => 'सबै हेर्नुहोस्';
+
+  @override
+  String get uiLanguageLabel => 'एप भाषा';
 }

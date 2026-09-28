@@ -186,4 +186,22 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get translatedTo => 'Tradus în';
+
+  @override
+  String get translateToLabel => 'Tradu în';
+
+  @override
+  String get typeTextLabel => 'Tastați sau lipiți text';
+
+  @override
+  String get importFileLabel => 'Importați un fișier';
+
+  @override
+  String get recentScansLabel => 'Scanări recente';
+
+  @override
+  String get seeAllLabel => 'Vezi tot';
+
+  @override
+  String get uiLanguageLabel => 'Limba aplicației';
 }

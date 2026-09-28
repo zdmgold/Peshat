@@ -58,5 +58,11 @@
   "copiedMessage": "បានចម្លងទៅក្ដារតម្បៀតខ្ទាស់",
   "exportTxtAction": "នាំចេញជាអត្ថបទ",
   "exportPdfAction": "នាំចេញជា PDF",
-  "translatedTo": "បកប្រែជា"
+  "translatedTo": "បកប្រែជា",
+  "translateToLabel": "បកប្រែទៅ",
+  "typeTextLabel": "វាយបញ្ចូល ឬបិទភ្ជាប់អត្ថបទ",
+  "importFileLabel": "នាំចូលឯកសារ",
+  "recentScansLabel": "ការស្កេនថ្មីៗ",
+  "seeAllLabel": "មើលទាំងអស់",
+  "uiLanguageLabel": "ភាសាកម្មវិធី"
 }

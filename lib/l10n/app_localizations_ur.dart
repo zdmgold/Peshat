@@ -186,4 +186,22 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get translatedTo => 'ترجمہ کیا گیا';
+
+  @override
+  String get translateToLabel => 'پر ترجمہ کریں';
+
+  @override
+  String get typeTextLabel => 'متن ٹائپ یا پیسٹ کریں';
+
+  @override
+  String get importFileLabel => 'فائل درآمد کریں';
+
+  @override
+  String get recentScansLabel => 'حالیہ اسکین';
+
+  @override
+  String get seeAllLabel => 'سب دیکھیں';
+
+  @override
+  String get uiLanguageLabel => 'ایپ کی زبان';
 }

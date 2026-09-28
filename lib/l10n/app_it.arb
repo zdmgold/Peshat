@@ -58,5 +58,11 @@
   "copiedMessage": "Copiato negli appunti",
   "exportTxtAction": "Esporta come testo",
   "exportPdfAction": "Esporta come PDF",
-  "translatedTo": "Tradotto in"
+  "translatedTo": "Tradotto in",
+  "translateToLabel": "Traduci in",
+  "typeTextLabel": "Digita o incolla il testo",
+  "importFileLabel": "Importa un file",
+  "recentScansLabel": "Scansioni recenti",
+  "seeAllLabel": "Vedi tutto",
+  "uiLanguageLabel": "Lingua dell’app"
 }

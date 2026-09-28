@@ -186,4 +186,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get translatedTo => 'Переведено на';
+
+  @override
+  String get translateToLabel => 'Перевести на';
+
+  @override
+  String get typeTextLabel => 'Введите или вставьте текст';
+
+  @override
+  String get importFileLabel => 'Импортировать файл';
+
+  @override
+  String get recentScansLabel => 'Недавние сканирования';
+
+  @override
+  String get seeAllLabel => 'Показать все';
+
+  @override
+  String get uiLanguageLabel => 'Язык приложения';
 }

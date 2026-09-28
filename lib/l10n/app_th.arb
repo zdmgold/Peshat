@@ -58,5 +58,11 @@
   "copiedMessage": "คัดลอกไปยังคลิปบอร์ดแล้ว",
   "exportTxtAction": "ส่งออกเป็นข้อความ",
   "exportPdfAction": "ส่งออกเป็น PDF",
-  "translatedTo": "แปลเป็น"
+  "translatedTo": "แปลเป็น",
+  "translateToLabel": "แปลเป็น",
+  "typeTextLabel": "พิมพ์หรือวางข้อความ",
+  "importFileLabel": "นำเข้าไฟล์",
+  "recentScansLabel": "การสแกนล่าสุด",
+  "seeAllLabel": "ดูทั้งหมด",
+  "uiLanguageLabel": "ภาษาของแอป"
 }

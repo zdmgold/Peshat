@@ -186,4 +186,22 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get translatedTo => 'Đã dịch sang';
+
+  @override
+  String get translateToLabel => 'Dịch sang';
+
+  @override
+  String get typeTextLabel => 'Nhập hoặc dán văn bản';
+
+  @override
+  String get importFileLabel => 'Nhập tệp';
+
+  @override
+  String get recentScansLabel => 'Lần quét gần đây';
+
+  @override
+  String get seeAllLabel => 'Xem tất cả';
+
+  @override
+  String get uiLanguageLabel => 'Ngôn ngữ ứng dụng';
 }

@@ -58,5 +58,11 @@
   "copiedMessage": "ක්ලිප්බෝඩ් වෙත පිටපත් කරන ලදී",
   "exportTxtAction": "පෙළ ලෙස අපනයනය කරන්න",
   "exportPdfAction": "PDF ලෙස අපනයනය කරන්න",
-  "translatedTo": "පරිවර්තනය කරන ලදී"
+  "translatedTo": "පරිවර්තනය කරන ලදී",
+  "translateToLabel": "මෙයට පරිවර්තනය කරන්න",
+  "typeTextLabel": "පෙළ ටයිප් හෝ අලවන්න",
+  "importFileLabel": "ගොනුවක් ආයාත කරන්න",
+  "recentScansLabel": "මෑත ස්කෑන්",
+  "seeAllLabel": "සියල්ල බලන්න",
+  "uiLanguageLabel": "යෙදුම් භාෂාව"
 }

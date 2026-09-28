@@ -58,5 +58,11 @@
   "copiedMessage": "클립보드에 복사됨",
   "exportTxtAction": "텍스트로 내보내기",
   "exportPdfAction": "PDF로 내보내기",
-  "translatedTo": "번역 대상"
+  "translatedTo": "번역 대상",
+  "translateToLabel": "번역 대상",
+  "typeTextLabel": "텍스트 입력 또는 붙여넣기",
+  "importFileLabel": "파일 가져오기",
+  "recentScansLabel": "최근 스캔",
+  "seeAllLabel": "모두 보기",
+  "uiLanguageLabel": "앱 언어"
 }

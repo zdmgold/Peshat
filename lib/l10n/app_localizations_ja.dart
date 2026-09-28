@@ -186,4 +186,22 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get translatedTo => '翻訳先';
+
+  @override
+  String get translateToLabel => '翻訳先';
+
+  @override
+  String get typeTextLabel => 'テキストを入力または貼り付け';
+
+  @override
+  String get importFileLabel => 'ファイルをインポート';
+
+  @override
+  String get recentScansLabel => '最近のスキャン';
+
+  @override
+  String get seeAllLabel => 'すべて表示';
+
+  @override
+  String get uiLanguageLabel => 'アプリの言語';
 }

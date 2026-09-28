@@ -58,5 +58,11 @@
   "copiedMessage": "Copiado al portapapeles",
   "exportTxtAction": "Exportar como texto",
   "exportPdfAction": "Exportar como PDF",
-  "translatedTo": "Traducido a"
+  "translatedTo": "Traducido a",
+  "translateToLabel": "Traducir a",
+  "typeTextLabel": "Escribe o pega texto",
+  "importFileLabel": "Importar un archivo",
+  "recentScansLabel": "Escaneos recientes",
+  "seeAllLabel": "Ver todo",
+  "uiLanguageLabel": "Idioma de la aplicación"
 }

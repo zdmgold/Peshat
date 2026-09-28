@@ -58,5 +58,11 @@
   "copiedMessage": "क्लिपबोर्डमा प्रतिलिपि गरियो",
   "exportTxtAction": "पाठको रूपमा निर्यात गर्नुहोस्",
   "exportPdfAction": "PDF को रूपमा निर्यात गर्नुहोस्",
-  "translatedTo": "अनुवाद गरियो"
+  "translatedTo": "अनुवाद गरियो",
+  "translateToLabel": "यसमा अनुवाद गर्नुहोस्",
+  "typeTextLabel": "पाठ टाइप वा टाँस्नुहोस्",
+  "importFileLabel": "फाइल आयात गर्नुहोस्",
+  "recentScansLabel": "हालैका स्क्यान",
+  "seeAllLabel": "सबै हेर्नुहोस्",
+  "uiLanguageLabel": "एप भाषा"
 }

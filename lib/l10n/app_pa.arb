@@ -58,5 +58,11 @@
   "copiedMessage": "ਕਲਿੱਪਬੋਰਡ 'ਤੇ ਕਾਪੀ ਕੀਤਾ",
   "exportTxtAction": "ਟੈਕਸਟ ਵਜੋਂ ਐਕਸਪੋਰਟ ਕਰੋ",
   "exportPdfAction": "PDF ਵਜੋਂ ਐਕਸਪੋਰਟ ਕਰੋ",
-  "translatedTo": "ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ"
+  "translatedTo": "ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ",
+  "translateToLabel": "ਇਸ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ",
+  "typeTextLabel": "ਟੈਕਸਟ ਟਾਈਪ ਜਾਂ ਪੇਸਟ ਕਰੋ",
+  "importFileLabel": "ਫਾਈਲ ਆਯਾਤ ਕਰੋ",
+  "recentScansLabel": "ਤਾਜ਼ਾ ਸਕੈਨ",
+  "seeAllLabel": "ਸਭ ਦੇਖੋ",
+  "uiLanguageLabel": "ਐਪ ਭਾਸ਼ਾ"
 }

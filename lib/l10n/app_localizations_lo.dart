@@ -186,4 +186,22 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get translatedTo => 'ແປເປັນ';
+
+  @override
+  String get translateToLabel => 'ແປເປັນ';
+
+  @override
+  String get typeTextLabel => 'ພິມ ຫຼື ວາງຂໍ້ຄວາມ';
+
+  @override
+  String get importFileLabel => 'ນຳເຂົ້າໄຟລ໌';
+
+  @override
+  String get recentScansLabel => 'ການສະແກນທີ່ຜ່ານມາ';
+
+  @override
+  String get seeAllLabel => 'ເບິ່ງທັງໝົດ';
+
+  @override
+  String get uiLanguageLabel => 'ພາສາແອັບ';
 }

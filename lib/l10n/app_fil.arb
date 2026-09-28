@@ -58,5 +58,11 @@
   "copiedMessage": "Kinopya sa clipboard",
   "exportTxtAction": "I-export bilang teksto",
   "exportPdfAction": "I-export bilang PDF",
-  "translatedTo": "Isinalin sa"
+  "translatedTo": "Isinalin sa",
+  "translateToLabel": "Isalin sa",
+  "typeTextLabel": "Mag-type o mag-paste ng teksto",
+  "importFileLabel": "Mag-import ng file",
+  "recentScansLabel": "Mga kamakailang scan",
+  "seeAllLabel": "Tingnan lahat",
+  "uiLanguageLabel": "Wika ng app"
 }

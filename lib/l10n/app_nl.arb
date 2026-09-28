@@ -58,5 +58,11 @@
   "copiedMessage": "Gekopieerd naar klembord",
   "exportTxtAction": "Exporteren als tekst",
   "exportPdfAction": "Exporteren als PDF",
-  "translatedTo": "Vertaald naar"
+  "translatedTo": "Vertaald naar",
+  "translateToLabel": "Vertalen naar",
+  "typeTextLabel": "Typ of plak tekst",
+  "importFileLabel": "Een bestand importeren",
+  "recentScansLabel": "Recente scans",
+  "seeAllLabel": "Alles bekijken",
+  "uiLanguageLabel": "App-taal"
 }

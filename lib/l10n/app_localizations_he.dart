@@ -186,4 +186,22 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get translatedTo => 'תורגם ל';
+
+  @override
+  String get translateToLabel => 'תרגם ל';
+
+  @override
+  String get typeTextLabel => 'הקלד או הדבק טקסט';
+
+  @override
+  String get importFileLabel => 'ייבא קובץ';
+
+  @override
+  String get recentScansLabel => 'סריקות אחרונות';
+
+  @override
+  String get seeAllLabel => 'הצג הכל';
+
+  @override
+  String get uiLanguageLabel => 'שפת האפליקציה';
 }

@@ -58,5 +58,11 @@
   "copiedMessage": "クリップボードにコピーしました",
   "exportTxtAction": "テキストとしてエクスポート",
   "exportPdfAction": "PDFとしてエクスポート",
-  "translatedTo": "翻訳先"
+  "translatedTo": "翻訳先",
+  "translateToLabel": "翻訳先",
+  "typeTextLabel": "テキストを入力または貼り付け",
+  "importFileLabel": "ファイルをインポート",
+  "recentScansLabel": "最近のスキャン",
+  "seeAllLabel": "すべて表示",
+  "uiLanguageLabel": "アプリの言語"
 }

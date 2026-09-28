@@ -186,4 +186,22 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get translatedTo => 'Isinalin sa';
+
+  @override
+  String get translateToLabel => 'Isalin sa';
+
+  @override
+  String get typeTextLabel => 'Mag-type o mag-paste ng teksto';
+
+  @override
+  String get importFileLabel => 'Mag-import ng file';
+
+  @override
+  String get recentScansLabel => 'Mga kamakailang scan';
+
+  @override
+  String get seeAllLabel => 'Tingnan lahat';
+
+  @override
+  String get uiLanguageLabel => 'Wika ng app';
 }

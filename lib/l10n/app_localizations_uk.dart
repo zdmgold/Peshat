@@ -186,4 +186,22 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get translatedTo => 'Перекладено на';
+
+  @override
+  String get translateToLabel => 'Перекласти на';
+
+  @override
+  String get typeTextLabel => 'Введіть або вставте текст';
+
+  @override
+  String get importFileLabel => 'Імпортувати файл';
+
+  @override
+  String get recentScansLabel => 'Недавні сканування';
+
+  @override
+  String get seeAllLabel => 'Показати все';
+
+  @override
+  String get uiLanguageLabel => 'Мова застосунку';
 }

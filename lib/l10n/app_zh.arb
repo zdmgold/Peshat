@@ -58,5 +58,11 @@
   "copiedMessage": "已复制到剪贴板",
   "exportTxtAction": "导出为文本",
   "exportPdfAction": "导出为 PDF",
-  "translatedTo": "翻译为"
+  "translatedTo": "翻译为",
+  "translateToLabel": "翻译为",
+  "typeTextLabel": "输入或粘贴文本",
+  "importFileLabel": "导入文件",
+  "recentScansLabel": "最近的扫描",
+  "seeAllLabel": "查看全部",
+  "uiLanguageLabel": "应用语言"
 }
