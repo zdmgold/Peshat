@@ -76,5 +76,7 @@
   "cameraLabel": "Kamera",
   "recentLanguagesLabel": "Senaste",
   "allLanguagesLabel": "Alla språk",
-  "noResultsSubtitle": "Prova en annan stavning."
+  "noResultsSubtitle": "Prova en annan stavning.",
+  "sectionSystemLabel": "System",
+  "appLanguageLabel": "App-språk"
 }

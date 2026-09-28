@@ -240,4 +240,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Δοκιμάστε άλλη ορθογραφία.';
+
+  @override
+  String get sectionSystemLabel => 'Σύστημα';
+
+  @override
+  String get appLanguageLabel => 'Γλώσσα εφαρμογής';
 }

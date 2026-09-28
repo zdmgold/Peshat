@@ -76,5 +76,7 @@
   "cameraLabel": "Appareil photo",
   "recentLanguagesLabel": "Récentes",
   "allLanguagesLabel": "Toutes les langues",
-  "noResultsSubtitle": "Essayez une autre orthographe."
+  "noResultsSubtitle": "Essayez une autre orthographe.",
+  "sectionSystemLabel": "Système",
+  "appLanguageLabel": "Langue de l’application"
 }

@@ -240,4 +240,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => '다른 철자를 시도해 보세요.';
+
+  @override
+  String get sectionSystemLabel => '시스템';
+
+  @override
+  String get appLanguageLabel => '앱 언어';
 }

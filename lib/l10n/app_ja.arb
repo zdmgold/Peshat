@@ -76,5 +76,7 @@
   "cameraLabel": "カメラ",
   "recentLanguagesLabel": "最近",
   "allLanguagesLabel": "すべての言語",
-  "noResultsSubtitle": "別の綴りをお試しください。"
+  "noResultsSubtitle": "別の綴りをお試しください。",
+  "sectionSystemLabel": "システム",
+  "appLanguageLabel": "アプリの言語"
 }

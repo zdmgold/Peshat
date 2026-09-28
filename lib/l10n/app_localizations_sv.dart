@@ -240,4 +240,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Prova en annan stavning.';
+
+  @override
+  String get sectionSystemLabel => 'System';
+
+  @override
+  String get appLanguageLabel => 'App-språk';
 }

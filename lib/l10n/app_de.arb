@@ -76,5 +76,7 @@
   "cameraLabel": "Kamera",
   "recentLanguagesLabel": "Kürzlich",
   "allLanguagesLabel": "Alle Sprachen",
-  "noResultsSubtitle": "Versuchen Sie eine andere Schreibweise."
+  "noResultsSubtitle": "Versuchen Sie eine andere Schreibweise.",
+  "sectionSystemLabel": "System",
+  "appLanguageLabel": "App-Sprache"
 }

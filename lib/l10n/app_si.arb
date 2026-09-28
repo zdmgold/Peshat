@@ -76,5 +76,7 @@
   "cameraLabel": "කැමරාව",
   "recentLanguagesLabel": "මෑත",
   "allLanguagesLabel": "සියලු භාෂා",
-  "noResultsSubtitle": "වෙනත් අක්ෂර වින්‍යාසයක් උත්සාහ කරන්න."
+  "noResultsSubtitle": "වෙනත් අක්ෂර වින්‍යාසයක් උත්සාහ කරන්න.",
+  "sectionSystemLabel": "පද්ධතිය",
+  "appLanguageLabel": "යෙදුම් භාෂාව"
 }

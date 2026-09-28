@@ -76,5 +76,7 @@
   "cameraLabel": "카메라",
   "recentLanguagesLabel": "최근",
   "allLanguagesLabel": "모든 언어",
-  "noResultsSubtitle": "다른 철자를 시도해 보세요."
+  "noResultsSubtitle": "다른 철자를 시도해 보세요.",
+  "sectionSystemLabel": "시스템",
+  "appLanguageLabel": "앱 언어"
 }

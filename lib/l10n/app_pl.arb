@@ -76,5 +76,7 @@
   "cameraLabel": "Aparat",
   "recentLanguagesLabel": "Ostatnie",
   "allLanguagesLabel": "Wszystkie języki",
-  "noResultsSubtitle": "Spróbuj innej pisowni."
+  "noResultsSubtitle": "Spróbuj innej pisowni.",
+  "sectionSystemLabel": "System",
+  "appLanguageLabel": "Język aplikacji"
 }

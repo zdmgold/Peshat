@@ -240,4 +240,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Tente outra grafia.';
+
+  @override
+  String get sectionSystemLabel => 'Sistema';
+
+  @override
+  String get appLanguageLabel => 'Idioma do aplicativo';
 }

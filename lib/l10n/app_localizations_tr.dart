@@ -240,4 +240,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Farklı bir yazım deneyin.';
+
+  @override
+  String get sectionSystemLabel => 'Sistem';
+
+  @override
+  String get appLanguageLabel => 'Uygulama dili';
 }

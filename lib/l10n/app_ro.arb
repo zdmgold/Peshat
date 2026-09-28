@@ -76,5 +76,7 @@
   "cameraLabel": "Cameră",
   "recentLanguagesLabel": "Recente",
   "allLanguagesLabel": "Toate limbile",
-  "noResultsSubtitle": "Încercați altă ortografie."
+  "noResultsSubtitle": "Încercați altă ortografie.",
+  "sectionSystemLabel": "Sistem",
+  "appLanguageLabel": "Limba aplicației"
 }

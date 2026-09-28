@@ -240,4 +240,10 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'अर्को हिज्जे प्रयास गर्नुहोस्।';
+
+  @override
+  String get sectionSystemLabel => 'प्रणाली';
+
+  @override
+  String get appLanguageLabel => 'एप भाषा';
 }

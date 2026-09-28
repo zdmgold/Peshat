@@ -240,4 +240,10 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'ሌላ የፊደል አጻጻፍ ይሞክሩ።';
+
+  @override
+  String get sectionSystemLabel => 'ስርዓት';
+
+  @override
+  String get appLanguageLabel => 'የመተግበሪያ ቋንቋ';
 }

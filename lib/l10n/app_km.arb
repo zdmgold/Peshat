@@ -76,5 +76,7 @@
   "cameraLabel": "កាមេរ៉ា",
   "recentLanguagesLabel": "ថ្មីៗ",
   "allLanguagesLabel": "ភាសាទាំងអស់",
-  "noResultsSubtitle": "សាកល្បងអក្ខរាវិរុទ្ធផ្សេង។"
+  "noResultsSubtitle": "សាកល្បងអក្ខរាវិរុទ្ធផ្សេង។",
+  "sectionSystemLabel": "ប្រព័ន្ធ",
+  "appLanguageLabel": "ភាសាកម្មវិធី"
 }

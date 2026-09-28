@@ -76,5 +76,7 @@
   "cameraLabel": "कैमरा",
   "recentLanguagesLabel": "हाल के",
   "allLanguagesLabel": "सभी भाषाएँ",
-  "noResultsSubtitle": "कोई दूसरी वर्तनी आज़माएँ।"
+  "noResultsSubtitle": "कोई दूसरी वर्तनी आज़माएँ।",
+  "sectionSystemLabel": "सिस्टम",
+  "appLanguageLabel": "ऐप भाषा"
 }

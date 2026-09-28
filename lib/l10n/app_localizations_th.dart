@@ -240,4 +240,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'ลองสะกดแบบอื่น';
+
+  @override
+  String get sectionSystemLabel => 'ระบบ';
+
+  @override
+  String get appLanguageLabel => 'ภาษาของแอป';
 }

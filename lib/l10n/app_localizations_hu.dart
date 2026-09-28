@@ -240,4 +240,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Próbáljon más írásmódot.';
+
+  @override
+  String get sectionSystemLabel => 'Rendszer';
+
+  @override
+  String get appLanguageLabel => 'Alkalmazás nyelve';
 }

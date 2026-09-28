@@ -240,4 +240,10 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'အခြားစာလုံးပေါင်းကို စမ်းကြည့်ပါ။';
+
+  @override
+  String get sectionSystemLabel => 'စနစ်';
+
+  @override
+  String get appLanguageLabel => 'အက်ပ် ဘာသာစကား';
 }

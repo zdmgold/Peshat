@@ -76,5 +76,7 @@
   "cameraLabel": "ကင်မရာ",
   "recentLanguagesLabel": "မကြာသေးမီ",
   "allLanguagesLabel": "ဘာသာစကားအားလုံး",
-  "noResultsSubtitle": "အခြားစာလုံးပေါင်းကို စမ်းကြည့်ပါ။"
+  "noResultsSubtitle": "အခြားစာလုံးပေါင်းကို စမ်းကြည့်ပါ။",
+  "sectionSystemLabel": "စနစ်",
+  "appLanguageLabel": "အက်ပ် ဘာသာစကား"
 }

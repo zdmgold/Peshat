@@ -76,5 +76,7 @@
   "cameraLabel": "กล้อง",
   "recentLanguagesLabel": "ล่าสุด",
   "allLanguagesLabel": "ทุกภาษา",
-  "noResultsSubtitle": "ลองสะกดแบบอื่น"
+  "noResultsSubtitle": "ลองสะกดแบบอื่น",
+  "sectionSystemLabel": "ระบบ",
+  "appLanguageLabel": "ภาษาของแอป"
 }

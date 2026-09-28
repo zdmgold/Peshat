@@ -76,5 +76,7 @@
   "cameraLabel": "Κάμερα",
   "recentLanguagesLabel": "Πρόσφατες",
   "allLanguagesLabel": "Όλες οι γλώσσες",
-  "noResultsSubtitle": "Δοκιμάστε άλλη ορθογραφία."
+  "noResultsSubtitle": "Δοκιμάστε άλλη ορθογραφία.",
+  "sectionSystemLabel": "Σύστημα",
+  "appLanguageLabel": "Γλώσσα εφαρμογής"
 }

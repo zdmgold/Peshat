@@ -76,5 +76,7 @@
   "cameraLabel": "Camera",
   "recentLanguagesLabel": "Recent",
   "allLanguagesLabel": "Alle talen",
-  "noResultsSubtitle": "Probeer een andere spelling."
+  "noResultsSubtitle": "Probeer een andere spelling.",
+  "sectionSystemLabel": "Systeem",
+  "appLanguageLabel": "App-taal"
 }

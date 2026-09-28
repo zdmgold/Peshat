@@ -76,5 +76,7 @@
   "cameraLabel": "מצלמה",
   "recentLanguagesLabel": "אחרונים",
   "allLanguagesLabel": "כל השפות",
-  "noResultsSubtitle": "נסה איות אחר."
+  "noResultsSubtitle": "נסה איות אחר.",
+  "sectionSystemLabel": "מערכת",
+  "appLanguageLabel": "שפת האפליקציה"
 }

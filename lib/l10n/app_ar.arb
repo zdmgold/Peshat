@@ -76,5 +76,7 @@
   "cameraLabel": "الكاميرا",
   "recentLanguagesLabel": "الأحدث",
   "allLanguagesLabel": "كل اللغات",
-  "noResultsSubtitle": "جرّب تهجئة أخرى."
+  "noResultsSubtitle": "جرّب تهجئة أخرى.",
+  "sectionSystemLabel": "النظام",
+  "appLanguageLabel": "لغة التطبيق"
 }

@@ -76,5 +76,7 @@
   "cameraLabel": "ਕੈਮਰਾ",
   "recentLanguagesLabel": "ਤਾਜ਼ਾ",
   "allLanguagesLabel": "ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ",
-  "noResultsSubtitle": "ਹੋਰ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।"
+  "noResultsSubtitle": "ਹੋਰ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।",
+  "sectionSystemLabel": "ਸਿਸਟਮ",
+  "appLanguageLabel": "ਐਪ ਭਾਸ਼ਾ"
 }

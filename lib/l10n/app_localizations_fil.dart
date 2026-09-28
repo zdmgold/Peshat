@@ -240,4 +240,10 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Subukan ang ibang spelling.';
+
+  @override
+  String get sectionSystemLabel => 'Sistema';
+
+  @override
+  String get appLanguageLabel => 'Wika ng app';
 }

@@ -240,4 +240,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'جرّب تهجئة أخرى.';
+
+  @override
+  String get sectionSystemLabel => 'النظام';
+
+  @override
+  String get appLanguageLabel => 'لغة التطبيق';
 }

@@ -624,6 +624,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Try a different spelling.'**
   String get noResultsSubtitle;
+
+  /// No description provided for @sectionSystemLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'System'**
+  String get sectionSystemLabel;
+
+  /// No description provided for @appLanguageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'App language'**
+  String get appLanguageLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

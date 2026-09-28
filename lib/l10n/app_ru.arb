@@ -76,5 +76,7 @@
   "cameraLabel": "Камера",
   "recentLanguagesLabel": "Недавние",
   "allLanguagesLabel": "Все языки",
-  "noResultsSubtitle": "Попробуйте другое написание."
+  "noResultsSubtitle": "Попробуйте другое написание.",
+  "sectionSystemLabel": "Система",
+  "appLanguageLabel": "Язык приложения"
 }

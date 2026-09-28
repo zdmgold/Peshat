@@ -76,5 +76,7 @@
   "cameraLabel": "ກ້ອງ",
   "recentLanguagesLabel": "ຫຼ້າສຸດ",
   "allLanguagesLabel": "ທຸກພາສາ",
-  "noResultsSubtitle": "ລອງສະກົດແບບອື່ນ."
+  "noResultsSubtitle": "ລອງສະກົດແບບອື່ນ.",
+  "sectionSystemLabel": "ລະບົບ",
+  "appLanguageLabel": "ພາສາແອັບ"
 }

@@ -76,5 +76,7 @@
   "cameraLabel": "Fotoaparát",
   "recentLanguagesLabel": "Nedávné",
   "allLanguagesLabel": "Všechny jazyky",
-  "noResultsSubtitle": "Zkuste jiný pravopis."
+  "noResultsSubtitle": "Zkuste jiný pravopis.",
+  "sectionSystemLabel": "Systém",
+  "appLanguageLabel": "Jazyk aplikace"
 }

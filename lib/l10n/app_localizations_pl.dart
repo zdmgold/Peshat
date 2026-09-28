@@ -240,4 +240,10 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Spróbuj innej pisowni.';
+
+  @override
+  String get sectionSystemLabel => 'System';
+
+  @override
+  String get appLanguageLabel => 'Język aplikacji';
 }

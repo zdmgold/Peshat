@@ -76,5 +76,7 @@
   "cameraLabel": "Máy ảnh",
   "recentLanguagesLabel": "Gần đây",
   "allLanguagesLabel": "Tất cả ngôn ngữ",
-  "noResultsSubtitle": "Thử cách viết khác."
+  "noResultsSubtitle": "Thử cách viết khác.",
+  "sectionSystemLabel": "Hệ thống",
+  "appLanguageLabel": "Ngôn ngữ ứng dụng"
 }

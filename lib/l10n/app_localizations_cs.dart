@@ -240,4 +240,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Zkuste jiný pravopis.';
+
+  @override
+  String get sectionSystemLabel => 'Systém';
+
+  @override
+  String get appLanguageLabel => 'Jazyk aplikace';
 }

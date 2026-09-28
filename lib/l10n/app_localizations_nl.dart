@@ -240,4 +240,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Probeer een andere spelling.';
+
+  @override
+  String get sectionSystemLabel => 'Systeem';
+
+  @override
+  String get appLanguageLabel => 'App-taal';
 }

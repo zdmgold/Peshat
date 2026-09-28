@@ -76,5 +76,7 @@
   "cameraLabel": "Kamera",
   "recentLanguagesLabel": "Son kullanılan",
   "allLanguagesLabel": "Tüm diller",
-  "noResultsSubtitle": "Farklı bir yazım deneyin."
+  "noResultsSubtitle": "Farklı bir yazım deneyin.",
+  "sectionSystemLabel": "Sistem",
+  "appLanguageLabel": "Uygulama dili"
 }

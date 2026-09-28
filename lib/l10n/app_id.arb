@@ -76,5 +76,7 @@
   "cameraLabel": "Kamera",
   "recentLanguagesLabel": "Terbaru",
   "allLanguagesLabel": "Semua bahasa",
-  "noResultsSubtitle": "Coba ejaan lain."
+  "noResultsSubtitle": "Coba ejaan lain.",
+  "sectionSystemLabel": "Sistem",
+  "appLanguageLabel": "Bahasa aplikasi"
 }

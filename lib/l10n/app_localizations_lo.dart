@@ -240,4 +240,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'ລອງສະກົດແບບອື່ນ.';
+
+  @override
+  String get sectionSystemLabel => 'ລະບົບ';
+
+  @override
+  String get appLanguageLabel => 'ພາສາແອັບ';
 }

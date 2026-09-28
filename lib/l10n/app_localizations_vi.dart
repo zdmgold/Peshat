@@ -240,4 +240,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Thử cách viết khác.';
+
+  @override
+  String get sectionSystemLabel => 'Hệ thống';
+
+  @override
+  String get appLanguageLabel => 'Ngôn ngữ ứng dụng';
 }

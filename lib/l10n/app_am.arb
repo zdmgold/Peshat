@@ -76,5 +76,7 @@
   "cameraLabel": "ካሜራ",
   "recentLanguagesLabel": "የቅርብ ጊዜ",
   "allLanguagesLabel": "ሁሉም ቋንቋዎች",
-  "noResultsSubtitle": "ሌላ የፊደል አጻጻፍ ይሞክሩ።"
+  "noResultsSubtitle": "ሌላ የፊደል አጻጻፍ ይሞክሩ።",
+  "sectionSystemLabel": "ስርዓት",
+  "appLanguageLabel": "የመተግበሪያ ቋንቋ"
 }

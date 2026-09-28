@@ -240,4 +240,10 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'کوئی اور ہجے آزمائیں۔';
+
+  @override
+  String get sectionSystemLabel => 'سسٹم';
+
+  @override
+  String get appLanguageLabel => 'ایپ کی زبان';
 }

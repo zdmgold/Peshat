@@ -240,4 +240,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'ਹੋਰ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।';
+
+  @override
+  String get sectionSystemLabel => 'ਸਿਸਟਮ';
+
+  @override
+  String get appLanguageLabel => 'ਐਪ ਭਾਸ਼ਾ';
 }

@@ -76,5 +76,7 @@
   "cameraLabel": "Camera",
   "recentLanguagesLabel": "Kamakailan",
   "allLanguagesLabel": "Lahat ng wika",
-  "noResultsSubtitle": "Subukan ang ibang spelling."
+  "noResultsSubtitle": "Subukan ang ibang spelling.",
+  "sectionSystemLabel": "Sistema",
+  "appLanguageLabel": "Wika ng app"
 }

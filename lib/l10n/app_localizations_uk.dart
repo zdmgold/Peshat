@@ -240,4 +240,10 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Спробуйте інший правопис.';
+
+  @override
+  String get sectionSystemLabel => 'Система';
+
+  @override
+  String get appLanguageLabel => 'Мова застосунку';
 }

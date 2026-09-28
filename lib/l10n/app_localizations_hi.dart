@@ -240,4 +240,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'कोई दूसरी वर्तनी आज़माएँ।';
+
+  @override
+  String get sectionSystemLabel => 'सिस्टम';
+
+  @override
+  String get appLanguageLabel => 'ऐप भाषा';
 }

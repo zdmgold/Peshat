@@ -86,5 +86,7 @@
   "cameraLabel": "Camera",
   "recentLanguagesLabel": "Recent",
   "allLanguagesLabel": "All languages",
-  "noResultsSubtitle": "Try a different spelling."
+  "noResultsSubtitle": "Try a different spelling.",
+  "sectionSystemLabel": "System",
+  "appLanguageLabel": "App language"
 }

@@ -240,4 +240,10 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'වෙනත් අක්ෂර වින්‍යාසයක් උත්සාහ කරන්න.';
+
+  @override
+  String get sectionSystemLabel => 'පද්ධතිය';
+
+  @override
+  String get appLanguageLabel => 'යෙදුම් භාෂාව';
 }

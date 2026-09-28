@@ -76,5 +76,7 @@
   "cameraLabel": "Камера",
   "recentLanguagesLabel": "Нещодавні",
   "allLanguagesLabel": "Усі мови",
-  "noResultsSubtitle": "Спробуйте інший правопис."
+  "noResultsSubtitle": "Спробуйте інший правопис.",
+  "sectionSystemLabel": "Система",
+  "appLanguageLabel": "Мова застосунку"
 }

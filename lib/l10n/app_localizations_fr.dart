@@ -240,4 +240,10 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Essayez une autre orthographe.';
+
+  @override
+  String get sectionSystemLabel => 'Système';
+
+  @override
+  String get appLanguageLabel => 'Langue de l’application';
 }

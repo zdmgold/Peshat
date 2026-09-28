@@ -240,4 +240,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'សាកល្បងអក្ខរាវិរុទ្ធផ្សេង។';
+
+  @override
+  String get sectionSystemLabel => 'ប្រព័ន្ធ';
+
+  @override
+  String get appLanguageLabel => 'ភាសាកម្មវិធី';
 }

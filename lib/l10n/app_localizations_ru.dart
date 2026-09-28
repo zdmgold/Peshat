@@ -240,4 +240,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Попробуйте другое написание.';
+
+  @override
+  String get sectionSystemLabel => 'Система';
+
+  @override
+  String get appLanguageLabel => 'Язык приложения';
 }

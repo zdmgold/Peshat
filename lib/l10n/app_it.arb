@@ -76,5 +76,7 @@
   "cameraLabel": "Fotocamera",
   "recentLanguagesLabel": "Recenti",
   "allLanguagesLabel": "Tutte le lingue",
-  "noResultsSubtitle": "Prova con un’ortografia diversa."
+  "noResultsSubtitle": "Prova con un’ortografia diversa.",
+  "sectionSystemLabel": "Sistema",
+  "appLanguageLabel": "Lingua dell’app"
 }

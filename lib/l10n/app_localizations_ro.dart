@@ -240,4 +240,10 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Încercați altă ortografie.';
+
+  @override
+  String get sectionSystemLabel => 'Sistem';
+
+  @override
+  String get appLanguageLabel => 'Limba aplicației';
 }

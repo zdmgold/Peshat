@@ -76,5 +76,7 @@
   "cameraLabel": "Kamera",
   "recentLanguagesLabel": "Legutóbbi",
   "allLanguagesLabel": "Minden nyelv",
-  "noResultsSubtitle": "Próbáljon más írásmódot."
+  "noResultsSubtitle": "Próbáljon más írásmódot.",
+  "sectionSystemLabel": "Rendszer",
+  "appLanguageLabel": "Alkalmazás nyelve"
 }

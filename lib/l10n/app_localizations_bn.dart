@@ -240,4 +240,10 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'অন্য বানান চেষ্টা করুন।';
+
+  @override
+  String get sectionSystemLabel => 'সিস্টেম';
+
+  @override
+  String get appLanguageLabel => 'অ্যাপের ভাষা';
 }

@@ -240,4 +240,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'Coba ejaan lain.';
+
+  @override
+  String get sectionSystemLabel => 'Sistem';
+
+  @override
+  String get appLanguageLabel => 'Bahasa aplikasi';
 }

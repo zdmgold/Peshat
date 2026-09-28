@@ -76,5 +76,7 @@
   "cameraLabel": "Câmera",
   "recentLanguagesLabel": "Recentes",
   "allLanguagesLabel": "Todos os idiomas",
-  "noResultsSubtitle": "Tente outra grafia."
+  "noResultsSubtitle": "Tente outra grafia.",
+  "sectionSystemLabel": "Sistema",
+  "appLanguageLabel": "Idioma do aplicativo"
 }

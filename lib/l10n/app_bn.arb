@@ -76,5 +76,7 @@
   "cameraLabel": "ক্যামেরা",
   "recentLanguagesLabel": "সাম্প্রতিক",
   "allLanguagesLabel": "সব ভাষা",
-  "noResultsSubtitle": "অন্য বানান চেষ্টা করুন।"
+  "noResultsSubtitle": "অন্য বানান চেষ্টা করুন।",
+  "sectionSystemLabel": "সিস্টেম",
+  "appLanguageLabel": "অ্যাপের ভাষা"
 }

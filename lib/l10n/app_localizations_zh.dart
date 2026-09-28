@@ -240,4 +240,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => '请尝试其他拼写。';
+
+  @override
+  String get sectionSystemLabel => '系统';
+
+  @override
+  String get appLanguageLabel => '应用语言';
 }

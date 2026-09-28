@@ -240,4 +240,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'נסה איות אחר.';
+
+  @override
+  String get sectionSystemLabel => 'מערכת';
+
+  @override
+  String get appLanguageLabel => 'שפת האפליקציה';
 }

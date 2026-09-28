@@ -76,5 +76,7 @@
   "cameraLabel": "دوربین",
   "recentLanguagesLabel": "اخیر",
   "allLanguagesLabel": "همه زبان‌ها",
-  "noResultsSubtitle": "املای دیگری را امتحان کنید."
+  "noResultsSubtitle": "املای دیگری را امتحان کنید.",
+  "sectionSystemLabel": "سیستم",
+  "appLanguageLabel": "زبان برنامه"
 }

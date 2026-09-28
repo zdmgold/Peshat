@@ -240,4 +240,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => '別の綴りをお試しください。';
+
+  @override
+  String get sectionSystemLabel => 'システム';
+
+  @override
+  String get appLanguageLabel => 'アプリの言語';
 }

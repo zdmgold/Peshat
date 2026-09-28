@@ -240,4 +240,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get noResultsSubtitle => 'املای دیگری را امتحان کنید.';
+
+  @override
+  String get sectionSystemLabel => 'سیستم';
+
+  @override
+  String get appLanguageLabel => 'زبان برنامه';
 }
