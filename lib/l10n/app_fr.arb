@@ -64,5 +64,8 @@
   "importFileLabel": "Importer un fichier",
   "recentScansLabel": "Analyses récentes",
   "seeAllLabel": "Voir tout",
-  "uiLanguageLabel": "Langue de l’application"
+  "uiLanguageLabel": "Langue de l’application",
+  "historyToday": "Aujourd’hui",
+  "historyYesterday": "Hier",
+  "historyOlder": "Plus ancien"
 }

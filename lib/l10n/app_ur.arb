@@ -64,5 +64,8 @@
   "importFileLabel": "فائل درآمد کریں",
   "recentScansLabel": "حالیہ اسکین",
   "seeAllLabel": "سب دیکھیں",
-  "uiLanguageLabel": "ایپ کی زبان"
+  "uiLanguageLabel": "ایپ کی زبان",
+  "historyToday": "آج",
+  "historyYesterday": "کل",
+  "historyOlder": "پرانے"
 }

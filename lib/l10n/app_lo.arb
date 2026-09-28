@@ -64,5 +64,8 @@
   "importFileLabel": "ນຳເຂົ້າໄຟລ໌",
   "recentScansLabel": "ການສະແກນທີ່ຜ່ານມາ",
   "seeAllLabel": "ເບິ່ງທັງໝົດ",
-  "uiLanguageLabel": "ພາສາແອັບ"
+  "uiLanguageLabel": "ພາສາແອັບ",
+  "historyToday": "ມື້ນີ້",
+  "historyYesterday": "ມື້ວານ",
+  "historyOlder": "ເກົ່າແກ່"
 }

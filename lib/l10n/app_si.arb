@@ -64,5 +64,8 @@
   "importFileLabel": "ගොනුවක් ආයාත කරන්න",
   "recentScansLabel": "මෑත ස්කෑන්",
   "seeAllLabel": "සියල්ල බලන්න",
-  "uiLanguageLabel": "යෙදුම් භාෂාව"
+  "uiLanguageLabel": "යෙදුම් භාෂාව",
+  "historyToday": "අද",
+  "historyYesterday": "ඊයේ",
+  "historyOlder": "පැරණි"
 }

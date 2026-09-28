@@ -64,5 +64,8 @@
   "importFileLabel": "Een bestand importeren",
   "recentScansLabel": "Recente scans",
   "seeAllLabel": "Alles bekijken",
-  "uiLanguageLabel": "App-taal"
+  "uiLanguageLabel": "App-taal",
+  "historyToday": "Vandaag",
+  "historyYesterday": "Gisteren",
+  "historyOlder": "Ouder"
 }

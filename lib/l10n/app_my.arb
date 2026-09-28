@@ -64,5 +64,8 @@
   "importFileLabel": "ဖိုင်တင်သွင်းပါ",
   "recentScansLabel": "မကြာသေးမီ စကင်များ",
   "seeAllLabel": "အားလုံးကြည့်ပါ",
-  "uiLanguageLabel": "အက်ပ် ဘာသာစကား"
+  "uiLanguageLabel": "အက်ပ် ဘာသာစကား",
+  "historyToday": "ယနေ့",
+  "historyYesterday": "မနေ့က",
+  "historyOlder": "ပိုဟောင်း"
 }

@@ -64,5 +64,8 @@
   "importFileLabel": "Importați un fișier",
   "recentScansLabel": "Scanări recente",
   "seeAllLabel": "Vezi tot",
-  "uiLanguageLabel": "Limba aplicației"
+  "uiLanguageLabel": "Limba aplicației",
+  "historyToday": "Astăzi",
+  "historyYesterday": "Ieri",
+  "historyOlder": "Mai vechi"
 }

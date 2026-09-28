@@ -64,5 +64,8 @@
   "importFileLabel": "استيراد ملف",
   "recentScansLabel": "عمليات المسح الأخيرة",
   "seeAllLabel": "عرض الكل",
-  "uiLanguageLabel": "لغة التطبيق"
+  "uiLanguageLabel": "لغة التطبيق",
+  "historyToday": "اليوم",
+  "historyYesterday": "أمس",
+  "historyOlder": "أقدم"
 }

@@ -64,5 +64,8 @@
   "importFileLabel": "Importera en fil",
   "recentScansLabel": "Senaste skanningar",
   "seeAllLabel": "Visa alla",
-  "uiLanguageLabel": "App-språk"
+  "uiLanguageLabel": "App-språk",
+  "historyToday": "Idag",
+  "historyYesterday": "Igår",
+  "historyOlder": "Äldre"
 }

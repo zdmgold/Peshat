@@ -64,5 +64,8 @@
   "importFileLabel": "फ़ाइल आयात करें",
   "recentScansLabel": "हाल के स्कैन",
   "seeAllLabel": "सभी देखें",
-  "uiLanguageLabel": "ऐप भाषा"
+  "uiLanguageLabel": "ऐप भाषा",
+  "historyToday": "आज",
+  "historyYesterday": "कल",
+  "historyOlder": "पुराना"
 }

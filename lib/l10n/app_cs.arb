@@ -64,5 +64,8 @@
   "importFileLabel": "Importovat soubor",
   "recentScansLabel": "Nedávné skeny",
   "seeAllLabel": "Zobrazit vše",
-  "uiLanguageLabel": "Jazyk aplikace"
+  "uiLanguageLabel": "Jazyk aplikace",
+  "historyToday": "Dnes",
+  "historyYesterday": "Včera",
+  "historyOlder": "Starší"
 }

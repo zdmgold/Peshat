@@ -64,5 +64,8 @@
   "importFileLabel": "Fájl importálása",
   "recentScansLabel": "Legutóbbi beolvasások",
   "seeAllLabel": "Összes megtekintése",
-  "uiLanguageLabel": "Alkalmazás nyelve"
+  "uiLanguageLabel": "Alkalmazás nyelve",
+  "historyToday": "Ma",
+  "historyYesterday": "Tegnap",
+  "historyOlder": "Régebbi"
 }

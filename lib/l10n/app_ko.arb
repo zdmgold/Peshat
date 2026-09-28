@@ -64,5 +64,8 @@
   "importFileLabel": "파일 가져오기",
   "recentScansLabel": "최근 스캔",
   "seeAllLabel": "모두 보기",
-  "uiLanguageLabel": "앱 언어"
+  "uiLanguageLabel": "앱 언어",
+  "historyToday": "오늘",
+  "historyYesterday": "어제",
+  "historyOlder": "이전"
 }

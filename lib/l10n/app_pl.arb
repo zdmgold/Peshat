@@ -64,5 +64,8 @@
   "importFileLabel": "Importuj plik",
   "recentScansLabel": "Ostatnie skany",
   "seeAllLabel": "Zobacz wszystko",
-  "uiLanguageLabel": "Język aplikacji"
+  "uiLanguageLabel": "Język aplikacji",
+  "historyToday": "Dzisiaj",
+  "historyYesterday": "Wczoraj",
+  "historyOlder": "Starsze"
 }

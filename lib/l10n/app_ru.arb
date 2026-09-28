@@ -64,5 +64,8 @@
   "importFileLabel": "Импортировать файл",
   "recentScansLabel": "Недавние сканирования",
   "seeAllLabel": "Показать все",
-  "uiLanguageLabel": "Язык приложения"
+  "uiLanguageLabel": "Язык приложения",
+  "historyToday": "Сегодня",
+  "historyYesterday": "Вчера",
+  "historyOlder": "Раньше"
 }

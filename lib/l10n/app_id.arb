@@ -64,5 +64,8 @@
   "importFileLabel": "Impor file",
   "recentScansLabel": "Pemindaian terbaru",
   "seeAllLabel": "Lihat semua",
-  "uiLanguageLabel": "Bahasa aplikasi"
+  "uiLanguageLabel": "Bahasa aplikasi",
+  "historyToday": "Hari ini",
+  "historyYesterday": "Kemarin",
+  "historyOlder": "Lebih lama"
 }

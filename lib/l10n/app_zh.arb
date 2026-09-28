@@ -64,5 +64,8 @@
   "importFileLabel": "导入文件",
   "recentScansLabel": "最近的扫描",
   "seeAllLabel": "查看全部",
-  "uiLanguageLabel": "应用语言"
+  "uiLanguageLabel": "应用语言",
+  "historyToday": "今天",
+  "historyYesterday": "昨天",
+  "historyOlder": "更早"
 }

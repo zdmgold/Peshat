@@ -64,5 +64,8 @@
   "importFileLabel": "ファイルをインポート",
   "recentScansLabel": "最近のスキャン",
   "seeAllLabel": "すべて表示",
-  "uiLanguageLabel": "アプリの言語"
+  "uiLanguageLabel": "アプリの言語",
+  "historyToday": "今日",
+  "historyYesterday": "昨日",
+  "historyOlder": "それ以前"
 }

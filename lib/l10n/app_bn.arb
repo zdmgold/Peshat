@@ -64,5 +64,8 @@
   "importFileLabel": "ফাইল আমদানি করুন",
   "recentScansLabel": "সাম্প্রতিক স্ক্যান",
   "seeAllLabel": "সব দেখুন",
-  "uiLanguageLabel": "অ্যাপের ভাষা"
+  "uiLanguageLabel": "অ্যাপের ভাষা",
+  "historyToday": "আজ",
+  "historyYesterday": "গতকাল",
+  "historyOlder": "পুরোনো"
 }

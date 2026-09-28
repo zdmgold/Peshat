@@ -64,5 +64,8 @@
   "importFileLabel": "Dosya içe aktar",
   "recentScansLabel": "Son taramalar",
   "seeAllLabel": "Tümünü gör",
-  "uiLanguageLabel": "Uygulama dili"
+  "uiLanguageLabel": "Uygulama dili",
+  "historyToday": "Bugün",
+  "historyYesterday": "Dün",
+  "historyOlder": "Daha eski"
 }

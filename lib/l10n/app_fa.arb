@@ -64,5 +64,8 @@
   "importFileLabel": "وارد کردن فایل",
   "recentScansLabel": "اسکن‌های اخیر",
   "seeAllLabel": "مشاهده همه",
-  "uiLanguageLabel": "زبان برنامه"
+  "uiLanguageLabel": "زبان برنامه",
+  "historyToday": "امروز",
+  "historyYesterday": "دیروز",
+  "historyOlder": "قدیمی‌تر"
 }

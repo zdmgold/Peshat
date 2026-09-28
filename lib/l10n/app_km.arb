@@ -64,5 +64,8 @@
   "importFileLabel": "នាំចូលឯកសារ",
   "recentScansLabel": "ការស្កេនថ្មីៗ",
   "seeAllLabel": "មើលទាំងអស់",
-  "uiLanguageLabel": "ភាសាកម្មវិធី"
+  "uiLanguageLabel": "ភាសាកម្មវិធី",
+  "historyToday": "ថ្ងៃនេះ",
+  "historyYesterday": "ម្សិលមិញ",
+  "historyOlder": "ចាស់ជាង"
 }

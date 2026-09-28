@@ -64,5 +64,8 @@
   "importFileLabel": "ਫਾਈਲ ਆਯਾਤ ਕਰੋ",
   "recentScansLabel": "ਤਾਜ਼ਾ ਸਕੈਨ",
   "seeAllLabel": "ਸਭ ਦੇਖੋ",
-  "uiLanguageLabel": "ਐਪ ਭਾਸ਼ਾ"
+  "uiLanguageLabel": "ਐਪ ਭਾਸ਼ਾ",
+  "historyToday": "ਅੱਜ",
+  "historyYesterday": "ਕੱਲ੍ਹ",
+  "historyOlder": "ਪੁਰਾਣਾ"
 }

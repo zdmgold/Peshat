@@ -64,5 +64,8 @@
   "importFileLabel": "Mag-import ng file",
   "recentScansLabel": "Mga kamakailang scan",
   "seeAllLabel": "Tingnan lahat",
-  "uiLanguageLabel": "Wika ng app"
+  "uiLanguageLabel": "Wika ng app",
+  "historyToday": "Ngayon",
+  "historyYesterday": "Kahapon",
+  "historyOlder": "Mas luma"
 }

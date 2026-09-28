@@ -64,5 +64,8 @@
   "importFileLabel": "Nhập tệp",
   "recentScansLabel": "Lần quét gần đây",
   "seeAllLabel": "Xem tất cả",
-  "uiLanguageLabel": "Ngôn ngữ ứng dụng"
+  "uiLanguageLabel": "Ngôn ngữ ứng dụng",
+  "historyToday": "Hôm nay",
+  "historyYesterday": "Hôm qua",
+  "historyOlder": "Cũ hơn"
 }

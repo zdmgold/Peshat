@@ -64,5 +64,8 @@
   "importFileLabel": "ייבא קובץ",
   "recentScansLabel": "סריקות אחרונות",
   "seeAllLabel": "הצג הכל",
-  "uiLanguageLabel": "שפת האפליקציה"
+  "uiLanguageLabel": "שפת האפליקציה",
+  "historyToday": "היום",
+  "historyYesterday": "אתמול",
+  "historyOlder": "ישן יותר"
 }

@@ -64,5 +64,8 @@
   "importFileLabel": "Εισαγωγή αρχείου",
   "recentScansLabel": "Πρόσφατες σαρώσεις",
   "seeAllLabel": "Προβολή όλων",
-  "uiLanguageLabel": "Γλώσσα εφαρμογής"
+  "uiLanguageLabel": "Γλώσσα εφαρμογής",
+  "historyToday": "Σήμερα",
+  "historyYesterday": "Χθες",
+  "historyOlder": "Παλαιότερα"
 }
