@@ -12,44 +12,76 @@ class TranslatorException implements Exception {
 class TranslatorService {
   final OnDeviceTranslatorModelManager _manager = OnDeviceTranslatorModelManager();
 
+  /// Every language ML Kit on-device translation supports.
+  /// Verified against the enum in google_mlkit_translation 0.11.1 —
+  /// 59 members, all mapped here.
   static const Map<String, TranslateLanguage> _map = {
-    'en': TranslateLanguage.english,
-    'es': TranslateLanguage.spanish,
-    'fr': TranslateLanguage.french,
-    'de': TranslateLanguage.german,
-    'zh': TranslateLanguage.chinese,
+    'af': TranslateLanguage.afrikaans,
+    'sq': TranslateLanguage.albanian,
     'ar': TranslateLanguage.arabic,
-    'hi': TranslateLanguage.hindi,
-    'pt': TranslateLanguage.portuguese,
-    'ru': TranslateLanguage.russian,
-    'ja': TranslateLanguage.japanese,
-    'ko': TranslateLanguage.korean,
-    'it': TranslateLanguage.italian,
-    'tr': TranslateLanguage.turkish,
-    'nl': TranslateLanguage.dutch,
-    'pl': TranslateLanguage.polish,
-    'th': TranslateLanguage.thai,
-    'vi': TranslateLanguage.vietnamese,
-    'id': TranslateLanguage.indonesian,
-    'he': TranslateLanguage.hebrew,
-    'fa': TranslateLanguage.persian,
-    'ur': TranslateLanguage.urdu,
+    'be': TranslateLanguage.belarusian,
     'bn': TranslateLanguage.bengali,
-    'uk': TranslateLanguage.ukrainian,
-    'el': TranslateLanguage.greek,
+    'bg': TranslateLanguage.bulgarian,
+    'ca': TranslateLanguage.catalan,
+    'zh': TranslateLanguage.chinese,
+    'hr': TranslateLanguage.croatian,
     'cs': TranslateLanguage.czech,
-    'ro': TranslateLanguage.romanian,
+    'da': TranslateLanguage.danish,
+    'nl': TranslateLanguage.dutch,
+    'en': TranslateLanguage.english,
+    'eo': TranslateLanguage.esperanto,
+    'et': TranslateLanguage.estonian,
+    'fi': TranslateLanguage.finnish,
+    'fr': TranslateLanguage.french,
+    'gl': TranslateLanguage.galician,
+    'ka': TranslateLanguage.georgian,
+    'de': TranslateLanguage.german,
+    'el': TranslateLanguage.greek,
+    'gu': TranslateLanguage.gujarati,
+    'ht': TranslateLanguage.haitian,
+    'he': TranslateLanguage.hebrew,
+    'hi': TranslateLanguage.hindi,
     'hu': TranslateLanguage.hungarian,
+    'is': TranslateLanguage.icelandic,
+    'id': TranslateLanguage.indonesian,
+    'ga': TranslateLanguage.irish,
+    'it': TranslateLanguage.italian,
+    'ja': TranslateLanguage.japanese,
+    'kn': TranslateLanguage.kannada,
+    'ko': TranslateLanguage.korean,
+    'lv': TranslateLanguage.latvian,
+    'lt': TranslateLanguage.lithuanian,
+    'mk': TranslateLanguage.macedonian,
+    'ms': TranslateLanguage.malay,
+    'mt': TranslateLanguage.maltese,
+    'mr': TranslateLanguage.marathi,
+    'no': TranslateLanguage.norwegian,
+    'fa': TranslateLanguage.persian,
+    'pl': TranslateLanguage.polish,
+    'pt': TranslateLanguage.portuguese,
+    'ro': TranslateLanguage.romanian,
+    'ru': TranslateLanguage.russian,
+    'sk': TranslateLanguage.slovak,
+    'sl': TranslateLanguage.slovenian,
+    'es': TranslateLanguage.spanish,
+    'sw': TranslateLanguage.swahili,
     'sv': TranslateLanguage.swedish,
     'fil': TranslateLanguage.tagalog,
+    'ta': TranslateLanguage.tamil,
+    'te': TranslateLanguage.telugu,
+    'th': TranslateLanguage.thai,
+    'tr': TranslateLanguage.turkish,
+    'uk': TranslateLanguage.ukrainian,
+    'ur': TranslateLanguage.urdu,
+    'vi': TranslateLanguage.vietnamese,
+    'cy': TranslateLanguage.welsh,
   };
 
-  static const Set<String> translatableCodes = {
-    'en','es','fr','de','zh','ar','hi','pt','ru','ja','ko','it','tr','nl',
-    'pl','th','vi','id','he','fa','ur','bn','uk','el','cs','ro','hu','sv','fil',
-  };
+  static final Set<String> translatableCodes = _map.keys.toSet();
 
-  static bool isTranslatable(String c) => translatableCodes.contains(c.toLowerCase());
+  static bool isTranslatable(String c) =>
+      translatableCodes.contains(c.toLowerCase());
+
   static TranslateLanguage? languageFor(String c) => _map[c.toLowerCase()];
 
   Future<void> ensureModelsReady({required String fromBcp, required String toBcp}) async {
@@ -67,20 +99,32 @@ class TranslatorService {
       if (await _manager.isModelDownloaded(bcp)) return;
       final ok = await _manager.downloadModel(bcp, isWifiRequired: false);
       if (!ok) throw TranslatorException(AppErrorCode.modelDownloadFailed);
-    } on TranslatorException { rethrow; }
-    catch (e) {
+    } on TranslatorException {
+      rethrow;
+    } catch (e) {
       throw TranslatorException(AppErrorCode.modelDownloadFailed, detail: e.toString());
     }
   }
 
-  Future<String> translate({required String text, required String fromBcp, required String toBcp}) async {
+  Future<String> translate({
+    required String text,
+    required String fromBcp,
+    required String toBcp,
+  }) async {
     final from = _map[fromBcp.toLowerCase()];
     final to = _map[toBcp.toLowerCase()];
-    if (from == null || to == null) throw TranslatorException(AppErrorCode.unsupportedLanguage);
+    if (from == null || to == null) {
+      throw TranslatorException(AppErrorCode.unsupportedLanguage);
+    }
     final t = OnDeviceTranslator(sourceLanguage: from, targetLanguage: to);
-    try { return await t.translateText(text); }
-    on TranslatorException { rethrow; }
-    catch (e) { throw TranslatorException(AppErrorCode.translationFailed, detail: e.toString()); }
-    finally { await t.close(); }
+    try {
+      return await t.translateText(text);
+    } on TranslatorException {
+      rethrow;
+    } catch (e) {
+      throw TranslatorException(AppErrorCode.translationFailed, detail: e.toString());
+    } finally {
+      await t.close();
+    }
   }
 }
