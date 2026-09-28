@@ -52,5 +52,7 @@
   "versionLabel": "Bersyon",
   "historyEmpty": "Wala pang mga scan",
   "historyClearConfirm": "Burahin lahat ng kasaysayan?",
-  "termsLink": "Mga Tuntunin ng Serbisyo"
+  "termsLink": "Mga Tuntunin ng Serbisyo",
+  "tagline": "Itutok ang camera sa anumang teksto, maintindihan agad.",
+  "noResults": "Walang resulta"
 }

@@ -52,5 +52,7 @@
   "versionLabel": "අනුවාදය",
   "historyEmpty": "තවම ස්කෑන් නැත",
   "historyClearConfirm": "සියලු ඉතිහාසය මකන්නද?",
-  "termsLink": "සේවා කොන්දේසි"
+  "termsLink": "සේවා කොන්දේසි",
+  "tagline": "කැමරාව ඕනෑම පෙළකට යොමු කර ක්ෂණිකව තේරුම් ගන්න.",
+  "noResults": "ප්‍රතිඵල නැත"
 }

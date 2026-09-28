@@ -52,5 +52,7 @@
   "versionLabel": "バージョン",
   "historyEmpty": "スキャン履歴はまだありません",
   "historyClearConfirm": "すべての履歴を削除しますか？",
-  "termsLink": "利用規約"
+  "termsLink": "利用規約",
+  "tagline": "カメラを任意のテキストに向けて、すぐに理解しましょう。",
+  "noResults": "結果がありません"
 }

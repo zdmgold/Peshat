@@ -168,4 +168,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get termsLink => 'ข้อกำหนดการให้บริการ';
+
+  @override
+  String get tagline => 'หันกล้องไปที่ข้อความใด ๆ แล้วเข้าใจได้ทันที';
+
+  @override
+  String get noResults => 'ไม่พบผลลัพธ์';
 }

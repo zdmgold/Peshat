@@ -168,4 +168,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get termsLink => 'Szolgáltatási feltételek';
+
+  @override
+  String get tagline => 'Irányítsa a kamerát bármilyen szövegre, és azonnal értse meg.';
+
+  @override
+  String get noResults => 'Nincs találat';
 }

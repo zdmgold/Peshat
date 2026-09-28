@@ -168,4 +168,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get termsLink => '服务条款';
+
+  @override
+  String get tagline => '将相机对准任意文字，即刻理解。';
+
+  @override
+  String get noResults => '无结果';
 }

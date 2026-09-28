@@ -52,5 +52,7 @@
   "versionLabel": "Versi",
   "historyEmpty": "Belum ada pemindaian",
   "historyClearConfirm": "Hapus semua riwayat?",
-  "termsLink": "Ketentuan Layanan"
+  "termsLink": "Ketentuan Layanan",
+  "tagline": "Arahkan kamera ke teks apa pun, pahami langsung.",
+  "noResults": "Tidak ada hasil"
 }

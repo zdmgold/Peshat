@@ -168,4 +168,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get termsLink => 'Kullanım Koşulları';
+
+  @override
+  String get tagline => 'Kameranızı herhangi bir metne doğrultun ve anında anlayın.';
+
+  @override
+  String get noResults => 'Sonuç yok';
 }

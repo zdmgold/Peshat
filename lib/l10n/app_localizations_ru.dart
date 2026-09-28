@@ -168,4 +168,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get termsLink => 'Условия использования';
+
+  @override
+  String get tagline => 'Наведите камеру на любой текст и поймите его мгновенно.';
+
+  @override
+  String get noResults => 'Нет результатов';
 }

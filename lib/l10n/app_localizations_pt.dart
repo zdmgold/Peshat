@@ -168,4 +168,10 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get termsLink => 'Termos de Serviço';
+
+  @override
+  String get tagline => 'Aponte a câmera para qualquer texto e entenda na hora.';
+
+  @override
+  String get noResults => 'Sem resultados';
 }

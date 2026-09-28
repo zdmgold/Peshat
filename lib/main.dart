@@ -5,6 +5,8 @@ import 'core/utils/app_theme.dart';
 import 'core/utils/error_handler.dart';
 import 'core/providers/theme_provider.dart';
 import 'core/providers/purchase_provider.dart';
+import 'core/providers/settings_provider.dart';
+import 'core/providers/history_provider.dart';
 import 'l10n/app_localizations.dart';
 import 'screens/scan_screen.dart';
 
@@ -26,12 +28,16 @@ class PeshatApp extends StatefulWidget {
 class _PeshatAppState extends State<PeshatApp> {
   late final ThemeProvider themeProvider;
   late final PurchaseProvider purchaseProvider;
+  late final SettingsProvider settingsProvider;
+  late final HistoryProvider historyProvider;
 
   @override
   void initState() {
     super.initState();
     themeProvider = ThemeProvider(widget.prefs);
     purchaseProvider = PurchaseProvider(widget.prefs);
+    settingsProvider = SettingsProvider(widget.prefs);
+    historyProvider = HistoryProvider(widget.prefs);
   }
 
   @override
@@ -40,12 +46,18 @@ class _PeshatAppState extends State<PeshatApp> {
       listenable: themeProvider,
       builder: (context, _) => MaterialApp(
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appName,
+        debugShowCheckedModeBanner: false,
         theme: buildLightTheme(),
         darkTheme: buildDarkTheme(),
         themeMode: themeProvider.value,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        home: ScanScreen(purchaseProvider: purchaseProvider),
+        home: ScanScreen(
+          theme: themeProvider,
+          purchase: purchaseProvider,
+          settings: settingsProvider,
+          history: historyProvider,
+        ),
       ),
     );
   }

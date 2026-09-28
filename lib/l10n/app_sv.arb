@@ -52,5 +52,7 @@
   "versionLabel": "Version",
   "historyEmpty": "Inga skanningar än",
   "historyClearConfirm": "Radera all historik?",
-  "termsLink": "Användarvillkor"
+  "termsLink": "Användarvillkor",
+  "tagline": "Rikta kameran mot valfri text och förstå den direkt.",
+  "noResults": "Inga resultat"
 }

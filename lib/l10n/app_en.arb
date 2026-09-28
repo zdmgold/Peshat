@@ -62,5 +62,7 @@
   "versionLabel": "Version",
   "historyEmpty": "No scans yet",
   "historyClearConfirm": "Delete all history?",
-  "termsLink": "Terms of Service"
+  "termsLink": "Terms of Service",
+  "tagline": "Point your camera at any text, understand it instantly.",
+  "noResults": "No results"
 }

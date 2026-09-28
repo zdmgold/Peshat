@@ -168,4 +168,10 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get termsLink => 'পরিষেবার শর্তাবলী';
+
+  @override
+  String get tagline => 'ক্যামেরা যেকোনো টেক্সটে ধরুন, সাথে সাথে বুঝুন।';
+
+  @override
+  String get noResults => 'কোনো ফলাফল নেই';
 }

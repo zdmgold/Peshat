@@ -168,4 +168,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get termsLink => '서비스 약관';
+
+  @override
+  String get tagline => '카메라를 아무 텍스트에나 향하면 즉시 이해할 수 있습니다.';
+
+  @override
+  String get noResults => '결과 없음';
 }

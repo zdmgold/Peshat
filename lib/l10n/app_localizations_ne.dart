@@ -168,4 +168,10 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get termsLink => 'सेवाका सर्तहरू';
+
+  @override
+  String get tagline => 'क्यामेरा कुनै पनि पाठमा फर्काउनुहोस् र तुरुन्तै बुझ्नुहोस्।';
+
+  @override
+  String get noResults => 'कुनै नतिजा छैन';
 }

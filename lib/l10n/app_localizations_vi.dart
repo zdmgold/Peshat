@@ -168,4 +168,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get termsLink => 'Điều khoản dịch vụ';
+
+  @override
+  String get tagline => 'Hướng camera vào bất kỳ văn bản nào, hiểu ngay lập tức.';
+
+  @override
+  String get noResults => 'Không có kết quả';
 }

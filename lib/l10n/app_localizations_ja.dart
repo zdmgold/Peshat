@@ -168,4 +168,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get termsLink => '利用規約';
+
+  @override
+  String get tagline => 'カメラを任意のテキストに向けて、すぐに理解しましょう。';
+
+  @override
+  String get noResults => '結果がありません';
 }

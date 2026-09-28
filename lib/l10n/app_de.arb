@@ -52,5 +52,7 @@
   "versionLabel": "Version",
   "historyEmpty": "Noch keine Scans",
   "historyClearConfirm": "Gesamten Verlauf löschen?",
-  "termsLink": "Nutzungsbedingungen"
+  "termsLink": "Nutzungsbedingungen",
+  "tagline": "Richte deine Kamera auf einen beliebigen Text und verstehe ihn sofort.",
+  "noResults": "Keine Ergebnisse"
 }

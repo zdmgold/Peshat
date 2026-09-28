@@ -168,4 +168,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get termsLink => 'លក្ខខណ្ឌសេវាកម្ម';
+
+  @override
+  String get tagline => 'តម្រង់កាមេរ៉ាទៅអត្ថបទណាមួយ ហើយយល់ភ្លាមៗ។';
+
+  @override
+  String get noResults => 'គ្មានលទ្ធផល';
 }

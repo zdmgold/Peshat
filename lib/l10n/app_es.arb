@@ -52,5 +52,7 @@
   "versionLabel": "Versión",
   "historyEmpty": "Aún no hay escaneos",
   "historyClearConfirm": "¿Eliminar todo el historial?",
-  "termsLink": "Términos del servicio"
+  "termsLink": "Términos del servicio",
+  "tagline": "Apunta tu cámara a cualquier texto y entiéndelo al instante.",
+  "noResults": "Sin resultados"
 }

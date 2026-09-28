@@ -52,5 +52,7 @@
   "versionLabel": "Version",
   "historyEmpty": "Aucun scan pour le moment",
   "historyClearConfirm": "Supprimer tout l’historique ?",
-  "termsLink": "Conditions d’utilisation"
+  "termsLink": "Conditions d’utilisation",
+  "tagline": "Pointez votre appareil photo vers un texte et comprenez-le instantanément.",
+  "noResults": "Aucun résultat"
 }

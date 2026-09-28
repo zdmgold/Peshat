@@ -168,4 +168,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get termsLink => 'ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ';
+
+  @override
+  String get tagline => 'ਕੈਮਰੇ ਨੂੰ ਕਿਸੇ ਵੀ ਟੈਕਸਟ ਵੱਲ ਕਰੋ ਅਤੇ ਤੁਰੰਤ ਸਮਝੋ।';
+
+  @override
+  String get noResults => 'ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ';
 }

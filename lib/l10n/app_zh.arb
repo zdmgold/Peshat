@@ -52,5 +52,7 @@
   "versionLabel": "版本",
   "historyEmpty": "暂无扫描记录",
   "historyClearConfirm": "删除所有历史记录？",
-  "termsLink": "服务条款"
+  "termsLink": "服务条款",
+  "tagline": "将相机对准任意文字，即刻理解。",
+  "noResults": "无结果"
 }

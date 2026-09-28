@@ -168,4 +168,10 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get termsLink => 'සේවා කොන්දේසි';
+
+  @override
+  String get tagline => 'කැමරාව ඕනෑම පෙළකට යොමු කර ක්ෂණිකව තේරුම් ගන්න.';
+
+  @override
+  String get noResults => 'ප්‍රතිඵල නැත';
 }

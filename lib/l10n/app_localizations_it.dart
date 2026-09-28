@@ -168,4 +168,10 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get termsLink => 'Termini di servizio';
+
+  @override
+  String get tagline => 'Inquadra un testo con la fotocamera e capiscilo subito.';
+
+  @override
+  String get noResults => 'Nessun risultato';
 }

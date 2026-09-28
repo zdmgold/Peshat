@@ -168,4 +168,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get termsLink => 'Användarvillkor';
+
+  @override
+  String get tagline => 'Rikta kameran mot valfri text och förstå den direkt.';
+
+  @override
+  String get noResults => 'Inga resultat';
 }

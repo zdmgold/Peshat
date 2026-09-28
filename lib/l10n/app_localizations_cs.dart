@@ -168,4 +168,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get termsLink => 'Podmínky služby';
+
+  @override
+  String get tagline => 'Namiřte fotoaparát na libovolný text a porozumějte mu okamžitě.';
+
+  @override
+  String get noResults => 'Žádné výsledky';
 }

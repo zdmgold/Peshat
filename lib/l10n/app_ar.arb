@@ -52,5 +52,7 @@
   "versionLabel": "الإصدار",
   "historyEmpty": "لا توجد عمليات مسح بعد",
   "historyClearConfirm": "حذف كل السجل؟",
-  "termsLink": "شروط الخدمة"
+  "termsLink": "شروط الخدمة",
+  "tagline": "وجّه الكاميرا نحو أي نص وافهمه على الفور.",
+  "noResults": "لا توجد نتائج"
 }

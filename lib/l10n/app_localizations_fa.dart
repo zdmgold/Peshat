@@ -168,4 +168,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get termsLink => 'شرایط استفاده از خدمات';
+
+  @override
+  String get tagline => 'دوربین را به سمت هر متنی بگیرید و فوراً آن را بفهمید.';
+
+  @override
+  String get noResults => 'نتیجه‌ای یافت نشد';
 }

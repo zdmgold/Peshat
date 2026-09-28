@@ -52,5 +52,7 @@
   "versionLabel": "גרסה",
   "historyEmpty": "אין סריקות עדיין",
   "historyClearConfirm": "למחוק את כל ההיסטוריה?",
-  "termsLink": "תנאי שירות"
+  "termsLink": "תנאי שירות",
+  "tagline": "כוונו את המצלמה לכל טקסט והבינו אותו מיד.",
+  "noResults": "אין תוצאות"
 }

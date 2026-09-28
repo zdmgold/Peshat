@@ -52,5 +52,7 @@
   "versionLabel": "Versie",
   "historyEmpty": "Nog geen scans",
   "historyClearConfirm": "Alle geschiedenis verwijderen?",
-  "termsLink": "Servicevoorwaarden"
+  "termsLink": "Servicevoorwaarden",
+  "tagline": "Richt je camera op een willekeurige tekst en begrijp die direct.",
+  "noResults": "Geen resultaten"
 }

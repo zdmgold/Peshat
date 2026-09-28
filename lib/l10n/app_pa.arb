@@ -52,5 +52,7 @@
   "versionLabel": "ਵਰਜਨ",
   "historyEmpty": "ਹਾਲੇ ਕੋਈ ਸਕੈਨ ਨਹੀਂ",
   "historyClearConfirm": "ਸਾਰਾ ਇਤਿਹਾਸ ਮਿਟਾਉਣਾ ਹੈ?",
-  "termsLink": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ"
+  "termsLink": "ਸੇਵਾ ਦੀਆਂ ਸ਼ਰਤਾਂ",
+  "tagline": "ਕੈਮਰੇ ਨੂੰ ਕਿਸੇ ਵੀ ਟੈਕਸਟ ਵੱਲ ਕਰੋ ਅਤੇ ਤੁਰੰਤ ਸਮਝੋ।",
+  "noResults": "ਕੋਈ ਨਤੀਜਾ ਨਹੀਂ"
 }

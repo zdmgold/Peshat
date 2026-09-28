@@ -168,4 +168,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get termsLink => 'شروط الخدمة';
+
+  @override
+  String get tagline => 'وجّه الكاميرا نحو أي نص وافهمه على الفور.';
+
+  @override
+  String get noResults => 'لا توجد نتائج';
 }

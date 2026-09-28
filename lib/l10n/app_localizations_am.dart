@@ -168,4 +168,10 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get termsLink => 'የአገልግሎት ውሎች';
+
+  @override
+  String get tagline => 'ካሜራዎን ወደ ማንኛውም ጽሑፍ ያመላክቱ እና ወዲያውኑ ይረዱ።';
+
+  @override
+  String get noResults => 'ውጤት የለም';
 }

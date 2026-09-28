@@ -52,5 +52,7 @@
   "versionLabel": "Versione",
   "historyEmpty": "Nessuna scansione ancora",
   "historyClearConfirm": "Eliminare tutta la cronologia?",
-  "termsLink": "Termini di servizio"
+  "termsLink": "Termini di servizio",
+  "tagline": "Inquadra un testo con la fotocamera e capiscilo subito.",
+  "noResults": "Nessun risultato"
 }

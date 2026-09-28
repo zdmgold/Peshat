@@ -168,4 +168,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get termsLink => 'ເງື່ອນໄຂການບໍລິການ';
+
+  @override
+  String get tagline => 'ເລັ່ງກ້ອງໄປທີ່ຂໍ້ຄວາມໃດກໍ່ໄດ້ ແລະເຂົ້າໃຈທັນທີ.';
+
+  @override
+  String get noResults => 'ບໍ່ມີຜົນໄດ້ຮັບ';
 }

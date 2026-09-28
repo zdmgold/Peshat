@@ -168,4 +168,10 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get termsLink => 'Conditions d’utilisation';
+
+  @override
+  String get tagline => 'Pointez votre appareil photo vers un texte et comprenez-le instantanément.';
+
+  @override
+  String get noResults => 'Aucun résultat';
 }

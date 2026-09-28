@@ -52,5 +52,7 @@
   "versionLabel": "ስሪት",
   "historyEmpty": "እስካሁን ስካን የለም",
   "historyClearConfirm": "ሁሉንም ታሪክ ሰርዝ?",
-  "termsLink": "የአገልግሎት ውሎች"
+  "termsLink": "የአገልግሎት ውሎች",
+  "tagline": "ካሜራዎን ወደ ማንኛውም ጽሑፍ ያመላክቱ እና ወዲያውኑ ይረዱ።",
+  "noResults": "ውጤት የለም"
 }

@@ -168,4 +168,10 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get termsLink => 'Mga Tuntunin ng Serbisyo';
+
+  @override
+  String get tagline => 'Itutok ang camera sa anumang teksto, maintindihan agad.';
+
+  @override
+  String get noResults => 'Walang resulta';
 }

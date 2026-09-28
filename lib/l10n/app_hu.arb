@@ -52,5 +52,7 @@
   "versionLabel": "Verzió",
   "historyEmpty": "Még nincsenek beolvasások",
   "historyClearConfirm": "Törli a teljes előzményt?",
-  "termsLink": "Szolgáltatási feltételek"
+  "termsLink": "Szolgáltatási feltételek",
+  "tagline": "Irányítsa a kamerát bármilyen szövegre, és azonnal értse meg.",
+  "noResults": "Nincs találat"
 }

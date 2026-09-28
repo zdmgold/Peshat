@@ -168,4 +168,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get termsLink => 'Όροι χρήσης';
+
+  @override
+  String get tagline => 'Στρέψτε την κάμερα σε οποιοδήποτε κείμενο και κατανοήστε το αμέσως.';
+
+  @override
+  String get noResults => 'Δεν βρέθηκαν αποτελέσματα';
 }

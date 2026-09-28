@@ -168,4 +168,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get termsLink => 'Nutzungsbedingungen';
+
+  @override
+  String get tagline => 'Richte deine Kamera auf einen beliebigen Text und verstehe ihn sofort.';
+
+  @override
+  String get noResults => 'Keine Ergebnisse';
 }

@@ -168,4 +168,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get termsLink => 'תנאי שירות';
+
+  @override
+  String get tagline => 'כוונו את המצלמה לכל טקסט והבינו אותו מיד.';
+
+  @override
+  String get noResults => 'אין תוצאות';
 }

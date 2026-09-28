@@ -52,5 +52,7 @@
   "versionLabel": "Verze",
   "historyEmpty": "Zatím žádné skeny",
   "historyClearConfirm": "Smazat celou historii?",
-  "termsLink": "Podmínky služby"
+  "termsLink": "Podmínky služby",
+  "tagline": "Namiřte fotoaparát na libovolný text a porozumějte mu okamžitě.",
+  "noResults": "Žádné výsledky"
 }

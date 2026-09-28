@@ -168,4 +168,10 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get termsLink => 'Termeni și condiții';
+
+  @override
+  String get tagline => 'Îndreptați camera spre orice text și înțelegeți-l instant.';
+
+  @override
+  String get noResults => 'Fără rezultate';
 }

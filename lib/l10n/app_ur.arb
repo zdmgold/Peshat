@@ -52,5 +52,7 @@
   "versionLabel": "ورژن",
   "historyEmpty": "ابھی کوئی اسکین نہیں",
   "historyClearConfirm": "تمام تاریخ حذف کریں؟",
-  "termsLink": "شرائطِ خدمت"
+  "termsLink": "شرائطِ خدمت",
+  "tagline": "کیمرہ کسی بھی متن کی طرف کریں اور فوراً سمجھیں۔",
+  "noResults": "کوئی نتیجہ نہیں"
 }

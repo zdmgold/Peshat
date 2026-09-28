@@ -168,4 +168,10 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get termsLink => 'ဝန်ဆောင်မှု စည်းကမ်းချက်များ';
+
+  @override
+  String get tagline => 'ကင်မရာကို မည်သည့်စာသားသို့မဆို ချိန်ပြီး ချက်ချင်းနားလည်ပါ။';
+
+  @override
+  String get noResults => 'ရလဒ်မရှိပါ';
 }

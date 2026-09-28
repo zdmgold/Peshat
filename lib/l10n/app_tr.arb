@@ -52,5 +52,7 @@
   "versionLabel": "Sürüm",
   "historyEmpty": "Henüz tarama yok",
   "historyClearConfirm": "Tüm geçmiş silinsin mi?",
-  "termsLink": "Kullanım Koşulları"
+  "termsLink": "Kullanım Koşulları",
+  "tagline": "Kameranızı herhangi bir metne doğrultun ve anında anlayın.",
+  "noResults": "Sonuç yok"
 }

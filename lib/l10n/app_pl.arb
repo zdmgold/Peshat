@@ -52,5 +52,7 @@
   "versionLabel": "Wersja",
   "historyEmpty": "Brak skanów",
   "historyClearConfirm": "Usunąć całą historię?",
-  "termsLink": "Warunki korzystania"
+  "termsLink": "Warunki korzystania",
+  "tagline": "Skieruj kamerę na dowolny tekst i zrozum go natychmiast.",
+  "noResults": "Brak wyników"
 }

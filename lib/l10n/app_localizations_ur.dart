@@ -168,4 +168,10 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get termsLink => 'شرائطِ خدمت';
+
+  @override
+  String get tagline => 'کیمرہ کسی بھی متن کی طرف کریں اور فوراً سمجھیں۔';
+
+  @override
+  String get noResults => 'کوئی نتیجہ نہیں';
 }

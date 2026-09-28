@@ -168,4 +168,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get termsLink => 'सेवा की शर्तें';
+
+  @override
+  String get tagline => 'कैमरे को किसी भी टेक्स्ट पर लक्षित करें और तुरंत समझें।';
+
+  @override
+  String get noResults => 'कोई परिणाम नहीं';
 }

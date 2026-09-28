@@ -168,4 +168,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get termsLink => 'Ketentuan Layanan';
+
+  @override
+  String get tagline => 'Arahkan kamera ke teks apa pun, pahami langsung.';
+
+  @override
+  String get noResults => 'Tidak ada hasil';
 }
