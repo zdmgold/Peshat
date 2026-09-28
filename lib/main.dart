@@ -9,6 +9,7 @@ import 'core/providers/settings_provider.dart';
 import 'core/providers/history_provider.dart';
 import 'core/providers/ui_locale_provider.dart';
 import 'l10n/app_localizations.dart';
+import 'core/services/interstitial_service.dart';
 import 'widgets/ad_slot.dart';
 import 'screens/scan_screen.dart';
 
@@ -16,6 +17,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   installGlobalErrorHandling();
   final prefs = await SharedPreferences.getInstance();
+  await InterstitialService.instance.init(prefs);
   runApp(PeshatApp(prefs: prefs));
 }
 
@@ -45,11 +47,13 @@ class _PeshatAppState extends State<PeshatApp> {
 
     // Seed and mirror the shared ad-slot purchase flag.
     AdSlot.setPurchased(purchaseProvider.value);
+    InterstitialService.instance.setPurchased(purchaseProvider.value);
     purchaseProvider.addListener(_syncAdSlot);
   }
 
   void _syncAdSlot() {
     AdSlot.setPurchased(purchaseProvider.value);
+    InterstitialService.instance.setPurchased(purchaseProvider.value);
   }
 
   @override

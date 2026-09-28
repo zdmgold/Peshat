@@ -11,6 +11,7 @@ import '../core/models/scan_result.dart';
 import '../core/models/scan_state.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/scan_provider.dart';
+import '../core/services/interstitial_service.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -75,6 +76,7 @@ class _ResultScreenState extends State<ResultScreen> {
         timestamp: DateTime.now(),
         confidence: 1.0,
       ));
+      InterstitialService.instance.onTranslationCompleted();
       if (mounted) setState(() => _tab = _ResultTab.translation);
     }
   }
@@ -151,7 +153,15 @@ class _ResultScreenState extends State<ResultScreen> {
       valueListenable: _provider,
       builder: (context, state, _) {
         final ready = state is ScanDone;
-        return Scaffold(
+        return PopScope(
+          canPop: !ready,
+          onPopInvokedWithResult: (didPop, _) async {
+            if (didPop) return;
+            await InterstitialService.instance.maybeShowOnBack();
+            if (!context.mounted) return;
+            Navigator.of(context).pop();
+          },
+          child: Scaffold(
           appBar: AppBar(
             title: Text(
               l10n.resultTitle,
@@ -213,13 +223,14 @@ class _ResultScreenState extends State<ResultScreen> {
               ],
             ],
           ),
-          body: SafeArea(
-            top: false,
-            child: Column(
-              children: [
-                Expanded(child: _buildContent(context, state, l10n, isDark, accent)),
-                const AdSlot(),
-              ],
+            body: SafeArea(
+              top: false,
+              child: Column(
+                children: [
+                  Expanded(child: _buildContent(context, state, l10n, isDark, accent)),
+                  const AdSlot(),
+                ],
+              ),
             ),
           ),
         );
@@ -302,6 +313,7 @@ class _ResultScreenState extends State<ResultScreen> {
   }
 
   void _copy(String text) {
+    InterstitialService.instance.onCopy();
     Clipboard.setData(ClipboardData(text: text));
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
@@ -312,6 +324,7 @@ class _ResultScreenState extends State<ResultScreen> {
   }
 
   Future<void> _share(String text) async {
+    InterstitialService.instance.onShare();
     await Share.share(text);
   }
 
@@ -320,6 +333,7 @@ class _ResultScreenState extends State<ResultScreen> {
     String baseName, {
     required bool asPdf,
   }) async {
+    InterstitialService.instance.onExport();
     try {
       final dir = await getTemporaryDirectory();
       late final File file;
