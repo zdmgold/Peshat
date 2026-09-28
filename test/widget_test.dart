@@ -35,13 +35,25 @@ void main() {
     );
     await tester.pump();
 
-    // The wordmark is 'Peshat' (AppBar title + hero).
+    // Wordmark appears in AppBar and hero.
     expect(find.text('Peshat'), findsWidgets);
-    // The Type text pill is visible.
-    expect(find.text('Type text'), findsOneWidget);
-    // The scan cluster is present (icon inside the circle).
+
+    // Input card placeholder.
+    expect(find.text('Type or paste text'), findsOneWidget);
+
+    // Input card accessories: camera and upload icons.
+    expect(find.byIcon(Icons.camera_alt_outlined), findsOneWidget);
+    expect(find.byIcon(Icons.upload_file_outlined), findsWidgets);
+
+    // Grouped action card: Camera row + Import a file row.
     expect(find.byIcon(Icons.document_scanner_outlined), findsOneWidget);
-    // The import row is visible.
     expect(find.text('Import a file'), findsOneWidget);
+
+    // Target language row uses the translate icon.
+    expect(find.byIcon(Icons.translate), findsOneWidget);
+
+    // AppBar actions: language + theme + settings.
+    expect(find.byIcon(Icons.language), findsOneWidget);
+    expect(find.byIcon(Icons.settings_outlined), findsOneWidget);
   });
 }

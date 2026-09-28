@@ -14,6 +14,7 @@ import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../platform/document_scanner_service.dart';
 import '../widgets/banner_ad_widget.dart';
+import '../widgets/grouped_card.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
 import 'result_screen.dart';
@@ -172,29 +173,24 @@ class _ScanScreenState extends State<ScanScreen> {
     } catch (_) {}
   }
 
-  void _openStored(ScanResult r) {
-    Navigator.push(
-      context,
-      MaterialPageRoute(
-        builder: (_) => ResultScreen(
-          inputText: r.sourceText,
-          initialTargetLanguage: r.targetLang,
-          history: widget.history,
-        ),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
     final isDark = Theme.of(context).brightness == Brightness.dark;
+    final textPrimary =
+        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final border =
+        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
 
     return ValueListenableBuilder<bool>(
       valueListenable: widget.purchase,
       builder: (context, adsRemoved, _) {
         return Scaffold(
           appBar: AppBar(
+            automaticallyImplyLeading: false,
             titleSpacing: Spacing.md,
             title: Row(
               mainAxisSize: MainAxisSize.min,
@@ -203,8 +199,8 @@ class _ScanScreenState extends State<ScanScreen> {
                   borderRadius: BorderRadius.circular(6),
                   child: Image.asset(
                     'assets/icon/icon.png',
-                    width: 28,
-                    height: 28,
+                    width: 26,
+                    height: 26,
                     filterQuality: FilterQuality.high,
                   ),
                 ),
@@ -212,209 +208,148 @@ class _ScanScreenState extends State<ScanScreen> {
                 Text(
                   l10n.appName,
                   style: AppTypography.brand.copyWith(
-                    fontSize: 24,
-                    color: isDark
-                        ? AppColors.textPrimaryDark
-                        : AppColors.textPrimaryLight,
+                    fontSize: 22,
+                    color: textPrimary,
                   ),
                 ),
               ],
             ),
             actions: [
               IconButton(
-                icon: const Icon(Icons.language),
+                icon: const Icon(Icons.language, size: 22),
                 tooltip: l10n.uiLanguageLabel,
                 onPressed: _pickUiLanguage,
               ),
               ValueListenableBuilder<ThemeMode>(
                 valueListenable: widget.theme,
                 builder: (_, mode, __) => IconButton(
-                  icon: Icon(mode == ThemeMode.dark
-                      ? Icons.light_mode_outlined
-                      : Icons.dark_mode_outlined),
+                  icon: Icon(
+                    mode == ThemeMode.dark
+                        ? Icons.light_mode_outlined
+                        : Icons.dark_mode_outlined,
+                    size: 22,
+                  ),
                   tooltip: l10n.themeLabel,
                   onPressed: _toggleTheme,
                 ),
               ),
               IconButton(
-                icon: const Icon(Icons.settings_outlined),
+                icon: const Icon(Icons.settings_outlined, size: 22),
                 tooltip: l10n.settingsTitle,
                 onPressed: _openSettings,
               ),
             ],
           ),
           body: SafeArea(
+            top: false,
             child: Column(
               children: [
                 Expanded(
                   child: SingleChildScrollView(
-                    padding: const EdgeInsets.all(Spacing.md),
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: Spacing.md,
+                    ),
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.stretch,
                       children: [
-                        const SizedBox(height: Spacing.md),
+                        const SizedBox(height: Spacing.lg),
 
-                        // Hero — logo + wordmark + tagline
+                        // Hero
                         Center(
-                          child: Image.asset(
-                            'assets/icon/icon.png',
-                            width: 88,
-                            height: 88,
-                            filterQuality: FilterQuality.high,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Image.asset(
+                              'assets/icon/icon.png',
+                              width: 72,
+                              height: 72,
+                              filterQuality: FilterQuality.high,
+                            ),
                           ),
                         ),
-                        const SizedBox(height: Spacing.md),
+                        const SizedBox(height: Spacing.lg),
                         Text(
                           l10n.appName,
                           textAlign: TextAlign.center,
                           style: AppTypography.brand.copyWith(
                             fontSize: 34,
-                            color: isDark
-                                ? AppColors.textPrimaryDark
-                                : AppColors.textPrimaryLight,
+                            color: textPrimary,
                           ),
                         ),
                         const SizedBox(height: Spacing.sm),
                         Text(
                           l10n.tagline,
                           textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
                           style: AppTypography.body.copyWith(
-                            fontSize: 14,
+                            fontSize: 15,
                             height: 1.5,
-                            color: isDark
-                                ? AppColors.textSecondaryDark
-                                : AppColors.textSecondaryLight,
+                            color: textSecondary,
                           ),
                         ),
                         const SizedBox(height: Spacing.xl),
 
-                        // Scan cluster — big circular button + Type text pill
-                        Row(
-                          crossAxisAlignment: CrossAxisAlignment.center,
+                        // Input card — hero surface
+                        _InputCard(
+                          placeholder: l10n.typeTextLabel,
+                          onTapBody: _openTextTranslate,
+                          onTapCamera: _isScanning ? null : _handleScan,
+                          onTapUpload: _handleImport,
+                          isScanning: _isScanning,
+                          isDark: isDark,
+                          accent: accent,
+                          border: border,
+                        ),
+                        const SizedBox(height: Spacing.lg),
+
+                        // Grouped action card
+                        GroupedCard(
                           children: [
-                            _ScanCircleButton(
+                            GroupedRow(
+                              leading: Icons.document_scanner_outlined,
+                              title: l10n.cameraLabel,
                               onTap: _isScanning ? null : _handleScan,
-                              isScanning: _isScanning,
-                              isDark: isDark,
+                              showChevron: true,
                             ),
-                            const SizedBox(width: Spacing.md),
-                            Expanded(
-                              child: _TypeTextPill(
-                                label: l10n.typeTextButtonLabel,
-                                onTap: _openTextTranslate,
-                                isDark: isDark,
+                            GroupedRow(
+                              leading: Icons.upload_file_outlined,
+                              title: l10n.importFileLabel,
+                              onTap: _handleImport,
+                              showChevron: true,
+                            ),
+                            ValueListenableBuilder<List<ScanResult>>(
+                              valueListenable: widget.history,
+                              builder: (context, items, _) => GroupedRow(
+                                leading: Icons.history,
+                                title: l10n.recentScansLabel,
+                                trailingText: items.isEmpty
+                                    ? null
+                                    : '${items.length}',
+                                onTap: _openHistory,
+                                showChevron: true,
                               ),
                             ),
                           ],
                         ),
-                        const SizedBox(height: Spacing.md),
-
-                        // Import row
-                        SizedBox(
-                          height: 48,
-                          child: OutlinedButton.icon(
-                            onPressed: _handleImport,
-                            icon: const Icon(Icons.upload_file_outlined,
-                                size: 20),
-                            label: Text(l10n.importFileLabel),
-                          ),
-                        ),
                         const SizedBox(height: Spacing.lg),
 
                         // Target language card
-                        _LanguageCard(
+                        _LanguageRow(
                           label: l10n.translateToLabel,
                           settings: widget.settings,
                           onTap: _pickTargetLanguage,
                           isDark: isDark,
+                          border: border,
+                          accent: accent,
+                          textPrimary: textPrimary,
+                          textSecondary: textSecondary,
                         ),
                         const SizedBox(height: Spacing.lg),
-
-                        // Recent scan preview
-                        ValueListenableBuilder<List<ScanResult>>(
-                          valueListenable: widget.history,
-                          builder: (context, items, _) {
-                            if (items.isEmpty) return const SizedBox.shrink();
-                            final last = items.first;
-                            return Column(
-                              crossAxisAlignment: CrossAxisAlignment.stretch,
-                              children: [
-                                Row(
-                                  children: [
-                                    Text(
-                                      l10n.recentScansLabel,
-                                      style: AppTypography.chrome.copyWith(
-                                        fontSize: 13,
-                                        fontWeight: FontWeight.w600,
-                                        letterSpacing: 0.4,
-                                        color: isDark
-                                            ? AppColors.textTertiaryDark
-                                            : AppColors.textTertiaryLight,
-                                      ),
-                                    ),
-                                    const Spacer(),
-                                    TextButton(
-                                      onPressed: _openHistory,
-                                      child: Text(l10n.seeAllLabel),
-                                    ),
-                                  ],
-                                ),
-                                const SizedBox(height: Spacing.xs),
-                                Card(
-                                  child: InkWell(
-                                    borderRadius: BorderRadius.circular(16),
-                                    onTap: () => _openStored(last),
-                                    child: Padding(
-                                      padding: const EdgeInsets.all(Spacing.md),
-                                      child: Column(
-                                        crossAxisAlignment:
-                                            CrossAxisAlignment.start,
-                                        children: [
-                                          Text(
-                                            last.sourceText,
-                                            maxLines: 1,
-                                            overflow: TextOverflow.ellipsis,
-                                            style:
-                                                AppTypography.chrome.copyWith(
-                                              fontSize: 14,
-                                              fontWeight: FontWeight.w500,
-                                              color: isDark
-                                                  ? AppColors.textPrimaryDark
-                                                  : AppColors.textPrimaryLight,
-                                            ),
-                                          ),
-                                          const SizedBox(height: 4),
-                                          Text(
-                                            last.translatedText,
-                                            maxLines: 1,
-                                            overflow: TextOverflow.ellipsis,
-                                            style: AppTypography.body.copyWith(
-                                              fontSize: 13,
-                                              color: isDark
-                                                  ? AppColors
-                                                      .textSecondaryDark
-                                                  : AppColors
-                                                      .textSecondaryLight,
-                                            ),
-                                          ),
-                                        ],
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                              ],
-                            );
-                          },
-                        ),
                       ],
                     ),
                   ),
                 ),
-                if (!adsRemoved)
-                  const Padding(
-                    padding: EdgeInsets.fromLTRB(4, 0, 4, 4),
-                    child: BannerAdWidget(),
-                  ),
+                if (!adsRemoved) const BannerAdWidget() else const SizedBox.shrink(),
               ],
             ),
           ),
@@ -424,101 +359,85 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 }
 
-class _ScanCircleButton extends StatelessWidget {
-  final VoidCallback? onTap;
+// ---------------------------------------------------------------------------
+// Input card — primary surface, tap body opens the text editor,
+// camera and upload icons are accessories.
+// ---------------------------------------------------------------------------
+
+class _InputCard extends StatelessWidget {
+  final String placeholder;
+  final VoidCallback onTapBody;
+  final VoidCallback? onTapCamera;
+  final VoidCallback onTapUpload;
   final bool isScanning;
   final bool isDark;
+  final Color accent;
+  final Color border;
 
-  const _ScanCircleButton({
-    required this.onTap,
+  const _InputCard({
+    required this.placeholder,
+    required this.onTapBody,
+    required this.onTapCamera,
+    required this.onTapUpload,
     required this.isScanning,
     required this.isDark,
+    required this.accent,
+    required this.border,
   });
 
   @override
   Widget build(BuildContext context) {
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    return Semantics(
-      label: 'Scan',
-      button: true,
-      child: Material(
-        color: accent,
-        shape: const CircleBorder(),
-        elevation: 2,
-        shadowColor: accent.withValues(alpha: 0.5),
-        child: InkWell(
-          customBorder: const CircleBorder(),
-          onTap: onTap,
-          child: SizedBox(
-            width: 120,
-            height: 120,
-            child: Center(
-              child: isScanning
-                  ? const SizedBox(
-                      width: 32,
-                      height: 32,
-                      child: CircularProgressIndicator(
-                        color: Colors.white,
-                        strokeWidth: 3,
-                      ),
-                    )
-                  : const Icon(
-                      Icons.document_scanner_outlined,
-                      color: Colors.white,
-                      size: 44,
-                    ),
-            ),
-          ),
-        ),
-      ),
-    );
-  }
-}
+    final textTertiary =
+        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
+    final cardBg =
+        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
 
-class _TypeTextPill extends StatelessWidget {
-  final String label;
-  final VoidCallback onTap;
-  final bool isDark;
-
-  const _TypeTextPill({
-    required this.label,
-    required this.onTap,
-    required this.isDark,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    return Semantics(
-      label: label,
-      button: true,
+    return Material(
+      color: cardBg,
+      borderRadius: BorderRadius.circular(16),
       child: InkWell(
         borderRadius: BorderRadius.circular(16),
-        onTap: onTap,
+        onTap: onTapBody,
         child: Container(
-          height: 64,
-          padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+          height: 120,
+          padding: const EdgeInsets.all(Spacing.md),
           decoration: BoxDecoration(
-            color: isDark
-                ? AppColors.bgSecondaryDark
-                : AppColors.bgSecondaryLight,
             borderRadius: BorderRadius.circular(16),
-            border: Border.all(color: accent, width: 1.2),
+            border: Border.all(color: border, width: 0.5),
           ),
-          child: Row(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Icon(Icons.edit_note, color: accent, size: 24),
-              const SizedBox(width: Spacing.sm),
-              Expanded(
-                child: Text(
-                  label,
-                  style: AppTypography.chrome.copyWith(
-                    fontSize: 15,
-                    fontWeight: FontWeight.w600,
-                    color: isDark
-                        ? AppColors.textPrimaryDark
-                        : AppColors.textPrimaryLight,
-                  ),
+              Text(
+                placeholder,
+                maxLines: 1,
+                overflow: TextOverflow.ellipsis,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 16,
+                  color: textTertiary,
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomRight,
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    _MiniIconButton(
+                      icon: Icons.upload_file_outlined,
+                      color: accent,
+                      onTap: onTapUpload,
+                      tooltip: 'Import',
+                    ),
+                    const SizedBox(width: Spacing.sm),
+                    _MiniIconButton(
+                      icon: Icons.camera_alt_outlined,
+                      color: accent,
+                      onTap: onTapCamera,
+                      tooltip: 'Camera',
+                      isLoading: isScanning,
+                    ),
+                  ],
                 ),
               ),
             ],
@@ -529,85 +448,130 @@ class _TypeTextPill extends StatelessWidget {
   }
 }
 
-class _LanguageCard extends StatelessWidget {
-  final String label;
-  final SettingsProvider settings;
-  final VoidCallback onTap;
-  final bool isDark;
+class _MiniIconButton extends StatelessWidget {
+  final IconData icon;
+  final Color color;
+  final VoidCallback? onTap;
+  final String tooltip;
+  final bool isLoading;
 
-  const _LanguageCard({
-    required this.label,
-    required this.settings,
+  const _MiniIconButton({
+    required this.icon,
+    required this.color,
     required this.onTap,
-    required this.isDark,
+    required this.tooltip,
+    this.isLoading = false,
   });
 
   @override
   Widget build(BuildContext context) {
-    return InkWell(
-      borderRadius: BorderRadius.circular(12),
-      onTap: onTap,
-      child: Container(
-        padding: const EdgeInsets.symmetric(
-          horizontal: Spacing.md,
-          vertical: Spacing.sm,
-        ),
-        decoration: BoxDecoration(
-          color: isDark
-              ? AppColors.bgSecondaryDark
-              : AppColors.bgSecondaryLight,
-          borderRadius: BorderRadius.circular(12),
-          border: Border.all(
-            color: isDark
-                ? AppColors.borderSubtleDark
-                : AppColors.borderSubtleLight,
-            width: 0.5,
+    return Tooltip(
+      message: tooltip,
+      child: Material(
+        color: Colors.transparent,
+        shape: const CircleBorder(),
+        child: InkWell(
+          customBorder: const CircleBorder(),
+          onTap: onTap,
+          child: SizedBox(
+            width: 40,
+            height: 40,
+            child: Center(
+              child: isLoading
+                  ? SizedBox(
+                      width: 18,
+                      height: 18,
+                      child: CircularProgressIndicator(
+                        strokeWidth: 2,
+                        color: color,
+                      ),
+                    )
+                  : Icon(icon, size: 22, color: color),
+            ),
           ),
         ),
-        child: Row(
-          children: [
-            Icon(
-              Icons.translate,
-              size: 20,
-              color: isDark ? AppColors.accentDark : AppColors.accentLight,
-            ),
-            const SizedBox(width: Spacing.md),
-            Text(
-              label,
-              style: AppTypography.chrome.copyWith(
-                fontSize: 14,
-                color: isDark
-                    ? AppColors.textSecondaryDark
-                    : AppColors.textSecondaryLight,
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Target language row — full-width card with label + value + chevron.
+// ---------------------------------------------------------------------------
+
+class _LanguageRow extends StatelessWidget {
+  final String label;
+  final SettingsProvider settings;
+  final VoidCallback onTap;
+  final bool isDark;
+  final Color border;
+  final Color accent;
+  final Color textPrimary;
+  final Color textSecondary;
+
+  const _LanguageRow({
+    required this.label,
+    required this.settings,
+    required this.onTap,
+    required this.isDark,
+    required this.border,
+    required this.accent,
+    required this.textPrimary,
+    required this.textSecondary,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final cardBg =
+        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
+    final textTertiary =
+        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
+
+    return Material(
+      color: cardBg,
+      borderRadius: BorderRadius.circular(12),
+      child: InkWell(
+        borderRadius: BorderRadius.circular(12),
+        onTap: onTap,
+        child: Container(
+          constraints: const BoxConstraints(minHeight: 56),
+          padding: const EdgeInsets.symmetric(
+            horizontal: Spacing.md,
+            vertical: Spacing.sm,
+          ),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: border, width: 0.5),
+          ),
+          child: Row(
+            children: [
+              Icon(Icons.translate, size: 22, color: accent),
+              const SizedBox(width: Spacing.md),
+              Text(
+                label,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 15,
+                  color: textSecondary,
+                ),
               ),
-            ),
-            const SizedBox(width: Spacing.sm),
-            Expanded(
-              child: ValueListenableBuilder<String>(
+              const Spacer(),
+              ValueListenableBuilder<String>(
                 valueListenable: settings,
                 builder: (_, code, __) => Text(
                   languageDisplayName(code),
                   textAlign: TextAlign.right,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.chrome.copyWith(
-                    fontSize: 15,
+                    fontSize: 16,
                     fontWeight: FontWeight.w600,
-                    color: isDark
-                        ? AppColors.textPrimaryDark
-                        : AppColors.textPrimaryLight,
+                    color: textPrimary,
                   ),
                 ),
               ),
-            ),
-            const SizedBox(width: Spacing.xs),
-            Icon(
-              Icons.chevron_right,
-              size: 20,
-              color: isDark
-                  ? AppColors.textTertiaryDark
-                  : AppColors.textTertiaryLight,
-            ),
-          ],
+              const SizedBox(width: Spacing.sm),
+              Icon(Icons.chevron_right, size: 20, color: textTertiary),
+            ],
+          ),
         ),
       ),
     );
