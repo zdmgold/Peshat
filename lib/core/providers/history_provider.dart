@@ -5,11 +5,9 @@ import '../services/local_storage.dart';
 
 class HistoryProvider extends ValueNotifier<List<ScanResult>> {
   final LocalStorage _storage;
-  final SharedPreferences _prefs;
 
   HistoryProvider(SharedPreferences prefs)
       : _storage = LocalStorage(prefs),
-        _prefs = prefs,
         super(const []) {
     _load();
   }
