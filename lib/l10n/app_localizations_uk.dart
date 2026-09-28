@@ -231,4 +231,13 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Камера';
+
+  @override
+  String get recentLanguagesLabel => 'Нещодавні';
+
+  @override
+  String get allLanguagesLabel => 'Усі мови';
+
+  @override
+  String get noResultsSubtitle => 'Спробуйте інший правопис.';
 }

@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "ہٹائیں",
   "charactersLabel": "حروف",
   "clearHistoryLabel": "تمام تاریخ صاف کریں",
-  "cameraLabel": "کیمرہ"
+  "cameraLabel": "کیمرہ",
+  "recentLanguagesLabel": "حالیہ",
+  "allLanguagesLabel": "تمام زبانیں",
+  "noResultsSubtitle": "کوئی اور ہجے آزمائیں۔"
 }

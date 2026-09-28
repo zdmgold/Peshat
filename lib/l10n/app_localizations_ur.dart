@@ -231,4 +231,13 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get cameraLabel => 'کیمرہ';
+
+  @override
+  String get recentLanguagesLabel => 'حالیہ';
+
+  @override
+  String get allLanguagesLabel => 'تمام زبانیں';
+
+  @override
+  String get noResultsSubtitle => 'کوئی اور ہجے آزمائیں۔';
 }

@@ -231,4 +231,13 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get cameraLabel => 'ကင်မရာ';
+
+  @override
+  String get recentLanguagesLabel => 'မကြာသေးမီ';
+
+  @override
+  String get allLanguagesLabel => 'ဘာသာစကားအားလုံး';
+
+  @override
+  String get noResultsSubtitle => 'အခြားစာလုံးပေါင်းကို စမ်းကြည့်ပါ။';
 }

@@ -231,4 +231,13 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Câmera';
+
+  @override
+  String get recentLanguagesLabel => 'Recentes';
+
+  @override
+  String get allLanguagesLabel => 'Todos os idiomas';
+
+  @override
+  String get noResultsSubtitle => 'Tente outra grafia.';
 }

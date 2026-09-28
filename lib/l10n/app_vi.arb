@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Gỡ",
   "charactersLabel": "ký tự",
   "clearHistoryLabel": "Xóa toàn bộ lịch sử",
-  "cameraLabel": "Máy ảnh"
+  "cameraLabel": "Máy ảnh",
+  "recentLanguagesLabel": "Gần đây",
+  "allLanguagesLabel": "Tất cả ngôn ngữ",
+  "noResultsSubtitle": "Thử cách viết khác."
 }

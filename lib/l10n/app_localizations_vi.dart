@@ -231,4 +231,13 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Máy ảnh';
+
+  @override
+  String get recentLanguagesLabel => 'Gần đây';
+
+  @override
+  String get allLanguagesLabel => 'Tất cả ngôn ngữ';
+
+  @override
+  String get noResultsSubtitle => 'Thử cách viết khác.';
 }

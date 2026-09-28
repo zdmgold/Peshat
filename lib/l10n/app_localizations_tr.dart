@@ -231,4 +231,13 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Kamera';
+
+  @override
+  String get recentLanguagesLabel => 'Son kullanılan';
+
+  @override
+  String get allLanguagesLabel => 'Tüm diller';
+
+  @override
+  String get noResultsSubtitle => 'Farklı bir yazım deneyin.';
 }

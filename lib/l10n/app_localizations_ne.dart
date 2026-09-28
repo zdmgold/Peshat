@@ -231,4 +231,13 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get cameraLabel => 'क्यामेरा';
+
+  @override
+  String get recentLanguagesLabel => 'हालैका';
+
+  @override
+  String get allLanguagesLabel => 'सबै भाषाहरू';
+
+  @override
+  String get noResultsSubtitle => 'अर्को हिज्जे प्रयास गर्नुहोस्।';
 }

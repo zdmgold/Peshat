@@ -231,4 +231,13 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Камера';
+
+  @override
+  String get recentLanguagesLabel => 'Недавние';
+
+  @override
+  String get allLanguagesLabel => 'Все языки';
+
+  @override
+  String get noResultsSubtitle => 'Попробуйте другое написание.';
 }

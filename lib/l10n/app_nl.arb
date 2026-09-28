@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Verwijderen",
   "charactersLabel": "tekens",
   "clearHistoryLabel": "Alle geschiedenis wissen",
-  "cameraLabel": "Camera"
+  "cameraLabel": "Camera",
+  "recentLanguagesLabel": "Recent",
+  "allLanguagesLabel": "Alle talen",
+  "noResultsSubtitle": "Probeer een andere spelling."
 }

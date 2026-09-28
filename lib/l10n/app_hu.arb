@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Eltávolítás",
   "charactersLabel": "karakter",
   "clearHistoryLabel": "Teljes előzmények törlése",
-  "cameraLabel": "Kamera"
+  "cameraLabel": "Kamera",
+  "recentLanguagesLabel": "Legutóbbi",
+  "allLanguagesLabel": "Minden nyelv",
+  "noResultsSubtitle": "Próbáljon más írásmódot."
 }

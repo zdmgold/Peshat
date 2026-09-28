@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Quitar",
   "charactersLabel": "caracteres",
   "clearHistoryLabel": "Borrar todo el historial",
-  "cameraLabel": "Cámara"
+  "cameraLabel": "Cámara",
+  "recentLanguagesLabel": "Recientes",
+  "allLanguagesLabel": "Todos los idiomas",
+  "noResultsSubtitle": "Prueba con otra ortografía."
 }

@@ -231,4 +231,13 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Kamera';
+
+  @override
+  String get recentLanguagesLabel => 'Legutóbbi';
+
+  @override
+  String get allLanguagesLabel => 'Minden nyelv';
+
+  @override
+  String get noResultsSubtitle => 'Próbáljon más írásmódot.';
 }

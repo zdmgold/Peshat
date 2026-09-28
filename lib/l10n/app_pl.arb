@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Usuń",
   "charactersLabel": "znaków",
   "clearHistoryLabel": "Wyczyść całą historię",
-  "cameraLabel": "Aparat"
+  "cameraLabel": "Aparat",
+  "recentLanguagesLabel": "Ostatnie",
+  "allLanguagesLabel": "Wszystkie języki",
+  "noResultsSubtitle": "Spróbuj innej pisowni."
 }

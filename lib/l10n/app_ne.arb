@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "हटाउनुहोस्",
   "charactersLabel": "अक्षरहरू",
   "clearHistoryLabel": "सबै इतिहास मेटाउनुहोस्",
-  "cameraLabel": "क्यामेरा"
+  "cameraLabel": "क्यामेरा",
+  "recentLanguagesLabel": "हालैका",
+  "allLanguagesLabel": "सबै भाषाहरू",
+  "noResultsSubtitle": "अर्को हिज्जे प्रयास गर्नुहोस्।"
 }

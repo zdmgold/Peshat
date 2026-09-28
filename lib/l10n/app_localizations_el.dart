@@ -231,4 +231,13 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Κάμερα';
+
+  @override
+  String get recentLanguagesLabel => 'Πρόσφατες';
+
+  @override
+  String get allLanguagesLabel => 'Όλες οι γλώσσες';
+
+  @override
+  String get noResultsSubtitle => 'Δοκιμάστε άλλη ορθογραφία.';
 }

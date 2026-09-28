@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "ਹਟਾਓ",
   "charactersLabel": "ਅੱਖਰ",
   "clearHistoryLabel": "ਸਾਰਾ ਇਤਿਹਾਸ ਸਾਫ਼ ਕਰੋ",
-  "cameraLabel": "ਕੈਮਰਾ"
+  "cameraLabel": "ਕੈਮਰਾ",
+  "recentLanguagesLabel": "ਤਾਜ਼ਾ",
+  "allLanguagesLabel": "ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ",
+  "noResultsSubtitle": "ਹੋਰ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।"
 }

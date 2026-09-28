@@ -606,6 +606,24 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Camera'**
   String get cameraLabel;
+
+  /// No description provided for @recentLanguagesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent'**
+  String get recentLanguagesLabel;
+
+  /// No description provided for @allLanguagesLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'All languages'**
+  String get allLanguagesLabel;
+
+  /// No description provided for @noResultsSubtitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Try a different spelling.'**
+  String get noResultsSubtitle;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

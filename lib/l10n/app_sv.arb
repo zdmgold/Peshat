@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Ta bort",
   "charactersLabel": "tecken",
   "clearHistoryLabel": "Rensa all historik",
-  "cameraLabel": "Kamera"
+  "cameraLabel": "Kamera",
+  "recentLanguagesLabel": "Senaste",
+  "allLanguagesLabel": "Alla språk",
+  "noResultsSubtitle": "Prova en annan stavning."
 }

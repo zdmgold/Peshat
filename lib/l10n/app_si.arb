@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "ඉවත් කරන්න",
   "charactersLabel": "අක්ෂර",
   "clearHistoryLabel": "සියලු ඉතිහාසය මකන්න",
-  "cameraLabel": "කැමරාව"
+  "cameraLabel": "කැමරාව",
+  "recentLanguagesLabel": "මෑත",
+  "allLanguagesLabel": "සියලු භාෂා",
+  "noResultsSubtitle": "වෙනත් අක්ෂර වින්‍යාසයක් උත්සාහ කරන්න."
 }

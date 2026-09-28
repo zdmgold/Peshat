@@ -231,4 +231,13 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Fotoaparát';
+
+  @override
+  String get recentLanguagesLabel => 'Nedávné';
+
+  @override
+  String get allLanguagesLabel => 'Všechny jazyky';
+
+  @override
+  String get noResultsSubtitle => 'Zkuste jiný pravopis.';
 }

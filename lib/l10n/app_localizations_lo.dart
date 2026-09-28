@@ -231,4 +231,13 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get cameraLabel => 'ກ້ອງ';
+
+  @override
+  String get recentLanguagesLabel => 'ຫຼ້າສຸດ';
+
+  @override
+  String get allLanguagesLabel => 'ທຸກພາສາ';
+
+  @override
+  String get noResultsSubtitle => 'ລອງສະກົດແບບອື່ນ.';
 }

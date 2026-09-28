@@ -231,4 +231,13 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Appareil photo';
+
+  @override
+  String get recentLanguagesLabel => 'Récentes';
+
+  @override
+  String get allLanguagesLabel => 'Toutes les langues';
+
+  @override
+  String get noResultsSubtitle => 'Essayez une autre orthographe.';
 }

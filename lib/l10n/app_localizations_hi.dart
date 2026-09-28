@@ -231,4 +231,13 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get cameraLabel => 'कैमरा';
+
+  @override
+  String get recentLanguagesLabel => 'हाल के';
+
+  @override
+  String get allLanguagesLabel => 'सभी भाषाएँ';
+
+  @override
+  String get noResultsSubtitle => 'कोई दूसरी वर्तनी आज़माएँ।';
 }

@@ -231,4 +231,13 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get cameraLabel => 'កាមេរ៉ា';
+
+  @override
+  String get recentLanguagesLabel => 'ថ្មីៗ';
+
+  @override
+  String get allLanguagesLabel => 'ភាសាទាំងអស់';
+
+  @override
+  String get noResultsSubtitle => 'សាកល្បងអក្ខរាវិរុទ្ធផ្សេង។';
 }

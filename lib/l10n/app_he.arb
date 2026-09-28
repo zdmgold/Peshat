@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "הסר",
   "charactersLabel": "תווים",
   "clearHistoryLabel": "נקה את כל ההיסטוריה",
-  "cameraLabel": "מצלמה"
+  "cameraLabel": "מצלמה",
+  "recentLanguagesLabel": "אחרונים",
+  "allLanguagesLabel": "כל השפות",
+  "noResultsSubtitle": "נסה איות אחר."
 }

@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Прибрати",
   "charactersLabel": "символів",
   "clearHistoryLabel": "Очистити всю історію",
-  "cameraLabel": "Камера"
+  "cameraLabel": "Камера",
+  "recentLanguagesLabel": "Нещодавні",
+  "allLanguagesLabel": "Усі мови",
+  "noResultsSubtitle": "Спробуйте інший правопис."
 }

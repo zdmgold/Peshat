@@ -231,4 +231,13 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get cameraLabel => 'カメラ';
+
+  @override
+  String get recentLanguagesLabel => '最近';
+
+  @override
+  String get allLanguagesLabel => 'すべての言語';
+
+  @override
+  String get noResultsSubtitle => '別の綴りをお試しください。';
 }

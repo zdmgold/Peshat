@@ -231,4 +231,13 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get cameraLabel => 'دوربین';
+
+  @override
+  String get recentLanguagesLabel => 'اخیر';
+
+  @override
+  String get allLanguagesLabel => 'همه زبان‌ها';
+
+  @override
+  String get noResultsSubtitle => 'املای دیگری را امتحان کنید.';
 }

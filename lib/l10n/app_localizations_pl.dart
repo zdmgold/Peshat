@@ -231,4 +231,13 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Aparat';
+
+  @override
+  String get recentLanguagesLabel => 'Ostatnie';
+
+  @override
+  String get allLanguagesLabel => 'Wszystkie języki';
+
+  @override
+  String get noResultsSubtitle => 'Spróbuj innej pisowni.';
 }

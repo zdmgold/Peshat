@@ -231,4 +231,13 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Kamera';
+
+  @override
+  String get recentLanguagesLabel => 'Terbaru';
+
+  @override
+  String get allLanguagesLabel => 'Semua bahasa';
+
+  @override
+  String get noResultsSubtitle => 'Coba ejaan lain.';
 }

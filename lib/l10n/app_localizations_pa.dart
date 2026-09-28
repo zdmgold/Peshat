@@ -231,4 +231,13 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get cameraLabel => 'ਕੈਮਰਾ';
+
+  @override
+  String get recentLanguagesLabel => 'ਤਾਜ਼ਾ';
+
+  @override
+  String get allLanguagesLabel => 'ਸਾਰੀਆਂ ਭਾਸ਼ਾਵਾਂ';
+
+  @override
+  String get noResultsSubtitle => 'ਹੋਰ ਸਪੈਲਿੰਗ ਅਜ਼ਮਾਓ।';
 }

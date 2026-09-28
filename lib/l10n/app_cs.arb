@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Odebrat",
   "charactersLabel": "znaků",
   "clearHistoryLabel": "Vymazat celou historii",
-  "cameraLabel": "Fotoaparát"
+  "cameraLabel": "Fotoaparát",
+  "recentLanguagesLabel": "Nedávné",
+  "allLanguagesLabel": "Všechny jazyky",
+  "noResultsSubtitle": "Zkuste jiný pravopis."
 }

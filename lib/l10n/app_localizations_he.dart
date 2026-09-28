@@ -231,4 +231,13 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get cameraLabel => 'מצלמה';
+
+  @override
+  String get recentLanguagesLabel => 'אחרונים';
+
+  @override
+  String get allLanguagesLabel => 'כל השפות';
+
+  @override
+  String get noResultsSubtitle => 'נסה איות אחר.';
 }

@@ -231,4 +231,13 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Kamera';
+
+  @override
+  String get recentLanguagesLabel => 'Kürzlich';
+
+  @override
+  String get allLanguagesLabel => 'Alle Sprachen';
+
+  @override
+  String get noResultsSubtitle => 'Versuchen Sie eine andere Schreibweise.';
 }

@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "ลบ",
   "charactersLabel": "ตัวอักษร",
   "clearHistoryLabel": "ล้างประวัติทั้งหมด",
-  "cameraLabel": "กล้อง"
+  "cameraLabel": "กล้อง",
+  "recentLanguagesLabel": "ล่าสุด",
+  "allLanguagesLabel": "ทุกภาษา",
+  "noResultsSubtitle": "ลองสะกดแบบอื่น"
 }

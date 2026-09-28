@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "إزالة",
   "charactersLabel": "حرف",
   "clearHistoryLabel": "مسح كل السجل",
-  "cameraLabel": "الكاميرا"
+  "cameraLabel": "الكاميرا",
+  "recentLanguagesLabel": "الأحدث",
+  "allLanguagesLabel": "كل اللغات",
+  "noResultsSubtitle": "جرّب تهجئة أخرى."
 }

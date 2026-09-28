@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Retirer",
   "charactersLabel": "caractères",
   "clearHistoryLabel": "Effacer tout l’historique",
-  "cameraLabel": "Appareil photo"
+  "cameraLabel": "Appareil photo",
+  "recentLanguagesLabel": "Récentes",
+  "allLanguagesLabel": "Toutes les langues",
+  "noResultsSubtitle": "Essayez une autre orthographe."
 }

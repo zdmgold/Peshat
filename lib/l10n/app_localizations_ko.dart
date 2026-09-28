@@ -231,4 +231,13 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get cameraLabel => '카메라';
+
+  @override
+  String get recentLanguagesLabel => '최근';
+
+  @override
+  String get allLanguagesLabel => '모든 언어';
+
+  @override
+  String get noResultsSubtitle => '다른 철자를 시도해 보세요.';
 }

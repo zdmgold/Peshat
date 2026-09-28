@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "हटाएं",
   "charactersLabel": "अक्षर",
   "clearHistoryLabel": "सारा इतिहास साफ़ करें",
-  "cameraLabel": "कैमरा"
+  "cameraLabel": "कैमरा",
+  "recentLanguagesLabel": "हाल के",
+  "allLanguagesLabel": "सभी भाषाएँ",
+  "noResultsSubtitle": "कोई दूसरी वर्तनी आज़माएँ।"
 }

@@ -45,7 +45,10 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
     final selected = await Navigator.push<String>(
       context,
       MaterialPageRoute(
-        builder: (_) => LanguagePickerScreen(current: widget.settings.value),
+        builder: (_) => LanguagePickerScreen(
+          current: widget.settings.value,
+          recents: widget.settings.recentTargets,
+        ),
       ),
     );
     if (selected != null) widget.settings.setTarget(selected);

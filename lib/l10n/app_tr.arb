@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "Kaldır",
   "charactersLabel": "karakter",
   "clearHistoryLabel": "Tüm geçmişi temizle",
-  "cameraLabel": "Kamera"
+  "cameraLabel": "Kamera",
+  "recentLanguagesLabel": "Son kullanılan",
+  "allLanguagesLabel": "Tüm diller",
+  "noResultsSubtitle": "Farklı bir yazım deneyin."
 }

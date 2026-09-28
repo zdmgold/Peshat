@@ -231,4 +231,13 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get cameraLabel => 'ካሜራ';
+
+  @override
+  String get recentLanguagesLabel => 'የቅርብ ጊዜ';
+
+  @override
+  String get allLanguagesLabel => 'ሁሉም ቋንቋዎች';
+
+  @override
+  String get noResultsSubtitle => 'ሌላ የፊደል አጻጻፍ ይሞክሩ።';
 }

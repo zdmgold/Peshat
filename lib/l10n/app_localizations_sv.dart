@@ -231,4 +231,13 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Kamera';
+
+  @override
+  String get recentLanguagesLabel => 'Senaste';
+
+  @override
+  String get allLanguagesLabel => 'Alla språk';
+
+  @override
+  String get noResultsSubtitle => 'Prova en annan stavning.';
 }

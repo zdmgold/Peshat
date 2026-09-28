@@ -231,4 +231,13 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Camera';
+
+  @override
+  String get recentLanguagesLabel => 'Kamakailan';
+
+  @override
+  String get allLanguagesLabel => 'Lahat ng wika';
+
+  @override
+  String get noResultsSubtitle => 'Subukan ang ibang spelling.';
 }

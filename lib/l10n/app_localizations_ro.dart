@@ -231,4 +231,13 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get cameraLabel => 'Cameră';
+
+  @override
+  String get recentLanguagesLabel => 'Recente';
+
+  @override
+  String get allLanguagesLabel => 'Toate limbile';
+
+  @override
+  String get noResultsSubtitle => 'Încercați altă ortografie.';
 }

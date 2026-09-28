@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "ဖယ်ရှားရန်",
   "charactersLabel": "အက္ခရာ",
   "clearHistoryLabel": "မှတ်တမ်းအားလုံးကို ရှင်းလင်းပါ",
-  "cameraLabel": "ကင်မရာ"
+  "cameraLabel": "ကင်မရာ",
+  "recentLanguagesLabel": "မကြာသေးမီ",
+  "allLanguagesLabel": "ဘာသာစကားအားလုံး",
+  "noResultsSubtitle": "အခြားစာလုံးပေါင်းကို စမ်းကြည့်ပါ။"
 }

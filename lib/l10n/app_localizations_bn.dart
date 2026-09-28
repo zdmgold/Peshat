@@ -231,4 +231,13 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get cameraLabel => 'ক্যামেরা';
+
+  @override
+  String get recentLanguagesLabel => 'সাম্প্রতিক';
+
+  @override
+  String get allLanguagesLabel => 'সব ভাষা';
+
+  @override
+  String get noResultsSubtitle => 'অন্য বানান চেষ্টা করুন।';
 }

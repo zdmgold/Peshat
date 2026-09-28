@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "削除",
   "charactersLabel": "文字",
   "clearHistoryLabel": "すべての履歴を消去",
-  "cameraLabel": "カメラ"
+  "cameraLabel": "カメラ",
+  "recentLanguagesLabel": "最近",
+  "allLanguagesLabel": "すべての言語",
+  "noResultsSubtitle": "別の綴りをお試しください。"
 }

@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "移除",
   "charactersLabel": "个字符",
   "clearHistoryLabel": "清除所有历史记录",
-  "cameraLabel": "相机"
+  "cameraLabel": "相机",
+  "recentLanguagesLabel": "最近",
+  "allLanguagesLabel": "所有语言",
+  "noResultsSubtitle": "请尝试其他拼写。"
 }

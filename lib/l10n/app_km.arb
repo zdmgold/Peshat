@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "ដកចេញ",
   "charactersLabel": "តួអក្សរ",
   "clearHistoryLabel": "លុបប្រវត្តិទាំងអស់",
-  "cameraLabel": "កាមេរ៉ា"
+  "cameraLabel": "កាមេរ៉ា",
+  "recentLanguagesLabel": "ថ្មីៗ",
+  "allLanguagesLabel": "ភាសាទាំងអស់",
+  "noResultsSubtitle": "សាកល្បងអក្ខរាវិរុទ្ធផ្សេង។"
 }

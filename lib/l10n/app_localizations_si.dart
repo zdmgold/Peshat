@@ -231,4 +231,13 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get cameraLabel => 'කැමරාව';
+
+  @override
+  String get recentLanguagesLabel => 'මෑත';
+
+  @override
+  String get allLanguagesLabel => 'සියලු භාෂා';
+
+  @override
+  String get noResultsSubtitle => 'වෙනත් අක්ෂර වින්‍යාසයක් උත්සාහ කරන්න.';
 }

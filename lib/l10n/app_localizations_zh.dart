@@ -231,4 +231,13 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get cameraLabel => '相机';
+
+  @override
+  String get recentLanguagesLabel => '最近';
+
+  @override
+  String get allLanguagesLabel => '所有语言';
+
+  @override
+  String get noResultsSubtitle => '请尝试其他拼写。';
 }

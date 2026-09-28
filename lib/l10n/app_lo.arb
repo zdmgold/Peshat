@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "ລຶບອອກ",
   "charactersLabel": "ຕົວອັກສອນ",
   "clearHistoryLabel": "ລຶບປະຫວັດທັງໝົດ",
-  "cameraLabel": "ກ້ອງ"
+  "cameraLabel": "ກ້ອງ",
+  "recentLanguagesLabel": "ຫຼ້າສຸດ",
+  "allLanguagesLabel": "ທຸກພາສາ",
+  "noResultsSubtitle": "ລອງສະກົດແບບອື່ນ."
 }

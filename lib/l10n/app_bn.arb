@@ -73,5 +73,8 @@
   "removeAdsShortLabel": "সরান",
   "charactersLabel": "অক্ষর",
   "clearHistoryLabel": "সব ইতিহাস মুছুন",
-  "cameraLabel": "ক্যামেরা"
+  "cameraLabel": "ক্যামেরা",
+  "recentLanguagesLabel": "সাম্প্রতিক",
+  "allLanguagesLabel": "সব ভাষা",
+  "noResultsSubtitle": "অন্য বানান চেষ্টা করুন।"
 }
