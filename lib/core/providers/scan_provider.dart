@@ -1,23 +1,75 @@
+import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:camera/camera.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
+import '../models/app_error_code.dart';
 import '../models/scan_state.dart';
+import '../services/language_detector.dart';
 import '../services/text_recognizer_service.dart';
 import '../services/translator_service.dart';
 
 class ScanProvider extends ValueNotifier<ScanState> {
-  ScanProvider() : super(const ScanState.idle());
+  final TextRecognizerService _ocr;
+  final TranslatorService _translator;
+  final LanguageDetector _detector;
 
-  Future<void> runPipeline(
-    XFile image, 
-    TextRecognizerService ocr, 
-    TranslatorService tx, 
-    String target
-  ) async {
-    value = const ScanState.recognizing();
-    final recognized = await ocr.recognize(InputImage.fromFilePath(image.path));
-    value = ScanState.translating(recognized.text);
-    final translated = await tx.translate(recognized.text, 'auto', target);
-    value = ScanState.done(recognized.text, translated);
+  ScanProvider({
+    TextRecognizerService? ocr,
+    TranslatorService? translator,
+    LanguageDetector? detector,
+  })  : _ocr = ocr ?? TextRecognizerService(),
+        _translator = translator ?? TranslatorService(),
+        _detector = detector ?? LanguageDetector(),
+        super(const ScanState.idle());
+
+  Future<void> runPipeline({
+    required XFile image,
+    required String targetLanguage,
+  }) async {
+    try {
+      value = const ScanState.recognizing();
+      final recognized = await _ocr
+          .recognize(InputImage.fromFilePath(image.path))
+          .timeout(const Duration(seconds: 30));
+      final src = recognized.text.trim();
+      if (src.isEmpty) {
+        value = const ScanState.error(AppErrorCode.noTextDetected);
+        return;
+      }
+      String srcLang = 'en';
+      try {
+        final d = await _detector.detect(src).timeout(const Duration(seconds: 5));
+        if (d.isNotEmpty && d != 'und') srcLang = d;
+      } catch (_) {}
+      value = ScanPreparingModel(targetLanguage);
+      await _translator
+          .ensureModelsReady(fromBcp: srcLang, toBcp: targetLanguage)
+          .timeout(const Duration(minutes: 3));
+      value = ScanTranslating(src, srcLang);
+      final translated = await _translator
+          .translate(text: src, fromBcp: srcLang, toBcp: targetLanguage)
+          .timeout(const Duration(seconds: 60));
+      value = ScanDone(
+        sourceText: src,
+        translatedText: translated,
+        sourceLanguage: srcLang,
+        targetLanguage: targetLanguage,
+      );
+    } on TimeoutException {
+      value = const ScanState.error(AppErrorCode.timeout);
+    } on TranslatorException catch (e) {
+      value = ScanState.error(e.code);
+    } catch (_) {
+      value = const ScanState.error(AppErrorCode.unknown);
+    }
+  }
+
+  void reset() => value = const ScanState.idle();
+
+  @override
+  void dispose() {
+    _ocr.dispose();
+    _detector.dispose();
+    super.dispose();
   }
 }

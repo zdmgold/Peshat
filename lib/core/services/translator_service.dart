@@ -1,61 +1,86 @@
 import 'package:google_mlkit_translation/google_mlkit_translation.dart';
-import 'language_detector.dart';
+import '../models/app_error_code.dart';
+
+class TranslatorException implements Exception {
+  final AppErrorCode code;
+  final String? detail;
+  TranslatorException(this.code, {this.detail});
+  @override
+  String toString() => 'TranslatorException($code)';
+}
 
 class TranslatorService {
-  final LanguageDetector _languageDetector = LanguageDetector();
+  final OnDeviceTranslatorModelManager _manager = OnDeviceTranslatorModelManager();
 
-  Future<String> translate(String text, String from, String to) async {
-    final targetLang = _getTranslateLanguage(to);
-    final sourceLang = (from == 'auto' || from.isEmpty)
-        ? _getTranslateLanguage(await _languageDetector.detect(text))
-        : _getTranslateLanguage(from);
+  static const Map<String, TranslateLanguage> _map = {
+    'en': TranslateLanguage.english,
+    'es': TranslateLanguage.spanish,
+    'fr': TranslateLanguage.french,
+    'de': TranslateLanguage.german,
+    'zh': TranslateLanguage.chinese,
+    'ar': TranslateLanguage.arabic,
+    'hi': TranslateLanguage.hindi,
+    'pt': TranslateLanguage.portuguese,
+    'ru': TranslateLanguage.russian,
+    'ja': TranslateLanguage.japanese,
+    'ko': TranslateLanguage.korean,
+    'it': TranslateLanguage.italian,
+    'tr': TranslateLanguage.turkish,
+    'nl': TranslateLanguage.dutch,
+    'pl': TranslateLanguage.polish,
+    'th': TranslateLanguage.thai,
+    'vi': TranslateLanguage.vietnamese,
+    'id': TranslateLanguage.indonesian,
+    'he': TranslateLanguage.hebrew,
+    'fa': TranslateLanguage.persian,
+    'ur': TranslateLanguage.urdu,
+    'bn': TranslateLanguage.bengali,
+    'uk': TranslateLanguage.ukrainian,
+    'el': TranslateLanguage.greek,
+    'cs': TranslateLanguage.czech,
+    'ro': TranslateLanguage.romanian,
+    'hu': TranslateLanguage.hungarian,
+    'sv': TranslateLanguage.swedish,
+    'fil': TranslateLanguage.tagalog,
+  };
 
-    final translator = OnDeviceTranslator(
-      sourceLanguage: sourceLang,
-      targetLanguage: targetLang,
-    );
+  static const Set<String> translatableCodes = {
+    'en','es','fr','de','zh','ar','hi','pt','ru','ja','ko','it','tr','nl',
+    'pl','th','vi','id','he','fa','ur','bn','uk','el','cs','ro','hu','sv','fil',
+  };
 
-    try {
-      return await translator.translateText(text);
-    } finally {
-      await translator.close();
+  static bool isTranslatable(String c) => translatableCodes.contains(c.toLowerCase());
+  static TranslateLanguage? languageFor(String c) => _map[c.toLowerCase()];
+
+  Future<void> ensureModelsReady({required String fromBcp, required String toBcp}) async {
+    if (!isTranslatable(fromBcp) || !isTranslatable(toBcp)) {
+      throw TranslatorException(AppErrorCode.unsupportedLanguage);
+    }
+    await _ensure(fromBcp.toLowerCase());
+    if (fromBcp.toLowerCase() != toBcp.toLowerCase()) {
+      await _ensure(toBcp.toLowerCase());
     }
   }
 
-  TranslateLanguage _getTranslateLanguage(String bcpCode) {
-    switch (bcpCode.toLowerCase()) {
-      case 'en': return TranslateLanguage.english;
-      case 'es': return TranslateLanguage.spanish;
-      case 'fr': return TranslateLanguage.french;
-      case 'de': return TranslateLanguage.german;
-      case 'zh': return TranslateLanguage.chinese;
-      case 'ar': return TranslateLanguage.arabic;
-      case 'hi': return TranslateLanguage.hindi;
-      case 'pt': return TranslateLanguage.portuguese;
-      case 'ru': return TranslateLanguage.russian;
-      case 'ja': return TranslateLanguage.japanese;
-      case 'ko': return TranslateLanguage.korean;
-      case 'it': return TranslateLanguage.italian;
-      case 'tr': return TranslateLanguage.turkish;
-      case 'nl': return TranslateLanguage.dutch;
-      case 'pl': return TranslateLanguage.polish;
-      case 'th': return TranslateLanguage.thai;
-      case 'vi': return TranslateLanguage.vietnamese;
-      case 'id': return TranslateLanguage.indonesian;
-      case 'he': return TranslateLanguage.hebrew;
-      case 'fa': return TranslateLanguage.persian;
-      case 'ur': return TranslateLanguage.urdu;
-      case 'bn': return TranslateLanguage.bengali;
-      case 'uk': return TranslateLanguage.ukrainian;
-      case 'el': return TranslateLanguage.greek;
-      case 'cs': return TranslateLanguage.czech;
-      case 'ro': return TranslateLanguage.romanian;
-      case 'hu': return TranslateLanguage.hungarian;
-      case 'sv': return TranslateLanguage.swedish;
-      case 'fil': return TranslateLanguage.tagalog; // Clinical fix: ML Kit uses 'tagalog', not 'filipino'
-      // NOTE: my, am, km, lo, si, ne, pa are genuinely unsupported by ML Kit on-device translation.
-      // Falling back to English prevents compile errors and runtime crashes for these edge cases.
-      default: return TranslateLanguage.english;
+  Future<void> _ensure(String bcp) async {
+    try {
+      if (await _manager.isModelDownloaded(bcp)) return;
+      final ok = await _manager.downloadModel(bcp, isWifiRequired: false);
+      if (!ok) throw TranslatorException(AppErrorCode.modelDownloadFailed);
+    } on TranslatorException { rethrow; }
+    catch (e) {
+      throw TranslatorException(AppErrorCode.modelDownloadFailed, detail: e.toString());
     }
+  }
+
+  Future<String> translate({required String text, required String fromBcp, required String toBcp}) async {
+    final from = _map[fromBcp.toLowerCase()];
+    final to = _map[toBcp.toLowerCase()];
+    if (from == null || to == null) throw TranslatorException(AppErrorCode.unsupportedLanguage);
+    final t = OnDeviceTranslator(sourceLanguage: from, targetLanguage: to);
+    try { return await t.translateText(text); }
+    on TranslatorException { rethrow; }
+    catch (e) { throw TranslatorException(AppErrorCode.translationFailed, detail: e.toString()); }
+    finally { await t.close(); }
   }
 }

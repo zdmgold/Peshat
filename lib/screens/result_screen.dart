@@ -5,8 +5,6 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/spacing.dart';
 import '../core/providers/scan_provider.dart';
 import '../core/models/scan_state.dart';
-import '../core/services/text_recognizer_service.dart';
-import '../core/services/translator_service.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/source_text_chip.dart';
 import '../widgets/translation_panel.dart';
@@ -21,8 +19,6 @@ class ResultScreen extends StatefulWidget {
 
 class _ResultScreenState extends State<ResultScreen> {
   final ScanProvider _provider = ScanProvider();
-  final TextRecognizerService _ocr = TextRecognizerService();
-  final TranslatorService _translator = TranslatorService();
   final String _targetLang = 'es';
 
   @override
@@ -33,12 +29,11 @@ class _ResultScreenState extends State<ResultScreen> {
 
   Future<void> _runPipeline() async {
     final xFile = XFile(widget.imagePath);
-    await _provider.runPipeline(xFile, _ocr, _translator, _targetLang);
+    await _provider.runPipeline(image: xFile, targetLanguage: _targetLang);
   }
 
   @override
   void dispose() {
-    _ocr.dispose();
     super.dispose();
   }
 
