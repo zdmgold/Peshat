@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import '../core/models/scan_result.dart';
 import '../core/providers/history_provider.dart';
 import '../core/utils/app_colors.dart';
@@ -15,13 +15,13 @@ class HistoryScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text(
           l10n.historyLabel,
           style: AppTypography.chrome.copyWith(
             fontSize: 17,
@@ -29,22 +29,23 @@ class HistoryScreen extends StatelessWidget {
             color: textPrimary,
           ),
         ),
-        centerTitle: true,
-        actions: [
-          ValueListenableBuilder<List<ScanResult>>(
-            valueListenable: history,
-            builder: (context, items, _) => items.isEmpty
-                ? const SizedBox.shrink()
-                : IconButton(
-                    icon: const Icon(Icons.more_horiz, size: 22),
-                    tooltip: AppLocalizations.of(context)!.showMenuTooltip,
-                    onPressed: () =>
-                        _showOverflowSheet(context, l10n),
+        trailing: ValueListenableBuilder<List<ScanResult>>(
+          valueListenable: history,
+          builder: (context, items, _) => items.isEmpty
+              ? const SizedBox.shrink()
+              : CupertinoButton(
+                  padding: EdgeInsets.zero,
+                  minSize: 44,
+                  onPressed: () => _showOverflowSheet(context, l10n),
+                  child: Semantics(
+                    label: l10n.showMenuTooltip,
+                    button: true,
+                    child: const Icon(CupertinoIcons.ellipsis, size: 22),
                   ),
-          ),
-        ],
+                ),
+        ),
       ),
-      body: SafeArea(
+      child: SafeArea(
         top: false,
         child: Column(
           children: [
@@ -78,10 +79,6 @@ class HistoryScreen extends StatelessWidget {
     );
   }
 
-  // -------------------------------------------------------------------------
-  // Grouping
-  // -------------------------------------------------------------------------
-
   Map<String, List<ScanResult>> _groupByDate(
     List<ScanResult> items,
     AppLocalizations l10n,
@@ -106,10 +103,6 @@ class HistoryScreen extends StatelessWidget {
     if (older.isNotEmpty) map[l10n.historyOlder] = older;
     return map;
   }
-
-  // -------------------------------------------------------------------------
-  // List assembly — for each section: one header + N rows
-  // -------------------------------------------------------------------------
 
   int _sectionItemCount(Map<String, List<ScanResult>> grouped) {
     var count = 0;
@@ -152,7 +145,7 @@ class HistoryScreen extends StatelessWidget {
   void _open(BuildContext context, ScanResult r) {
     Navigator.push(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) => ResultScreen(
           inputText: r.sourceText,
           initialTargetLanguage: r.targetLang,
@@ -162,69 +155,26 @@ class HistoryScreen extends StatelessWidget {
     );
   }
 
-  // -------------------------------------------------------------------------
-  // Overflow sheet — a single destructive action
-  // -------------------------------------------------------------------------
-
   Future<void> _showOverflowSheet(
     BuildContext context,
     AppLocalizations l10n,
   ) async {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
-    final error = isDark ? AppColors.errorDark : AppColors.errorLight;
-    final textPrimary =
-        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
-    final sheetBg =
-        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
-
-    await showModalBottomSheet<void>(
+    await showCupertinoModalPopup<void>(
       context: context,
-      backgroundColor: sheetBg,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.vertical(top: Radius.circular(20)),
-      ),
-      builder: (ctx) => SafeArea(
-        top: false,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            const SizedBox(height: Spacing.sm),
-            ListTile(
-              leading: Icon(Icons.delete_sweep_outlined,
-                  size: 22, color: error),
-              title: Text(
-                l10n.clearHistoryLabel,
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 16,
-                  color: error,
-                ),
-              ),
-              onTap: () {
-                Navigator.pop(ctx);
-                _confirmClear(context, l10n);
-              },
-            ),
-            const SizedBox(height: Spacing.sm),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-              child: SizedBox(
-                width: double.infinity,
-                height: 48,
-                child: TextButton(
-                  onPressed: () => Navigator.pop(ctx),
-                  child: Text(
-                    AppLocalizations.of(ctx)!.cancelButtonLabel,
-                    style: AppTypography.chrome.copyWith(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: textPrimary,
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            const SizedBox(height: Spacing.sm),
-          ],
+      builder: (ctx) => CupertinoActionSheet(
+        actions: [
+          CupertinoActionSheetAction(
+            isDestructiveAction: true,
+            onPressed: () {
+              Navigator.pop(ctx);
+              _confirmClear(context, l10n);
+            },
+            child: Text(l10n.clearHistoryLabel),
+          ),
+        ],
+        cancelButton: CupertinoActionSheetAction(
+          onPressed: () => Navigator.pop(ctx),
+          child: Text(l10n.cancelButtonLabel),
         ),
       ),
     );
@@ -234,18 +184,19 @@ class HistoryScreen extends StatelessWidget {
     BuildContext context,
     AppLocalizations l10n,
   ) async {
-    final ok = await showDialog<bool>(
+    final ok = await showCupertinoDialog<bool>(
       context: context,
-      builder: (ctx) => AlertDialog(
+      builder: (ctx) => CupertinoAlertDialog(
         content: Text(l10n.historyClearConfirm),
         actions: [
-          TextButton(
+          CupertinoDialogAction(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text(AppLocalizations.of(ctx)!.cancelButtonLabel),
+            child: Text(l10n.cancelButtonLabel),
           ),
-          TextButton(
+          CupertinoDialogAction(
+            isDestructiveAction: true,
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(AppLocalizations.of(ctx)!.okButtonLabel),
+            child: Text(l10n.okButtonLabel),
           ),
         ],
       ),
@@ -289,10 +240,10 @@ class _SectionHeader extends StatelessWidget {
 }
 
 // ---------------------------------------------------------------------------
-// Row — 72dp flat, timestamp + language chip, source, translation.
+// History row — iOS press feedback, Dismissible for swipe-to-delete
 // ---------------------------------------------------------------------------
 
-class _HistoryRow extends StatelessWidget {
+class _HistoryRow extends StatefulWidget {
   final ScanResult result;
   final bool isDark;
   final bool isLast;
@@ -308,35 +259,53 @@ class _HistoryRow extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    final textPrimary =
-        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
-    final textSecondary =
-        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
-    final textTertiary =
-        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
-    final error = isDark ? AppColors.errorDark : AppColors.errorLight;
-    final border =
-        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
+  State<_HistoryRow> createState() => _HistoryRowState();
+}
 
-    final timeLabel = _timeLabel(result.timestamp);
+class _HistoryRowState extends State<_HistoryRow> {
+  bool _pressed = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final textPrimary = widget.isDark
+        ? AppColors.textPrimaryDark
+        : AppColors.textPrimaryLight;
+    final textSecondary = widget.isDark
+        ? AppColors.textSecondaryDark
+        : AppColors.textSecondaryLight;
+    final textTertiary = widget.isDark
+        ? AppColors.textTertiaryDark
+        : AppColors.textTertiaryLight;
+    final error =
+        widget.isDark ? AppColors.errorDark : AppColors.errorLight;
+    final border = widget.isDark
+        ? AppColors.borderSubtleDark
+        : AppColors.borderSubtleLight;
+
+    final timeLabel = _timeLabel(widget.result.timestamp);
     final chipLabel =
-        '${result.sourceLang.toUpperCase()} → ${result.targetLang.toUpperCase()}';
+        '${widget.result.sourceLang.toUpperCase()} → ${widget.result.targetLang.toUpperCase()}';
 
     return Dismissible(
-      key: ValueKey(result.id),
+      key: ValueKey(widget.result.id),
       direction: DismissDirection.endToStart,
       background: Container(
         alignment: Alignment.centerRight,
         padding: const EdgeInsets.symmetric(horizontal: Spacing.lg),
         color: error,
-        child: const Icon(Icons.delete_outline, color: Colors.white, size: 24),
+        child: const Icon(CupertinoIcons.delete,
+            color: Color(0xFFFFFFFF), size: 24),
       ),
-      onDismissed: (_) => onDelete(),
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
+      onDismissed: (_) => widget.onDelete(),
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: widget.onTap,
+        onTapDown: (_) => setState(() => _pressed = true),
+        onTapUp: (_) => setState(() => _pressed = false),
+        onTapCancel: () => setState(() => _pressed = false),
+        child: AnimatedOpacity(
+          duration: const Duration(milliseconds: 100),
+          opacity: _pressed ? 0.6 : 1.0,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
@@ -349,7 +318,6 @@ class _HistoryRow extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    // Row 1: time + bullet + language chip
                     Row(
                       children: [
                         Text(
@@ -375,7 +343,7 @@ class _HistoryRow extends StatelessWidget {
                             vertical: 2,
                           ),
                           decoration: BoxDecoration(
-                            color: isDark
+                            color: widget.isDark
                                 ? AppColors.bgTertiaryDark
                                 : AppColors.bgTertiaryLight,
                             borderRadius: BorderRadius.circular(6),
@@ -392,9 +360,8 @@ class _HistoryRow extends StatelessWidget {
                       ],
                     ),
                     const SizedBox(height: 6),
-                    // Row 2: source text
                     Text(
-                      result.sourceText,
+                      widget.result.sourceText,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: AppTypography.chrome.copyWith(
@@ -403,9 +370,8 @@ class _HistoryRow extends StatelessWidget {
                       ),
                     ),
                     const SizedBox(height: 4),
-                    // Row 3: translation
                     Text(
-                      result.translatedText,
+                      widget.result.translatedText,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       style: AppTypography.body.copyWith(
@@ -416,12 +382,11 @@ class _HistoryRow extends StatelessWidget {
                   ],
                 ),
               ),
-              if (!isLast)
+              if (!widget.isLast)
                 Padding(
                   padding: const EdgeInsets.only(left: Spacing.md),
-                  child: Divider(
+                  child: Container(
                     height: 0.5,
-                    thickness: 0.5,
                     color: border,
                   ),
                 ),
@@ -462,7 +427,7 @@ class _EmptyState extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(Icons.history_toggle_off, size: 56, color: textTertiary),
+            Icon(CupertinoIcons.time, size: 56, color: textTertiary),
             const SizedBox(height: Spacing.md),
             Text(
               l10n.historyEmpty,
