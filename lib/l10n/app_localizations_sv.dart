@@ -252,4 +252,22 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Skanningar du översätter visas här.';
+
+  @override
+  String get cancelButtonLabel => 'Avbryt';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Stäng';
+
+  @override
+  String get showMenuTooltip => 'Visa meny';
+
+  @override
+  String get licensePackageLabel => 'Paket';
+
+  @override
+  String get licenseEmptyLabel => 'Ingen licensinformation tillgänglig.';
 }

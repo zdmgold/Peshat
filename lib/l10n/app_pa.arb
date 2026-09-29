@@ -80,5 +80,11 @@
   "sectionSystemLabel": "ਸਿਸਟਮ",
   "appLanguageLabel": "ਐਪ ਭਾਸ਼ਾ",
   "clearTextConfirm": "ਟੈਕਸਟ ਸਾਫ਼ ਕਰੋ?",
-  "historyEmptySubtitle": "ਤੁਹਾਡੇ ਅਨੁਵਾਦ ਕੀਤੇ ਸਕੈਨ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।"
+  "historyEmptySubtitle": "ਤੁਹਾਡੇ ਅਨੁਵਾਦ ਕੀਤੇ ਸਕੈਨ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।",
+  "cancelButtonLabel": "ਰੱਦ ਕਰੋ",
+  "okButtonLabel": "ਠੀਕ ਹੈ",
+  "closeButtonTooltip": "ਬੰਦ ਕਰੋ",
+  "showMenuTooltip": "ਮੀਨੂ ਦਿਖਾਓ",
+  "licensePackageLabel": "ਪੈਕੇਜ",
+  "licenseEmptyLabel": "ਕੋਈ ਲਾਇਸੰਸ ਜਾਣਕਾਰੀ ਉਪਲਬਧ ਨਹੀਂ।"
 }

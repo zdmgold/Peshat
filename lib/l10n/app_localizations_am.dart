@@ -252,4 +252,22 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'የተረጎሟቸው ስካኖች እዚህ ይታያሉ።';
+
+  @override
+  String get cancelButtonLabel => 'ሰርዝ';
+
+  @override
+  String get okButtonLabel => 'እሺ';
+
+  @override
+  String get closeButtonTooltip => 'ዝጋ';
+
+  @override
+  String get showMenuTooltip => 'ምናሌ አሳይ';
+
+  @override
+  String get licensePackageLabel => 'ጥቅል';
+
+  @override
+  String get licenseEmptyLabel => 'ምንም የፍቃድ መረጃ አልተገኘም።';
 }

@@ -252,4 +252,22 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'तपाईंले अनुवाद गरेका स्क्यानहरू यहाँ देखिनेछन्।';
+
+  @override
+  String get cancelButtonLabel => 'रद्द गर्नुहोस्';
+
+  @override
+  String get okButtonLabel => 'ठीक छ';
+
+  @override
+  String get closeButtonTooltip => 'बन्द गर्नुहोस्';
+
+  @override
+  String get showMenuTooltip => 'मेनु देखाउनुहोस्';
+
+  @override
+  String get licensePackageLabel => 'प्याकेज';
+
+  @override
+  String get licenseEmptyLabel => 'कुनै इजाजतपत्र जानकारी उपलब्ध छैन।';
 }

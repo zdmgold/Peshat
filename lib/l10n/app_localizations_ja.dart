@@ -252,4 +252,22 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => '翻訳したスキャンはここに表示されます。';
+
+  @override
+  String get cancelButtonLabel => 'キャンセル';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => '閉じる';
+
+  @override
+  String get showMenuTooltip => 'メニューを表示';
+
+  @override
+  String get licensePackageLabel => 'パッケージ';
+
+  @override
+  String get licenseEmptyLabel => 'ライセンス情報がありません。';
 }

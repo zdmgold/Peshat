@@ -80,5 +80,11 @@
   "sectionSystemLabel": "ប្រព័ន្ធ",
   "appLanguageLabel": "ភាសាកម្មវិធី",
   "clearTextConfirm": "សម្អាតអត្ថបទ?",
-  "historyEmptySubtitle": "ការស្កេនដែលអ្នកបកប្រែនឹងបង្ហាញនៅទីនេះ។"
+  "historyEmptySubtitle": "ការស្កេនដែលអ្នកបកប្រែនឹងបង្ហាញនៅទីនេះ។",
+  "cancelButtonLabel": "បោះបង់",
+  "okButtonLabel": "យល់ព្រម",
+  "closeButtonTooltip": "បិទ",
+  "showMenuTooltip": "បង្ហាញម៉ឺនុយ",
+  "licensePackageLabel": "កញ្ចប់",
+  "licenseEmptyLabel": "គ្មានព័ត៌មានអាជ្ញាបណ្ណទេ។"
 }

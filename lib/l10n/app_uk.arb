@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Система",
   "appLanguageLabel": "Мова застосунку",
   "clearTextConfirm": "Очистити текст?",
-  "historyEmptySubtitle": "Відскановані та перекладені тексти з’являться тут."
+  "historyEmptySubtitle": "Відскановані та перекладені тексти з’являться тут.",
+  "cancelButtonLabel": "Скасувати",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Закрити",
+  "showMenuTooltip": "Показати меню",
+  "licensePackageLabel": "Пакет",
+  "licenseEmptyLabel": "Інформація про ліцензію недоступна."
 }

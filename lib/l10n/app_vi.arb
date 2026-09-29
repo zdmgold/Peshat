@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Hệ thống",
   "appLanguageLabel": "Ngôn ngữ ứng dụng",
   "clearTextConfirm": "Xóa văn bản?",
-  "historyEmptySubtitle": "Các bản quét bạn dịch sẽ xuất hiện ở đây."
+  "historyEmptySubtitle": "Các bản quét bạn dịch sẽ xuất hiện ở đây.",
+  "cancelButtonLabel": "Hủy",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Đóng",
+  "showMenuTooltip": "Hiện menu",
+  "licensePackageLabel": "Gói",
+  "licenseEmptyLabel": "Không có thông tin giấy phép."
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "ระบบ",
   "appLanguageLabel": "ภาษาของแอป",
   "clearTextConfirm": "ล้างข้อความหรือไม่",
-  "historyEmptySubtitle": "การสแกนที่คุณแปลจะแสดงที่นี่"
+  "historyEmptySubtitle": "การสแกนที่คุณแปลจะแสดงที่นี่",
+  "cancelButtonLabel": "ยกเลิก",
+  "okButtonLabel": "ตกลง",
+  "closeButtonTooltip": "ปิด",
+  "showMenuTooltip": "แสดงเมนู",
+  "licensePackageLabel": "แพ็กเกจ",
+  "licenseEmptyLabel": "ไม่มีข้อมูลใบอนุญาต"
 }

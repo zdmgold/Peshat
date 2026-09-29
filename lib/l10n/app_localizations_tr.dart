@@ -252,4 +252,22 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Çevirdiğiniz taramalar burada görünür.';
+
+  @override
+  String get cancelButtonLabel => 'İptal';
+
+  @override
+  String get okButtonLabel => 'Tamam';
+
+  @override
+  String get closeButtonTooltip => 'Kapat';
+
+  @override
+  String get showMenuTooltip => 'Menüyü göster';
+
+  @override
+  String get licensePackageLabel => 'Paket';
+
+  @override
+  String get licenseEmptyLabel => 'Lisans bilgisi mevcut değil.';
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "מערכת",
   "appLanguageLabel": "שפת האפליקציה",
   "clearTextConfirm": "לנקות את הטקסט?",
-  "historyEmptySubtitle": "סריקות שתתרגם יופיעו כאן."
+  "historyEmptySubtitle": "סריקות שתתרגם יופיעו כאן.",
+  "cancelButtonLabel": "ביטול",
+  "okButtonLabel": "אישור",
+  "closeButtonTooltip": "סגור",
+  "showMenuTooltip": "הצג תפריט",
+  "licensePackageLabel": "חבילה",
+  "licenseEmptyLabel": "אין מידע זמין על רישיון."
 }

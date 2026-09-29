@@ -252,4 +252,22 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'আপনার অনুবাদ করা স্ক্যান এখানে দেখা যাবে।';
+
+  @override
+  String get cancelButtonLabel => 'বাতিল';
+
+  @override
+  String get okButtonLabel => 'ঠিক আছে';
+
+  @override
+  String get closeButtonTooltip => 'বন্ধ';
+
+  @override
+  String get showMenuTooltip => 'মেনু দেখান';
+
+  @override
+  String get licensePackageLabel => 'প্যাকেজ';
+
+  @override
+  String get licenseEmptyLabel => 'কোনো লাইসেন্স তথ্য নেই।';
 }

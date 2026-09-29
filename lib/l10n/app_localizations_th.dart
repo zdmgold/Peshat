@@ -252,4 +252,22 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'การสแกนที่คุณแปลจะแสดงที่นี่';
+
+  @override
+  String get cancelButtonLabel => 'ยกเลิก';
+
+  @override
+  String get okButtonLabel => 'ตกลง';
+
+  @override
+  String get closeButtonTooltip => 'ปิด';
+
+  @override
+  String get showMenuTooltip => 'แสดงเมนู';
+
+  @override
+  String get licensePackageLabel => 'แพ็กเกจ';
+
+  @override
+  String get licenseEmptyLabel => 'ไม่มีข้อมูลใบอนุญาต';
 }

@@ -252,4 +252,22 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'آپ کے ترجمہ کردہ اسکین یہاں ظاہر ہوں گے۔';
+
+  @override
+  String get cancelButtonLabel => 'منسوخ کریں';
+
+  @override
+  String get okButtonLabel => 'ٹھیک ہے';
+
+  @override
+  String get closeButtonTooltip => 'بند کریں';
+
+  @override
+  String get showMenuTooltip => 'مینو دکھائیں';
+
+  @override
+  String get licensePackageLabel => 'پیکیج';
+
+  @override
+  String get licenseEmptyLabel => 'لائسنس کی معلومات دستیاب نہیں۔';
 }

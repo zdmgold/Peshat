@@ -252,4 +252,22 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Οι σαρώσεις που μεταφράζετε θα εμφανιστούν εδώ.';
+
+  @override
+  String get cancelButtonLabel => 'Άκυρο';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Κλείσιμο';
+
+  @override
+  String get showMenuTooltip => 'Εμφάνιση μενού';
+
+  @override
+  String get licensePackageLabel => 'Πακέτο';
+
+  @override
+  String get licenseEmptyLabel => 'Δεν υπάρχουν διαθέσιμες πληροφορίες άδειας.';
 }

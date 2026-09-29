@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Sistem",
   "appLanguageLabel": "Uygulama dili",
   "clearTextConfirm": "Metin temizlensin mi?",
-  "historyEmptySubtitle": "Çevirdiğiniz taramalar burada görünür."
+  "historyEmptySubtitle": "Çevirdiğiniz taramalar burada görünür.",
+  "cancelButtonLabel": "İptal",
+  "okButtonLabel": "Tamam",
+  "closeButtonTooltip": "Kapat",
+  "showMenuTooltip": "Menüyü göster",
+  "licensePackageLabel": "Paket",
+  "licenseEmptyLabel": "Lisans bilgisi mevcut değil."
 }

@@ -648,6 +648,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Scans you translate will appear here.'**
   String get historyEmptySubtitle;
+
+  /// Button label that dismisses a dialog without confirming the action.
+  ///
+  /// In en, this message translates to:
+  /// **'Cancel'**
+  String get cancelButtonLabel;
+
+  /// Button label that confirms the action in a dialog.
+  ///
+  /// In en, this message translates to:
+  /// **'OK'**
+  String get okButtonLabel;
+
+  /// Accessibility tooltip for the button that closes the current screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Close'**
+  String get closeButtonTooltip;
+
+  /// Accessibility tooltip for the overflow menu button.
+  ///
+  /// In en, this message translates to:
+  /// **'Show menu'**
+  String get showMenuTooltip;
+
+  /// Label shown before a package name on the license screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Package'**
+  String get licensePackageLabel;
+
+  /// Message shown when the license registry contains no entries.
+  ///
+  /// In en, this message translates to:
+  /// **'No license information available.'**
+  String get licenseEmptyLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "سیستم",
   "appLanguageLabel": "زبان برنامه",
   "clearTextConfirm": "متن پاک شود؟",
-  "historyEmptySubtitle": "اسکن‌هایی که ترجمه می‌کنید اینجا ظاهر می‌شوند."
+  "historyEmptySubtitle": "اسکن‌هایی که ترجمه می‌کنید اینجا ظاهر می‌شوند.",
+  "cancelButtonLabel": "لغو",
+  "okButtonLabel": "تأیید",
+  "closeButtonTooltip": "بستن",
+  "showMenuTooltip": "نمایش منو",
+  "licensePackageLabel": "بسته",
+  "licenseEmptyLabel": "اطلاعات مجوز موجود نیست."
 }

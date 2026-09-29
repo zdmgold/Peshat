@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Sistema",
   "appLanguageLabel": "Wika ng app",
   "clearTextConfirm": "Burahin ang teksto?",
-  "historyEmptySubtitle": "Ang mga scan na isinalin mo ay lalabas dito."
+  "historyEmptySubtitle": "Ang mga scan na isinalin mo ay lalabas dito.",
+  "cancelButtonLabel": "Kanselahin",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Isara",
+  "showMenuTooltip": "Ipakita ang menu",
+  "licensePackageLabel": "Package",
+  "licenseEmptyLabel": "Walang available na impormasyon ng lisensya."
 }

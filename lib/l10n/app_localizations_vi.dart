@@ -252,4 +252,22 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Các bản quét bạn dịch sẽ xuất hiện ở đây.';
+
+  @override
+  String get cancelButtonLabel => 'Hủy';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Đóng';
+
+  @override
+  String get showMenuTooltip => 'Hiện menu';
+
+  @override
+  String get licensePackageLabel => 'Gói';
+
+  @override
+  String get licenseEmptyLabel => 'Không có thông tin giấy phép.';
 }

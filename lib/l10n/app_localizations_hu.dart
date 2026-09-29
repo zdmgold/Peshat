@@ -252,4 +252,22 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'A lefordított beolvasások itt jelennek meg.';
+
+  @override
+  String get cancelButtonLabel => 'Mégse';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Bezárás';
+
+  @override
+  String get showMenuTooltip => 'Menü megjelenítése';
+
+  @override
+  String get licensePackageLabel => 'Csomag';
+
+  @override
+  String get licenseEmptyLabel => 'Nem érhető el licencinformáció.';
 }

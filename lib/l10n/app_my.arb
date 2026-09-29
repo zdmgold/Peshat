@@ -80,5 +80,11 @@
   "sectionSystemLabel": "စနစ်",
   "appLanguageLabel": "အက်ပ် ဘာသာစကား",
   "clearTextConfirm": "စာသားကို ရှင်းလင်းမလား?",
-  "historyEmptySubtitle": "သင်ဘာသာပြန်ထားသော စကင်များ ဤနေရာတွင် ပေါ်လာပါမည်။"
+  "historyEmptySubtitle": "သင်ဘာသာပြန်ထားသော စကင်များ ဤနေရာတွင် ပေါ်လာပါမည်။",
+  "cancelButtonLabel": "ပယ်ဖျက်",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "ပိတ်",
+  "showMenuTooltip": "မီနူးပြ",
+  "licensePackageLabel": "အစုအဝေး",
+  "licenseEmptyLabel": "လိုင်စင်အချက်အလက် မရနိုင်ပါ။"
 }

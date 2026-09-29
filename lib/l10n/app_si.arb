@@ -80,5 +80,11 @@
   "sectionSystemLabel": "පද්ධතිය",
   "appLanguageLabel": "යෙදුම් භාෂාව",
   "clearTextConfirm": "පෙළ හිස් කරන්නද?",
-  "historyEmptySubtitle": "ඔබ පරිවර්තනය කරන ස්කෑන් මෙහි දිස්වනු ඇත."
+  "historyEmptySubtitle": "ඔබ පරිවර්තනය කරන ස්කෑන් මෙහි දිස්වනු ඇත.",
+  "cancelButtonLabel": "අවලංගු කරන්න",
+  "okButtonLabel": "හරි",
+  "closeButtonTooltip": "වසන්න",
+  "showMenuTooltip": "මෙනුව පෙන්වන්න",
+  "licensePackageLabel": "පැකේජය",
+  "licenseEmptyLabel": "බලපත්‍ර තොරතුරු නොමැත."
 }

@@ -252,4 +252,22 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'اسکن‌هایی که ترجمه می‌کنید اینجا ظاهر می‌شوند.';
+
+  @override
+  String get cancelButtonLabel => 'لغو';
+
+  @override
+  String get okButtonLabel => 'تأیید';
+
+  @override
+  String get closeButtonTooltip => 'بستن';
+
+  @override
+  String get showMenuTooltip => 'نمایش منو';
+
+  @override
+  String get licensePackageLabel => 'بسته';
+
+  @override
+  String get licenseEmptyLabel => 'اطلاعات مجوز موجود نیست.';
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Sistem",
   "appLanguageLabel": "Limba aplicației",
   "clearTextConfirm": "Ștergeți textul?",
-  "historyEmptySubtitle": "Scanările traduse vor apărea aici."
+  "historyEmptySubtitle": "Scanările traduse vor apărea aici.",
+  "cancelButtonLabel": "Anulare",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Închidere",
+  "showMenuTooltip": "Afișare meniu",
+  "licensePackageLabel": "Pachet",
+  "licenseEmptyLabel": "Nu există informații despre licență disponibile."
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "ລະບົບ",
   "appLanguageLabel": "ພາສາແອັບ",
   "clearTextConfirm": "ລຶບຂໍ້ຄວາມບໍ?",
-  "historyEmptySubtitle": "ການສະແກນທີ່ທ່ານແປຈະປາກົດຢູ່ນີ້."
+  "historyEmptySubtitle": "ການສະແກນທີ່ທ່ານແປຈະປາກົດຢູ່ນີ້.",
+  "cancelButtonLabel": "ຍົກເລີກ",
+  "okButtonLabel": "ຕົກລົງ",
+  "closeButtonTooltip": "ປິດ",
+  "showMenuTooltip": "ສະແດງເມນູ",
+  "licensePackageLabel": "ແພັກເກດ",
+  "licenseEmptyLabel": "ບໍ່ມີຂໍ້ມູນໃບອະນຸຍາດ."
 }

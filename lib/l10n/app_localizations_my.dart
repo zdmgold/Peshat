@@ -252,4 +252,22 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'သင်ဘာသာပြန်ထားသော စကင်များ ဤနေရာတွင် ပေါ်လာပါမည်။';
+
+  @override
+  String get cancelButtonLabel => 'ပယ်ဖျက်';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'ပိတ်';
+
+  @override
+  String get showMenuTooltip => 'မီနူးပြ';
+
+  @override
+  String get licensePackageLabel => 'အစုအဝေး';
+
+  @override
+  String get licenseEmptyLabel => 'လိုင်စင်အချက်အလက် မရနိုင်ပါ။';
 }

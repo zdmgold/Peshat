@@ -80,5 +80,11 @@
   "sectionSystemLabel": "সিস্টেম",
   "appLanguageLabel": "অ্যাপের ভাষা",
   "clearTextConfirm": "টেক্সট মুছবেন?",
-  "historyEmptySubtitle": "আপনার অনুবাদ করা স্ক্যান এখানে দেখা যাবে।"
+  "historyEmptySubtitle": "আপনার অনুবাদ করা স্ক্যান এখানে দেখা যাবে।",
+  "cancelButtonLabel": "বাতিল",
+  "okButtonLabel": "ঠিক আছে",
+  "closeButtonTooltip": "বন্ধ",
+  "showMenuTooltip": "মেনু দেখান",
+  "licensePackageLabel": "প্যাকেজ",
+  "licenseEmptyLabel": "কোনো লাইসেন্স তথ্য নেই।"
 }

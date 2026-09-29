@@ -80,5 +80,11 @@
   "sectionSystemLabel": "النظام",
   "appLanguageLabel": "لغة التطبيق",
   "clearTextConfirm": "مسح النص؟",
-  "historyEmptySubtitle": "ستظهر هنا عمليات المسح التي تترجمها."
+  "historyEmptySubtitle": "ستظهر هنا عمليات المسح التي تترجمها.",
+  "cancelButtonLabel": "إلغاء",
+  "okButtonLabel": "موافق",
+  "closeButtonTooltip": "إغلاق",
+  "showMenuTooltip": "إظهار القائمة",
+  "licensePackageLabel": "حزمة",
+  "licenseEmptyLabel": "لا تتوفر معلومات الترخيص."
 }

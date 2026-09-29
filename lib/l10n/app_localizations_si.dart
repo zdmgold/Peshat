@@ -252,4 +252,22 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'ඔබ පරිවර්තනය කරන ස්කෑන් මෙහි දිස්වනු ඇත.';
+
+  @override
+  String get cancelButtonLabel => 'අවලංගු කරන්න';
+
+  @override
+  String get okButtonLabel => 'හරි';
+
+  @override
+  String get closeButtonTooltip => 'වසන්න';
+
+  @override
+  String get showMenuTooltip => 'මෙනුව පෙන්වන්න';
+
+  @override
+  String get licensePackageLabel => 'පැකේජය';
+
+  @override
+  String get licenseEmptyLabel => 'බලපත්‍ර තොරතුරු නොමැත.';
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Rendszer",
   "appLanguageLabel": "Alkalmazás nyelve",
   "clearTextConfirm": "Törli a szöveget?",
-  "historyEmptySubtitle": "A lefordított beolvasások itt jelennek meg."
+  "historyEmptySubtitle": "A lefordított beolvasások itt jelennek meg.",
+  "cancelButtonLabel": "Mégse",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Bezárás",
+  "showMenuTooltip": "Menü megjelenítése",
+  "licensePackageLabel": "Csomag",
+  "licenseEmptyLabel": "Nem érhető el licencinformáció."
 }

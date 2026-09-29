@@ -80,5 +80,11 @@
   "sectionSystemLabel": "System",
   "appLanguageLabel": "Język aplikacji",
   "clearTextConfirm": "Wyczyścić tekst?",
-  "historyEmptySubtitle": "Przetłumaczone skany pojawią się tutaj."
+  "historyEmptySubtitle": "Przetłumaczone skany pojawią się tutaj.",
+  "cancelButtonLabel": "Anuluj",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Zamknij",
+  "showMenuTooltip": "Pokaż menu",
+  "licensePackageLabel": "Pakiet",
+  "licenseEmptyLabel": "Brak informacji o licencji."
 }

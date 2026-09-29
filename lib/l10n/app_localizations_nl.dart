@@ -252,4 +252,22 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Scans die u vertaalt verschijnen hier.';
+
+  @override
+  String get cancelButtonLabel => 'Annuleren';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Sluiten';
+
+  @override
+  String get showMenuTooltip => 'Menu weergeven';
+
+  @override
+  String get licensePackageLabel => 'Pakket';
+
+  @override
+  String get licenseEmptyLabel => 'Geen licentie-informatie beschikbaar.';
 }

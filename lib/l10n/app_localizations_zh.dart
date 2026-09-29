@@ -252,4 +252,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => '您翻译的扫描内容将显示在此处。';
+
+  @override
+  String get cancelButtonLabel => '取消';
+
+  @override
+  String get okButtonLabel => '确定';
+
+  @override
+  String get closeButtonTooltip => '关闭';
+
+  @override
+  String get showMenuTooltip => '显示菜单';
+
+  @override
+  String get licensePackageLabel => '软件包';
+
+  @override
+  String get licenseEmptyLabel => '无许可证信息。';
 }

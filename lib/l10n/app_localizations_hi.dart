@@ -252,4 +252,22 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'आपके द्वारा अनुवादित स्कैन यहाँ दिखेंगे।';
+
+  @override
+  String get cancelButtonLabel => 'रद्द करें';
+
+  @override
+  String get okButtonLabel => 'ठीक है';
+
+  @override
+  String get closeButtonTooltip => 'बंद करें';
+
+  @override
+  String get showMenuTooltip => 'मेनू दिखाएँ';
+
+  @override
+  String get licensePackageLabel => 'पैकेज';
+
+  @override
+  String get licenseEmptyLabel => 'कोई लाइसेंस जानकारी उपलब्ध नहीं है।';
 }

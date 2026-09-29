@@ -80,5 +80,11 @@
   "sectionSystemLabel": "시스템",
   "appLanguageLabel": "앱 언어",
   "clearTextConfirm": "텍스트를 지우시겠습니까?",
-  "historyEmptySubtitle": "번역한 스캔이 여기에 표시됩니다."
+  "historyEmptySubtitle": "번역한 스캔이 여기에 표시됩니다.",
+  "cancelButtonLabel": "취소",
+  "okButtonLabel": "확인",
+  "closeButtonTooltip": "닫기",
+  "showMenuTooltip": "메뉴 표시",
+  "licensePackageLabel": "패키지",
+  "licenseEmptyLabel": "라이선스 정보가 없습니다."
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "प्रणाली",
   "appLanguageLabel": "एप भाषा",
   "clearTextConfirm": "पाठ मेटाउने?",
-  "historyEmptySubtitle": "तपाईंले अनुवाद गरेका स्क्यानहरू यहाँ देखिनेछन्।"
+  "historyEmptySubtitle": "तपाईंले अनुवाद गरेका स्क्यानहरू यहाँ देखिनेछन्।",
+  "cancelButtonLabel": "रद्द गर्नुहोस्",
+  "okButtonLabel": "ठीक छ",
+  "closeButtonTooltip": "बन्द गर्नुहोस्",
+  "showMenuTooltip": "मेनु देखाउनुहोस्",
+  "licensePackageLabel": "प्याकेज",
+  "licenseEmptyLabel": "कुनै इजाजतपत्र जानकारी उपलब्ध छैन।"
 }

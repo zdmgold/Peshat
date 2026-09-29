@@ -252,4 +252,22 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Ang mga scan na isinalin mo ay lalabas dito.';
+
+  @override
+  String get cancelButtonLabel => 'Kanselahin';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Isara';
+
+  @override
+  String get showMenuTooltip => 'Ipakita ang menu';
+
+  @override
+  String get licensePackageLabel => 'Package';
+
+  @override
+  String get licenseEmptyLabel => 'Walang available na impormasyon ng lisensya.';
 }

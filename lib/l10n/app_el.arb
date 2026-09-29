@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Σύστημα",
   "appLanguageLabel": "Γλώσσα εφαρμογής",
   "clearTextConfirm": "Καθαρισμός κειμένου;",
-  "historyEmptySubtitle": "Οι σαρώσεις που μεταφράζετε θα εμφανιστούν εδώ."
+  "historyEmptySubtitle": "Οι σαρώσεις που μεταφράζετε θα εμφανιστούν εδώ.",
+  "cancelButtonLabel": "Άκυρο",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Κλείσιμο",
+  "showMenuTooltip": "Εμφάνιση μενού",
+  "licensePackageLabel": "Πακέτο",
+  "licenseEmptyLabel": "Δεν υπάρχουν διαθέσιμες πληροφορίες άδειας."
 }

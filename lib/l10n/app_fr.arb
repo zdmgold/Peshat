@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Système",
   "appLanguageLabel": "Langue de l’application",
   "clearTextConfirm": "Effacer le texte ?",
-  "historyEmptySubtitle": "Les scans que vous traduisez apparaîtront ici."
+  "historyEmptySubtitle": "Les scans que vous traduisez apparaîtront ici.",
+  "cancelButtonLabel": "Annuler",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Fermer",
+  "showMenuTooltip": "Afficher le menu",
+  "licensePackageLabel": "Paquet",
+  "licenseEmptyLabel": "Aucune information de licence disponible."
 }

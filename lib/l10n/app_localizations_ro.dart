@@ -252,4 +252,22 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Scanările traduse vor apărea aici.';
+
+  @override
+  String get cancelButtonLabel => 'Anulare';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Închidere';
+
+  @override
+  String get showMenuTooltip => 'Afișare meniu';
+
+  @override
+  String get licensePackageLabel => 'Pachet';
+
+  @override
+  String get licenseEmptyLabel => 'Nu există informații despre licență disponibile.';
 }

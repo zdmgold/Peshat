@@ -80,5 +80,11 @@
   "sectionSystemLabel": "System",
   "appLanguageLabel": "App-språk",
   "clearTextConfirm": "Rensa texten?",
-  "historyEmptySubtitle": "Skanningar du översätter visas här."
+  "historyEmptySubtitle": "Skanningar du översätter visas här.",
+  "cancelButtonLabel": "Avbryt",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Stäng",
+  "showMenuTooltip": "Visa meny",
+  "licensePackageLabel": "Paket",
+  "licenseEmptyLabel": "Ingen licensinformation tillgänglig."
 }

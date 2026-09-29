@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Sistem",
   "appLanguageLabel": "Bahasa aplikasi",
   "clearTextConfirm": "Hapus teks?",
-  "historyEmptySubtitle": "Pemindaian yang Anda terjemahkan akan muncul di sini."
+  "historyEmptySubtitle": "Pemindaian yang Anda terjemahkan akan muncul di sini.",
+  "cancelButtonLabel": "Batal",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Tutup",
+  "showMenuTooltip": "Tampilkan menu",
+  "licensePackageLabel": "Paket",
+  "licenseEmptyLabel": "Tidak ada informasi lisensi."
 }

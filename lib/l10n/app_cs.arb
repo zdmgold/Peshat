@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Systém",
   "appLanguageLabel": "Jazyk aplikace",
   "clearTextConfirm": "Vymazat text?",
-  "historyEmptySubtitle": "Zde se objeví skeny, které přeložíte."
+  "historyEmptySubtitle": "Zde se objeví skeny, které přeložíte.",
+  "cancelButtonLabel": "Zrušit",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Zavřít",
+  "showMenuTooltip": "Zobrazit nabídku",
+  "licensePackageLabel": "Balíček",
+  "licenseEmptyLabel": "Nejsou k dispozici žádné informace o licenci."
 }

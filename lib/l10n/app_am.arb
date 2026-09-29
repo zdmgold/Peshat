@@ -80,5 +80,11 @@
   "sectionSystemLabel": "ስርዓት",
   "appLanguageLabel": "የመተግበሪያ ቋንቋ",
   "clearTextConfirm": "ጽሑፉን አጽዳ?",
-  "historyEmptySubtitle": "የተረጎሟቸው ስካኖች እዚህ ይታያሉ።"
+  "historyEmptySubtitle": "የተረጎሟቸው ስካኖች እዚህ ይታያሉ።",
+  "cancelButtonLabel": "ሰርዝ",
+  "okButtonLabel": "እሺ",
+  "closeButtonTooltip": "ዝጋ",
+  "showMenuTooltip": "ምናሌ አሳይ",
+  "licensePackageLabel": "ጥቅል",
+  "licenseEmptyLabel": "ምንም የፍቃድ መረጃ አልተገኘም።"
 }

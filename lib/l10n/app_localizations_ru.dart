@@ -252,4 +252,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Отсканированные и переведённые тексты появятся здесь.';
+
+  @override
+  String get cancelButtonLabel => 'Отмена';
+
+  @override
+  String get okButtonLabel => 'ОК';
+
+  @override
+  String get closeButtonTooltip => 'Закрыть';
+
+  @override
+  String get showMenuTooltip => 'Показать меню';
+
+  @override
+  String get licensePackageLabel => 'Пакет';
+
+  @override
+  String get licenseEmptyLabel => 'Информация о лицензии недоступна.';
 }

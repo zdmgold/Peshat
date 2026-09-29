@@ -90,5 +90,29 @@
   "sectionSystemLabel": "System",
   "appLanguageLabel": "App language",
   "clearTextConfirm": "Clear the text?",
-  "historyEmptySubtitle": "Scans you translate will appear here."
+  "historyEmptySubtitle": "Scans you translate will appear here.",
+  "cancelButtonLabel": "Cancel",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Close",
+  "showMenuTooltip": "Show menu",
+  "licensePackageLabel": "Package",
+  "licenseEmptyLabel": "No license information available.",
+  "@cancelButtonLabel": {
+    "description": "Button label that dismisses a dialog without confirming the action."
+  },
+  "@okButtonLabel": {
+    "description": "Button label that confirms the action in a dialog."
+  },
+  "@closeButtonTooltip": {
+    "description": "Accessibility tooltip for the button that closes the current screen."
+  },
+  "@showMenuTooltip": {
+    "description": "Accessibility tooltip for the overflow menu button."
+  },
+  "@licensePackageLabel": {
+    "description": "Label shown before a package name on the license screen."
+  },
+  "@licenseEmptyLabel": {
+    "description": "Message shown when the license registry contains no entries."
+  }
 }

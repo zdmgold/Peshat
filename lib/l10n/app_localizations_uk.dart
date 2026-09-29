@@ -252,4 +252,22 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Відскановані та перекладені тексти з’являться тут.';
+
+  @override
+  String get cancelButtonLabel => 'Скасувати';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Закрити';
+
+  @override
+  String get showMenuTooltip => 'Показати меню';
+
+  @override
+  String get licensePackageLabel => 'Пакет';
+
+  @override
+  String get licenseEmptyLabel => 'Інформація про ліцензію недоступна.';
 }

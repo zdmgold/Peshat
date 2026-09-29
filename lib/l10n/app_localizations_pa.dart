@@ -252,4 +252,22 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'ਤੁਹਾਡੇ ਅਨੁਵਾਦ ਕੀਤੇ ਸਕੈਨ ਇੱਥੇ ਦਿਖਾਈ ਦੇਣਗੇ।';
+
+  @override
+  String get cancelButtonLabel => 'ਰੱਦ ਕਰੋ';
+
+  @override
+  String get okButtonLabel => 'ਠੀਕ ਹੈ';
+
+  @override
+  String get closeButtonTooltip => 'ਬੰਦ ਕਰੋ';
+
+  @override
+  String get showMenuTooltip => 'ਮੀਨੂ ਦਿਖਾਓ';
+
+  @override
+  String get licensePackageLabel => 'ਪੈਕੇਜ';
+
+  @override
+  String get licenseEmptyLabel => 'ਕੋਈ ਲਾਇਸੰਸ ਜਾਣਕਾਰੀ ਉਪਲਬਧ ਨਹੀਂ।';
 }

@@ -252,4 +252,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'ستظهر هنا عمليات المسح التي تترجمها.';
+
+  @override
+  String get cancelButtonLabel => 'إلغاء';
+
+  @override
+  String get okButtonLabel => 'موافق';
+
+  @override
+  String get closeButtonTooltip => 'إغلاق';
+
+  @override
+  String get showMenuTooltip => 'إظهار القائمة';
+
+  @override
+  String get licensePackageLabel => 'حزمة';
+
+  @override
+  String get licenseEmptyLabel => 'لا تتوفر معلومات الترخيص.';
 }

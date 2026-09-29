@@ -252,4 +252,22 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Zde se objeví skeny, které přeložíte.';
+
+  @override
+  String get cancelButtonLabel => 'Zrušit';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Zavřít';
+
+  @override
+  String get showMenuTooltip => 'Zobrazit nabídku';
+
+  @override
+  String get licensePackageLabel => 'Balíček';
+
+  @override
+  String get licenseEmptyLabel => 'Nejsou k dispozici žádné informace o licenci.';
 }

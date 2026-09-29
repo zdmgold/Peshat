@@ -252,4 +252,22 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => '번역한 스캔이 여기에 표시됩니다.';
+
+  @override
+  String get cancelButtonLabel => '취소';
+
+  @override
+  String get okButtonLabel => '확인';
+
+  @override
+  String get closeButtonTooltip => '닫기';
+
+  @override
+  String get showMenuTooltip => '메뉴 표시';
+
+  @override
+  String get licensePackageLabel => '패키지';
+
+  @override
+  String get licenseEmptyLabel => '라이선스 정보가 없습니다.';
 }

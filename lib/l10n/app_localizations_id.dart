@@ -252,4 +252,22 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Pemindaian yang Anda terjemahkan akan muncul di sini.';
+
+  @override
+  String get cancelButtonLabel => 'Batal';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Tutup';
+
+  @override
+  String get showMenuTooltip => 'Tampilkan menu';
+
+  @override
+  String get licensePackageLabel => 'Paket';
+
+  @override
+  String get licenseEmptyLabel => 'Tidak ada informasi lisensi.';
 }

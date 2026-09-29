@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Systeem",
   "appLanguageLabel": "App-taal",
   "clearTextConfirm": "Tekst wissen?",
-  "historyEmptySubtitle": "Scans die u vertaalt verschijnen hier."
+  "historyEmptySubtitle": "Scans die u vertaalt verschijnen hier.",
+  "cancelButtonLabel": "Annuleren",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Sluiten",
+  "showMenuTooltip": "Menu weergeven",
+  "licensePackageLabel": "Pakket",
+  "licenseEmptyLabel": "Geen licentie-informatie beschikbaar."
 }

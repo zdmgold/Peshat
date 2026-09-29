@@ -252,4 +252,22 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'סריקות שתתרגם יופיעו כאן.';
+
+  @override
+  String get cancelButtonLabel => 'ביטול';
+
+  @override
+  String get okButtonLabel => 'אישור';
+
+  @override
+  String get closeButtonTooltip => 'סגור';
+
+  @override
+  String get showMenuTooltip => 'הצג תפריט';
+
+  @override
+  String get licensePackageLabel => 'חבילה';
+
+  @override
+  String get licenseEmptyLabel => 'אין מידע זמין על רישיון.';
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "Sistema",
   "appLanguageLabel": "Idioma do aplicativo",
   "clearTextConfirm": "Limpar o texto?",
-  "historyEmptySubtitle": "As digitalizações que traduzir aparecerão aqui."
+  "historyEmptySubtitle": "As digitalizações que traduzir aparecerão aqui.",
+  "cancelButtonLabel": "Cancelar",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "Fechar",
+  "showMenuTooltip": "Mostrar menu",
+  "licensePackageLabel": "Pacote",
+  "licenseEmptyLabel": "Nenhuma informação de licença disponível."
 }

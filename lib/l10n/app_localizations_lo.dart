@@ -252,4 +252,22 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'ການສະແກນທີ່ທ່ານແປຈະປາກົດຢູ່ນີ້.';
+
+  @override
+  String get cancelButtonLabel => 'ຍົກເລີກ';
+
+  @override
+  String get okButtonLabel => 'ຕົກລົງ';
+
+  @override
+  String get closeButtonTooltip => 'ປິດ';
+
+  @override
+  String get showMenuTooltip => 'ສະແດງເມນູ';
+
+  @override
+  String get licensePackageLabel => 'ແພັກເກດ';
+
+  @override
+  String get licenseEmptyLabel => 'ບໍ່ມີຂໍ້ມູນໃບອະນຸຍາດ.';
 }

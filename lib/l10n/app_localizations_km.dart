@@ -252,4 +252,22 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'ការស្កេនដែលអ្នកបកប្រែនឹងបង្ហាញនៅទីនេះ។';
+
+  @override
+  String get cancelButtonLabel => 'បោះបង់';
+
+  @override
+  String get okButtonLabel => 'យល់ព្រម';
+
+  @override
+  String get closeButtonTooltip => 'បិទ';
+
+  @override
+  String get showMenuTooltip => 'បង្ហាញម៉ឺនុយ';
+
+  @override
+  String get licensePackageLabel => 'កញ្ចប់';
+
+  @override
+  String get licenseEmptyLabel => 'គ្មានព័ត៌មានអាជ្ញាបណ្ណទេ។';
 }

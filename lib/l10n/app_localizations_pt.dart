@@ -252,4 +252,22 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'As digitalizações que traduzir aparecerão aqui.';
+
+  @override
+  String get cancelButtonLabel => 'Cancelar';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Fechar';
+
+  @override
+  String get showMenuTooltip => 'Mostrar menu';
+
+  @override
+  String get licensePackageLabel => 'Pacote';
+
+  @override
+  String get licenseEmptyLabel => 'Nenhuma informação de licença disponível.';
 }

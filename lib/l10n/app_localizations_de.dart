@@ -252,4 +252,22 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get historyEmptySubtitle => 'Von Ihnen übersetzte Scans erscheinen hier.';
+
+  @override
+  String get cancelButtonLabel => 'Abbrechen';
+
+  @override
+  String get okButtonLabel => 'OK';
+
+  @override
+  String get closeButtonTooltip => 'Schließen';
+
+  @override
+  String get showMenuTooltip => 'Menü anzeigen';
+
+  @override
+  String get licensePackageLabel => 'Paket';
+
+  @override
+  String get licenseEmptyLabel => 'Keine Lizenzinformationen verfügbar.';
 }

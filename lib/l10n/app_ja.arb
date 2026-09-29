@@ -80,5 +80,11 @@
   "sectionSystemLabel": "システム",
   "appLanguageLabel": "アプリの言語",
   "clearTextConfirm": "テキストを消去しますか？",
-  "historyEmptySubtitle": "翻訳したスキャンはここに表示されます。"
+  "historyEmptySubtitle": "翻訳したスキャンはここに表示されます。",
+  "cancelButtonLabel": "キャンセル",
+  "okButtonLabel": "OK",
+  "closeButtonTooltip": "閉じる",
+  "showMenuTooltip": "メニューを表示",
+  "licensePackageLabel": "パッケージ",
+  "licenseEmptyLabel": "ライセンス情報がありません。"
 }

@@ -80,5 +80,11 @@
   "sectionSystemLabel": "सिस्टम",
   "appLanguageLabel": "ऐप भाषा",
   "clearTextConfirm": "टेक्स्ट साफ़ करें?",
-  "historyEmptySubtitle": "आपके द्वारा अनुवादित स्कैन यहाँ दिखेंगे।"
+  "historyEmptySubtitle": "आपके द्वारा अनुवादित स्कैन यहाँ दिखेंगे।",
+  "cancelButtonLabel": "रद्द करें",
+  "okButtonLabel": "ठीक है",
+  "closeButtonTooltip": "बंद करें",
+  "showMenuTooltip": "मेनू दिखाएँ",
+  "licensePackageLabel": "पैकेज",
+  "licenseEmptyLabel": "कोई लाइसेंस जानकारी उपलब्ध नहीं है।"
 }
