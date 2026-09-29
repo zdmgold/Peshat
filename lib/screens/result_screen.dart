@@ -186,8 +186,7 @@ class _ResultScreenState extends State<ResultScreen> {
                 ),
                 PopupMenuButton<String>(
                   icon: const Icon(Icons.more_horiz, size: 22),
-                  tooltip: MaterialLocalizations.of(context)
-                      .showMenuTooltip,
+                  tooltip: AppLocalizations.of(context)!.showMenuTooltip,
                   onSelected: (v) {
                     if (v == 'txt') {
                       _export(_currentText(state), _currentBaseName(),

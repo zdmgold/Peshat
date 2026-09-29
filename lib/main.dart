@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/utils/app_theme.dart';
@@ -30,16 +30,21 @@ class PeshatApp extends StatefulWidget {
   State<PeshatApp> createState() => _PeshatAppState();
 }
 
-class _PeshatAppState extends State<PeshatApp> {
+class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
   late final ThemeProvider themeProvider;
   late final PurchaseProvider purchaseProvider;
   late final SettingsProvider settingsProvider;
   late final HistoryProvider historyProvider;
   late final UiLocaleProvider uiLocaleProvider;
 
+  Brightness _platformBrightness =
+      WidgetsBinding.instance.platformDispatcher.platformBrightness;
+
   @override
   void initState() {
     super.initState();
+    WidgetsBinding.instance.addObserver(this);
+
     themeProvider = ThemeProvider(widget.prefs);
     purchaseProvider = PurchaseProvider(widget.prefs);
     settingsProvider = SettingsProvider(widget.prefs);
@@ -51,39 +56,41 @@ class _PeshatAppState extends State<PeshatApp> {
     purchaseProvider.addListener(_syncAdSlot);
   }
 
+  @override
+  void dispose() {
+    WidgetsBinding.instance.removeObserver(this);
+    purchaseProvider.removeListener(_syncAdSlot);
+    super.dispose();
+  }
+
+  @override
+  void didChangePlatformBrightness() {
+    setState(() {
+      _platformBrightness =
+          WidgetsBinding.instance.platformDispatcher.platformBrightness;
+    });
+  }
+
   void _syncAdSlot() {
     AdSlot.setPurchased(purchaseProvider.value);
     InterstitialService.instance.setPurchased(purchaseProvider.value);
   }
 
-  @override
-  void dispose() {
-    purchaseProvider.removeListener(_syncAdSlot);
-    super.dispose();
-  }
-
-  // Temporary shim. Deleted in Batch 4 when the root becomes CupertinoApp.
-  ThemeMode _toThemeMode(AppThemeMode mode) {
-    switch (mode) {
-      case AppThemeMode.light:
-        return ThemeMode.light;
-      case AppThemeMode.system:
-        return ThemeMode.system;
-      case AppThemeMode.dark:
-        return ThemeMode.dark;
-    }
+  CupertinoThemeData _resolveTheme(AppThemeMode mode) {
+    final isDark = mode == AppThemeMode.dark ||
+        (mode == AppThemeMode.system &&
+            _platformBrightness == Brightness.dark);
+    return isDark ? buildDarkCupertinoTheme() : buildLightCupertinoTheme();
   }
 
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
       listenable: Listenable.merge([themeProvider, uiLocaleProvider]),
-      builder: (context, _) => MaterialApp(
+      builder: (context, _) => CupertinoApp(
         onGenerateTitle: (context) => AppLocalizations.of(context)!.appName,
         debugShowCheckedModeBanner: false,
-        theme: buildLightTheme(),
-        darkTheme: buildDarkTheme(),
-        themeMode: _toThemeMode(themeProvider.value),
+        theme: _resolveTheme(themeProvider.value),
         locale: uiLocaleProvider.value,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,

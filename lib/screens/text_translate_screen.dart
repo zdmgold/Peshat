@@ -68,11 +68,11 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text(MaterialLocalizations.of(ctx).cancelButtonLabel),
+            child: Text(AppLocalizations.of(ctx)!.cancelButtonLabel),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(MaterialLocalizations.of(ctx).okButtonLabel),
+            child: Text(AppLocalizations.of(ctx)!.okButtonLabel),
           ),
         ],
       ),
@@ -131,7 +131,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
         actions: [
           IconButton(
             icon: const Icon(Icons.close, size: 22),
-            tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
+            tooltip: AppLocalizations.of(context)!.closeButtonTooltip,
             onPressed: _clear,
           ),
         ],

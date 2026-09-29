@@ -37,8 +37,7 @@ class HistoryScreen extends StatelessWidget {
                 ? const SizedBox.shrink()
                 : IconButton(
                     icon: const Icon(Icons.more_horiz, size: 22),
-                    tooltip: MaterialLocalizations.of(context)
-                        .showMenuTooltip,
+                    tooltip: AppLocalizations.of(context)!.showMenuTooltip,
                     onPressed: () =>
                         _showOverflowSheet(context, l10n),
                   ),
@@ -214,7 +213,7 @@ class HistoryScreen extends StatelessWidget {
                 child: TextButton(
                   onPressed: () => Navigator.pop(ctx),
                   child: Text(
-                    MaterialLocalizations.of(ctx).cancelButtonLabel,
+                    AppLocalizations.of(ctx)!.cancelButtonLabel,
                     style: AppTypography.chrome.copyWith(
                       fontSize: 16,
                       fontWeight: FontWeight.w600,
@@ -242,11 +241,11 @@ class HistoryScreen extends StatelessWidget {
         actions: [
           TextButton(
             onPressed: () => Navigator.pop(ctx, false),
-            child: Text(MaterialLocalizations.of(ctx).cancelButtonLabel),
+            child: Text(AppLocalizations.of(ctx)!.cancelButtonLabel),
           ),
           TextButton(
             onPressed: () => Navigator.pop(ctx, true),
-            child: Text(MaterialLocalizations.of(ctx).okButtonLabel),
+            child: Text(AppLocalizations.of(ctx)!.okButtonLabel),
           ),
         ],
       ),
