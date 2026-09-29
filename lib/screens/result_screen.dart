@@ -1,6 +1,7 @@
 import 'dart:io';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart' show SelectionArea;
 import 'package:flutter/foundation.dart' show kDebugMode;
-import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
@@ -18,7 +19,7 @@ import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/ad_slot.dart';
-import '../widgets/segmented_control.dart';
+import '../widgets/cupertino_toast.dart';
 import 'language_picker_screen.dart';
 
 enum _ResultTab { original, translation }
@@ -98,7 +99,7 @@ class _ResultScreenState extends State<ResultScreen> {
   Future<void> _pickLanguage() async {
     final selected = await Navigator.push<String>(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) => LanguagePickerScreen(
           current: _targetLanguage,
         ),
@@ -141,92 +142,112 @@ class _ResultScreenState extends State<ResultScreen> {
   String _currentBaseName() =>
       _tab == _ResultTab.original ? 'peshat_original' : 'peshat_translation';
 
+  Future<void> _showOverflowSheet(ScanDone state) async {
+    final l10n = AppLocalizations.of(context)!;
+    await showCupertinoModalPopup<void>(
+      context: context,
+      builder: (ctx) => CupertinoActionSheet(
+        actions: [
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.pop(ctx);
+              _export(_currentText(state), _currentBaseName(), asPdf: false);
+            },
+            child: Text(l10n.exportTxtAction),
+          ),
+          CupertinoActionSheetAction(
+            onPressed: () {
+              Navigator.pop(ctx);
+              _export(_currentText(state), _currentBaseName(), asPdf: true);
+            },
+            child: Text(l10n.exportPdfAction),
+          ),
+        ],
+        cancelButton: CupertinoActionSheetAction(
+          onPressed: () => Navigator.pop(ctx),
+          child: Text(l10n.cancelButtonLabel),
+        ),
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
     return ValueListenableBuilder<ScanState>(
       valueListenable: _provider,
       builder: (context, state, _) {
-        final ready = state is ScanDone;
+        final done = state is ScanDone ? state : null;
         return PopScope(
-          canPop: !ready,
+          canPop: done == null,
           onPopInvokedWithResult: (didPop, _) async {
             if (didPop) return;
             await InterstitialService.instance.maybeShowOnBack();
             if (!context.mounted) return;
             Navigator.of(context).pop();
           },
-          child: Scaffold(
-          appBar: AppBar(
-            title: Text(
-              l10n.resultTitle,
-              style: AppTypography.chrome.copyWith(
-                fontSize: 17,
-                fontWeight: FontWeight.w600,
-                color: textPrimary,
+          child: CupertinoPageScaffold(
+            navigationBar: CupertinoNavigationBar(
+              middle: Text(
+                l10n.resultTitle,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                  color: textPrimary,
+                ),
               ),
+              trailing: done != null
+                  ? Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        CupertinoButton(
+                          padding: EdgeInsets.zero,
+                          minSize: 44,
+                          onPressed: () => _copy(_currentText(done)),
+                          child: Semantics(
+                            label: l10n.copyAction,
+                            button: true,
+                            child: const Icon(CupertinoIcons.doc_on_doc,
+                                size: 22),
+                          ),
+                        ),
+                        const SizedBox(width: Spacing.sm),
+                        CupertinoButton(
+                          padding: EdgeInsets.zero,
+                          minSize: 44,
+                          onPressed: () => _share(_currentText(done)),
+                          child: Semantics(
+                            label: l10n.shareAction,
+                            button: true,
+                            child: const Icon(CupertinoIcons.share, size: 22),
+                          ),
+                        ),
+                        const SizedBox(width: Spacing.sm),
+                        CupertinoButton(
+                          padding: EdgeInsets.zero,
+                          minSize: 44,
+                          onPressed: () => _showOverflowSheet(done),
+                          child: Semantics(
+                            label: l10n.showMenuTooltip,
+                            button: true,
+                            child: const Icon(CupertinoIcons.ellipsis, size: 22),
+                          ),
+                        ),
+                      ],
+                    )
+                  : null,
             ),
-            centerTitle: true,
-            actions: [
-              if (ready) ...[
-                IconButton(
-                  icon: const Icon(Icons.copy_outlined, size: 22),
-                  tooltip: l10n.copyAction,
-                  onPressed: () => _copy(_currentText(state)),
-                ),
-                IconButton(
-                  icon: const Icon(Icons.ios_share, size: 22),
-                  tooltip: l10n.shareAction,
-                  onPressed: () => _share(_currentText(state)),
-                ),
-                PopupMenuButton<String>(
-                  icon: const Icon(Icons.more_horiz, size: 22),
-                  tooltip: AppLocalizations.of(context)!.showMenuTooltip,
-                  onSelected: (v) {
-                    if (v == 'txt') {
-                      _export(_currentText(state), _currentBaseName(),
-                          asPdf: false);
-                    } else if (v == 'pdf') {
-                      _export(_currentText(state), _currentBaseName(),
-                          asPdf: true);
-                    }
-                  },
-                  itemBuilder: (ctx) => [
-                    PopupMenuItem(
-                      value: 'txt',
-                      child: Row(
-                        children: [
-                          const Icon(Icons.description_outlined, size: 20),
-                          const SizedBox(width: Spacing.md),
-                          Text(l10n.exportTxtAction),
-                        ],
-                      ),
-                    ),
-                    PopupMenuItem(
-                      value: 'pdf',
-                      child: Row(
-                        children: [
-                          const Icon(Icons.picture_as_pdf_outlined, size: 20),
-                          const SizedBox(width: Spacing.md),
-                          Text(l10n.exportPdfAction),
-                        ],
-                      ),
-                    ),
-                  ],
-                ),
-              ],
-            ],
-          ),
-            body: SafeArea(
+            child: SafeArea(
               top: false,
               child: Column(
                 children: [
-                  Expanded(child: _buildContent(context, state, l10n, isDark, accent)),
+                  Expanded(
+                    child: _buildContent(context, state, l10n, isDark),
+                  ),
                   const AdSlot(),
                 ],
               ),
@@ -242,8 +263,10 @@ class _ResultScreenState extends State<ResultScreen> {
     ScanState state,
     AppLocalizations l10n,
     bool isDark,
-    Color accent,
   ) {
+    final textPrimary =
+        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+
     if (state is ScanRecognizing) {
       return _StatusView(message: l10n.statusRecognizing);
     }
@@ -273,19 +296,35 @@ class _ResultScreenState extends State<ResultScreen> {
               Spacing.md,
               Spacing.sm,
             ),
-            child: SegmentedControl<_ResultTab>(
-              value: _tab,
-              onChanged: (v) => setState(() => _tab = v),
-              items: [
-                SegmentItem(
-                  value: _ResultTab.original,
-                  label: l10n.sourceLabel,
+            child: CupertinoSlidingSegmentedControl<_ResultTab>(
+              groupValue: _tab,
+              onValueChanged: (v) {
+                if (v != null) setState(() => _tab = v);
+              },
+              children: {
+                _ResultTab.original: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6),
+                  child: Text(
+                    l10n.sourceLabel,
+                    style: AppTypography.chrome.copyWith(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: textPrimary,
+                    ),
+                  ),
                 ),
-                SegmentItem(
-                  value: _ResultTab.translation,
-                  label: l10n.translationLabel,
+                _ResultTab.translation: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 6),
+                  child: Text(
+                    l10n.translationLabel,
+                    style: AppTypography.chrome.copyWith(
+                      fontSize: 14,
+                      fontWeight: FontWeight.w600,
+                      color: textPrimary,
+                    ),
+                  ),
                 ),
-              ],
+              },
             ),
           ),
           Expanded(
@@ -314,12 +353,7 @@ class _ResultScreenState extends State<ResultScreen> {
   void _copy(String text) {
     InterstitialService.instance.onCopy();
     Clipboard.setData(ClipboardData(text: text));
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text(AppLocalizations.of(context)!.copiedMessage),
-        duration: const Duration(seconds: 2),
-      ),
-    );
+    CupertinoToast.show(context, AppLocalizations.of(context)!.copiedMessage);
   }
 
   Future<void> _share(String text) async {
@@ -360,9 +394,7 @@ class _ResultScreenState extends State<ResultScreen> {
       await Share.shareXFiles([XFile(file.path)]);
     } catch (e) {
       if (mounted) {
-        ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text(e.toString())),
-        );
+        CupertinoToast.show(context, e.toString());
       }
     }
   }
@@ -386,18 +418,15 @@ class _OriginalTab extends StatelessWidget {
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
     return SingleChildScrollView(
-      padding: const EdgeInsets.fromLTRB(
-        Spacing.md,
-        Spacing.md,
-        Spacing.md,
-        Spacing.md,
-      ),
-      child: SelectableText(
-        sourceText,
-        style: AppTypography.sourceChip.copyWith(
-          fontSize: 14,
-          height: 1.5,
-          color: textPrimary,
+      padding: const EdgeInsets.all(Spacing.md),
+      child: SelectionArea(
+        child: Text(
+          sourceText,
+          style: AppTypography.sourceChip.copyWith(
+            fontSize: 14,
+            height: 1.5,
+            color: textPrimary,
+          ),
         ),
       ),
     );
@@ -440,51 +469,48 @@ class _TranslationTab extends StatelessWidget {
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-          child: Material(
-            color: cardBg,
-            borderRadius: BorderRadius.circular(12),
-            child: InkWell(
-              borderRadius: BorderRadius.circular(12),
-              onTap: onPickLanguage,
-              child: Container(
-                constraints: const BoxConstraints(minHeight: 56),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Spacing.md,
-                  vertical: Spacing.sm,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: border, width: 0.5),
-                ),
-                child: Row(
-                  children: [
-                    Icon(Icons.translate, size: 18, color: accent),
-                    const SizedBox(width: Spacing.sm),
-                    Text(
-                      l10n.translatedTo,
+          child: GestureDetector(
+            behavior: HitTestBehavior.opaque,
+            onTap: onPickLanguage,
+            child: Container(
+              constraints: const BoxConstraints(minHeight: 56),
+              padding: const EdgeInsets.symmetric(
+                horizontal: Spacing.md,
+                vertical: Spacing.sm,
+              ),
+              decoration: BoxDecoration(
+                color: cardBg,
+                borderRadius: BorderRadius.circular(12),
+                border: Border.all(color: border, width: 0.5),
+              ),
+              child: Row(
+                children: [
+                  Icon(CupertinoIcons.globe, size: 18, color: accent),
+                  const SizedBox(width: Spacing.sm),
+                  Text(
+                    l10n.translatedTo,
+                    style: AppTypography.chrome.copyWith(
+                      fontSize: 13,
+                      color: textSecondary,
+                    ),
+                  ),
+                  const Spacer(),
+                  Flexible(
+                    child: Text(
+                      languageDisplayName(targetLanguage),
+                      textAlign: TextAlign.right,
+                      overflow: TextOverflow.ellipsis,
                       style: AppTypography.chrome.copyWith(
-                        fontSize: 13,
-                        color: textSecondary,
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: textPrimary,
                       ),
                     ),
-                    const Spacer(),
-                    Flexible(
-                      child: Text(
-                        languageDisplayName(targetLanguage),
-                        textAlign: TextAlign.right,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: textPrimary,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: Spacing.xs),
-                    Icon(Icons.chevron_right,
-                        size: 18, color: textTertiary),
-                  ],
-                ),
+                  ),
+                  const SizedBox(width: Spacing.xs),
+                  Icon(CupertinoIcons.chevron_forward,
+                      size: 18, color: textTertiary),
+                ],
               ),
             ),
           ),
@@ -493,12 +519,14 @@ class _TranslationTab extends StatelessWidget {
         Expanded(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-            child: SelectableText(
-              translatedText,
-              style: AppTypography.body.copyWith(
-                fontSize: 17,
-                height: 1.6,
-                color: textPrimary,
+            child: SelectionArea(
+              child: Text(
+                translatedText,
+                style: AppTypography.body.copyWith(
+                  fontSize: 17,
+                  height: 1.6,
+                  color: textPrimary,
+                ),
               ),
             ),
           ),
@@ -519,7 +547,7 @@ class _StatusView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final textSecondary =
         isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
@@ -529,14 +557,7 @@ class _StatusView extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(
-              width: 24,
-              height: 24,
-              child: CircularProgressIndicator(
-                color: accent,
-                strokeWidth: 2.5,
-              ),
-            ),
+            CupertinoActivityIndicator(radius: 12, color: accent),
             const SizedBox(height: Spacing.md),
             Text(
               message,
@@ -565,7 +586,7 @@ class _ErrorView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
@@ -575,7 +596,8 @@ class _ErrorView extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(Icons.error_outline, size: 48, color: error),
+          Icon(CupertinoIcons.exclamationmark_circle,
+              size: 48, color: error),
           const SizedBox(height: Spacing.md),
           Text(
             message,
@@ -588,21 +610,39 @@ class _ErrorView extends StatelessWidget {
           const SizedBox(height: Spacing.lg),
           SizedBox(
             height: 48,
-            child: OutlinedButton(
+            child: CupertinoButton(
+              padding: EdgeInsets.zero,
               onPressed: onRetry,
-              child: Text(l10n.retryButton),
+              child: Container(
+                padding: const EdgeInsets.symmetric(horizontal: Spacing.lg),
+                alignment: Alignment.center,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: error, width: 1),
+                ),
+                child: Text(
+                  l10n.retryButton,
+                  style: AppTypography.chrome.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    color: error,
+                  ),
+                ),
+              ),
             ),
           ),
           if (detail != null) ...[
             const SizedBox(height: Spacing.xl),
-            const Divider(),
+            Container(height: 0.5, color: error.withValues(alpha: 0.3)),
             const SizedBox(height: Spacing.md),
-            SelectableText(
-              detail!,
-              style: const TextStyle(
-                fontFamily: 'monospace',
-                fontSize: 11,
-                color: Colors.redAccent,
+            SelectionArea(
+              child: Text(
+                detail!,
+                style: const TextStyle(
+                  fontFamily: 'monospace',
+                  fontSize: 11,
+                  color: Color(0xFFFF5252),
+                ),
               ),
             ),
           ],
