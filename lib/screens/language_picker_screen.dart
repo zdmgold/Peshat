@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import '../core/models/language.dart';
 import '../core/services/translator_service.dart';
 import '../core/utils/app_colors.dart';
@@ -67,7 +67,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
@@ -83,9 +83,9 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final filtered = _filtered(all);
     final recents = _recentList(all);
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text(
           l10n.selectLanguageTitle,
           style: AppTypography.chrome.copyWith(
             fontSize: 17,
@@ -93,9 +93,8 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
             color: textPrimary,
           ),
         ),
-        centerTitle: true,
       ),
-      body: SafeArea(
+      child: SafeArea(
         top: false,
         child: Column(
           children: [
@@ -106,79 +105,34 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
                 Spacing.md,
                 Spacing.sm,
               ),
-              child: Container(
-                height: 44,
-                decoration: BoxDecoration(
-                  color: inputFill,
-                  borderRadius: BorderRadius.circular(12),
+              child: CupertinoSearchTextField(
+                controller: _search,
+                onChanged: (v) => setState(() => _query = v),
+                placeholder: l10n.searchLanguagesHint,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 15,
+                  color: textPrimary,
                 ),
-                padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-                child: Row(
-                  children: [
-                    Icon(Icons.search, size: 20, color: textTertiary),
-                    const SizedBox(width: Spacing.sm),
-                    Expanded(
-                      child: TextField(
-                        controller: _search,
-                        onChanged: (v) => setState(() => _query = v),
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 15,
-                          color: textPrimary,
-                        ),
-                        cursorColor: accent,
-                        decoration: InputDecoration(
-                          isDense: true,
-                          border: InputBorder.none,
-                          hintText: l10n.searchLanguagesHint,
-                          hintStyle: AppTypography.chrome.copyWith(
-                            fontSize: 15,
-                            color: textTertiary,
-                          ),
-                        ),
-                      ),
-                    ),
-                    if (_query.isNotEmpty)
-                      GestureDetector(
-                        onTap: () {
-                          _search.clear();
-                          setState(() => _query = '');
-                        },
-                        child: Icon(Icons.close, size: 18, color: textTertiary),
-                      ),
-                  ],
+                placeholderStyle: AppTypography.chrome.copyWith(
+                  fontSize: 15,
+                  color: textTertiary,
+                ),
+                cursorColor: accent,
+                itemColor: textTertiary,
+                backgroundColor: inputFill,
+                borderRadius: BorderRadius.circular(12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: Spacing.md,
+                  vertical: 10,
                 ),
               ),
             ),
             Expanded(
               child: filtered.isEmpty
-                  ? Center(
-                      child: Padding(
-                        padding: const EdgeInsets.all(Spacing.xl),
-                        child: Column(
-                          mainAxisSize: MainAxisSize.min,
-                          children: [
-                            Icon(Icons.search_off,
-                                size: 48, color: textTertiary),
-                            const SizedBox(height: Spacing.md),
-                            Text(
-                              l10n.noResults,
-                              style: AppTypography.chrome.copyWith(
-                                fontSize: 16,
-                                color: textSecondary,
-                              ),
-                            ),
-                            const SizedBox(height: Spacing.xs),
-                            Text(
-                              l10n.noResultsSubtitle,
-                              textAlign: TextAlign.center,
-                              style: AppTypography.chrome.copyWith(
-                                fontSize: 14,
-                                color: textTertiary,
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
+                  ? _EmptySearchState(
+                      title: l10n.noResults,
+                      subtitle: l10n.noResultsSubtitle,
+                      isDark: isDark,
                     )
                   : _buildList(
                       context,
@@ -309,7 +263,7 @@ class _LetterLabel extends StatelessWidget {
   }
 }
 
-class _Row extends StatelessWidget {
+class _Row extends StatefulWidget {
   final Language language;
   final bool selected;
   final Color textPrimary;
@@ -327,15 +281,28 @@ class _Row extends StatelessWidget {
   });
 
   @override
+  State<_Row> createState() => _RowState();
+}
+
+class _RowState extends State<_Row> {
+  bool _pressed = false;
+
+  @override
   Widget build(BuildContext context) {
     return Semantics(
-      label: '${language.englishName}, ${language.nativeName}',
+      label:
+          '${widget.language.englishName}, ${widget.language.nativeName}',
       button: true,
-      selected: selected,
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
+      selected: widget.selected,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: widget.onTap,
+        onTapDown: (_) => setState(() => _pressed = true),
+        onTapUp: (_) => setState(() => _pressed = false),
+        onTapCancel: () => setState(() => _pressed = false),
+        child: AnimatedOpacity(
+          duration: const Duration(milliseconds: 100),
+          opacity: _pressed ? 0.6 : 1.0,
           child: Container(
             constraints: const BoxConstraints(minHeight: 56),
             padding: const EdgeInsets.symmetric(
@@ -350,30 +317,81 @@ class _Row extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        language.nativeName,
-                        textDirection: language.isRtl
+                        widget.language.nativeName,
+                        textDirection: widget.language.isRtl
                             ? TextDirection.rtl
                             : TextDirection.ltr,
                         style: AppTypography.chrome.copyWith(
                           fontSize: 16,
-                          color: textPrimary,
+                          color: widget.textPrimary,
                         ),
                       ),
                       const SizedBox(height: 2),
                       Text(
-                        language.englishName,
+                        widget.language.englishName,
                         style: AppTypography.chrome.copyWith(
                           fontSize: 13,
-                          color: textSecondary,
+                          color: widget.textSecondary,
                         ),
                       ),
                     ],
                   ),
                 ),
-                if (selected) Icon(Icons.check, size: 20, color: accent),
+                if (widget.selected)
+                  Icon(CupertinoIcons.check_mark,
+                      size: 20, color: widget.accent),
               ],
             ),
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class _EmptySearchState extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final bool isDark;
+
+  const _EmptySearchState({
+    required this.title,
+    required this.subtitle,
+    required this.isDark,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    final textTertiary =
+        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
+
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(Spacing.xl),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Icon(CupertinoIcons.search, size: 48, color: textTertiary),
+            const SizedBox(height: Spacing.md),
+            Text(
+              title,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 16,
+                color: textSecondary,
+              ),
+            ),
+            const SizedBox(height: Spacing.xs),
+            Text(
+              subtitle,
+              textAlign: TextAlign.center,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 14,
+                color: textTertiary,
+              ),
+            ),
+          ],
         ),
       ),
     );
