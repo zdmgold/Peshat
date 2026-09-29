@@ -38,22 +38,22 @@ void main() {
     // Wordmark appears in AppBar and hero.
     expect(find.text('Peshat'), findsWidgets);
 
-    // Input card placeholder.
-    expect(find.text('Type or paste text'), findsOneWidget);
+    // Primary action.
+    expect(find.text('Scan Document'), findsOneWidget);
 
-    // Input card accessories: camera and upload icons.
-    expect(find.byIcon(Icons.camera_alt_outlined), findsOneWidget);
-    expect(find.byIcon(Icons.upload_file_outlined), findsWidgets);
-
-    // Grouped action card: Camera row + Import a file row.
-    expect(find.byIcon(Icons.document_scanner_outlined), findsOneWidget);
+    // Secondary actions.
+    expect(find.text('Type text'), findsOneWidget);
     expect(find.text('Import a file'), findsOneWidget);
 
-    // Target language row uses the translate icon.
+    // Target language card.
+    expect(find.text('Translate to'), findsOneWidget);
     expect(find.byIcon(Icons.translate), findsOneWidget);
 
-    // AppBar actions: language + theme + settings.
+    // AppBar actions.
     expect(find.byIcon(Icons.language), findsOneWidget);
     expect(find.byIcon(Icons.settings_outlined), findsOneWidget);
+
+    // Scan icon appears in the Scan Document button.
+    expect(find.byIcon(Icons.document_scanner_outlined), findsOneWidget);
   });
 }

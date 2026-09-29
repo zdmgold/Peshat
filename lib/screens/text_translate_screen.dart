@@ -6,7 +6,6 @@ import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
-import '../widgets/ad_slot.dart';
 import 'language_picker_screen.dart';
 import 'result_screen.dart';
 
@@ -56,7 +55,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
     if (selected != null) widget.settings.setTarget(selected);
   }
 
-  Future<void> _confirmClear() async {
+  Future<void> _clear() async {
     if (_controller.text.isEmpty) {
       Navigator.pop(context);
       return;
@@ -106,9 +105,15 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
     final isDark = Theme.of(context).brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final border =
+        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
+    final inputFill =
+        isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
     final charCount = _controller.text.characters.length;
     final hasText = _controller.text.trim().isNotEmpty;
 
@@ -127,7 +132,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
           IconButton(
             icon: const Icon(Icons.close, size: 22),
             tooltip: MaterialLocalizations.of(context).closeButtonTooltip,
-            onPressed: _confirmClear,
+            onPressed: _clear,
           ),
         ],
       ),
@@ -141,55 +146,121 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
             children: [
               Expanded(
                 child: Padding(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: Spacing.md,
-                    vertical: Spacing.sm,
-                  ),
-                  child: TextField(
-                    controller: _controller,
-                    focusNode: _focus,
-                    maxLines: null,
-                    expands: true,
-                    textAlignVertical: TextAlignVertical.top,
-                    keyboardType: TextInputType.multiline,
-                    style: AppTypography.body.copyWith(
-                      fontSize: 17,
-                      height: 1.6,
-                      color: textPrimary,
+                  padding: const EdgeInsets.all(Spacing.md),
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: inputFill,
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(color: border, width: 0.5),
                     ),
-                    cursorColor: accent,
-                    cursorWidth: 2,
-                    onChanged: (_) => setState(() {}),
-                    decoration: InputDecoration(
-                      hintText: l10n.typeTextLabel,
-                      hintStyle: AppTypography.chrome.copyWith(
+                    padding: const EdgeInsets.all(Spacing.md),
+                    child: TextField(
+                      controller: _controller,
+                      focusNode: _focus,
+                      maxLines: null,
+                      expands: true,
+                      textAlignVertical: TextAlignVertical.top,
+                      keyboardType: TextInputType.multiline,
+                      style: AppTypography.body.copyWith(
                         fontSize: 17,
-                        color: textTertiary,
+                        height: 1.6,
+                        color: textPrimary,
                       ),
-                      border: InputBorder.none,
-                      enabledBorder: InputBorder.none,
-                      focusedBorder: InputBorder.none,
-                      filled: false,
-                      contentPadding: EdgeInsets.zero,
-                      isDense: true,
+                      cursorColor: accent,
+                      cursorWidth: 2,
+                      onChanged: (_) => setState(() {}),
+                      decoration: InputDecoration(
+                        hintText: l10n.typeTextLabel,
+                        hintStyle: AppTypography.chrome.copyWith(
+                          fontSize: 16,
+                          color: textTertiary,
+                        ),
+                        border: InputBorder.none,
+                        enabledBorder: InputBorder.none,
+                        focusedBorder: InputBorder.none,
+                        filled: false,
+                        contentPadding: EdgeInsets.zero,
+                        isDense: true,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              _BottomStrip(
-                settings: widget.settings,
-                onPickTarget: _pickTarget,
-                charCount: hasText ? charCount : 0,
-                l10n: l10n,
-                isDark: isDark,
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(
-                  Spacing.md,
-                  Spacing.sm,
-                  Spacing.md,
-                  Spacing.md,
+                padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+                child: Material(
+                  color: isDark
+                      ? AppColors.bgSecondaryDark
+                      : AppColors.bgSecondaryLight,
+                  borderRadius: BorderRadius.circular(12),
+                  child: InkWell(
+                    borderRadius: BorderRadius.circular(12),
+                    onTap: _pickTarget,
+                    child: Container(
+                      constraints: const BoxConstraints(minHeight: 56),
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: Spacing.md,
+                        vertical: Spacing.sm,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(12),
+                        border: Border.all(color: border, width: 0.5),
+                      ),
+                      child: Row(
+                        children: [
+                          Icon(Icons.translate, size: 22, color: accent),
+                          const SizedBox(width: Spacing.md),
+                          Text(
+                            l10n.translateToLabel,
+                            style: AppTypography.chrome.copyWith(
+                              fontSize: 15,
+                              color: textSecondary,
+                            ),
+                          ),
+                          const Spacer(),
+                          ValueListenableBuilder<String>(
+                            valueListenable: widget.settings,
+                            builder: (_, code, __) => Text(
+                              languageDisplayName(code),
+                              textAlign: TextAlign.right,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppTypography.chrome.copyWith(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: textPrimary,
+                              ),
+                            ),
+                          ),
+                          const SizedBox(width: Spacing.sm),
+                          Icon(Icons.chevron_right,
+                              size: 20, color: textTertiary),
+                        ],
+                      ),
+                    ),
+                  ),
                 ),
+              ),
+              if (hasText)
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(
+                    Spacing.md,
+                    Spacing.sm,
+                    Spacing.md,
+                    0,
+                  ),
+                  child: Align(
+                    alignment: Alignment.centerRight,
+                    child: Text(
+                      '$charCount ${l10n.charactersLabel}',
+                      style: AppTypography.chrome.copyWith(
+                        fontSize: 12,
+                        color: textTertiary,
+                      ),
+                    ),
+                  ),
+                ),
+              Padding(
+                padding: const EdgeInsets.all(Spacing.md),
                 child: SizedBox(
                   width: double.infinity,
                   height: 52,
@@ -198,10 +269,9 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                     style: ElevatedButton.styleFrom(
                       backgroundColor: accent,
                       foregroundColor: Colors.white,
-                      disabledBackgroundColor:
-                          accent.withValues(alpha: 0.3),
+                      disabledBackgroundColor: accent.withValues(alpha: 0.3),
                       disabledForegroundColor:
-                          Colors.white.withValues(alpha: 0.5),
+                          Colors.white.withValues(alpha: 0.6),
                       elevation: 0,
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(12),
@@ -218,114 +288,9 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                   ),
                 ),
               ),
-              const AdSlot(),
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class _BottomStrip extends StatelessWidget {
-  final SettingsProvider settings;
-  final VoidCallback onPickTarget;
-  final int charCount;
-  final AppLocalizations l10n;
-  final bool isDark;
-
-  const _BottomStrip({
-    required this.settings,
-    required this.onPickTarget,
-    required this.charCount,
-    required this.l10n,
-    required this.isDark,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    final textPrimary =
-        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
-    final textSecondary =
-        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
-    final textTertiary =
-        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final border =
-        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
-    final cardBg =
-        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
-
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Material(
-            color: cardBg,
-            borderRadius: BorderRadius.circular(12),
-            child: InkWell(
-              borderRadius: BorderRadius.circular(12),
-              onTap: onPickTarget,
-              child: Container(
-                constraints: const BoxConstraints(minHeight: 56),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Spacing.md,
-                  vertical: Spacing.sm,
-                ),
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: border, width: 0.5),
-                ),
-                child: Row(
-                  children: [
-                    Icon(Icons.translate, size: 22, color: accent),
-                    const SizedBox(width: Spacing.md),
-                    Text(
-                      l10n.translateToLabel,
-                      style: AppTypography.chrome.copyWith(
-                        fontSize: 15,
-                        color: textSecondary,
-                      ),
-                    ),
-                    const Spacer(),
-                    ValueListenableBuilder<String>(
-                      valueListenable: settings,
-                      builder: (_, code, __) => Text(
-                        languageDisplayName(code),
-                        textAlign: TextAlign.right,
-                        overflow: TextOverflow.ellipsis,
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: textPrimary,
-                        ),
-                      ),
-                    ),
-                    const SizedBox(width: Spacing.sm),
-                    Icon(Icons.chevron_right,
-                        size: 20, color: textTertiary),
-                  ],
-                ),
-              ),
-            ),
-          ),
-          if (charCount > 0) ...[
-            const SizedBox(height: Spacing.sm),
-            Align(
-              alignment: Alignment.centerRight,
-              child: Text(
-                '$charCount ${l10n.charactersLabel}',
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 12,
-                  color: textTertiary,
-                ),
-              ),
-            ),
-          ] else
-            const SizedBox(height: Spacing.sm),
-        ],
       ),
     );
   }

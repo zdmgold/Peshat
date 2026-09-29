@@ -31,7 +31,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     super.dispose();
   }
 
-  List<Language> get _allTranslatable {
+  List<Language> get _all {
     final list = supportedLanguages
         .where((l) => TranslatorService.isTranslatable(l.code))
         .toList()
@@ -51,6 +51,20 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         .toList();
   }
 
+  List<Language> _recentList(List<Language> all) {
+    if (_query.isNotEmpty) return const [];
+    final byCode = {for (final l in all) l.code: l};
+    final seen = <String>{};
+    final out = <Language>[];
+    for (final code in widget.recents) {
+      if (code == widget.current) continue;
+      if (!seen.add(code)) continue;
+      final l = byCode[code];
+      if (l != null) out.add(l);
+    }
+    return out;
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = Theme.of(context).brightness == Brightness.dark;
@@ -62,22 +76,12 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final inputFill =
+        isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
 
-    final all = _allTranslatable;
+    final all = _all;
     final filtered = _filtered(all);
-
-    // Recent list excludes the current selection and duplicates
-    final recentsSet = <String>{};
-    final recentList = <Language>[];
-    if (_query.isEmpty) {
-      final byCode = {for (final l in all) l.code: l};
-      for (final code in widget.recents) {
-        if (code == widget.current) continue;
-        if (!recentsSet.add(code)) continue;
-        final lang = byCode[code];
-        if (lang != null) recentList.add(lang);
-      }
-    }
+    final recents = _recentList(all);
 
     return Scaffold(
       appBar: AppBar(
@@ -95,7 +99,6 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         top: false,
         child: Column(
           children: [
-            // Search field
             Padding(
               padding: const EdgeInsets.fromLTRB(
                 Spacing.md,
@@ -103,75 +106,89 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
                 Spacing.md,
                 Spacing.sm,
               ),
-              child: Semantics(
-                label: l10n.semanticsSearchField,
-                child: Container(
-                  height: 40,
-                  decoration: BoxDecoration(
-                    color: isDark
-                        ? AppColors.bgTertiaryDark
-                        : AppColors.bgTertiaryLight,
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-                  child: Row(
-                    children: [
-                      Icon(Icons.search, size: 20, color: textTertiary),
-                      const SizedBox(width: Spacing.sm),
-                      Expanded(
-                        child: TextField(
-                          controller: _search,
-                          onChanged: (v) => setState(() => _query = v),
-                          style: AppTypography.chrome.copyWith(
+              child: Container(
+                height: 44,
+                decoration: BoxDecoration(
+                  color: inputFill,
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+                child: Row(
+                  children: [
+                    Icon(Icons.search, size: 20, color: textTertiary),
+                    const SizedBox(width: Spacing.sm),
+                    Expanded(
+                      child: TextField(
+                        controller: _search,
+                        onChanged: (v) => setState(() => _query = v),
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 15,
+                          color: textPrimary,
+                        ),
+                        cursorColor: accent,
+                        decoration: InputDecoration(
+                          isDense: true,
+                          border: InputBorder.none,
+                          hintText: l10n.searchLanguagesHint,
+                          hintStyle: AppTypography.chrome.copyWith(
                             fontSize: 15,
-                            color: textPrimary,
-                          ),
-                          cursorColor: accent,
-                          decoration: InputDecoration(
-                            isDense: true,
-                            border: InputBorder.none,
-                            filled: false,
-                            hintText: l10n.searchLanguagesHint,
-                            hintStyle: AppTypography.chrome.copyWith(
-                              fontSize: 15,
-                              color: textTertiary,
-                            ),
+                            color: textTertiary,
                           ),
                         ),
                       ),
-                      if (_query.isNotEmpty)
-                        GestureDetector(
-                          onTap: () {
-                            _search.clear();
-                            setState(() => _query = '');
-                          },
-                          child: Icon(Icons.close,
-                              size: 18, color: textTertiary),
-                        ),
-                    ],
-                  ),
+                    ),
+                    if (_query.isNotEmpty)
+                      GestureDetector(
+                        onTap: () {
+                          _search.clear();
+                          setState(() => _query = '');
+                        },
+                        child: Icon(Icons.close, size: 18, color: textTertiary),
+                      ),
+                  ],
                 ),
               ),
             ),
-            // Body
             Expanded(
               child: filtered.isEmpty
-                  ? _EmptyState(
-                      l10n: l10n,
-                      textSecondary: textSecondary,
-                      textTertiary: textTertiary,
+                  ? Center(
+                      child: Padding(
+                        padding: const EdgeInsets.all(Spacing.xl),
+                        child: Column(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(Icons.search_off,
+                                size: 48, color: textTertiary),
+                            const SizedBox(height: Spacing.md),
+                            Text(
+                              l10n.noResults,
+                              style: AppTypography.chrome.copyWith(
+                                fontSize: 16,
+                                color: textSecondary,
+                              ),
+                            ),
+                            const SizedBox(height: Spacing.xs),
+                            Text(
+                              l10n.noResultsSubtitle,
+                              textAlign: TextAlign.center,
+                              style: AppTypography.chrome.copyWith(
+                                fontSize: 14,
+                                color: textTertiary,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     )
-                  : _ListBody(
-                      recents: recentList,
-                      all: filtered,
-                      current: widget.current,
-                      isDark: isDark,
+                  : _buildList(
+                      context,
+                      filtered: filtered,
+                      recents: recents,
                       l10n: l10n,
                       textPrimary: textPrimary,
                       textSecondary: textSecondary,
                       textTertiary: textTertiary,
                       accent: accent,
-                      onPick: (code) => Navigator.pop(context, code),
                     ),
             ),
             const AdSlot(),
@@ -180,175 +197,119 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
       ),
     );
   }
-}
 
-// ---------------------------------------------------------------------------
-// List body — Recent section (if any) + All languages section with sticky
-// letter headers.
-// ---------------------------------------------------------------------------
+  Widget _buildList(
+    BuildContext context, {
+    required List<Language> filtered,
+    required List<Language> recents,
+    required AppLocalizations l10n,
+    required Color textPrimary,
+    required Color textSecondary,
+    required Color textTertiary,
+    required Color accent,
+  }) {
+    final rows = <Widget>[];
 
-class _ListBody extends StatelessWidget {
-  final List<Language> recents;
-  final List<Language> all;
-  final String? current;
-  final bool isDark;
-  final AppLocalizations l10n;
-  final Color textPrimary;
-  final Color textSecondary;
-  final Color textTertiary;
-  final Color accent;
-  final void Function(String code) onPick;
-
-  const _ListBody({
-    required this.recents,
-    required this.all,
-    required this.current,
-    required this.isDark,
-    required this.l10n,
-    required this.textPrimary,
-    required this.textSecondary,
-    required this.textTertiary,
-    required this.accent,
-    required this.onPick,
-  });
-
-  Map<String, List<Language>> get _byLetter {
-    final map = <String, List<Language>>{};
-    for (final l in all) {
-      final letter = l.englishName.substring(0, 1).toUpperCase();
-      map.putIfAbsent(letter, () => []).add(l);
+    if (recents.isNotEmpty) {
+      rows.add(_SectionLabel(
+        text: l10n.recentLanguagesLabel,
+        color: textTertiary,
+      ));
+      for (final lang in recents) {
+        rows.add(_Row(
+          language: lang,
+          selected: lang.code == widget.current,
+          textPrimary: textPrimary,
+          textSecondary: textSecondary,
+          accent: accent,
+          onTap: () => Navigator.pop(context, lang.code),
+        ));
+      }
+      rows.add(const SizedBox(height: Spacing.md));
+      rows.add(_SectionLabel(
+        text: l10n.allLanguagesLabel,
+        color: textTertiary,
+      ));
     }
-    return Map.fromEntries(
-      map.entries.toList()..sort((a, b) => a.key.compareTo(b.key)),
+
+    String? lastLetter;
+    for (final lang in filtered) {
+      final letter = lang.englishName.substring(0, 1).toUpperCase();
+      if (letter != lastLetter) {
+        lastLetter = letter;
+        rows.add(_LetterLabel(letter: letter, color: textTertiary));
+      }
+      rows.add(_Row(
+        language: lang,
+        selected: lang.code == widget.current,
+        textPrimary: textPrimary,
+        textSecondary: textSecondary,
+        accent: accent,
+        onTap: () => Navigator.pop(context, lang.code),
+      ));
+    }
+
+    return ListView(
+      padding: const EdgeInsets.only(bottom: Spacing.xl),
+      children: rows,
     );
   }
+}
+
+class _SectionLabel extends StatelessWidget {
+  final String text;
+  final Color color;
+  const _SectionLabel({required this.text, required this.color});
 
   @override
   Widget build(BuildContext context) {
-    final bg = isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
-
-    final slivers = <Widget>[];
-
-    // Recent section
-    if (recents.isNotEmpty) {
-      slivers.add(_sectionHeader(l10n.recentLanguagesLabel, bg));
-      slivers.add(SliverList(
-        delegate: SliverChildBuilderDelegate(
-          (ctx, i) => _LanguageRow(
-            language: recents[i],
-            selected: recents[i].code == current,
-            textPrimary: textPrimary,
-            textSecondary: textSecondary,
-            accent: accent,
-            onTap: () => onPick(recents[i].code),
-          ),
-          childCount: recents.length,
-        ),
-      ));
-      slivers.add(const SliverToBoxAdapter(child: SizedBox(height: Spacing.md)));
-    }
-
-    // All languages header
-    slivers.add(_sectionHeader(l10n.allLanguagesLabel, bg));
-
-    // Letter sections
-    final byLetter = _byLetter;
-    for (final entry in byLetter.entries) {
-      slivers.add(SliverPersistentHeader(
-        pinned: true,
-        delegate: _LetterHeaderDelegate(
-          letter: entry.key,
-          bgColor: bg,
-          textStyle: AppTypography.chrome.copyWith(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 0.6,
-            color: textTertiary,
-          ),
-        ),
-      ));
-      slivers.add(SliverList(
-        delegate: SliverChildBuilderDelegate(
-          (ctx, i) {
-            final lang = entry.value[i];
-            return _LanguageRow(
-              language: lang,
-              selected: lang.code == current,
-              textPrimary: textPrimary,
-              textSecondary: textSecondary,
-              accent: accent,
-              onTap: () => onPick(lang.code),
-            );
-          },
-          childCount: entry.value.length,
-        ),
-      ));
-    }
-
-    return CustomScrollView(slivers: slivers);
-  }
-
-  SliverToBoxAdapter _sectionHeader(String label, Color bg) {
-    return SliverToBoxAdapter(
-      child: Container(
-        color: bg,
-        padding: const EdgeInsets.fromLTRB(
-          Spacing.md,
-          Spacing.md,
-          Spacing.md,
-          Spacing.sm,
-        ),
-        child: Text(
-          label.toUpperCase(),
-          style: AppTypography.chrome.copyWith(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 0.6,
-            color: textTertiary,
-          ),
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+        Spacing.md,
+        Spacing.md,
+        Spacing.md,
+        Spacing.xs,
+      ),
+      child: Text(
+        text.toUpperCase(),
+        style: AppTypography.chrome.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          letterSpacing: 0.6,
+          color: color,
         ),
       ),
     );
   }
 }
 
-class _LetterHeaderDelegate extends SliverPersistentHeaderDelegate {
+class _LetterLabel extends StatelessWidget {
   final String letter;
-  final Color bgColor;
-  final TextStyle textStyle;
-
-  _LetterHeaderDelegate({
-    required this.letter,
-    required this.bgColor,
-    required this.textStyle,
-  });
+  final Color color;
+  const _LetterLabel({required this.letter, required this.color});
 
   @override
-  double get minExtent => 32;
-  @override
-  double get maxExtent => 32;
-
-  @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return Container(
-      color: bgColor,
-      alignment: Alignment.centerLeft,
-      padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-      child: Text(letter, style: textStyle),
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+        Spacing.md,
+        Spacing.sm,
+        Spacing.md,
+        Spacing.xs,
+      ),
+      child: Text(
+        letter,
+        style: AppTypography.chrome.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          color: color,
+        ),
+      ),
     );
   }
-
-  @override
-  bool shouldRebuild(covariant _LetterHeaderDelegate old) =>
-      old.letter != letter || old.bgColor != bgColor;
 }
 
-// ---------------------------------------------------------------------------
-// Row — native name + English name stacked, checkmark for current.
-// ---------------------------------------------------------------------------
-
-class _LanguageRow extends StatelessWidget {
+class _Row extends StatelessWidget {
   final Language language;
   final bool selected;
   final Color textPrimary;
@@ -356,7 +317,7 @@ class _LanguageRow extends StatelessWidget {
   final Color accent;
   final VoidCallback onTap;
 
-  const _LanguageRow({
+  const _Row({
     required this.language,
     required this.selected,
     required this.textPrimary,
@@ -409,60 +370,10 @@ class _LanguageRow extends StatelessWidget {
                     ],
                   ),
                 ),
-                if (selected)
-                  Icon(Icons.check, size: 20, color: accent),
+                if (selected) Icon(Icons.check, size: 20, color: accent),
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Empty search state
-// ---------------------------------------------------------------------------
-
-class _EmptyState extends StatelessWidget {
-  final AppLocalizations l10n;
-  final Color textSecondary;
-  final Color textTertiary;
-
-  const _EmptyState({
-    required this.l10n,
-    required this.textSecondary,
-    required this.textTertiary,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Padding(
-        padding: const EdgeInsets.all(Spacing.xl),
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Icon(Icons.search_off, size: 48, color: textTertiary),
-            const SizedBox(height: Spacing.md),
-            Text(
-              l10n.noResults,
-              textAlign: TextAlign.center,
-              style: AppTypography.chrome.copyWith(
-                fontSize: 16,
-                color: textSecondary,
-              ),
-            ),
-            const SizedBox(height: Spacing.xs),
-            Text(
-              l10n.noResultsSubtitle,
-              textAlign: TextAlign.center,
-              style: AppTypography.chrome.copyWith(
-                fontSize: 14,
-                color: textTertiary,
-              ),
-            ),
-          ],
         ),
       ),
     );
