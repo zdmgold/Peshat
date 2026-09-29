@@ -1,6 +1,8 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:hugeicons/hugeicons.dart';
+import '../core/utils/app_icons.dart';
 import '../core/models/app_theme_mode.dart';
 import '../core/models/scan_result.dart';
 import '../core/providers/history_provider.dart';
@@ -223,7 +225,7 @@ class _ScanScreenState extends State<ScanScreen> {
               child: Semantics(
                 label: l10n.uiLanguageLabel,
                 button: true,
-                child: const Icon(CupertinoIcons.globe, size: 22),
+                child: const HugeIcon(icon: AppIcons.globe, size: 22),
               ),
             ),
             const SizedBox(width: Spacing.sm),
@@ -236,10 +238,10 @@ class _ScanScreenState extends State<ScanScreen> {
                 child: Semantics(
                   label: l10n.themeLabel,
                   button: true,
-                  child: Icon(
-                    mode == AppThemeMode.dark
-                        ? CupertinoIcons.sun_max
-                        : CupertinoIcons.moon,
+                  child: HugeIcon(
+                    icon: mode == AppThemeMode.dark
+                        ? AppIcons.sun
+                        : AppIcons.moon,
                     size: 22,
                   ),
                 ),
@@ -253,7 +255,7 @@ class _ScanScreenState extends State<ScanScreen> {
               child: Semantics(
                 label: l10n.settingsTitle,
                 button: true,
-                child: const Icon(CupertinoIcons.gear, size: 22),
+                child: const HugeIcon(icon: AppIcons.settings, size: 22),
               ),
             ),
           ],
@@ -321,8 +323,8 @@ class _ScanScreenState extends State<ScanScreen> {
                                 color: Color(0xFFFFFFFF),
                               )
                             else
-                              const Icon(
-                                CupertinoIcons.doc_text_viewfinder,
+                              const HugeIcon(
+                                icon: AppIcons.scanDocument,
                                 size: 22,
                                 color: Color(0xFFFFFFFF),
                               ),
@@ -345,7 +347,7 @@ class _ScanScreenState extends State<ScanScreen> {
                       children: [
                         Expanded(
                           child: _OutlinedActionButton(
-                            icon: CupertinoIcons.pencil,
+                            icon: AppIcons.typeText,
                             label: l10n.typeTextButtonLabel,
                             accent: accent,
                             onPressed: _openTextTranslate,
@@ -354,7 +356,7 @@ class _ScanScreenState extends State<ScanScreen> {
                         const SizedBox(width: Spacing.sm),
                         Expanded(
                           child: _OutlinedActionButton(
-                            icon: CupertinoIcons.arrow_up_doc,
+                            icon: AppIcons.importFile,
                             label: l10n.importFileLabel,
                             accent: accent,
                             onPressed: _handleImport,
@@ -365,7 +367,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     const SizedBox(height: Spacing.lg),
 
                     _CardRow(
-                      leading: CupertinoIcons.globe,
+                      leading: AppIcons.globe,
                       label: l10n.translateToLabel,
                       trailing: ValueListenableBuilder<String>(
                         valueListenable: widget.settings,
@@ -390,7 +392,7 @@ class _ScanScreenState extends State<ScanScreen> {
                         return Padding(
                           padding: const EdgeInsets.only(bottom: Spacing.md),
                           child: _CardRow(
-                            leading: CupertinoIcons.time,
+                            leading: AppIcons.history,
                             label: l10n.recentScansLabel,
                             trailing: Text(
                               '${items.length}',
@@ -418,7 +420,7 @@ class _ScanScreenState extends State<ScanScreen> {
 }
 
 class _OutlinedActionButton extends StatelessWidget {
-  final IconData icon;
+  final List<List<dynamic>> icon;
   final String label;
   final Color accent;
   final VoidCallback onPressed;
@@ -445,7 +447,7 @@ class _OutlinedActionButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Icon(icon, size: 20, color: accent),
+              HugeIcon(icon: icon, size: 20, color: accent),
               const SizedBox(width: Spacing.sm),
               Text(
                 label,
@@ -464,7 +466,7 @@ class _OutlinedActionButton extends StatelessWidget {
 }
 
 class _CardRow extends StatefulWidget {
-  final IconData leading;
+  final List<List<dynamic>> leading;
   final String label;
   final Widget trailing;
   final VoidCallback onTap;
@@ -524,7 +526,7 @@ class _CardRowState extends State<_CardRow> {
           ),
           child: Row(
             children: [
-              Icon(widget.leading, size: 22, color: accent),
+              HugeIcon(icon: widget.leading, size: 22, color: accent),
               const SizedBox(width: Spacing.md),
               Expanded(
                 child: Text(
@@ -538,7 +540,7 @@ class _CardRowState extends State<_CardRow> {
               ),
               widget.trailing,
               const SizedBox(width: Spacing.sm),
-              Icon(CupertinoIcons.chevron_forward,
+              HugeIcon(icon: AppIcons.chevronForward,
                   size: 20, color: textTertiary),
             ],
           ),
