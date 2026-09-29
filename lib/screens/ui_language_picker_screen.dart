@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import '../core/models/language.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -13,7 +13,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
     final textSecondary =
@@ -22,11 +22,10 @@ class UiLanguagePickerScreen extends StatelessWidget {
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
-    final sorted = [...supportedLanguages]..sort((a, b) =>
-        a.englishName.toLowerCase().compareTo(b.englishName.toLowerCase()));
+    final sorted = [...supportedLanguages]
+      ..sort((a, b) =>
+          a.englishName.toLowerCase().compareTo(b.englishName.toLowerCase()));
 
-    // Build a flat list of rows: System row, then section label, then
-    // languages with a small non-sticky letter label before each new letter.
     final rows = <Widget>[];
 
     rows.add(_SectionLabel(
@@ -34,7 +33,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
       color: textTertiary,
     ));
     rows.add(_UiLanguageRow(
-      leading: Icons.smartphone,
+      leading: CupertinoIcons.device_phone_portrait,
       title: 'Follow system',
       subtitle: null,
       selected: current == null,
@@ -70,9 +69,9 @@ class UiLanguagePickerScreen extends StatelessWidget {
       ));
     }
 
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        middle: Text(
           l10n.uiLanguageLabel,
           style: AppTypography.chrome.copyWith(
             fontSize: 17,
@@ -80,9 +79,8 @@ class UiLanguagePickerScreen extends StatelessWidget {
             color: textPrimary,
           ),
         ),
-        centerTitle: true,
       ),
-      body: SafeArea(
+      child: SafeArea(
         top: false,
         child: Column(
           children: [
@@ -99,6 +97,10 @@ class UiLanguagePickerScreen extends StatelessWidget {
     );
   }
 }
+
+// ---------------------------------------------------------------------------
+// Section label / letter label
+// ---------------------------------------------------------------------------
 
 class _SectionLabel extends StatelessWidget {
   final String text;
@@ -153,7 +155,11 @@ class _LetterLabel extends StatelessWidget {
   }
 }
 
-class _UiLanguageRow extends StatelessWidget {
+// ---------------------------------------------------------------------------
+// Row — iOS press feedback
+// ---------------------------------------------------------------------------
+
+class _UiLanguageRow extends StatefulWidget {
   final IconData? leading;
   final String title;
   final String? subtitle;
@@ -177,16 +183,29 @@ class _UiLanguageRow extends StatelessWidget {
   });
 
   @override
+  State<_UiLanguageRow> createState() => _UiLanguageRowState();
+}
+
+class _UiLanguageRowState extends State<_UiLanguageRow> {
+  bool _pressed = false;
+
+  @override
   Widget build(BuildContext context) {
-    final semanticsLabel = subtitle == null ? title : '$title, $subtitle';
+    final semanticsLabel =
+        widget.subtitle == null ? widget.title : '${widget.title}, ${widget.subtitle}';
     return Semantics(
       label: semanticsLabel,
       button: true,
-      selected: selected,
-      child: Material(
-        color: Colors.transparent,
-        child: InkWell(
-          onTap: onTap,
+      selected: widget.selected,
+      child: GestureDetector(
+        behavior: HitTestBehavior.opaque,
+        onTap: widget.onTap,
+        onTapDown: (_) => setState(() => _pressed = true),
+        onTapUp: (_) => setState(() => _pressed = false),
+        onTapCancel: () => setState(() => _pressed = false),
+        child: AnimatedOpacity(
+          duration: const Duration(milliseconds: 100),
+          opacity: _pressed ? 0.6 : 1.0,
           child: Container(
             constraints: const BoxConstraints(minHeight: 56),
             padding: const EdgeInsets.symmetric(
@@ -195,8 +214,8 @@ class _UiLanguageRow extends StatelessWidget {
             ),
             child: Row(
               children: [
-                if (leading != null) ...[
-                  Icon(leading, size: 22, color: textSecondary),
+                if (widget.leading != null) ...[
+                  Icon(widget.leading, size: 22, color: widget.textSecondary),
                   const SizedBox(width: Spacing.md),
                 ],
                 Expanded(
@@ -205,29 +224,31 @@ class _UiLanguageRow extends StatelessWidget {
                     mainAxisSize: MainAxisSize.min,
                     children: [
                       Text(
-                        title,
-                        textDirection: nativeIsRtl
+                        widget.title,
+                        textDirection: widget.nativeIsRtl
                             ? TextDirection.rtl
                             : TextDirection.ltr,
                         style: AppTypography.chrome.copyWith(
                           fontSize: 16,
-                          color: textPrimary,
+                          color: widget.textPrimary,
                         ),
                       ),
-                      if (subtitle != null) ...[
+                      if (widget.subtitle != null) ...[
                         const SizedBox(height: 2),
                         Text(
-                          subtitle!,
+                          widget.subtitle!,
                           style: AppTypography.chrome.copyWith(
                             fontSize: 13,
-                            color: textSecondary,
+                            color: widget.textSecondary,
                           ),
                         ),
                       ],
                     ],
                   ),
                 ),
-                if (selected) Icon(Icons.check, size: 20, color: accent),
+                if (widget.selected)
+                  Icon(CupertinoIcons.check_mark,
+                      size: 20, color: widget.accent),
               ],
             ),
           ),
