@@ -6,6 +6,7 @@ import '../core/providers/history_provider.dart';
 import '../core/providers/purchase_provider.dart';
 import '../core/providers/settings_provider.dart';
 import '../core/providers/theme_provider.dart';
+import '../core/models/app_theme_mode.dart';
 import '../core/providers/ui_locale_provider.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
@@ -110,9 +111,9 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 
   Future<void> _toggleTheme() async {
-    final next = widget.theme.value == ThemeMode.dark
-        ? ThemeMode.light
-        : ThemeMode.dark;
+    final next = widget.theme.value == AppThemeMode.dark
+        ? AppThemeMode.light
+        : AppThemeMode.dark;
     widget.theme.setMode(next);
   }
 
@@ -216,11 +217,11 @@ class _ScanScreenState extends State<ScanScreen> {
             tooltip: l10n.uiLanguageLabel,
             onPressed: _pickUiLanguage,
           ),
-          ValueListenableBuilder<ThemeMode>(
+          ValueListenableBuilder<AppThemeMode>(
             valueListenable: widget.theme,
             builder: (_, mode, __) => IconButton(
               icon: Icon(
-                mode == ThemeMode.dark
+                mode == AppThemeMode.dark
                     ? Icons.light_mode_outlined
                     : Icons.dark_mode_outlined,
                 size: 22,

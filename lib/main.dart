@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/utils/app_theme.dart';
 import 'core/utils/error_handler.dart';
+import 'core/models/app_theme_mode.dart';
 import 'core/providers/theme_provider.dart';
 import 'core/providers/purchase_provider.dart';
 import 'core/providers/settings_provider.dart';
@@ -45,7 +46,6 @@ class _PeshatAppState extends State<PeshatApp> {
     historyProvider = HistoryProvider(widget.prefs);
     uiLocaleProvider = UiLocaleProvider(widget.prefs);
 
-    // Seed and mirror the shared ad-slot purchase flag.
     AdSlot.setPurchased(purchaseProvider.value);
     InterstitialService.instance.setPurchased(purchaseProvider.value);
     purchaseProvider.addListener(_syncAdSlot);
@@ -62,6 +62,18 @@ class _PeshatAppState extends State<PeshatApp> {
     super.dispose();
   }
 
+  // Temporary shim. Deleted in Batch 4 when the root becomes CupertinoApp.
+  ThemeMode _toThemeMode(AppThemeMode mode) {
+    switch (mode) {
+      case AppThemeMode.light:
+        return ThemeMode.light;
+      case AppThemeMode.system:
+        return ThemeMode.system;
+      case AppThemeMode.dark:
+        return ThemeMode.dark;
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return ListenableBuilder(
@@ -71,7 +83,7 @@ class _PeshatAppState extends State<PeshatApp> {
         debugShowCheckedModeBanner: false,
         theme: buildLightTheme(),
         darkTheme: buildDarkTheme(),
-        themeMode: themeProvider.value,
+        themeMode: _toThemeMode(themeProvider.value),
         locale: uiLocaleProvider.value,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,

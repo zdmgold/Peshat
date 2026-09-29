@@ -6,6 +6,7 @@ import '../core/providers/history_provider.dart';
 import '../core/providers/purchase_provider.dart';
 import '../core/providers/settings_provider.dart';
 import '../core/providers/theme_provider.dart';
+import '../core/models/app_theme_mode.dart';
 import '../core/providers/ui_locale_provider.dart';
 import '../core/services/iap_service.dart';
 import '../core/services/language_names.dart';
@@ -181,22 +182,22 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     Spacing.md,
                     Spacing.md,
                   ),
-                  child: ValueListenableBuilder<ThemeMode>(
+                  child: ValueListenableBuilder<AppThemeMode>(
                     valueListenable: widget.theme,
-                    builder: (_, mode, __) => SegmentedControl<ThemeMode>(
+                    builder: (_, mode, __) => SegmentedControl<AppThemeMode>(
                       value: mode,
                       onChanged: widget.theme.setMode,
                       items: [
                         SegmentItem(
-                          value: ThemeMode.light,
+                          value: AppThemeMode.light,
                           label: l10n.themeLight,
                         ),
                         SegmentItem(
-                          value: ThemeMode.system,
+                          value: AppThemeMode.system,
                           label: l10n.themeSystem,
                         ),
                         SegmentItem(
-                          value: ThemeMode.dark,
+                          value: AppThemeMode.dark,
                           label: l10n.themeDark,
                         ),
                       ],
