@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -21,7 +21,7 @@ void main() {
     final prefs = await SharedPreferences.getInstance();
 
     await tester.pumpWidget(
-      MaterialApp(
+      CupertinoApp(
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         home: ScanScreen(
@@ -35,7 +35,7 @@ void main() {
     );
     await tester.pump();
 
-    // Wordmark appears in AppBar and hero.
+    // Wordmark appears in the nav bar and in the hero.
     expect(find.text('Peshat'), findsWidgets);
 
     // Primary action.
@@ -47,13 +47,18 @@ void main() {
 
     // Target language card.
     expect(find.text('Translate to'), findsOneWidget);
-    expect(find.byIcon(Icons.translate), findsOneWidget);
 
-    // AppBar actions.
-    expect(find.byIcon(Icons.language), findsOneWidget);
-    expect(find.byIcon(Icons.settings_outlined), findsOneWidget);
+    // Nav bar icons — one of each.
+    expect(find.byIcon(CupertinoIcons.gear), findsOneWidget);
+    expect(find.byIcon(CupertinoIcons.moon), findsOneWidget);
 
-    // Scan icon appears in the Scan Document button.
-    expect(find.byIcon(Icons.document_scanner_outlined), findsOneWidget);
+    // Globe appears in the nav bar (UI language) and in the
+    // "Translate to" card. Two occurrences.
+    expect(find.byIcon(CupertinoIcons.globe), findsNWidgets(2));
+
+    // Body icons — one of each.
+    expect(find.byIcon(CupertinoIcons.doc_text_viewfinder), findsOneWidget);
+    expect(find.byIcon(CupertinoIcons.pencil), findsOneWidget);
+    expect(find.byIcon(CupertinoIcons.arrow_up_doc), findsOneWidget);
   });
 }
