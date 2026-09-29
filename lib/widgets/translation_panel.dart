@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
@@ -13,7 +13,7 @@ class TranslationPanel extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     return Container(
       width: double.infinity,
       constraints: const BoxConstraints(maxWidth: 600),

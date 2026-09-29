@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import '../core/utils/app_colors.dart';
 import 'banner_ad_widget.dart';
 
@@ -28,7 +28,7 @@ class AdSlot extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final keyboardUp = MediaQuery.viewInsetsOf(context).bottom > 0;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final cream = isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
 
     return ValueListenableBuilder<bool>(
