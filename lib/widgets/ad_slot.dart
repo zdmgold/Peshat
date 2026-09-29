@@ -3,7 +3,7 @@ import '../core/utils/app_colors.dart';
 import 'banner_ad_widget.dart';
 
 /// Padding values from the batch 10 decisions.
-const double _kSideInset = 4;
+const double _kSideInset = 8;
 const double _kPaddingAbove = 8;
 const double _kPaddingBelow = 4;
 const double _kTopRadius = 12;

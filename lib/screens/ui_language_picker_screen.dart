@@ -21,75 +21,52 @@ class UiLanguagePickerScreen extends StatelessWidget {
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final bg = isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
 
-    // Sort alphabetically by English name
     final sorted = [...supportedLanguages]..sort((a, b) =>
         a.englishName.toLowerCase().compareTo(b.englishName.toLowerCase()));
 
-    // Group by first letter
-    final byLetter = <String, List<Language>>{};
-    for (final l in sorted) {
-      final letter = l.englishName.substring(0, 1).toUpperCase();
-      byLetter.putIfAbsent(letter, () => []).add(l);
-    }
-    final sortedLetters = byLetter.keys.toList()..sort();
+    // Build a flat list of rows: System row, then section label, then
+    // languages with a small non-sticky letter label before each new letter.
+    final rows = <Widget>[];
 
-    final slivers = <Widget>[];
+    rows.add(_SectionLabel(
+      text: l10n.sectionSystemLabel,
+      color: textTertiary,
+    ));
+    rows.add(_UiLanguageRow(
+      leading: Icons.smartphone,
+      title: 'Follow system',
+      subtitle: null,
+      selected: current == null,
+      textPrimary: textPrimary,
+      textSecondary: textSecondary,
+      accent: accent,
+      onTap: () => Navigator.pop(context, 'system'),
+    ));
+    rows.add(const SizedBox(height: Spacing.md));
+    rows.add(_SectionLabel(
+      text: l10n.appLanguageLabel,
+      color: textTertiary,
+    ));
 
-    // SYSTEM section
-    slivers.add(_sectionHeader(l10n.sectionSystemLabel, bg, textTertiary));
-    slivers.add(SliverToBoxAdapter(
-      child: _UiLanguageRow(
-        leading: Icons.smartphone,
-        title: 'Follow system',
-        subtitle: null,
-        selected: current == null,
+    String? lastLetter;
+    for (final lang in sorted) {
+      final letter = lang.englishName.substring(0, 1).toUpperCase();
+      if (letter != lastLetter) {
+        lastLetter = letter;
+        rows.add(_LetterLabel(letter: letter, color: textTertiary));
+      }
+      final selected = current?.languageCode == lang.code;
+      rows.add(_UiLanguageRow(
+        leading: null,
+        title: lang.nativeName,
+        subtitle: lang.englishName,
+        nativeIsRtl: lang.isRtl,
+        selected: selected,
         textPrimary: textPrimary,
         textSecondary: textSecondary,
         accent: accent,
-        onTap: () => Navigator.pop(context, 'system'),
-      ),
-    ));
-
-    slivers.add(const SliverToBoxAdapter(child: SizedBox(height: Spacing.md)));
-
-    // APP LANGUAGE section
-    slivers.add(_sectionHeader(l10n.appLanguageLabel, bg, textTertiary));
-
-    for (final letter in sortedLetters) {
-      slivers.add(SliverPersistentHeader(
-        pinned: true,
-        delegate: _LetterHeaderDelegate(
-          letter: letter,
-          bgColor: bg,
-          textStyle: AppTypography.chrome.copyWith(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 0.6,
-            color: textTertiary,
-          ),
-        ),
-      ));
-      slivers.add(SliverList(
-        delegate: SliverChildBuilderDelegate(
-          (ctx, i) {
-            final lang = byLetter[letter]![i];
-            final selected = current?.languageCode == lang.code;
-            return _UiLanguageRow(
-              leading: null,
-              title: lang.nativeName,
-              subtitle: lang.englishName,
-              nativeIsRtl: lang.isRtl,
-              selected: selected,
-              textPrimary: textPrimary,
-              textSecondary: textSecondary,
-              accent: accent,
-              onTap: () => Navigator.pop(context, lang.code),
-            );
-          },
-          childCount: byLetter[letter]!.length,
-        ),
+        onTap: () => Navigator.pop(context, lang.code),
       ));
     }
 
@@ -110,7 +87,10 @@ class UiLanguagePickerScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: CustomScrollView(slivers: slivers),
+              child: ListView(
+                padding: const EdgeInsets.only(bottom: Spacing.xl),
+                children: rows,
+              ),
             ),
             const AdSlot(),
           ],
@@ -118,61 +98,59 @@ class UiLanguagePickerScreen extends StatelessWidget {
       ),
     );
   }
+}
 
-  SliverToBoxAdapter _sectionHeader(String label, Color bg, Color color) {
-    return SliverToBoxAdapter(
-      child: Container(
-        color: bg,
-        padding: const EdgeInsets.fromLTRB(
-          Spacing.md,
-          Spacing.md,
-          Spacing.md,
-          Spacing.sm,
-        ),
-        child: Text(
-          label.toUpperCase(),
-          style: AppTypography.chrome.copyWith(
-            fontSize: 12,
-            fontWeight: FontWeight.w600,
-            letterSpacing: 0.6,
-            color: color,
-          ),
+class _SectionLabel extends StatelessWidget {
+  final String text;
+  final Color color;
+  const _SectionLabel({required this.text, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+        Spacing.md,
+        Spacing.md,
+        Spacing.md,
+        Spacing.xs,
+      ),
+      child: Text(
+        text.toUpperCase(),
+        style: AppTypography.chrome.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          letterSpacing: 0.6,
+          color: color,
         ),
       ),
     );
   }
 }
 
-class _LetterHeaderDelegate extends SliverPersistentHeaderDelegate {
+class _LetterLabel extends StatelessWidget {
   final String letter;
-  final Color bgColor;
-  final TextStyle textStyle;
-
-  _LetterHeaderDelegate({
-    required this.letter,
-    required this.bgColor,
-    required this.textStyle,
-  });
+  final Color color;
+  const _LetterLabel({required this.letter, required this.color});
 
   @override
-  double get minExtent => 32;
-  @override
-  double get maxExtent => 32;
-
-  @override
-  Widget build(
-      BuildContext context, double shrinkOffset, bool overlapsContent) {
-    return Container(
-      color: bgColor,
-      alignment: Alignment.centerLeft,
-      padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-      child: Text(letter, style: textStyle),
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+        Spacing.md,
+        Spacing.sm,
+        Spacing.md,
+        Spacing.xs,
+      ),
+      child: Text(
+        letter,
+        style: AppTypography.chrome.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          color: color,
+        ),
+      ),
     );
   }
-
-  @override
-  bool shouldRebuild(covariant _LetterHeaderDelegate old) =>
-      old.letter != letter || old.bgColor != bgColor;
 }
 
 class _UiLanguageRow extends StatelessWidget {
