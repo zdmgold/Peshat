@@ -1,4 +1,5 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import 'app_colors.dart';
 
 class FullScreenErrorFallback extends StatelessWidget {
   final FlutterErrorDetails details;
@@ -6,11 +7,22 @@ class FullScreenErrorFallback extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      body: Center(
-        child: Text(
-          'An unexpected error occurred.',
-          style: TextStyle(color: Colors.red),
+    return const Directionality(
+      textDirection: TextDirection.ltr,
+      child: ColoredBox(
+        color: AppColors.bgPrimaryLight,
+        child: Center(
+          child: Padding(
+            padding: EdgeInsets.all(24),
+            child: Text(
+              'An unexpected error occurred.',
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: AppColors.errorLight,
+                fontSize: 15,
+              ),
+            ),
+          ),
         ),
       ),
     );

@@ -1,4 +1,4 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 
 class AppColors {
   static const bgPrimaryLight = Color(0xFFEDEAE2);

@@ -1,8 +1,8 @@
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 class AppTypography {
-  static TextStyle get chrome => GoogleFonts.roboto();
+  static TextStyle get chrome => GoogleFonts.inter();
   static TextStyle get body => GoogleFonts.merriweather();
   static TextStyle get sourceChip => GoogleFonts.robotoMono();
 
