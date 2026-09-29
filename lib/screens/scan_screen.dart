@@ -1,12 +1,12 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+import '../core/models/app_theme_mode.dart';
 import '../core/models/scan_result.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/purchase_provider.dart';
 import '../core/providers/settings_provider.dart';
 import '../core/providers/theme_provider.dart';
-import '../core/models/app_theme_mode.dart';
 import '../core/providers/ui_locale_provider.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
@@ -49,7 +49,7 @@ class _ScanScreenState extends State<ScanScreen> {
   Future<void> _openSettings() async {
     await Navigator.push(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) => SettingsScreen(
           theme: widget.theme,
           purchase: widget.purchase,
@@ -64,7 +64,7 @@ class _ScanScreenState extends State<ScanScreen> {
   Future<void> _openHistory() async {
     await Navigator.push(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) => HistoryScreen(history: widget.history),
       ),
     );
@@ -73,7 +73,7 @@ class _ScanScreenState extends State<ScanScreen> {
   Future<void> _openTextTranslate() async {
     await Navigator.push(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) => TextTranslateScreen(
           settings: widget.settings,
           history: widget.history,
@@ -85,7 +85,7 @@ class _ScanScreenState extends State<ScanScreen> {
   Future<void> _pickTargetLanguage() async {
     final selected = await Navigator.push<String>(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) => LanguagePickerScreen(
           current: widget.settings.value,
           recents: widget.settings.recentTargets,
@@ -98,7 +98,7 @@ class _ScanScreenState extends State<ScanScreen> {
   Future<void> _pickUiLanguage() async {
     final selected = await Navigator.push<dynamic>(
       context,
-      MaterialPageRoute(
+      CupertinoPageRoute(
         builder: (_) => UiLanguagePickerScreen(current: widget.uiLocale.value),
       ),
     );
@@ -125,7 +125,7 @@ class _ScanScreenState extends State<ScanScreen> {
       if (!mounted || paths.isEmpty) return;
       await Navigator.push(
         context,
-        MaterialPageRoute(
+        CupertinoPageRoute(
           builder: (_) => ResultScreen(
             imagePath: paths.first,
             initialTargetLanguage: widget.settings.value,
@@ -154,7 +154,7 @@ class _ScanScreenState extends State<ScanScreen> {
         if (!mounted) return;
         await Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
             builder: (_) => ResultScreen(
               inputText: text,
               initialTargetLanguage: widget.settings.value,
@@ -165,7 +165,7 @@ class _ScanScreenState extends State<ScanScreen> {
       } else {
         await Navigator.push(
           context,
-          MaterialPageRoute(
+          CupertinoPageRoute(
             builder: (_) => ResultScreen(
               imagePath: path,
               initialTargetLanguage: widget.settings.value,
@@ -180,16 +180,18 @@ class _ScanScreenState extends State<ScanScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isDark = Theme.of(context).brightness == Brightness.dark;
+    final brightness = CupertinoTheme.of(context).brightness;
+    final isDark = brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
     final textSecondary =
         isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
-    return Scaffold(
-      appBar: AppBar(
-        titleSpacing: Spacing.md,
-        title: Row(
+    return CupertinoPageScaffold(
+      navigationBar: CupertinoNavigationBar(
+        automaticallyImplyLeading: false,
+        middle: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
             ClipRRect(
@@ -211,33 +213,53 @@ class _ScanScreenState extends State<ScanScreen> {
             ),
           ],
         ),
-        actions: [
-          IconButton(
-            icon: const Icon(Icons.language, size: 22),
-            tooltip: l10n.uiLanguageLabel,
-            onPressed: _pickUiLanguage,
-          ),
-          ValueListenableBuilder<AppThemeMode>(
-            valueListenable: widget.theme,
-            builder: (_, mode, __) => IconButton(
-              icon: Icon(
-                mode == AppThemeMode.dark
-                    ? Icons.light_mode_outlined
-                    : Icons.dark_mode_outlined,
-                size: 22,
+        trailing: Row(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            CupertinoButton(
+              padding: EdgeInsets.zero,
+              minSize: 44,
+              onPressed: _pickUiLanguage,
+              child: Semantics(
+                label: l10n.uiLanguageLabel,
+                button: true,
+                child: const Icon(CupertinoIcons.globe, size: 22),
               ),
-              tooltip: l10n.themeLabel,
-              onPressed: _toggleTheme,
             ),
-          ),
-          IconButton(
-            icon: const Icon(Icons.settings_outlined, size: 22),
-            tooltip: l10n.settingsTitle,
-            onPressed: _openSettings,
-          ),
-        ],
+            const SizedBox(width: Spacing.sm),
+            ValueListenableBuilder<AppThemeMode>(
+              valueListenable: widget.theme,
+              builder: (_, mode, __) => CupertinoButton(
+                padding: EdgeInsets.zero,
+                minSize: 44,
+                onPressed: _toggleTheme,
+                child: Semantics(
+                  label: l10n.themeLabel,
+                  button: true,
+                  child: Icon(
+                    mode == AppThemeMode.dark
+                        ? CupertinoIcons.sun_max
+                        : CupertinoIcons.moon,
+                    size: 22,
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(width: Spacing.sm),
+            CupertinoButton(
+              padding: EdgeInsets.zero,
+              minSize: 44,
+              onPressed: _openSettings,
+              child: Semantics(
+                label: l10n.settingsTitle,
+                button: true,
+                child: const Icon(CupertinoIcons.gear, size: 22),
+              ),
+            ),
+          ],
+        ),
       ),
-      body: SafeArea(
+      child: SafeArea(
         top: false,
         child: Column(
           children: [
@@ -251,8 +273,6 @@ class _ScanScreenState extends State<ScanScreen> {
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
                     const SizedBox(height: Spacing.md),
-
-                    // Hero
                     Center(
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(16),
@@ -287,59 +307,65 @@ class _ScanScreenState extends State<ScanScreen> {
                     ),
                     const SizedBox(height: Spacing.xl),
 
-                    // Scan Document — primary
                     SizedBox(
                       height: 56,
-                      child: ElevatedButton.icon(
+                      child: CupertinoButton.filled(
+                        padding: EdgeInsets.zero,
                         onPressed: _isScanning ? null : _handleScan,
-                        icon: _isScanning
-                            ? const SizedBox(
-                                width: 20,
-                                height: 20,
-                                child: CircularProgressIndicator(
-                                  color: Colors.white,
-                                  strokeWidth: 2,
-                                ),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            if (_isScanning)
+                              const CupertinoActivityIndicator(
+                                radius: 10,
+                                color: Color(0xFFFFFFFF),
                               )
-                            : const Icon(Icons.document_scanner_outlined,
-                                size: 22),
-                        label: Text(l10n.scanButtonLabel),
+                            else
+                              const Icon(
+                                CupertinoIcons.doc_text_viewfinder,
+                                size: 22,
+                                color: Color(0xFFFFFFFF),
+                              ),
+                            const SizedBox(width: Spacing.sm),
+                            Text(
+                              l10n.scanButtonLabel,
+                              style: AppTypography.chrome.copyWith(
+                                fontSize: 16,
+                                fontWeight: FontWeight.w600,
+                                color: const Color(0xFFFFFFFF),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
                     ),
                     const SizedBox(height: Spacing.md),
 
-                    // Type text | Import
                     Row(
                       children: [
                         Expanded(
-                          child: SizedBox(
-                            height: 52,
-                            child: OutlinedButton.icon(
-                              onPressed: _openTextTranslate,
-                              icon: const Icon(Icons.edit_note, size: 20),
-                              label: Text(l10n.typeTextButtonLabel),
-                            ),
+                          child: _OutlinedActionButton(
+                            icon: CupertinoIcons.pencil,
+                            label: l10n.typeTextButtonLabel,
+                            accent: accent,
+                            onPressed: _openTextTranslate,
                           ),
                         ),
                         const SizedBox(width: Spacing.sm),
                         Expanded(
-                          child: SizedBox(
-                            height: 52,
-                            child: OutlinedButton.icon(
-                              onPressed: _handleImport,
-                              icon: const Icon(Icons.upload_file_outlined,
-                                  size: 20),
-                              label: Text(l10n.importFileLabel),
-                            ),
+                          child: _OutlinedActionButton(
+                            icon: CupertinoIcons.arrow_up_doc,
+                            label: l10n.importFileLabel,
+                            accent: accent,
+                            onPressed: _handleImport,
                           ),
                         ),
                       ],
                     ),
                     const SizedBox(height: Spacing.lg),
 
-                    // Target language card
                     _CardRow(
-                      leading: Icons.translate,
+                      leading: CupertinoIcons.globe,
                       label: l10n.translateToLabel,
                       trailing: ValueListenableBuilder<String>(
                         valueListenable: widget.settings,
@@ -357,7 +383,6 @@ class _ScanScreenState extends State<ScanScreen> {
                     ),
                     const SizedBox(height: Spacing.md),
 
-                    // Recent scans card
                     ValueListenableBuilder<List<ScanResult>>(
                       valueListenable: widget.history,
                       builder: (context, items, _) {
@@ -365,7 +390,7 @@ class _ScanScreenState extends State<ScanScreen> {
                         return Padding(
                           padding: const EdgeInsets.only(bottom: Spacing.md),
                           child: _CardRow(
-                            leading: Icons.history,
+                            leading: CupertinoIcons.time,
                             label: l10n.recentScansLabel,
                             trailing: Text(
                               '${items.length}',
@@ -392,7 +417,53 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 }
 
-class _CardRow extends StatelessWidget {
+class _OutlinedActionButton extends StatelessWidget {
+  final IconData icon;
+  final String label;
+  final Color accent;
+  final VoidCallback onPressed;
+
+  const _OutlinedActionButton({
+    required this.icon,
+    required this.label,
+    required this.accent,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 52,
+      child: CupertinoButton(
+        padding: EdgeInsets.zero,
+        onPressed: onPressed,
+        child: Container(
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: accent, width: 1),
+          ),
+          child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Icon(icon, size: 20, color: accent),
+              const SizedBox(width: Spacing.sm),
+              Text(
+                label,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 15,
+                  fontWeight: FontWeight.w600,
+                  color: accent,
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class _CardRow extends StatefulWidget {
   final IconData leading;
   final String label;
   final Widget trailing;
@@ -408,23 +479,38 @@ class _CardRow extends StatelessWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    final cardBg =
-        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
-    final border =
-        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
-    final textSecondary =
-        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
-    final textTertiary =
-        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+  State<_CardRow> createState() => _CardRowState();
+}
 
-    return Material(
-      color: cardBg,
-      borderRadius: BorderRadius.circular(12),
-      child: InkWell(
-        borderRadius: BorderRadius.circular(12),
-        onTap: onTap,
+class _CardRowState extends State<_CardRow> {
+  bool _pressed = false;
+
+  @override
+  Widget build(BuildContext context) {
+    final cardBg = widget.isDark
+        ? AppColors.bgSecondaryDark
+        : AppColors.bgSecondaryLight;
+    final border = widget.isDark
+        ? AppColors.borderSubtleDark
+        : AppColors.borderSubtleLight;
+    final textSecondary = widget.isDark
+        ? AppColors.textSecondaryDark
+        : AppColors.textSecondaryLight;
+    final textTertiary = widget.isDark
+        ? AppColors.textTertiaryDark
+        : AppColors.textTertiaryLight;
+    final accent =
+        widget.isDark ? AppColors.accentDark : AppColors.accentLight;
+
+    return GestureDetector(
+      behavior: HitTestBehavior.opaque,
+      onTap: widget.onTap,
+      onTapDown: (_) => setState(() => _pressed = true),
+      onTapUp: (_) => setState(() => _pressed = false),
+      onTapCancel: () => setState(() => _pressed = false),
+      child: AnimatedOpacity(
+        duration: const Duration(milliseconds: 100),
+        opacity: _pressed ? 0.6 : 1.0,
         child: Container(
           constraints: const BoxConstraints(minHeight: 56),
           padding: const EdgeInsets.symmetric(
@@ -432,16 +518,17 @@ class _CardRow extends StatelessWidget {
             vertical: Spacing.sm,
           ),
           decoration: BoxDecoration(
+            color: cardBg,
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: border, width: 0.5),
           ),
           child: Row(
             children: [
-              Icon(leading, size: 22, color: accent),
+              Icon(widget.leading, size: 22, color: accent),
               const SizedBox(width: Spacing.md),
               Expanded(
                 child: Text(
-                  label,
+                  widget.label,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.chrome.copyWith(
                     fontSize: 15,
@@ -449,9 +536,10 @@ class _CardRow extends StatelessWidget {
                   ),
                 ),
               ),
-              trailing,
+              widget.trailing,
               const SizedBox(width: Spacing.sm),
-              Icon(Icons.chevron_right, size: 20, color: textTertiary),
+              Icon(CupertinoIcons.chevron_forward,
+                  size: 20, color: textTertiary),
             ],
           ),
         ),
