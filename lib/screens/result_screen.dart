@@ -2,6 +2,7 @@ import 'dart:io';
 import 'package:flutter/cupertino.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
+import '../widgets/action_card.dart';
 import 'package:flutter/material.dart' show SelectionArea;
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/services.dart';
@@ -306,22 +307,22 @@ class _ResultScreenState extends State<ResultScreen> {
               },
               children: {
                 _ResultTab.original: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Text(
                     l10n.sourceLabel,
                     style: AppTypography.chrome.copyWith(
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: textPrimary,
                     ),
                   ),
                 ),
                 _ResultTab.translation: Padding(
-                  padding: const EdgeInsets.symmetric(vertical: 6),
+                  padding: const EdgeInsets.symmetric(vertical: 8),
                   child: Text(
                     l10n.translationLabel,
                     style: AppTypography.chrome.copyWith(
-                      fontSize: 14,
+                      fontSize: 13,
                       fontWeight: FontWeight.w600,
                       color: textPrimary,
                     ),
@@ -458,64 +459,16 @@ class _TranslationTab extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
-    final textSecondary =
-        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
-    final textTertiary =
-        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final border =
-        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
-    final cardBg =
-        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
-
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-          child: GestureDetector(
-            behavior: HitTestBehavior.opaque,
+          child: ActionCard(
+            icon: AppIcons.globe,
+            label: l10n.translatedTo,
+            value: languageDisplayName(targetLanguage),
+            showChevron: true,
             onTap: onPickLanguage,
-            child: Container(
-              constraints: const BoxConstraints(minHeight: 56),
-              padding: const EdgeInsets.symmetric(
-                horizontal: Spacing.md,
-                vertical: Spacing.sm,
-              ),
-              decoration: BoxDecoration(
-                color: cardBg,
-                borderRadius: BorderRadius.circular(12),
-                border: Border.all(color: border, width: 0.5),
-              ),
-              child: Row(
-                children: [
-                  PeshatIcon(icon: AppIcons.globe, size: 18, color: accent),
-                  const SizedBox(width: Spacing.sm),
-                  Text(
-                    l10n.translatedTo,
-                    style: AppTypography.chrome.copyWith(
-                      fontSize: 13,
-                      color: textSecondary,
-                    ),
-                  ),
-                  const Spacer(),
-                  Flexible(
-                    child: Text(
-                      languageDisplayName(targetLanguage),
-                      textAlign: TextAlign.right,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.chrome.copyWith(
-                        fontSize: 15,
-                        fontWeight: FontWeight.w600,
-                        color: textPrimary,
-                      ),
-                    ),
-                  ),
-                  const SizedBox(width: Spacing.xs),
-                  PeshatIcon(icon: AppIcons.chevronForward,
-                      size: 18, color: textTertiary),
-                ],
-              ),
-            ),
           ),
         ),
         const SizedBox(height: Spacing.md),
@@ -594,13 +547,13 @@ class _ErrorView extends StatelessWidget {
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
     final error = isDark ? AppColors.errorDark : AppColors.errorLight;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
     return SingleChildScrollView(
       padding: const EdgeInsets.all(Spacing.xl),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          PeshatIcon(icon: AppIcons.error,
-              size: 48, color: error),
+          PeshatIcon(icon: AppIcons.error, size: 48, color: error),
           const SizedBox(height: Spacing.md),
           Text(
             message,
@@ -612,23 +565,23 @@ class _ErrorView extends StatelessWidget {
           ),
           const SizedBox(height: Spacing.lg),
           SizedBox(
-            height: 48,
+            width: 220,
+            height: 56,
             child: CupertinoButton(
               padding: EdgeInsets.zero,
               onPressed: onRetry,
               child: Container(
-                padding: const EdgeInsets.symmetric(horizontal: Spacing.lg),
                 alignment: Alignment.center,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
-                  border: Border.all(color: error, width: 1),
+                  border: Border.all(color: accent, width: 1),
                 ),
                 child: Text(
                   l10n.retryButton,
                   style: AppTypography.chrome.copyWith(
                     fontSize: 15,
                     fontWeight: FontWeight.w600,
-                    color: error,
+                    color: accent,
                   ),
                 ),
               ),
