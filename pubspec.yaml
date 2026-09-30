@@ -25,7 +25,7 @@ dependencies:
   url_launcher: ^6.3.0
   flutter_native_splash: ^2.4.0
   google_fonts: 6.1.0
-  cupertino_icons: ^1.0.8
+  hugeicons: ^1.2.0
 dev_dependencies:
   flutter_test:
     sdk: flutter
