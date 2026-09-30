@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../core/utils/app_icons.dart';
+import '../widgets/peshat_icon.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/settings_provider.dart';
 import '../core/services/language_names.dart';
@@ -120,6 +120,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        leading: peshatBackButton(context, color: textPrimary),
         middle: Text(
           l10n.typeTextButtonLabel,
           style: AppTypography.chrome.copyWith(
@@ -135,7 +136,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
           child: Semantics(
             label: l10n.closeButtonTooltip,
             button: true,
-            child: const HugeIcon(icon: AppIcons.close, size: 22),
+            child: const PeshatIcon(icon: AppIcons.close, size: 22),
           ),
         ),
       ),
@@ -299,7 +300,7 @@ class _TargetLanguageRowState extends State<_TargetLanguageRow> {
           ),
           child: Row(
             children: [
-              HugeIcon(icon: AppIcons.globe, size: 22, color: accent),
+              PeshatIcon(icon: AppIcons.globe, size: 22, color: accent),
               const SizedBox(width: Spacing.md),
               Text(
                 widget.label,
@@ -323,7 +324,7 @@ class _TargetLanguageRowState extends State<_TargetLanguageRow> {
                 ),
               ),
               const SizedBox(width: Spacing.sm),
-              HugeIcon(icon: AppIcons.chevronForward,
+              PeshatIcon(icon: AppIcons.chevronForward,
                   size: 20, color: textTertiary),
             ],
           ),

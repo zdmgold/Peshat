@@ -1,8 +1,8 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../core/utils/app_icons.dart';
+import '../widgets/peshat_icon.dart';
 import '../core/models/app_theme_mode.dart';
 import '../core/models/scan_result.dart';
 import '../core/providers/history_provider.dart';
@@ -225,7 +225,7 @@ class _ScanScreenState extends State<ScanScreen> {
               child: Semantics(
                 label: l10n.uiLanguageLabel,
                 button: true,
-                child: const HugeIcon(icon: AppIcons.globe, size: 22),
+                child: const PeshatIcon(icon: AppIcons.globe, size: 22),
               ),
             ),
             const SizedBox(width: Spacing.sm),
@@ -238,7 +238,7 @@ class _ScanScreenState extends State<ScanScreen> {
                 child: Semantics(
                   label: l10n.themeLabel,
                   button: true,
-                  child: HugeIcon(
+                  child: PeshatIcon(
                     icon: mode == AppThemeMode.dark
                         ? AppIcons.sun
                         : AppIcons.moon,
@@ -255,7 +255,7 @@ class _ScanScreenState extends State<ScanScreen> {
               child: Semantics(
                 label: l10n.settingsTitle,
                 button: true,
-                child: const HugeIcon(icon: AppIcons.settings, size: 22),
+                child: const PeshatIcon(icon: AppIcons.settings, size: 22),
               ),
             ),
           ],
@@ -323,7 +323,7 @@ class _ScanScreenState extends State<ScanScreen> {
                                 color: Color(0xFFFFFFFF),
                               )
                             else
-                              const HugeIcon(
+                              const PeshatIcon(
                                 icon: AppIcons.scanDocument,
                                 size: 22,
                                 color: Color(0xFFFFFFFF),
@@ -447,7 +447,7 @@ class _OutlinedActionButton extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              HugeIcon(icon: icon, size: 20, color: accent),
+              PeshatIcon(icon: icon, size: 20, color: accent),
               const SizedBox(width: Spacing.sm),
               Text(
                 label,
@@ -526,7 +526,7 @@ class _CardRowState extends State<_CardRow> {
           ),
           child: Row(
             children: [
-              HugeIcon(icon: widget.leading, size: 22, color: accent),
+              PeshatIcon(icon: widget.leading, size: 22, color: accent),
               const SizedBox(width: Spacing.md),
               Expanded(
                 child: Text(
@@ -540,7 +540,7 @@ class _CardRowState extends State<_CardRow> {
               ),
               widget.trailing,
               const SizedBox(width: Spacing.sm),
-              HugeIcon(icon: AppIcons.chevronForward,
+              PeshatIcon(icon: AppIcons.chevronForward,
                   size: 20, color: textTertiary),
             ],
           ),

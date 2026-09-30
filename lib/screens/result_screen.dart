@@ -1,7 +1,7 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../core/utils/app_icons.dart';
+import '../widgets/peshat_icon.dart';
 import 'package:flutter/material.dart' show SelectionArea;
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/services.dart';
@@ -194,6 +194,7 @@ class _ResultScreenState extends State<ResultScreen> {
           },
           child: CupertinoPageScaffold(
             navigationBar: CupertinoNavigationBar(
+              leading: peshatBackButton(context, color: textPrimary),
               middle: Text(
                 l10n.resultTitle,
                 style: AppTypography.chrome.copyWith(
@@ -213,7 +214,7 @@ class _ResultScreenState extends State<ResultScreen> {
                           child: Semantics(
                             label: l10n.copyAction,
                             button: true,
-                            child: const HugeIcon(icon: AppIcons.copy,
+                            child: const PeshatIcon(icon: AppIcons.copy,
                                 size: 22),
                           ),
                         ),
@@ -225,7 +226,7 @@ class _ResultScreenState extends State<ResultScreen> {
                           child: Semantics(
                             label: l10n.shareAction,
                             button: true,
-                            child: const HugeIcon(icon: AppIcons.share, size: 22),
+                            child: const PeshatIcon(icon: AppIcons.share, size: 22),
                           ),
                         ),
                         const SizedBox(width: Spacing.sm),
@@ -236,7 +237,7 @@ class _ResultScreenState extends State<ResultScreen> {
                           child: Semantics(
                             label: l10n.showMenuTooltip,
                             button: true,
-                            child: const HugeIcon(icon: AppIcons.more, size: 22),
+                            child: const PeshatIcon(icon: AppIcons.more, size: 22),
                           ),
                         ),
                       ],
@@ -487,7 +488,7 @@ class _TranslationTab extends StatelessWidget {
               ),
               child: Row(
                 children: [
-                  HugeIcon(icon: AppIcons.globe, size: 18, color: accent),
+                  PeshatIcon(icon: AppIcons.globe, size: 18, color: accent),
                   const SizedBox(width: Spacing.sm),
                   Text(
                     l10n.translatedTo,
@@ -510,7 +511,7 @@ class _TranslationTab extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(width: Spacing.xs),
-                  HugeIcon(icon: AppIcons.chevronForward,
+                  PeshatIcon(icon: AppIcons.chevronForward,
                       size: 18, color: textTertiary),
                 ],
               ),
@@ -598,7 +599,7 @@ class _ErrorView extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          HugeIcon(icon: AppIcons.error,
+          PeshatIcon(icon: AppIcons.error,
               size: 48, color: error),
           const SizedBox(height: Spacing.md),
           Text(

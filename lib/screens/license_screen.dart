@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../core/utils/app_icons.dart';
+import '../widgets/peshat_icon.dart';
 import 'package:flutter/foundation.dart' show LicenseRegistry;
 import 'package:package_info_plus/package_info_plus.dart';
 import '../core/utils/app_colors.dart';
@@ -71,6 +71,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        leading: peshatBackButton(context, color: textPrimary),
         middle: Text(
           l10n.licensesLabel,
           style: AppTypography.chrome.copyWith(
@@ -118,7 +119,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              HugeIcon(icon: AppIcons.docText, size: 48, color: textTertiary),
+              PeshatIcon(icon: AppIcons.docText, size: 48, color: textTertiary),
               const SizedBox(height: Spacing.md),
               Text(
                 l10n.licenseEmptyLabel,

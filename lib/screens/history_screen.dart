@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../core/utils/app_icons.dart';
+import '../widgets/peshat_icon.dart';
 import '../core/models/scan_result.dart';
 import '../core/providers/history_provider.dart';
 import '../core/utils/app_colors.dart';
@@ -23,6 +23,7 @@ class HistoryScreen extends StatelessWidget {
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        leading: peshatBackButton(context, color: textPrimary),
         middle: Text(
           l10n.historyLabel,
           style: AppTypography.chrome.copyWith(
@@ -42,7 +43,7 @@ class HistoryScreen extends StatelessWidget {
                   child: Semantics(
                     label: l10n.showMenuTooltip,
                     button: true,
-                    child: const HugeIcon(icon: AppIcons.more, size: 22),
+                    child: const PeshatIcon(icon: AppIcons.more, size: 22),
                   ),
                 ),
         ),
@@ -295,7 +296,7 @@ class _HistoryRowState extends State<_HistoryRow> {
         alignment: Alignment.centerRight,
         padding: const EdgeInsets.symmetric(horizontal: Spacing.lg),
         color: error,
-        child: const HugeIcon(icon: AppIcons.delete,
+        child: const PeshatIcon(icon: AppIcons.delete,
             color: Color(0xFFFFFFFF), size: 24),
       ),
       onDismissed: (_) => widget.onDelete(),
@@ -429,7 +430,7 @@ class _EmptyState extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            HugeIcon(icon: AppIcons.history, size: 56, color: textTertiary),
+            PeshatIcon(icon: AppIcons.history, size: 56, color: textTertiary),
             const SizedBox(height: Spacing.md),
             Text(
               l10n.historyEmpty,

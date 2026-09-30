@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../core/utils/app_icons.dart';
+import '../widgets/peshat_icon.dart';
 import '../core/models/language.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -73,6 +73,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        leading: peshatBackButton(context, color: textPrimary),
         middle: Text(
           l10n.uiLanguageLabel,
           style: AppTypography.chrome.copyWith(
@@ -217,7 +218,7 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
             child: Row(
               children: [
                 if (widget.leading != null) ...[
-                  HugeIcon(icon: widget.leading!, size: 22, color: widget.textSecondary),
+                  PeshatIcon(icon: widget.leading!, size: 22, color: widget.textSecondary),
                   const SizedBox(width: Spacing.md),
                 ],
                 Expanded(
@@ -249,7 +250,7 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
                   ),
                 ),
                 if (widget.selected)
-                  HugeIcon(icon: AppIcons.check,
+                  PeshatIcon(icon: AppIcons.check,
                       size: 20, color: widget.accent),
               ],
             ),

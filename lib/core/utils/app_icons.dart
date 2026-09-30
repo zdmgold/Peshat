@@ -39,6 +39,10 @@ class AppIcons {
   static const List<List<dynamic>> settings =
       HugeIcons.strokeRoundedSettings01;
 
+  /// Left-pointing back indicator for pushed-screen nav bars.
+  static const List<List<dynamic>> chevronBack =
+      HugeIcons.strokeRoundedArrowLeft01;
+
   /// Right-pointing disclosure indicator on navigable rows.
   static const List<List<dynamic>> chevronForward =
       HugeIcons.strokeRoundedArrowRight01;

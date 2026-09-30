@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
-import 'package:hugeicons/hugeicons.dart';
 import '../core/utils/app_icons.dart';
+import '../widgets/peshat_icon.dart';
 import '../core/models/language.dart';
 import '../core/services/translator_service.dart';
 import '../core/utils/app_colors.dart';
@@ -87,6 +87,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
+        leading: peshatBackButton(context, color: textPrimary),
         middle: Text(
           l10n.selectLanguageTitle,
           style: AppTypography.chrome.copyWith(
@@ -340,7 +341,7 @@ class _RowState extends State<_Row> {
                   ),
                 ),
                 if (widget.selected)
-                  HugeIcon(icon: AppIcons.check,
+                  PeshatIcon(icon: AppIcons.check,
                       size: 20, color: widget.accent),
               ],
             ),
@@ -375,7 +376,7 @@ class _EmptySearchState extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            HugeIcon(icon: AppIcons.search, size: 48, color: textTertiary),
+            PeshatIcon(icon: AppIcons.search, size: 48, color: textTertiary),
             const SizedBox(height: Spacing.md),
             Text(
               title,
