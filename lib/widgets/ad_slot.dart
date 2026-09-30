@@ -7,10 +7,9 @@ import 'banner_ad_widget.dart';
 ///   1. The user has purchased ad removal (mirrors [PurchaseProvider]).
 ///   2. A software keyboard is visible (MediaQuery.viewInsetsOf bottom > 0).
 ///
-/// All visual chrome — padding, radius, shadow, reservation — lives inside
-/// [BannerAdWidget], gated on whether an ad is loaded. When the ad is not
-/// yet loaded or has failed, the entire slot collapses to zero height and
-/// nothing is drawn.
+/// Adds the 4dp strip under the ad (Atrament carries this in its shared
+/// AppScaffold; Peshat has no AppScaffold, so it lives here). The strip sits
+/// on the page background and is invisible against the scaffold.
 class AdSlot extends StatelessWidget {
   const AdSlot({super.key});
 
@@ -26,7 +25,10 @@ class AdSlot extends StatelessWidget {
       valueListenable: _purchased,
       builder: (context, purchased, _) {
         if (purchased || keyboardUp) return const SizedBox.shrink();
-        return const BannerAdWidget();
+        return const Padding(
+          padding: EdgeInsets.only(bottom: 4),
+          child: BannerAdWidget(),
+        );
       },
     );
   }
