@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
 import '../core/models/app_theme_mode.dart';
@@ -17,7 +18,9 @@ import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../platform/document_scanner_service.dart';
+import '../widgets/action_card.dart';
 import '../widgets/ad_slot.dart';
+import '../widgets/recent_item_card.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
 import 'result_screen.dart';
@@ -186,184 +189,139 @@ class _ScanScreenState extends State<ScanScreen> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final brightness = CupertinoTheme.of(context).brightness;
-    final isDark = brightness == Brightness.dark;
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
-    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final border =
+        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
 
     return CupertinoPageScaffold(
-      navigationBar: CupertinoNavigationBar(
-        automaticallyImplyLeading: false,
-        middle: const SizedBox.shrink(),
-        trailing: Row(
-          mainAxisSize: MainAxisSize.min,
+      child: SafeArea(
+        bottom: false,
+        child: Column(
           children: [
-            CupertinoButton(
-              padding: EdgeInsets.zero,
-              minSize: 44,
-              onPressed: _pickUiLanguage,
-              child: Semantics(
-                label: l10n.uiLanguageLabel,
-                button: true,
-                child: const PeshatIcon(icon: AppIcons.globe, size: 24),
-              ),
-            ),
-            const SizedBox(width: Spacing.sm),
-            ValueListenableBuilder<AppThemeMode>(
-              valueListenable: widget.theme,
-              builder: (_, mode, __) => CupertinoButton(
-                padding: EdgeInsets.zero,
-                minSize: 44,
-                onPressed: _toggleTheme,
-                child: Semantics(
-                  label: l10n.themeLabel,
-                  button: true,
-                  child: PeshatIcon(
-                    icon: mode == AppThemeMode.dark
-                        ? AppIcons.sun
-                        : AppIcons.moon,
-                    size: 24,
-                  ),
+            // ─── Toolbar ────────────────────────────────────────────────
+            SizedBox(
+              height: 56,
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+                child: Row(
+                  children: [
+                    Text(
+                      l10n.appName,
+                      style: AppTypography.chrome.copyWith(
+                        fontSize: 17,
+                        fontWeight: FontWeight.w600,
+                        color: textPrimary,
+                      ),
+                    ),
+                    const Spacer(),
+                    _ChipButton(
+                      icon: AppIcons.globe,
+                      semanticLabel: l10n.uiLanguageLabel,
+                      isDark: isDark,
+                      onPressed: _pickUiLanguage,
+                    ),
+                    const SizedBox(width: Spacing.sm),
+                    ValueListenableBuilder<AppThemeMode>(
+                      valueListenable: widget.theme,
+                      builder: (_, mode, __) => _ChipButton(
+                        icon: mode == AppThemeMode.dark
+                            ? AppIcons.sun
+                            : AppIcons.moon,
+                        semanticLabel: l10n.themeLabel,
+                        isDark: isDark,
+                        onPressed: _toggleTheme,
+                      ),
+                    ),
+                    const SizedBox(width: Spacing.sm),
+                    _ChipButton(
+                      icon: AppIcons.settings,
+                      semanticLabel: l10n.settingsTitle,
+                      isDark: isDark,
+                      onPressed: _openSettings,
+                    ),
+                  ],
                 ),
               ),
             ),
-            const SizedBox(width: Spacing.sm),
-            CupertinoButton(
-              padding: EdgeInsets.zero,
-              minSize: 44,
-              onPressed: _openSettings,
-              child: Semantics(
-                label: l10n.settingsTitle,
-                button: true,
-                child: const PeshatIcon(icon: AppIcons.settings, size: 24),
-              ),
-            ),
-          ],
-        ),
-      ),
-      child: SafeArea(
-        top: false,
-        child: Column(
-          children: [
+
+            // ─── Content ────────────────────────────────────────────────
             Expanded(
               child: SingleChildScrollView(
                 padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const SizedBox(height: Spacing.lg),
+                    // Tagline
                     Text(
-                      l10n.appName,
-                      textAlign: TextAlign.left,
-                      style: AppTypography.brand.copyWith(
-                        fontSize: 34,
-                        color: textPrimary,
-                      ),
-                    ),
-                    const SizedBox(height: Spacing.xl),
-
-                    // Primary action — circular scan button
-                    Center(
-                      child: GestureDetector(
-                        onTap: _isScanning ? null : _handleScan,
-                        child: Container(
-                          width: 140,
-                          height: 140,
-                          decoration: BoxDecoration(
-                            color: accent,
-                            shape: BoxShape.circle,
-                            boxShadow: [
-                              BoxShadow(
-                                color: accent.withValues(alpha: 0.28),
-                                blurRadius: 24,
-                                offset: const Offset(0, 8),
-                              ),
-                            ],
-                          ),
-                          child: Center(
-                            child: _isScanning
-                                ? const CupertinoActivityIndicator(
-                                    radius: 16,
-                                    color: Color(0xFFFFFFFF),
-                                  )
-                                : const PeshatIcon(
-                                    icon: AppIcons.scanDocument,
-                                    size: 56,
-                                    color: Color(0xFFFFFFFF),
-                                  ),
-                          ),
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 12),
-                    Center(
-                      child: Text(
-                        l10n.scanShortLabel,
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 15,
-                          fontWeight: FontWeight.w600,
-                          color: accent,
-                        ),
+                      l10n.tagline,
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTypography.body.copyWith(
+                        fontSize: 16,
+                        fontWeight: FontWeight.w500,
+                        color: textSecondary,
                       ),
                     ),
                     const SizedBox(height: Spacing.lg),
 
-                    // Secondary actions — three text rows
-                    CupertinoButton(
-                      padding: EdgeInsets.zero,
-                      minSize: 44,
-                      onPressed: _openTextTranslate,
-                      child: Text(
-                        l10n.typeTextButtonLabel,
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: accent,
-                        ),
-                      ),
+                    // Primary card
+                    _ScanCard(
+                      label: l10n.scanShortLabel,
+                      isScanning: _isScanning,
+                      onTap: _handleScan,
                     ),
-                    CupertinoButton(
-                      padding: EdgeInsets.zero,
-                      minSize: 44,
-                      onPressed: _handleImport,
-                      child: Text(
-                        l10n.importFileLabel,
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 16,
-                          fontWeight: FontWeight.w600,
-                          color: accent,
-                        ),
-                      ),
-                    ),
-                    ValueListenableBuilder<String>(
-                      valueListenable: widget.settings,
-                      builder: (_, code, __) => CupertinoButton(
-                        padding: EdgeInsets.zero,
-                        minSize: 44,
-                        onPressed: _pickTargetLanguage,
-                        child: Text(
-                          '${l10n.translateToLabel}: ${languageDisplayName(code)}',
-                          style: AppTypography.chrome.copyWith(
-                            fontSize: 16,
-                            fontWeight: FontWeight.w600,
-                            color: accent,
+                    const SizedBox(height: 20),
+
+                    // Secondary action cards
+                    Row(
+                      children: [
+                        Expanded(
+                          child: ActionCard(
+                            icon: AppIcons.typeText,
+                            label: l10n.typeTextButtonLabel,
+                            onTap: _openTextTranslate,
                           ),
                         ),
+                        const SizedBox(width: Spacing.sm),
+                        Expanded(
+                          child: ActionCard(
+                            icon: AppIcons.importFile,
+                            label: l10n.importFileLabel,
+                            onTap: _handleImport,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 20),
+
+                    // Language selector row
+                    ActionRow(
+                      icon: AppIcons.globe,
+                      label:
+                          '${l10n.translateToLabel}: ${languageDisplayName(widget.settings.value)}',
+                      onTap: _pickTargetLanguage,
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(
+                        horizontal: Spacing.md,
                       ),
+                      child: Container(height: 0.5, color: border),
                     ),
                     const SizedBox(height: Spacing.xl),
 
-                    // RECENT — inline section, max 3 rows
+                    // RECENT section
                     ValueListenableBuilder<List<ScanResult>>(
                       valueListenable: widget.history,
                       builder: (context, items, _) {
                         if (items.isEmpty) {
-                          return const SizedBox(height: Spacing.xl);
+                          return const SizedBox.shrink();
                         }
-                        final preview = items.take(3).toList();
                         return Column(
                           crossAxisAlignment: CrossAxisAlignment.stretch,
                           children: [
@@ -373,7 +331,7 @@ class _ScanScreenState extends State<ScanScreen> {
                                 bottom: Spacing.sm,
                               ),
                               child: Text(
-                                l10n.recentLabel.toUpperCase(),
+                                '${l10n.recentLabel.toUpperCase()} · ${items.length}',
                                 style: AppTypography.chrome.copyWith(
                                   fontSize: 12,
                                   fontWeight: FontWeight.w600,
@@ -382,22 +340,21 @@ class _ScanScreenState extends State<ScanScreen> {
                                 ),
                               ),
                             ),
-                            for (int i = 0; i < preview.length; i++)
-                              _RecentRow(
-                                result: preview[i],
-                                isDark: isDark,
-                                isLast: i == preview.length - 1,
-                                onTap: () => _openHistory(),
-                              ),
-                            const SizedBox(height: Spacing.xl),
+                            RecentItemCard(
+                              result: items.first,
+                              onTap: _openHistory,
+                            ),
                           ],
                         );
                       },
                     ),
+                    const SizedBox(height: Spacing.xl),
                   ],
                 ),
               ),
             ),
+
+            // ─── Ad slot ────────────────────────────────────────────────
             const AdSlot(),
           ],
         ),
@@ -407,136 +364,136 @@ class _ScanScreenState extends State<ScanScreen> {
 }
 
 // ---------------------------------------------------------------------------
-// Recent-row preview — mirrors the History screen's row layout, no delete
+// Toolbar chip — 40×40 with bgSecondary fill, 12 radius, icon centred
 // ---------------------------------------------------------------------------
 
-class _RecentRow extends StatefulWidget {
-  final ScanResult result;
+class _ChipButton extends StatelessWidget {
+  final List<List<dynamic>> icon;
+  final String semanticLabel;
   final bool isDark;
-  final bool isLast;
-  final VoidCallback onTap;
+  final VoidCallback onPressed;
 
-  const _RecentRow({
-    required this.result,
+  const _ChipButton({
+    required this.icon,
+    required this.semanticLabel,
     required this.isDark,
-    required this.isLast,
+    required this.onPressed,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final chipBg =
+        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
+    final iconColor =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+
+    return Semantics(
+      label: semanticLabel,
+      button: true,
+      child: CupertinoButton(
+        padding: EdgeInsets.zero,
+        minSize: 40,
+        onPressed: onPressed,
+        child: Container(
+          width: 40,
+          height: 40,
+          decoration: BoxDecoration(
+            color: chipBg,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          child: Center(
+            child: PeshatIcon(icon: icon, size: 22, color: iconColor),
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Primary card — stacked Peshat mark + Scan label, brass fill, press scale
+// ---------------------------------------------------------------------------
+
+class _ScanCard extends StatefulWidget {
+  final String label;
+  final bool isScanning;
+  final Future<void> Function() onTap;
+
+  const _ScanCard({
+    required this.label,
+    required this.isScanning,
     required this.onTap,
   });
 
   @override
-  State<_RecentRow> createState() => _RecentRowState();
+  State<_ScanCard> createState() => _ScanCardState();
 }
 
-class _RecentRowState extends State<_RecentRow> {
+class _ScanCardState extends State<_ScanCard> {
   bool _pressed = false;
-
-  String _timeLabel(DateTime t) {
-    final hh = t.hour.toString().padLeft(2, '0');
-    final mm = t.minute.toString().padLeft(2, '0');
-    return '$hh:$mm';
-  }
 
   @override
   Widget build(BuildContext context) {
-    final textPrimary = widget.isDark
-        ? AppColors.textPrimaryDark
-        : AppColors.textPrimaryLight;
-    final textSecondary = widget.isDark
-        ? AppColors.textSecondaryDark
-        : AppColors.textSecondaryLight;
-    final textTertiary = widget.isDark
-        ? AppColors.textTertiaryDark
-        : AppColors.textTertiaryLight;
-    final border = widget.isDark
-        ? AppColors.borderSubtleDark
-        : AppColors.borderSubtleLight;
-
-    final timeLabel = _timeLabel(widget.result.timestamp);
-    final chipLabel =
-        '${widget.result.sourceLang.toUpperCase()} → ${widget.result.targetLang.toUpperCase()}';
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
     return GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onTap: widget.onTap,
+      onTap: widget.isScanning ? null : () => widget.onTap(),
       onTapDown: (_) => setState(() => _pressed = true),
       onTapUp: (_) => setState(() => _pressed = false),
       onTapCancel: () => setState(() => _pressed = false),
-      child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 100),
-        opacity: _pressed ? 0.6 : 1.0,
-        child: Column(
-          mainAxisSize: MainAxisSize.min,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            const SizedBox(height: Spacing.sm),
-            Row(
-              children: [
-                Text(
-                  timeLabel,
-                  style: AppTypography.chrome.copyWith(
-                    fontSize: 12,
-                    color: textTertiary,
-                  ),
-                ),
-                const SizedBox(width: Spacing.sm),
-                Container(
-                  width: 3,
-                  height: 3,
-                  decoration: BoxDecoration(
-                    color: textTertiary,
-                    shape: BoxShape.circle,
-                  ),
-                ),
-                const SizedBox(width: Spacing.sm),
-                Container(
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 6,
-                    vertical: 2,
-                  ),
-                  decoration: BoxDecoration(
-                    color: widget.isDark
-                        ? AppColors.bgTertiaryDark
-                        : AppColors.bgTertiaryLight,
-                    borderRadius: BorderRadius.circular(6),
-                  ),
-                  child: Text(
-                    chipLabel,
-                    style: AppTypography.sourceChip.copyWith(
-                      fontSize: 11,
-                      fontWeight: FontWeight.w500,
-                      color: textSecondary,
+      child: AnimatedScale(
+        duration: const Duration(milliseconds: 150),
+        curve: Curves.easeOut,
+        scale: _pressed ? 0.97 : 1.0,
+        child: Container(
+          height: 120,
+          decoration: BoxDecoration(
+            color: accent,
+            borderRadius: BorderRadius.circular(16),
+            boxShadow: [
+              BoxShadow(
+                color: accent.withValues(alpha: 0.28),
+                blurRadius: 24,
+                offset: const Offset(0, 8),
+              ),
+            ],
+          ),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              if (widget.isScanning)
+                const SizedBox(
+                  width: 56,
+                  height: 56,
+                  child: Center(
+                    child: CupertinoActivityIndicator(
+                      radius: 16,
+                      color: Color(0xFFFFFFFF),
                     ),
                   ),
+                )
+              else
+                SvgPicture.asset(
+                  'assets/icon/mark.svg',
+                  width: 56,
+                  height: 56,
+                  colorFilter: const ColorFilter.mode(
+                    Color(0xFFFFFFFF),
+                    BlendMode.srcIn,
+                  ),
                 ),
-              ],
-            ),
-            const SizedBox(height: 6),
-            Text(
-              widget.result.sourceText,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: AppTypography.chrome.copyWith(
-                fontSize: 16,
-                color: textPrimary,
+              const SizedBox(height: 12),
+              Text(
+                widget.label,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 16,
+                  fontWeight: FontWeight.w600,
+                  color: const Color(0xFFFFFFFF),
+                ),
               ),
-            ),
-            const SizedBox(height: 4),
-            Text(
-              widget.result.translatedText,
-              maxLines: 1,
-              overflow: TextOverflow.ellipsis,
-              style: AppTypography.body.copyWith(
-                fontSize: 14,
-                color: textSecondary,
-              ),
-            ),
-            const SizedBox(height: Spacing.sm),
-            if (!widget.isLast)
-              Padding(
-                padding: const EdgeInsets.only(left: Spacing.xs),
-                child: Container(height: 0.5, color: border),
-              ),
-          ],
+            ],
+          ),
         ),
       ),
     );

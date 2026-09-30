@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hugeicons/hugeicons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -13,9 +14,6 @@ import 'package:peshat/core/utils/app_icons.dart';
 import 'package:peshat/l10n/app_localizations.dart';
 import 'package:peshat/screens/scan_screen.dart';
 
-/// Helper: find a [HugeIcon] rendered from a specific icon constant.
-/// Flutter's `find.byIcon` only matches the built-in [Icon] widget, so
-/// Hugeicons needs a widget-predicate finder.
 Finder findHugeIcon(List<List<dynamic>> icon) =>
     find.byWidgetPredicate((w) => w is HugeIcon && w.icon == icon);
 
@@ -45,27 +43,38 @@ void main() {
     );
     await tester.pump();
 
-    // Large-title wordmark.
-    expect(find.text('Peshat'), findsWidgets);
+    // Toolbar wordmark.
+    expect(find.text('Peshat'), findsOneWidget);
 
-    // Primary action — label under the circular scan button.
+    // Tagline.
+    expect(find.textContaining('Point your camera'), findsOneWidget);
+
+    // Primary card label.
     expect(find.text('Scan'), findsOneWidget);
 
-    // Secondary actions — three text rows.
+    // Primary card renders the 56px SVG logo mark.
+    // Note: HugeIcon wraps each icon in an internal SvgPicture,
+    // so find.byType(SvgPicture) matches many. Target the 56px one.
+    expect(
+      find.byWidgetPredicate((w) => w is SvgPicture && w.width == 56),
+      findsOneWidget,
+    );
+
+    // Secondary action cards.
     expect(find.text('Type text'), findsOneWidget);
     expect(find.text('Import a file'), findsOneWidget);
+
+    // Language selector row.
     expect(find.text('Translate to: Spanish'), findsOneWidget);
 
-    // Nav bar icons — three, one of each.
+    // Toolbar chips — three, one of each.
     expect(findHugeIcon(AppIcons.settings), findsOneWidget);
     expect(findHugeIcon(AppIcons.moon), findsOneWidget);
-    expect(findHugeIcon(AppIcons.globe), findsOneWidget);
+    // Globe appears twice: toolbar chip + language selector row.
+    expect(findHugeIcon(AppIcons.globe), findsNWidgets(2));
 
-    // Body — the circular scan button's icon.
-    expect(findHugeIcon(AppIcons.scanDocument), findsOneWidget);
-
-    // The two secondary text actions have no leading icons.
-    expect(findHugeIcon(AppIcons.typeText), findsNothing);
-    expect(findHugeIcon(AppIcons.importFile), findsNothing);
+    // Secondary action card icons.
+    expect(findHugeIcon(AppIcons.typeText), findsOneWidget);
+    expect(findHugeIcon(AppIcons.importFile), findsOneWidget);
   });
 }

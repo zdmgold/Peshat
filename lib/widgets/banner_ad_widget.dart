@@ -65,12 +65,18 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
     if (!_isLoaded || _bannerAd == null) {
       return const SizedBox.shrink();
     }
-    return Center(
-      child: SizedBox(
-        width: 320,
-        height: 50,
-        child: AdWidget(ad: _bannerAd!),
-      ),
+    return Column(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        const SizedBox(height: 32),
+        Center(
+          child: SizedBox(
+            width: 320,
+            height: 50,
+            child: AdWidget(ad: _bannerAd!),
+          ),
+        ),
+      ],
     );
   }
 }
