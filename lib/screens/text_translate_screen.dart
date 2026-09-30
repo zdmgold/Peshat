@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
+import '../widgets/action_card.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/settings_provider.dart';
 import '../core/services/language_names.dart';
@@ -111,10 +112,6 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
-    final border =
-        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
-    final inputFill =
-        isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
     final charCount = _controller.text.characters.length;
     final hasText = _controller.text.trim().isNotEmpty;
 
@@ -144,58 +141,44 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
         top: false,
         child: Column(
           children: [
+            // Full-bleed text field — the page is the surface.
             Expanded(
-              child: Padding(
-                padding: const EdgeInsets.all(Spacing.md),
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: inputFill,
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: border, width: 0.5),
-                  ),
-                  padding: const EdgeInsets.all(Spacing.md),
-                  child: CupertinoTextField(
-                    controller: _controller,
-                    focusNode: _focus,
-                    maxLines: null,
-                    expands: true,
-                    textAlignVertical: TextAlignVertical.top,
-                    keyboardType: TextInputType.multiline,
-                    placeholder: l10n.typeTextLabel,
-                    placeholderStyle: AppTypography.chrome.copyWith(
-                      fontSize: 16,
-                      color: textTertiary,
-                    ),
-                    style: AppTypography.body.copyWith(
-                      fontSize: 17,
-                      height: 1.6,
-                      color: textPrimary,
-                    ),
-                    cursorColor: accent,
-                    cursorWidth: 2,
-                    padding: EdgeInsets.zero,
-                    decoration: null,
-                    onChanged: (_) => setState(() {}),
-                  ),
+              child: CupertinoTextField(
+                controller: _controller,
+                focusNode: _focus,
+                maxLines: null,
+                expands: true,
+                textAlignVertical: TextAlignVertical.top,
+                keyboardType: TextInputType.multiline,
+                placeholder: l10n.typeTextLabel,
+                placeholderStyle: AppTypography.chrome.copyWith(
+                  fontSize: 16,
+                  color: textTertiary,
                 ),
+                style: AppTypography.body.copyWith(
+                  fontSize: 17,
+                  height: 1.6,
+                  color: textPrimary,
+                ),
+                cursorColor: accent,
+                cursorWidth: 2,
+                padding: const EdgeInsets.symmetric(
+                  horizontal: Spacing.md,
+                  vertical: Spacing.md,
+                ),
+                decoration: null,
+                onChanged: (_) => setState(() {}),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-              child: _TargetLanguageRow(
-                label: l10n.translateToLabel,
-                settings: widget.settings,
-                isDark: isDark,
-                onTap: _pickTarget,
-              ),
-            ),
+
+            // Character count — right-aligned, above the language row.
             if (hasText)
               Padding(
                 padding: const EdgeInsets.fromLTRB(
                   Spacing.md,
-                  Spacing.sm,
-                  Spacing.md,
                   0,
+                  Spacing.md,
+                  Spacing.sm,
                 ),
                 child: Align(
                   alignment: Alignment.centerRight,
@@ -208,126 +191,57 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                   ),
                 ),
               ),
+
+            // Language selector — filled card.
             Padding(
-              padding: const EdgeInsets.all(Spacing.md),
+              padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+              child: ValueListenableBuilder<String>(
+                valueListenable: widget.settings,
+                builder: (_, code, __) => ActionCard(
+                  icon: AppIcons.globe,
+                  label: l10n.translateToLabel,
+                  value: languageDisplayName(code),
+                  showChevron: true,
+                  onTap: _pickTarget,
+                ),
+              ),
+            ),
+
+            // Primary translate button.
+            Padding(
+              padding: const EdgeInsets.fromLTRB(
+                Spacing.md,
+                12,
+                Spacing.md,
+                Spacing.md,
+              ),
               child: SizedBox(
                 width: double.infinity,
-                height: 52,
-                child: CupertinoButton.filled(
+                height: 56,
+                child: CupertinoButton(
                   padding: EdgeInsets.zero,
                   onPressed: hasText ? _translate : null,
-                  child: Text(
-                    l10n.translationLabel,
-                    style: AppTypography.chrome.copyWith(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w600,
-                      color: const Color(0xFFFFFFFF),
+                  child: Container(
+                    width: double.infinity,
+                    height: 56,
+                    decoration: BoxDecoration(
+                      color: accent,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    alignment: Alignment.center,
+                    child: Text(
+                      l10n.translationLabel,
+                      style: AppTypography.chrome.copyWith(
+                        fontSize: 15,
+                        fontWeight: FontWeight.w600,
+                        color: const Color(0xFFFFFFFF),
+                      ),
                     ),
                   ),
                 ),
               ),
             ),
           ],
-        ),
-      ),
-    );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Target language row — grouped-card styled, iOS press feedback
-// ---------------------------------------------------------------------------
-
-class _TargetLanguageRow extends StatefulWidget {
-  final String label;
-  final SettingsProvider settings;
-  final bool isDark;
-  final VoidCallback onTap;
-
-  const _TargetLanguageRow({
-    required this.label,
-    required this.settings,
-    required this.isDark,
-    required this.onTap,
-  });
-
-  @override
-  State<_TargetLanguageRow> createState() => _TargetLanguageRowState();
-}
-
-class _TargetLanguageRowState extends State<_TargetLanguageRow> {
-  bool _pressed = false;
-
-  @override
-  Widget build(BuildContext context) {
-    final textPrimary = widget.isDark
-        ? AppColors.textPrimaryDark
-        : AppColors.textPrimaryLight;
-    final textSecondary = widget.isDark
-        ? AppColors.textSecondaryDark
-        : AppColors.textSecondaryLight;
-    final textTertiary = widget.isDark
-        ? AppColors.textTertiaryDark
-        : AppColors.textTertiaryLight;
-    final border = widget.isDark
-        ? AppColors.borderSubtleDark
-        : AppColors.borderSubtleLight;
-    final accent =
-        widget.isDark ? AppColors.accentDark : AppColors.accentLight;
-    final cardBg = widget.isDark
-        ? AppColors.bgSecondaryDark
-        : AppColors.bgSecondaryLight;
-
-    return GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onTap: widget.onTap,
-      onTapDown: (_) => setState(() => _pressed = true),
-      onTapUp: (_) => setState(() => _pressed = false),
-      onTapCancel: () => setState(() => _pressed = false),
-      child: AnimatedOpacity(
-        duration: const Duration(milliseconds: 100),
-        opacity: _pressed ? 0.6 : 1.0,
-        child: Container(
-          constraints: const BoxConstraints(minHeight: 56),
-          padding: const EdgeInsets.symmetric(
-            horizontal: Spacing.md,
-            vertical: Spacing.sm,
-          ),
-          decoration: BoxDecoration(
-            color: cardBg,
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: border, width: 0.5),
-          ),
-          child: Row(
-            children: [
-              PeshatIcon(icon: AppIcons.globe, size: 22, color: accent),
-              const SizedBox(width: Spacing.md),
-              Text(
-                widget.label,
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 15,
-                  color: textSecondary,
-                ),
-              ),
-              const Spacer(),
-              ValueListenableBuilder<String>(
-                valueListenable: widget.settings,
-                builder: (_, code, __) => Text(
-                  languageDisplayName(code),
-                  textAlign: TextAlign.right,
-                  overflow: TextOverflow.ellipsis,
-                  style: AppTypography.chrome.copyWith(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w600,
-                    color: textPrimary,
-                  ),
-                ),
-              ),
-              const SizedBox(width: Spacing.sm),
-              PeshatIcon(icon: AppIcons.chevronForward,
-                  size: 20, color: textTertiary),
-            ],
-          ),
         ),
       ),
     );
