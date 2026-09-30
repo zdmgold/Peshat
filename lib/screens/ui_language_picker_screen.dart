@@ -12,6 +12,28 @@ class UiLanguagePickerScreen extends StatelessWidget {
   final Locale? current;
   const UiLanguagePickerScreen({super.key, this.current});
 
+  List<_LetterGroup> _groupByLetter(List<Language> languages) {
+    final groups = <_LetterGroup>[];
+    String? currentLetter;
+    var currentList = <Language>[];
+    for (final lang in languages) {
+      final letter = lang.englishName.substring(0, 1).toUpperCase();
+      if (letter != currentLetter) {
+        if (currentList.isNotEmpty) {
+          groups.add(_LetterGroup(currentLetter!, currentList));
+        }
+        currentLetter = letter;
+        currentList = [lang];
+      } else {
+        currentList.add(lang);
+      }
+    }
+    if (currentList.isNotEmpty) {
+      groups.add(_LetterGroup(currentLetter!, currentList));
+    }
+    return groups;
+  }
+
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -23,53 +45,13 @@ class UiLanguagePickerScreen extends StatelessWidget {
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final bgPrimary =
+        isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
 
     final sorted = [...supportedLanguages]
       ..sort((a, b) =>
           a.englishName.toLowerCase().compareTo(b.englishName.toLowerCase()));
-
-    final rows = <Widget>[];
-
-    rows.add(_SectionLabel(
-      text: l10n.sectionSystemLabel,
-      color: textTertiary,
-    ));
-    rows.add(_UiLanguageRow(
-      leading: AppIcons.smartphone,
-      title: 'Follow system',
-      subtitle: null,
-      selected: current == null,
-      textPrimary: textPrimary,
-      textSecondary: textSecondary,
-      accent: accent,
-      onTap: () => Navigator.pop(context, 'system'),
-    ));
-    rows.add(const SizedBox(height: Spacing.md));
-    rows.add(_SectionLabel(
-      text: l10n.appLanguageLabel,
-      color: textTertiary,
-    ));
-
-    String? lastLetter;
-    for (final lang in sorted) {
-      final letter = lang.englishName.substring(0, 1).toUpperCase();
-      if (letter != lastLetter) {
-        lastLetter = letter;
-        rows.add(_LetterLabel(letter: letter, color: textTertiary));
-      }
-      final selected = current?.languageCode == lang.code;
-      rows.add(_UiLanguageRow(
-        leading: null,
-        title: lang.nativeName,
-        subtitle: lang.englishName,
-        nativeIsRtl: lang.isRtl,
-        selected: selected,
-        textPrimary: textPrimary,
-        textSecondary: textSecondary,
-        accent: accent,
-        onTap: () => Navigator.pop(context, lang.code),
-      ));
-    }
+    final groups = _groupByLetter(sorted);
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
@@ -88,9 +70,72 @@ class UiLanguagePickerScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: ListView(
-                padding: const EdgeInsets.only(bottom: Spacing.xl),
-                children: rows,
+              child: CustomScrollView(
+                slivers: [
+                  // SYSTEM section — header + Follow system row.
+                  SliverToBoxAdapter(
+                    child: _SectionLabel(
+                      text: l10n.sectionSystemLabel,
+                      color: textTertiary,
+                    ),
+                  ),
+                  SliverToBoxAdapter(
+                    child: _UiLanguageRow(
+                      leading: AppIcons.smartphone,
+                      title: 'Follow system',
+                      subtitle: null,
+                      selected: current == null,
+                      textPrimary: textPrimary,
+                      textSecondary: textSecondary,
+                      accent: accent,
+                      onTap: () => Navigator.pop(context, 'system'),
+                    ),
+                  ),
+
+                  // APP LANGUAGE section header.
+                  SliverToBoxAdapter(
+                    child: _SectionLabel(
+                      text: l10n.appLanguageLabel,
+                      color: textTertiary,
+                    ),
+                  ),
+
+                  // Letter-grouped sections with sticky headers.
+                  for (final group in groups) ...[
+                    SliverPersistentHeader(
+                      pinned: true,
+                      delegate: _LetterHeaderDelegate(
+                        letter: group.letter,
+                        textTertiary: textTertiary,
+                        background: bgPrimary,
+                      ),
+                    ),
+                    SliverList(
+                      delegate: SliverChildBuilderDelegate(
+                        (context, i) => _UiLanguageRow(
+                          leading: null,
+                          title: group.languages[i].nativeName,
+                          subtitle: group.languages[i].englishName,
+                          nativeIsRtl: group.languages[i].isRtl,
+                          selected: current?.languageCode ==
+                              group.languages[i].code,
+                          textPrimary: textPrimary,
+                          textSecondary: textSecondary,
+                          accent: accent,
+                          onTap: () => Navigator.pop(
+                            context,
+                            group.languages[i].code,
+                          ),
+                        ),
+                        childCount: group.languages.length,
+                      ),
+                    ),
+                  ],
+
+                  const SliverToBoxAdapter(
+                    child: SizedBox(height: Spacing.xl),
+                  ),
+                ],
               ),
             ),
             const AdSlot(),
@@ -102,7 +147,71 @@ class UiLanguagePickerScreen extends StatelessWidget {
 }
 
 // ---------------------------------------------------------------------------
-// Section label / letter label
+// Letter group — internal data structure for the sectioned list.
+// ---------------------------------------------------------------------------
+
+class _LetterGroup {
+  final String letter;
+  final List<Language> languages;
+  const _LetterGroup(this.letter, this.languages);
+}
+
+// ---------------------------------------------------------------------------
+// Sticky letter header — pinned to the top of the viewport while its
+// section scrolls. Replaced by the next letter's header as it arrives.
+// ---------------------------------------------------------------------------
+
+class _LetterHeaderDelegate extends SliverPersistentHeaderDelegate {
+  final String letter;
+  final Color textTertiary;
+  final Color background;
+
+  const _LetterHeaderDelegate({
+    required this.letter,
+    required this.textTertiary,
+    required this.background,
+  });
+
+  static const double _height = 24;
+
+  @override
+  double get minExtent => _height;
+
+  @override
+  double get maxExtent => _height;
+
+  @override
+  Widget build(
+    BuildContext context,
+    double shrinkOffset,
+    bool overlapsContent,
+  ) {
+    return Container(
+      height: _height,
+      color: background,
+      alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.only(left: Spacing.md, bottom: 4),
+      child: Text(
+        letter,
+        style: AppTypography.chrome.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          color: textTertiary,
+        ),
+      ),
+    );
+  }
+
+  @override
+  bool shouldRebuild(covariant _LetterHeaderDelegate oldDelegate) {
+    return oldDelegate.letter != letter ||
+        oldDelegate.textTertiary != textTertiary ||
+        oldDelegate.background != background;
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Section label — SYSTEM / APP LANGUAGE headers, not sticky.
 // ---------------------------------------------------------------------------
 
 class _SectionLabel extends StatelessWidget {
@@ -125,32 +234,6 @@ class _SectionLabel extends StatelessWidget {
           fontSize: 12,
           fontWeight: FontWeight.w600,
           letterSpacing: 0.6,
-          color: color,
-        ),
-      ),
-    );
-  }
-}
-
-class _LetterLabel extends StatelessWidget {
-  final String letter;
-  final Color color;
-  const _LetterLabel({required this.letter, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        Spacing.md,
-        Spacing.sm,
-        Spacing.md,
-        Spacing.xs,
-      ),
-      child: Text(
-        letter,
-        style: AppTypography.chrome.copyWith(
-          fontSize: 12,
-          fontWeight: FontWeight.w600,
           color: color,
         ),
       ),
@@ -194,8 +277,9 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
 
   @override
   Widget build(BuildContext context) {
-    final semanticsLabel =
-        widget.subtitle == null ? widget.title : '${widget.title}, ${widget.subtitle}';
+    final semanticsLabel = widget.subtitle == null
+        ? widget.title
+        : '${widget.title}, ${widget.subtitle}';
     return Semantics(
       label: semanticsLabel,
       button: true,
@@ -218,7 +302,11 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
             child: Row(
               children: [
                 if (widget.leading != null) ...[
-                  PeshatIcon(icon: widget.leading!, size: 22, color: widget.textSecondary),
+                  PeshatIcon(
+                    icon: widget.leading!,
+                    size: 22,
+                    color: widget.textSecondary,
+                  ),
                   const SizedBox(width: Spacing.md),
                 ],
                 Expanded(
@@ -250,8 +338,11 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
                   ),
                 ),
                 if (widget.selected)
-                  PeshatIcon(icon: AppIcons.check,
-                      size: 20, color: widget.accent),
+                  PeshatIcon(
+                    icon: AppIcons.check,
+                    size: 20,
+                    color: widget.accent,
+                  ),
               ],
             ),
           ),
