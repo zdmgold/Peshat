@@ -291,4 +291,10 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'አስታዋሾችን ለመቀበል ማሳወቂያዎችን በስርዓት ቅንብሮች ያንቁ።';
+
+  @override
+  String get scanShortLabel => 'ቃኝ';
+
+  @override
+  String get recentLabel => 'የቅርብ ጊዜ';
 }

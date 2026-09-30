@@ -291,4 +291,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'เปิดการแจ้งเตือนในการตั้งค่าระบบเพื่อรับการเตือนความจำ';
+
+  @override
+  String get scanShortLabel => 'สแกน';
+
+  @override
+  String get recentLabel => 'ล่าสุด';
 }

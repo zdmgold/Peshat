@@ -291,4 +291,10 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'සිහිකැඳවීම් ලබාගැනීමට පද්ධති සැකසුම්වල දැනුම්දීම් සක්‍රීය කරන්න.';
+
+  @override
+  String get scanShortLabel => 'ස්කෑන්';
+
+  @override
+  String get recentLabel => 'මෑත';
 }

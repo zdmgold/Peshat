@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Ontvang een herinnering als je Peshat een paar dagen niet hebt gebruikt.",
   "reminderNotificationTitle": "Ga verder met je vertalingen",
   "reminderNotificationBody": "Ga verder waar je gebleven was met Peshat.",
-  "notificationPermissionDenied": "Schakel meldingen in bij de systeeminstellingen om herinneringen te ontvangen."
+  "notificationPermissionDenied": "Schakel meldingen in bij de systeeminstellingen om herinneringen te ontvangen.",
+  "scanShortLabel": "Scannen",
+  "recentLabel": "Recent"
 }

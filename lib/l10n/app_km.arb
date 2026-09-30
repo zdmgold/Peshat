@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "ទទួលបានការរំលឹកប្រសិនបើអ្នកមិនបានប្រើ Peshat ពីរបីថ្ងៃ។",
   "reminderNotificationTitle": "បន្តការបកប្រែរបស់អ្នក",
   "reminderNotificationBody": "បន្តពីកន្លែងដែលអ្នកបានឈប់ជាមួយ Peshat។",
-  "notificationPermissionDenied": "បើកការជូនដំណឹងនៅក្នុងការកំណត់ប្រព័ន្ធ ដើម្បីទទួលការរំលឹក។"
+  "notificationPermissionDenied": "បើកការជូនដំណឹងនៅក្នុងការកំណត់ប្រព័ន្ធ ដើម្បីទទួលការរំលឹក។",
+  "scanShortLabel": "ស្កេន",
+  "recentLabel": "ថ្មីៗ"
 }

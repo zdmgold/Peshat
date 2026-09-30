@@ -291,4 +291,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'अनुस्मारक प्राप्त करने के लिए सिस्टम सेटिंग्स में सूचनाएँ सक्षम करें।';
+
+  @override
+  String get scanShortLabel => 'स्कैन';
+
+  @override
+  String get recentLabel => 'हाल के';
 }

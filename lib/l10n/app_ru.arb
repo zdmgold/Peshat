@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Получайте напоминание, если не используете Peshat несколько дней.",
   "reminderNotificationTitle": "Продолжите переводы",
   "reminderNotificationBody": "Вернитесь к тому месту, где вы остановились в Peshat.",
-  "notificationPermissionDenied": "Включите уведомления в системных настройках, чтобы получать напоминания."
+  "notificationPermissionDenied": "Включите уведомления в системных настройках, чтобы получать напоминания.",
+  "scanShortLabel": "Сканировать",
+  "recentLabel": "Недавние"
 }

@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Peshat'ı birkaç gündür kullanmadıysanız hatırlatıcı alın.",
   "reminderNotificationTitle": "Çevirilerinize devam edin",
   "reminderNotificationBody": "Peshat'ta kaldığınız yerden devam edin.",
-  "notificationPermissionDenied": "Hatırlatıcıları almak için sistem ayarlarından bildirimleri etkinleştirin."
+  "notificationPermissionDenied": "Hatırlatıcıları almak için sistem ayarlarından bildirimleri etkinleştirin.",
+  "scanShortLabel": "Tara",
+  "recentLabel": "Son"
 }

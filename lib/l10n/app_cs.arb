@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Dostávejte připomínku, pokud Peshat nepoužíváte několik dní.",
   "reminderNotificationTitle": "Pokračujte v překladech",
   "reminderNotificationBody": "Pokračujte tam, kde jste skončili v Peshat.",
-  "notificationPermissionDenied": "Chcete-li dostávat připomínky, povolte oznámení v systémovém nastavení."
+  "notificationPermissionDenied": "Chcete-li dostávat připomínky, povolte oznámení v systémovém nastavení.",
+  "scanShortLabel": "Skenovat",
+  "recentLabel": "Nedávné"
 }

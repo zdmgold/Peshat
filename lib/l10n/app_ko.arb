@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "며칠 동안 Peshat을 사용하지 않으면 알림을 받습니다.",
   "reminderNotificationTitle": "번역을 계속하세요",
   "reminderNotificationBody": "Peshat에서 중단한 곳에서 이어가세요.",
-  "notificationPermissionDenied": "리마인더를 받으려면 시스템 설정에서 알림을 활성화하세요."
+  "notificationPermissionDenied": "리마인더를 받으려면 시스템 설정에서 알림을 활성화하세요.",
+  "scanShortLabel": "스캔",
+  "recentLabel": "최근"
 }

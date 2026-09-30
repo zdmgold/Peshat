@@ -291,4 +291,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Chcete-li dostávat připomínky, povolte oznámení v systémovém nastavení.';
+
+  @override
+  String get scanShortLabel => 'Skenovat';
+
+  @override
+  String get recentLabel => 'Nedávné';
 }

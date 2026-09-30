@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "केही दिन Peshat प्रयोग नगरेमा रिमाइन्डर प्राप्त गर्नुहोस्।",
   "reminderNotificationTitle": "आफ्ना अनुवादहरू जारी राख्नुहोस्",
   "reminderNotificationBody": "Peshat मा जहाँ छोड्नुभयो त्यहींबाट जारी राख्नुहोस्।",
-  "notificationPermissionDenied": "रिमाइन्डरहरू प्राप्त गर्न प्रणाली सेटिङहरूमा सूचनाहरू सक्षम गर्नुहोस्।"
+  "notificationPermissionDenied": "रिमाइन्डरहरू प्राप्त गर्न प्रणाली सेटिङहरूमा सूचनाहरू सक्षम गर्नुहोस्।",
+  "scanShortLabel": "स्क्यान",
+  "recentLabel": "हालैका"
 }

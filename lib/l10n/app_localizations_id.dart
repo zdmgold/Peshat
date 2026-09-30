@@ -291,4 +291,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Aktifkan notifikasi di pengaturan sistem untuk menerima pengingat.';
+
+  @override
+  String get scanShortLabel => 'Pindai';
+
+  @override
+  String get recentLabel => 'Terbaru';
 }

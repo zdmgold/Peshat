@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Nhận nhắc nhở nếu bạn không sử dụng Peshat trong vài ngày.",
   "reminderNotificationTitle": "Tiếp tục bản dịch của bạn",
   "reminderNotificationBody": "Tiếp tục từ nơi bạn đã dừng trong Peshat.",
-  "notificationPermissionDenied": "Bật thông báo trong cài đặt hệ thống để nhận nhắc nhở."
+  "notificationPermissionDenied": "Bật thông báo trong cài đặt hệ thống để nhận nhắc nhở.",
+  "scanShortLabel": "Quét",
+  "recentLabel": "Gần đây"
 }

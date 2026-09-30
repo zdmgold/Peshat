@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Recevez un rappel si vous n'avez pas utilisé Peshat depuis quelques jours.",
   "reminderNotificationTitle": "Poursuivez vos traductions",
   "reminderNotificationBody": "Reprenez là où vous vous êtes arrêté avec Peshat.",
-  "notificationPermissionDenied": "Activez les notifications dans les réglages système pour recevoir des rappels."
+  "notificationPermissionDenied": "Activez les notifications dans les réglages système pour recevoir des rappels.",
+  "scanShortLabel": "Scanner",
+  "recentLabel": "Récent"
 }

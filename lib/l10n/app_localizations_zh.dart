@@ -291,4 +291,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => '请在系统设置中启用通知以接收提醒。';
+
+  @override
+  String get scanShortLabel => '扫描';
+
+  @override
+  String get recentLabel => '最近';
 }

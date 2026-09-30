@@ -291,4 +291,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Enable notifications in system settings to receive reminders.';
+
+  @override
+  String get scanShortLabel => 'Scan';
+
+  @override
+  String get recentLabel => 'Recent';
 }

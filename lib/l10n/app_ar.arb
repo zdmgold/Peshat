@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "احصل على تذكير إذا لم تستخدم Peshat لعدة أيام.",
   "reminderNotificationTitle": "تابع ترجماتك",
   "reminderNotificationBody": "أكمل من حيث توقفت مع Peshat.",
-  "notificationPermissionDenied": "فعّل الإشعارات من إعدادات النظام لتلقي التذكيرات."
+  "notificationPermissionDenied": "فعّل الإشعارات من إعدادات النظام لتلقي التذكيرات.",
+  "scanShortLabel": "مسح",
+  "recentLabel": "الأحدث"
 }

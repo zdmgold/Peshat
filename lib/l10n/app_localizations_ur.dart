@@ -291,4 +291,10 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'یاد دہانیاں حاصل کرنے کے لیے سسٹم سیٹنگز میں اطلاعات فعال کریں۔';
+
+  @override
+  String get scanShortLabel => 'اسکین';
+
+  @override
+  String get recentLabel => 'حالیہ';
 }

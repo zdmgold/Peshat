@@ -291,4 +291,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'הפעילו התראות בהגדרות המערכת כדי לקבל תזכורות.';
+
+  @override
+  String get scanShortLabel => 'סרוק';
+
+  @override
+  String get recentLabel => 'אחרונים';
 }

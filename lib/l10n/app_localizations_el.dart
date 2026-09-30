@@ -291,4 +291,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Ενεργοποιήστε τις ειδοποιήσεις στις ρυθμίσεις συστήματος για να λαμβάνετε υπενθυμίσεις.';
+
+  @override
+  String get scanShortLabel => 'Σάρωση';
+
+  @override
+  String get recentLabel => 'Πρόσφατα';
 }

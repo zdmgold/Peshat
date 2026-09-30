@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "දින කිහිපයක් Peshat භාවිත නොකළහොත් සිහිකැඳවීමක් ලබාගන්න.",
   "reminderNotificationTitle": "ඔබේ පරිවර්තන දිගටම කරගෙන යන්න",
   "reminderNotificationBody": "Peshat හි ඔබ නැවැත්වූ තැන සිට දිගටම කරගෙන යන්න.",
-  "notificationPermissionDenied": "සිහිකැඳවීම් ලබාගැනීමට පද්ධති සැකසුම්වල දැනුම්දීම් සක්‍රීය කරන්න."
+  "notificationPermissionDenied": "සිහිකැඳවීම් ලබාගැනීමට පද්ධති සැකසුම්වල දැනුම්දීම් සක්‍රීය කරන්න.",
+  "scanShortLabel": "ස්කෑන්",
+  "recentLabel": "මෑත"
 }

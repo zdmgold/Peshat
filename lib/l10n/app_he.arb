@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "קבלו תזכורת אם לא השתמשתם ב-Peshat כמה ימים.",
   "reminderNotificationTitle": "המשיכו את התרגומים שלכם",
   "reminderNotificationBody": "המשיכו מהמקום שבו הפסקתם ב-Peshat.",
-  "notificationPermissionDenied": "הפעילו התראות בהגדרות המערכת כדי לקבל תזכורות."
+  "notificationPermissionDenied": "הפעילו התראות בהגדרות המערכת כדי לקבל תזכורות.",
+  "scanShortLabel": "סרוק",
+  "recentLabel": "אחרונים"
 }

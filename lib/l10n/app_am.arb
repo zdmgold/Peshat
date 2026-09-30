@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "ፔሻትን ለተወሰነ ቀናት ካልተጠቀሙ አስታዋሽ ይደርስዎታል።",
   "reminderNotificationTitle": "ትርጉሞችዎን ይቀጥሉ",
   "reminderNotificationBody": "ፔሻት የቆሙበትን ቦታ ይቀጥሉ።",
-  "notificationPermissionDenied": "አስታዋሾችን ለመቀበል ማሳወቂያዎችን በስርዓት ቅንብሮች ያንቁ።"
+  "notificationPermissionDenied": "አስታዋሾችን ለመቀበል ማሳወቂያዎችን በስርዓት ቅንብሮች ያንቁ።",
+  "scanShortLabel": "ቃኝ",
+  "recentLabel": "የቅርብ ጊዜ"
 }

@@ -291,4 +291,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Bật thông báo trong cài đặt hệ thống để nhận nhắc nhở.';
+
+  @override
+  String get scanShortLabel => 'Quét';
+
+  @override
+  String get recentLabel => 'Gần đây';
 }

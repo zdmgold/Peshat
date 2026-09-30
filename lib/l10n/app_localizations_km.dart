@@ -291,4 +291,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'បើកការជូនដំណឹងនៅក្នុងការកំណត់ប្រព័ន្ធ ដើម្បីទទួលការរំលឹក។';
+
+  @override
+  String get scanShortLabel => 'ស្កេន';
+
+  @override
+  String get recentLabel => 'ថ្មីៗ';
 }

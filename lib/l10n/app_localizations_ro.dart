@@ -291,4 +291,10 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Activează notificările în setările sistemului pentru a primi memento-uri.';
+
+  @override
+  String get scanShortLabel => 'Scanare';
+
+  @override
+  String get recentLabel => 'Recente';
 }

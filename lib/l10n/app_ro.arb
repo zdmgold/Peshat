@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Primește un memento dacă nu ai folosit Peshat câteva zile.",
   "reminderNotificationTitle": "Continuă-ți traducerile",
   "reminderNotificationBody": "Reia de unde ai rămas cu Peshat.",
-  "notificationPermissionDenied": "Activează notificările în setările sistemului pentru a primi memento-uri."
+  "notificationPermissionDenied": "Activează notificările în setările sistemului pentru a primi memento-uri.",
+  "scanShortLabel": "Scanare",
+  "recentLabel": "Recente"
 }

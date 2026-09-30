@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "数日間Peshatを使用していない場合にリマインダーを受け取ります。",
   "reminderNotificationTitle": "翻訳を続けましょう",
   "reminderNotificationBody": "Peshatで中断したところから再開しましょう。",
-  "notificationPermissionDenied": "リマインダーを受け取るには、システム設定で通知を有効にしてください。"
+  "notificationPermissionDenied": "リマインダーを受け取るには、システム設定で通知を有効にしてください。",
+  "scanShortLabel": "スキャン",
+  "recentLabel": "最近"
 }

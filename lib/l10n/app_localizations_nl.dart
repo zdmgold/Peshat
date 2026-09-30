@@ -291,4 +291,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Schakel meldingen in bij de systeeminstellingen om herinneringen te ontvangen.';
+
+  @override
+  String get scanShortLabel => 'Scannen';
+
+  @override
+  String get recentLabel => 'Recent';
 }

@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Dapatkan pengingat jika Anda tidak menggunakan Peshat selama beberapa hari.",
   "reminderNotificationTitle": "Lanjutkan terjemahan Anda",
   "reminderNotificationBody": "Lanjutkan dari tempat Anda berhenti di Peshat.",
-  "notificationPermissionDenied": "Aktifkan notifikasi di pengaturan sistem untuk menerima pengingat."
+  "notificationPermissionDenied": "Aktifkan notifikasi di pengaturan sistem untuk menerima pengingat.",
+  "scanShortLabel": "Pindai",
+  "recentLabel": "Terbaru"
 }

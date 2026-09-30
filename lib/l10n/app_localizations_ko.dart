@@ -291,4 +291,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => '리마인더를 받으려면 시스템 설정에서 알림을 활성화하세요.';
+
+  @override
+  String get scanShortLabel => '스캔';
+
+  @override
+  String get recentLabel => '최근';
 }

@@ -291,4 +291,10 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Attiva le notifiche nelle impostazioni di sistema per ricevere promemoria.';
+
+  @override
+  String get scanShortLabel => 'Scansiona';
+
+  @override
+  String get recentLabel => 'Recenti';
 }

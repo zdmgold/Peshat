@@ -291,4 +291,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'リマインダーを受け取るには、システム設定で通知を有効にしてください。';
+
+  @override
+  String get scanShortLabel => 'スキャン';
+
+  @override
+  String get recentLabel => '最近';
 }

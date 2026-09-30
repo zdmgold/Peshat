@@ -291,4 +291,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Hatırlatıcıları almak için sistem ayarlarından bildirimleri etkinleştirin.';
+
+  @override
+  String get scanShortLabel => 'Tara';
+
+  @override
+  String get recentLabel => 'Son';
 }

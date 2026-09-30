@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "ရက်အနည်းငယ် Peshat ကို အသုံးမပြုပါက သတိပေးချက် ရယူပါ။",
   "reminderNotificationTitle": "သင့်ဘာသာပြန်မှုများကို ဆက်လုပ်ပါ",
   "reminderNotificationBody": "Peshat တွင် ရပ်ထားသည့်နေရာမှ ဆက်လုပ်ပါ။",
-  "notificationPermissionDenied": "သတိပေးချက်များ ရရှိရန် စနစ်ဆက်တင်များတွင် အသိပေးချက်များ ဖွင့်ပါ။"
+  "notificationPermissionDenied": "သတိပေးချက်များ ရရှိရန် စနစ်ဆက်တင်များတွင် အသိပေးချက်များ ဖွင့်ပါ။",
+  "scanShortLabel": "စကင်",
+  "recentLabel": "မကြာသေးမီ"
 }

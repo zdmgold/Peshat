@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Ricevi un promemoria se non usi Peshat da qualche giorno.",
   "reminderNotificationTitle": "Continua le tue traduzioni",
   "reminderNotificationBody": "Riprendi da dove avevi lasciato con Peshat.",
-  "notificationPermissionDenied": "Attiva le notifiche nelle impostazioni di sistema per ricevere promemoria."
+  "notificationPermissionDenied": "Attiva le notifiche nelle impostazioni di sistema per ricevere promemoria.",
+  "scanShortLabel": "Scansiona",
+  "recentLabel": "Recenti"
 }

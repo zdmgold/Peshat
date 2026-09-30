@@ -291,4 +291,10 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'रिमाइन्डरहरू प्राप्त गर्न प्रणाली सेटिङहरूमा सूचनाहरू सक्षम गर्नुहोस्।';
+
+  @override
+  String get scanShortLabel => 'स्क्यान';
+
+  @override
+  String get recentLabel => 'हालैका';
 }

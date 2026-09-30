@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "如果几天未使用 Peshat，将收到提醒。",
   "reminderNotificationTitle": "继续您的翻译",
   "reminderNotificationBody": "从 Peshat 中断处继续。",
-  "notificationPermissionDenied": "请在系统设置中启用通知以接收提醒。"
+  "notificationPermissionDenied": "请在系统设置中启用通知以接收提醒。",
+  "scanShortLabel": "扫描",
+  "recentLabel": "最近"
 }

@@ -291,4 +291,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ।';
+
+  @override
+  String get scanShortLabel => 'ਸਕੈਨ';
+
+  @override
+  String get recentLabel => 'ਤਾਜ਼ਾ';
 }

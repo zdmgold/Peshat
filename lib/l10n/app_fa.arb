@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "اگر چند روز از Peshat استفاده نکردید، یادآوری دریافت کنید.",
   "reminderNotificationTitle": "ترجمه‌های خود را ادامه دهید",
   "reminderNotificationBody": "از همان‌جایی که در Peshat رها کردید ادامه دهید.",
-  "notificationPermissionDenied": "برای دریافت یادآورها، اعلان‌ها را در تنظیمات سیستم فعال کنید."
+  "notificationPermissionDenied": "برای دریافت یادآورها، اعلان‌ها را در تنظیمات سیستم فعال کنید.",
+  "scanShortLabel": "اسکن",
+  "recentLabel": "اخیر"
 }

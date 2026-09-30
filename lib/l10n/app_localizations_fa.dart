@@ -291,4 +291,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'برای دریافت یادآورها، اعلان‌ها را در تنظیمات سیستم فعال کنید.';
+
+  @override
+  String get scanShortLabel => 'اسکن';
+
+  @override
+  String get recentLabel => 'اخیر';
 }

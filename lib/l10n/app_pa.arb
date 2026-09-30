@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "ਜੇ ਤੁਸੀਂ ਕੁਝ ਦਿਨਾਂ ਤੋਂ Peshat ਨਹੀਂ ਵਰਤਿਆ ਤਾਂ ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰੋ।",
   "reminderNotificationTitle": "ਆਪਣੇ ਅਨੁਵਾਦ ਜਾਰੀ ਰੱਖੋ",
   "reminderNotificationBody": "Peshat ਨਾਲ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖੋ।",
-  "notificationPermissionDenied": "ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ।"
+  "notificationPermissionDenied": "ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ।",
+  "scanShortLabel": "ਸਕੈਨ",
+  "recentLabel": "ਤਾਜ਼ਾ"
 }

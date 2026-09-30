@@ -291,4 +291,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'ເປີດການແຈ້ງເຕືອນໃນການຕັ້ງຄ່າລະບົບເພື່ອຮັບການເຕືອນ.';
+
+  @override
+  String get scanShortLabel => 'ສະແກນ';
+
+  @override
+  String get recentLabel => 'ຫຼ້າສຸດ';
 }

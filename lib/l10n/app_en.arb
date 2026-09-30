@@ -142,5 +142,13 @@
   },
   "@notificationPermissionDenied": {
     "description": "Toast shown when the OS denies notification permission."
+  },
+  "scanShortLabel": "Scan",
+  "recentLabel": "Recent",
+  "@scanShortLabel": {
+    "description": "Label under the circular scan button on the Home screen."
+  },
+  "@recentLabel": {
+    "description": "Section header above the recent-scans preview on the Home screen."
   }
 }

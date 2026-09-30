@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "কয়েকদিন Peshat ব্যবহার না করলে অনুস্মারক পান।",
   "reminderNotificationTitle": "আপনার অনুবাদ চালিয়ে যান",
   "reminderNotificationBody": "Peshat দিয়ে যেখানে থেমেছিলেন সেখান থেকে চালিয়ে যান।",
-  "notificationPermissionDenied": "অনুস্মারক পেতে সিস্টেম সেটিংসে বিজ্ঞপ্তি চালু করুন।"
+  "notificationPermissionDenied": "অনুস্মারক পেতে সিস্টেম সেটিংসে বিজ্ঞপ্তি চালু করুন।",
+  "scanShortLabel": "স্ক্যান",
+  "recentLabel": "সাম্প্রতিক"
 }

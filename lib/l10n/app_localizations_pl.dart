@@ -291,4 +291,10 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Włącz powiadomienia w ustawieniach systemowych, aby otrzymywać przypomnienia.';
+
+  @override
+  String get scanShortLabel => 'Skanuj';
+
+  @override
+  String get recentLabel => 'Ostatnie';
 }

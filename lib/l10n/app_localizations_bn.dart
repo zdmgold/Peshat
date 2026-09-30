@@ -291,4 +291,10 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'অনুস্মারক পেতে সিস্টেম সেটিংসে বিজ্ঞপ্তি চালু করুন।';
+
+  @override
+  String get scanShortLabel => 'স্ক্যান';
+
+  @override
+  String get recentLabel => 'সাম্প্রতিক';
 }

@@ -291,4 +291,10 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'သတိပေးချက်များ ရရှိရန် စနစ်ဆက်တင်များတွင် အသိပေးချက်များ ဖွင့်ပါ။';
+
+  @override
+  String get scanShortLabel => 'စကင်';
+
+  @override
+  String get recentLabel => 'မကြာသေးမီ';
 }

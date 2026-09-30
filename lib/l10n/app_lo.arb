@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "ຮັບການເຕືອນຖ້າທ່ານບໍ່ໄດ້ໃຊ້ Peshat ສອງສາມມື້.",
   "reminderNotificationTitle": "ສືບຕໍ່ການແປຂອງທ່ານ",
   "reminderNotificationBody": "ສືບຕໍ່ຈາກຈຸດທີ່ທ່ານຢຸດກັບ Peshat.",
-  "notificationPermissionDenied": "ເປີດການແຈ້ງເຕືອນໃນການຕັ້ງຄ່າລະບົບເພື່ອຮັບການເຕືອນ."
+  "notificationPermissionDenied": "ເປີດການແຈ້ງເຕືອນໃນການຕັ້ງຄ່າລະບົບເພື່ອຮັບການເຕືອນ.",
+  "scanShortLabel": "ສະແກນ",
+  "recentLabel": "ຫຼ້າສຸດ"
 }

@@ -291,4 +291,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Включите уведомления в системных настройках, чтобы получать напоминания.';
+
+  @override
+  String get scanShortLabel => 'Сканировать';
+
+  @override
+  String get recentLabel => 'Недавние';
 }

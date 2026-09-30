@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "اگر آپ نے کئی دن Peshat استعمال نہیں کیا تو یاد دہانی حاصل کریں۔",
   "reminderNotificationTitle": "اپنے تراجم جاری رکھیں",
   "reminderNotificationBody": "Peshat میں جہاں چھوڑا تھا وہیں سے جاری رکھیں۔",
-  "notificationPermissionDenied": "یاد دہانیاں حاصل کرنے کے لیے سسٹم سیٹنگز میں اطلاعات فعال کریں۔"
+  "notificationPermissionDenied": "یاد دہانیاں حاصل کرنے کے لیے سسٹم سیٹنگز میں اطلاعات فعال کریں۔",
+  "scanShortLabel": "اسکین",
+  "recentLabel": "حالیہ"
 }

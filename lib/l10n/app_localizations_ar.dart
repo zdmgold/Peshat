@@ -291,4 +291,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'فعّل الإشعارات من إعدادات النظام لتلقي التذكيرات.';
+
+  @override
+  String get scanShortLabel => 'مسح';
+
+  @override
+  String get recentLabel => 'الأحدث';
 }

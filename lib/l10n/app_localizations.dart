@@ -726,6 +726,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Enable notifications in system settings to receive reminders.'**
   String get notificationPermissionDenied;
+
+  /// Label under the circular scan button on the Home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan'**
+  String get scanShortLabel;
+
+  /// Section header above the recent-scans preview on the Home screen.
+  ///
+  /// In en, this message translates to:
+  /// **'Recent'**
+  String get recentLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

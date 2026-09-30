@@ -291,4 +291,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Aktivieren Sie Benachrichtigungen in den Systemeinstellungen, um Erinnerungen zu erhalten.';
+
+  @override
+  String get scanShortLabel => 'Scannen';
+
+  @override
+  String get recentLabel => 'Zuletzt';
 }

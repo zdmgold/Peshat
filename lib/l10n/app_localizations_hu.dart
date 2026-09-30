@@ -291,4 +291,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Az emlékeztetők fogadásához engedélyezze az értesítéseket a rendszerbeállításokban.';
+
+  @override
+  String get scanShortLabel => 'Beolvasás';
+
+  @override
+  String get recentLabel => 'Legutóbbi';
 }

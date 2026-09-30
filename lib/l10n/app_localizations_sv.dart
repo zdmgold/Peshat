@@ -291,4 +291,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'Aktivera aviseringar i systeminställningarna för att ta emot påminnelser.';
+
+  @override
+  String get scanShortLabel => 'Skanna';
+
+  @override
+  String get recentLabel => 'Senaste';
 }

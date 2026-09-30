@@ -291,4 +291,10 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get notificationPermissionDenied => 'I-enable ang mga notification sa system settings upang makatanggap ng mga paalala.';
+
+  @override
+  String get scanShortLabel => 'I-scan';
+
+  @override
+  String get recentLabel => 'Kamakailan';
 }

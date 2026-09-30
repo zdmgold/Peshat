@@ -93,5 +93,7 @@
   "reminderNotificationsSubtitle": "Otrzymaj przypomnienie, jeśli nie korzystasz z Peshat od kilku dni.",
   "reminderNotificationTitle": "Kontynuuj tłumaczenia",
   "reminderNotificationBody": "Wróć do miejsca, w którym skończyłeś w Peshat.",
-  "notificationPermissionDenied": "Włącz powiadomienia w ustawieniach systemowych, aby otrzymywać przypomnienia."
+  "notificationPermissionDenied": "Włącz powiadomienia w ustawieniach systemowych, aby otrzymywać przypomnienia.",
+  "scanShortLabel": "Skanuj",
+  "recentLabel": "Ostatnie"
 }
