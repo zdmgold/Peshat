@@ -243,7 +243,7 @@ class _SectionHeader extends StatelessWidget {
 }
 
 // ---------------------------------------------------------------------------
-// History row — iOS press feedback, Dismissible for swipe-to-delete
+// History row — trailing chevron, minHeight 76, Dismissible swipe-to-delete
 // ---------------------------------------------------------------------------
 
 class _HistoryRow extends StatefulWidget {
@@ -312,77 +312,93 @@ class _HistoryRowState extends State<_HistoryRow> {
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Padding(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Spacing.md,
-                  vertical: Spacing.sm,
-                ),
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    Row(
-                      children: [
-                        Text(
-                          timeLabel,
-                          style: AppTypography.chrome.copyWith(
-                            fontSize: 12,
-                            color: textTertiary,
-                          ),
-                        ),
-                        const SizedBox(width: Spacing.sm),
-                        Container(
-                          width: 3,
-                          height: 3,
-                          decoration: BoxDecoration(
-                            color: textTertiary,
-                            shape: BoxShape.circle,
-                          ),
-                        ),
-                        const SizedBox(width: Spacing.sm),
-                        Container(
-                          padding: const EdgeInsets.symmetric(
-                            horizontal: 6,
-                            vertical: 2,
-                          ),
-                          decoration: BoxDecoration(
-                            color: widget.isDark
-                                ? AppColors.bgTertiaryDark
-                                : AppColors.bgTertiaryLight,
-                            borderRadius: BorderRadius.circular(6),
-                          ),
-                          child: Text(
-                            chipLabel,
-                            style: AppTypography.sourceChip.copyWith(
-                              fontSize: 11,
-                              fontWeight: FontWeight.w500,
-                              color: textSecondary,
+              ConstrainedBox(
+                constraints: const BoxConstraints(minHeight: 76),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: Spacing.md,
+                    vertical: Spacing.sm,
+                  ),
+                  child: Row(
+                    children: [
+                      Expanded(
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Row(
+                              children: [
+                                Text(
+                                  timeLabel,
+                                  style: AppTypography.chrome.copyWith(
+                                    fontSize: 12,
+                                    color: textTertiary,
+                                  ),
+                                ),
+                                const SizedBox(width: Spacing.sm),
+                                Container(
+                                  width: 3,
+                                  height: 3,
+                                  decoration: BoxDecoration(
+                                    color: textTertiary,
+                                    shape: BoxShape.circle,
+                                  ),
+                                ),
+                                const SizedBox(width: Spacing.sm),
+                                Container(
+                                  padding: const EdgeInsets.symmetric(
+                                    horizontal: 6,
+                                    vertical: 2,
+                                  ),
+                                  decoration: BoxDecoration(
+                                    color: widget.isDark
+                                        ? AppColors.bgTertiaryDark
+                                        : AppColors.bgTertiaryLight,
+                                    borderRadius: BorderRadius.circular(6),
+                                  ),
+                                  child: Text(
+                                    chipLabel,
+                                    style: AppTypography.sourceChip.copyWith(
+                                      fontSize: 11,
+                                      fontWeight: FontWeight.w500,
+                                      color: textSecondary,
+                                    ),
+                                  ),
+                                ),
+                              ],
                             ),
-                          ),
+                            const SizedBox(height: 6),
+                            Text(
+                              widget.result.sourceText,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppTypography.chrome.copyWith(
+                                fontSize: 16,
+                                color: textPrimary,
+                              ),
+                            ),
+                            const SizedBox(height: 4),
+                            Text(
+                              widget.result.translatedText,
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                              style: AppTypography.body.copyWith(
+                                fontSize: 14,
+                                color: textSecondary,
+                              ),
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    const SizedBox(height: 6),
-                    Text(
-                      widget.result.sourceText,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.chrome.copyWith(
-                        fontSize: 16,
-                        color: textPrimary,
                       ),
-                    ),
-                    const SizedBox(height: 4),
-                    Text(
-                      widget.result.translatedText,
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.body.copyWith(
-                        fontSize: 14,
-                        color: textSecondary,
+                      const SizedBox(width: Spacing.sm),
+                      PeshatIcon(
+                        icon: AppIcons.chevronForward,
+                        size: 16,
+                        color: textTertiary,
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               if (!widget.isLast)
