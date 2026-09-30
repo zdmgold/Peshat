@@ -23,6 +23,12 @@ class LanguagePickerScreen extends StatefulWidget {
   State<LanguagePickerScreen> createState() => _LanguagePickerScreenState();
 }
 
+class _LetterGroup {
+  final String letter;
+  final List<Language> languages;
+  const _LetterGroup(this.letter, this.languages);
+}
+
 class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
   final TextEditingController _search = TextEditingController();
   String _query = '';
@@ -67,6 +73,28 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     return out;
   }
 
+  List<_LetterGroup> _groupByLetter(List<Language> languages) {
+    final groups = <_LetterGroup>[];
+    String? currentLetter;
+    var currentList = <Language>[];
+    for (final lang in languages) {
+      final letter = lang.englishName.substring(0, 1).toUpperCase();
+      if (letter != currentLetter) {
+        if (currentList.isNotEmpty) {
+          groups.add(_LetterGroup(currentLetter!, currentList));
+        }
+        currentLetter = letter;
+        currentList = [lang];
+      } else {
+        currentList.add(lang);
+      }
+    }
+    if (currentList.isNotEmpty) {
+      groups.add(_LetterGroup(currentLetter!, currentList));
+    }
+    return groups;
+  }
+
   @override
   Widget build(BuildContext context) {
     final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
@@ -80,10 +108,13 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
     final inputFill =
         isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
+    final bgPrimary =
+        isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
 
     final all = _all;
     final filtered = _filtered(all);
     final recents = _recentList(all);
+    final groups = _groupByLetter(filtered);
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
@@ -101,52 +132,118 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         top: false,
         child: Column(
           children: [
-            Padding(
-              padding: const EdgeInsets.fromLTRB(
-                Spacing.md,
-                Spacing.sm,
-                Spacing.md,
-                Spacing.sm,
-              ),
-              child: CupertinoSearchTextField(
-                controller: _search,
-                onChanged: (v) => setState(() => _query = v),
-                placeholder: l10n.searchLanguagesHint,
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 15,
-                  color: textPrimary,
-                ),
-                placeholderStyle: AppTypography.chrome.copyWith(
-                  fontSize: 15,
-                  color: textTertiary,
-                ),
-                cursorColor: accent,
-                itemColor: textTertiary,
-                backgroundColor: inputFill,
-                borderRadius: BorderRadius.circular(12),
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Spacing.md,
-                  vertical: 10,
-                ),
-              ),
-            ),
             Expanded(
-              child: filtered.isEmpty
-                  ? _EmptySearchState(
-                      title: l10n.noResults,
-                      subtitle: l10n.noResultsSubtitle,
-                      isDark: isDark,
-                    )
-                  : _buildList(
-                      context,
-                      filtered: filtered,
-                      recents: recents,
-                      l10n: l10n,
-                      textPrimary: textPrimary,
-                      textSecondary: textSecondary,
-                      textTertiary: textTertiary,
-                      accent: accent,
+              child: CustomScrollView(
+                slivers: [
+                  // Search field — scrolls away with the list.
+                  SliverToBoxAdapter(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(
+                        Spacing.md,
+                        Spacing.sm,
+                        Spacing.md,
+                        Spacing.sm,
+                      ),
+                      child: CupertinoSearchTextField(
+                        controller: _search,
+                        onChanged: (v) => setState(() => _query = v),
+                        placeholder: l10n.searchLanguagesHint,
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 15,
+                          color: textPrimary,
+                        ),
+                        placeholderStyle: AppTypography.chrome.copyWith(
+                          fontSize: 15,
+                          color: textTertiary,
+                        ),
+                        cursorColor: accent,
+                        itemColor: textTertiary,
+                        backgroundColor: inputFill,
+                        borderRadius: BorderRadius.circular(12),
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: Spacing.md,
+                          vertical: 10,
+                        ),
+                      ),
                     ),
+                  ),
+
+                  // Empty search state.
+                  if (filtered.isEmpty)
+                    SliverFillRemaining(
+                      hasScrollBody: false,
+                      child: _EmptySearchState(
+                        title: l10n.noResults,
+                        subtitle: l10n.noResultsSubtitle,
+                        isDark: isDark,
+                      ),
+                    )
+                  else ...[
+                    // RECENT section — only when not searching.
+                    if (recents.isNotEmpty) ...[
+                      SliverToBoxAdapter(
+                        child: _SectionLabel(
+                          text: l10n.recentLanguagesLabel,
+                          color: textTertiary,
+                        ),
+                      ),
+                      SliverList(
+                        delegate: SliverChildBuilderDelegate(
+                          (context, i) => _Row(
+                            language: recents[i],
+                            selected: recents[i].code == widget.current,
+                            textPrimary: textPrimary,
+                            textSecondary: textSecondary,
+                            accent: accent,
+                            onTap: () =>
+                                Navigator.pop(context, recents[i].code),
+                          ),
+                          childCount: recents.length,
+                        ),
+                      ),
+                      SliverToBoxAdapter(
+                        child: _SectionLabel(
+                          text: l10n.allLanguagesLabel,
+                          color: textTertiary,
+                        ),
+                      ),
+                    ],
+
+                    // Letter-grouped sections with sticky headers.
+                    for (final group in groups) ...[
+                      SliverPersistentHeader(
+                        pinned: true,
+                        delegate: _LetterHeaderDelegate(
+                          letter: group.letter,
+                          textTertiary: textTertiary,
+                          background: bgPrimary,
+                        ),
+                      ),
+                      SliverList(
+                        delegate: SliverChildBuilderDelegate(
+                          (context, i) => _Row(
+                            language: group.languages[i],
+                            selected:
+                                group.languages[i].code == widget.current,
+                            textPrimary: textPrimary,
+                            textSecondary: textSecondary,
+                            accent: accent,
+                            onTap: () => Navigator.pop(
+                              context,
+                              group.languages[i].code,
+                            ),
+                          ),
+                          childCount: group.languages.length,
+                        ),
+                      ),
+                    ],
+
+                    const SliverToBoxAdapter(
+                      child: SizedBox(height: Spacing.xl),
+                    ),
+                  ],
+                ],
+              ),
             ),
             const AdSlot(),
           ],
@@ -154,64 +251,65 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
       ),
     );
   }
+}
 
-  Widget _buildList(
-    BuildContext context, {
-    required List<Language> filtered,
-    required List<Language> recents,
-    required AppLocalizations l10n,
-    required Color textPrimary,
-    required Color textSecondary,
-    required Color textTertiary,
-    required Color accent,
-  }) {
-    final rows = <Widget>[];
+// ---------------------------------------------------------------------------
+// Sticky letter header — pinned to the top of the viewport while its
+// section scrolls. Replaced by the next letter's header as it arrives.
+// ---------------------------------------------------------------------------
 
-    if (recents.isNotEmpty) {
-      rows.add(_SectionLabel(
-        text: l10n.recentLanguagesLabel,
-        color: textTertiary,
-      ));
-      for (final lang in recents) {
-        rows.add(_Row(
-          language: lang,
-          selected: lang.code == widget.current,
-          textPrimary: textPrimary,
-          textSecondary: textSecondary,
-          accent: accent,
-          onTap: () => Navigator.pop(context, lang.code),
-        ));
-      }
-      rows.add(const SizedBox(height: Spacing.md));
-      rows.add(_SectionLabel(
-        text: l10n.allLanguagesLabel,
-        color: textTertiary,
-      ));
-    }
+class _LetterHeaderDelegate extends SliverPersistentHeaderDelegate {
+  final String letter;
+  final Color textTertiary;
+  final Color background;
 
-    String? lastLetter;
-    for (final lang in filtered) {
-      final letter = lang.englishName.substring(0, 1).toUpperCase();
-      if (letter != lastLetter) {
-        lastLetter = letter;
-        rows.add(_LetterLabel(letter: letter, color: textTertiary));
-      }
-      rows.add(_Row(
-        language: lang,
-        selected: lang.code == widget.current,
-        textPrimary: textPrimary,
-        textSecondary: textSecondary,
-        accent: accent,
-        onTap: () => Navigator.pop(context, lang.code),
-      ));
-    }
+  const _LetterHeaderDelegate({
+    required this.letter,
+    required this.textTertiary,
+    required this.background,
+  });
 
-    return ListView(
-      padding: const EdgeInsets.only(bottom: Spacing.xl),
-      children: rows,
+  static const double _height = 24;
+
+  @override
+  double get minExtent => _height;
+
+  @override
+  double get maxExtent => _height;
+
+  @override
+  Widget build(
+    BuildContext context,
+    double shrinkOffset,
+    bool overlapsContent,
+  ) {
+    return Container(
+      height: _height,
+      color: background,
+      alignment: Alignment.centerLeft,
+      padding: const EdgeInsets.only(left: Spacing.md, bottom: 4),
+      child: Text(
+        letter,
+        style: AppTypography.chrome.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          color: textTertiary,
+        ),
+      ),
     );
   }
+
+  @override
+  bool shouldRebuild(covariant _LetterHeaderDelegate oldDelegate) {
+    return oldDelegate.letter != letter ||
+        oldDelegate.textTertiary != textTertiary ||
+        oldDelegate.background != background;
+  }
 }
+
+// ---------------------------------------------------------------------------
+// Section label — RECENT / ALL LANGUAGES headers, not sticky.
+// ---------------------------------------------------------------------------
 
 class _SectionLabel extends StatelessWidget {
   final String text;
@@ -240,31 +338,9 @@ class _SectionLabel extends StatelessWidget {
   }
 }
 
-class _LetterLabel extends StatelessWidget {
-  final String letter;
-  final Color color;
-  const _LetterLabel({required this.letter, required this.color});
-
-  @override
-  Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(
-        Spacing.md,
-        Spacing.sm,
-        Spacing.md,
-        Spacing.xs,
-      ),
-      child: Text(
-        letter,
-        style: AppTypography.chrome.copyWith(
-          fontSize: 12,
-          fontWeight: FontWeight.w600,
-          color: color,
-        ),
-      ),
-    );
-  }
-}
+// ---------------------------------------------------------------------------
+// Row
+// ---------------------------------------------------------------------------
 
 class _Row extends StatefulWidget {
   final Language language;
@@ -351,6 +427,10 @@ class _RowState extends State<_Row> {
     );
   }
 }
+
+// ---------------------------------------------------------------------------
+// Empty search state
+// ---------------------------------------------------------------------------
 
 class _EmptySearchState extends StatelessWidget {
   final String title;
