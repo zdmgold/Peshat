@@ -11,10 +11,11 @@ import '../l10n/app_localizations.dart';
 /// Cupertino-native replacement for Material's `showLicensePage`.
 ///
 /// Reads [LicenseRegistry.licenses], groups entries by the first package
-/// name each entry references, and renders one card per package. Package
-/// versions are not shown: `LicenseEntry` carries no version data, and
-/// `PackageInfo` provides only the app's own version, which appears once
-/// at the top.
+/// name each entry references, and renders one package per section. The
+/// package name is a section label; its paragraphs are inside a body card.
+/// Package versions are not shown: `LicenseEntry` carries no version data,
+/// and `PackageInfo` provides only the app's own version, which appears
+/// once at the top.
 class LicenseScreen extends StatefulWidget {
   const LicenseScreen({super.key});
 
@@ -92,8 +93,6 @@ class _LicenseScreenState extends State<LicenseScreen> {
     required AppLocalizations l10n,
     required bool isDark,
   }) {
-    final textPrimary =
-        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
     final textSecondary =
         isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final textTertiary =
@@ -142,6 +141,7 @@ class _LicenseScreenState extends State<LicenseScreen> {
       ),
       itemCount: groups.length + 1,
       itemBuilder: (context, i) {
+        // Row 0 — version line, left-aligned, outside any card.
         if (i == 0) {
           if (_version.isEmpty) return const SizedBox.shrink();
           return Padding(
@@ -158,41 +158,53 @@ class _LicenseScreenState extends State<LicenseScreen> {
 
         final g = groups[i - 1];
         return Padding(
-          padding: const EdgeInsets.only(bottom: Spacing.md),
-          child: Container(
-            padding: const EdgeInsets.all(Spacing.md),
-            decoration: BoxDecoration(
-              color: cardBg,
-              borderRadius: BorderRadius.circular(12),
-              border: Border.all(color: border, width: 0.5),
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(
-                  '${l10n.licensePackageLabel}: ${g.packageName}',
+          padding: const EdgeInsets.only(bottom: 12),
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              // Package name — section-style header above the card.
+              Padding(
+                padding: const EdgeInsets.only(
+                  left: Spacing.xs,
+                  bottom: Spacing.sm,
+                ),
+                child: Text(
+                  g.packageName.toUpperCase(),
                   style: AppTypography.chrome.copyWith(
-                    fontSize: 14,
+                    fontSize: 12,
                     fontWeight: FontWeight.w600,
-                    color: textPrimary,
+                    letterSpacing: 0.6,
+                    color: textTertiary,
                   ),
                 ),
-                const SizedBox(height: Spacing.sm),
-                ...g.paragraphs.map(
-                  (p) => Padding(
-                    padding: const EdgeInsets.only(bottom: Spacing.sm),
-                    child: Text(
-                      p,
-                      style: AppTypography.chrome.copyWith(
-                        fontSize: 12,
-                        height: 1.4,
-                        color: textSecondary,
+              ),
+              // Body card.
+              Container(
+                padding: const EdgeInsets.all(Spacing.md),
+                decoration: BoxDecoration(
+                  color: cardBg,
+                  borderRadius: BorderRadius.circular(12),
+                  border: Border.all(color: border, width: 0.5),
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    for (int j = 0; j < g.paragraphs.length; j++) ...[
+                      Text(
+                        g.paragraphs[j],
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 13,
+                          height: 1.5,
+                          color: textSecondary,
+                        ),
                       ),
-                    ),
-                  ),
+                      if (j < g.paragraphs.length - 1)
+                        const SizedBox(height: 12),
+                    ],
+                  ],
                 ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },
