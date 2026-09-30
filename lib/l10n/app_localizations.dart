@@ -690,6 +690,42 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Rate Peshat'**
   String get rateAppLabel;
+
+  /// Settings section header for the notifications group.
+  ///
+  /// In en, this message translates to:
+  /// **'Notifications'**
+  String get notificationsSectionLabel;
+
+  /// Title of the toggle row that enables reminder notifications.
+  ///
+  /// In en, this message translates to:
+  /// **'Reminders'**
+  String get reminderNotificationsLabel;
+
+  /// Subtitle explaining what reminder notifications do.
+  ///
+  /// In en, this message translates to:
+  /// **'Get a reminder if you haven\'t used Peshat in a few days.'**
+  String get reminderNotificationsSubtitle;
+
+  /// Notification title shown when the app has been unused for days.
+  ///
+  /// In en, this message translates to:
+  /// **'Continue your translations'**
+  String get reminderNotificationTitle;
+
+  /// Notification body shown when the app has been unused for days.
+  ///
+  /// In en, this message translates to:
+  /// **'Pick up where you left off with Peshat.'**
+  String get reminderNotificationBody;
+
+  /// Toast shown when the OS denies notification permission.
+  ///
+  /// In en, this message translates to:
+  /// **'Enable notifications in system settings to receive reminders.'**
+  String get notificationPermissionDenied;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

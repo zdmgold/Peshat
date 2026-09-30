@@ -273,4 +273,22 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshatを評価';
+
+  @override
+  String get notificationsSectionLabel => '通知';
+
+  @override
+  String get reminderNotificationsLabel => 'リマインダー';
+
+  @override
+  String get reminderNotificationsSubtitle => '数日間Peshatを使用していない場合にリマインダーを受け取ります。';
+
+  @override
+  String get reminderNotificationTitle => '翻訳を続けましょう';
+
+  @override
+  String get reminderNotificationBody => 'Peshatで中断したところから再開しましょう。';
+
+  @override
+  String get notificationPermissionDenied => 'リマインダーを受け取るには、システム設定で通知を有効にしてください。';
 }

@@ -273,4 +273,22 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Beri rating Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Notifikasi';
+
+  @override
+  String get reminderNotificationsLabel => 'Pengingat';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Dapatkan pengingat jika Anda tidak menggunakan Peshat selama beberapa hari.';
+
+  @override
+  String get reminderNotificationTitle => 'Lanjutkan terjemahan Anda';
+
+  @override
+  String get reminderNotificationBody => 'Lanjutkan dari tempat Anda berhenti di Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'Aktifkan notifikasi di pengaturan sistem untuk menerima pengingat.';
 }

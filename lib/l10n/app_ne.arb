@@ -87,5 +87,11 @@
   "showMenuTooltip": "मेनु देखाउनुहोस्",
   "licensePackageLabel": "प्याकेज",
   "licenseEmptyLabel": "कुनै इजाजतपत्र जानकारी उपलब्ध छैन।",
-  "rateAppLabel": "Peshat लाई मूल्याङ्कन गर्नुहोस्"
+  "rateAppLabel": "Peshat लाई मूल्याङ्कन गर्नुहोस्",
+  "notificationsSectionLabel": "सूचनाहरू",
+  "reminderNotificationsLabel": "रिमाइन्डरहरू",
+  "reminderNotificationsSubtitle": "केही दिन Peshat प्रयोग नगरेमा रिमाइन्डर प्राप्त गर्नुहोस्।",
+  "reminderNotificationTitle": "आफ्ना अनुवादहरू जारी राख्नुहोस्",
+  "reminderNotificationBody": "Peshat मा जहाँ छोड्नुभयो त्यहींबाट जारी राख्नुहोस्।",
+  "notificationPermissionDenied": "रिमाइन्डरहरू प्राप्त गर्न प्रणाली सेटिङहरूमा सूचनाहरू सक्षम गर्नुहोस्।"
 }

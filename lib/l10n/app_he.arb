@@ -87,5 +87,11 @@
   "showMenuTooltip": "הצג תפריט",
   "licensePackageLabel": "חבילה",
   "licenseEmptyLabel": "אין מידע זמין על רישיון.",
-  "rateAppLabel": "דרג את Peshat"
+  "rateAppLabel": "דרג את Peshat",
+  "notificationsSectionLabel": "התראות",
+  "reminderNotificationsLabel": "תזכורות",
+  "reminderNotificationsSubtitle": "קבלו תזכורת אם לא השתמשתם ב-Peshat כמה ימים.",
+  "reminderNotificationTitle": "המשיכו את התרגומים שלכם",
+  "reminderNotificationBody": "המשיכו מהמקום שבו הפסקתם ב-Peshat.",
+  "notificationPermissionDenied": "הפעילו התראות בהגדרות המערכת כדי לקבל תזכורות."
 }

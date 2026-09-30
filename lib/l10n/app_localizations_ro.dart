@@ -273,4 +273,22 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Evaluează Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Notificări';
+
+  @override
+  String get reminderNotificationsLabel => 'Memento-uri';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Primește un memento dacă nu ai folosit Peshat câteva zile.';
+
+  @override
+  String get reminderNotificationTitle => 'Continuă-ți traducerile';
+
+  @override
+  String get reminderNotificationBody => 'Reia de unde ai rămas cu Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'Activează notificările în setările sistemului pentru a primi memento-uri.';
 }

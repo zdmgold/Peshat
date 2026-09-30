@@ -273,4 +273,22 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'قيّم Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'الإشعارات';
+
+  @override
+  String get reminderNotificationsLabel => 'التذكيرات';
+
+  @override
+  String get reminderNotificationsSubtitle => 'احصل على تذكير إذا لم تستخدم Peshat لعدة أيام.';
+
+  @override
+  String get reminderNotificationTitle => 'تابع ترجماتك';
+
+  @override
+  String get reminderNotificationBody => 'أكمل من حيث توقفت مع Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'فعّل الإشعارات من إعدادات النظام لتلقي التذكيرات.';
 }

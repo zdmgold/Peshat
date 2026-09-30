@@ -273,4 +273,22 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshat ਨੂੰ ਰੇਟ ਕਰੋ';
+
+  @override
+  String get notificationsSectionLabel => 'ਸੂਚਨਾਵਾਂ';
+
+  @override
+  String get reminderNotificationsLabel => 'ਰਿਮਾਈਂਡਰ';
+
+  @override
+  String get reminderNotificationsSubtitle => 'ਜੇ ਤੁਸੀਂ ਕੁਝ ਦਿਨਾਂ ਤੋਂ Peshat ਨਹੀਂ ਵਰਤਿਆ ਤਾਂ ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰੋ।';
+
+  @override
+  String get reminderNotificationTitle => 'ਆਪਣੇ ਅਨੁਵਾਦ ਜਾਰੀ ਰੱਖੋ';
+
+  @override
+  String get reminderNotificationBody => 'Peshat ਨਾਲ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖੋ।';
+
+  @override
+  String get notificationPermissionDenied => 'ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ।';
 }

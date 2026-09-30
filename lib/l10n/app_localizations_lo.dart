@@ -273,4 +273,22 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'ໃຫ້ຄະແນນ Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'ການແຈ້ງເຕືອນ';
+
+  @override
+  String get reminderNotificationsLabel => 'ການເຕືອນ';
+
+  @override
+  String get reminderNotificationsSubtitle => 'ຮັບການເຕືອນຖ້າທ່ານບໍ່ໄດ້ໃຊ້ Peshat ສອງສາມມື້.';
+
+  @override
+  String get reminderNotificationTitle => 'ສືບຕໍ່ການແປຂອງທ່ານ';
+
+  @override
+  String get reminderNotificationBody => 'ສືບຕໍ່ຈາກຈຸດທີ່ທ່ານຢຸດກັບ Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'ເປີດການແຈ້ງເຕືອນໃນການຕັ້ງຄ່າລະບົບເພື່ອຮັບການເຕືອນ.';
 }

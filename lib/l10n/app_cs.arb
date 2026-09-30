@@ -87,5 +87,11 @@
   "showMenuTooltip": "Zobrazit nabídku",
   "licensePackageLabel": "Balíček",
   "licenseEmptyLabel": "Nejsou k dispozici žádné informace o licenci.",
-  "rateAppLabel": "Ohodnotit Peshat"
+  "rateAppLabel": "Ohodnotit Peshat",
+  "notificationsSectionLabel": "Oznámení",
+  "reminderNotificationsLabel": "Připomínky",
+  "reminderNotificationsSubtitle": "Dostávejte připomínku, pokud Peshat nepoužíváte několik dní.",
+  "reminderNotificationTitle": "Pokračujte v překladech",
+  "reminderNotificationBody": "Pokračujte tam, kde jste skončili v Peshat.",
+  "notificationPermissionDenied": "Chcete-li dostávat připomínky, povolte oznámení v systémovém nastavení."
 }

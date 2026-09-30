@@ -87,5 +87,11 @@
   "showMenuTooltip": "Tampilkan menu",
   "licensePackageLabel": "Paket",
   "licenseEmptyLabel": "Tidak ada informasi lisensi.",
-  "rateAppLabel": "Beri rating Peshat"
+  "rateAppLabel": "Beri rating Peshat",
+  "notificationsSectionLabel": "Notifikasi",
+  "reminderNotificationsLabel": "Pengingat",
+  "reminderNotificationsSubtitle": "Dapatkan pengingat jika Anda tidak menggunakan Peshat selama beberapa hari.",
+  "reminderNotificationTitle": "Lanjutkan terjemahan Anda",
+  "reminderNotificationBody": "Lanjutkan dari tempat Anda berhenti di Peshat.",
+  "notificationPermissionDenied": "Aktifkan notifikasi di pengaturan sistem untuk menerima pengingat."
 }

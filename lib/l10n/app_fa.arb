@@ -87,5 +87,11 @@
   "showMenuTooltip": "نمایش منو",
   "licensePackageLabel": "بسته",
   "licenseEmptyLabel": "اطلاعات مجوز موجود نیست.",
-  "rateAppLabel": "به Peshat امتیاز دهید"
+  "rateAppLabel": "به Peshat امتیاز دهید",
+  "notificationsSectionLabel": "اعلان‌ها",
+  "reminderNotificationsLabel": "یادآورها",
+  "reminderNotificationsSubtitle": "اگر چند روز از Peshat استفاده نکردید، یادآوری دریافت کنید.",
+  "reminderNotificationTitle": "ترجمه‌های خود را ادامه دهید",
+  "reminderNotificationBody": "از همان‌جایی که در Peshat رها کردید ادامه دهید.",
+  "notificationPermissionDenied": "برای دریافت یادآورها، اعلان‌ها را در تنظیمات سیستم فعال کنید."
 }

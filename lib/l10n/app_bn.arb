@@ -87,5 +87,11 @@
   "showMenuTooltip": "মেনু দেখান",
   "licensePackageLabel": "প্যাকেজ",
   "licenseEmptyLabel": "কোনো লাইসেন্স তথ্য নেই।",
-  "rateAppLabel": "Peshat রেটিং দিন"
+  "rateAppLabel": "Peshat রেটিং দিন",
+  "notificationsSectionLabel": "বিজ্ঞপ্তি",
+  "reminderNotificationsLabel": "অনুস্মারক",
+  "reminderNotificationsSubtitle": "কয়েকদিন Peshat ব্যবহার না করলে অনুস্মারক পান।",
+  "reminderNotificationTitle": "আপনার অনুবাদ চালিয়ে যান",
+  "reminderNotificationBody": "Peshat দিয়ে যেখানে থেমেছিলেন সেখান থেকে চালিয়ে যান।",
+  "notificationPermissionDenied": "অনুস্মারক পেতে সিস্টেম সেটিংসে বিজ্ঞপ্তি চালু করুন।"
 }

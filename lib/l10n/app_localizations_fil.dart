@@ -273,4 +273,22 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'I-rate ang Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Mga notification';
+
+  @override
+  String get reminderNotificationsLabel => 'Mga paalala';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Makatanggap ng paalala kung hindi mo ginamit ang Peshat sa ilang araw.';
+
+  @override
+  String get reminderNotificationTitle => 'Ipagpatuloy ang iyong mga pagsasalin';
+
+  @override
+  String get reminderNotificationBody => 'Ipagpatuloy kung saan ka tumigil sa Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'I-enable ang mga notification sa system settings upang makatanggap ng mga paalala.';
 }

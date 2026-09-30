@@ -87,5 +87,11 @@
   "showMenuTooltip": "Visa meny",
   "licensePackageLabel": "Paket",
   "licenseEmptyLabel": "Ingen licensinformation tillgänglig.",
-  "rateAppLabel": "Betygsätt Peshat"
+  "rateAppLabel": "Betygsätt Peshat",
+  "notificationsSectionLabel": "Aviseringar",
+  "reminderNotificationsLabel": "Påminnelser",
+  "reminderNotificationsSubtitle": "Få en påminnelse om du inte har använt Peshat på några dagar.",
+  "reminderNotificationTitle": "Fortsätt dina översättningar",
+  "reminderNotificationBody": "Återuppta där du slutade med Peshat.",
+  "notificationPermissionDenied": "Aktivera aviseringar i systeminställningarna för att ta emot påminnelser."
 }

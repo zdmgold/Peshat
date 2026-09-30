@@ -87,5 +87,11 @@
   "showMenuTooltip": "मेनू दिखाएँ",
   "licensePackageLabel": "पैकेज",
   "licenseEmptyLabel": "कोई लाइसेंस जानकारी उपलब्ध नहीं है।",
-  "rateAppLabel": "Peshat को रेट करें"
+  "rateAppLabel": "Peshat को रेट करें",
+  "notificationsSectionLabel": "सूचनाएँ",
+  "reminderNotificationsLabel": "अनुस्मारक",
+  "reminderNotificationsSubtitle": "यदि आपने कुछ दिनों से Peshat का उपयोग नहीं किया है तो अनुस्मारक प्राप्त करें।",
+  "reminderNotificationTitle": "अपने अनुवाद जारी रखें",
+  "reminderNotificationBody": "Peshat के साथ जहाँ छोड़ा था वहीं से जारी रखें।",
+  "notificationPermissionDenied": "अनुस्मारक प्राप्त करने के लिए सिस्टम सेटिंग्स में सूचनाएँ सक्षम करें।"
 }

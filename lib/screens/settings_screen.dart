@@ -11,6 +11,7 @@ import '../core/providers/purchase_provider.dart';
 import '../core/providers/settings_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/ui_locale_provider.dart';
+import '../core/providers/notification_provider.dart';
 import '../core/services/iap_service.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
@@ -39,6 +40,7 @@ class SettingsScreen extends StatefulWidget {
   final SettingsProvider settings;
   final HistoryProvider history;
   final UiLocaleProvider uiLocale;
+  final NotificationProvider notification;
 
   const SettingsScreen({
     super.key,
@@ -47,6 +49,7 @@ class SettingsScreen extends StatefulWidget {
     required this.settings,
     required this.history,
     required this.uiLocale,
+    required this.notification,
   });
 
   @override
@@ -270,6 +273,41 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         title: Text(l10n.historyLabel),
                         trailing: _kChevron,
                         onTap: _openHistory,
+                      ),
+                    ],
+                  ),
+
+                  // --- Notifications ---
+                  CupertinoListSection.insetGrouped(
+                    header:
+                        Text(l10n.notificationsSectionLabel.toUpperCase()),
+                    children: [
+                      ValueListenableBuilder<bool>(
+                        valueListenable: widget.notification,
+                        builder: (_, enabled, __) => CupertinoListTile(
+                          leading: const PeshatIcon(
+                              icon: AppIcons.notifications),
+                          title: Text(l10n.reminderNotificationsLabel),
+                          subtitle:
+                              Text(l10n.reminderNotificationsSubtitle),
+                          trailing: CupertinoSwitch(
+                            value: enabled,
+                            onChanged: (v) async {
+                              if (v) {
+                                final granted =
+                                    await widget.notification.enable();
+                                if (!granted && context.mounted) {
+                                  CupertinoToast.show(
+                                    context,
+                                    l10n.notificationPermissionDenied,
+                                  );
+                                }
+                              } else {
+                                await widget.notification.disable();
+                              }
+                            },
+                          ),
+                        ),
                       ),
                     ],
                   ),

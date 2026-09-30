@@ -118,5 +118,29 @@
   "rateAppLabel": "Rate Peshat",
   "@rateAppLabel": {
     "description": "Settings row that opens the OS in-app review sheet."
+  },
+  "notificationsSectionLabel": "Notifications",
+  "reminderNotificationsLabel": "Reminders",
+  "reminderNotificationsSubtitle": "Get a reminder if you haven't used Peshat in a few days.",
+  "reminderNotificationTitle": "Continue your translations",
+  "reminderNotificationBody": "Pick up where you left off with Peshat.",
+  "notificationPermissionDenied": "Enable notifications in system settings to receive reminders.",
+  "@notificationsSectionLabel": {
+    "description": "Settings section header for the notifications group."
+  },
+  "@reminderNotificationsLabel": {
+    "description": "Title of the toggle row that enables reminder notifications."
+  },
+  "@reminderNotificationsSubtitle": {
+    "description": "Subtitle explaining what reminder notifications do."
+  },
+  "@reminderNotificationTitle": {
+    "description": "Notification title shown when the app has been unused for days."
+  },
+  "@reminderNotificationBody": {
+    "description": "Notification body shown when the app has been unused for days."
+  },
+  "@notificationPermissionDenied": {
+    "description": "Toast shown when the OS denies notification permission."
   }
 }

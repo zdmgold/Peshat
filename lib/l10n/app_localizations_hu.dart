@@ -273,4 +273,22 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshat értékelése';
+
+  @override
+  String get notificationsSectionLabel => 'Értesítések';
+
+  @override
+  String get reminderNotificationsLabel => 'Emlékeztetők';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Kapjon emlékeztetőt, ha néhány napig nem használta a Peshat-ot.';
+
+  @override
+  String get reminderNotificationTitle => 'Folytassa fordítéseit';
+
+  @override
+  String get reminderNotificationBody => 'Folytassa ott, ahol abbahagyta a Peshat-tal.';
+
+  @override
+  String get notificationPermissionDenied => 'Az emlékeztetők fogadásához engedélyezze az értesítéseket a rendszerbeállításokban.';
 }

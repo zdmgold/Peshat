@@ -87,5 +87,11 @@
   "showMenuTooltip": "메뉴 표시",
   "licensePackageLabel": "패키지",
   "licenseEmptyLabel": "라이선스 정보가 없습니다.",
-  "rateAppLabel": "Peshat 평가하기"
+  "rateAppLabel": "Peshat 평가하기",
+  "notificationsSectionLabel": "알림",
+  "reminderNotificationsLabel": "리마인더",
+  "reminderNotificationsSubtitle": "며칠 동안 Peshat을 사용하지 않으면 알림을 받습니다.",
+  "reminderNotificationTitle": "번역을 계속하세요",
+  "reminderNotificationBody": "Peshat에서 중단한 곳에서 이어가세요.",
+  "notificationPermissionDenied": "리마인더를 받으려면 시스템 설정에서 알림을 활성화하세요."
 }

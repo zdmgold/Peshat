@@ -87,5 +87,11 @@
   "showMenuTooltip": "Hiện menu",
   "licensePackageLabel": "Gói",
   "licenseEmptyLabel": "Không có thông tin giấy phép.",
-  "rateAppLabel": "Đánh giá Peshat"
+  "rateAppLabel": "Đánh giá Peshat",
+  "notificationsSectionLabel": "Thông báo",
+  "reminderNotificationsLabel": "Nhắc nhở",
+  "reminderNotificationsSubtitle": "Nhận nhắc nhở nếu bạn không sử dụng Peshat trong vài ngày.",
+  "reminderNotificationTitle": "Tiếp tục bản dịch của bạn",
+  "reminderNotificationBody": "Tiếp tục từ nơi bạn đã dừng trong Peshat.",
+  "notificationPermissionDenied": "Bật thông báo trong cài đặt hệ thống để nhận nhắc nhở."
 }

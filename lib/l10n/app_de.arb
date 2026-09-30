@@ -87,5 +87,11 @@
   "showMenuTooltip": "Menü anzeigen",
   "licensePackageLabel": "Paket",
   "licenseEmptyLabel": "Keine Lizenzinformationen verfügbar.",
-  "rateAppLabel": "Peshat bewerten"
+  "rateAppLabel": "Peshat bewerten",
+  "notificationsSectionLabel": "Benachrichtigungen",
+  "reminderNotificationsLabel": "Erinnerungen",
+  "reminderNotificationsSubtitle": "Erhalten Sie eine Erinnerung, wenn Sie Peshat einige Tage nicht verwendet haben.",
+  "reminderNotificationTitle": "Setzen Sie Ihre Übersetzungen fort",
+  "reminderNotificationBody": "Machen Sie dort weiter, wo Sie bei Peshat aufgehört haben.",
+  "notificationPermissionDenied": "Aktivieren Sie Benachrichtigungen in den Systemeinstellungen, um Erinnerungen zu erhalten."
 }

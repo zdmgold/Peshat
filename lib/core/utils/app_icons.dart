@@ -35,6 +35,10 @@ class AppIcons {
   static const List<List<dynamic>> sun =
       HugeIcons.strokeRoundedSun01;
 
+  /// Reminder-notifications row in Settings.
+  static const List<List<dynamic>> notifications =
+      HugeIcons.strokeRoundedNotification01;
+
   /// Settings entry.
   static const List<List<dynamic>> settings =
       HugeIcons.strokeRoundedSettings01;

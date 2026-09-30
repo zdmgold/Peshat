@@ -10,6 +10,7 @@ import '../core/providers/purchase_provider.dart';
 import '../core/providers/settings_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/ui_locale_provider.dart';
+import '../core/providers/notification_provider.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -30,6 +31,7 @@ class ScanScreen extends StatefulWidget {
   final SettingsProvider settings;
   final HistoryProvider history;
   final UiLocaleProvider uiLocale;
+  final NotificationProvider notification;
 
   const ScanScreen({
     super.key,
@@ -38,6 +40,7 @@ class ScanScreen extends StatefulWidget {
     required this.settings,
     required this.history,
     required this.uiLocale,
+    required this.notification,
   });
 
   @override
@@ -58,6 +61,7 @@ class _ScanScreenState extends State<ScanScreen> {
           settings: widget.settings,
           history: widget.history,
           uiLocale: widget.uiLocale,
+          notification: widget.notification,
         ),
       ),
     );

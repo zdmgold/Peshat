@@ -87,5 +87,11 @@
   "showMenuTooltip": "Εμφάνιση μενού",
   "licensePackageLabel": "Πακέτο",
   "licenseEmptyLabel": "Δεν υπάρχουν διαθέσιμες πληροφορίες άδειας.",
-  "rateAppLabel": "Αξιολογήστε το Peshat"
+  "rateAppLabel": "Αξιολογήστε το Peshat",
+  "notificationsSectionLabel": "Ειδοποιήσεις",
+  "reminderNotificationsLabel": "Υπενθυμίσεις",
+  "reminderNotificationsSubtitle": "Λάβετε υπενθύμιση αν δεν χρησιμοποιήσετε το Peshat για λίγες ημέρες.",
+  "reminderNotificationTitle": "Συνεχίστε τις μεταφράσεις σας",
+  "reminderNotificationBody": "Συνεχίστε από εκεί που σταματήσατε στο Peshat.",
+  "notificationPermissionDenied": "Ενεργοποιήστε τις ειδοποιήσεις στις ρυθμίσεις συστήματος για να λαμβάνετε υπενθυμίσεις."
 }

@@ -273,4 +273,22 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Đánh giá Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Thông báo';
+
+  @override
+  String get reminderNotificationsLabel => 'Nhắc nhở';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Nhận nhắc nhở nếu bạn không sử dụng Peshat trong vài ngày.';
+
+  @override
+  String get reminderNotificationTitle => 'Tiếp tục bản dịch của bạn';
+
+  @override
+  String get reminderNotificationBody => 'Tiếp tục từ nơi bạn đã dừng trong Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'Bật thông báo trong cài đặt hệ thống để nhận nhắc nhở.';
 }

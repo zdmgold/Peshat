@@ -11,6 +11,8 @@ import 'core/providers/history_provider.dart';
 import 'core/providers/ui_locale_provider.dart';
 import 'l10n/app_localizations.dart';
 import 'core/services/interstitial_service.dart';
+import 'core/services/notification_service.dart';
+import 'core/providers/notification_provider.dart';
 import 'widgets/ad_slot.dart';
 import 'screens/scan_screen.dart';
 
@@ -19,6 +21,7 @@ Future<void> main() async {
   installGlobalErrorHandling();
   final prefs = await SharedPreferences.getInstance();
   await InterstitialService.instance.init(prefs);
+  await NotificationService.instance.init(prefs);
   runApp(PeshatApp(prefs: prefs));
 }
 
@@ -36,6 +39,7 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
   late final SettingsProvider settingsProvider;
   late final HistoryProvider historyProvider;
   late final UiLocaleProvider uiLocaleProvider;
+  late final NotificationProvider notificationProvider;
 
   Brightness _platformBrightness =
       WidgetsBinding.instance.platformDispatcher.platformBrightness;
@@ -50,6 +54,7 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
     settingsProvider = SettingsProvider(widget.prefs);
     historyProvider = HistoryProvider(widget.prefs);
     uiLocaleProvider = UiLocaleProvider(widget.prefs);
+    notificationProvider = NotificationProvider(widget.prefs);
 
     AdSlot.setPurchased(purchaseProvider.value);
     InterstitialService.instance.setPurchased(purchaseProvider.value);
@@ -100,6 +105,7 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
           settings: settingsProvider,
           history: historyProvider,
           uiLocale: uiLocaleProvider,
+          notification: notificationProvider,
         ),
       ),
     );

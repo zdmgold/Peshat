@@ -8,6 +8,7 @@ import 'package:peshat/core/providers/purchase_provider.dart';
 import 'package:peshat/core/providers/settings_provider.dart';
 import 'package:peshat/core/providers/theme_provider.dart';
 import 'package:peshat/core/providers/ui_locale_provider.dart';
+import 'package:peshat/core/providers/notification_provider.dart';
 import 'package:peshat/core/utils/app_icons.dart';
 import 'package:peshat/l10n/app_localizations.dart';
 import 'package:peshat/screens/scan_screen.dart';
@@ -38,6 +39,7 @@ void main() {
           settings: SettingsProvider(prefs),
           history: HistoryProvider(prefs),
           uiLocale: UiLocaleProvider(prefs),
+          notification: NotificationProvider(prefs),
         ),
       ),
     );

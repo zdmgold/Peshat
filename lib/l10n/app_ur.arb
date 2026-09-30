@@ -87,5 +87,11 @@
   "showMenuTooltip": "مینو دکھائیں",
   "licensePackageLabel": "پیکیج",
   "licenseEmptyLabel": "لائسنس کی معلومات دستیاب نہیں۔",
-  "rateAppLabel": "Peshat کو ریٹنگ دیں"
+  "rateAppLabel": "Peshat کو ریٹنگ دیں",
+  "notificationsSectionLabel": "اطلاعات",
+  "reminderNotificationsLabel": "یاد دہانیاں",
+  "reminderNotificationsSubtitle": "اگر آپ نے کئی دن Peshat استعمال نہیں کیا تو یاد دہانی حاصل کریں۔",
+  "reminderNotificationTitle": "اپنے تراجم جاری رکھیں",
+  "reminderNotificationBody": "Peshat میں جہاں چھوڑا تھا وہیں سے جاری رکھیں۔",
+  "notificationPermissionDenied": "یاد دہانیاں حاصل کرنے کے لیے سسٹم سیٹنگز میں اطلاعات فعال کریں۔"
 }

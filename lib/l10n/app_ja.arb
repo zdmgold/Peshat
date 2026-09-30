@@ -87,5 +87,11 @@
   "showMenuTooltip": "メニューを表示",
   "licensePackageLabel": "パッケージ",
   "licenseEmptyLabel": "ライセンス情報がありません。",
-  "rateAppLabel": "Peshatを評価"
+  "rateAppLabel": "Peshatを評価",
+  "notificationsSectionLabel": "通知",
+  "reminderNotificationsLabel": "リマインダー",
+  "reminderNotificationsSubtitle": "数日間Peshatを使用していない場合にリマインダーを受け取ります。",
+  "reminderNotificationTitle": "翻訳を続けましょう",
+  "reminderNotificationBody": "Peshatで中断したところから再開しましょう。",
+  "notificationPermissionDenied": "リマインダーを受け取るには、システム設定で通知を有効にしてください。"
 }

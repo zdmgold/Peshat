@@ -273,4 +273,22 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshat bewerten';
+
+  @override
+  String get notificationsSectionLabel => 'Benachrichtigungen';
+
+  @override
+  String get reminderNotificationsLabel => 'Erinnerungen';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Erhalten Sie eine Erinnerung, wenn Sie Peshat einige Tage nicht verwendet haben.';
+
+  @override
+  String get reminderNotificationTitle => 'Setzen Sie Ihre Übersetzungen fort';
+
+  @override
+  String get reminderNotificationBody => 'Machen Sie dort weiter, wo Sie bei Peshat aufgehört haben.';
+
+  @override
+  String get notificationPermissionDenied => 'Aktivieren Sie Benachrichtigungen in den Systemeinstellungen, um Erinnerungen zu erhalten.';
 }

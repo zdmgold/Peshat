@@ -27,6 +27,8 @@ dependencies:
   google_fonts: 6.1.0
   hugeicons: ^1.2.0
   in_app_review: ^2.0.12
+  flutter_local_notifications: ^19.5.0
+  timezone: ^0.10.1
 dev_dependencies:
   flutter_test:
     sdk: flutter

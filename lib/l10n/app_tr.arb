@@ -87,5 +87,11 @@
   "showMenuTooltip": "Menüyü göster",
   "licensePackageLabel": "Paket",
   "licenseEmptyLabel": "Lisans bilgisi mevcut değil.",
-  "rateAppLabel": "Peshat'ı değerlendir"
+  "rateAppLabel": "Peshat'ı değerlendir",
+  "notificationsSectionLabel": "Bildirimler",
+  "reminderNotificationsLabel": "Hatırlatıcılar",
+  "reminderNotificationsSubtitle": "Peshat'ı birkaç gündür kullanmadıysanız hatırlatıcı alın.",
+  "reminderNotificationTitle": "Çevirilerinize devam edin",
+  "reminderNotificationBody": "Peshat'ta kaldığınız yerden devam edin.",
+  "notificationPermissionDenied": "Hatırlatıcıları almak için sistem ayarlarından bildirimleri etkinleştirin."
 }

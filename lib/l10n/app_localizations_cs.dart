@@ -273,4 +273,22 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Ohodnotit Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Oznámení';
+
+  @override
+  String get reminderNotificationsLabel => 'Připomínky';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Dostávejte připomínku, pokud Peshat nepoužíváte několik dní.';
+
+  @override
+  String get reminderNotificationTitle => 'Pokračujte v překladech';
+
+  @override
+  String get reminderNotificationBody => 'Pokračujte tam, kde jste skončili v Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'Chcete-li dostávat připomínky, povolte oznámení v systémovém nastavení.';
 }

@@ -87,5 +87,11 @@
   "showMenuTooltip": "မီနူးပြ",
   "licensePackageLabel": "အစုအဝေး",
   "licenseEmptyLabel": "လိုင်စင်အချက်အလက် မရနိုင်ပါ။",
-  "rateAppLabel": "Peshat ကို အဆင့်သတ်မှတ်ပါ"
+  "rateAppLabel": "Peshat ကို အဆင့်သတ်မှတ်ပါ",
+  "notificationsSectionLabel": "အသိပေးချက်များ",
+  "reminderNotificationsLabel": "သတိပေးချက်များ",
+  "reminderNotificationsSubtitle": "ရက်အနည်းငယ် Peshat ကို အသုံးမပြုပါက သတိပေးချက် ရယူပါ။",
+  "reminderNotificationTitle": "သင့်ဘာသာပြန်မှုများကို ဆက်လုပ်ပါ",
+  "reminderNotificationBody": "Peshat တွင် ရပ်ထားသည့်နေရာမှ ဆက်လုပ်ပါ။",
+  "notificationPermissionDenied": "သတိပေးချက်များ ရရှိရန် စနစ်ဆက်တင်များတွင် အသိပေးချက်များ ဖွင့်ပါ။"
 }

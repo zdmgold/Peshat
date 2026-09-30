@@ -273,4 +273,22 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshat کو ریٹنگ دیں';
+
+  @override
+  String get notificationsSectionLabel => 'اطلاعات';
+
+  @override
+  String get reminderNotificationsLabel => 'یاد دہانیاں';
+
+  @override
+  String get reminderNotificationsSubtitle => 'اگر آپ نے کئی دن Peshat استعمال نہیں کیا تو یاد دہانی حاصل کریں۔';
+
+  @override
+  String get reminderNotificationTitle => 'اپنے تراجم جاری رکھیں';
+
+  @override
+  String get reminderNotificationBody => 'Peshat میں جہاں چھوڑا تھا وہیں سے جاری رکھیں۔';
+
+  @override
+  String get notificationPermissionDenied => 'یاد دہانیاں حاصل کرنے کے لیے سسٹم سیٹنگز میں اطلاعات فعال کریں۔';
 }

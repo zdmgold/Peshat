@@ -273,4 +273,22 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Betygsätt Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Aviseringar';
+
+  @override
+  String get reminderNotificationsLabel => 'Påminnelser';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Få en påminnelse om du inte har använt Peshat på några dagar.';
+
+  @override
+  String get reminderNotificationTitle => 'Fortsätt dina översättningar';
+
+  @override
+  String get reminderNotificationBody => 'Återuppta där du slutade med Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'Aktivera aviseringar i systeminställningarna för att ta emot påminnelser.';
 }

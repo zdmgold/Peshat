@@ -273,4 +273,22 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'ፔሻትን ደረጃ ይስጡ';
+
+  @override
+  String get notificationsSectionLabel => 'ማሳወቂያዎች';
+
+  @override
+  String get reminderNotificationsLabel => 'አስታዋሾች';
+
+  @override
+  String get reminderNotificationsSubtitle => 'ፔሻትን ለተወሰነ ቀናት ካልተጠቀሙ አስታዋሽ ይደርስዎታል።';
+
+  @override
+  String get reminderNotificationTitle => 'ትርጉሞችዎን ይቀጥሉ';
+
+  @override
+  String get reminderNotificationBody => 'ፔሻት የቆሙበትን ቦታ ይቀጥሉ።';
+
+  @override
+  String get notificationPermissionDenied => 'አስታዋሾችን ለመቀበል ማሳወቂያዎችን በስርዓት ቅንብሮች ያንቁ።';
 }

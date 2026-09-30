@@ -273,4 +273,22 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshat ශ්‍රේණිගත කරන්න';
+
+  @override
+  String get notificationsSectionLabel => 'දැනුම්දීම්';
+
+  @override
+  String get reminderNotificationsLabel => 'සිහිකැඳවීම්';
+
+  @override
+  String get reminderNotificationsSubtitle => 'දින කිහිපයක් Peshat භාවිත නොකළහොත් සිහිකැඳවීමක් ලබාගන්න.';
+
+  @override
+  String get reminderNotificationTitle => 'ඔබේ පරිවර්තන දිගටම කරගෙන යන්න';
+
+  @override
+  String get reminderNotificationBody => 'Peshat හි ඔබ නැවැත්වූ තැන සිට දිගටම කරගෙන යන්න.';
+
+  @override
+  String get notificationPermissionDenied => 'සිහිකැඳවීම් ලබාගැනීමට පද්ධති සැකසුම්වල දැනුම්දීම් සක්‍රීය කරන්න.';
 }

@@ -87,5 +87,11 @@
   "showMenuTooltip": "Ipakita ang menu",
   "licensePackageLabel": "Package",
   "licenseEmptyLabel": "Walang available na impormasyon ng lisensya.",
-  "rateAppLabel": "I-rate ang Peshat"
+  "rateAppLabel": "I-rate ang Peshat",
+  "notificationsSectionLabel": "Mga notification",
+  "reminderNotificationsLabel": "Mga paalala",
+  "reminderNotificationsSubtitle": "Makatanggap ng paalala kung hindi mo ginamit ang Peshat sa ilang araw.",
+  "reminderNotificationTitle": "Ipagpatuloy ang iyong mga pagsasalin",
+  "reminderNotificationBody": "Ipagpatuloy kung saan ka tumigil sa Peshat.",
+  "notificationPermissionDenied": "I-enable ang mga notification sa system settings upang makatanggap ng mga paalala."
 }

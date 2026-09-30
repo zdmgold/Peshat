@@ -87,5 +87,11 @@
   "showMenuTooltip": "แสดงเมนู",
   "licensePackageLabel": "แพ็กเกจ",
   "licenseEmptyLabel": "ไม่มีข้อมูลใบอนุญาต",
-  "rateAppLabel": "ให้คะแนน Peshat"
+  "rateAppLabel": "ให้คะแนน Peshat",
+  "notificationsSectionLabel": "การแจ้งเตือน",
+  "reminderNotificationsLabel": "การเตือนความจำ",
+  "reminderNotificationsSubtitle": "รับการเตือนหากคุณไม่ได้ใช้ Peshat หลายวัน",
+  "reminderNotificationTitle": "แปลต่อจากที่ค้างไว้",
+  "reminderNotificationBody": "กลับมาแปลต่อจากที่คุณหยุดไว้ใน Peshat",
+  "notificationPermissionDenied": "เปิดการแจ้งเตือนในการตั้งค่าระบบเพื่อรับการเตือนความจำ"
 }

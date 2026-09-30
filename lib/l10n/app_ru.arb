@@ -87,5 +87,11 @@
   "showMenuTooltip": "Показать меню",
   "licensePackageLabel": "Пакет",
   "licenseEmptyLabel": "Информация о лицензии недоступна.",
-  "rateAppLabel": "Оценить Peshat"
+  "rateAppLabel": "Оценить Peshat",
+  "notificationsSectionLabel": "Уведомления",
+  "reminderNotificationsLabel": "Напоминания",
+  "reminderNotificationsSubtitle": "Получайте напоминание, если не используете Peshat несколько дней.",
+  "reminderNotificationTitle": "Продолжите переводы",
+  "reminderNotificationBody": "Вернитесь к тому месту, где вы остановились в Peshat.",
+  "notificationPermissionDenied": "Включите уведомления в системных настройках, чтобы получать напоминания."
 }

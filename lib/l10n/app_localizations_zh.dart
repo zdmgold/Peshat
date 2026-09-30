@@ -273,4 +273,22 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get rateAppLabel => '评价 Peshat';
+
+  @override
+  String get notificationsSectionLabel => '通知';
+
+  @override
+  String get reminderNotificationsLabel => '提醒';
+
+  @override
+  String get reminderNotificationsSubtitle => '如果几天未使用 Peshat，将收到提醒。';
+
+  @override
+  String get reminderNotificationTitle => '继续您的翻译';
+
+  @override
+  String get reminderNotificationBody => '从 Peshat 中断处继续。';
+
+  @override
+  String get notificationPermissionDenied => '请在系统设置中启用通知以接收提醒。';
 }

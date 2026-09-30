@@ -87,5 +87,11 @@
   "showMenuTooltip": "Menü megjelenítése",
   "licensePackageLabel": "Csomag",
   "licenseEmptyLabel": "Nem érhető el licencinformáció.",
-  "rateAppLabel": "Peshat értékelése"
+  "rateAppLabel": "Peshat értékelése",
+  "notificationsSectionLabel": "Értesítések",
+  "reminderNotificationsLabel": "Emlékeztetők",
+  "reminderNotificationsSubtitle": "Kapjon emlékeztetőt, ha néhány napig nem használta a Peshat-ot.",
+  "reminderNotificationTitle": "Folytassa fordítéseit",
+  "reminderNotificationBody": "Folytassa ott, ahol abbahagyta a Peshat-tal.",
+  "notificationPermissionDenied": "Az emlékeztetők fogadásához engedélyezze az értesítéseket a rendszerbeállításokban."
 }

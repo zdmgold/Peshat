@@ -273,4 +273,22 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'به Peshat امتیاز دهید';
+
+  @override
+  String get notificationsSectionLabel => 'اعلان‌ها';
+
+  @override
+  String get reminderNotificationsLabel => 'یادآورها';
+
+  @override
+  String get reminderNotificationsSubtitle => 'اگر چند روز از Peshat استفاده نکردید، یادآوری دریافت کنید.';
+
+  @override
+  String get reminderNotificationTitle => 'ترجمه‌های خود را ادامه دهید';
+
+  @override
+  String get reminderNotificationBody => 'از همان‌جایی که در Peshat رها کردید ادامه دهید.';
+
+  @override
+  String get notificationPermissionDenied => 'برای دریافت یادآورها، اعلان‌ها را در تنظیمات سیستم فعال کنید.';
 }

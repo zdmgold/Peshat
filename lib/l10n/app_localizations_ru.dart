@@ -273,4 +273,22 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Оценить Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Уведомления';
+
+  @override
+  String get reminderNotificationsLabel => 'Напоминания';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Получайте напоминание, если не используете Peshat несколько дней.';
+
+  @override
+  String get reminderNotificationTitle => 'Продолжите переводы';
+
+  @override
+  String get reminderNotificationBody => 'Вернитесь к тому месту, где вы остановились в Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'Включите уведомления в системных настройках, чтобы получать напоминания.';
 }

@@ -87,5 +87,11 @@
   "showMenuTooltip": "මෙනුව පෙන්වන්න",
   "licensePackageLabel": "පැකේජය",
   "licenseEmptyLabel": "බලපත්‍ර තොරතුරු නොමැත.",
-  "rateAppLabel": "Peshat ශ්‍රේණිගත කරන්න"
+  "rateAppLabel": "Peshat ශ්‍රේණිගත කරන්න",
+  "notificationsSectionLabel": "දැනුම්දීම්",
+  "reminderNotificationsLabel": "සිහිකැඳවීම්",
+  "reminderNotificationsSubtitle": "දින කිහිපයක් Peshat භාවිත නොකළහොත් සිහිකැඳවීමක් ලබාගන්න.",
+  "reminderNotificationTitle": "ඔබේ පරිවර්තන දිගටම කරගෙන යන්න",
+  "reminderNotificationBody": "Peshat හි ඔබ නැවැත්වූ තැන සිට දිගටම කරගෙන යන්න.",
+  "notificationPermissionDenied": "සිහිකැඳවීම් ලබාගැනීමට පද්ධති සැකසුම්වල දැනුම්දීම් සක්‍රීය කරන්න."
 }

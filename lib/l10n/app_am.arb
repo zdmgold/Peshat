@@ -87,5 +87,11 @@
   "showMenuTooltip": "ምናሌ አሳይ",
   "licensePackageLabel": "ጥቅል",
   "licenseEmptyLabel": "ምንም የፍቃድ መረጃ አልተገኘም።",
-  "rateAppLabel": "ፔሻትን ደረጃ ይስጡ"
+  "rateAppLabel": "ፔሻትን ደረጃ ይስጡ",
+  "notificationsSectionLabel": "ማሳወቂያዎች",
+  "reminderNotificationsLabel": "አስታዋሾች",
+  "reminderNotificationsSubtitle": "ፔሻትን ለተወሰነ ቀናት ካልተጠቀሙ አስታዋሽ ይደርስዎታል።",
+  "reminderNotificationTitle": "ትርጉሞችዎን ይቀጥሉ",
+  "reminderNotificationBody": "ፔሻት የቆሙበትን ቦታ ይቀጥሉ።",
+  "notificationPermissionDenied": "አስታዋሾችን ለመቀበል ማሳወቂያዎችን በስርዓት ቅንብሮች ያንቁ።"
 }

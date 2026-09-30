@@ -273,4 +273,22 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshat 평가하기';
+
+  @override
+  String get notificationsSectionLabel => '알림';
+
+  @override
+  String get reminderNotificationsLabel => '리마인더';
+
+  @override
+  String get reminderNotificationsSubtitle => '며칠 동안 Peshat을 사용하지 않으면 알림을 받습니다.';
+
+  @override
+  String get reminderNotificationTitle => '번역을 계속하세요';
+
+  @override
+  String get reminderNotificationBody => 'Peshat에서 중단한 곳에서 이어가세요.';
+
+  @override
+  String get notificationPermissionDenied => '리마인더를 받으려면 시스템 설정에서 알림을 활성화하세요.';
 }

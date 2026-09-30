@@ -87,5 +87,11 @@
   "showMenuTooltip": "Afișare meniu",
   "licensePackageLabel": "Pachet",
   "licenseEmptyLabel": "Nu există informații despre licență disponibile.",
-  "rateAppLabel": "Evaluează Peshat"
+  "rateAppLabel": "Evaluează Peshat",
+  "notificationsSectionLabel": "Notificări",
+  "reminderNotificationsLabel": "Memento-uri",
+  "reminderNotificationsSubtitle": "Primește un memento dacă nu ai folosit Peshat câteva zile.",
+  "reminderNotificationTitle": "Continuă-ți traducerile",
+  "reminderNotificationBody": "Reia de unde ai rămas cu Peshat.",
+  "notificationPermissionDenied": "Activează notificările în setările sistemului pentru a primi memento-uri."
 }

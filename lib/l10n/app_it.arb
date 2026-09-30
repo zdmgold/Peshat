@@ -87,5 +87,11 @@
   "showMenuTooltip": "Mostra menu",
   "licensePackageLabel": "Pacchetto",
   "licenseEmptyLabel": "Nessuna informazione sulla licenza disponibile.",
-  "rateAppLabel": "Valuta Peshat"
+  "rateAppLabel": "Valuta Peshat",
+  "notificationsSectionLabel": "Notifiche",
+  "reminderNotificationsLabel": "Promemoria",
+  "reminderNotificationsSubtitle": "Ricevi un promemoria se non usi Peshat da qualche giorno.",
+  "reminderNotificationTitle": "Continua le tue traduzioni",
+  "reminderNotificationBody": "Riprendi da dove avevi lasciato con Peshat.",
+  "notificationPermissionDenied": "Attiva le notifiche nelle impostazioni di sistema per ricevere promemoria."
 }

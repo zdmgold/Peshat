@@ -273,4 +273,22 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Peshat রেটিং দিন';
+
+  @override
+  String get notificationsSectionLabel => 'বিজ্ঞপ্তি';
+
+  @override
+  String get reminderNotificationsLabel => 'অনুস্মারক';
+
+  @override
+  String get reminderNotificationsSubtitle => 'কয়েকদিন Peshat ব্যবহার না করলে অনুস্মারক পান।';
+
+  @override
+  String get reminderNotificationTitle => 'আপনার অনুবাদ চালিয়ে যান';
+
+  @override
+  String get reminderNotificationBody => 'Peshat দিয়ে যেখানে থেমেছিলেন সেখান থেকে চালিয়ে যান।';
+
+  @override
+  String get notificationPermissionDenied => 'অনুস্মারক পেতে সিস্টেম সেটিংসে বিজ্ঞপ্তি চালু করুন।';
 }

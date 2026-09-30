@@ -273,4 +273,22 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'ให้คะแนน Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'การแจ้งเตือน';
+
+  @override
+  String get reminderNotificationsLabel => 'การเตือนความจำ';
+
+  @override
+  String get reminderNotificationsSubtitle => 'รับการเตือนหากคุณไม่ได้ใช้ Peshat หลายวัน';
+
+  @override
+  String get reminderNotificationTitle => 'แปลต่อจากที่ค้างไว้';
+
+  @override
+  String get reminderNotificationBody => 'กลับมาแปลต่อจากที่คุณหยุดไว้ใน Peshat';
+
+  @override
+  String get notificationPermissionDenied => 'เปิดการแจ้งเตือนในการตั้งค่าระบบเพื่อรับการเตือนความจำ';
 }

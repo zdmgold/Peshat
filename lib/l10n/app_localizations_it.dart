@@ -273,4 +273,22 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'Valuta Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'Notifiche';
+
+  @override
+  String get reminderNotificationsLabel => 'Promemoria';
+
+  @override
+  String get reminderNotificationsSubtitle => 'Ricevi un promemoria se non usi Peshat da qualche giorno.';
+
+  @override
+  String get reminderNotificationTitle => 'Continua le tue traduzioni';
+
+  @override
+  String get reminderNotificationBody => 'Riprendi da dove avevi lasciato con Peshat.';
+
+  @override
+  String get notificationPermissionDenied => 'Attiva le notifiche nelle impostazioni di sistema per ricevere promemoria.';
 }

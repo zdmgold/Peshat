@@ -87,5 +87,11 @@
   "showMenuTooltip": "Mostrar menú",
   "licensePackageLabel": "Paquete",
   "licenseEmptyLabel": "No hay información de licencia disponible.",
-  "rateAppLabel": "Califica Peshat"
+  "rateAppLabel": "Califica Peshat",
+  "notificationsSectionLabel": "Notificaciones",
+  "reminderNotificationsLabel": "Recordatorios",
+  "reminderNotificationsSubtitle": "Recibe un recordatorio si no has usado Peshat durante unos días.",
+  "reminderNotificationTitle": "Continúa tus traducciones",
+  "reminderNotificationBody": "Retoma donde lo dejaste con Peshat.",
+  "notificationPermissionDenied": "Activa las notificaciones en los ajustes del sistema para recibir recordatorios."
 }

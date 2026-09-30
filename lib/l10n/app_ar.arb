@@ -87,5 +87,11 @@
   "showMenuTooltip": "إظهار القائمة",
   "licensePackageLabel": "حزمة",
   "licenseEmptyLabel": "لا تتوفر معلومات الترخيص.",
-  "rateAppLabel": "قيّم Peshat"
+  "rateAppLabel": "قيّم Peshat",
+  "notificationsSectionLabel": "الإشعارات",
+  "reminderNotificationsLabel": "التذكيرات",
+  "reminderNotificationsSubtitle": "احصل على تذكير إذا لم تستخدم Peshat لعدة أيام.",
+  "reminderNotificationTitle": "تابع ترجماتك",
+  "reminderNotificationBody": "أكمل من حيث توقفت مع Peshat.",
+  "notificationPermissionDenied": "فعّل الإشعارات من إعدادات النظام لتلقي التذكيرات."
 }

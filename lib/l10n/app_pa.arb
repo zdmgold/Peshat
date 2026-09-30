@@ -87,5 +87,11 @@
   "showMenuTooltip": "ਮੀਨੂ ਦਿਖਾਓ",
   "licensePackageLabel": "ਪੈਕੇਜ",
   "licenseEmptyLabel": "ਕੋਈ ਲਾਇਸੰਸ ਜਾਣਕਾਰੀ ਉਪਲਬਧ ਨਹੀਂ।",
-  "rateAppLabel": "Peshat ਨੂੰ ਰੇਟ ਕਰੋ"
+  "rateAppLabel": "Peshat ਨੂੰ ਰੇਟ ਕਰੋ",
+  "notificationsSectionLabel": "ਸੂਚਨਾਵਾਂ",
+  "reminderNotificationsLabel": "ਰਿਮਾਈਂਡਰ",
+  "reminderNotificationsSubtitle": "ਜੇ ਤੁਸੀਂ ਕੁਝ ਦਿਨਾਂ ਤੋਂ Peshat ਨਹੀਂ ਵਰਤਿਆ ਤਾਂ ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰੋ।",
+  "reminderNotificationTitle": "ਆਪਣੇ ਅਨੁਵਾਦ ਜਾਰੀ ਰੱਖੋ",
+  "reminderNotificationBody": "Peshat ਨਾਲ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖੋ।",
+  "notificationPermissionDenied": "ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ।"
 }

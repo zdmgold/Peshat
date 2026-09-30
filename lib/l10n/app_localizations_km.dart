@@ -273,4 +273,22 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get rateAppLabel => 'វាយតម្លៃ Peshat';
+
+  @override
+  String get notificationsSectionLabel => 'ការជូនដំណឹង';
+
+  @override
+  String get reminderNotificationsLabel => 'ការរំលឹក';
+
+  @override
+  String get reminderNotificationsSubtitle => 'ទទួលបានការរំលឹកប្រសិនបើអ្នកមិនបានប្រើ Peshat ពីរបីថ្ងៃ។';
+
+  @override
+  String get reminderNotificationTitle => 'បន្តការបកប្រែរបស់អ្នក';
+
+  @override
+  String get reminderNotificationBody => 'បន្តពីកន្លែងដែលអ្នកបានឈប់ជាមួយ Peshat។';
+
+  @override
+  String get notificationPermissionDenied => 'បើកការជូនដំណឹងនៅក្នុងការកំណត់ប្រព័ន្ធ ដើម្បីទទួលការរំលឹក។';
 }
