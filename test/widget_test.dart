@@ -4,11 +4,11 @@ import 'package:hugeicons/hugeicons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:peshat/core/providers/history_provider.dart';
+import 'package:peshat/core/providers/notification_provider.dart';
 import 'package:peshat/core/providers/purchase_provider.dart';
 import 'package:peshat/core/providers/settings_provider.dart';
 import 'package:peshat/core/providers/theme_provider.dart';
 import 'package:peshat/core/providers/ui_locale_provider.dart';
-import 'package:peshat/core/providers/notification_provider.dart';
 import 'package:peshat/core/utils/app_icons.dart';
 import 'package:peshat/l10n/app_localizations.dart';
 import 'package:peshat/screens/scan_screen.dart';
@@ -45,30 +45,27 @@ void main() {
     );
     await tester.pump();
 
-    // Wordmark appears in the nav bar and in the hero.
+    // Large-title wordmark.
     expect(find.text('Peshat'), findsWidgets);
 
-    // Primary action.
-    expect(find.text('Scan Document'), findsOneWidget);
+    // Primary action — label under the circular scan button.
+    expect(find.text('Scan'), findsOneWidget);
 
-    // Secondary actions.
+    // Secondary actions — three text rows.
     expect(find.text('Type text'), findsOneWidget);
     expect(find.text('Import a file'), findsOneWidget);
+    expect(find.text('Translate to: Spanish'), findsOneWidget);
 
-    // Target language card.
-    expect(find.text('Translate to'), findsOneWidget);
-
-    // Nav bar icons — one of each.
+    // Nav bar icons — three, one of each.
     expect(findHugeIcon(AppIcons.settings), findsOneWidget);
     expect(findHugeIcon(AppIcons.moon), findsOneWidget);
+    expect(findHugeIcon(AppIcons.globe), findsOneWidget);
 
-    // Globe appears in the nav bar (UI language) and in the
-    // "Translate to" card. Two occurrences.
-    expect(findHugeIcon(AppIcons.globe), findsNWidgets(2));
-
-    // Body icons — one of each.
+    // Body — the circular scan button's icon.
     expect(findHugeIcon(AppIcons.scanDocument), findsOneWidget);
-    expect(findHugeIcon(AppIcons.typeText), findsOneWidget);
-    expect(findHugeIcon(AppIcons.importFile), findsOneWidget);
+
+    // The two secondary text actions have no leading icons.
+    expect(findHugeIcon(AppIcons.typeText), findsNothing);
+    expect(findHugeIcon(AppIcons.importFile), findsNothing);
   });
 }

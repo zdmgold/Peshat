@@ -190,35 +190,14 @@ class _ScanScreenState extends State<ScanScreen> {
     final isDark = brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
-    final textSecondary =
-        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    final textTertiary =
+        isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         automaticallyImplyLeading: false,
-        middle: Row(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            ClipRRect(
-              borderRadius: BorderRadius.circular(6),
-              child: Image.asset(
-                'assets/icon/icon.png',
-                width: 26,
-                height: 26,
-                filterQuality: FilterQuality.high,
-              ),
-            ),
-            const SizedBox(width: Spacing.sm),
-            Text(
-              l10n.appName,
-              style: AppTypography.brand.copyWith(
-                fontSize: 22,
-                color: textPrimary,
-              ),
-            ),
-          ],
-        ),
+        middle: const SizedBox.shrink(),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -229,7 +208,7 @@ class _ScanScreenState extends State<ScanScreen> {
               child: Semantics(
                 label: l10n.uiLanguageLabel,
                 button: true,
-                child: const PeshatIcon(icon: AppIcons.globe, size: 22),
+                child: const PeshatIcon(icon: AppIcons.globe, size: 24),
               ),
             ),
             const SizedBox(width: Spacing.sm),
@@ -246,7 +225,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     icon: mode == AppThemeMode.dark
                         ? AppIcons.sun
                         : AppIcons.moon,
-                    size: 22,
+                    size: 24,
                   ),
                 ),
               ),
@@ -259,7 +238,7 @@ class _ScanScreenState extends State<ScanScreen> {
               child: Semantics(
                 label: l10n.settingsTitle,
                 button: true,
-                child: const PeshatIcon(icon: AppIcons.settings, size: 22),
+                child: const PeshatIcon(icon: AppIcons.settings, size: 24),
               ),
             ),
           ],
@@ -271,143 +250,147 @@ class _ScanScreenState extends State<ScanScreen> {
           children: [
             Expanded(
               child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(
-                  horizontal: Spacing.md,
-                  vertical: Spacing.md,
-                ),
+                padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    const SizedBox(height: Spacing.md),
-                    Center(
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(16),
-                        child: Image.asset(
-                          'assets/icon/icon.png',
-                          width: 72,
-                          height: 72,
-                          filterQuality: FilterQuality.high,
-                        ),
-                      ),
-                    ),
                     const SizedBox(height: Spacing.lg),
                     Text(
                       l10n.appName,
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.left,
                       style: AppTypography.brand.copyWith(
-                        fontSize: 32,
+                        fontSize: 34,
                         color: textPrimary,
-                      ),
-                    ),
-                    const SizedBox(height: Spacing.sm),
-                    Text(
-                      l10n.tagline,
-                      textAlign: TextAlign.center,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.body.copyWith(
-                        fontSize: 14,
-                        height: 1.5,
-                        color: textSecondary,
                       ),
                     ),
                     const SizedBox(height: Spacing.xl),
 
-                    SizedBox(
-                      height: 56,
-                      child: CupertinoButton.filled(
-                        padding: EdgeInsets.zero,
-                        onPressed: _isScanning ? null : _handleScan,
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            if (_isScanning)
-                              const CupertinoActivityIndicator(
-                                radius: 10,
-                                color: Color(0xFFFFFFFF),
-                              )
-                            else
-                              const PeshatIcon(
-                                icon: AppIcons.scanDocument,
-                                size: 22,
-                                color: Color(0xFFFFFFFF),
+                    // Primary action — circular scan button
+                    Center(
+                      child: GestureDetector(
+                        onTap: _isScanning ? null : _handleScan,
+                        child: Container(
+                          width: 140,
+                          height: 140,
+                          decoration: BoxDecoration(
+                            color: accent,
+                            shape: BoxShape.circle,
+                            boxShadow: [
+                              BoxShadow(
+                                color: accent.withValues(alpha: 0.28),
+                                blurRadius: 24,
+                                offset: const Offset(0, 8),
                               ),
-                            const SizedBox(width: Spacing.sm),
-                            Text(
-                              l10n.scanButtonLabel,
-                              style: AppTypography.chrome.copyWith(
-                                fontSize: 16,
-                                fontWeight: FontWeight.w600,
-                                color: const Color(0xFFFFFFFF),
-                              ),
-                            ),
-                          ],
+                            ],
+                          ),
+                          child: Center(
+                            child: _isScanning
+                                ? const CupertinoActivityIndicator(
+                                    radius: 16,
+                                    color: Color(0xFFFFFFFF),
+                                  )
+                                : const PeshatIcon(
+                                    icon: AppIcons.scanDocument,
+                                    size: 56,
+                                    color: Color(0xFFFFFFFF),
+                                  ),
+                          ),
                         ),
                       ),
                     ),
-                    const SizedBox(height: Spacing.md),
-
-                    Row(
-                      children: [
-                        Expanded(
-                          child: _OutlinedActionButton(
-                            icon: AppIcons.typeText,
-                            label: l10n.typeTextButtonLabel,
-                            accent: accent,
-                            onPressed: _openTextTranslate,
-                          ),
+                    const SizedBox(height: 12),
+                    Center(
+                      child: Text(
+                        l10n.scanShortLabel,
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 15,
+                          fontWeight: FontWeight.w600,
+                          color: accent,
                         ),
-                        const SizedBox(width: Spacing.sm),
-                        Expanded(
-                          child: _OutlinedActionButton(
-                            icon: AppIcons.importFile,
-                            label: l10n.importFileLabel,
-                            accent: accent,
-                            onPressed: _handleImport,
-                          ),
-                        ),
-                      ],
+                      ),
                     ),
                     const SizedBox(height: Spacing.lg),
 
-                    _CardRow(
-                      leading: AppIcons.globe,
-                      label: l10n.translateToLabel,
-                      trailing: ValueListenableBuilder<String>(
-                        valueListenable: widget.settings,
-                        builder: (_, code, __) => Text(
-                          languageDisplayName(code),
+                    // Secondary actions — three text rows
+                    CupertinoButton(
+                      padding: EdgeInsets.zero,
+                      minSize: 44,
+                      onPressed: _openTextTranslate,
+                      child: Text(
+                        l10n.typeTextButtonLabel,
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: accent,
+                        ),
+                      ),
+                    ),
+                    CupertinoButton(
+                      padding: EdgeInsets.zero,
+                      minSize: 44,
+                      onPressed: _handleImport,
+                      child: Text(
+                        l10n.importFileLabel,
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w600,
+                          color: accent,
+                        ),
+                      ),
+                    ),
+                    ValueListenableBuilder<String>(
+                      valueListenable: widget.settings,
+                      builder: (_, code, __) => CupertinoButton(
+                        padding: EdgeInsets.zero,
+                        minSize: 44,
+                        onPressed: _pickTargetLanguage,
+                        child: Text(
+                          '${l10n.translateToLabel}: ${languageDisplayName(code)}',
                           style: AppTypography.chrome.copyWith(
-                            fontSize: 15,
+                            fontSize: 16,
                             fontWeight: FontWeight.w600,
-                            color: textPrimary,
+                            color: accent,
                           ),
                         ),
                       ),
-                      onTap: _pickTargetLanguage,
-                      isDark: isDark,
                     ),
-                    const SizedBox(height: Spacing.md),
+                    const SizedBox(height: Spacing.xl),
 
+                    // RECENT — inline section, max 3 rows
                     ValueListenableBuilder<List<ScanResult>>(
                       valueListenable: widget.history,
                       builder: (context, items, _) {
-                        if (items.isEmpty) return const SizedBox.shrink();
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: Spacing.md),
-                          child: _CardRow(
-                            leading: AppIcons.history,
-                            label: l10n.recentScansLabel,
-                            trailing: Text(
-                              '${items.length}',
-                              style: AppTypography.chrome.copyWith(
-                                fontSize: 15,
-                                color: textSecondary,
+                        if (items.isEmpty) {
+                          return const SizedBox(height: Spacing.xl);
+                        }
+                        final preview = items.take(3).toList();
+                        return Column(
+                          crossAxisAlignment: CrossAxisAlignment.stretch,
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                left: Spacing.xs,
+                                bottom: Spacing.sm,
+                              ),
+                              child: Text(
+                                l10n.recentLabel.toUpperCase(),
+                                style: AppTypography.chrome.copyWith(
+                                  fontSize: 12,
+                                  fontWeight: FontWeight.w600,
+                                  letterSpacing: 0.6,
+                                  color: textTertiary,
+                                ),
                               ),
                             ),
-                            onTap: _openHistory,
-                            isDark: isDark,
-                          ),
+                            for (int i = 0; i < preview.length; i++)
+                              _RecentRow(
+                                result: preview[i],
+                                isDark: isDark,
+                                isLast: i == preview.length - 1,
+                                onTap: () => _openHistory(),
+                              ),
+                            const SizedBox(height: Spacing.xl),
+                          ],
                         );
                       },
                     ),
@@ -423,90 +406,54 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 }
 
-class _OutlinedActionButton extends StatelessWidget {
-  final List<List<dynamic>> icon;
-  final String label;
-  final Color accent;
-  final VoidCallback onPressed;
+// ---------------------------------------------------------------------------
+// Recent-row preview — mirrors the History screen's row layout, no delete
+// ---------------------------------------------------------------------------
 
-  const _OutlinedActionButton({
-    required this.icon,
-    required this.label,
-    required this.accent,
-    required this.onPressed,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 52,
-      child: CupertinoButton(
-        padding: EdgeInsets.zero,
-        onPressed: onPressed,
-        child: Container(
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: accent, width: 1),
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              PeshatIcon(icon: icon, size: 20, color: accent),
-              const SizedBox(width: Spacing.sm),
-              Text(
-                label,
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w600,
-                  color: accent,
-                ),
-              ),
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-}
-
-class _CardRow extends StatefulWidget {
-  final List<List<dynamic>> leading;
-  final String label;
-  final Widget trailing;
-  final VoidCallback onTap;
+class _RecentRow extends StatefulWidget {
+  final ScanResult result;
   final bool isDark;
+  final bool isLast;
+  final VoidCallback onTap;
 
-  const _CardRow({
-    required this.leading,
-    required this.label,
-    required this.trailing,
-    required this.onTap,
+  const _RecentRow({
+    required this.result,
     required this.isDark,
+    required this.isLast,
+    required this.onTap,
   });
 
   @override
-  State<_CardRow> createState() => _CardRowState();
+  State<_RecentRow> createState() => _RecentRowState();
 }
 
-class _CardRowState extends State<_CardRow> {
+class _RecentRowState extends State<_RecentRow> {
   bool _pressed = false;
 
+  String _timeLabel(DateTime t) {
+    final hh = t.hour.toString().padLeft(2, '0');
+    final mm = t.minute.toString().padLeft(2, '0');
+    return '$hh:$mm';
+  }
+
   @override
   Widget build(BuildContext context) {
-    final cardBg = widget.isDark
-        ? AppColors.bgSecondaryDark
-        : AppColors.bgSecondaryLight;
-    final border = widget.isDark
-        ? AppColors.borderSubtleDark
-        : AppColors.borderSubtleLight;
+    final textPrimary = widget.isDark
+        ? AppColors.textPrimaryDark
+        : AppColors.textPrimaryLight;
     final textSecondary = widget.isDark
         ? AppColors.textSecondaryDark
         : AppColors.textSecondaryLight;
     final textTertiary = widget.isDark
         ? AppColors.textTertiaryDark
         : AppColors.textTertiaryLight;
-    final accent =
-        widget.isDark ? AppColors.accentDark : AppColors.accentLight;
+    final border = widget.isDark
+        ? AppColors.borderSubtleDark
+        : AppColors.borderSubtleLight;
+
+    final timeLabel = _timeLabel(widget.result.timestamp);
+    final chipLabel =
+        '${widget.result.sourceLang.toUpperCase()} → ${widget.result.targetLang.toUpperCase()}';
 
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
@@ -517,37 +464,79 @@ class _CardRowState extends State<_CardRow> {
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 100),
         opacity: _pressed ? 0.6 : 1.0,
-        child: Container(
-          constraints: const BoxConstraints(minHeight: 56),
-          padding: const EdgeInsets.symmetric(
-            horizontal: Spacing.md,
-            vertical: Spacing.sm,
-          ),
-          decoration: BoxDecoration(
-            color: cardBg,
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: border, width: 0.5),
-          ),
-          child: Row(
-            children: [
-              PeshatIcon(icon: widget.leading, size: 22, color: accent),
-              const SizedBox(width: Spacing.md),
-              Expanded(
-                child: Text(
-                  widget.label,
-                  overflow: TextOverflow.ellipsis,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            const SizedBox(height: Spacing.sm),
+            Row(
+              children: [
+                Text(
+                  timeLabel,
                   style: AppTypography.chrome.copyWith(
-                    fontSize: 15,
-                    color: textSecondary,
+                    fontSize: 12,
+                    color: textTertiary,
                   ),
                 ),
+                const SizedBox(width: Spacing.sm),
+                Container(
+                  width: 3,
+                  height: 3,
+                  decoration: BoxDecoration(
+                    color: textTertiary,
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                const SizedBox(width: Spacing.sm),
+                Container(
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 6,
+                    vertical: 2,
+                  ),
+                  decoration: BoxDecoration(
+                    color: widget.isDark
+                        ? AppColors.bgTertiaryDark
+                        : AppColors.bgTertiaryLight,
+                    borderRadius: BorderRadius.circular(6),
+                  ),
+                  child: Text(
+                    chipLabel,
+                    style: AppTypography.sourceChip.copyWith(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w500,
+                      color: textSecondary,
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            const SizedBox(height: 6),
+            Text(
+              widget.result.sourceText,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 16,
+                color: textPrimary,
               ),
-              widget.trailing,
-              const SizedBox(width: Spacing.sm),
-              PeshatIcon(icon: AppIcons.chevronForward,
-                  size: 20, color: textTertiary),
-            ],
-          ),
+            ),
+            const SizedBox(height: 4),
+            Text(
+              widget.result.translatedText,
+              maxLines: 1,
+              overflow: TextOverflow.ellipsis,
+              style: AppTypography.body.copyWith(
+                fontSize: 14,
+                color: textSecondary,
+              ),
+            ),
+            const SizedBox(height: Spacing.sm),
+            if (!widget.isLast)
+              Padding(
+                padding: const EdgeInsets.only(left: Spacing.xs),
+                child: Container(height: 0.5, color: border),
+              ),
+          ],
         ),
       ),
     );
