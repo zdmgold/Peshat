@@ -86,5 +86,6 @@
   "closeButtonTooltip": "关闭",
   "showMenuTooltip": "显示菜单",
   "licensePackageLabel": "软件包",
-  "licenseEmptyLabel": "无许可证信息。"
+  "licenseEmptyLabel": "无许可证信息。",
+  "rateAppLabel": "评价 Peshat"
 }

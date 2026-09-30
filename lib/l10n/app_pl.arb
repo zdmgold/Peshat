@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Zamknij",
   "showMenuTooltip": "Pokaż menu",
   "licensePackageLabel": "Pakiet",
-  "licenseEmptyLabel": "Brak informacji o licencji."
+  "licenseEmptyLabel": "Brak informacji o licencji.",
+  "rateAppLabel": "Oceń Peshat"
 }

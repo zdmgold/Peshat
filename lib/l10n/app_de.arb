@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Schließen",
   "showMenuTooltip": "Menü anzeigen",
   "licensePackageLabel": "Paket",
-  "licenseEmptyLabel": "Keine Lizenzinformationen verfügbar."
+  "licenseEmptyLabel": "Keine Lizenzinformationen verfügbar.",
+  "rateAppLabel": "Peshat bewerten"
 }

@@ -270,4 +270,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'لائسنس کی معلومات دستیاب نہیں۔';
+
+  @override
+  String get rateAppLabel => 'Peshat کو ریٹنگ دیں';
 }

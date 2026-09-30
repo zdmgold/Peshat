@@ -270,4 +270,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Aucune information de licence disponible.';
+
+  @override
+  String get rateAppLabel => 'Noter Peshat';
 }

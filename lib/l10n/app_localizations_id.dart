@@ -270,4 +270,7 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Tidak ada informasi lisensi.';
+
+  @override
+  String get rateAppLabel => 'Beri rating Peshat';
 }

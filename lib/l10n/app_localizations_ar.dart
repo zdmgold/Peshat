@@ -270,4 +270,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'لا تتوفر معلومات الترخيص.';
+
+  @override
+  String get rateAppLabel => 'قيّم Peshat';
 }

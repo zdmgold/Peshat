@@ -86,5 +86,6 @@
   "closeButtonTooltip": "סגור",
   "showMenuTooltip": "הצג תפריט",
   "licensePackageLabel": "חבילה",
-  "licenseEmptyLabel": "אין מידע זמין על רישיון."
+  "licenseEmptyLabel": "אין מידע זמין על רישיון.",
+  "rateAppLabel": "דרג את Peshat"
 }

@@ -270,4 +270,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Walang available na impormasyon ng lisensya.';
+
+  @override
+  String get rateAppLabel => 'I-rate ang Peshat';
 }

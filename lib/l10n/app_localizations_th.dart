@@ -270,4 +270,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'ไม่มีข้อมูลใบอนุญาต';
+
+  @override
+  String get rateAppLabel => 'ให้คะแนน Peshat';
 }

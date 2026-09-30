@@ -270,4 +270,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Lisans bilgisi mevcut değil.';
+
+  @override
+  String get rateAppLabel => 'Peshat\'ı değerlendir';
 }

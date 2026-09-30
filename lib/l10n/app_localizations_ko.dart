@@ -270,4 +270,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => '라이선스 정보가 없습니다.';
+
+  @override
+  String get rateAppLabel => 'Peshat 평가하기';
 }

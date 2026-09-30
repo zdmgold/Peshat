@@ -114,5 +114,9 @@
   },
   "@licenseEmptyLabel": {
     "description": "Message shown when the license registry contains no entries."
+  },
+  "rateAppLabel": "Rate Peshat",
+  "@rateAppLabel": {
+    "description": "Settings row that opens the OS in-app review sheet."
   }
 }

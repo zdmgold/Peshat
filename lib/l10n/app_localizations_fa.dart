@@ -270,4 +270,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'اطلاعات مجوز موجود نیست.';
+
+  @override
+  String get rateAppLabel => 'به Peshat امتیاز دهید';
 }

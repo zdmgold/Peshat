@@ -86,5 +86,6 @@
   "closeButtonTooltip": "बन्द गर्नुहोस्",
   "showMenuTooltip": "मेनु देखाउनुहोस्",
   "licensePackageLabel": "प्याकेज",
-  "licenseEmptyLabel": "कुनै इजाजतपत्र जानकारी उपलब्ध छैन।"
+  "licenseEmptyLabel": "कुनै इजाजतपत्र जानकारी उपलब्ध छैन।",
+  "rateAppLabel": "Peshat लाई मूल्याङ्कन गर्नुहोस्"
 }

@@ -86,5 +86,6 @@
   "closeButtonTooltip": "বন্ধ",
   "showMenuTooltip": "মেনু দেখান",
   "licensePackageLabel": "প্যাকেজ",
-  "licenseEmptyLabel": "কোনো লাইসেন্স তথ্য নেই।"
+  "licenseEmptyLabel": "কোনো লাইসেন্স তথ্য নেই।",
+  "rateAppLabel": "Peshat রেটিং দিন"
 }

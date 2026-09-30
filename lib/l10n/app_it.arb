@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Chiudi",
   "showMenuTooltip": "Mostra menu",
   "licensePackageLabel": "Pacchetto",
-  "licenseEmptyLabel": "Nessuna informazione sulla licenza disponibile."
+  "licenseEmptyLabel": "Nessuna informazione sulla licenza disponibile.",
+  "rateAppLabel": "Valuta Peshat"
 }

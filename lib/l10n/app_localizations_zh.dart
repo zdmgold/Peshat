@@ -270,4 +270,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => '无许可证信息。';
+
+  @override
+  String get rateAppLabel => '评价 Peshat';
 }

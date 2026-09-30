@@ -270,4 +270,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Nem érhető el licencinformáció.';
+
+  @override
+  String get rateAppLabel => 'Peshat értékelése';
 }

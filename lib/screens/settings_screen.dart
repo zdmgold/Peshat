@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
+import 'package:in_app_review/in_app_review.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -110,6 +111,17 @@ class _SettingsScreenState extends State<SettingsScreen> {
         builder: (_) => HistoryScreen(history: widget.history),
       ),
     );
+  }
+
+  Future<void> _requestReview() async {
+    try {
+      final review = InAppReview.instance;
+      if (await review.isAvailable()) {
+        await review.requestReview();
+      }
+    } catch (_) {
+      // The OS may decline to show the prompt; that is not an error.
+    }
   }
 
   Future<void> _openLicenses() async {
@@ -336,6 +348,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                   CupertinoListSection.insetGrouped(
                     header: Text(l10n.aboutLabel.toUpperCase()),
                     children: [
+                      CupertinoListTile(
+                        leading: const PeshatIcon(icon: AppIcons.verified),
+                        title: Text(l10n.rateAppLabel),
+                        trailing: _kChevron,
+                        onTap: _requestReview,
+                      ),
                       CupertinoListTile(
                         leading: const PeshatIcon(icon: AppIcons.share),
                         title: Text(l10n.shareAppLabel),

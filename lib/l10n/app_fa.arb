@@ -86,5 +86,6 @@
   "closeButtonTooltip": "بستن",
   "showMenuTooltip": "نمایش منو",
   "licensePackageLabel": "بسته",
-  "licenseEmptyLabel": "اطلاعات مجوز موجود نیست."
+  "licenseEmptyLabel": "اطلاعات مجوز موجود نیست.",
+  "rateAppLabel": "به Peshat امتیاز دهید"
 }

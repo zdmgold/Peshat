@@ -270,4 +270,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Nejsou k dispozici žádné informace o licenci.';
+
+  @override
+  String get rateAppLabel => 'Ohodnotit Peshat';
 }

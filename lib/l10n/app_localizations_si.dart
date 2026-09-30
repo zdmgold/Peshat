@@ -270,4 +270,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'බලපත්‍ර තොරතුරු නොමැත.';
+
+  @override
+  String get rateAppLabel => 'Peshat ශ්‍රේණිගත කරන්න';
 }

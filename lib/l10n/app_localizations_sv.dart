@@ -270,4 +270,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Ingen licensinformation tillgänglig.';
+
+  @override
+  String get rateAppLabel => 'Betygsätt Peshat';
 }

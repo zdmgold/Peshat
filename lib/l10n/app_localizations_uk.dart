@@ -270,4 +270,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Інформація про ліцензію недоступна.';
+
+  @override
+  String get rateAppLabel => 'Оцінити Peshat';
 }

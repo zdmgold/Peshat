@@ -86,5 +86,6 @@
   "closeButtonTooltip": "닫기",
   "showMenuTooltip": "메뉴 표시",
   "licensePackageLabel": "패키지",
-  "licenseEmptyLabel": "라이선스 정보가 없습니다."
+  "licenseEmptyLabel": "라이선스 정보가 없습니다.",
+  "rateAppLabel": "Peshat 평가하기"
 }

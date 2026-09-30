@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Isara",
   "showMenuTooltip": "Ipakita ang menu",
   "licensePackageLabel": "Package",
-  "licenseEmptyLabel": "Walang available na impormasyon ng lisensya."
+  "licenseEmptyLabel": "Walang available na impormasyon ng lisensya.",
+  "rateAppLabel": "I-rate ang Peshat"
 }

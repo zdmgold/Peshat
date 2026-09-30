@@ -684,6 +684,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'No license information available.'**
   String get licenseEmptyLabel;
+
+  /// Settings row that opens the OS in-app review sheet.
+  ///
+  /// In en, this message translates to:
+  /// **'Rate Peshat'**
+  String get rateAppLabel;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

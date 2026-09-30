@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Kapat",
   "showMenuTooltip": "Menüyü göster",
   "licensePackageLabel": "Paket",
-  "licenseEmptyLabel": "Lisans bilgisi mevcut değil."
+  "licenseEmptyLabel": "Lisans bilgisi mevcut değil.",
+  "rateAppLabel": "Peshat'ı değerlendir"
 }

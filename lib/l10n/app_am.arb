@@ -86,5 +86,6 @@
   "closeButtonTooltip": "ዝጋ",
   "showMenuTooltip": "ምናሌ አሳይ",
   "licensePackageLabel": "ጥቅል",
-  "licenseEmptyLabel": "ምንም የፍቃድ መረጃ አልተገኘም።"
+  "licenseEmptyLabel": "ምንም የፍቃድ መረጃ አልተገኘም።",
+  "rateAppLabel": "ፔሻትን ደረጃ ይስጡ"
 }

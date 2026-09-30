@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Sluiten",
   "showMenuTooltip": "Menu weergeven",
   "licensePackageLabel": "Pakket",
-  "licenseEmptyLabel": "Geen licentie-informatie beschikbaar."
+  "licenseEmptyLabel": "Geen licentie-informatie beschikbaar.",
+  "rateAppLabel": "Peshat beoordelen"
 }

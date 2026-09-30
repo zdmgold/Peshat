@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Закрити",
   "showMenuTooltip": "Показати меню",
   "licensePackageLabel": "Пакет",
-  "licenseEmptyLabel": "Інформація про ліцензію недоступна."
+  "licenseEmptyLabel": "Інформація про ліцензію недоступна.",
+  "rateAppLabel": "Оцінити Peshat"
 }

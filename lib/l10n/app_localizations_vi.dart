@@ -270,4 +270,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Không có thông tin giấy phép.';
+
+  @override
+  String get rateAppLabel => 'Đánh giá Peshat';
 }

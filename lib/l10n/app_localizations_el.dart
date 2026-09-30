@@ -270,4 +270,7 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Δεν υπάρχουν διαθέσιμες πληροφορίες άδειας.';
+
+  @override
+  String get rateAppLabel => 'Αξιολογήστε το Peshat';
 }

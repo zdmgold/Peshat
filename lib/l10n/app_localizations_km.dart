@@ -270,4 +270,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'គ្មានព័ត៌មានអាជ្ញាបណ្ណទេ។';
+
+  @override
+  String get rateAppLabel => 'វាយតម្លៃ Peshat';
 }

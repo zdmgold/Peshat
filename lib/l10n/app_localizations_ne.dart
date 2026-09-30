@@ -270,4 +270,7 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'कुनै इजाजतपत्र जानकारी उपलब्ध छैन।';
+
+  @override
+  String get rateAppLabel => 'Peshat लाई मूल्याङ्कन गर्नुहोस्';
 }

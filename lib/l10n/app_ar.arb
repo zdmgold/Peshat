@@ -86,5 +86,6 @@
   "closeButtonTooltip": "إغلاق",
   "showMenuTooltip": "إظهار القائمة",
   "licensePackageLabel": "حزمة",
-  "licenseEmptyLabel": "لا تتوفر معلومات الترخيص."
+  "licenseEmptyLabel": "لا تتوفر معلومات الترخيص.",
+  "rateAppLabel": "قيّم Peshat"
 }

@@ -270,4 +270,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'কোনো লাইসেন্স তথ্য নেই।';
+
+  @override
+  String get rateAppLabel => 'Peshat রেটিং দিন';
 }

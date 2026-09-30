@@ -270,4 +270,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'ምንም የፍቃድ መረጃ አልተገኘም።';
+
+  @override
+  String get rateAppLabel => 'ፔሻትን ደረጃ ይስጡ';
 }

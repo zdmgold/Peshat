@@ -270,4 +270,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Nu există informații despre licență disponibile.';
+
+  @override
+  String get rateAppLabel => 'Evaluează Peshat';
 }

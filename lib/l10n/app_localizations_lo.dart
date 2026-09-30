@@ -270,4 +270,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'ບໍ່ມີຂໍ້ມູນໃບອະນຸຍາດ.';
+
+  @override
+  String get rateAppLabel => 'ໃຫ້ຄະແນນ Peshat';
 }

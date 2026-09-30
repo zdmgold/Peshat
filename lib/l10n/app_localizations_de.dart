@@ -270,4 +270,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'Keine Lizenzinformationen verfügbar.';
+
+  @override
+  String get rateAppLabel => 'Peshat bewerten';
 }

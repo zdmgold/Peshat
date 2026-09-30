@@ -270,4 +270,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get licenseEmptyLabel => 'လိုင်စင်အချက်အလက် မရနိုင်ပါ။';
+
+  @override
+  String get rateAppLabel => 'Peshat ကို အဆင့်သတ်မှတ်ပါ';
 }

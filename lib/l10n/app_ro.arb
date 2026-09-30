@@ -86,5 +86,6 @@
   "closeButtonTooltip": "Închidere",
   "showMenuTooltip": "Afișare meniu",
   "licensePackageLabel": "Pachet",
-  "licenseEmptyLabel": "Nu există informații despre licență disponibile."
+  "licenseEmptyLabel": "Nu există informații despre licență disponibile.",
+  "rateAppLabel": "Evaluează Peshat"
 }
