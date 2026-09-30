@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:hugeicons/hugeicons.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:peshat/core/providers/history_provider.dart';
@@ -7,8 +8,15 @@ import 'package:peshat/core/providers/purchase_provider.dart';
 import 'package:peshat/core/providers/settings_provider.dart';
 import 'package:peshat/core/providers/theme_provider.dart';
 import 'package:peshat/core/providers/ui_locale_provider.dart';
+import 'package:peshat/core/utils/app_icons.dart';
 import 'package:peshat/l10n/app_localizations.dart';
 import 'package:peshat/screens/scan_screen.dart';
+
+/// Helper: find a [HugeIcon] rendered from a specific icon constant.
+/// Flutter's `find.byIcon` only matches the built-in [Icon] widget, so
+/// Hugeicons needs a widget-predicate finder.
+Finder findHugeIcon(List<List<dynamic>> icon) =>
+    find.byWidgetPredicate((w) => w is HugeIcon && w.icon == icon);
 
 void main() {
   testWidgets('ScanScreen renders core controls', (tester) async {
@@ -49,16 +57,16 @@ void main() {
     expect(find.text('Translate to'), findsOneWidget);
 
     // Nav bar icons — one of each.
-    expect(find.byIcon(CupertinoIcons.gear), findsOneWidget);
-    expect(find.byIcon(CupertinoIcons.moon), findsOneWidget);
+    expect(findHugeIcon(AppIcons.settings), findsOneWidget);
+    expect(findHugeIcon(AppIcons.moon), findsOneWidget);
 
     // Globe appears in the nav bar (UI language) and in the
     // "Translate to" card. Two occurrences.
-    expect(find.byIcon(CupertinoIcons.globe), findsNWidgets(2));
+    expect(findHugeIcon(AppIcons.globe), findsNWidgets(2));
 
     // Body icons — one of each.
-    expect(find.byIcon(CupertinoIcons.doc_text_viewfinder), findsOneWidget);
-    expect(find.byIcon(CupertinoIcons.pencil), findsOneWidget);
-    expect(find.byIcon(CupertinoIcons.arrow_up_doc), findsOneWidget);
+    expect(findHugeIcon(AppIcons.scanDocument), findsOneWidget);
+    expect(findHugeIcon(AppIcons.typeText), findsOneWidget);
+    expect(findHugeIcon(AppIcons.importFile), findsOneWidget);
   });
 }

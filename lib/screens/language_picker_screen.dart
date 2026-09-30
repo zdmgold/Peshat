@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hugeicons/hugeicons.dart';
+import '../core/utils/app_icons.dart';
 import '../core/models/language.dart';
 import '../core/services/translator_service.dart';
 import '../core/utils/app_colors.dart';
@@ -338,7 +340,7 @@ class _RowState extends State<_Row> {
                   ),
                 ),
                 if (widget.selected)
-                  Icon(CupertinoIcons.check_mark,
+                  HugeIcon(icon: AppIcons.check,
                       size: 20, color: widget.accent),
               ],
             ),
@@ -373,7 +375,7 @@ class _EmptySearchState extends StatelessWidget {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Icon(CupertinoIcons.search, size: 48, color: textTertiary),
+            HugeIcon(icon: AppIcons.search, size: 48, color: textTertiary),
             const SizedBox(height: Spacing.md),
             Text(
               title,

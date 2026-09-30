@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hugeicons/hugeicons.dart';
+import '../core/utils/app_icons.dart';
 import '../core/models/language.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -33,7 +35,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
       color: textTertiary,
     ));
     rows.add(_UiLanguageRow(
-      leading: CupertinoIcons.device_phone_portrait,
+      leading: AppIcons.smartphone,
       title: 'Follow system',
       subtitle: null,
       selected: current == null,
@@ -160,7 +162,7 @@ class _LetterLabel extends StatelessWidget {
 // ---------------------------------------------------------------------------
 
 class _UiLanguageRow extends StatefulWidget {
-  final IconData? leading;
+  final List<List<dynamic>>? leading;
   final String title;
   final String? subtitle;
   final bool nativeIsRtl;
@@ -215,7 +217,7 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
             child: Row(
               children: [
                 if (widget.leading != null) ...[
-                  Icon(widget.leading, size: 22, color: widget.textSecondary),
+                  HugeIcon(icon: widget.leading!, size: 22, color: widget.textSecondary),
                   const SizedBox(width: Spacing.md),
                 ],
                 Expanded(
@@ -247,7 +249,7 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
                   ),
                 ),
                 if (widget.selected)
-                  Icon(CupertinoIcons.check_mark,
+                  HugeIcon(icon: AppIcons.check,
                       size: 20, color: widget.accent),
               ],
             ),

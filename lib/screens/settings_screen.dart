@@ -1,4 +1,6 @@
 import 'package:flutter/cupertino.dart';
+import 'package:hugeicons/hugeicons.dart';
+import '../core/utils/app_icons.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -28,7 +30,7 @@ const _supportUrl = 'https://peshat.zdmgold.workers.dev/support.html';
 const _playStoreUrl =
     'https://play.google.com/store/apps/details?id=com.zdmgold.peshat';
 
-const _kChevron = Icon(CupertinoIcons.chevron_forward, size: 16);
+const _kChevron = HugeIcon(icon: AppIcons.chevronForward, size: 16);
 
 class SettingsScreen extends StatefulWidget {
   final ThemeProvider theme;
@@ -153,7 +155,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     header: Text(l10n.appLanguageLabel.toUpperCase()),
                     children: [
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.globe),
+                        leading: const HugeIcon(icon: AppIcons.globe),
                         title: Text(l10n.uiLanguageLabel),
                         trailing: _TrailingValue(
                           text: widget.uiLocale.value == null
@@ -167,7 +169,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ValueListenableBuilder<String>(
                         valueListenable: widget.settings,
                         builder: (_, code, __) => CupertinoListTile(
-                          leading: const Icon(CupertinoIcons.globe),
+                          leading: const HugeIcon(icon: AppIcons.globe),
                           title: Text(l10n.defaultLanguageLabel),
                           trailing: _TrailingValue(
                             text: languageDisplayName(code),
@@ -184,7 +186,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     header: Text(l10n.themeLabel.toUpperCase()),
                     children: [
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.paintbrush),
+                        leading: const HugeIcon(icon: AppIcons.palette),
                         title: Text(l10n.themeLabel),
                       ),
                       Padding(
@@ -251,7 +253,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     header: Text(l10n.historyLabel.toUpperCase()),
                     children: [
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.time),
+                        leading: const HugeIcon(icon: AppIcons.history),
                         title: Text(l10n.historyLabel),
                         trailing: _kChevron,
                         onTap: _openHistory,
@@ -268,8 +270,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           header: Text(l10n.adStatusLabel.toUpperCase()),
                           children: [
                             CupertinoListTile(
-                              leading: const Icon(
-                                  CupertinoIcons.checkmark_seal),
+                              leading: const HugeIcon(icon: AppIcons.verified),
                               title: Text(l10n.adStatusLabel),
                               trailing: const AdsRemovedBadge(),
                             ),
@@ -280,8 +281,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         header: Text(l10n.adStatusLabel.toUpperCase()),
                         children: [
                           CupertinoListTile(
-                            leading: const Icon(
-                                CupertinoIcons.hand_point_left),
+                            leading: const HugeIcon(icon: AppIcons.adsClick),
                             title: Text(l10n.removeAdsButton),
                             subtitle: Text(l10n.removeAdsSubtitle),
                             trailing: _SmallOutlinedButton(
@@ -291,8 +291,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ),
                           CupertinoListTile(
-                            leading: const Icon(
-                                CupertinoIcons.arrow_counterclockwise),
+                            leading: const HugeIcon(icon: AppIcons.restore),
                             title: Text(l10n.restorePurchaseButton),
                             onTap: _iap.restore,
                           ),
@@ -306,26 +305,25 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     header: Text(l10n.supportLink.toUpperCase()),
                     children: [
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.hand_raised),
+                        leading: const HugeIcon(icon: AppIcons.privacy),
                         title: Text(l10n.privacyPolicyLink),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_privacyUrl),
                       ),
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.doc_text),
+                        leading: const HugeIcon(icon: AppIcons.docText),
                         title: Text(l10n.termsLink),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_termsUrl),
                       ),
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.question_circle),
+                        leading: const HugeIcon(icon: AppIcons.support),
                         title: Text(l10n.supportLink),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_supportUrl),
                       ),
                       CupertinoListTile(
-                        leading: const Icon(
-                            CupertinoIcons.chevron_left_slash_chevron_right),
+                        leading: const HugeIcon(icon: AppIcons.code),
                         title: Text(l10n.licensesLabel),
                         trailing: _kChevron,
                         onTap: _openLicenses,
@@ -338,7 +336,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     header: Text(l10n.aboutLabel.toUpperCase()),
                     children: [
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.share),
+                        leading: const HugeIcon(icon: AppIcons.share),
                         title: Text(l10n.shareAppLabel),
                         trailing: _kChevron,
                         onTap: () => Share.share(
@@ -347,7 +345,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                       ),
                       CupertinoListTile(
-                        leading: const Icon(CupertinoIcons.info),
+                        leading: const HugeIcon(icon: AppIcons.info),
                         title: Text(l10n.aboutLabel),
                         subtitle: Text('${l10n.versionLabel} $_version'),
                       ),
