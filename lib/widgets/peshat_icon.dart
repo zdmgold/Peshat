@@ -38,7 +38,8 @@ class PeshatIcon extends StatelessWidget {
 
 /// Override for [CupertinoNavigationBar.leading] on pushed screens.
 ///
-/// Replaces Flutter's built-in back button — which uses `CupertinoIcons.back`
+/// Replaces Flutter's built-in back button, which ships as an icon from
+/// the deprecated iOS icon set, with a HugeIcon chevron that matches the
 /// from the `cupertino_icons` package we no longer depend on — with a
 /// [PeshatIcon] chevron that matches the rest of the app.
 Widget peshatBackButton(BuildContext context, {Color? color}) {
