@@ -200,7 +200,6 @@ class _ScanScreenState extends State<ScanScreen> {
 
     return CupertinoPageScaffold(
       child: SafeArea(
-        top: false,
         child: Column(
           children: [
             // ─── Toolbar ────────────────────────────────────────────────
@@ -248,29 +247,31 @@ class _ScanScreenState extends State<ScanScreen> {
               ),
             ),
 
-            // ─── Content ────────────────────────────────────────────────
+            // ─── Content — fixed layout, no scrolling ───────────────────
             Expanded(
-              child: SingleChildScrollView(
+              child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    // Tagline
-                    Text(
-                      l10n.tagline,
-                      maxLines: 2,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.brand.copyWith(
-                        fontSize: 18,
-                        fontWeight: FontWeight.w500,
-                        fontStyle: FontStyle.italic,
-                        color: textSecondary,
+                    // Tagline — centered in the space between toolbar and
+                    // scan button. Absorbs whatever vertical slack the
+                    // screen has, so it always sits in the middle of that
+                    // gap.
+                    Expanded(
+                      child: Center(
+                        child: Text(
+                          l10n.tagline,
+                          textAlign: TextAlign.center,
+                          maxLines: 2,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTypography.brand.copyWith(
+                            fontSize: 16,
+                            fontWeight: FontWeight.w500,
+                            color: textSecondary,
+                          ),
+                        ),
                       ),
-                    ),
-
-                    // Push the primary action down toward the middle.
-                    SizedBox(
-                      height: MediaQuery.sizeOf(context).height * 0.18,
                     ),
 
                     // Primary action — brass L mark on cream page.
@@ -311,9 +312,9 @@ class _ScanScreenState extends State<ScanScreen> {
                       showChevron: true,
                       onTap: _pickTargetLanguage,
                     ),
-                    const SizedBox(height: Spacing.xl),
+                    const SizedBox(height: 32),
 
-                    // RECENT section
+                    // RECENT section — fixed 80px card, hidden when empty.
                     ValueListenableBuilder<List<ScanResult>>(
                       valueListenable: widget.history,
                       builder: (context, items, _) {
@@ -346,7 +347,7 @@ class _ScanScreenState extends State<ScanScreen> {
                         );
                       },
                     ),
-                    const SizedBox(height: Spacing.xl),
+                    const SizedBox(height: 16),
                   ],
                 ),
               ),
@@ -409,7 +410,7 @@ class _ChipButton extends StatelessWidget {
 }
 
 // ---------------------------------------------------------------------------
-// Primary action — brass L mark on cream, no card, no fill, baked shadow.
+// Primary action — brass L mark on cream, no card, no fill, Dart-side shadow.
 // ---------------------------------------------------------------------------
 
 class _ScanLogo extends StatefulWidget {
@@ -465,7 +466,6 @@ class _ScanLogoState extends State<_ScanLogo> {
                 child: Stack(
                   alignment: Alignment.center,
                   children: [
-                    // Shadow — a blurred copy of the mark, offset down.
                     Positioned(
                       top: 10,
                       child: ImageFiltered(
@@ -487,7 +487,6 @@ class _ScanLogoState extends State<_ScanLogo> {
                         ),
                       ),
                     ),
-                    // Foreground — the mark itself.
                     SvgPicture.asset(
                       'assets/icon/mark_brass.svg',
                       width: 140,
