@@ -108,8 +108,6 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
     final inputFill =
         isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
-    final bgPrimary =
-        isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
 
     final all = _all;
     final filtered = _filtered(all);
@@ -211,12 +209,10 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
 
                     // Letter-grouped sections with sticky headers.
                     for (final group in groups) ...[
-                      SliverPersistentHeader(
-                        pinned: true,
-                        delegate: _LetterHeaderDelegate(
+                      SliverToBoxAdapter(
+                        child: _LetterLabel(
                           letter: group.letter,
-                          textTertiary: textTertiary,
-                          background: bgPrimary,
+                          color: textTertiary,
                         ),
                       ),
                       SliverList(
@@ -250,60 +246,6 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         ),
       ),
     );
-  }
-}
-
-// ---------------------------------------------------------------------------
-// Sticky letter header — pinned to the top of the viewport while its
-// section scrolls. Replaced by the next letter's header as it arrives.
-// ---------------------------------------------------------------------------
-
-class _LetterHeaderDelegate extends SliverPersistentHeaderDelegate {
-  final String letter;
-  final Color textTertiary;
-  final Color background;
-
-  const _LetterHeaderDelegate({
-    required this.letter,
-    required this.textTertiary,
-    required this.background,
-  });
-
-  static const double _height = 24;
-
-  @override
-  double get minExtent => _height;
-
-  @override
-  double get maxExtent => _height;
-
-  @override
-  Widget build(
-    BuildContext context,
-    double shrinkOffset,
-    bool overlapsContent,
-  ) {
-    return Container(
-      height: _height,
-      color: background,
-      alignment: Alignment.centerLeft,
-      padding: const EdgeInsets.only(left: Spacing.md, bottom: 4),
-      child: Text(
-        letter,
-        style: AppTypography.chrome.copyWith(
-          fontSize: 12,
-          fontWeight: FontWeight.w600,
-          color: textTertiary,
-        ),
-      ),
-    );
-  }
-
-  @override
-  bool shouldRebuild(covariant _LetterHeaderDelegate oldDelegate) {
-    return oldDelegate.letter != letter ||
-        oldDelegate.textTertiary != textTertiary ||
-        oldDelegate.background != background;
   }
 }
 
@@ -475,6 +417,36 @@ class _EmptySearchState extends StatelessWidget {
               ),
             ),
           ],
+        ),
+      ),
+    );
+  }
+}
+
+// ---------------------------------------------------------------------------
+// Letter label — inline (non-sticky) header above a letter group.
+// ---------------------------------------------------------------------------
+
+class _LetterLabel extends StatelessWidget {
+  final String letter;
+  final Color color;
+  const _LetterLabel({required this.letter, required this.color});
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(
+        Spacing.md,
+        Spacing.sm,
+        Spacing.md,
+        Spacing.xs,
+      ),
+      child: Text(
+        letter,
+        style: AppTypography.chrome.copyWith(
+          fontSize: 12,
+          fontWeight: FontWeight.w600,
+          color: color,
         ),
       ),
     );
