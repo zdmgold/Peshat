@@ -55,17 +55,21 @@ void main() {
     // Primary card renders the 56px SVG logo mark.
     // Note: HugeIcon wraps each icon in an internal SvgPicture,
     // so find.byType(SvgPicture) matches many. Target the 56px one.
+    // The mark renders twice on purpose: a blurred shadow copy
+    // behind, and the foreground mark on top.
     expect(
-      find.byWidgetPredicate((w) => w is SvgPicture && w.width == 56),
-      findsOneWidget,
+      find.byWidgetPredicate((w) => w is SvgPicture && w.width == 140),
+      findsNWidgets(2),
     );
 
     // Secondary action cards.
     expect(find.text('Type text'), findsOneWidget);
     expect(find.text('Import a file'), findsOneWidget);
 
-    // Language selector row.
-    expect(find.text('Translate to: Spanish'), findsOneWidget);
+    // Language selector row — ActionCard splits label and value
+    // into two Text widgets, so assert on each separately.
+    expect(find.text('Translate to'), findsOneWidget);
+    expect(find.text('Spanish'), findsOneWidget);
 
     // Toolbar chips — three, one of each.
     expect(findHugeIcon(AppIcons.settings), findsOneWidget);

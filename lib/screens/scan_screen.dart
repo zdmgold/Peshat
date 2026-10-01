@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:ui' show ImageFilter;
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -196,12 +197,10 @@ class _ScanScreenState extends State<ScanScreen> {
         isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
-    final border =
-        isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
 
     return CupertinoPageScaffold(
       child: SafeArea(
-        bottom: false,
+        top: false,
         child: Column(
           children: [
             // ─── Toolbar ────────────────────────────────────────────────
@@ -213,9 +212,8 @@ class _ScanScreenState extends State<ScanScreen> {
                   children: [
                     Text(
                       l10n.appName,
-                      style: AppTypography.chrome.copyWith(
-                        fontSize: 17,
-                        fontWeight: FontWeight.w600,
+                      style: AppTypography.brand.copyWith(
+                        fontSize: 26,
                         color: textPrimary,
                       ),
                     ),
@@ -260,23 +258,28 @@ class _ScanScreenState extends State<ScanScreen> {
                     // Tagline
                     Text(
                       l10n.tagline,
-                      maxLines: 1,
+                      maxLines: 2,
                       overflow: TextOverflow.ellipsis,
-                      style: AppTypography.body.copyWith(
-                        fontSize: 16,
+                      style: AppTypography.brand.copyWith(
+                        fontSize: 18,
                         fontWeight: FontWeight.w500,
+                        fontStyle: FontStyle.italic,
                         color: textSecondary,
                       ),
                     ),
-                    const SizedBox(height: Spacing.lg),
 
-                    // Primary card
-                    _ScanCard(
+                    // Push the primary action down toward the middle.
+                    SizedBox(
+                      height: MediaQuery.sizeOf(context).height * 0.18,
+                    ),
+
+                    // Primary action — brass L mark on cream page.
+                    _ScanLogo(
                       label: l10n.scanShortLabel,
                       isScanning: _isScanning,
                       onTap: _handleScan,
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: 32),
 
                     // Secondary action cards
                     Row(
@@ -300,18 +303,13 @@ class _ScanScreenState extends State<ScanScreen> {
                     ),
                     const SizedBox(height: 20),
 
-                    // Language selector row
-                    ActionRow(
+                    // Language selector — filled card.
+                    ActionCard(
                       icon: AppIcons.globe,
-                      label:
-                          '${l10n.translateToLabel}: ${languageDisplayName(widget.settings.value)}',
+                      label: l10n.translateToLabel,
+                      value: languageDisplayName(widget.settings.value),
+                      showChevron: true,
                       onTap: _pickTargetLanguage,
-                    ),
-                    Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: Spacing.md,
-                      ),
-                      child: Container(height: 0.5, color: border),
                     ),
                     const SizedBox(height: Spacing.xl),
 
@@ -411,25 +409,25 @@ class _ChipButton extends StatelessWidget {
 }
 
 // ---------------------------------------------------------------------------
-// Primary card — stacked Peshat mark + Scan label, brass fill, press scale
+// Primary action — brass L mark on cream, no card, no fill, baked shadow.
 // ---------------------------------------------------------------------------
 
-class _ScanCard extends StatefulWidget {
+class _ScanLogo extends StatefulWidget {
   final String label;
   final bool isScanning;
   final Future<void> Function() onTap;
 
-  const _ScanCard({
+  const _ScanLogo({
     required this.label,
     required this.isScanning,
     required this.onTap,
   });
 
   @override
-  State<_ScanCard> createState() => _ScanCardState();
+  State<_ScanLogo> createState() => _ScanLogoState();
 }
 
-class _ScanCardState extends State<_ScanCard> {
+class _ScanLogoState extends State<_ScanLogo> {
   bool _pressed = false;
 
   @override
@@ -445,55 +443,73 @@ class _ScanCardState extends State<_ScanCard> {
       child: AnimatedScale(
         duration: const Duration(milliseconds: 150),
         curve: Curves.easeOut,
-        scale: _pressed ? 0.97 : 1.0,
-        child: Container(
-          height: 120,
-          decoration: BoxDecoration(
-            color: accent,
-            borderRadius: BorderRadius.circular(16),
-            boxShadow: [
-              BoxShadow(
-                color: accent.withValues(alpha: 0.28),
-                blurRadius: 24,
-                offset: const Offset(0, 8),
-              ),
-            ],
-          ),
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              if (widget.isScanning)
-                const SizedBox(
-                  width: 56,
-                  height: 56,
-                  child: Center(
-                    child: CupertinoActivityIndicator(
-                      radius: 16,
-                      color: Color(0xFFFFFFFF),
+        scale: _pressed ? 0.94 : 1.0,
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (widget.isScanning)
+              SizedBox(
+                width: 140,
+                height: 140,
+                child: Center(
+                  child: CupertinoActivityIndicator(
+                    radius: 16,
+                    color: accent,
+                  ),
+                ),
+              )
+            else
+              SizedBox(
+                width: 140,
+                height: 140,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    // Shadow — a blurred copy of the mark, offset down.
+                    Positioned(
+                      top: 10,
+                      child: ImageFiltered(
+                        imageFilter: ImageFilter.blur(
+                          sigmaX: 14,
+                          sigmaY: 14,
+                        ),
+                        child: Opacity(
+                          opacity: 0.32,
+                          child: SvgPicture.asset(
+                            'assets/icon/mark_brass.svg',
+                            width: 140,
+                            height: 140,
+                            colorFilter: ColorFilter.mode(
+                              accent,
+                              BlendMode.srcIn,
+                            ),
+                          ),
+                        ),
+                      ),
                     ),
-                  ),
-                )
-              else
-                SvgPicture.asset(
-                  'assets/icon/mark.svg',
-                  width: 56,
-                  height: 56,
-                  colorFilter: const ColorFilter.mode(
-                    Color(0xFFFFFFFF),
-                    BlendMode.srcIn,
-                  ),
-                ),
-              const SizedBox(height: 12),
-              Text(
-                widget.label,
-                style: AppTypography.chrome.copyWith(
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                  color: const Color(0xFFFFFFFF),
+                    // Foreground — the mark itself.
+                    SvgPicture.asset(
+                      'assets/icon/mark_brass.svg',
+                      width: 140,
+                      height: 140,
+                      colorFilter: ColorFilter.mode(
+                        accent,
+                        BlendMode.srcIn,
+                      ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            const SizedBox(height: 16),
+            Text(
+              widget.label,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
+                color: accent,
+              ),
+            ),
+          ],
         ),
       ),
     );
