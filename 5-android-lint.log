@@ -1,0 +1,847 @@
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle:compileKotlin UP-TO-DATE
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy UP-TO-DATE
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+> Task :camera_android_camerax:preBuild UP-TO-DATE
+> Task :camera_android_camerax:preDebugBuild UP-TO-DATE
+> Task :camera_android_camerax:mergeDebugJniLibFolders
+> Task :camera_android_camerax:mergeDebugNativeLibs NO-SOURCE
+> Task :camera_android_camerax:stripDebugDebugSymbols NO-SOURCE
+> Task :camera_android_camerax:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :camera_android_camerax:generateDebugResValues UP-TO-DATE
+> Task :camera_android_camerax:generateDebugResources UP-TO-DATE
+> Task :camera_android_camerax:copyDebugJniLibsProjectAndLocalJars
+> Task :camera_android_camerax:packageDebugResources UP-TO-DATE
+> Task :camera_android_camerax:parseDebugLocalResources UP-TO-DATE
+> Task :camera_android_camerax:generateDebugRFile UP-TO-DATE
+> Task :camera_android_camerax:compileDebugKotlin UP-TO-DATE
+> Task :camera_android_camerax:extractDebugAnnotations
+> Task :camera_android_camerax:extractDeepLinksForAarDebug
+> Task :camera_android_camerax:javaPreCompileDebug UP-TO-DATE
+> Task :camera_android_camerax:compileDebugJavaWithJavac UP-TO-DATE
+> Task :camera_android_camerax:mergeDebugGeneratedProguardFiles
+> Task :camera_android_camerax:mergeDebugConsumerProguardFiles
+> Task :camera_android_camerax:mergeDebugShaders UP-TO-DATE
+> Task :camera_android_camerax:compileDebugShaders NO-SOURCE
+> Task :camera_android_camerax:generateDebugAssets UP-TO-DATE
+> Task :camera_android_camerax:packageDebugAssets UP-TO-DATE
+> Task :camera_android_camerax:prepareDebugArtProfile
+> Task :camera_android_camerax:processDebugManifest UP-TO-DATE
+> Task :camera_android_camerax:prepareLintJarForPublish
+> Task :camera_android_camerax:processDebugJavaRes
+> Task :camera_android_camerax:writeDebugAarMetadata UP-TO-DATE
+> Task :file_picker:preBuild UP-TO-DATE
+> Task :file_picker:preDebugBuild UP-TO-DATE
+> Task :file_picker:mergeDebugJniLibFolders
+> Task :file_picker:mergeDebugNativeLibs NO-SOURCE
+> Task :file_picker:stripDebugDebugSymbols NO-SOURCE
+> Task :file_picker:copyDebugJniLibsProjectAndLocalJars
+> Task :file_picker:generateDebugResValues UP-TO-DATE
+> Task :file_picker:generateDebugResources UP-TO-DATE
+> Task :file_picker:packageDebugResources UP-TO-DATE
+> Task :file_picker:parseDebugLocalResources UP-TO-DATE
+> Task :file_picker:generateDebugRFile UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:preBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:preDebugBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:generateDebugResValues UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:generateDebugResources UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:packageDebugResources UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:parseDebugLocalResources UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:generateDebugRFile UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:javaPreCompileDebug UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:compileDebugJavaWithJavac UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :camera_android_camerax:mergeDebugJavaResource
+> Task :file_picker:extractDebugAnnotations
+> Task :camera_android_camerax:syncDebugLibJars
+> Task :camera_android_camerax:bundleDebugLocalLintAar
+> Task :file_picker:extractDeepLinksForAarDebug
+> Task :file_picker:javaPreCompileDebug UP-TO-DATE
+> Task :file_picker:compileDebugJavaWithJavac UP-TO-DATE
+> Task :file_picker:mergeDebugGeneratedProguardFiles
+> Task :file_picker:mergeDebugConsumerProguardFiles
+> Task :file_picker:mergeDebugShaders UP-TO-DATE
+> Task :file_picker:compileDebugShaders NO-SOURCE
+> Task :file_picker:generateDebugAssets UP-TO-DATE
+> Task :file_picker:packageDebugAssets UP-TO-DATE
+> Task :file_picker:prepareDebugArtProfile
+> Task :file_picker:prepareLintJarForPublish
+> Task :file_picker:processDebugManifest UP-TO-DATE
+> Task :file_picker:processDebugJavaRes NO-SOURCE
+> Task :file_picker:mergeDebugJavaResource
+> Task :file_picker:syncDebugLibJars
+> Task :file_picker:writeDebugAarMetadata UP-TO-DATE
+> Task :file_picker:bundleDebugLocalLintAar
+> Task :flutter_doc_scanner:preBuild UP-TO-DATE
+> Task :flutter_doc_scanner:preDebugBuild UP-TO-DATE
+> Task :flutter_doc_scanner:mergeDebugJniLibFolders
+> Task :flutter_doc_scanner:mergeDebugNativeLibs NO-SOURCE
+> Task :flutter_doc_scanner:stripDebugDebugSymbols NO-SOURCE
+> Task :flutter_doc_scanner:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :flutter_doc_scanner:copyDebugJniLibsProjectAndLocalJars
+> Task :flutter_doc_scanner:generateDebugResValues UP-TO-DATE
+> Task :flutter_doc_scanner:generateDebugResources UP-TO-DATE
+> Task :flutter_doc_scanner:packageDebugResources UP-TO-DATE
+> Task :flutter_doc_scanner:parseDebugLocalResources UP-TO-DATE
+> Task :flutter_doc_scanner:generateDebugRFile UP-TO-DATE
+> Task :flutter_doc_scanner:compileDebugKotlin UP-TO-DATE
+> Task :flutter_doc_scanner:extractDebugAnnotations
+> Task :flutter_doc_scanner:extractDeepLinksForAarDebug
+> Task :flutter_doc_scanner:javaPreCompileDebug UP-TO-DATE
+> Task :flutter_doc_scanner:compileDebugJavaWithJavac NO-SOURCE
+> Task :flutter_doc_scanner:mergeDebugGeneratedProguardFiles
+> Task :flutter_doc_scanner:mergeDebugConsumerProguardFiles
+> Task :flutter_doc_scanner:mergeDebugShaders UP-TO-DATE
+> Task :flutter_doc_scanner:compileDebugShaders NO-SOURCE
+> Task :flutter_doc_scanner:generateDebugAssets UP-TO-DATE
+> Task :flutter_doc_scanner:packageDebugAssets UP-TO-DATE
+> Task :flutter_doc_scanner:prepareDebugArtProfile
+> Task :flutter_doc_scanner:prepareLintJarForPublish
+> Task :flutter_doc_scanner:processDebugManifest UP-TO-DATE
+> Task :flutter_doc_scanner:processDebugJavaRes
+> Task :flutter_doc_scanner:writeDebugAarMetadata UP-TO-DATE
+> Task :flutter_local_notifications:preBuild UP-TO-DATE
+> Task :flutter_local_notifications:preDebugBuild UP-TO-DATE
+> Task :flutter_doc_scanner:mergeDebugJavaResource
+> Task :flutter_local_notifications:mergeDebugJniLibFolders
+> Task :flutter_doc_scanner:syncDebugLibJars
+> Task :flutter_doc_scanner:bundleDebugLocalLintAar
+> Task :flutter_local_notifications:mergeDebugNativeLibs NO-SOURCE
+> Task :flutter_local_notifications:stripDebugDebugSymbols NO-SOURCE
+> Task :flutter_local_notifications:generateDebugResValues UP-TO-DATE
+> Task :flutter_local_notifications:copyDebugJniLibsProjectAndLocalJars
+> Task :flutter_local_notifications:generateDebugResources UP-TO-DATE
+> Task :flutter_local_notifications:packageDebugResources UP-TO-DATE
+> Task :flutter_local_notifications:parseDebugLocalResources UP-TO-DATE
+> Task :flutter_local_notifications:generateDebugRFile UP-TO-DATE
+> Task :flutter_local_notifications:extractDebugAnnotations
+> Task :flutter_local_notifications:extractDeepLinksForAarDebug
+> Task :flutter_local_notifications:javaPreCompileDebug UP-TO-DATE
+> Task :flutter_local_notifications:compileDebugJavaWithJavac UP-TO-DATE
+> Task :flutter_local_notifications:mergeDebugGeneratedProguardFiles
+> Task :flutter_local_notifications:mergeDebugConsumerProguardFiles
+> Task :flutter_local_notifications:mergeDebugShaders UP-TO-DATE
+> Task :flutter_local_notifications:compileDebugShaders NO-SOURCE
+> Task :flutter_local_notifications:generateDebugAssets UP-TO-DATE
+> Task :flutter_local_notifications:packageDebugAssets UP-TO-DATE
+> Task :flutter_local_notifications:prepareDebugArtProfile
+> Task :flutter_local_notifications:prepareLintJarForPublish
+> Task :flutter_local_notifications:processDebugManifest UP-TO-DATE
+> Task :flutter_local_notifications:processDebugJavaRes NO-SOURCE
+> Task :flutter_local_notifications:mergeDebugJavaResource
+> Task :flutter_local_notifications:writeDebugAarMetadata UP-TO-DATE
+> Task :flutter_local_notifications:syncDebugLibJars
+> Task :flutter_local_notifications:bundleDebugLocalLintAar
+> Task :flutter_native_splash:preBuild UP-TO-DATE
+> Task :flutter_native_splash:preDebugBuild UP-TO-DATE
+> Task :flutter_native_splash:mergeDebugJniLibFolders
+> Task :flutter_native_splash:mergeDebugNativeLibs NO-SOURCE
+> Task :flutter_native_splash:stripDebugDebugSymbols NO-SOURCE
+> Task :flutter_native_splash:copyDebugJniLibsProjectAndLocalJars
+> Task :flutter_native_splash:generateDebugResValues UP-TO-DATE
+> Task :flutter_native_splash:generateDebugResources UP-TO-DATE
+> Task :flutter_native_splash:packageDebugResources UP-TO-DATE
+> Task :flutter_native_splash:parseDebugLocalResources UP-TO-DATE
+> Task :flutter_native_splash:generateDebugRFile UP-TO-DATE
+> Task :flutter_native_splash:extractDebugAnnotations
+> Task :flutter_native_splash:extractDeepLinksForAarDebug
+> Task :flutter_native_splash:javaPreCompileDebug UP-TO-DATE
+> Task :flutter_native_splash:compileDebugJavaWithJavac UP-TO-DATE
+> Task :flutter_native_splash:mergeDebugGeneratedProguardFiles
+> Task :flutter_native_splash:mergeDebugConsumerProguardFiles
+> Task :flutter_native_splash:mergeDebugShaders UP-TO-DATE
+> Task :flutter_native_splash:compileDebugShaders NO-SOURCE
+> Task :flutter_native_splash:generateDebugAssets UP-TO-DATE
+> Task :flutter_native_splash:packageDebugAssets UP-TO-DATE
+> Task :flutter_native_splash:prepareDebugArtProfile
+> Task :flutter_native_splash:prepareLintJarForPublish
+> Task :flutter_native_splash:processDebugManifest UP-TO-DATE
+> Task :flutter_native_splash:processDebugJavaRes NO-SOURCE
+> Task :flutter_native_splash:writeDebugAarMetadata UP-TO-DATE
+> Task :flutter_native_splash:mergeDebugJavaResource
+> Task :flutter_native_splash:syncDebugLibJars
+> Task :flutter_native_splash:bundleDebugLocalLintAar
+> Task :flutter_plugin_android_lifecycle:mergeDebugJniLibFolders
+> Task :flutter_plugin_android_lifecycle:mergeDebugNativeLibs NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:stripDebugDebugSymbols NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:copyDebugJniLibsProjectAndLocalJars
+> Task :flutter_plugin_android_lifecycle:extractDebugAnnotations
+> Task :flutter_plugin_android_lifecycle:extractDeepLinksForAarDebug
+> Task :flutter_plugin_android_lifecycle:mergeDebugGeneratedProguardFiles
+> Task :flutter_plugin_android_lifecycle:mergeDebugConsumerProguardFiles
+> Task :flutter_plugin_android_lifecycle:mergeDebugShaders UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:compileDebugShaders NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:generateDebugAssets UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:packageDebugAssets UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:prepareDebugArtProfile
+> Task :flutter_plugin_android_lifecycle:prepareLintJarForPublish
+> Task :flutter_plugin_android_lifecycle:processDebugManifest UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:processDebugJavaRes NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:writeDebugAarMetadata UP-TO-DATE
+> Task :google_mlkit_commons:preBuild UP-TO-DATE
+> Task :google_mlkit_commons:preDebugBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:mergeDebugJavaResource
+> Task :google_mlkit_commons:mergeDebugJniLibFolders
+> Task :flutter_plugin_android_lifecycle:syncDebugLibJars
+> Task :flutter_plugin_android_lifecycle:bundleDebugLocalLintAar
+> Task :google_mlkit_commons:mergeDebugNativeLibs NO-SOURCE
+> Task :google_mlkit_commons:stripDebugDebugSymbols NO-SOURCE
+> Task :google_mlkit_commons:copyDebugJniLibsProjectAndLocalJars
+> Task :google_mlkit_commons:generateDebugResValues UP-TO-DATE
+> Task :google_mlkit_commons:generateDebugResources UP-TO-DATE
+> Task :google_mlkit_commons:packageDebugResources UP-TO-DATE
+> Task :google_mlkit_commons:parseDebugLocalResources UP-TO-DATE
+> Task :google_mlkit_commons:generateDebugRFile UP-TO-DATE
+> Task :google_mlkit_commons:extractDebugAnnotations
+> Task :google_mlkit_commons:extractDeepLinksForAarDebug
+> Task :google_mlkit_commons:javaPreCompileDebug UP-TO-DATE
+> Task :google_mlkit_commons:compileDebugJavaWithJavac UP-TO-DATE
+> Task :google_mlkit_commons:mergeDebugGeneratedProguardFiles
+> Task :google_mlkit_commons:mergeDebugConsumerProguardFiles
+> Task :google_mlkit_commons:mergeDebugShaders UP-TO-DATE
+> Task :google_mlkit_commons:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_commons:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_commons:packageDebugAssets UP-TO-DATE
+> Task :google_mlkit_commons:prepareDebugArtProfile
+> Task :google_mlkit_commons:prepareLintJarForPublish
+> Task :google_mlkit_commons:processDebugManifest UP-TO-DATE
+> Task :google_mlkit_commons:processDebugJavaRes NO-SOURCE
+> Task :google_mlkit_commons:writeDebugAarMetadata UP-TO-DATE
+> Task :google_mlkit_language_id:preBuild UP-TO-DATE
+> Task :google_mlkit_language_id:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_commons:mergeDebugJavaResource
+> Task :google_mlkit_language_id:mergeDebugJniLibFolders
+> Task :google_mlkit_commons:syncDebugLibJars
+> Task :google_mlkit_commons:bundleDebugLocalLintAar
+> Task :google_mlkit_language_id:mergeDebugNativeLibs NO-SOURCE
+> Task :google_mlkit_language_id:stripDebugDebugSymbols NO-SOURCE
+> Task :google_mlkit_language_id:copyDebugJniLibsProjectAndLocalJars
+> Task :google_mlkit_language_id:generateDebugResValues UP-TO-DATE
+> Task :google_mlkit_language_id:generateDebugResources UP-TO-DATE
+> Task :google_mlkit_language_id:packageDebugResources UP-TO-DATE
+> Task :google_mlkit_language_id:parseDebugLocalResources UP-TO-DATE
+> Task :google_mlkit_language_id:generateDebugRFile UP-TO-DATE
+> Task :google_mlkit_language_id:extractDebugAnnotations
+> Task :google_mlkit_language_id:extractDeepLinksForAarDebug
+> Task :google_mlkit_language_id:javaPreCompileDebug UP-TO-DATE
+> Task :google_mlkit_language_id:compileDebugJavaWithJavac UP-TO-DATE
+> Task :google_mlkit_language_id:mergeDebugGeneratedProguardFiles
+> Task :google_mlkit_language_id:mergeDebugConsumerProguardFiles
+> Task :google_mlkit_language_id:mergeDebugShaders UP-TO-DATE
+> Task :google_mlkit_language_id:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_language_id:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_language_id:packageDebugAssets UP-TO-DATE
+> Task :google_mlkit_language_id:prepareDebugArtProfile
+> Task :google_mlkit_language_id:prepareLintJarForPublish
+> Task :google_mlkit_language_id:processDebugManifest UP-TO-DATE
+> Task :google_mlkit_language_id:processDebugJavaRes NO-SOURCE
+> Task :google_mlkit_language_id:writeDebugAarMetadata UP-TO-DATE
+> Task :google_mlkit_text_recognition:preBuild UP-TO-DATE
+> Task :google_mlkit_text_recognition:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_language_id:mergeDebugJavaResource
+> Task :google_mlkit_text_recognition:mergeDebugJniLibFolders
+> Task :google_mlkit_language_id:syncDebugLibJars
+> Task :google_mlkit_language_id:bundleDebugLocalLintAar
+> Task :google_mlkit_text_recognition:mergeDebugNativeLibs NO-SOURCE
+> Task :google_mlkit_text_recognition:stripDebugDebugSymbols NO-SOURCE
+> Task :google_mlkit_text_recognition:copyDebugJniLibsProjectAndLocalJars
+> Task :google_mlkit_commons:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :google_mlkit_text_recognition:generateDebugResValues UP-TO-DATE
+> Task :google_mlkit_text_recognition:generateDebugResources UP-TO-DATE
+> Task :google_mlkit_text_recognition:packageDebugResources UP-TO-DATE
+> Task :google_mlkit_text_recognition:parseDebugLocalResources UP-TO-DATE
+> Task :google_mlkit_text_recognition:generateDebugRFile UP-TO-DATE
+> Task :google_mlkit_text_recognition:extractDebugAnnotations
+> Task :google_mlkit_text_recognition:extractDeepLinksForAarDebug
+> Task :google_mlkit_text_recognition:javaPreCompileDebug UP-TO-DATE
+> Task :google_mlkit_text_recognition:compileDebugJavaWithJavac UP-TO-DATE
+> Task :google_mlkit_text_recognition:mergeDebugGeneratedProguardFiles
+> Task :google_mlkit_text_recognition:mergeDebugConsumerProguardFiles
+> Task :google_mlkit_text_recognition:mergeDebugShaders UP-TO-DATE
+> Task :google_mlkit_text_recognition:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_text_recognition:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_text_recognition:packageDebugAssets UP-TO-DATE
+> Task :google_mlkit_text_recognition:prepareDebugArtProfile
+> Task :google_mlkit_text_recognition:prepareLintJarForPublish
+> Task :google_mlkit_text_recognition:processDebugManifest UP-TO-DATE
+> Task :google_mlkit_text_recognition:processDebugJavaRes NO-SOURCE
+> Task :google_mlkit_text_recognition:writeDebugAarMetadata UP-TO-DATE
+> Task :google_mlkit_translation:preBuild UP-TO-DATE
+> Task :google_mlkit_translation:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_text_recognition:mergeDebugJavaResource
+> Task :google_mlkit_translation:mergeDebugJniLibFolders
+> Task :google_mlkit_text_recognition:syncDebugLibJars
+> Task :google_mlkit_text_recognition:bundleDebugLocalLintAar
+> Task :google_mlkit_translation:mergeDebugNativeLibs NO-SOURCE
+> Task :google_mlkit_translation:stripDebugDebugSymbols NO-SOURCE
+> Task :google_mlkit_translation:copyDebugJniLibsProjectAndLocalJars
+> Task :google_mlkit_translation:generateDebugResValues UP-TO-DATE
+> Task :google_mlkit_translation:generateDebugResources UP-TO-DATE
+> Task :google_mlkit_translation:packageDebugResources UP-TO-DATE
+> Task :google_mlkit_translation:parseDebugLocalResources UP-TO-DATE
+> Task :google_mlkit_translation:generateDebugRFile UP-TO-DATE
+> Task :google_mlkit_translation:extractDebugAnnotations
+> Task :google_mlkit_translation:extractDeepLinksForAarDebug
+> Task :google_mlkit_translation:javaPreCompileDebug UP-TO-DATE
+> Task :google_mlkit_translation:compileDebugJavaWithJavac UP-TO-DATE
+> Task :google_mlkit_translation:mergeDebugGeneratedProguardFiles
+> Task :google_mlkit_translation:mergeDebugConsumerProguardFiles
+> Task :google_mlkit_translation:mergeDebugShaders UP-TO-DATE
+> Task :google_mlkit_translation:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_translation:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_translation:packageDebugAssets UP-TO-DATE
+> Task :google_mlkit_translation:prepareDebugArtProfile
+> Task :google_mlkit_translation:prepareLintJarForPublish
+> Task :google_mlkit_translation:processDebugManifest UP-TO-DATE
+> Task :google_mlkit_translation:processDebugJavaRes NO-SOURCE
+> Task :google_mlkit_translation:writeDebugAarMetadata UP-TO-DATE
+> Task :google_mobile_ads:preBuild UP-TO-DATE
+> Task :google_mobile_ads:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_translation:mergeDebugJavaResource
+> Task :google_mobile_ads:mergeDebugJniLibFolders
+> Task :google_mlkit_translation:syncDebugLibJars
+> Task :google_mlkit_translation:bundleDebugLocalLintAar
+> Task :google_mobile_ads:mergeDebugNativeLibs NO-SOURCE
+> Task :google_mobile_ads:stripDebugDebugSymbols NO-SOURCE
+> Task :google_mobile_ads:copyDebugJniLibsProjectAndLocalJars
+> Task :google_mobile_ads:generateDebugResValues UP-TO-DATE
+> Task :google_mobile_ads:generateDebugResources UP-TO-DATE
+> Task :google_mobile_ads:packageDebugResources UP-TO-DATE
+> Task :google_mobile_ads:parseDebugLocalResources UP-TO-DATE
+> Task :google_mobile_ads:generateDebugRFile UP-TO-DATE
+> Task :webview_flutter_android:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :webview_flutter_android:preBuild UP-TO-DATE
+> Task :webview_flutter_android:preDebugBuild UP-TO-DATE
+> Task :webview_flutter_android:generateDebugResValues UP-TO-DATE
+> Task :webview_flutter_android:generateDebugResources UP-TO-DATE
+> Task :webview_flutter_android:packageDebugResources UP-TO-DATE
+> Task :webview_flutter_android:parseDebugLocalResources UP-TO-DATE
+> Task :webview_flutter_android:generateDebugRFile UP-TO-DATE
+> Task :webview_flutter_android:compileDebugKotlin UP-TO-DATE
+> Task :webview_flutter_android:javaPreCompileDebug UP-TO-DATE
+> Task :webview_flutter_android:compileDebugJavaWithJavac UP-TO-DATE
+> Task :webview_flutter_android:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :google_mobile_ads:extractDebugAnnotations
+> Task :google_mobile_ads:extractDeepLinksForAarDebug
+> Task :google_mobile_ads:javaPreCompileDebug UP-TO-DATE
+> Task :google_mobile_ads:compileDebugJavaWithJavac UP-TO-DATE
+> Task :google_mobile_ads:mergeDebugGeneratedProguardFiles
+> Task :google_mobile_ads:mergeDebugConsumerProguardFiles
+> Task :google_mobile_ads:mergeDebugShaders UP-TO-DATE
+> Task :google_mobile_ads:compileDebugShaders NO-SOURCE
+> Task :google_mobile_ads:generateDebugAssets UP-TO-DATE
+> Task :google_mobile_ads:packageDebugAssets UP-TO-DATE
+> Task :google_mobile_ads:prepareDebugArtProfile
+> Task :google_mobile_ads:prepareLintJarForPublish
+> Task :google_mobile_ads:processDebugManifest UP-TO-DATE
+> Task :google_mobile_ads:processDebugJavaRes NO-SOURCE
+> Task :google_mobile_ads:writeDebugAarMetadata UP-TO-DATE
+> Task :in_app_purchase_android:preBuild UP-TO-DATE
+> Task :in_app_purchase_android:preDebugBuild UP-TO-DATE
+> Task :google_mobile_ads:mergeDebugJavaResource
+> Task :in_app_purchase_android:mergeDebugJniLibFolders
+> Task :google_mobile_ads:syncDebugLibJars
+> Task :google_mobile_ads:bundleDebugLocalLintAar
+> Task :in_app_purchase_android:mergeDebugNativeLibs NO-SOURCE
+> Task :in_app_purchase_android:stripDebugDebugSymbols NO-SOURCE
+> Task :in_app_purchase_android:copyDebugJniLibsProjectAndLocalJars
+> Task :in_app_purchase_android:generateDebugBuildConfig UP-TO-DATE
+> Task :in_app_purchase_android:generateDebugResValues UP-TO-DATE
+> Task :in_app_purchase_android:generateDebugResources UP-TO-DATE
+> Task :in_app_purchase_android:packageDebugResources UP-TO-DATE
+> Task :in_app_purchase_android:parseDebugLocalResources UP-TO-DATE
+> Task :in_app_purchase_android:generateDebugRFile UP-TO-DATE
+> Task :in_app_purchase_android:extractDebugAnnotations
+> Task :in_app_purchase_android:extractDeepLinksForAarDebug
+> Task :in_app_purchase_android:javaPreCompileDebug UP-TO-DATE
+> Task :in_app_purchase_android:compileDebugJavaWithJavac UP-TO-DATE
+> Task :in_app_purchase_android:mergeDebugGeneratedProguardFiles
+> Task :in_app_purchase_android:mergeDebugConsumerProguardFiles
+> Task :in_app_purchase_android:mergeDebugShaders UP-TO-DATE
+> Task :in_app_purchase_android:compileDebugShaders NO-SOURCE
+> Task :in_app_purchase_android:generateDebugAssets UP-TO-DATE
+> Task :in_app_purchase_android:packageDebugAssets UP-TO-DATE
+> Task :in_app_purchase_android:prepareDebugArtProfile
+> Task :in_app_purchase_android:prepareLintJarForPublish
+> Task :in_app_purchase_android:processDebugManifest UP-TO-DATE
+> Task :in_app_purchase_android:processDebugJavaRes NO-SOURCE
+> Task :in_app_purchase_android:writeDebugAarMetadata UP-TO-DATE
+> Task :in_app_review:preBuild UP-TO-DATE
+> Task :in_app_review:preDebugBuild UP-TO-DATE
+> Task :in_app_purchase_android:mergeDebugJavaResource
+> Task :in_app_purchase_android:syncDebugLibJars
+> Task :in_app_purchase_android:bundleDebugLocalLintAar
+> Task :in_app_review:mergeDebugJniLibFolders
+> Task :in_app_review:mergeDebugNativeLibs NO-SOURCE
+> Task :in_app_review:stripDebugDebugSymbols NO-SOURCE
+> Task :in_app_review:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :in_app_review:copyDebugJniLibsProjectAndLocalJars
+> Task :in_app_review:generateDebugResValues UP-TO-DATE
+> Task :in_app_review:generateDebugResources UP-TO-DATE
+> Task :in_app_review:packageDebugResources UP-TO-DATE
+> Task :in_app_review:parseDebugLocalResources UP-TO-DATE
+> Task :in_app_review:generateDebugRFile UP-TO-DATE
+> Task :in_app_review:compileDebugKotlin UP-TO-DATE
+> Task :in_app_review:extractDebugAnnotations
+> Task :in_app_review:extractDeepLinksForAarDebug
+> Task :in_app_review:javaPreCompileDebug UP-TO-DATE
+> Task :in_app_review:compileDebugJavaWithJavac NO-SOURCE
+> Task :in_app_review:mergeDebugGeneratedProguardFiles
+> Task :in_app_review:mergeDebugConsumerProguardFiles
+> Task :in_app_review:mergeDebugShaders UP-TO-DATE
+> Task :in_app_review:compileDebugShaders NO-SOURCE
+> Task :in_app_review:generateDebugAssets UP-TO-DATE
+> Task :in_app_review:packageDebugAssets UP-TO-DATE
+> Task :in_app_review:prepareDebugArtProfile
+> Task :in_app_review:prepareLintJarForPublish
+> Task :in_app_review:processDebugManifest UP-TO-DATE
+> Task :in_app_review:processDebugJavaRes
+> Task :in_app_review:writeDebugAarMetadata UP-TO-DATE
+> Task :package_info_plus:preBuild UP-TO-DATE
+> Task :package_info_plus:preDebugBuild UP-TO-DATE
+> Task :in_app_review:mergeDebugJavaResource
+> Task :package_info_plus:mergeDebugJniLibFolders
+> Task :in_app_review:syncDebugLibJars
+> Task :in_app_review:bundleDebugLocalLintAar
+> Task :package_info_plus:mergeDebugNativeLibs NO-SOURCE
+> Task :package_info_plus:stripDebugDebugSymbols NO-SOURCE
+> Task :package_info_plus:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :package_info_plus:copyDebugJniLibsProjectAndLocalJars
+> Task :package_info_plus:generateDebugResValues UP-TO-DATE
+> Task :package_info_plus:generateDebugResources UP-TO-DATE
+> Task :package_info_plus:packageDebugResources UP-TO-DATE
+> Task :package_info_plus:parseDebugLocalResources UP-TO-DATE
+> Task :package_info_plus:generateDebugRFile UP-TO-DATE
+> Task :package_info_plus:compileDebugKotlin UP-TO-DATE
+> Task :package_info_plus:extractDebugAnnotations
+> Task :package_info_plus:extractDeepLinksForAarDebug
+> Task :package_info_plus:javaPreCompileDebug UP-TO-DATE
+> Task :package_info_plus:compileDebugJavaWithJavac NO-SOURCE
+> Task :package_info_plus:mergeDebugGeneratedProguardFiles
+> Task :package_info_plus:mergeDebugConsumerProguardFiles
+> Task :package_info_plus:mergeDebugShaders UP-TO-DATE
+> Task :package_info_plus:compileDebugShaders NO-SOURCE
+> Task :package_info_plus:generateDebugAssets UP-TO-DATE
+> Task :package_info_plus:packageDebugAssets UP-TO-DATE
+> Task :package_info_plus:prepareDebugArtProfile
+> Task :package_info_plus:prepareLintJarForPublish
+> Task :package_info_plus:processDebugManifest UP-TO-DATE
+> Task :package_info_plus:processDebugJavaRes
+> Task :package_info_plus:writeDebugAarMetadata UP-TO-DATE
+> Task :path_provider_android:preBuild UP-TO-DATE
+> Task :path_provider_android:preDebugBuild UP-TO-DATE
+> Task :package_info_plus:mergeDebugJavaResource
+> Task :path_provider_android:mergeDebugJniLibFolders
+> Task :package_info_plus:syncDebugLibJars
+> Task :package_info_plus:bundleDebugLocalLintAar
+> Task :path_provider_android:mergeDebugNativeLibs NO-SOURCE
+> Task :path_provider_android:stripDebugDebugSymbols NO-SOURCE
+> Task :path_provider_android:generateDebugResValues UP-TO-DATE
+> Task :path_provider_android:copyDebugJniLibsProjectAndLocalJars
+> Task :path_provider_android:generateDebugResources UP-TO-DATE
+> Task :path_provider_android:packageDebugResources UP-TO-DATE
+> Task :path_provider_android:parseDebugLocalResources UP-TO-DATE
+> Task :path_provider_android:generateDebugRFile UP-TO-DATE
+> Task :path_provider_android:extractDebugAnnotations
+> Task :path_provider_android:extractDeepLinksForAarDebug
+> Task :path_provider_android:javaPreCompileDebug UP-TO-DATE
+> Task :path_provider_android:compileDebugJavaWithJavac UP-TO-DATE
+> Task :path_provider_android:mergeDebugGeneratedProguardFiles
+> Task :path_provider_android:mergeDebugConsumerProguardFiles
+> Task :path_provider_android:mergeDebugShaders UP-TO-DATE
+> Task :path_provider_android:compileDebugShaders NO-SOURCE
+> Task :path_provider_android:generateDebugAssets UP-TO-DATE
+> Task :path_provider_android:packageDebugAssets UP-TO-DATE
+> Task :path_provider_android:prepareDebugArtProfile
+> Task :path_provider_android:prepareLintJarForPublish
+> Task :path_provider_android:processDebugManifest UP-TO-DATE
+> Task :path_provider_android:processDebugJavaRes NO-SOURCE
+> Task :path_provider_android:writeDebugAarMetadata UP-TO-DATE
+> Task :share_plus:preBuild UP-TO-DATE
+> Task :share_plus:preDebugBuild UP-TO-DATE
+> Task :path_provider_android:mergeDebugJavaResource
+> Task :share_plus:mergeDebugJniLibFolders
+> Task :path_provider_android:syncDebugLibJars
+> Task :path_provider_android:bundleDebugLocalLintAar
+> Task :share_plus:mergeDebugNativeLibs NO-SOURCE
+> Task :share_plus:stripDebugDebugSymbols NO-SOURCE
+> Task :share_plus:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :share_plus:generateDebugResValues UP-TO-DATE
+> Task :share_plus:generateDebugResources UP-TO-DATE
+> Task :share_plus:copyDebugJniLibsProjectAndLocalJars
+> Task :share_plus:packageDebugResources UP-TO-DATE
+> Task :share_plus:parseDebugLocalResources UP-TO-DATE
+> Task :share_plus:generateDebugRFile UP-TO-DATE
+> Task :share_plus:compileDebugKotlin UP-TO-DATE
+> Task :share_plus:extractDebugAnnotations
+> Task :share_plus:extractDeepLinksForAarDebug
+> Task :share_plus:javaPreCompileDebug UP-TO-DATE
+> Task :share_plus:compileDebugJavaWithJavac NO-SOURCE
+> Task :share_plus:mergeDebugGeneratedProguardFiles
+> Task :share_plus:mergeDebugConsumerProguardFiles
+> Task :share_plus:mergeDebugShaders UP-TO-DATE
+> Task :share_plus:compileDebugShaders NO-SOURCE
+> Task :share_plus:generateDebugAssets UP-TO-DATE
+> Task :share_plus:packageDebugAssets UP-TO-DATE
+> Task :share_plus:prepareDebugArtProfile
+> Task :share_plus:prepareLintJarForPublish
+> Task :share_plus:processDebugManifest UP-TO-DATE
+> Task :share_plus:processDebugJavaRes
+> Task :share_plus:writeDebugAarMetadata UP-TO-DATE
+> Task :shared_preferences_android:preBuild UP-TO-DATE
+> Task :shared_preferences_android:preDebugBuild UP-TO-DATE
+> Task :share_plus:mergeDebugJavaResource
+> Task :shared_preferences_android:mergeDebugJniLibFolders
+> Task :share_plus:syncDebugLibJars
+> Task :share_plus:bundleDebugLocalLintAar
+> Task :shared_preferences_android:mergeDebugNativeLibs NO-SOURCE
+> Task :shared_preferences_android:stripDebugDebugSymbols NO-SOURCE
+> Task :shared_preferences_android:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :shared_preferences_android:generateDebugResValues UP-TO-DATE
+> Task :shared_preferences_android:copyDebugJniLibsProjectAndLocalJars
+> Task :shared_preferences_android:generateDebugResources UP-TO-DATE
+> Task :shared_preferences_android:packageDebugResources UP-TO-DATE
+> Task :shared_preferences_android:parseDebugLocalResources UP-TO-DATE
+> Task :shared_preferences_android:generateDebugRFile UP-TO-DATE
+> Task :shared_preferences_android:compileDebugKotlin UP-TO-DATE
+> Task :shared_preferences_android:extractDebugAnnotations
+> Task :shared_preferences_android:extractDeepLinksForAarDebug
+> Task :shared_preferences_android:javaPreCompileDebug UP-TO-DATE
+> Task :shared_preferences_android:compileDebugJavaWithJavac UP-TO-DATE
+> Task :shared_preferences_android:mergeDebugGeneratedProguardFiles
+> Task :shared_preferences_android:mergeDebugConsumerProguardFiles
+> Task :shared_preferences_android:mergeDebugShaders UP-TO-DATE
+> Task :shared_preferences_android:compileDebugShaders NO-SOURCE
+> Task :shared_preferences_android:generateDebugAssets UP-TO-DATE
+> Task :shared_preferences_android:packageDebugAssets UP-TO-DATE
+> Task :shared_preferences_android:prepareDebugArtProfile
+> Task :shared_preferences_android:prepareLintJarForPublish
+> Task :shared_preferences_android:processDebugManifest UP-TO-DATE
+> Task :shared_preferences_android:processDebugJavaRes
+> Task :shared_preferences_android:writeDebugAarMetadata UP-TO-DATE
+> Task :url_launcher_android:preBuild UP-TO-DATE
+> Task :url_launcher_android:preDebugBuild UP-TO-DATE
+> Task :shared_preferences_android:mergeDebugJavaResource
+> Task :url_launcher_android:mergeDebugJniLibFolders
+> Task :shared_preferences_android:syncDebugLibJars
+> Task :shared_preferences_android:bundleDebugLocalLintAar
+> Task :url_launcher_android:mergeDebugNativeLibs NO-SOURCE
+> Task :url_launcher_android:stripDebugDebugSymbols NO-SOURCE
+> Task :url_launcher_android:copyDebugJniLibsProjectAndLocalJars
+> Task :url_launcher_android:generateDebugBuildConfig UP-TO-DATE
+> Task :url_launcher_android:generateDebugResValues UP-TO-DATE
+> Task :url_launcher_android:generateDebugResources UP-TO-DATE
+> Task :url_launcher_android:packageDebugResources UP-TO-DATE
+> Task :url_launcher_android:parseDebugLocalResources UP-TO-DATE
+> Task :url_launcher_android:generateDebugRFile UP-TO-DATE
+> Task :url_launcher_android:extractDebugAnnotations
+> Task :url_launcher_android:extractDeepLinksForAarDebug
+> Task :url_launcher_android:javaPreCompileDebug UP-TO-DATE
+> Task :url_launcher_android:compileDebugJavaWithJavac UP-TO-DATE
+> Task :url_launcher_android:mergeDebugGeneratedProguardFiles
+> Task :url_launcher_android:mergeDebugConsumerProguardFiles
+> Task :url_launcher_android:mergeDebugShaders UP-TO-DATE
+> Task :url_launcher_android:compileDebugShaders NO-SOURCE
+> Task :url_launcher_android:generateDebugAssets UP-TO-DATE
+> Task :url_launcher_android:packageDebugAssets UP-TO-DATE
+> Task :url_launcher_android:prepareDebugArtProfile
+> Task :url_launcher_android:prepareLintJarForPublish
+> Task :url_launcher_android:processDebugManifest UP-TO-DATE
+> Task :url_launcher_android:processDebugJavaRes NO-SOURCE
+> Task :url_launcher_android:writeDebugAarMetadata UP-TO-DATE
+> Task :url_launcher_android:mergeDebugJavaResource
+> Task :webview_flutter_android:mergeDebugJniLibFolders
+> Task :url_launcher_android:syncDebugLibJars
+> Task :url_launcher_android:bundleDebugLocalLintAar
+> Task :webview_flutter_android:mergeDebugNativeLibs NO-SOURCE
+> Task :webview_flutter_android:stripDebugDebugSymbols NO-SOURCE
+> Task :webview_flutter_android:copyDebugJniLibsProjectAndLocalJars
+> Task :webview_flutter_android:extractDebugAnnotations
+> Task :webview_flutter_android:extractDeepLinksForAarDebug
+> Task :webview_flutter_android:mergeDebugGeneratedProguardFiles
+> Task :webview_flutter_android:mergeDebugConsumerProguardFiles
+> Task :webview_flutter_android:mergeDebugShaders UP-TO-DATE
+> Task :webview_flutter_android:compileDebugShaders NO-SOURCE
+> Task :webview_flutter_android:generateDebugAssets UP-TO-DATE
+> Task :webview_flutter_android:packageDebugAssets UP-TO-DATE
+> Task :webview_flutter_android:prepareDebugArtProfile
+> Task :webview_flutter_android:prepareLintJarForPublish
+> Task :webview_flutter_android:processDebugManifest UP-TO-DATE
+> Task :webview_flutter_android:processDebugJavaRes
+> Task :webview_flutter_android:writeDebugAarMetadata UP-TO-DATE
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :webview_flutter_android:mergeDebugJavaResource
+> Task :webview_flutter_android:syncDebugLibJars
+> Task :webview_flutter_android:bundleDebugLocalLintAar
+> Task :app:compileFlutterBuildDebug
+> Task :app:packJniLibsflutterBuildDebug UP-TO-DATE
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :app:checkDebugAarMetadata UP-TO-DATE
+> Task :app:cleanMergeDebugAssets
+> Task :app:mergeDebugShaders UP-TO-DATE
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :app:mergeDebugAssets
+> Task :app:copyFlutterAssetsDebug
+> Task :app:generateDebugResValues UP-TO-DATE
+> Task :app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :app:generateDebugResources UP-TO-DATE
+> Task :app:mergeDebugResources UP-TO-DATE
+> Task :app:packageDebugResources UP-TO-DATE
+> Task :app:parseDebugLocalResources UP-TO-DATE
+> Task :app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :app:extractDeepLinksDebug UP-TO-DATE
+> Task :camera_android_camerax:extractDeepLinksDebug UP-TO-DATE
+> Task :file_picker:extractDeepLinksDebug UP-TO-DATE
+> Task :flutter_doc_scanner:extractDeepLinksDebug UP-TO-DATE
+> Task :flutter_local_notifications:extractDeepLinksDebug UP-TO-DATE
+> Task :flutter_native_splash:extractDeepLinksDebug UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:extractDeepLinksDebug UP-TO-DATE
+> Task :google_mlkit_commons:extractDeepLinksDebug UP-TO-DATE
+> Task :google_mlkit_language_id:extractDeepLinksDebug UP-TO-DATE
+> Task :google_mlkit_text_recognition:extractDeepLinksDebug UP-TO-DATE
+> Task :google_mlkit_translation:extractDeepLinksDebug UP-TO-DATE
+> Task :google_mobile_ads:extractDeepLinksDebug UP-TO-DATE
+> Task :in_app_purchase_android:extractDeepLinksDebug UP-TO-DATE
+> Task :in_app_review:extractDeepLinksDebug UP-TO-DATE
+> Task :package_info_plus:extractDeepLinksDebug UP-TO-DATE
+> Task :path_provider_android:extractDeepLinksDebug UP-TO-DATE
+> Task :share_plus:extractDeepLinksDebug UP-TO-DATE
+> Task :shared_preferences_android:extractDeepLinksDebug UP-TO-DATE
+> Task :url_launcher_android:extractDeepLinksDebug UP-TO-DATE
+> Task :webview_flutter_android:extractDeepLinksDebug UP-TO-DATE
+> Task :app:processDebugMainManifest UP-TO-DATE
+> Task :app:processDebugManifest UP-TO-DATE
+> Task :app:processDebugManifestForPackage UP-TO-DATE
+> Task :camera_android_camerax:compileDebugLibraryResources UP-TO-DATE
+> Task :file_picker:compileDebugLibraryResources UP-TO-DATE
+> Task :flutter_doc_scanner:compileDebugLibraryResources UP-TO-DATE
+> Task :flutter_local_notifications:compileDebugLibraryResources UP-TO-DATE
+> Task :flutter_native_splash:compileDebugLibraryResources UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:compileDebugLibraryResources UP-TO-DATE
+> Task :google_mlkit_commons:compileDebugLibraryResources UP-TO-DATE
+> Task :google_mlkit_language_id:compileDebugLibraryResources UP-TO-DATE
+> Task :google_mlkit_text_recognition:compileDebugLibraryResources UP-TO-DATE
+> Task :google_mlkit_translation:compileDebugLibraryResources UP-TO-DATE
+> Task :google_mobile_ads:compileDebugLibraryResources UP-TO-DATE
+> Task :in_app_purchase_android:compileDebugLibraryResources UP-TO-DATE
+> Task :in_app_review:compileDebugLibraryResources UP-TO-DATE
+> Task :package_info_plus:compileDebugLibraryResources UP-TO-DATE
+> Task :path_provider_android:compileDebugLibraryResources UP-TO-DATE
+> Task :share_plus:compileDebugLibraryResources UP-TO-DATE
+> Task :shared_preferences_android:compileDebugLibraryResources UP-TO-DATE
+> Task :url_launcher_android:compileDebugLibraryResources UP-TO-DATE
+> Task :webview_flutter_android:compileDebugLibraryResources UP-TO-DATE
+> Task :app:processDebugResources UP-TO-DATE
+> Task :camera_android_camerax:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :file_picker:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :flutter_doc_scanner:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :flutter_local_notifications:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :flutter_native_splash:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :google_mlkit_language_id:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :google_mlkit_text_recognition:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :google_mlkit_translation:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :google_mobile_ads:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :in_app_purchase_android:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :in_app_review:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :package_info_plus:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :path_provider_android:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :share_plus:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :shared_preferences_android:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :url_launcher_android:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :app:compileDebugKotlin UP-TO-DATE
+> Task :app:javaPreCompileDebug UP-TO-DATE
+> Task :app:compileDebugJavaWithJavac UP-TO-DATE
+> Task :app:preDebugAndroidTestBuild SKIPPED
+> Task :app:generateDebugAndroidTestResValues
+> Task :camera_android_camerax:writeDebugLintModelMetadata
+> Task :app:bundleDebugClassesToCompileJar
+> Task :file_picker:bundleLibRuntimeToJarDebug
+> Task :file_picker:writeDebugLintModelMetadata
+> Task :file_picker:createFullJarDebug
+> Task :camera_android_camerax:bundleLibRuntimeToJarDebug
+> Task :camera_android_camerax:createFullJarDebug
+> Task :flutter_doc_scanner:bundleLibRuntimeToJarDebug
+> Task :flutter_doc_scanner:writeDebugLintModelMetadata
+> Task :flutter_doc_scanner:createFullJarDebug
+> Task :flutter_local_notifications:writeDebugLintModelMetadata
+> Task :flutter_local_notifications:bundleLibRuntimeToJarDebug
+> Task :flutter_native_splash:bundleLibRuntimeToJarDebug
+> Task :flutter_local_notifications:createFullJarDebug
+> Task :flutter_native_splash:createFullJarDebug
+> Task :flutter_native_splash:writeDebugLintModelMetadata
+> Task :flutter_plugin_android_lifecycle:bundleLibRuntimeToJarDebug
+> Task :flutter_plugin_android_lifecycle:writeDebugLintModelMetadata
+> Task :flutter_plugin_android_lifecycle:createFullJarDebug
+> Task :google_mlkit_commons:bundleLibRuntimeToJarDebug
+> Task :google_mlkit_commons:writeDebugLintModelMetadata
+> Task :google_mlkit_commons:createFullJarDebug
+> Task :google_mlkit_language_id:bundleLibRuntimeToJarDebug
+> Task :google_mlkit_language_id:writeDebugLintModelMetadata
+> Task :google_mlkit_language_id:createFullJarDebug
+> Task :google_mlkit_text_recognition:writeDebugLintModelMetadata
+> Task :google_mlkit_text_recognition:bundleLibRuntimeToJarDebug
+> Task :google_mlkit_text_recognition:createFullJarDebug
+> Task :google_mlkit_translation:bundleLibRuntimeToJarDebug
+> Task :google_mlkit_translation:writeDebugLintModelMetadata
+> Task :google_mlkit_translation:createFullJarDebug
+> Task :google_mobile_ads:writeDebugLintModelMetadata
+> Task :google_mobile_ads:bundleLibRuntimeToJarDebug
+> Task :google_mobile_ads:createFullJarDebug
+> Task :in_app_purchase_android:bundleLibRuntimeToJarDebug
+> Task :in_app_purchase_android:writeDebugLintModelMetadata
+> Task :in_app_purchase_android:createFullJarDebug
+> Task :in_app_review:writeDebugLintModelMetadata
+> Task :in_app_review:bundleLibRuntimeToJarDebug
+> Task :package_info_plus:bundleLibRuntimeToJarDebug
+> Task :in_app_review:createFullJarDebug
+> Task :package_info_plus:createFullJarDebug
+> Task :package_info_plus:writeDebugLintModelMetadata
+> Task :path_provider_android:writeDebugLintModelMetadata
+> Task :path_provider_android:bundleLibRuntimeToJarDebug
+> Task :path_provider_android:createFullJarDebug
+> Task :share_plus:bundleLibRuntimeToJarDebug
+> Task :share_plus:writeDebugLintModelMetadata
+> Task :share_plus:createFullJarDebug
+> Task :shared_preferences_android:writeDebugLintModelMetadata
+> Task :shared_preferences_android:bundleLibRuntimeToJarDebug
+> Task :url_launcher_android:bundleLibRuntimeToJarDebug
+> Task :shared_preferences_android:createFullJarDebug
+> Task :url_launcher_android:createFullJarDebug
+> Task :url_launcher_android:writeDebugLintModelMetadata
+> Task :webview_flutter_android:writeDebugLintModelMetadata
+> Task :app:extractProguardFiles
+> Task :camera_android_camerax:extractProguardFiles
+> Task :webview_flutter_android:bundleLibRuntimeToJarDebug
+> Task :camera_android_camerax:generateDebugLintModel
+> Task :webview_flutter_android:createFullJarDebug
+
+> Task :app:generateDebugAndroidTestLintModel
+Caught exception: Already watching path: /home/runner/work/Peshat/Peshat/android
+
+> Task :file_picker:extractProguardFiles
+> Task :flutter_plugin_android_lifecycle:extractProguardFiles
+> Task :flutter_plugin_android_lifecycle:generateDebugLintModel
+> Task :file_picker:generateDebugLintModel
+> Task :flutter_doc_scanner:extractProguardFiles
+> Task :flutter_doc_scanner:generateDebugLintModel
+> Task :flutter_local_notifications:extractProguardFiles
+> Task :flutter_local_notifications:generateDebugLintModel
+> Task :flutter_native_splash:extractProguardFiles
+> Task :flutter_native_splash:generateDebugLintModel
+> Task :google_mlkit_commons:extractProguardFiles
+> Task :google_mlkit_commons:generateDebugLintModel
+> Task :google_mlkit_language_id:extractProguardFiles
+> Task :google_mlkit_language_id:generateDebugLintModel
+> Task :google_mlkit_text_recognition:extractProguardFiles
+> Task :google_mlkit_text_recognition:generateDebugLintModel
+> Task :google_mlkit_translation:extractProguardFiles
+> Task :google_mlkit_translation:generateDebugLintModel
+> Task :google_mobile_ads:extractProguardFiles
+> Task :webview_flutter_android:extractProguardFiles
+> Task :webview_flutter_android:generateDebugLintModel
+> Task :google_mobile_ads:generateDebugLintModel
+> Task :in_app_purchase_android:extractProguardFiles
+> Task :in_app_purchase_android:generateDebugLintModel
+> Task :in_app_review:extractProguardFiles
+> Task :in_app_review:generateDebugLintModel
+> Task :package_info_plus:extractProguardFiles
+> Task :package_info_plus:generateDebugLintModel
+> Task :path_provider_android:extractProguardFiles
+> Task :path_provider_android:generateDebugLintModel
+> Task :share_plus:extractProguardFiles
+> Task :share_plus:generateDebugLintModel
+> Task :shared_preferences_android:extractProguardFiles
+> Task :shared_preferences_android:generateDebugLintModel
+> Task :url_launcher_android:extractProguardFiles
+> Task :url_launcher_android:generateDebugLintModel
+> Task :app:generateDebugLintReportModel
+> Task :app:preDebugUnitTestBuild UP-TO-DATE
+> Task :app:generateDebugUnitTestLintModel
+> Task :flutter_plugin_android_lifecycle:lintAnalyzeDebug
+> Task :file_picker:lintAnalyzeDebug
+> Task :flutter_local_notifications:lintAnalyzeDebug
+> Task :flutter_doc_scanner:lintAnalyzeDebug
+> Task :flutter_native_splash:lintAnalyzeDebug
+> Task :google_mlkit_commons:lintAnalyzeDebug
+> Task :google_mlkit_language_id:lintAnalyzeDebug
+> Task :google_mlkit_text_recognition:lintAnalyzeDebug
+> Task :google_mlkit_translation:lintAnalyzeDebug
+> Task :in_app_review:lintAnalyzeDebug
+> Task :camera_android_camerax:lintAnalyzeDebug
+> Task :in_app_purchase_android:lintAnalyzeDebug
+> Task :package_info_plus:lintAnalyzeDebug
+> Task :path_provider_android:lintAnalyzeDebug
+> Task :share_plus:lintAnalyzeDebug
+> Task :url_launcher_android:lintAnalyzeDebug
+> Task :app:lintAnalyzeDebugAndroidTest
+> Task :app:lintAnalyzeDebugUnitTest
+> Task :camera_android_camerax:preDebugAndroidTestBuild UP-TO-DATE
+> Task :camera_android_camerax:generateDebugAndroidTestResValues
+> Task :camera_android_camerax:generateDebugAndroidTestLintModel
+> Task :camera_android_camerax:preDebugUnitTestBuild UP-TO-DATE
+> Task :shared_preferences_android:lintAnalyzeDebug
+> Task :webview_flutter_android:lintAnalyzeDebug
+> Task :camera_android_camerax:generateDebugUnitTestLintModel
+> Task :file_picker:preDebugAndroidTestBuild UP-TO-DATE
+> Task :file_picker:generateDebugAndroidTestResValues
+> Task :file_picker:generateDebugAndroidTestLintModel
+> Task :file_picker:preDebugUnitTestBuild UP-TO-DATE
+> Task :file_picker:generateDebugUnitTestLintModel
+> Task :file_picker:lintAnalyzeDebugAndroidTest
+> Task :file_picker:lintAnalyzeDebugUnitTest
+> Task :flutter_doc_scanner:preDebugAndroidTestBuild UP-TO-DATE
+> Task :flutter_doc_scanner:generateDebugAndroidTestResValues
+> Task :flutter_doc_scanner:generateDebugAndroidTestLintModel
+> Task :flutter_doc_scanner:preDebugUnitTestBuild UP-TO-DATE
+> Task :camera_android_camerax:lintAnalyzeDebugAndroidTest
+> Task :flutter_doc_scanner:generateDebugUnitTestLintModel
+> Task :flutter_doc_scanner:lintAnalyzeDebugAndroidTest
+> Task :flutter_local_notifications:preDebugAndroidTestBuild UP-TO-DATE
+> Task :flutter_local_notifications:generateDebugAndroidTestResValues
+> Task :flutter_local_notifications:generateDebugAndroidTestLintModel
+> Task :flutter_local_notifications:preDebugUnitTestBuild UP-TO-DATE
+> Task :flutter_doc_scanner:lintAnalyzeDebugUnitTest
+> Task :camera_android_camerax:lintAnalyzeDebugUnitTest
+> Task :flutter_local_notifications:generateDebugUnitTestLintModel
+> Task :flutter_native_splash:preDebugAndroidTestBuild UP-TO-DATE
+> Task :flutter_native_splash:generateDebugAndroidTestResValues
+> Task :flutter_native_splash:generateDebugAndroidTestLintModel
+> Task :flutter_native_splash:preDebugUnitTestBuild UP-TO-DATE
+> Task :flutter_native_splash:generateDebugUnitTestLintModel
+> Task :flutter_local_notifications:lintAnalyzeDebugAndroidTest
+> Task :flutter_native_splash:lintAnalyzeDebugAndroidTest
+> Task :flutter_plugin_android_lifecycle:preDebugAndroidTestBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:generateDebugAndroidTestResValues
+> Task :flutter_plugin_android_lifecycle:generateDebugAndroidTestLintModel
+> Task :flutter_plugin_android_lifecycle:preDebugUnitTestBuild UP-TO-DATE
+> Task :flutter_native_splash:lintAnalyzeDebugUnitTest
+> Task :flutter_local_notifications:lintAnalyzeDebugUnitTest
+> Task :flutter_plugin_android_lifecycle:generateDebugUnitTestLintModel FAILED
+> Task :google_mobile_ads:lintAnalyzeDebug
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/android_lint-1791460703814.json
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':flutter_plugin_android_lifecycle:generateDebugUnitTestLintModel'.
+> Could not resolve all files for configuration ':flutter_plugin_android_lifecycle:debugUnitTestRuntimeClasspath'.
+   > Failed to transform byte-buddy-1.17.6.jar (net.bytebuddy:byte-buddy:1.17.6) to match attributes {artifactType=processed-jar, org.gradle.category=library, org.gradle.libraryelements=jar, org.gradle.status=release, org.gradle.usage=java-runtime}.
+      > Execution failed for JetifyTransform: /home/runner/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.17.6/8c70cbc6950b2ae5291a98d5003e06406d633803/byte-buddy-1.17.6.jar.
+         > Jetifier failed to transform: /home/runner/.gradle/caches/modules-2/files-2.1/net.bytebuddy/byte-buddy/1.17.6/8c70cbc6950b2ae5291a98d5003e06406d633803/byte-buddy-1.17.6.jar
+           The error was: java.lang.IllegalArgumentException - Unsupported class file major version 68
+           To fix this issue, see https://issuetracker.google.com/issues/184622491
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 37s
+665 actionable tasks: 371 executed, 294 up-to-date

@@ -1,0 +1,503 @@
+
+Welcome to Gradle 8.10.2!
+
+Here are the highlights of this release:
+ - Support for Java 23
+ - Faster configuration cache
+ - Better configuration cache reports
+
+For more details see https://docs.gradle.org/8.10.2/release-notes.html
+
+Starting a Gradle Daemon (subsequent builds will be faster)
+> Task :gradle:checkKotlinGradlePluginConfigurationErrors
+> Task :gradle:pluginDescriptors UP-TO-DATE
+> Task :gradle:processResources UP-TO-DATE
+> Task :gradle:compileKotlin
+> Task :gradle:compileJava NO-SOURCE
+> Task :gradle:compileGroovy UP-TO-DATE
+> Task :gradle:classes UP-TO-DATE
+> Task :gradle:jar UP-TO-DATE
+
+> Configure project :app
+Checking the license for package NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/licenses
+License for package NDK (Side by side) 27.0.12077973 accepted.
+Preparing "Install NDK (Side by side) 27.0.12077973 v.27.0.12077973".
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" ready.
+Installing NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/ndk/27.0.12077973
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" complete.
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" finished.
+
+> Task :app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :app:compileFlutterBuildDebug
+> Task :app:packJniLibsflutterBuildDebug
+> Task :app:preBuild UP-TO-DATE
+> Task :app:preDebugBuild UP-TO-DATE
+> Task :camera_android_camerax:preBuild UP-TO-DATE
+> Task :camera_android_camerax:preDebugBuild UP-TO-DATE
+> Task :file_picker:preBuild UP-TO-DATE
+> Task :file_picker:preDebugBuild UP-TO-DATE
+> Task :flutter_doc_scanner:preBuild UP-TO-DATE
+> Task :flutter_doc_scanner:preDebugBuild UP-TO-DATE
+> Task :flutter_local_notifications:preBuild UP-TO-DATE
+> Task :camera_android_camerax:writeDebugAarMetadata
+> Task :file_picker:writeDebugAarMetadata
+> Task :flutter_local_notifications:preDebugBuild UP-TO-DATE
+> Task :flutter_doc_scanner:writeDebugAarMetadata
+> Task :flutter_local_notifications:writeDebugAarMetadata
+> Task :flutter_native_splash:preBuild UP-TO-DATE
+> Task :flutter_native_splash:preDebugBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:preBuild UP-TO-DATE
+> Task :flutter_native_splash:writeDebugAarMetadata
+> Task :flutter_plugin_android_lifecycle:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_commons:preBuild UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:writeDebugAarMetadata
+> Task :google_mlkit_commons:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_language_id:preBuild UP-TO-DATE
+> Task :google_mlkit_language_id:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_commons:writeDebugAarMetadata
+> Task :google_mlkit_text_recognition:preBuild UP-TO-DATE
+> Task :google_mlkit_language_id:writeDebugAarMetadata
+> Task :google_mlkit_text_recognition:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_translation:preBuild UP-TO-DATE
+> Task :google_mlkit_translation:preDebugBuild UP-TO-DATE
+> Task :google_mlkit_text_recognition:writeDebugAarMetadata
+> Task :google_mobile_ads:preBuild UP-TO-DATE
+> Task :google_mlkit_translation:writeDebugAarMetadata
+> Task :google_mobile_ads:preDebugBuild UP-TO-DATE
+> Task :in_app_purchase_android:preBuild UP-TO-DATE
+> Task :google_mobile_ads:writeDebugAarMetadata
+> Task :in_app_purchase_android:preDebugBuild UP-TO-DATE
+> Task :in_app_review:preBuild UP-TO-DATE
+> Task :in_app_review:preDebugBuild UP-TO-DATE
+> Task :in_app_purchase_android:writeDebugAarMetadata
+> Task :in_app_review:writeDebugAarMetadata
+> Task :package_info_plus:preBuild UP-TO-DATE
+> Task :package_info_plus:preDebugBuild UP-TO-DATE
+> Task :path_provider_android:preBuild UP-TO-DATE
+> Task :package_info_plus:writeDebugAarMetadata
+> Task :path_provider_android:preDebugBuild UP-TO-DATE
+> Task :share_plus:preBuild UP-TO-DATE
+> Task :path_provider_android:writeDebugAarMetadata
+> Task :share_plus:preDebugBuild UP-TO-DATE
+> Task :shared_preferences_android:preBuild UP-TO-DATE
+> Task :shared_preferences_android:preDebugBuild UP-TO-DATE
+> Task :share_plus:writeDebugAarMetadata
+> Task :url_launcher_android:preBuild UP-TO-DATE
+> Task :url_launcher_android:preDebugBuild UP-TO-DATE
+> Task :shared_preferences_android:writeDebugAarMetadata
+> Task :webview_flutter_android:preBuild UP-TO-DATE
+> Task :webview_flutter_android:preDebugBuild UP-TO-DATE
+> Task :url_launcher_android:writeDebugAarMetadata
+> Task :app:cleanMergeDebugAssets UP-TO-DATE
+> Task :webview_flutter_android:writeDebugAarMetadata
+> Task :app:mergeDebugShaders
+> Task :app:compileDebugShaders NO-SOURCE
+> Task :app:generateDebugAssets UP-TO-DATE
+> Task :camera_android_camerax:mergeDebugShaders
+> Task :camera_android_camerax:compileDebugShaders NO-SOURCE
+> Task :camera_android_camerax:generateDebugAssets UP-TO-DATE
+> Task :app:checkDebugAarMetadata
+> Task :camera_android_camerax:packageDebugAssets
+> Task :file_picker:mergeDebugShaders
+> Task :file_picker:compileDebugShaders NO-SOURCE
+> Task :file_picker:generateDebugAssets UP-TO-DATE
+> Task :file_picker:packageDebugAssets
+> Task :flutter_doc_scanner:mergeDebugShaders
+> Task :flutter_doc_scanner:compileDebugShaders NO-SOURCE
+> Task :flutter_doc_scanner:generateDebugAssets UP-TO-DATE
+> Task :flutter_doc_scanner:packageDebugAssets
+> Task :flutter_local_notifications:mergeDebugShaders
+> Task :flutter_local_notifications:compileDebugShaders NO-SOURCE
+> Task :flutter_local_notifications:generateDebugAssets UP-TO-DATE
+> Task :flutter_local_notifications:packageDebugAssets
+> Task :flutter_native_splash:mergeDebugShaders
+> Task :flutter_native_splash:compileDebugShaders NO-SOURCE
+> Task :flutter_native_splash:generateDebugAssets UP-TO-DATE
+> Task :flutter_native_splash:packageDebugAssets
+> Task :flutter_plugin_android_lifecycle:mergeDebugShaders
+> Task :flutter_plugin_android_lifecycle:compileDebugShaders NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:generateDebugAssets UP-TO-DATE
+> Task :flutter_plugin_android_lifecycle:packageDebugAssets
+> Task :google_mlkit_commons:mergeDebugShaders
+> Task :google_mlkit_commons:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_commons:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_commons:packageDebugAssets
+> Task :google_mlkit_language_id:mergeDebugShaders
+> Task :google_mlkit_language_id:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_language_id:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_language_id:packageDebugAssets
+> Task :google_mlkit_text_recognition:mergeDebugShaders
+> Task :google_mlkit_text_recognition:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_text_recognition:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_text_recognition:packageDebugAssets
+> Task :google_mlkit_translation:mergeDebugShaders
+> Task :google_mlkit_translation:compileDebugShaders NO-SOURCE
+> Task :google_mlkit_translation:generateDebugAssets UP-TO-DATE
+> Task :google_mlkit_translation:packageDebugAssets
+> Task :google_mobile_ads:mergeDebugShaders
+> Task :google_mobile_ads:compileDebugShaders NO-SOURCE
+> Task :google_mobile_ads:generateDebugAssets UP-TO-DATE
+> Task :google_mobile_ads:packageDebugAssets
+> Task :in_app_purchase_android:mergeDebugShaders
+> Task :in_app_purchase_android:compileDebugShaders NO-SOURCE
+> Task :in_app_purchase_android:generateDebugAssets UP-TO-DATE
+> Task :in_app_purchase_android:packageDebugAssets
+> Task :in_app_review:mergeDebugShaders
+> Task :in_app_review:compileDebugShaders NO-SOURCE
+> Task :in_app_review:generateDebugAssets UP-TO-DATE
+> Task :in_app_review:packageDebugAssets
+> Task :package_info_plus:mergeDebugShaders
+> Task :package_info_plus:compileDebugShaders NO-SOURCE
+> Task :package_info_plus:generateDebugAssets UP-TO-DATE
+> Task :package_info_plus:packageDebugAssets
+> Task :path_provider_android:mergeDebugShaders
+> Task :path_provider_android:compileDebugShaders NO-SOURCE
+> Task :path_provider_android:generateDebugAssets UP-TO-DATE
+> Task :path_provider_android:packageDebugAssets
+> Task :share_plus:mergeDebugShaders
+> Task :share_plus:compileDebugShaders NO-SOURCE
+> Task :share_plus:generateDebugAssets UP-TO-DATE
+> Task :share_plus:packageDebugAssets
+> Task :shared_preferences_android:mergeDebugShaders
+> Task :shared_preferences_android:compileDebugShaders NO-SOURCE
+> Task :shared_preferences_android:generateDebugAssets UP-TO-DATE
+> Task :shared_preferences_android:packageDebugAssets
+> Task :url_launcher_android:mergeDebugShaders
+> Task :url_launcher_android:compileDebugShaders NO-SOURCE
+> Task :url_launcher_android:generateDebugAssets UP-TO-DATE
+> Task :url_launcher_android:packageDebugAssets
+> Task :webview_flutter_android:mergeDebugShaders
+> Task :webview_flutter_android:compileDebugShaders NO-SOURCE
+> Task :webview_flutter_android:generateDebugAssets UP-TO-DATE
+> Task :webview_flutter_android:packageDebugAssets
+> Task :app:mergeDebugAssets
+> Task :app:copyFlutterAssetsDebug
+> Task :app:generateDebugResValues
+> Task :camera_android_camerax:generateDebugResValues
+> Task :camera_android_camerax:generateDebugResources
+> Task :camera_android_camerax:packageDebugResources
+> Task :file_picker:generateDebugResValues
+> Task :file_picker:generateDebugResources
+> Task :file_picker:packageDebugResources
+> Task :flutter_doc_scanner:generateDebugResValues
+> Task :flutter_doc_scanner:generateDebugResources
+> Task :flutter_doc_scanner:packageDebugResources
+> Task :flutter_local_notifications:generateDebugResValues
+> Task :flutter_local_notifications:generateDebugResources
+> Task :flutter_local_notifications:packageDebugResources
+> Task :flutter_native_splash:generateDebugResValues
+> Task :flutter_native_splash:generateDebugResources
+> Task :flutter_native_splash:packageDebugResources
+> Task :flutter_plugin_android_lifecycle:generateDebugResValues
+> Task :flutter_plugin_android_lifecycle:generateDebugResources
+> Task :flutter_plugin_android_lifecycle:packageDebugResources
+> Task :google_mlkit_commons:generateDebugResValues
+> Task :google_mlkit_commons:generateDebugResources
+> Task :google_mlkit_commons:packageDebugResources
+> Task :google_mlkit_language_id:generateDebugResValues
+> Task :google_mlkit_language_id:generateDebugResources
+> Task :google_mlkit_language_id:packageDebugResources
+> Task :google_mlkit_text_recognition:generateDebugResValues
+> Task :google_mlkit_text_recognition:generateDebugResources
+> Task :google_mlkit_text_recognition:packageDebugResources
+> Task :google_mlkit_translation:generateDebugResValues
+> Task :google_mlkit_translation:generateDebugResources
+> Task :google_mlkit_translation:packageDebugResources
+> Task :google_mobile_ads:generateDebugResValues
+> Task :google_mobile_ads:generateDebugResources
+> Task :google_mobile_ads:packageDebugResources
+> Task :in_app_purchase_android:generateDebugResValues
+> Task :in_app_purchase_android:generateDebugResources
+> Task :in_app_purchase_android:packageDebugResources
+> Task :in_app_review:generateDebugResValues
+> Task :in_app_review:generateDebugResources
+> Task :in_app_review:packageDebugResources
+> Task :package_info_plus:generateDebugResValues
+> Task :package_info_plus:generateDebugResources
+> Task :package_info_plus:packageDebugResources
+> Task :path_provider_android:generateDebugResValues
+> Task :path_provider_android:generateDebugResources
+> Task :path_provider_android:packageDebugResources
+> Task :share_plus:generateDebugResValues
+> Task :share_plus:generateDebugResources
+> Task :share_plus:packageDebugResources
+> Task :shared_preferences_android:generateDebugResValues
+> Task :shared_preferences_android:generateDebugResources
+> Task :shared_preferences_android:packageDebugResources
+> Task :url_launcher_android:generateDebugResValues
+> Task :url_launcher_android:generateDebugResources
+> Task :url_launcher_android:packageDebugResources
+> Task :webview_flutter_android:generateDebugResValues
+> Task :webview_flutter_android:generateDebugResources
+> Task :webview_flutter_android:packageDebugResources
+> Task :app:mapDebugSourceSetPaths
+> Task :app:generateDebugResources
+> Task :app:packageDebugResources
+> Task :app:mergeDebugResources
+> Task :app:createDebugCompatibleScreenManifests
+> Task :app:extractDeepLinksDebug
+> Task :camera_android_camerax:extractDeepLinksDebug
+> Task :file_picker:extractDeepLinksDebug
+> Task :flutter_doc_scanner:extractDeepLinksDebug
+> Task :app:parseDebugLocalResources
+> Task :flutter_local_notifications:extractDeepLinksDebug
+
+> Task :flutter_local_notifications:processDebugManifest
+package="com.dexterous.flutterlocalnotifications" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/flutter_local_notifications-19.5.0/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.dexterous.flutterlocalnotifications" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/flutter_local_notifications-19.5.0/android/src/main/AndroidManifest.xml.
+
+> Task :flutter_doc_scanner:processDebugManifest
+
+> Task :file_picker:processDebugManifest
+package="com.mr.flutter.plugin.filepicker" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/file_picker-8.3.7/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.mr.flutter.plugin.filepicker" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/file_picker-8.3.7/android/src/main/AndroidManifest.xml.
+
+> Task :camera_android_camerax:processDebugManifest
+package="io.flutter.plugins.camerax" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.19+1/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.camerax" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/camera_android_camerax-0.6.19+1/android/src/main/AndroidManifest.xml.
+
+> Task :flutter_native_splash:extractDeepLinksDebug
+> Task :flutter_plugin_android_lifecycle:extractDeepLinksDebug
+
+> Task :flutter_native_splash:processDebugManifest
+package="net.jonhanson.flutter_native_splash" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.6/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="net.jonhanson.flutter_native_splash" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.6/android/src/main/AndroidManifest.xml.
+
+> Task :flutter_plugin_android_lifecycle:processDebugManifest
+package="io.flutter.plugins.flutter_plugin_android_lifecycle" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.31/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.flutter_plugin_android_lifecycle" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.31/android/src/main/AndroidManifest.xml.
+
+> Task :google_mlkit_commons:extractDeepLinksDebug
+> Task :google_mlkit_language_id:extractDeepLinksDebug
+
+> Task :google_mlkit_commons:processDebugManifest
+package="com.google_mlkit_commons" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.8.1/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.google_mlkit_commons" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.8.1/android/src/main/AndroidManifest.xml.
+
+> Task :google_mlkit_text_recognition:extractDeepLinksDebug
+
+> Task :google_mlkit_language_id:processDebugManifest
+package="com.google_mlkit_language_id" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_language_id-0.11.1/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.google_mlkit_language_id" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_language_id-0.11.1/android/src/main/AndroidManifest.xml.
+
+> Task :google_mlkit_text_recognition:processDebugManifest
+package="com.google_mlkit_text_recognition" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.13.1/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.google_mlkit_text_recognition" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.13.1/android/src/main/AndroidManifest.xml.
+
+> Task :google_mlkit_translation:extractDeepLinksDebug
+
+> Task :google_mlkit_translation:processDebugManifest
+package="com.google_mlkit_translation" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_translation-0.11.1/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="com.google_mlkit_translation" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mlkit_translation-0.11.1/android/src/main/AndroidManifest.xml.
+
+> Task :google_mobile_ads:extractDeepLinksDebug
+> Task :in_app_purchase_android:extractDeepLinksDebug
+
+> Task :google_mobile_ads:processDebugManifest
+package="io.flutter.plugins.googlemobileads" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mobile_ads-6.0.0/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.googlemobileads" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/google_mobile_ads-6.0.0/android/src/main/AndroidManifest.xml.
+
+> Task :in_app_review:extractDeepLinksDebug
+
+> Task :in_app_purchase_android:processDebugManifest
+package="io.flutter.plugins.inapppurchase" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/in_app_purchase_android-0.4.0+5/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.inapppurchase" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/in_app_purchase_android-0.4.0+5/android/src/main/AndroidManifest.xml.
+
+> Task :package_info_plus:extractDeepLinksDebug
+
+> Task :in_app_review:processDebugManifest
+package="dev.britannio.in_app_review" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/in_app_review-2.0.12/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="dev.britannio.in_app_review" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/in_app_review-2.0.12/android/src/main/AndroidManifest.xml.
+
+> Task :package_info_plus:processDebugManifest
+package="dev.fluttercommunity.plus.packageinfo" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/package_info_plus-8.3.1/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="dev.fluttercommunity.plus.packageinfo" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/package_info_plus-8.3.1/android/src/main/AndroidManifest.xml.
+
+> Task :path_provider_android:extractDeepLinksDebug
+
+> Task :path_provider_android:processDebugManifest
+package="io.flutter.plugins.pathprovider" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/path_provider_android-2.2.19/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.pathprovider" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/path_provider_android-2.2.19/android/src/main/AndroidManifest.xml.
+
+> Task :share_plus:extractDeepLinksDebug
+> Task :shared_preferences_android:extractDeepLinksDebug
+
+> Task :share_plus:processDebugManifest
+package="dev.fluttercommunity.plus.share" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/share_plus-10.1.4/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="dev.fluttercommunity.plus.share" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/share_plus-10.1.4/android/src/main/AndroidManifest.xml.
+
+> Task :url_launcher_android:extractDeepLinksDebug
+
+> Task :shared_preferences_android:processDebugManifest
+package="io.flutter.plugins.sharedpreferences" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.13/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.sharedpreferences" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.13/android/src/main/AndroidManifest.xml.
+
+> Task :url_launcher_android:processDebugManifest
+package="io.flutter.plugins.urllauncher" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/url_launcher_android-6.3.20/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.urllauncher" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/url_launcher_android-6.3.20/android/src/main/AndroidManifest.xml.
+
+> Task :webview_flutter_android:extractDeepLinksDebug
+
+> Task :webview_flutter_android:processDebugManifest
+package="io.flutter.plugins.webviewflutter" found in source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/webview_flutter_android-4.10.1/android/src/main/AndroidManifest.xml.
+Setting the namespace via the package attribute in the source AndroidManifest.xml is no longer supported, and the value is ignored.
+Recommendation: remove package="io.flutter.plugins.webviewflutter" from the source AndroidManifest.xml: /home/runner/.pub-cache/hosted/pub.dev/webview_flutter_android-4.10.1/android/src/main/AndroidManifest.xml.
+
+> Task :camera_android_camerax:compileDebugLibraryResources
+> Task :app:processDebugMainManifest
+> Task :app:processDebugManifest
+> Task :camera_android_camerax:parseDebugLocalResources
+> Task :app:processDebugManifestForPackage
+> Task :file_picker:compileDebugLibraryResources
+> Task :camera_android_camerax:generateDebugRFile
+> Task :file_picker:parseDebugLocalResources
+> Task :flutter_doc_scanner:compileDebugLibraryResources
+> Task :file_picker:generateDebugRFile
+> Task :flutter_doc_scanner:parseDebugLocalResources
+> Task :flutter_local_notifications:compileDebugLibraryResources
+> Task :flutter_local_notifications:parseDebugLocalResources
+> Task :flutter_doc_scanner:generateDebugRFile
+> Task :flutter_native_splash:compileDebugLibraryResources
+> Task :flutter_plugin_android_lifecycle:compileDebugLibraryResources
+> Task :flutter_native_splash:parseDebugLocalResources
+> Task :flutter_local_notifications:generateDebugRFile
+> Task :google_mlkit_commons:compileDebugLibraryResources
+> Task :flutter_plugin_android_lifecycle:parseDebugLocalResources
+> Task :flutter_native_splash:generateDebugRFile
+> Task :google_mlkit_commons:parseDebugLocalResources
+> Task :flutter_plugin_android_lifecycle:generateDebugRFile
+> Task :google_mlkit_language_id:compileDebugLibraryResources
+> Task :google_mlkit_commons:generateDebugRFile
+> Task :google_mlkit_language_id:parseDebugLocalResources
+> Task :google_mlkit_text_recognition:compileDebugLibraryResources
+> Task :google_mlkit_language_id:generateDebugRFile
+> Task :google_mlkit_text_recognition:parseDebugLocalResources
+> Task :google_mlkit_translation:compileDebugLibraryResources
+> Task :google_mlkit_text_recognition:generateDebugRFile
+> Task :google_mlkit_translation:parseDebugLocalResources
+> Task :google_mlkit_translation:generateDebugRFile
+> Task :google_mobile_ads:compileDebugLibraryResources
+> Task :in_app_purchase_android:compileDebugLibraryResources
+> Task :google_mobile_ads:parseDebugLocalResources
+> Task :in_app_purchase_android:parseDebugLocalResources
+> Task :in_app_review:compileDebugLibraryResources
+> Task :in_app_purchase_android:generateDebugRFile
+> Task :package_info_plus:compileDebugLibraryResources
+> Task :in_app_review:parseDebugLocalResources
+> Task :google_mobile_ads:generateDebugRFile
+> Task :package_info_plus:parseDebugLocalResources
+> Task :in_app_review:generateDebugRFile
+> Task :path_provider_android:compileDebugLibraryResources
+> Task :package_info_plus:generateDebugRFile
+> Task :path_provider_android:parseDebugLocalResources
+> Task :share_plus:compileDebugLibraryResources
+> Task :path_provider_android:generateDebugRFile
+> Task :share_plus:parseDebugLocalResources
+> Task :shared_preferences_android:compileDebugLibraryResources
+> Task :share_plus:generateDebugRFile
+> Task :shared_preferences_android:parseDebugLocalResources
+> Task :url_launcher_android:compileDebugLibraryResources
+> Task :shared_preferences_android:generateDebugRFile
+> Task :url_launcher_android:parseDebugLocalResources
+> Task :webview_flutter_android:compileDebugLibraryResources
+> Task :url_launcher_android:generateDebugRFile
+> Task :camera_android_camerax:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :webview_flutter_android:parseDebugLocalResources
+> Task :webview_flutter_android:generateDebugRFile
+> Task :camera_android_camerax:javaPreCompileDebug
+> Task :file_picker:javaPreCompileDebug
+> Task :flutter_doc_scanner:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :flutter_plugin_android_lifecycle:javaPreCompileDebug
+> Task :app:processDebugResources
+> Task :flutter_doc_scanner:compileDebugKotlin
+> Task :flutter_plugin_android_lifecycle:compileDebugJavaWithJavac
+> Task :flutter_doc_scanner:javaPreCompileDebug
+> Task :flutter_local_notifications:javaPreCompileDebug
+> Task :flutter_doc_scanner:compileDebugJavaWithJavac NO-SOURCE
+> Task :flutter_plugin_android_lifecycle:bundleLibCompileToJarDebug
+> Task :flutter_doc_scanner:bundleLibCompileToJarDebug
+> Task :flutter_local_notifications:compileDebugJavaWithJavac
+> Task :file_picker:compileDebugJavaWithJavac
+> Task :file_picker:bundleLibCompileToJarDebug
+> Task :flutter_local_notifications:bundleLibCompileToJarDebug
+> Task :flutter_native_splash:javaPreCompileDebug
+> Task :google_mlkit_commons:javaPreCompileDebug
+> Task :flutter_native_splash:compileDebugJavaWithJavac
+> Task :flutter_native_splash:bundleLibCompileToJarDebug
+> Task :google_mlkit_commons:compileDebugJavaWithJavac
+> Task :google_mlkit_commons:bundleLibCompileToJarDebug
+> Task :google_mlkit_language_id:javaPreCompileDebug
+> Task :google_mlkit_text_recognition:javaPreCompileDebug
+> Task :camera_android_camerax:compileDebugKotlin
+> Task :google_mlkit_language_id:compileDebugJavaWithJavac
+> Task :google_mlkit_language_id:bundleLibCompileToJarDebug
+> Task :google_mlkit_text_recognition:compileDebugJavaWithJavac
+> Task :google_mlkit_text_recognition:bundleLibCompileToJarDebug
+> Task :google_mlkit_translation:javaPreCompileDebug
+> Task :google_mobile_ads:javaPreCompileDebug
+> Task :google_mlkit_translation:compileDebugJavaWithJavac
+> Task :camera_android_camerax:compileDebugJavaWithJavac
+> Task :webview_flutter_android:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :google_mlkit_translation:bundleLibCompileToJarDebug
+> Task :camera_android_camerax:bundleLibCompileToJarDebug
+> Task :webview_flutter_android:javaPreCompileDebug
+> Task :in_app_purchase_android:generateDebugBuildConfig
+> Task :in_app_review:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :in_app_purchase_android:javaPreCompileDebug
+> Task :in_app_review:compileDebugKotlin
+> Task :in_app_purchase_android:compileDebugJavaWithJavac
+> Task :package_info_plus:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :in_app_review:javaPreCompileDebug
+> Task :in_app_purchase_android:bundleLibCompileToJarDebug
+> Task :in_app_review:compileDebugJavaWithJavac NO-SOURCE
+> Task :in_app_review:bundleLibCompileToJarDebug
+> Task :package_info_plus:javaPreCompileDebug
+> Task :share_plus:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :path_provider_android:javaPreCompileDebug
+> Task :path_provider_android:compileDebugJavaWithJavac
+> Task :path_provider_android:bundleLibCompileToJarDebug
+> Task :share_plus:javaPreCompileDebug
+> Task :shared_preferences_android:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :package_info_plus:compileDebugKotlin
+> Task :package_info_plus:compileDebugJavaWithJavac NO-SOURCE
+> Task :package_info_plus:bundleLibCompileToJarDebug
+> Task :shared_preferences_android:javaPreCompileDebug
+> Task :url_launcher_android:generateDebugBuildConfig
+> Task :url_launcher_android:javaPreCompileDebug
+> Task :share_plus:compileDebugKotlin
+> Task :url_launcher_android:compileDebugJavaWithJavac
+> Task :share_plus:compileDebugJavaWithJavac NO-SOURCE
+> Task :share_plus:bundleLibCompileToJarDebug
+> Task :url_launcher_android:bundleLibCompileToJarDebug
+> Task :app:javaPreCompileDebug
+> Task :shared_preferences_android:compileDebugKotlin
+> Task :webview_flutter_android:compileDebugKotlin
+> Task :shared_preferences_android:compileDebugJavaWithJavac
+> Task :webview_flutter_android:compileDebugJavaWithJavac
+> Task :shared_preferences_android:bundleLibCompileToJarDebug
+> Task :webview_flutter_android:bundleLibCompileToJarDebug
+> Task :google_mobile_ads:compileDebugJavaWithJavac
+> Task :google_mobile_ads:bundleLibCompileToJarDebug
+> Task :app:compileDebugKotlin
+> Task :app:compileDebugJavaWithJavac
+gradle/actions: Writing build results to /home/runner/work/_temp/.gradle-actions/build-results/kotlin-1791460419108.json
+
+BUILD SUCCESSFUL in 4m 49s
+299 actionable tasks: 294 executed, 5 up-to-date
