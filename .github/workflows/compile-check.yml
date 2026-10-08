@@ -1,0 +1,158 @@
+name: Compile Check
+
+# Compiles the Dart + Kotlin/Java code, runs lint and unit tests.
+# Never builds or uploads an APK/AAB. Needs no secrets.
+#
+# Every run publishes its logs to the `ci-logs` branch (never `main`) so
+# failures can be read without opening the Actions UI.
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths-ignore:
+      - '**.md'
+      - 'store_submission/**'
+      - 'website/**'
+
+concurrency:
+  group: compile-check-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write # only used to update the ci-logs branch
+
+jobs:
+  compile-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    defaults:
+      run:
+        shell: bash
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Java
+        uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Setup Flutter
+        uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.2'
+          channel: stable
+          cache: true
+
+      - name: Prepare log folder
+        run: mkdir -p ci-logs-out
+
+      - name: Install dependencies
+        id: pub
+        continue-on-error: true
+        run: flutter pub get 2>&1 | tee ci-logs-out/1-pub-get.log
+
+      - name: Lint (flutter analyze)
+        id: analyze
+        continue-on-error: true
+        run: flutter analyze 2>&1 | tee ci-logs-out/2-analyze.log
+
+      - name: Unit tests
+        id: test
+        continue-on-error: true
+        run: flutter test 2>&1 | tee ci-logs-out/3-test.log
+
+      - name: Setup Gradle
+        id: gradle_setup
+        continue-on-error: true
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.10.2'
+
+      - name: Point Gradle at the Flutter SDK
+        id: local_props
+        continue-on-error: true
+        run: |
+          FLUTTER_SDK="$(dirname "$(dirname "$(readlink -f "$(which flutter)")")")"
+          echo "Flutter SDK: $FLUTTER_SDK"
+          touch android/local.properties
+          grep -q '^flutter.sdk=' android/local.properties \
+            || echo "flutter.sdk=$FLUTTER_SDK" >> android/local.properties
+
+      - name: Compile Kotlin and Java (no APK)
+        id: kotlin
+        continue-on-error: true
+        run: |
+          gradle -p android :app:compileDebugKotlin :app:compileDebugJavaWithJavac \
+            --stacktrace --console=plain 2>&1 | tee ci-logs-out/4-kotlin-compile.log
+
+      - name: Android lint (advisory)
+        id: android_lint
+        continue-on-error: true
+        run: |
+          gradle -p android :app:lintDebug --console=plain 2>&1 \
+            | tee ci-logs-out/5-android-lint.log
+
+      - name: Write summary
+        if: always()
+        run: |
+          {
+            echo "sha=${GITHUB_SHA}"
+            echo "run_id=${GITHUB_RUN_ID}"
+            echo "pub_get=${{ steps.pub.outcome }}"
+            echo "analyze=${{ steps.analyze.outcome }}"
+            echo "test=${{ steps.test.outcome }}"
+            echo "gradle_setup=${{ steps.gradle_setup.outcome }}"
+            echo "local_props=${{ steps.local_props.outcome }}"
+            echo "kotlin_compile=${{ steps.kotlin.outcome }}"
+            echo "android_lint_advisory=${{ steps.android_lint.outcome }}"
+          } | tee ci-logs-out/0-summary.txt
+
+      - name: Annotate errors
+        if: always()
+        run: |
+          grep -hE "error •|^\s*error:|^e: |: error:|FAILED|Some tests failed|\[E\]" ci-logs-out/[1-4]-*.log \
+            | head -n 10 \
+            | sed 's/\r//g; s/%/%25/g' \
+            | while IFS= read -r line; do echo "::error::${line}"; done || true
+
+      - name: Publish logs to ci-logs branch
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          mkdir -p /tmp/ci-publish
+          for f in ci-logs-out/*; do
+            tail -n 4000 "$f" > "/tmp/ci-publish/$(basename "$f")"
+          done
+          cd /tmp/ci-publish
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b ci-logs
+          git add -A
+          git commit -q -m "compile-check logs for ${GITHUB_SHA}"
+          git push -q --force \
+            "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" \
+            ci-logs:refs/heads/ci-logs
+          exit 0
+
+      - name: Result
+        if: always()
+        run: |
+          fail=0
+          for o in \
+            "${{ steps.pub.outcome }}" \
+            "${{ steps.analyze.outcome }}" \
+            "${{ steps.test.outcome }}" \
+            "${{ steps.gradle_setup.outcome }}" \
+            "${{ steps.local_props.outcome }}" \
+            "${{ steps.kotlin.outcome }}"; do
+            [ "$o" = "success" ] || fail=1
+          done
+          echo "overall_fail=$fail"
+          exit $fail

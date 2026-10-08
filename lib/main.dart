@@ -1,6 +1,12 @@
+import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart' show MobileAds;
+import 'package:in_app_purchase/in_app_purchase.dart'
+    show InAppPurchase, PurchaseDetails, PurchaseStatus;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'core/services/iap_service.dart';
 import 'core/utils/app_theme.dart';
 import 'core/utils/error_handler.dart';
 import 'core/models/app_theme_mode.dart';
@@ -20,6 +26,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   installGlobalErrorHandling();
   final prefs = await SharedPreferences.getInstance();
+  if (!(prefs.getBool('ads_removed') ?? false)) {
+    unawaited(MobileAds.instance.initialize());
+  }
   await InterstitialService.instance.init(prefs);
   await NotificationService.instance.init(prefs);
   runApp(PeshatApp(prefs: prefs));
@@ -40,6 +49,7 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
   late final HistoryProvider historyProvider;
   late final UiLocaleProvider uiLocaleProvider;
   late final NotificationProvider notificationProvider;
+  StreamSubscription<List<PurchaseDetails>>? _purchaseSub;
 
   Brightness _platformBrightness =
       WidgetsBinding.instance.platformDispatcher.platformBrightness;
@@ -59,13 +69,41 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
     AdSlot.setPurchased(purchaseProvider.value);
     InterstitialService.instance.setPurchased(purchaseProvider.value);
     purchaseProvider.addListener(_syncAdSlot);
+    _listenForPurchases();
   }
 
   @override
   void dispose() {
     WidgetsBinding.instance.removeObserver(this);
     purchaseProvider.removeListener(_syncAdSlot);
+    _purchaseSub?.cancel();
     super.dispose();
+  }
+
+  /// Receives every purchase / restore result from the store. Without this
+  /// listener a "Remove ads" purchase is never acknowledged or applied.
+  void _listenForPurchases() {
+    try {
+      _purchaseSub = InAppPurchase.instance.purchaseStream.listen(
+        _onPurchaseUpdates,
+        onError: (_) {},
+      );
+    } catch (_) {}
+  }
+
+  Future<void> _onPurchaseUpdates(List<PurchaseDetails> purchases) async {
+    for (final p in purchases) {
+      final owned = p.status == PurchaseStatus.purchased ||
+          p.status == PurchaseStatus.restored;
+      if (owned && p.productID == IapService.removeAdsProductId) {
+        purchaseProvider.markAdsRemoved(widget.prefs);
+      }
+      if (p.pendingCompletePurchase) {
+        try {
+          await InAppPurchase.instance.completePurchase(p);
+        } catch (_) {}
+      }
+    }
   }
 
   @override
