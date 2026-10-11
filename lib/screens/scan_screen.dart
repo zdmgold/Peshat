@@ -451,6 +451,7 @@ class _ScanLogoState extends State<_ScanLogo> {
       button: true,
       enabled: !widget.isScanning,
       label: widget.label,
+      onTap: widget.isScanning ? null : () => widget.onTap(),
       excludeSemantics: true,
       child: GestureDetector(
       onTap: widget.isScanning ? null : () => widget.onTap(),
