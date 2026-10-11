@@ -5,6 +5,7 @@ import '../core/models/scan_result.dart';
 import '../core/providers/history_provider.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
+import '../core/utils/date_labels.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/ad_slot.dart';
@@ -91,7 +92,7 @@ class HistoryScreen extends StatelessWidget {
     final yesterday = <ScanResult>[];
     final older = <ScanResult>[];
     for (final r in items) {
-      final d = now.difference(r.timestamp).inDays;
+      final d = calendarDaysBetween(now, r.timestamp);
       if (d == 0) {
         today.add(r);
       } else if (d == 1) {
@@ -417,11 +418,11 @@ class _HistoryRowState extends State<_HistoryRow> {
     );
   }
 
-  String _timeLabel(DateTime t) {
-    final hh = t.hour.toString().padLeft(2, '0');
-    final mm = t.minute.toString().padLeft(2, '0');
-    return '$hh:$mm';
-  }
+  String _timeLabel(DateTime t) => historyTimeLabel(
+        t,
+        DateTime.now(),
+        Localizations.localeOf(context).languageCode,
+      );
 }
 
 // ---------------------------------------------------------------------------

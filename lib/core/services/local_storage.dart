@@ -23,6 +23,16 @@ class LocalStorage {
     }
   }
 
+  /// Replaces the stored list in one write (newest first).
+  Future<void> saveAll(List<ScanResult> items) async {
+    try {
+      await prefs.setStringList(
+        _recentKey,
+        items.take(_maxRecent).map((r) => jsonEncode(r.toJson())).toList(),
+      );
+    } catch (_) {}
+  }
+
   Future<List<ScanResult>> getRecent() async {
     final list = prefs.getStringList(_recentKey) ?? [];
     final results = <ScanResult>[];

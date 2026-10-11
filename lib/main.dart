@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:flutter/cupertino.dart';
 import 'package:in_app_purchase/in_app_purchase.dart'
     show InAppPurchase, PurchaseDetails, PurchaseStatus;
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'core/services/ad_consent.dart';
@@ -26,6 +27,7 @@ import 'screens/scan_screen.dart';
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   installGlobalErrorHandling();
+  await initializeDateFormatting();
   final prefs = await SharedPreferences.getInstance();
   if (!(prefs.getBool('ads_removed') ?? false)) {
     unawaited(AdConsent.instance.gatherAndInit());

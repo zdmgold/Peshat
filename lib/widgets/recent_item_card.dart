@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import '../core/models/scan_result.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_icons.dart';
+import '../core/utils/date_labels.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import 'peshat_icon.dart';
@@ -36,11 +37,11 @@ class RecentItemCard extends StatefulWidget {
 class _RecentItemCardState extends State<RecentItemCard> {
   bool _pressed = false;
 
-  String _timeLabel(DateTime t) {
-    final hh = t.hour.toString().padLeft(2, '0');
-    final mm = t.minute.toString().padLeft(2, '0');
-    return '$hh:$mm';
-  }
+  String _timeLabel(DateTime t) => historyTimeLabel(
+        t,
+        DateTime.now(),
+        Localizations.localeOf(context).languageCode,
+      );
 
   @override
   Widget build(BuildContext context) {

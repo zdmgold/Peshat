@@ -22,19 +22,11 @@ class HistoryProvider extends ValueNotifier<List<ScanResult>> {
   Future<void> delete(String id) async {
     final next = value.where((r) => r.id != id).toList();
     value = next;
-    await _writeAll(next);
+    await _storage.saveAll(next);
   }
 
   Future<void> clear() async {
     await _storage.clear();
     value = const [];
-  }
-
-  Future<void> _writeAll(List<ScanResult> items) async {
-    // LocalStorage only exposes saveRecent; rewrite from empty
-    await _storage.clear();
-    for (final r in items.reversed) {
-      await _storage.saveRecent(r);
-    }
   }
 }
