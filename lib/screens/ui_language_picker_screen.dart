@@ -4,6 +4,7 @@ import '../widgets/peshat_icon.dart';
 import '../core/models/language.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
+import '../core/utils/locale_resolution.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/ad_slot.dart';
@@ -46,7 +47,9 @@ class UiLanguagePickerScreen extends StatelessWidget {
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
-    final sorted = [...supportedLanguages]
+    final sorted = supportedLanguages
+        .where((l) => isUiLanguageSupported(l.code))
+        .toList()
       ..sort((a, b) =>
           a.englishName.toLowerCase().compareTo(b.englishName.toLowerCase()));
     final groups = _groupByLetter(sorted);

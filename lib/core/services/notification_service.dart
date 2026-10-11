@@ -5,6 +5,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:timezone/data/latest.dart' as tzdata;
 import 'package:timezone/timezone.dart' as tz;
 import '../../l10n/app_localizations.dart';
+import '../utils/locale_resolution.dart';
 
 /// Local-notification reminder service.
 ///
@@ -85,9 +86,9 @@ class NotificationService {
   Locale _resolveLocale(SharedPreferences prefs) {
     final saved = prefs.getString(_keyLocale);
     if (saved != null && saved.isNotEmpty && saved != 'system') {
-      return Locale(saved);
+      return resolveSupportedLocale(Locale(saved));
     }
-    return PlatformDispatcher.instance.locale;
+    return resolveSupportedLocale(PlatformDispatcher.instance.locale);
   }
 
   Future<void> _scheduleReminder(SharedPreferences prefs) async {

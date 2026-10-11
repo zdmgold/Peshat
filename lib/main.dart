@@ -9,6 +9,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'core/services/iap_service.dart';
 import 'core/utils/app_theme.dart';
 import 'core/utils/error_handler.dart';
+import 'core/utils/locale_resolution.dart';
 import 'core/models/app_theme_mode.dart';
 import 'core/providers/theme_provider.dart';
 import 'core/providers/purchase_provider.dart';
@@ -137,6 +138,7 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
         locale: uiLocaleProvider.value,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
+        localeListResolutionCallback: resolveDeviceLocales,
         home: ScanScreen(
           theme: themeProvider,
           purchase: purchaseProvider,
