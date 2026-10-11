@@ -306,4 +306,10 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'اشتہارات کی رازداری کے اختیارات';
+
+  @override
+  String get followSystemLabel => 'سسٹم کے مطابق';
+
+  @override
+  String get couldNotOpenLink => 'لنک نہیں کھل سکا';
 }

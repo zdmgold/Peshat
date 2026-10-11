@@ -306,4 +306,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'ທາງເລືອກຄວາມເປັນສ່ວນຕົວຂອງໂຄສະນາ';
+
+  @override
+  String get followSystemLabel => 'ຕາມລະບົບ';
+
+  @override
+  String get couldNotOpenLink => 'ບໍ່ສາມາດເປີດລິ້ງໄດ້';
 }

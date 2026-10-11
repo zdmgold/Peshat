@@ -98,5 +98,7 @@
   "recentLabel": "Terbaru",
   "purchaseUnavailable": "Pembelian tidak tersedia saat ini. Silakan coba lagi nanti.",
   "restoreChecking": "Memeriksa pembelian sebelumnya…",
-  "adPrivacyChoices": "Pilihan privasi iklan"
+  "adPrivacyChoices": "Pilihan privasi iklan",
+  "followSystemLabel": "Ikuti sistem",
+  "couldNotOpenLink": "Tidak dapat membuka tautan"
 }

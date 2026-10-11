@@ -306,4 +306,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Επιλογές απορρήτου διαφημίσεων';
+
+  @override
+  String get followSystemLabel => 'Ακολούθηση συστήματος';
+
+  @override
+  String get couldNotOpenLink => 'Δεν ήταν δυνατό το άνοιγμα του συνδέσμου';
 }

@@ -98,5 +98,7 @@
   "recentLabel": "මෑත",
   "purchaseUnavailable": "මිලදී ගැනීම් දැන් ලබා ගත නොහැක. කරුණාකර පසුව නැවත උත්සාහ කරන්න.",
   "restoreChecking": "පෙර මිලදී ගැනීම් පරීක්ෂා කරමින්…",
-  "adPrivacyChoices": "දැන්වීම් පෞද්ගලිකත්ව තේරීම්"
+  "adPrivacyChoices": "දැන්වීම් පෞද්ගලිකත්ව තේරීම්",
+  "followSystemLabel": "පද්ධතිය අනුගමනය කරන්න",
+  "couldNotOpenLink": "සබැඳිය විවෘත කළ නොහැක"
 }

@@ -306,4 +306,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'विज्ञापन गोपनीयता विकल्प';
+
+  @override
+  String get followSystemLabel => 'सिस्टम का पालन करें';
+
+  @override
+  String get couldNotOpenLink => 'लिंक नहीं खुल सका';
 }

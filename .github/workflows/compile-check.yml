@@ -95,6 +95,10 @@ jobs:
         run: |
           gradle -p android :app:lintDebug -Pandroid.enableJetifier=false --console=plain 2>&1 \
             | tee ci-logs-out/5-android-lint.log
+          status=${PIPESTATUS[0]}
+          cat build/app/intermediates/lint_intermediate_text_report/debug/lintReportDebug/lint-results-debug.txt \
+            >> ci-logs-out/5-android-lint.log 2>/dev/null || true
+          exit $status
 
       - name: Write summary
         if: always()

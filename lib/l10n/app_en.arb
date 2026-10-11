@@ -153,5 +153,7 @@
   },
   "purchaseUnavailable": "Purchases are not available right now. Please try again later.",
   "restoreChecking": "Checking for previous purchases…",
-  "adPrivacyChoices": "Ad privacy choices"
+  "adPrivacyChoices": "Ad privacy choices",
+  "followSystemLabel": "Follow system",
+  "couldNotOpenLink": "Could not open link"
 }

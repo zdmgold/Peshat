@@ -306,4 +306,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'ជម្រើសឯកជនភាពនៃការផ្សាយពាណិជ្ជកម្ម';
+
+  @override
+  String get followSystemLabel => 'តាមប្រព័ន្ធ';
+
+  @override
+  String get couldNotOpenLink => 'មិនអាចបើកតំណបានទេ';
 }

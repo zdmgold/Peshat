@@ -98,5 +98,7 @@
   "recentLabel": "Kamakailan",
   "purchaseUnavailable": "Hindi available ang mga pagbili ngayon. Pakisubukang muli mamaya.",
   "restoreChecking": "Sinusuri ang mga nakaraang pagbili…",
-  "adPrivacyChoices": "Mga pagpipilian sa privacy ng ad"
+  "adPrivacyChoices": "Mga pagpipilian sa privacy ng ad",
+  "followSystemLabel": "Sundin ang system",
+  "couldNotOpenLink": "Hindi mabuksan ang link"
 }

@@ -98,5 +98,7 @@
   "recentLabel": "Recent",
   "purchaseUnavailable": "Aankopen zijn momenteel niet beschikbaar. Probeer het later opnieuw.",
   "restoreChecking": "Eerdere aankopen controleren…",
-  "adPrivacyChoices": "Privacykeuzes voor advertenties"
+  "adPrivacyChoices": "Privacykeuzes voor advertenties",
+  "followSystemLabel": "Systeem volgen",
+  "couldNotOpenLink": "Link kon niet worden geopend"
 }

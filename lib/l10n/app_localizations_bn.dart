@@ -306,4 +306,10 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'বিজ্ঞাপনের গোপনীয়তা পছন্দ';
+
+  @override
+  String get followSystemLabel => 'সিস্টেম অনুসরণ করুন';
+
+  @override
+  String get couldNotOpenLink => 'লিংক খোলা যায়নি';
 }

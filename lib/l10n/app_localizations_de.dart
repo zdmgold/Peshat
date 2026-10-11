@@ -306,4 +306,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Datenschutzoptionen für Werbung';
+
+  @override
+  String get followSystemLabel => 'Systemeinstellung folgen';
+
+  @override
+  String get couldNotOpenLink => 'Link konnte nicht geöffnet werden';
 }

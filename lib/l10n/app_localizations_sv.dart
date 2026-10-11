@@ -306,4 +306,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Integritetsval för annonser';
+
+  @override
+  String get followSystemLabel => 'Följ systemet';
+
+  @override
+  String get couldNotOpenLink => 'Det gick inte att öppna länken';
 }

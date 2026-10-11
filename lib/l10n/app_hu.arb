@@ -98,5 +98,7 @@
   "recentLabel": "Legutóbbi",
   "purchaseUnavailable": "A vásárlások jelenleg nem érhetők el. Kérjük, próbáld újra később.",
   "restoreChecking": "Korábbi vásárlások ellenőrzése…",
-  "adPrivacyChoices": "Hirdetési adatvédelmi beállítások"
+  "adPrivacyChoices": "Hirdetési adatvédelmi beállítások",
+  "followSystemLabel": "Rendszer követése",
+  "couldNotOpenLink": "A hivatkozás nem nyitható meg"
 }

@@ -306,4 +306,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Настройки конфиденциальности рекламы';
+
+  @override
+  String get followSystemLabel => 'Как в системе';
+
+  @override
+  String get couldNotOpenLink => 'Не удалось открыть ссылку';
 }

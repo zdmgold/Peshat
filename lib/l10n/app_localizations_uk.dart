@@ -306,4 +306,10 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Параметри конфіденційності реклами';
+
+  @override
+  String get followSystemLabel => 'Як у системі';
+
+  @override
+  String get couldNotOpenLink => 'Не вдалося відкрити посилання';
 }

@@ -98,5 +98,7 @@
   "recentLabel": "Recente",
   "purchaseUnavailable": "Achizițiile nu sunt disponibile momentan. Încearcă din nou mai târziu.",
   "restoreChecking": "Se verifică achizițiile anterioare…",
-  "adPrivacyChoices": "Opțiuni de confidențialitate pentru anunțuri"
+  "adPrivacyChoices": "Opțiuni de confidențialitate pentru anunțuri",
+  "followSystemLabel": "Urmează sistemul",
+  "couldNotOpenLink": "Linkul nu a putut fi deschis"
 }

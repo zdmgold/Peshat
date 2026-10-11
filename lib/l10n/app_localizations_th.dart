@@ -306,4 +306,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'ตัวเลือกความเป็นส่วนตัวของโฆษณา';
+
+  @override
+  String get followSystemLabel => 'ตามระบบ';
+
+  @override
+  String get couldNotOpenLink => 'ไม่สามารถเปิดลิงก์ได้';
 }

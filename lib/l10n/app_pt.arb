@@ -98,5 +98,7 @@
   "recentLabel": "Recentes",
   "purchaseUnavailable": "As compras não estão disponíveis agora. Tente novamente mais tarde.",
   "restoreChecking": "Verificando compras anteriores…",
-  "adPrivacyChoices": "Opções de privacidade de anúncios"
+  "adPrivacyChoices": "Opções de privacidade de anúncios",
+  "followSystemLabel": "Seguir o sistema",
+  "couldNotOpenLink": "Não foi possível abrir o link"
 }

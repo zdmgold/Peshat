@@ -98,5 +98,7 @@
   "recentLabel": "אחרונים",
   "purchaseUnavailable": "הרכישות אינן זמינות כרגע. נסו שוב מאוחר יותר.",
   "restoreChecking": "בודק רכישות קודמות…",
-  "adPrivacyChoices": "אפשרויות פרטיות למודעות"
+  "adPrivacyChoices": "אפשרויות פרטיות למודעות",
+  "followSystemLabel": "עקוב אחר המערכת",
+  "couldNotOpenLink": "לא ניתן לפתוח את הקישור"
 }

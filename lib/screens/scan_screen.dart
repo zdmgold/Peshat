@@ -21,6 +21,7 @@ import '../l10n/app_localizations.dart';
 import '../platform/document_scanner_service.dart';
 import '../widgets/action_card.dart';
 import '../widgets/ad_slot.dart';
+import '../widgets/cupertino_toast.dart';
 import '../widgets/recent_item_card.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
@@ -121,9 +122,10 @@ class _ScanScreenState extends State<ScanScreen> {
   }
 
   Future<void> _toggleTheme() async {
-    final next = widget.theme.value == AppThemeMode.dark
-        ? AppThemeMode.light
-        : AppThemeMode.dark;
+    // Flip what is actually showing, so it also works from "system" mode.
+    final showingDark =
+        CupertinoTheme.of(context).brightness == Brightness.dark;
+    final next = showingDark ? AppThemeMode.light : AppThemeMode.dark;
     widget.theme.setMode(next);
   }
 
@@ -184,7 +186,11 @@ class _ScanScreenState extends State<ScanScreen> {
           ),
         );
       }
-    } catch (_) {}
+    } catch (_) {
+      if (mounted) {
+        CupertinoToast.show(context, AppLocalizations.of(context)!.errorUnknown);
+      }
+    }
   }
 
   @override

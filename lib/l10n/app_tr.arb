@@ -98,5 +98,7 @@
   "recentLabel": "Son",
   "purchaseUnavailable": "Satın alma şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
   "restoreChecking": "Önceki satın alımlar denetleniyor…",
-  "adPrivacyChoices": "Reklam gizlilik seçenekleri"
+  "adPrivacyChoices": "Reklam gizlilik seçenekleri",
+  "followSystemLabel": "Sistemi takip et",
+  "couldNotOpenLink": "Bağlantı açılamadı"
 }

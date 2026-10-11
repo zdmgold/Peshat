@@ -306,4 +306,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'گزینه‌های حریم خصوصی تبلیغات';
+
+  @override
+  String get followSystemLabel => 'پیروی از سیستم';
+
+  @override
+  String get couldNotOpenLink => 'باز کردن پیوند ممکن نشد';
 }

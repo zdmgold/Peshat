@@ -98,5 +98,7 @@
   "recentLabel": "हालैका",
   "purchaseUnavailable": "किनमेल अहिले उपलब्ध छैन। कृपया पछि फेरि प्रयास गर्नुहोस्।",
   "restoreChecking": "अघिल्ला खरिदहरू जाँच गर्दै…",
-  "adPrivacyChoices": "विज्ञापन गोपनीयता विकल्पहरू"
+  "adPrivacyChoices": "विज्ञापन गोपनीयता विकल्पहरू",
+  "followSystemLabel": "प्रणाली अनुसरण गर्नुहोस्",
+  "couldNotOpenLink": "लिङ्क खोल्न सकिएन"
 }

@@ -306,4 +306,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'אפשרויות פרטיות למודעות';
+
+  @override
+  String get followSystemLabel => 'עקוב אחר המערכת';
+
+  @override
+  String get couldNotOpenLink => 'לא ניתן לפתוח את הקישור';
 }

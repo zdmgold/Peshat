@@ -306,4 +306,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => '광고 개인정보 보호 옵션';
+
+  @override
+  String get followSystemLabel => '시스템 설정 따르기';
+
+  @override
+  String get couldNotOpenLink => '링크를 열 수 없습니다';
 }

@@ -98,5 +98,7 @@
   "recentLabel": "Nedávné",
   "purchaseUnavailable": "Nákupy teď nejsou dostupné. Zkuste to prosím později.",
   "restoreChecking": "Kontroluji předchozí nákupy…",
-  "adPrivacyChoices": "Volby ochrany soukromí u reklam"
+  "adPrivacyChoices": "Volby ochrany soukromí u reklam",
+  "followSystemLabel": "Podle systému",
+  "couldNotOpenLink": "Odkaz se nepodařilo otevřít"
 }

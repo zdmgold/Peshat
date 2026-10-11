@@ -306,4 +306,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Tùy chọn quyền riêng tư quảng cáo';
+
+  @override
+  String get followSystemLabel => 'Theo hệ thống';
+
+  @override
+  String get couldNotOpenLink => 'Không thể mở liên kết';
 }

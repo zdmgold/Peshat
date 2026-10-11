@@ -306,4 +306,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Volby ochrany soukromí u reklam';
+
+  @override
+  String get followSystemLabel => 'Podle systému';
+
+  @override
+  String get couldNotOpenLink => 'Odkaz se nepodařilo otevřít';
 }

@@ -98,5 +98,7 @@
   "recentLabel": "الأحدث",
   "purchaseUnavailable": "المشتريات غير متاحة حالياً. يرجى المحاولة لاحقاً.",
   "restoreChecking": "جارٍ التحقق من المشتريات السابقة…",
-  "adPrivacyChoices": "خيارات خصوصية الإعلانات"
+  "adPrivacyChoices": "خيارات خصوصية الإعلانات",
+  "followSystemLabel": "اتباع النظام",
+  "couldNotOpenLink": "تعذّر فتح الرابط"
 }

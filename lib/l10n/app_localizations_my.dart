@@ -306,4 +306,10 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'ကြော်ငြာ ကိုယ်ရေးကိုယ်တာ ရွေးချယ်မှုများ';
+
+  @override
+  String get followSystemLabel => 'စနစ်အတိုင်း လိုက်နာရန်';
+
+  @override
+  String get couldNotOpenLink => 'လင့်ခ်ကို ဖွင့်၍မရပါ';
 }

@@ -98,5 +98,7 @@
   "recentLabel": "Нещодавні",
   "purchaseUnavailable": "Покупки зараз недоступні. Спробуйте пізніше.",
   "restoreChecking": "Перевірка попередніх покупок…",
-  "adPrivacyChoices": "Параметри конфіденційності реклами"
+  "adPrivacyChoices": "Параметри конфіденційності реклами",
+  "followSystemLabel": "Як у системі",
+  "couldNotOpenLink": "Не вдалося відкрити посилання"
 }

@@ -104,7 +104,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
       if (mounted) {
-        CupertinoToast.show(context, 'Could not open link');
+        CupertinoToast.show(
+          context,
+          AppLocalizations.of(context)!.couldNotOpenLink,
+        );
       }
     }
   }

@@ -98,5 +98,7 @@
   "recentLabel": "Недавние",
   "purchaseUnavailable": "Покупки сейчас недоступны. Повторите попытку позже.",
   "restoreChecking": "Проверка предыдущих покупок…",
-  "adPrivacyChoices": "Настройки конфиденциальности рекламы"
+  "adPrivacyChoices": "Настройки конфиденциальности рекламы",
+  "followSystemLabel": "Как в системе",
+  "couldNotOpenLink": "Не удалось открыть ссылку"
 }

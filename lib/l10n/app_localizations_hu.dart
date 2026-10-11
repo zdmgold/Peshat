@@ -306,4 +306,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Hirdetési adatvédelmi beállítások';
+
+  @override
+  String get followSystemLabel => 'Rendszer követése';
+
+  @override
+  String get couldNotOpenLink => 'A hivatkozás nem nyitható meg';
 }

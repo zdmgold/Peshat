@@ -306,4 +306,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => '广告隐私选项';
+
+  @override
+  String get followSystemLabel => '跟随系统';
+
+  @override
+  String get couldNotOpenLink => '无法打开链接';
 }

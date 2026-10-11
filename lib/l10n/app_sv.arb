@@ -98,5 +98,7 @@
   "recentLabel": "Senaste",
   "purchaseUnavailable": "Köp är inte tillgängliga just nu. Försök igen senare.",
   "restoreChecking": "Kontrollerar tidigare köp…",
-  "adPrivacyChoices": "Integritetsval för annonser"
+  "adPrivacyChoices": "Integritetsval för annonser",
+  "followSystemLabel": "Följ systemet",
+  "couldNotOpenLink": "Det gick inte att öppna länken"
 }

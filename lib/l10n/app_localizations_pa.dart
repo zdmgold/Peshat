@@ -306,4 +306,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'ਵਿਗਿਆਪਨ ਗੋਪਨੀਯਤਾ ਵਿਕਲਪ';
+
+  @override
+  String get followSystemLabel => 'ਸਿਸਟਮ ਦੀ ਪਾਲਣਾ ਕਰੋ';
+
+  @override
+  String get couldNotOpenLink => 'ਲਿੰਕ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ';
 }

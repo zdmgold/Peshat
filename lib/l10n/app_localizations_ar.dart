@@ -306,4 +306,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'خيارات خصوصية الإعلانات';
+
+  @override
+  String get followSystemLabel => 'اتباع النظام';
+
+  @override
+  String get couldNotOpenLink => 'تعذّر فتح الرابط';
 }

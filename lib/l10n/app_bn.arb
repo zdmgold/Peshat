@@ -98,5 +98,7 @@
   "recentLabel": "সাম্প্রতিক",
   "purchaseUnavailable": "এই মুহূর্তে কেনাকাটা উপলব্ধ নেই। অনুগ্রহ করে পরে আবার চেষ্টা করুন।",
   "restoreChecking": "আগের কেনাকাটা পরীক্ষা করা হচ্ছে…",
-  "adPrivacyChoices": "বিজ্ঞাপনের গোপনীয়তা পছন্দ"
+  "adPrivacyChoices": "বিজ্ঞাপনের গোপনীয়তা পছন্দ",
+  "followSystemLabel": "সিস্টেম অনুসরণ করুন",
+  "couldNotOpenLink": "লিংক খোলা যায়নি"
 }

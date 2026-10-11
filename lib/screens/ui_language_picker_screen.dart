@@ -83,7 +83,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
                   SliverToBoxAdapter(
                     child: _UiLanguageRow(
                       leading: AppIcons.smartphone,
-                      title: 'Follow system',
+                      title: l10n.followSystemLabel,
                       subtitle: null,
                       selected: current == null,
                       textPrimary: textPrimary,

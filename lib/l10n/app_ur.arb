@@ -98,5 +98,7 @@
   "recentLabel": "حالیہ",
   "purchaseUnavailable": "خریداری اس وقت دستیاب نہیں ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔",
   "restoreChecking": "پچھلی خریداریوں کی جانچ کی جا رہی ہے…",
-  "adPrivacyChoices": "اشتہارات کی رازداری کے اختیارات"
+  "adPrivacyChoices": "اشتہارات کی رازداری کے اختیارات",
+  "followSystemLabel": "سسٹم کے مطابق",
+  "couldNotOpenLink": "لنک نہیں کھل سکا"
 }

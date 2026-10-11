@@ -306,4 +306,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Reklam gizlilik seçenekleri';
+
+  @override
+  String get followSystemLabel => 'Sistemi takip et';
+
+  @override
+  String get couldNotOpenLink => 'Bağlantı açılamadı';
 }

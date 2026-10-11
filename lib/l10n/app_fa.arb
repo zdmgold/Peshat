@@ -98,5 +98,7 @@
   "recentLabel": "اخیر",
   "purchaseUnavailable": "خرید در حال حاضر در دسترس نیست. لطفاً بعداً دوباره تلاش کنید.",
   "restoreChecking": "در حال بررسی خریدهای قبلی…",
-  "adPrivacyChoices": "گزینه‌های حریم خصوصی تبلیغات"
+  "adPrivacyChoices": "گزینه‌های حریم خصوصی تبلیغات",
+  "followSystemLabel": "پیروی از سیستم",
+  "couldNotOpenLink": "باز کردن پیوند ممکن نشد"
 }

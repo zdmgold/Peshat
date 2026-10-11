@@ -306,4 +306,10 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'विज्ञापन गोपनीयता विकल्पहरू';
+
+  @override
+  String get followSystemLabel => 'प्रणाली अनुसरण गर्नुहोस्';
+
+  @override
+  String get couldNotOpenLink => 'लिङ्क खोल्न सकिएन';
 }

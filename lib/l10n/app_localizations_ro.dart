@@ -306,4 +306,10 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Opțiuni de confidențialitate pentru anunțuri';
+
+  @override
+  String get followSystemLabel => 'Urmează sistemul';
+
+  @override
+  String get couldNotOpenLink => 'Linkul nu a putut fi deschis';
 }

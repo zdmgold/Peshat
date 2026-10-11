@@ -306,4 +306,10 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'දැන්වීම් පෞද්ගලිකත්ව තේරීම්';
+
+  @override
+  String get followSystemLabel => 'පද්ධතිය අනුගමනය කරන්න';
+
+  @override
+  String get couldNotOpenLink => 'සබැඳිය විවෘත කළ නොහැක';
 }

@@ -306,4 +306,10 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'የማስታወቂያ ግላዊነት ምርጫዎች';
+
+  @override
+  String get followSystemLabel => 'ስርዓቱን ተከተል';
+
+  @override
+  String get couldNotOpenLink => 'ሊንኩን መክፈት አልተቻለም';
 }

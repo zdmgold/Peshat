@@ -306,4 +306,10 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Mga pagpipilian sa privacy ng ad';
+
+  @override
+  String get followSystemLabel => 'Sundin ang system';
+
+  @override
+  String get couldNotOpenLink => 'Hindi mabuksan ang link';
 }

@@ -306,4 +306,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get adPrivacyChoices => 'Pilihan privasi iklan';
+
+  @override
+  String get followSystemLabel => 'Ikuti sistem';
+
+  @override
+  String get couldNotOpenLink => 'Tidak dapat membuka tautan';
 }
