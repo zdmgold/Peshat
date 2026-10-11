@@ -376,11 +376,11 @@ class _ResultScreenState extends State<ResultScreen> {
     required bool asPdf,
   }) async {
     InterstitialService.instance.onExport();
+    final l10n = AppLocalizations.of(context)!;
     try {
       final dir = await getTemporaryDirectory();
       late final File file;
       if (asPdf) {
-        final l10n = AppLocalizations.of(context)!;
         final scripts = PdfFonts.scriptsIn(text);
         if (await PdfFonts.needsDownload(scripts) && mounted) {
           CupertinoToast.show(context, l10n.pdfFontDownloading);
@@ -412,8 +412,7 @@ class _ResultScreenState extends State<ResultScreen> {
       await Share.shareXFiles([XFile(file.path)]);
     } on PdfFontDownloadException {
       if (mounted) {
-        CupertinoToast.show(
-            context, AppLocalizations.of(context)!.pdfFontDownloadFailed);
+        CupertinoToast.show(context, l10n.pdfFontDownloadFailed);
       }
     } catch (e) {
       if (mounted) {
