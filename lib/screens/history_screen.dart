@@ -153,6 +153,7 @@ class HistoryScreen extends StatelessWidget {
           inputText: r.sourceText,
           initialTargetLanguage: r.targetLang,
           history: history,
+          saveToHistory: false,
         ),
       ),
     );

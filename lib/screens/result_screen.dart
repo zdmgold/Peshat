@@ -33,12 +33,16 @@ class ResultScreen extends StatefulWidget {
   final String initialTargetLanguage;
   final HistoryProvider history;
 
+  /// False when reopening an entry from History, so it isn't saved again.
+  final bool saveToHistory;
+
   const ResultScreen({
     super.key,
     this.imagePath,
     this.inputText,
     required this.initialTargetLanguage,
     required this.history,
+    this.saveToHistory = true,
   }) : assert(imagePath != null || inputText != null,
             'Either imagePath or inputText must be provided');
 
@@ -50,7 +54,7 @@ class _ResultScreenState extends State<ResultScreen> {
   final ScanProvider _provider = ScanProvider();
   late String _targetLanguage;
   _ResultTab _tab = _ResultTab.original;
-  bool _saved = false;
+  late bool _saved = !widget.saveToHistory;
 
   @override
   void initState() {
