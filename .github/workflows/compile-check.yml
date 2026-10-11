@@ -93,7 +93,7 @@ jobs:
         id: android_lint
         continue-on-error: true
         run: |
-          gradle -p android :app:lintDebug --console=plain 2>&1 \
+          gradle -p android :app:lintDebug -Pandroid.enableJetifier=false --console=plain 2>&1 \
             | tee ci-logs-out/5-android-lint.log
 
       - name: Write summary

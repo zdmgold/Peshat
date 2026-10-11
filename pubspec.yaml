@@ -1,7 +1,7 @@
 name: peshat
 description: Point your camera at any text, get an instant translation.
 publish_to: "none"
-version: 1.0.0+1
+version: 1.0.0+2
 environment:
   sdk: ">=3.0.0 <4.0.0"
 dependencies:
