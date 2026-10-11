@@ -88,9 +88,11 @@ class TranslatorService {
     if (!isTranslatable(fromBcp) || !isTranslatable(toBcp)) {
       throw TranslatorException(AppErrorCode.unsupportedLanguage);
     }
-    await _ensure(fromBcp.toLowerCase());
+    // The model manager wants ML Kit's own codes (e.g. Filipino is 'tl'),
+    // not the app's language codes.
+    await _ensure(_map[fromBcp.toLowerCase()]!.bcpCode);
     if (fromBcp.toLowerCase() != toBcp.toLowerCase()) {
-      await _ensure(toBcp.toLowerCase());
+      await _ensure(_map[toBcp.toLowerCase()]!.bcpCode);
     }
   }
 

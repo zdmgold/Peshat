@@ -1,13 +1,34 @@
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
 
 class TextRecognizerService {
-  final _recognizer = TextRecognizer(script: TextRecognitionScript.latin);
+  // Latin is tried first; the other scripts are created lazily and only when
+  // the previous one found nothing, so Latin-only users pay no extra cost.
+  static const _scripts = <TextRecognitionScript>[
+    TextRecognitionScript.latin,
+    TextRecognitionScript.chinese,
+    TextRecognitionScript.japanese,
+    TextRecognitionScript.korean,
+    TextRecognitionScript.devanagiri,
+  ];
+
+  final _recognizers = <TextRecognitionScript, TextRecognizer>{};
 
   Future<RecognizedText> recognize(InputImage image) async {
-    return await _recognizer.processImage(image);
+    RecognizedText? last;
+    for (final script in _scripts) {
+      final recognizer = _recognizers.putIfAbsent(
+          script, () => TextRecognizer(script: script));
+      final result = await recognizer.processImage(image);
+      if (result.text.trim().isNotEmpty) return result;
+      last = result;
+    }
+    return last!;
   }
 
   void dispose() {
-    _recognizer.close();
+    for (final r in _recognizers.values) {
+      r.close();
+    }
+    _recognizers.clear();
   }
 }
