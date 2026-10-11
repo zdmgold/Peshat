@@ -297,4 +297,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get recentLabel => 'ਤਾਜ਼ਾ';
+
+  @override
+  String get purchaseUnavailable => 'ਖਰੀਦਦਾਰੀ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
+
+  @override
+  String get restoreChecking => 'ਪਿਛਲੀਆਂ ਖਰੀਦਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…';
 }

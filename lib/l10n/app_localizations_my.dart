@@ -297,4 +297,10 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get recentLabel => 'မကြာသေးမီ';
+
+  @override
+  String get purchaseUnavailable => 'ဝယ်ယူမှုများကို ယခု မရနိုင်ပါ။ နောက်မှ ထပ်စမ်းကြည့်ပါ။';
+
+  @override
+  String get restoreChecking => 'ယခင်ဝယ်ယူမှုများကို စစ်ဆေးနေသည်…';
 }

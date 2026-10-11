@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Pokračujte tam, kde jste skončili v Peshat.",
   "notificationPermissionDenied": "Chcete-li dostávat připomínky, povolte oznámení v systémovém nastavení.",
   "scanShortLabel": "Skenovat",
-  "recentLabel": "Nedávné"
+  "recentLabel": "Nedávné",
+  "purchaseUnavailable": "Nákupy teď nejsou dostupné. Zkuste to prosím později.",
+  "restoreChecking": "Kontroluji předchozí nákupy…"
 }

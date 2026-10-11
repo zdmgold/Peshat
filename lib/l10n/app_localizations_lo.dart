@@ -297,4 +297,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get recentLabel => 'ຫຼ້າສຸດ';
+
+  @override
+  String get purchaseUnavailable => 'ການຊື້ບໍ່ສາມາດໃຊ້ໄດ້ໃນຕອນນີ້. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ.';
+
+  @override
+  String get restoreChecking => 'ກຳລັງກວດສອບການຊື້ກ່ອນໜ້ານີ້…';
 }

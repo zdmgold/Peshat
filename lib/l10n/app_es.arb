@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Retoma donde lo dejaste con Peshat.",
   "notificationPermissionDenied": "Activa las notificaciones en los ajustes del sistema para recibir recordatorios.",
   "scanShortLabel": "Escanear",
-  "recentLabel": "Recientes"
+  "recentLabel": "Recientes",
+  "purchaseUnavailable": "Las compras no están disponibles ahora. Inténtalo de nuevo más tarde.",
+  "restoreChecking": "Comprobando compras anteriores…"
 }

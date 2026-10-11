@@ -297,4 +297,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get recentLabel => 'Senaste';
+
+  @override
+  String get purchaseUnavailable => 'Köp är inte tillgängliga just nu. Försök igen senare.';
+
+  @override
+  String get restoreChecking => 'Kontrollerar tidigare köp…';
 }

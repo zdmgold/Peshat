@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Вернитесь к тому месту, где вы остановились в Peshat.",
   "notificationPermissionDenied": "Включите уведомления в системных настройках, чтобы получать напоминания.",
   "scanShortLabel": "Сканировать",
-  "recentLabel": "Недавние"
+  "recentLabel": "Недавние",
+  "purchaseUnavailable": "Покупки сейчас недоступны. Повторите попытку позже.",
+  "restoreChecking": "Проверка предыдущих покупок…"
 }

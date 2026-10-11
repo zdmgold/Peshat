@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Folytassa ott, ahol abbahagyta a Peshat-tal.",
   "notificationPermissionDenied": "Az emlékeztetők fogadásához engedélyezze az értesítéseket a rendszerbeállításokban.",
   "scanShortLabel": "Beolvasás",
-  "recentLabel": "Legutóbbi"
+  "recentLabel": "Legutóbbi",
+  "purchaseUnavailable": "A vásárlások jelenleg nem érhetők el. Kérjük, próbáld újra később.",
+  "restoreChecking": "Korábbi vásárlások ellenőrzése…"
 }

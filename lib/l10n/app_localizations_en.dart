@@ -297,4 +297,10 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get recentLabel => 'Recent';
+
+  @override
+  String get purchaseUnavailable => 'Purchases are not available right now. Please try again later.';
+
+  @override
+  String get restoreChecking => 'Checking for previous purchases…';
 }

@@ -297,4 +297,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get recentLabel => '최근';
+
+  @override
+  String get purchaseUnavailable => '지금은 구매할 수 없습니다. 나중에 다시 시도해 주세요.';
+
+  @override
+  String get restoreChecking => '이전 구매 내역을 확인하는 중…';
 }

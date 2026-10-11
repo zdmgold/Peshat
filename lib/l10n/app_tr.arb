@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Peshat'ta kaldığınız yerden devam edin.",
   "notificationPermissionDenied": "Hatırlatıcıları almak için sistem ayarlarından bildirimleri etkinleştirin.",
   "scanShortLabel": "Tara",
-  "recentLabel": "Son"
+  "recentLabel": "Son",
+  "purchaseUnavailable": "Satın alma şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.",
+  "restoreChecking": "Önceki satın alımlar denetleniyor…"
 }

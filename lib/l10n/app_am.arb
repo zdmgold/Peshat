@@ -95,5 +95,7 @@
   "reminderNotificationBody": "ፔሻት የቆሙበትን ቦታ ይቀጥሉ።",
   "notificationPermissionDenied": "አስታዋሾችን ለመቀበል ማሳወቂያዎችን በስርዓት ቅንብሮች ያንቁ።",
   "scanShortLabel": "ቃኝ",
-  "recentLabel": "የቅርብ ጊዜ"
+  "recentLabel": "የቅርብ ጊዜ",
+  "purchaseUnavailable": "ግዢዎች አሁን አይገኙም። እባክዎ ቆይተው እንደገና ይሞክሩ።",
+  "restoreChecking": "ቀደም ያሉ ግዢዎችን በመፈተሽ ላይ…"
 }

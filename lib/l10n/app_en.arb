@@ -150,5 +150,7 @@
   },
   "@recentLabel": {
     "description": "Section header above the recent-scans preview on the Home screen."
-  }
+  },
+  "purchaseUnavailable": "Purchases are not available right now. Please try again later.",
+  "restoreChecking": "Checking for previous purchases…"
 }

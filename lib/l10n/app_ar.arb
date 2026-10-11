@@ -95,5 +95,7 @@
   "reminderNotificationBody": "أكمل من حيث توقفت مع Peshat.",
   "notificationPermissionDenied": "فعّل الإشعارات من إعدادات النظام لتلقي التذكيرات.",
   "scanShortLabel": "مسح",
-  "recentLabel": "الأحدث"
+  "recentLabel": "الأحدث",
+  "purchaseUnavailable": "المشتريات غير متاحة حالياً. يرجى المحاولة لاحقاً.",
+  "restoreChecking": "جارٍ التحقق من المشتريات السابقة…"
 }

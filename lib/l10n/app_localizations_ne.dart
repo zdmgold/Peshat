@@ -297,4 +297,10 @@ class AppLocalizationsNe extends AppLocalizations {
 
   @override
   String get recentLabel => 'हालैका';
+
+  @override
+  String get purchaseUnavailable => 'किनमेल अहिले उपलब्ध छैन। कृपया पछि फेरि प्रयास गर्नुहोस्।';
+
+  @override
+  String get restoreChecking => 'अघिल्ला खरिदहरू जाँच गर्दै…';
 }

@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Συνεχίστε από εκεί που σταματήσατε στο Peshat.",
   "notificationPermissionDenied": "Ενεργοποιήστε τις ειδοποιήσεις στις ρυθμίσεις συστήματος για να λαμβάνετε υπενθυμίσεις.",
   "scanShortLabel": "Σάρωση",
-  "recentLabel": "Πρόσφατα"
+  "recentLabel": "Πρόσφατα",
+  "purchaseUnavailable": "Οι αγορές δεν είναι διαθέσιμες αυτή τη στιγμή. Δοκιμάστε ξανά αργότερα.",
+  "restoreChecking": "Έλεγχος προηγούμενων αγορών…"
 }

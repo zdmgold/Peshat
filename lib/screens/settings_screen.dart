@@ -70,6 +70,24 @@ class _SettingsScreenState extends State<SettingsScreen> {
     });
   }
 
+  Future<void> _buyRemoveAds() async {
+    final l10n = AppLocalizations.of(context)!;
+    final started = await _iap.buyRemoveAds();
+    if (!started && mounted) {
+      CupertinoToast.show(context, l10n.purchaseUnavailable);
+    }
+  }
+
+  Future<void> _restorePurchase() async {
+    final l10n = AppLocalizations.of(context)!;
+    final started = await _iap.restore();
+    if (!mounted) return;
+    CupertinoToast.show(
+      context,
+      started ? l10n.restoreChecking : l10n.purchaseUnavailable,
+    );
+  }
+
   Future<void> _openUrl(String url) async {
     final uri = Uri.parse(url);
     if (!await launchUrl(uri, mode: LaunchMode.externalApplication)) {
@@ -338,13 +356,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             trailing: _SmallOutlinedButton(
                               label: l10n.removeAdsShortLabel,
                               accent: accent,
-                              onPressed: _iap.buyRemoveAds,
+                              onPressed: _buyRemoveAds,
                             ),
                           ),
                           CupertinoListTile(
                             leading: const PeshatIcon(icon: AppIcons.restore),
                             title: Text(l10n.restorePurchaseButton),
-                            onTap: _iap.restore,
+                            onTap: _restorePurchase,
                           ),
                         ],
                       );

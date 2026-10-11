@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Peshat मा जहाँ छोड्नुभयो त्यहींबाट जारी राख्नुहोस्।",
   "notificationPermissionDenied": "रिमाइन्डरहरू प्राप्त गर्न प्रणाली सेटिङहरूमा सूचनाहरू सक्षम गर्नुहोस्।",
   "scanShortLabel": "स्क्यान",
-  "recentLabel": "हालैका"
+  "recentLabel": "हालैका",
+  "purchaseUnavailable": "किनमेल अहिले उपलब्ध छैन। कृपया पछि फेरि प्रयास गर्नुहोस्।",
+  "restoreChecking": "अघिल्ला खरिदहरू जाँच गर्दै…"
 }

@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Wróć do miejsca, w którym skończyłeś w Peshat.",
   "notificationPermissionDenied": "Włącz powiadomienia w ustawieniach systemowych, aby otrzymywać przypomnienia.",
   "scanShortLabel": "Skanuj",
-  "recentLabel": "Ostatnie"
+  "recentLabel": "Ostatnie",
+  "purchaseUnavailable": "Zakupy są obecnie niedostępne. Spróbuj ponownie później.",
+  "restoreChecking": "Sprawdzanie wcześniejszych zakupów…"
 }

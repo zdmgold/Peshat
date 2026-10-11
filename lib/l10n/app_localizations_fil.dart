@@ -297,4 +297,10 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get recentLabel => 'Kamakailan';
+
+  @override
+  String get purchaseUnavailable => 'Hindi available ang mga pagbili ngayon. Pakisubukang muli mamaya.';
+
+  @override
+  String get restoreChecking => 'Sinusuri ang mga nakaraang pagbili…';
 }

@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Peshat හි ඔබ නැවැත්වූ තැන සිට දිගටම කරගෙන යන්න.",
   "notificationPermissionDenied": "සිහිකැඳවීම් ලබාගැනීමට පද්ධති සැකසුම්වල දැනුම්දීම් සක්‍රීය කරන්න.",
   "scanShortLabel": "ස්කෑන්",
-  "recentLabel": "මෑත"
+  "recentLabel": "මෑත",
+  "purchaseUnavailable": "මිලදී ගැනීම් දැන් ලබා ගත නොහැක. කරුණාකර පසුව නැවත උත්සාහ කරන්න.",
+  "restoreChecking": "පෙර මිලදී ගැනීම් පරීක්ෂා කරමින්…"
 }

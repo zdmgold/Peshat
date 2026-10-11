@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Reia de unde ai rămas cu Peshat.",
   "notificationPermissionDenied": "Activează notificările în setările sistemului pentru a primi memento-uri.",
   "scanShortLabel": "Scanare",
-  "recentLabel": "Recente"
+  "recentLabel": "Recente",
+  "purchaseUnavailable": "Achizițiile nu sunt disponibile momentan. Încearcă din nou mai târziu.",
+  "restoreChecking": "Se verifică achizițiile anterioare…"
 }

@@ -297,4 +297,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get recentLabel => '最近';
+
+  @override
+  String get purchaseUnavailable => '目前无法购买，请稍后再试。';
+
+  @override
+  String get restoreChecking => '正在检查之前的购买…';
 }

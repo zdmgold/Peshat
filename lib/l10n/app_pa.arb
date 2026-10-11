@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Peshat ਨਾਲ ਜਿੱਥੇ ਛੱਡਿਆ ਸੀ ਉੱਥੋਂ ਜਾਰੀ ਰੱਖੋ।",
   "notificationPermissionDenied": "ਰਿਮਾਈਂਡਰ ਪ੍ਰਾਪਤ ਕਰਨ ਲਈ ਸਿਸਟਮ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਸੂਚਨਾਵਾਂ ਚਾਲੂ ਕਰੋ।",
   "scanShortLabel": "ਸਕੈਨ",
-  "recentLabel": "ਤਾਜ਼ਾ"
+  "recentLabel": "ਤਾਜ਼ਾ",
+  "purchaseUnavailable": "ਖਰੀਦਦਾਰੀ ਇਸ ਵੇਲੇ ਉਪਲਬਧ ਨਹੀਂ ਹੈ। ਕਿਰਪਾ ਕਰਕੇ ਬਾਅਦ ਵਿੱਚ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+  "restoreChecking": "ਪਿਛਲੀਆਂ ਖਰੀਦਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…"
 }

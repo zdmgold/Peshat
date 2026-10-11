@@ -297,4 +297,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get recentLabel => 'Recent';
+
+  @override
+  String get purchaseUnavailable => 'Aankopen zijn momenteel niet beschikbaar. Probeer het later opnieuw.';
+
+  @override
+  String get restoreChecking => 'Eerdere aankopen controleren…';
 }

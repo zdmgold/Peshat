@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Peshat에서 중단한 곳에서 이어가세요.",
   "notificationPermissionDenied": "리마인더를 받으려면 시스템 설정에서 알림을 활성화하세요.",
   "scanShortLabel": "스캔",
-  "recentLabel": "최근"
+  "recentLabel": "최근",
+  "purchaseUnavailable": "지금은 구매할 수 없습니다. 나중에 다시 시도해 주세요.",
+  "restoreChecking": "이전 구매 내역을 확인하는 중…"
 }

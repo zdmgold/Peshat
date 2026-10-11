@@ -297,4 +297,10 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get recentLabel => 'මෑත';
+
+  @override
+  String get purchaseUnavailable => 'මිලදී ගැනීම් දැන් ලබා ගත නොහැක. කරුණාකර පසුව නැවත උත්සාහ කරන්න.';
+
+  @override
+  String get restoreChecking => 'පෙර මිලදී ගැනීම් පරීක්ෂා කරමින්…';
 }

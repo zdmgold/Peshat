@@ -297,4 +297,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get recentLabel => 'Πρόσφατα';
+
+  @override
+  String get purchaseUnavailable => 'Οι αγορές δεν είναι διαθέσιμες αυτή τη στιγμή. Δοκιμάστε ξανά αργότερα.';
+
+  @override
+  String get restoreChecking => 'Έλεγχος προηγούμενων αγορών…';
 }

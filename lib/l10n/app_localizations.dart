@@ -738,6 +738,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Recent'**
   String get recentLabel;
+
+  /// No description provided for @purchaseUnavailable.
+  ///
+  /// In en, this message translates to:
+  /// **'Purchases are not available right now. Please try again later.'**
+  String get purchaseUnavailable;
+
+  /// No description provided for @restoreChecking.
+  ///
+  /// In en, this message translates to:
+  /// **'Checking for previous purchases…'**
+  String get restoreChecking;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

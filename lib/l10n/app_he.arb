@@ -95,5 +95,7 @@
   "reminderNotificationBody": "המשיכו מהמקום שבו הפסקתם ב-Peshat.",
   "notificationPermissionDenied": "הפעילו התראות בהגדרות המערכת כדי לקבל תזכורות.",
   "scanShortLabel": "סרוק",
-  "recentLabel": "אחרונים"
+  "recentLabel": "אחרונים",
+  "purchaseUnavailable": "הרכישות אינן זמינות כרגע. נסו שוב מאוחר יותר.",
+  "restoreChecking": "בודק רכישות קודמות…"
 }

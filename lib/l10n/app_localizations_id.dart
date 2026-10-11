@@ -297,4 +297,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get recentLabel => 'Terbaru';
+
+  @override
+  String get purchaseUnavailable => 'Pembelian tidak tersedia saat ini. Silakan coba lagi nanti.';
+
+  @override
+  String get restoreChecking => 'Memeriksa pembelian sebelumnya…';
 }

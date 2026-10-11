@@ -297,4 +297,10 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get recentLabel => 'সাম্প্রতিক';
+
+  @override
+  String get purchaseUnavailable => 'এই মুহূর্তে কেনাকাটা উপলব্ধ নেই। অনুগ্রহ করে পরে আবার চেষ্টা করুন।';
+
+  @override
+  String get restoreChecking => 'আগের কেনাকাটা পরীক্ষা করা হচ্ছে…';
 }

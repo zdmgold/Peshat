@@ -297,4 +297,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get recentLabel => 'हाल के';
+
+  @override
+  String get purchaseUnavailable => 'अभी खरीदारी उपलब्ध नहीं है। कृपया बाद में पुनः प्रयास करें।';
+
+  @override
+  String get restoreChecking => 'पिछली खरीदारी जाँची जा रही है…';
 }

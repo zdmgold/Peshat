@@ -297,4 +297,10 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get recentLabel => 'حالیہ';
+
+  @override
+  String get purchaseUnavailable => 'خریداری اس وقت دستیاب نہیں ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔';
+
+  @override
+  String get restoreChecking => 'پچھلی خریداریوں کی جانچ کی جا رہی ہے…';
 }

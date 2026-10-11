@@ -297,4 +297,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get recentLabel => 'Недавние';
+
+  @override
+  String get purchaseUnavailable => 'Покупки сейчас недоступны. Повторите попытку позже.';
+
+  @override
+  String get restoreChecking => 'Проверка предыдущих покупок…';
 }

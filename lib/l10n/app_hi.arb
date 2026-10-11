@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Peshat के साथ जहाँ छोड़ा था वहीं से जारी रखें।",
   "notificationPermissionDenied": "अनुस्मारक प्राप्त करने के लिए सिस्टम सेटिंग्स में सूचनाएँ सक्षम करें।",
   "scanShortLabel": "स्कैन",
-  "recentLabel": "हाल के"
+  "recentLabel": "हाल के",
+  "purchaseUnavailable": "अभी खरीदारी उपलब्ध नहीं है। कृपया बाद में पुनः प्रयास करें।",
+  "restoreChecking": "पिछली खरीदारी जाँची जा रही है…"
 }

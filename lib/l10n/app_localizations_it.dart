@@ -297,4 +297,10 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get recentLabel => 'Recenti';
+
+  @override
+  String get purchaseUnavailable => 'Gli acquisti non sono disponibili al momento. Riprova più tardi.';
+
+  @override
+  String get restoreChecking => 'Controllo degli acquisti precedenti…';
 }

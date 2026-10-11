@@ -297,4 +297,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get recentLabel => 'الأحدث';
+
+  @override
+  String get purchaseUnavailable => 'المشتريات غير متاحة حالياً. يرجى المحاولة لاحقاً.';
+
+  @override
+  String get restoreChecking => 'جارٍ التحقق من المشتريات السابقة…';
 }

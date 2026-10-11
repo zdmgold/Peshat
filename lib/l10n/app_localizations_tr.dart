@@ -297,4 +297,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get recentLabel => 'Son';
+
+  @override
+  String get purchaseUnavailable => 'Satın alma şu anda kullanılamıyor. Lütfen daha sonra tekrar deneyin.';
+
+  @override
+  String get restoreChecking => 'Önceki satın alımlar denetleniyor…';
 }

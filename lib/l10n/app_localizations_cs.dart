@@ -297,4 +297,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get recentLabel => 'Nedávné';
+
+  @override
+  String get purchaseUnavailable => 'Nákupy teď nejsou dostupné. Zkuste to prosím později.';
+
+  @override
+  String get restoreChecking => 'Kontroluji předchozí nákupy…';
 }

@@ -95,5 +95,7 @@
   "reminderNotificationBody": "បន្តពីកន្លែងដែលអ្នកបានឈប់ជាមួយ Peshat។",
   "notificationPermissionDenied": "បើកការជូនដំណឹងនៅក្នុងការកំណត់ប្រព័ន្ធ ដើម្បីទទួលការរំលឹក។",
   "scanShortLabel": "ស្កេន",
-  "recentLabel": "ថ្មីៗ"
+  "recentLabel": "ថ្មីៗ",
+  "purchaseUnavailable": "ការទិញមិនអាចប្រើបានទេឥឡូវនេះ។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។",
+  "restoreChecking": "កំពុងពិនិត្យការទិញពីមុន…"
 }

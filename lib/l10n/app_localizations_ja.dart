@@ -297,4 +297,10 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get recentLabel => '最近';
+
+  @override
+  String get purchaseUnavailable => '現在、購入できません。後でもう一度お試しください。';
+
+  @override
+  String get restoreChecking => '以前の購入を確認しています…';
 }

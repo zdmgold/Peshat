@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Återuppta där du slutade med Peshat.",
   "notificationPermissionDenied": "Aktivera aviseringar i systeminställningarna för att ta emot påminnelser.",
   "scanShortLabel": "Skanna",
-  "recentLabel": "Senaste"
+  "recentLabel": "Senaste",
+  "purchaseUnavailable": "Köp är inte tillgängliga just nu. Försök igen senare.",
+  "restoreChecking": "Kontrollerar tidigare köp…"
 }

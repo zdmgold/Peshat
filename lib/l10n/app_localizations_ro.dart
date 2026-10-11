@@ -297,4 +297,10 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get recentLabel => 'Recente';
+
+  @override
+  String get purchaseUnavailable => 'Achizițiile nu sunt disponibile momentan. Încearcă din nou mai târziu.';
+
+  @override
+  String get restoreChecking => 'Se verifică achizițiile anterioare…';
 }

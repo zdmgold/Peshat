@@ -297,4 +297,10 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get recentLabel => 'ล่าสุด';
+
+  @override
+  String get purchaseUnavailable => 'ไม่สามารถซื้อได้ในขณะนี้ โปรดลองอีกครั้งในภายหลัง';
+
+  @override
+  String get restoreChecking => 'กำลังตรวจสอบการซื้อก่อนหน้า…';
 }

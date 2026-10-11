@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Peshat میں جہاں چھوڑا تھا وہیں سے جاری رکھیں۔",
   "notificationPermissionDenied": "یاد دہانیاں حاصل کرنے کے لیے سسٹم سیٹنگز میں اطلاعات فعال کریں۔",
   "scanShortLabel": "اسکین",
-  "recentLabel": "حالیہ"
+  "recentLabel": "حالیہ",
+  "purchaseUnavailable": "خریداری اس وقت دستیاب نہیں ہے۔ براہ کرم بعد میں دوبارہ کوشش کریں۔",
+  "restoreChecking": "پچھلی خریداریوں کی جانچ کی جا رہی ہے…"
 }

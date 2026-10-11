@@ -95,5 +95,7 @@
   "reminderNotificationBody": "กลับมาแปลต่อจากที่คุณหยุดไว้ใน Peshat",
   "notificationPermissionDenied": "เปิดการแจ้งเตือนในการตั้งค่าระบบเพื่อรับการเตือนความจำ",
   "scanShortLabel": "สแกน",
-  "recentLabel": "ล่าสุด"
+  "recentLabel": "ล่าสุด",
+  "purchaseUnavailable": "ไม่สามารถซื้อได้ในขณะนี้ โปรดลองอีกครั้งในภายหลัง",
+  "restoreChecking": "กำลังตรวจสอบการซื้อก่อนหน้า…"
 }

@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Ipagpatuloy kung saan ka tumigil sa Peshat.",
   "notificationPermissionDenied": "I-enable ang mga notification sa system settings upang makatanggap ng mga paalala.",
   "scanShortLabel": "I-scan",
-  "recentLabel": "Kamakailan"
+  "recentLabel": "Kamakailan",
+  "purchaseUnavailable": "Hindi available ang mga pagbili ngayon. Pakisubukang muli mamaya.",
+  "restoreChecking": "Sinusuri ang mga nakaraang pagbili…"
 }

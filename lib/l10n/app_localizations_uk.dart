@@ -297,4 +297,10 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get recentLabel => 'Нещодавні';
+
+  @override
+  String get purchaseUnavailable => 'Покупки зараз недоступні. Спробуйте пізніше.';
+
+  @override
+  String get restoreChecking => 'Перевірка попередніх покупок…';
 }

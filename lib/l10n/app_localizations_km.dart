@@ -297,4 +297,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get recentLabel => 'ថ្មីៗ';
+
+  @override
+  String get purchaseUnavailable => 'ការទិញមិនអាចប្រើបានទេឥឡូវនេះ។ សូមព្យាយាមម្ដងទៀតនៅពេលក្រោយ។';
+
+  @override
+  String get restoreChecking => 'កំពុងពិនិត្យការទិញពីមុន…';
 }

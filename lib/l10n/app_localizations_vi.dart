@@ -297,4 +297,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get recentLabel => 'Gần đây';
+
+  @override
+  String get purchaseUnavailable => 'Hiện không thể mua hàng. Vui lòng thử lại sau.';
+
+  @override
+  String get restoreChecking => 'Đang kiểm tra các giao dịch mua trước đó…';
 }

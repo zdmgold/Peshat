@@ -297,4 +297,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get recentLabel => 'Legutóbbi';
+
+  @override
+  String get purchaseUnavailable => 'A vásárlások jelenleg nem érhetők el. Kérjük, próbáld újra később.';
+
+  @override
+  String get restoreChecking => 'Korábbi vásárlások ellenőrzése…';
 }

@@ -4,15 +4,32 @@ class IapService {
   static const String removeAdsProductId = 'com.zdmgold.peshat.removeads';
   final InAppPurchase _iap = InAppPurchase.instance;
 
-  Future<void> buyRemoveAds() async {
-    final response = await _iap.queryProductDetails({removeAdsProductId});
-    if (response.productDetails.isEmpty) return;
-    await _iap.buyNonConsumable(
-      purchaseParam: PurchaseParam(productDetails: response.productDetails.first),
-    );
+  /// Returns true when the store purchase sheet was started, false when the
+  /// store or product is unavailable (so the caller can tell the user).
+  Future<bool> buyRemoveAds() async {
+    try {
+      if (!await _iap.isAvailable()) return false;
+      final response = await _iap.queryProductDetails({removeAdsProductId});
+      if (response.error != null || response.productDetails.isEmpty) {
+        return false;
+      }
+      return await _iap.buyNonConsumable(
+        purchaseParam:
+            PurchaseParam(productDetails: response.productDetails.first),
+      );
+    } catch (_) {
+      return false;
+    }
   }
 
-  Future<void> restore() async {
-    await _iap.restorePurchases();
+  /// Returns true when a restore request was sent to the store.
+  Future<bool> restore() async {
+    try {
+      if (!await _iap.isAvailable()) return false;
+      await _iap.restorePurchases();
+      return true;
+    } catch (_) {
+      return false;
+    }
   }
 }

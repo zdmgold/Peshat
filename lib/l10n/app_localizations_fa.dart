@@ -297,4 +297,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get recentLabel => 'اخیر';
+
+  @override
+  String get purchaseUnavailable => 'خرید در حال حاضر در دسترس نیست. لطفاً بعداً دوباره تلاش کنید.';
+
+  @override
+  String get restoreChecking => 'در حال بررسی خریدهای قبلی…';
 }

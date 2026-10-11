@@ -95,5 +95,7 @@
   "reminderNotificationBody": "از همان‌جایی که در Peshat رها کردید ادامه دهید.",
   "notificationPermissionDenied": "برای دریافت یادآورها، اعلان‌ها را در تنظیمات سیستم فعال کنید.",
   "scanShortLabel": "اسکن",
-  "recentLabel": "اخیر"
+  "recentLabel": "اخیر",
+  "purchaseUnavailable": "خرید در حال حاضر در دسترس نیست. لطفاً بعداً دوباره تلاش کنید.",
+  "restoreChecking": "در حال بررسی خریدهای قبلی…"
 }

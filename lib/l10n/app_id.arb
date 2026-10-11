@@ -95,5 +95,7 @@
   "reminderNotificationBody": "Lanjutkan dari tempat Anda berhenti di Peshat.",
   "notificationPermissionDenied": "Aktifkan notifikasi di pengaturan sistem untuk menerima pengingat.",
   "scanShortLabel": "Pindai",
-  "recentLabel": "Terbaru"
+  "recentLabel": "Terbaru",
+  "purchaseUnavailable": "Pembelian tidak tersedia saat ini. Silakan coba lagi nanti.",
+  "restoreChecking": "Memeriksa pembelian sebelumnya…"
 }

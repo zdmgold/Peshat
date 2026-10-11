@@ -297,4 +297,10 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get recentLabel => 'אחרונים';
+
+  @override
+  String get purchaseUnavailable => 'הרכישות אינן זמינות כרגע. נסו שוב מאוחר יותר.';
+
+  @override
+  String get restoreChecking => 'בודק רכישות קודמות…';
 }

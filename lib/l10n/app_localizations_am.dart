@@ -297,4 +297,10 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get recentLabel => 'የቅርብ ጊዜ';
+
+  @override
+  String get purchaseUnavailable => 'ግዢዎች አሁን አይገኙም። እባክዎ ቆይተው እንደገና ይሞክሩ።';
+
+  @override
+  String get restoreChecking => 'ቀደም ያሉ ግዢዎችን በመፈተሽ ላይ…';
 }
