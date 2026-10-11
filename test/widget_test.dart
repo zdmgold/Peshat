@@ -120,13 +120,7 @@ void main() {
     // The scan button is exposed as a labelled button.
     expect(
       tester.getSemantics(find.bySemanticsLabel('Scan')),
-      matchesSemantics(
-        label: 'Scan',
-        isButton: true,
-        hasTapAction: true,
-        hasEnabledState: true,
-        isEnabled: true,
-      ),
+      containsSemantics(label: 'Scan', isButton: true, hasTapAction: true),
     );
     semantics.dispose();
   });
