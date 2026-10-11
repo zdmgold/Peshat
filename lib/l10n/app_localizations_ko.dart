@@ -303,4 +303,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get restoreChecking => '이전 구매 내역을 확인하는 중…';
+
+  @override
+  String get adPrivacyChoices => '광고 개인정보 보호 옵션';
 }

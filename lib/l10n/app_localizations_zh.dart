@@ -303,4 +303,7 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get restoreChecking => '正在检查之前的购买…';
+
+  @override
+  String get adPrivacyChoices => '广告隐私选项';
 }

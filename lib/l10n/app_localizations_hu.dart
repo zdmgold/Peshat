@@ -303,4 +303,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Korábbi vásárlások ellenőrzése…';
+
+  @override
+  String get adPrivacyChoices => 'Hirdetési adatvédelmi beállítások';
 }

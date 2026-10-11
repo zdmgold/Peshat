@@ -303,4 +303,7 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Frühere Käufe werden geprüft …';
+
+  @override
+  String get adPrivacyChoices => 'Datenschutzoptionen für Werbung';
 }

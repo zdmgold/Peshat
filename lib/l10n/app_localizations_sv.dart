@@ -303,4 +303,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Kontrollerar tidigare köp…';
+
+  @override
+  String get adPrivacyChoices => 'Integritetsval för annonser';
 }

@@ -97,5 +97,6 @@
   "scanShortLabel": "ສະແກນ",
   "recentLabel": "ຫຼ້າສຸດ",
   "purchaseUnavailable": "ການຊື້ບໍ່ສາມາດໃຊ້ໄດ້ໃນຕອນນີ້. ກະລຸນາລອງໃໝ່ພາຍຫຼັງ.",
-  "restoreChecking": "ກຳລັງກວດສອບການຊື້ກ່ອນໜ້ານີ້…"
+  "restoreChecking": "ກຳລັງກວດສອບການຊື້ກ່ອນໜ້ານີ້…",
+  "adPrivacyChoices": "ທາງເລືອກຄວາມເປັນສ່ວນຕົວຂອງໂຄສະນາ"
 }

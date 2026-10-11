@@ -1,11 +1,11 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart' show MobileAds;
 import 'package:in_app_purchase/in_app_purchase.dart'
     show InAppPurchase, PurchaseDetails, PurchaseStatus;
 import 'package:shared_preferences/shared_preferences.dart';
 
+import 'core/services/ad_consent.dart';
 import 'core/services/iap_service.dart';
 import 'core/utils/app_theme.dart';
 import 'core/utils/error_handler.dart';
@@ -28,7 +28,7 @@ Future<void> main() async {
   installGlobalErrorHandling();
   final prefs = await SharedPreferences.getInstance();
   if (!(prefs.getBool('ads_removed') ?? false)) {
-    unawaited(MobileAds.instance.initialize());
+    unawaited(AdConsent.instance.gatherAndInit());
   }
   await InterstitialService.instance.init(prefs);
   await NotificationService.instance.init(prefs);

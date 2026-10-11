@@ -303,4 +303,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get restoreChecking => 'ቀደም ያሉ ግዢዎችን በመፈተሽ ላይ…';
+
+  @override
+  String get adPrivacyChoices => 'የማስታወቂያ ግላዊነት ምርጫዎች';
 }

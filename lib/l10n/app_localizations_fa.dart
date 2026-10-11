@@ -303,4 +303,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get restoreChecking => 'در حال بررسی خریدهای قبلی…';
+
+  @override
+  String get adPrivacyChoices => 'گزینه‌های حریم خصوصی تبلیغات';
 }

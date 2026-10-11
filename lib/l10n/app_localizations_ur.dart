@@ -303,4 +303,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get restoreChecking => 'پچھلی خریداریوں کی جانچ کی جا رہی ہے…';
+
+  @override
+  String get adPrivacyChoices => 'اشتہارات کی رازداری کے اختیارات';
 }

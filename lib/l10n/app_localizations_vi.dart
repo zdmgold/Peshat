@@ -303,4 +303,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Đang kiểm tra các giao dịch mua trước đó…';
+
+  @override
+  String get adPrivacyChoices => 'Tùy chọn quyền riêng tư quảng cáo';
 }

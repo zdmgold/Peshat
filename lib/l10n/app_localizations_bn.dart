@@ -303,4 +303,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get restoreChecking => 'আগের কেনাকাটা পরীক্ষা করা হচ্ছে…';
+
+  @override
+  String get adPrivacyChoices => 'বিজ্ঞাপনের গোপনীয়তা পছন্দ';
 }

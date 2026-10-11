@@ -97,5 +97,6 @@
   "scanShortLabel": "扫描",
   "recentLabel": "最近",
   "purchaseUnavailable": "目前无法购买，请稍后再试。",
-  "restoreChecking": "正在检查之前的购买…"
+  "restoreChecking": "正在检查之前的购买…",
+  "adPrivacyChoices": "广告隐私选项"
 }

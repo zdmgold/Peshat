@@ -97,5 +97,6 @@
   "scanShortLabel": "สแกน",
   "recentLabel": "ล่าสุด",
   "purchaseUnavailable": "ไม่สามารถซื้อได้ในขณะนี้ โปรดลองอีกครั้งในภายหลัง",
-  "restoreChecking": "กำลังตรวจสอบการซื้อก่อนหน้า…"
+  "restoreChecking": "กำลังตรวจสอบการซื้อก่อนหน้า…",
+  "adPrivacyChoices": "ตัวเลือกความเป็นส่วนตัวของโฆษณา"
 }

@@ -97,5 +97,6 @@
   "scanShortLabel": "Σάρωση",
   "recentLabel": "Πρόσφατα",
   "purchaseUnavailable": "Οι αγορές δεν είναι διαθέσιμες αυτή τη στιγμή. Δοκιμάστε ξανά αργότερα.",
-  "restoreChecking": "Έλεγχος προηγούμενων αγορών…"
+  "restoreChecking": "Έλεγχος προηγούμενων αγορών…",
+  "adPrivacyChoices": "Επιλογές απορρήτου διαφημίσεων"
 }

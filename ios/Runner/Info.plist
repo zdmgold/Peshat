@@ -47,6 +47,8 @@
 		<true/>
 		<key>NSCameraUsageDescription</key>
 		<string>Peshat uses the camera to scan text for translation. Images are processed on-device and are not uploaded.</string>
+		<key>GADApplicationIdentifier</key>
+		<string>ca-app-pub-3940256099942544~1458002511</string>
 		<key>NSUserTrackingUsageDescription</key>
 		<string>Used to show relevant, non-personalized ads if you decline; personalized ads if you allow.</string>
 		<key>UIStatusBarHidden</key>

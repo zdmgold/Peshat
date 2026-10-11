@@ -303,4 +303,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get restoreChecking => 'בודק רכישות קודמות…';
+
+  @override
+  String get adPrivacyChoices => 'אפשרויות פרטיות למודעות';
 }

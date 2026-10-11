@@ -303,4 +303,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get restoreChecking => 'පෙර මිලදී ගැනීම් පරීක්ෂා කරමින්…';
+
+  @override
+  String get adPrivacyChoices => 'දැන්වීම් පෞද්ගලිකත්ව තේරීම්';
 }

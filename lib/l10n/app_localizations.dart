@@ -750,6 +750,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Checking for previous purchases…'**
   String get restoreChecking;
+
+  /// No description provided for @adPrivacyChoices.
+  ///
+  /// In en, this message translates to:
+  /// **'Ad privacy choices'**
+  String get adPrivacyChoices;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

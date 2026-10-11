@@ -303,4 +303,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Перевірка попередніх покупок…';
+
+  @override
+  String get adPrivacyChoices => 'Параметри конфіденційності реклами';
 }

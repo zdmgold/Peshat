@@ -97,5 +97,6 @@
   "scanShortLabel": "Сканувати",
   "recentLabel": "Нещодавні",
   "purchaseUnavailable": "Покупки зараз недоступні. Спробуйте пізніше.",
-  "restoreChecking": "Перевірка попередніх покупок…"
+  "restoreChecking": "Перевірка попередніх покупок…",
+  "adPrivacyChoices": "Параметри конфіденційності реклами"
 }

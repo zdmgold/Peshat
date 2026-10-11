@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import '../core/services/ad_consent.dart';
 
 /// Google's official test banner unit ID. Replace before release.
 const String _kBannerAdUnitId = 'ca-app-pub-3940256099942544/6300978111';
@@ -26,6 +27,16 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   void initState() {
     super.initState();
+    if (AdConsent.instance.canRequestAds.value) {
+      _load();
+    } else {
+      AdConsent.instance.canRequestAds.addListener(_onConsent);
+    }
+  }
+
+  void _onConsent() {
+    if (!AdConsent.instance.canRequestAds.value || _bannerAd != null) return;
+    AdConsent.instance.canRequestAds.removeListener(_onConsent);
     _load();
   }
 
@@ -56,6 +67,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
   @override
   void dispose() {
     _isDisposed = true;
+    AdConsent.instance.canRequestAds.removeListener(_onConsent);
     _bannerAd?.dispose();
     super.dispose();
   }

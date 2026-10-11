@@ -303,4 +303,7 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Se verifică achizițiile anterioare…';
+
+  @override
+  String get adPrivacyChoices => 'Opțiuni de confidențialitate pentru anunțuri';
 }

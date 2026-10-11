@@ -97,5 +97,6 @@
   "scanShortLabel": "Skanna",
   "recentLabel": "Senaste",
   "purchaseUnavailable": "Köp är inte tillgängliga just nu. Försök igen senare.",
-  "restoreChecking": "Kontrollerar tidigare köp…"
+  "restoreChecking": "Kontrollerar tidigare köp…",
+  "adPrivacyChoices": "Integritetsval för annonser"
 }

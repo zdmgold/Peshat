@@ -97,5 +97,6 @@
   "scanShortLabel": "Escanear",
   "recentLabel": "Recientes",
   "purchaseUnavailable": "Las compras no están disponibles ahora. Inténtalo de nuevo más tarde.",
-  "restoreChecking": "Comprobando compras anteriores…"
+  "restoreChecking": "Comprobando compras anteriores…",
+  "adPrivacyChoices": "Opciones de privacidad de anuncios"
 }

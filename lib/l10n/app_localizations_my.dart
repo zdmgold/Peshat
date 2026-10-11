@@ -303,4 +303,7 @@ class AppLocalizationsMy extends AppLocalizations {
 
   @override
   String get restoreChecking => 'ယခင်ဝယ်ယူမှုများကို စစ်ဆေးနေသည်…';
+
+  @override
+  String get adPrivacyChoices => 'ကြော်ငြာ ကိုယ်ရေးကိုယ်တာ ရွေးချယ်မှုများ';
 }

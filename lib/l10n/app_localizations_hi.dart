@@ -303,4 +303,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get restoreChecking => 'पिछली खरीदारी जाँची जा रही है…';
+
+  @override
+  String get adPrivacyChoices => 'विज्ञापन गोपनीयता विकल्प';
 }

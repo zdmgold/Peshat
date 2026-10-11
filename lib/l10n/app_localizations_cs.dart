@@ -303,4 +303,7 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Kontroluji předchozí nákupy…';
+
+  @override
+  String get adPrivacyChoices => 'Volby ochrany soukromí u reklam';
 }

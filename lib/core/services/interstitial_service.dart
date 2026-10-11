@@ -2,6 +2,7 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'ad_consent.dart';
 
 /// Google's official test interstitial unit ID. Replace before release.
 const String _kTestInterstitialUnitId =
@@ -110,6 +111,7 @@ class InterstitialService {
 
   bool _passesGates() {
     if (_purchased) return false;
+    if (!AdConsent.instance.canRequestAds.value) return false;
     if (_firstSession) return false;
     final p = _prefs;
     if (p == null) return false;

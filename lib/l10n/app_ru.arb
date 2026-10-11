@@ -97,5 +97,6 @@
   "scanShortLabel": "Сканировать",
   "recentLabel": "Недавние",
   "purchaseUnavailable": "Покупки сейчас недоступны. Повторите попытку позже.",
-  "restoreChecking": "Проверка предыдущих покупок…"
+  "restoreChecking": "Проверка предыдущих покупок…",
+  "adPrivacyChoices": "Настройки конфиденциальности рекламы"
 }

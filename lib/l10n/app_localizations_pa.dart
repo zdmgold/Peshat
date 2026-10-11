@@ -303,4 +303,7 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get restoreChecking => 'ਪਿਛਲੀਆਂ ਖਰੀਦਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…';
+
+  @override
+  String get adPrivacyChoices => 'ਵਿਗਿਆਪਨ ਗੋਪਨੀਯਤਾ ਵਿਕਲਪ';
 }

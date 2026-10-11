@@ -12,6 +12,7 @@ import '../core/providers/settings_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/ui_locale_provider.dart';
 import '../core/providers/notification_provider.dart';
+import '../core/services/ad_consent.dart';
 import '../core/services/iap_service.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
@@ -60,9 +61,20 @@ class _SettingsScreenState extends State<SettingsScreen> {
   final IapService _iap = IapService();
   String _version = '';
 
+  void _onConsentChanged() {
+    if (mounted) setState(() {});
+  }
+
+  @override
+  void dispose() {
+    AdConsent.instance.privacyOptionsRequired.removeListener(_onConsentChanged);
+    super.dispose();
+  }
+
   @override
   void initState() {
     super.initState();
+    AdConsent.instance.privacyOptionsRequired.addListener(_onConsentChanged);
     PackageInfo.fromPlatform().then((info) {
       if (mounted) {
         setState(() => _version = '${info.version}+${info.buildNumber}');
@@ -364,6 +376,13 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             title: Text(l10n.restorePurchaseButton),
                             onTap: _restorePurchase,
                           ),
+                          if (AdConsent.instance.privacyOptionsRequired.value)
+                            CupertinoListTile(
+                              leading: const PeshatIcon(icon: AppIcons.privacy),
+                              title: Text(l10n.adPrivacyChoices),
+                              trailing: _kChevron,
+                              onTap: AdConsent.instance.showPrivacyOptions,
+                            ),
                         ],
                       );
                     },

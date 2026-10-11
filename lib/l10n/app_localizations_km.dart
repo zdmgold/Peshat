@@ -303,4 +303,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get restoreChecking => 'កំពុងពិនិត្យការទិញពីមុន…';
+
+  @override
+  String get adPrivacyChoices => 'ជម្រើសឯកជនភាពនៃការផ្សាយពាណិជ្ជកម្ម';
 }

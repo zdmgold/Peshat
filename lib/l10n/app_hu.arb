@@ -97,5 +97,6 @@
   "scanShortLabel": "Beolvasás",
   "recentLabel": "Legutóbbi",
   "purchaseUnavailable": "A vásárlások jelenleg nem érhetők el. Kérjük, próbáld újra később.",
-  "restoreChecking": "Korábbi vásárlások ellenőrzése…"
+  "restoreChecking": "Korábbi vásárlások ellenőrzése…",
+  "adPrivacyChoices": "Hirdetési adatvédelmi beállítások"
 }

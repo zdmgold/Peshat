@@ -303,4 +303,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get restoreChecking => 'Sinusuri ang mga nakaraang pagbili…';
+
+  @override
+  String get adPrivacyChoices => 'Mga pagpipilian sa privacy ng ad';
 }
