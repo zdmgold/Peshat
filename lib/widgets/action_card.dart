@@ -53,7 +53,9 @@ class _ActionCardState extends State<ActionCard> {
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
-    return GestureDetector(
+    return Semantics(
+      button: true,
+      child: GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: widget.onTap,
       onTapDown: (_) => setState(() => _pressed = true),
@@ -115,7 +117,7 @@ class _ActionCardState extends State<ActionCard> {
           ),
         ),
       ),
-    );
+    ));
   }
 }
 
@@ -156,7 +158,9 @@ class _ActionRowState extends State<ActionRow> {
     final pressedBg =
         isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
 
-    return GestureDetector(
+    return Semantics(
+      button: true,
+      child: GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: widget.onTap,
       onTapDown: (_) => setState(() => _pressed = true),
@@ -197,6 +201,6 @@ class _ActionRowState extends State<ActionRow> {
           ],
         ),
       ),
-    );
+    ));
   }
 }

@@ -81,4 +81,53 @@ void main() {
     expect(findHugeIcon(AppIcons.typeText), findsOneWidget);
     expect(findHugeIcon(AppIcons.importFile), findsOneWidget);
   });
+
+  testWidgets('ScanScreen scrolls on a short screen and labels its buttons',
+      (tester) async {
+    tester.view.devicePixelRatio = 1.0;
+    tester.view.physicalSize = const Size(320, 380);
+    addTearDown(tester.view.reset);
+    final semantics = tester.ensureSemantics();
+
+    SharedPreferences.setMockInitialValues({
+      'ads_removed': true,
+      'theme_mode': 'light',
+      'target_language': 'es',
+      'ui_locale': 'system',
+    });
+    final prefs = await SharedPreferences.getInstance();
+
+    await tester.pumpWidget(
+      CupertinoApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: ScanScreen(
+          theme: ThemeProvider(prefs),
+          purchase: PurchaseProvider(prefs),
+          settings: SettingsProvider(prefs),
+          history: HistoryProvider(prefs),
+          uiLocale: UiLocaleProvider(prefs),
+          notification: NotificationProvider(prefs),
+        ),
+      ),
+    );
+    await tester.pump();
+
+    // No overflow error even though the content is taller than the screen.
+    expect(tester.takeException(), isNull);
+    expect(find.byType(SingleChildScrollView), findsOneWidget);
+
+    // The scan button is exposed as a labelled button.
+    expect(
+      tester.getSemantics(find.bySemanticsLabel('Scan')),
+      matchesSemantics(
+        label: 'Scan',
+        isButton: true,
+        hasTapAction: true,
+        hasEnabledState: true,
+        isEnabled: true,
+      ),
+    );
+    semantics.dispose();
+  });
 }

@@ -67,7 +67,9 @@ class _RecentItemCardState extends State<RecentItemCard> {
     final hasSource = sourceText.isNotEmpty;
     final hasTranslated = translatedText.isNotEmpty;
 
-    return GestureDetector(
+    return Semantics(
+      button: true,
+      child: GestureDetector(
       behavior: HitTestBehavior.opaque,
       onTap: widget.onTap,
       onTapDown: (_) => setState(() => _pressed = true),
@@ -173,6 +175,6 @@ class _RecentItemCardState extends State<RecentItemCard> {
           ),
         ),
       ),
-    );
+    ));
   }
 }

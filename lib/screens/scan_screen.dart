@@ -247,9 +247,16 @@ class _ScanScreenState extends State<ScanScreen> {
               ),
             ),
 
-            // ─── Content — fixed layout, no scrolling ───────────────────
+            // ─── Content — fills the screen, scrolls when it doesn't fit ─
+            // (small phones, large font sizes, landscape)
             Expanded(
-              child: Padding(
+              child: LayoutBuilder(
+                builder: (context, constraints) => SingleChildScrollView(
+                  child: ConstrainedBox(
+                    constraints:
+                        BoxConstraints(minHeight: constraints.maxHeight),
+                    child: IntrinsicHeight(
+                      child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
@@ -351,6 +358,10 @@ class _ScanScreenState extends State<ScanScreen> {
                   ],
                 ),
               ),
+                    ),
+                  ),
+                ),
+              ),
             ),
 
             // ─── Ad slot ────────────────────────────────────────────────
@@ -436,7 +447,12 @@ class _ScanLogoState extends State<_ScanLogo> {
     final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
 
-    return GestureDetector(
+    return Semantics(
+      button: true,
+      enabled: !widget.isScanning,
+      label: widget.label,
+      excludeSemantics: true,
+      child: GestureDetector(
       onTap: widget.isScanning ? null : () => widget.onTap(),
       onTapDown: (_) => setState(() => _pressed = true),
       onTapUp: (_) => setState(() => _pressed = false),
@@ -511,6 +527,6 @@ class _ScanLogoState extends State<_ScanLogo> {
           ],
         ),
       ),
-    );
+    ));
   }
 }
