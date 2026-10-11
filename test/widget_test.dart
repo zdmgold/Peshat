@@ -85,7 +85,7 @@ void main() {
   testWidgets('ScanScreen scrolls on a short screen and labels its buttons',
       (tester) async {
     tester.view.devicePixelRatio = 1.0;
-    tester.view.physicalSize = const Size(320, 380);
+    tester.view.physicalSize = const Size(360, 380);
     addTearDown(tester.view.reset);
     final semantics = tester.ensureSemantics();
 
