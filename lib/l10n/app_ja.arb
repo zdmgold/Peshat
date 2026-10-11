@@ -100,5 +100,7 @@
   "restoreChecking": "以前の購入を確認しています…",
   "adPrivacyChoices": "広告のプライバシー設定",
   "followSystemLabel": "システムに従う",
-  "couldNotOpenLink": "リンクを開けませんでした"
+  "couldNotOpenLink": "リンクを開けませんでした",
+  "pdfFontDownloading": "このPDF用のフォントをダウンロード中…",
+  "pdfFontDownloadFailed": "このPDF用のフォントをダウンロードできませんでした。接続を確認して、もう一度お試しください。"
 }

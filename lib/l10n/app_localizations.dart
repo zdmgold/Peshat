@@ -768,6 +768,18 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'Could not open link'**
   String get couldNotOpenLink;
+
+  /// No description provided for @pdfFontDownloading.
+  ///
+  /// In en, this message translates to:
+  /// **'Downloading font for this PDF…'**
+  String get pdfFontDownloading;
+
+  /// No description provided for @pdfFontDownloadFailed.
+  ///
+  /// In en, this message translates to:
+  /// **'Could not download the font for this PDF. Check your connection and try again.'**
+  String get pdfFontDownloadFailed;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

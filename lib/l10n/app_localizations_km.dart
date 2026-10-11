@@ -312,4 +312,10 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'មិនអាចបើកតំណបានទេ';
+
+  @override
+  String get pdfFontDownloading => 'កំពុងទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះ…';
+
+  @override
+  String get pdfFontDownloadFailed => 'មិនអាចទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះបានទេ។ សូមពិនិត្យការតភ្ជាប់របស់អ្នក ហើយព្យាយាមម្ដងទៀត។';
 }

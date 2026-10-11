@@ -100,5 +100,7 @@
   "restoreChecking": "이전 구매 내역을 확인하는 중…",
   "adPrivacyChoices": "광고 개인정보 보호 옵션",
   "followSystemLabel": "시스템 설정 따르기",
-  "couldNotOpenLink": "링크를 열 수 없습니다"
+  "couldNotOpenLink": "링크를 열 수 없습니다",
+  "pdfFontDownloading": "이 PDF용 글꼴을 다운로드하는 중…",
+  "pdfFontDownloadFailed": "이 PDF용 글꼴을 다운로드할 수 없습니다. 연결을 확인하고 다시 시도해 주세요."
 }

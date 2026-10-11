@@ -100,5 +100,7 @@
   "restoreChecking": "ກຳລັງກວດສອບການຊື້ກ່ອນໜ້ານີ້…",
   "adPrivacyChoices": "ທາງເລືອກຄວາມເປັນສ່ວນຕົວຂອງໂຄສະນາ",
   "followSystemLabel": "ຕາມລະບົບ",
-  "couldNotOpenLink": "ບໍ່ສາມາດເປີດລິ້ງໄດ້"
+  "couldNotOpenLink": "ບໍ່ສາມາດເປີດລິ້ງໄດ້",
+  "pdfFontDownloading": "ກຳລັງດາວໂຫຼດຟອນສຳລັບ PDF ນີ້…",
+  "pdfFontDownloadFailed": "ບໍ່ສາມາດດາວໂຫຼດຟອນສຳລັບ PDF ນີ້ໄດ້. ກວດສອບການເຊື່ອມຕໍ່ຂອງທ່ານ ແລ້ວລອງໃໝ່."
 }

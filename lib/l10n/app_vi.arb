@@ -100,5 +100,7 @@
   "restoreChecking": "Đang kiểm tra các giao dịch mua trước đó…",
   "adPrivacyChoices": "Tùy chọn quyền riêng tư quảng cáo",
   "followSystemLabel": "Theo hệ thống",
-  "couldNotOpenLink": "Không thể mở liên kết"
+  "couldNotOpenLink": "Không thể mở liên kết",
+  "pdfFontDownloading": "Đang tải phông chữ cho PDF này…",
+  "pdfFontDownloadFailed": "Không thể tải phông chữ cho PDF này. Hãy kiểm tra kết nối và thử lại."
 }

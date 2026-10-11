@@ -100,5 +100,7 @@
   "restoreChecking": "Sinusuri ang mga nakaraang pagbili…",
   "adPrivacyChoices": "Mga pagpipilian sa privacy ng ad",
   "followSystemLabel": "Sundin ang system",
-  "couldNotOpenLink": "Hindi mabuksan ang link"
+  "couldNotOpenLink": "Hindi mabuksan ang link",
+  "pdfFontDownloading": "Dina-download ang font para sa PDF na ito…",
+  "pdfFontDownloadFailed": "Hindi ma-download ang font para sa PDF na ito. Suriin ang iyong koneksyon at subukang muli."
 }

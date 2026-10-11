@@ -312,4 +312,10 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'ບໍ່ສາມາດເປີດລິ້ງໄດ້';
+
+  @override
+  String get pdfFontDownloading => 'ກຳລັງດາວໂຫຼດຟອນສຳລັບ PDF ນີ້…';
+
+  @override
+  String get pdfFontDownloadFailed => 'ບໍ່ສາມາດດາວໂຫຼດຟອນສຳລັບ PDF ນີ້ໄດ້. ກວດສອບການເຊື່ອມຕໍ່ຂອງທ່ານ ແລ້ວລອງໃໝ່.';
 }

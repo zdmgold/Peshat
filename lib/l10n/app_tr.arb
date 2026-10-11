@@ -100,5 +100,7 @@
   "restoreChecking": "Önceki satın alımlar denetleniyor…",
   "adPrivacyChoices": "Reklam gizlilik seçenekleri",
   "followSystemLabel": "Sistemi takip et",
-  "couldNotOpenLink": "Bağlantı açılamadı"
+  "couldNotOpenLink": "Bağlantı açılamadı",
+  "pdfFontDownloading": "Bu PDF için yazı tipi indiriliyor…",
+  "pdfFontDownloadFailed": "Bu PDF için yazı tipi indirilemedi. Bağlantınızı kontrol edip tekrar deneyin."
 }

@@ -312,4 +312,10 @@ class AppLocalizationsRu extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Не удалось открыть ссылку';
+
+  @override
+  String get pdfFontDownloading => 'Загрузка шрифта для этого PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Не удалось загрузить шрифт для этого PDF. Проверьте подключение и повторите попытку.';
 }

@@ -312,4 +312,10 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'No se pudo abrir el enlace';
+
+  @override
+  String get pdfFontDownloading => 'Descargando la fuente para este PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'No se pudo descargar la fuente para este PDF. Comprueba tu conexión e inténtalo de nuevo.';
 }

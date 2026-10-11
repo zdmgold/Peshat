@@ -312,4 +312,10 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'ሊንኩን መክፈት አልተቻለም';
+
+  @override
+  String get pdfFontDownloading => 'ለዚህ PDF ቅርጸ-ቁምፊ በማውረድ ላይ…';
+
+  @override
+  String get pdfFontDownloadFailed => 'ለዚህ PDF ቅርጸ-ቁምፊውን ማውረድ አልተቻለም። ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።';
 }

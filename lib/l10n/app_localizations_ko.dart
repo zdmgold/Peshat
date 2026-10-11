@@ -312,4 +312,10 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => '링크를 열 수 없습니다';
+
+  @override
+  String get pdfFontDownloading => '이 PDF용 글꼴을 다운로드하는 중…';
+
+  @override
+  String get pdfFontDownloadFailed => '이 PDF용 글꼴을 다운로드할 수 없습니다. 연결을 확인하고 다시 시도해 주세요.';
 }

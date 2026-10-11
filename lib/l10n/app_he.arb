@@ -100,5 +100,7 @@
   "restoreChecking": "בודק רכישות קודמות…",
   "adPrivacyChoices": "אפשרויות פרטיות למודעות",
   "followSystemLabel": "עקוב אחר המערכת",
-  "couldNotOpenLink": "לא ניתן לפתוח את הקישור"
+  "couldNotOpenLink": "לא ניתן לפתוח את הקישור",
+  "pdfFontDownloading": "מוריד גופן עבור קובץ PDF זה…",
+  "pdfFontDownloadFailed": "לא ניתן להוריד את הגופן עבור קובץ PDF זה. בדקו את החיבור ונסו שוב."
 }

@@ -312,4 +312,10 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Link kon niet worden geopend';
+
+  @override
+  String get pdfFontDownloading => 'Lettertype voor deze pdf downloaden…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Het lettertype voor deze pdf kon niet worden gedownload. Controleer je verbinding en probeer het opnieuw.';
 }

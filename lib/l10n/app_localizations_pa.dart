@@ -312,4 +312,10 @@ class AppLocalizationsPa extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'ਲਿੰਕ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ';
+
+  @override
+  String get pdfFontDownloading => 'ਇਸ PDF ਲਈ ਫੌਂਟ ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…';
+
+  @override
+  String get pdfFontDownloadFailed => 'ਇਸ PDF ਲਈ ਫੌਂਟ ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ। ਆਪਣਾ ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
 }

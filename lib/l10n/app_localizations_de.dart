@@ -312,4 +312,10 @@ class AppLocalizationsDe extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Link konnte nicht geöffnet werden';
+
+  @override
+  String get pdfFontDownloading => 'Schriftart für dieses PDF wird heruntergeladen …';
+
+  @override
+  String get pdfFontDownloadFailed => 'Die Schriftart für dieses PDF konnte nicht heruntergeladen werden. Prüfe deine Verbindung und versuche es erneut.';
 }

@@ -100,5 +100,7 @@
   "restoreChecking": "अघिल्ला खरिदहरू जाँच गर्दै…",
   "adPrivacyChoices": "विज्ञापन गोपनीयता विकल्पहरू",
   "followSystemLabel": "प्रणाली अनुसरण गर्नुहोस्",
-  "couldNotOpenLink": "लिङ्क खोल्न सकिएन"
+  "couldNotOpenLink": "लिङ्क खोल्न सकिएन",
+  "pdfFontDownloading": "यो PDF का लागि फन्ट डाउनलोड गर्दै…",
+  "pdfFontDownloadFailed": "यो PDF का लागि फन्ट डाउनलोड गर्न सकिएन। आफ्नो जडान जाँच गरेर फेरि प्रयास गर्नुहोस्।"
 }

@@ -100,5 +100,7 @@
   "restoreChecking": "Vérification des achats précédents…",
   "adPrivacyChoices": "Choix de confidentialité des annonces",
   "followSystemLabel": "Suivre le système",
-  "couldNotOpenLink": "Impossible d’ouvrir le lien"
+  "couldNotOpenLink": "Impossible d’ouvrir le lien",
+  "pdfFontDownloading": "Téléchargement de la police pour ce PDF…",
+  "pdfFontDownloadFailed": "Impossible de télécharger la police pour ce PDF. Vérifiez votre connexion et réessayez."
 }

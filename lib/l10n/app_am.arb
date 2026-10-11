@@ -100,5 +100,7 @@
   "restoreChecking": "ቀደም ያሉ ግዢዎችን በመፈተሽ ላይ…",
   "adPrivacyChoices": "የማስታወቂያ ግላዊነት ምርጫዎች",
   "followSystemLabel": "ስርዓቱን ተከተል",
-  "couldNotOpenLink": "ሊንኩን መክፈት አልተቻለም"
+  "couldNotOpenLink": "ሊንኩን መክፈት አልተቻለም",
+  "pdfFontDownloading": "ለዚህ PDF ቅርጸ-ቁምፊ በማውረድ ላይ…",
+  "pdfFontDownloadFailed": "ለዚህ PDF ቅርጸ-ቁምፊውን ማውረድ አልተቻለም። ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።"
 }

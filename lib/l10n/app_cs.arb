@@ -100,5 +100,7 @@
   "restoreChecking": "Kontroluji předchozí nákupy…",
   "adPrivacyChoices": "Volby ochrany soukromí u reklam",
   "followSystemLabel": "Podle systému",
-  "couldNotOpenLink": "Odkaz se nepodařilo otevřít"
+  "couldNotOpenLink": "Odkaz se nepodařilo otevřít",
+  "pdfFontDownloading": "Stahuje se písmo pro toto PDF…",
+  "pdfFontDownloadFailed": "Písmo pro toto PDF se nepodařilo stáhnout. Zkontrolujte připojení a zkuste to znovu."
 }

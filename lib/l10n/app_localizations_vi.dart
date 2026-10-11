@@ -312,4 +312,10 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Không thể mở liên kết';
+
+  @override
+  String get pdfFontDownloading => 'Đang tải phông chữ cho PDF này…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Không thể tải phông chữ cho PDF này. Hãy kiểm tra kết nối và thử lại.';
 }

@@ -312,4 +312,10 @@ class AppLocalizationsZh extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => '无法打开链接';
+
+  @override
+  String get pdfFontDownloading => '正在下载此 PDF 所需的字体…';
+
+  @override
+  String get pdfFontDownloadFailed => '无法下载此 PDF 所需的字体。请检查网络连接后重试。';
 }

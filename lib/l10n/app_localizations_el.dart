@@ -312,4 +312,10 @@ class AppLocalizationsEl extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Δεν ήταν δυνατό το άνοιγμα του συνδέσμου';
+
+  @override
+  String get pdfFontDownloading => 'Λήψη γραμματοσειράς για αυτό το PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Δεν ήταν δυνατή η λήψη της γραμματοσειράς για αυτό το PDF. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.';
 }

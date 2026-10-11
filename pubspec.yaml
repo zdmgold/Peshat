@@ -41,6 +41,7 @@ flutter:
   generate: true
   assets:
     - assets/icon/
+    - assets/fonts/
     - assets/splash/
 
 flutter_native_splash:

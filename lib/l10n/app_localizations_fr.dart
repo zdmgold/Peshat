@@ -312,4 +312,10 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Impossible d’ouvrir le lien';
+
+  @override
+  String get pdfFontDownloading => 'Téléchargement de la police pour ce PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Impossible de télécharger la police pour ce PDF. Vérifiez votre connexion et réessayez.';
 }

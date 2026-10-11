@@ -100,5 +100,7 @@
   "restoreChecking": "Se verifică achizițiile anterioare…",
   "adPrivacyChoices": "Opțiuni de confidențialitate pentru anunțuri",
   "followSystemLabel": "Urmează sistemul",
-  "couldNotOpenLink": "Linkul nu a putut fi deschis"
+  "couldNotOpenLink": "Linkul nu a putut fi deschis",
+  "pdfFontDownloading": "Se descarcă fontul pentru acest PDF…",
+  "pdfFontDownloadFailed": "Fontul pentru acest PDF nu a putut fi descărcat. Verifică conexiunea și încearcă din nou."
 }

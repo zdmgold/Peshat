@@ -100,5 +100,7 @@
   "restoreChecking": "Comprobando compras anteriores…",
   "adPrivacyChoices": "Opciones de privacidad de anuncios",
   "followSystemLabel": "Seguir el sistema",
-  "couldNotOpenLink": "No se pudo abrir el enlace"
+  "couldNotOpenLink": "No se pudo abrir el enlace",
+  "pdfFontDownloading": "Descargando la fuente para este PDF…",
+  "pdfFontDownloadFailed": "No se pudo descargar la fuente para este PDF. Comprueba tu conexión e inténtalo de nuevo."
 }

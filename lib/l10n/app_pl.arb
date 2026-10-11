@@ -100,5 +100,7 @@
   "restoreChecking": "Sprawdzanie wcześniejszych zakupów…",
   "adPrivacyChoices": "Opcje prywatności reklam",
   "followSystemLabel": "Zgodnie z systemem",
-  "couldNotOpenLink": "Nie można otworzyć linku"
+  "couldNotOpenLink": "Nie można otworzyć linku",
+  "pdfFontDownloading": "Pobieranie czcionki dla tego pliku PDF…",
+  "pdfFontDownloadFailed": "Nie udało się pobrać czcionki dla tego pliku PDF. Sprawdź połączenie i spróbuj ponownie."
 }

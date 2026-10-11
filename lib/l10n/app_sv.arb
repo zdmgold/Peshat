@@ -100,5 +100,7 @@
   "restoreChecking": "Kontrollerar tidigare köp…",
   "adPrivacyChoices": "Integritetsval för annonser",
   "followSystemLabel": "Följ systemet",
-  "couldNotOpenLink": "Det gick inte att öppna länken"
+  "couldNotOpenLink": "Det gick inte att öppna länken",
+  "pdfFontDownloading": "Hämtar teckensnitt för denna PDF…",
+  "pdfFontDownloadFailed": "Det gick inte att hämta teckensnittet för denna PDF. Kontrollera anslutningen och försök igen."
 }

@@ -312,4 +312,10 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'باز کردن پیوند ممکن نشد';
+
+  @override
+  String get pdfFontDownloading => 'در حال دانلود قلم برای این PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'دانلود قلم برای این PDF ممکن نشد. اتصال خود را بررسی کنید و دوباره تلاش کنید.';
 }

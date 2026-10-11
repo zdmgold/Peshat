@@ -312,4 +312,10 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Det gick inte att öppna länken';
+
+  @override
+  String get pdfFontDownloading => 'Hämtar teckensnitt för denna PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Det gick inte att hämta teckensnittet för denna PDF. Kontrollera anslutningen och försök igen.';
 }

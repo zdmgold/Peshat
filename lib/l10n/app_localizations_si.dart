@@ -312,4 +312,10 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'සබැඳිය විවෘත කළ නොහැක';
+
+  @override
+  String get pdfFontDownloading => 'මෙම PDF සඳහා අකුරු වර්ගය බාගත වෙමින්…';
+
+  @override
+  String get pdfFontDownloadFailed => 'මෙම PDF සඳහා අකුරු වර්ගය බාගත කිරීමට නොහැකි විය. ඔබේ සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න.';
 }

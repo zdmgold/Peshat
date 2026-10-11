@@ -100,5 +100,7 @@
   "restoreChecking": "ਪਿਛਲੀਆਂ ਖਰੀਦਾਂ ਦੀ ਜਾਂਚ ਕੀਤੀ ਜਾ ਰਹੀ ਹੈ…",
   "adPrivacyChoices": "ਵਿਗਿਆਪਨ ਗੋਪਨੀਯਤਾ ਵਿਕਲਪ",
   "followSystemLabel": "ਸਿਸਟਮ ਦੀ ਪਾਲਣਾ ਕਰੋ",
-  "couldNotOpenLink": "ਲਿੰਕ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ"
+  "couldNotOpenLink": "ਲਿੰਕ ਖੋਲ੍ਹਿਆ ਨਹੀਂ ਜਾ ਸਕਿਆ",
+  "pdfFontDownloading": "ਇਸ PDF ਲਈ ਫੌਂਟ ਡਾਊਨਲੋਡ ਹੋ ਰਿਹਾ ਹੈ…",
+  "pdfFontDownloadFailed": "ਇਸ PDF ਲਈ ਫੌਂਟ ਡਾਊਨਲੋਡ ਨਹੀਂ ਹੋ ਸਕਿਆ। ਆਪਣਾ ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।"
 }

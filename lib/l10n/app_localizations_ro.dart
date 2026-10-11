@@ -312,4 +312,10 @@ class AppLocalizationsRo extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Linkul nu a putut fi deschis';
+
+  @override
+  String get pdfFontDownloading => 'Se descarcă fontul pentru acest PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Fontul pentru acest PDF nu a putut fi descărcat. Verifică conexiunea și încearcă din nou.';
 }

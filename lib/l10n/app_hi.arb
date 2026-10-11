@@ -100,5 +100,7 @@
   "restoreChecking": "पिछली खरीदारी जाँची जा रही है…",
   "adPrivacyChoices": "विज्ञापन गोपनीयता विकल्प",
   "followSystemLabel": "सिस्टम का पालन करें",
-  "couldNotOpenLink": "लिंक नहीं खुल सका"
+  "couldNotOpenLink": "लिंक नहीं खुल सका",
+  "pdfFontDownloading": "इस PDF के लिए फ़ॉन्ट डाउनलोड हो रहा है…",
+  "pdfFontDownloadFailed": "इस PDF के लिए फ़ॉन्ट डाउनलोड नहीं हो सका। अपना कनेक्शन जाँचें और पुनः प्रयास करें।"
 }

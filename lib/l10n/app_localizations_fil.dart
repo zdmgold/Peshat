@@ -312,4 +312,10 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Hindi mabuksan ang link';
+
+  @override
+  String get pdfFontDownloading => 'Dina-download ang font para sa PDF na ito…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Hindi ma-download ang font para sa PDF na ito. Suriin ang iyong koneksyon at subukang muli.';
 }

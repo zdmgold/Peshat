@@ -100,5 +100,7 @@
   "restoreChecking": "در حال بررسی خریدهای قبلی…",
   "adPrivacyChoices": "گزینه‌های حریم خصوصی تبلیغات",
   "followSystemLabel": "پیروی از سیستم",
-  "couldNotOpenLink": "باز کردن پیوند ممکن نشد"
+  "couldNotOpenLink": "باز کردن پیوند ممکن نشد",
+  "pdfFontDownloading": "در حال دانلود قلم برای این PDF…",
+  "pdfFontDownloadFailed": "دانلود قلم برای این PDF ممکن نشد. اتصال خود را بررسی کنید و دوباره تلاش کنید."
 }

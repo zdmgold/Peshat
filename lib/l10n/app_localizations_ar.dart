@@ -312,4 +312,10 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'تعذّر فتح الرابط';
+
+  @override
+  String get pdfFontDownloading => 'جارٍ تنزيل الخط لهذا الملف PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'تعذّر تنزيل الخط لهذا الملف PDF. تحقق من اتصالك وحاول مرة أخرى.';
 }

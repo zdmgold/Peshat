@@ -312,4 +312,10 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'लिंक नहीं खुल सका';
+
+  @override
+  String get pdfFontDownloading => 'इस PDF के लिए फ़ॉन्ट डाउनलोड हो रहा है…';
+
+  @override
+  String get pdfFontDownloadFailed => 'इस PDF के लिए फ़ॉन्ट डाउनलोड नहीं हो सका। अपना कनेक्शन जाँचें और पुनः प्रयास करें।';
 }

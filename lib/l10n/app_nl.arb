@@ -100,5 +100,7 @@
   "restoreChecking": "Eerdere aankopen controleren…",
   "adPrivacyChoices": "Privacykeuzes voor advertenties",
   "followSystemLabel": "Systeem volgen",
-  "couldNotOpenLink": "Link kon niet worden geopend"
+  "couldNotOpenLink": "Link kon niet worden geopend",
+  "pdfFontDownloading": "Lettertype voor deze pdf downloaden…",
+  "pdfFontDownloadFailed": "Het lettertype voor deze pdf kon niet worden gedownload. Controleer je verbinding en probeer het opnieuw."
 }

@@ -100,5 +100,7 @@
   "restoreChecking": "Korábbi vásárlások ellenőrzése…",
   "adPrivacyChoices": "Hirdetési adatvédelmi beállítások",
   "followSystemLabel": "Rendszer követése",
-  "couldNotOpenLink": "A hivatkozás nem nyitható meg"
+  "couldNotOpenLink": "A hivatkozás nem nyitható meg",
+  "pdfFontDownloading": "Betűtípus letöltése ehhez a PDF-hez…",
+  "pdfFontDownloadFailed": "Nem sikerült letölteni a betűtípust ehhez a PDF-hez. Ellenőrizd a kapcsolatot, és próbáld újra."
 }

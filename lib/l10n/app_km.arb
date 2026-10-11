@@ -100,5 +100,7 @@
   "restoreChecking": "កំពុងពិនិត្យការទិញពីមុន…",
   "adPrivacyChoices": "ជម្រើសឯកជនភាពនៃការផ្សាយពាណិជ្ជកម្ម",
   "followSystemLabel": "តាមប្រព័ន្ធ",
-  "couldNotOpenLink": "មិនអាចបើកតំណបានទេ"
+  "couldNotOpenLink": "មិនអាចបើកតំណបានទេ",
+  "pdfFontDownloading": "កំពុងទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះ…",
+  "pdfFontDownloadFailed": "មិនអាចទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះបានទេ។ សូមពិនិត្យការតភ្ជាប់របស់អ្នក ហើយព្យាយាមម្ដងទៀត។"
 }

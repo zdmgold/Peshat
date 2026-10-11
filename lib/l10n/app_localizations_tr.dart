@@ -312,4 +312,10 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Bağlantı açılamadı';
+
+  @override
+  String get pdfFontDownloading => 'Bu PDF için yazı tipi indiriliyor…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Bu PDF için yazı tipi indirilemedi. Bağlantınızı kontrol edip tekrar deneyin.';
 }

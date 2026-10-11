@@ -312,4 +312,10 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Nie można otworzyć linku';
+
+  @override
+  String get pdfFontDownloading => 'Pobieranie czcionki dla tego pliku PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Nie udało się pobrać czcionki dla tego pliku PDF. Sprawdź połączenie i spróbuj ponownie.';
 }

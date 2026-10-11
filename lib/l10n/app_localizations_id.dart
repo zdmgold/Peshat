@@ -312,4 +312,10 @@ class AppLocalizationsId extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Tidak dapat membuka tautan';
+
+  @override
+  String get pdfFontDownloading => 'Mengunduh font untuk PDF ini…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Tidak dapat mengunduh font untuk PDF ini. Periksa koneksi Anda dan coba lagi.';
 }

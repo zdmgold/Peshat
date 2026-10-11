@@ -100,5 +100,7 @@
   "restoreChecking": "Проверка предыдущих покупок…",
   "adPrivacyChoices": "Настройки конфиденциальности рекламы",
   "followSystemLabel": "Как в системе",
-  "couldNotOpenLink": "Не удалось открыть ссылку"
+  "couldNotOpenLink": "Не удалось открыть ссылку",
+  "pdfFontDownloading": "Загрузка шрифта для этого PDF…",
+  "pdfFontDownloadFailed": "Не удалось загрузить шрифт для этого PDF. Проверьте подключение и повторите попытку."
 }

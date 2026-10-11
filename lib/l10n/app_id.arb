@@ -100,5 +100,7 @@
   "restoreChecking": "Memeriksa pembelian sebelumnya…",
   "adPrivacyChoices": "Pilihan privasi iklan",
   "followSystemLabel": "Ikuti sistem",
-  "couldNotOpenLink": "Tidak dapat membuka tautan"
+  "couldNotOpenLink": "Tidak dapat membuka tautan",
+  "pdfFontDownloading": "Mengunduh font untuk PDF ini…",
+  "pdfFontDownloadFailed": "Tidak dapat mengunduh font untuk PDF ini. Periksa koneksi Anda dan coba lagi."
 }

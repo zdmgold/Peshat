@@ -16,6 +16,7 @@ import '../core/models/scan_state.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/scan_provider.dart';
 import '../core/services/interstitial_service.dart';
+import '../core/services/pdf_fonts.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -379,10 +380,19 @@ class _ResultScreenState extends State<ResultScreen> {
       final dir = await getTemporaryDirectory();
       late final File file;
       if (asPdf) {
-        final doc = pw.Document();
+        final l10n = AppLocalizations.of(context)!;
+        final scripts = PdfFonts.scriptsIn(text);
+        if (await PdfFonts.needsDownload(scripts) && mounted) {
+          CupertinoToast.show(context, l10n.pdfFontDownloading);
+        }
+        final theme = await PdfFonts.themeFor(scripts);
+        final doc = pw.Document(theme: theme);
         doc.addPage(
           pw.MultiPage(
             pageFormat: PdfPageFormat.a4,
+            textDirection: PdfFonts.isMostlyRtl(text)
+                ? pw.TextDirection.rtl
+                : pw.TextDirection.ltr,
             build: (ctx) => [
               pw.Paragraph(
                 text: text,
@@ -400,6 +410,11 @@ class _ResultScreenState extends State<ResultScreen> {
         await file.writeAsString(text);
       }
       await Share.shareXFiles([XFile(file.path)]);
+    } on PdfFontDownloadException {
+      if (mounted) {
+        CupertinoToast.show(
+            context, AppLocalizations.of(context)!.pdfFontDownloadFailed);
+      }
     } catch (e) {
       if (mounted) {
         CupertinoToast.show(context, e.toString());

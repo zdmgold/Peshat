@@ -312,4 +312,10 @@ class AppLocalizationsCs extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'Odkaz se nepodařilo otevřít';
+
+  @override
+  String get pdfFontDownloading => 'Stahuje se písmo pro toto PDF…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Písmo pro toto PDF se nepodařilo stáhnout. Zkontrolujte připojení a zkuste to znovu.';
 }

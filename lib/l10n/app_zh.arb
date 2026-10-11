@@ -100,5 +100,7 @@
   "restoreChecking": "正在检查之前的购买…",
   "adPrivacyChoices": "广告隐私选项",
   "followSystemLabel": "跟随系统",
-  "couldNotOpenLink": "无法打开链接"
+  "couldNotOpenLink": "无法打开链接",
+  "pdfFontDownloading": "正在下载此 PDF 所需的字体…",
+  "pdfFontDownloadFailed": "无法下载此 PDF 所需的字体。请检查网络连接后重试。"
 }

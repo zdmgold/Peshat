@@ -100,5 +100,7 @@
   "restoreChecking": "جارٍ التحقق من المشتريات السابقة…",
   "adPrivacyChoices": "خيارات خصوصية الإعلانات",
   "followSystemLabel": "اتباع النظام",
-  "couldNotOpenLink": "تعذّر فتح الرابط"
+  "couldNotOpenLink": "تعذّر فتح الرابط",
+  "pdfFontDownloading": "جارٍ تنزيل الخط لهذا الملف PDF…",
+  "pdfFontDownloadFailed": "تعذّر تنزيل الخط لهذا الملف PDF. تحقق من اتصالك وحاول مرة أخرى."
 }

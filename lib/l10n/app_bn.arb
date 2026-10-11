@@ -100,5 +100,7 @@
   "restoreChecking": "আগের কেনাকাটা পরীক্ষা করা হচ্ছে…",
   "adPrivacyChoices": "বিজ্ঞাপনের গোপনীয়তা পছন্দ",
   "followSystemLabel": "সিস্টেম অনুসরণ করুন",
-  "couldNotOpenLink": "লিংক খোলা যায়নি"
+  "couldNotOpenLink": "লিংক খোলা যায়নি",
+  "pdfFontDownloading": "এই PDF-এর জন্য ফন্ট ডাউনলোড হচ্ছে…",
+  "pdfFontDownloadFailed": "এই PDF-এর জন্য ফন্ট ডাউনলোড করা যায়নি। আপনার সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।"
 }

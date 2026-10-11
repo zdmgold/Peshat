@@ -155,5 +155,7 @@
   "restoreChecking": "Checking for previous purchases…",
   "adPrivacyChoices": "Ad privacy choices",
   "followSystemLabel": "Follow system",
-  "couldNotOpenLink": "Could not open link"
+  "couldNotOpenLink": "Could not open link",
+  "pdfFontDownloading": "Downloading font for this PDF…",
+  "pdfFontDownloadFailed": "Could not download the font for this PDF. Check your connection and try again."
 }

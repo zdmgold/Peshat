@@ -100,5 +100,7 @@
   "restoreChecking": "පෙර මිලදී ගැනීම් පරීක්ෂා කරමින්…",
   "adPrivacyChoices": "දැන්වීම් පෞද්ගලිකත්ව තේරීම්",
   "followSystemLabel": "පද්ධතිය අනුගමනය කරන්න",
-  "couldNotOpenLink": "සබැඳිය විවෘත කළ නොහැක"
+  "couldNotOpenLink": "සබැඳිය විවෘත කළ නොහැක",
+  "pdfFontDownloading": "මෙම PDF සඳහා අකුරු වර්ගය බාගත වෙමින්…",
+  "pdfFontDownloadFailed": "මෙම PDF සඳහා අකුරු වර්ගය බාගත කිරීමට නොහැකි විය. ඔබේ සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න."
 }

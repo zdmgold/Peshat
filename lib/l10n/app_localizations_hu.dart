@@ -312,4 +312,10 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get couldNotOpenLink => 'A hivatkozás nem nyitható meg';
+
+  @override
+  String get pdfFontDownloading => 'Betűtípus letöltése ehhez a PDF-hez…';
+
+  @override
+  String get pdfFontDownloadFailed => 'Nem sikerült letölteni a betűtípust ehhez a PDF-hez. Ellenőrizd a kapcsolatot, és próbáld újra.';
 }

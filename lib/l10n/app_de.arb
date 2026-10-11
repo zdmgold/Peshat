@@ -100,5 +100,7 @@
   "restoreChecking": "Frühere Käufe werden geprüft …",
   "adPrivacyChoices": "Datenschutzoptionen für Werbung",
   "followSystemLabel": "Systemeinstellung folgen",
-  "couldNotOpenLink": "Link konnte nicht geöffnet werden"
+  "couldNotOpenLink": "Link konnte nicht geöffnet werden",
+  "pdfFontDownloading": "Schriftart für dieses PDF wird heruntergeladen …",
+  "pdfFontDownloadFailed": "Die Schriftart für dieses PDF konnte nicht heruntergeladen werden. Prüfe deine Verbindung und versuche es erneut."
 }
