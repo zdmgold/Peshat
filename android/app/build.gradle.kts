@@ -71,7 +71,7 @@ flutter {
 }
 
 dependencies {
-    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.4")
+    coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.1.5")
 
     // ML Kit OCR models for non-Latin scripts. The Flutter plugin only
     // compiles against these, so the app must bundle them for them to work.
