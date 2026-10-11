@@ -93,6 +93,7 @@ jobs:
         id: android_lint
         continue-on-error: true
         run: |
+          set +e
           gradle -p android :app:lintDebug -Pandroid.enableJetifier=false --console=plain 2>&1 \
             | tee ci-logs-out/5-android-lint.log
           status=${PIPESTATUS[0]}
