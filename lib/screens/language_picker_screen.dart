@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart' show Icons;
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
 import '../core/models/language.dart';
@@ -201,11 +202,9 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
                   size: 18,
                   color: textTertiary,
                 ),
-                suffixIcon: PeshatIcon(
-                  icon: AppIcons.close,
-                  size: 18,
-                  color: textTertiary,
-                ),
+                // The suffix slot only accepts an Icon. The Material icon font is
+                // bundled (uses-material-design), unlike the Cupertino one.
+                suffixIcon: const Icon(Icons.cancel),
                 style: AppTypography.chrome.copyWith(
                   fontSize: 15,
                   color: textPrimary,
