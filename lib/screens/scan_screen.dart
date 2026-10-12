@@ -495,6 +495,9 @@ class _ScanLogoState extends State<_ScanLogo> {
                         imageFilter: ImageFilter.blur(
                           sigmaX: 14,
                           sigmaY: 14,
+                          // Decal: the default (clamp) smears the edge pixels
+                          // outward and shows up as a faint square halo.
+                          tileMode: TileMode.decal,
                         ),
                         child: Opacity(
                           opacity: 0.32,

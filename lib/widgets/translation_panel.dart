@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'auto_direction_text.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
@@ -26,7 +27,7 @@ class TranslationPanel extends StatelessWidget {
           width: 0.5,
         ),
       ),
-      child: Text(
+      child: AutoDirectionText(
         text,
         style: AppTypography.body.copyWith(
           color: isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight,

@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
+import '../widgets/auto_direction_text.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
 import '../widgets/action_card.dart';
@@ -442,7 +443,7 @@ class _OriginalTab extends StatelessWidget {
     return SingleChildScrollView(
       padding: const EdgeInsets.all(Spacing.md),
       child: SelectionArea(
-        child: Text(
+        child: AutoDirectionText(
           sourceText,
           style: AppTypography.sourceChip.copyWith(
             fontSize: 14,

@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import '../widgets/auto_direction_text.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
 import '../core/models/scan_result.dart';
@@ -371,7 +372,7 @@ class _HistoryRowState extends State<_HistoryRow> {
                               ],
                             ),
                             const SizedBox(height: 6),
-                            Text(
+                            AutoDirectionText(
                               widget.result.sourceText,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,
@@ -381,7 +382,7 @@ class _HistoryRowState extends State<_HistoryRow> {
                               ),
                             ),
                             const SizedBox(height: 4),
-                            Text(
+                            AutoDirectionText(
                               widget.result.translatedText,
                               maxLines: 1,
                               overflow: TextOverflow.ellipsis,

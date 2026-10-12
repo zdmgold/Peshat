@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'auto_direction_text.dart';
 import '../core/models/scan_result.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_icons.dart';
@@ -140,7 +141,7 @@ class _RecentItemCardState extends State<RecentItemCard> {
                     ),
                     const SizedBox(height: 6),
                     // Row 2 — source text, or translated fallback
-                    Text(
+                    AutoDirectionText(
                       hasSource ? sourceText : translatedText,
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -152,7 +153,7 @@ class _RecentItemCardState extends State<RecentItemCard> {
                     // Row 3 — translated text, only when source was present
                     if (hasSource && hasTranslated) ...[
                       const SizedBox(height: 4),
-                      Text(
+                      AutoDirectionText(
                         translatedText,
                         maxLines: 1,
                         overflow: TextOverflow.ellipsis,
