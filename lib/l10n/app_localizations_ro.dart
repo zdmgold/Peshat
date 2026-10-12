@@ -39,7 +39,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get settingsTitle => 'Setări';
 
   @override
-  String get adStatusLabel => 'Starea reclamelor:';
+  String get adStatusLabel => 'Starea reclamelor';
 
   @override
   String get adsShownStatus => 'Reclame afișate';

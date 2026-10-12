@@ -39,7 +39,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get settingsTitle => 'การตั้งค่า';
 
   @override
-  String get adStatusLabel => 'สถานะโฆษณา:';
+  String get adStatusLabel => 'สถานะโฆษณา';
 
   @override
   String get adsShownStatus => 'แสดงโฆษณา';

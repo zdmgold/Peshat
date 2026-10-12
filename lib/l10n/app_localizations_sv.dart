@@ -39,7 +39,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get settingsTitle => 'Inställningar';
 
   @override
-  String get adStatusLabel => 'Annonsstatus:';
+  String get adStatusLabel => 'Annonsstatus';
 
   @override
   String get adsShownStatus => 'Annonser visas';

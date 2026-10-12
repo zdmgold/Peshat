@@ -39,7 +39,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get settingsTitle => 'ቅንብሮች';
 
   @override
-  String get adStatusLabel => 'የማስታወቂያ ሁኔታ:';
+  String get adStatusLabel => 'የማስታወቂያ ሁኔታ';
 
   @override
   String get adsShownStatus => 'ማስታወቂያዎች ይታያሉ';

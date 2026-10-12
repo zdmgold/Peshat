@@ -39,7 +39,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get settingsTitle => 'ການຕັ້ງຄ່າ';
 
   @override
-  String get adStatusLabel => 'ສະຖານະໂຄສະນາ:';
+  String get adStatusLabel => 'ສະຖານະໂຄສະນາ';
 
   @override
   String get adsShownStatus => 'ສະແດງໂຄສະນາ';

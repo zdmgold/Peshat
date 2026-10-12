@@ -39,7 +39,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get settingsTitle => 'ਸੈਟਿੰਗਾਂ';
 
   @override
-  String get adStatusLabel => 'ਵਿਗਿਆਪਨ ਸਥਿਤੀ:';
+  String get adStatusLabel => 'ਵਿਗਿਆਪਨ ਸਥਿਤੀ';
 
   @override
   String get adsShownStatus => 'ਵਿਗਿਆਪਨ ਦਿਖਾਏ ਜਾ ਰਹੇ ਹਨ';

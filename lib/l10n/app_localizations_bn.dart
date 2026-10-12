@@ -39,7 +39,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get settingsTitle => 'সেটিংস';
 
   @override
-  String get adStatusLabel => 'বিজ্ঞাপনের অবস্থা:';
+  String get adStatusLabel => 'বিজ্ঞাপনের অবস্থা';
 
   @override
   String get adsShownStatus => 'বিজ্ঞাপন দেখানো হচ্ছে';

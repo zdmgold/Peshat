@@ -39,7 +39,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get settingsTitle => 'تنظیمات';
 
   @override
-  String get adStatusLabel => 'وضعیت تبلیغات:';
+  String get adStatusLabel => 'وضعیت تبلیغات';
 
   @override
   String get adsShownStatus => 'تبلیغات نمایش داده می‌شود';

@@ -39,7 +39,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get settingsTitle => 'सेटिङहरू';
 
   @override
-  String get adStatusLabel => 'विज्ञापन स्थिति:';
+  String get adStatusLabel => 'विज्ञापन स्थिति';
 
   @override
   String get adsShownStatus => 'विज्ञापनहरू देखाइँदै छन्';

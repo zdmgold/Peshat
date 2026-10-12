@@ -39,7 +39,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get settingsTitle => 'ការកំណត់';
 
   @override
-  String get adStatusLabel => 'ស្ថានភាពការផ្សាយពាណិជ្ជកម្ម:';
+  String get adStatusLabel => 'ស្ថានភាពការផ្សាយពាណិជ្ជកម្ម';
 
   @override
   String get adsShownStatus => 'ការផ្សាយពាណិជ្ជកម្មកំពុងបង្ហាញ';

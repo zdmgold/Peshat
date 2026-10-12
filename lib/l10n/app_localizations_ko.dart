@@ -39,7 +39,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get settingsTitle => '설정';
 
   @override
-  String get adStatusLabel => '광고 상태:';
+  String get adStatusLabel => '광고 상태';
 
   @override
   String get adsShownStatus => '광고 표시됨';

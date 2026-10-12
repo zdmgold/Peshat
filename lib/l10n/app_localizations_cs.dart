@@ -39,7 +39,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get settingsTitle => 'Nastavení';
 
   @override
-  String get adStatusLabel => 'Stav reklam:';
+  String get adStatusLabel => 'Stav reklam';
 
   @override
   String get adsShownStatus => 'Reklamy se zobrazují';

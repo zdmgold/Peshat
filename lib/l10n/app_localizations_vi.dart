@@ -39,7 +39,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get settingsTitle => 'Cài đặt';
 
   @override
-  String get adStatusLabel => 'Trạng thái quảng cáo:';
+  String get adStatusLabel => 'Trạng thái quảng cáo';
 
   @override
   String get adsShownStatus => 'Quảng cáo hiển thị';

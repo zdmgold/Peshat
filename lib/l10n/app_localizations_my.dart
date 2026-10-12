@@ -39,7 +39,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get settingsTitle => 'ဆက်တင်များ';
 
   @override
-  String get adStatusLabel => 'ကြော်ငြာ အခြေအနေ:';
+  String get adStatusLabel => 'ကြော်ငြာ အခြေအနေ';
 
   @override
   String get adsShownStatus => 'ကြော်ငြာများ ပြသနေသည်';

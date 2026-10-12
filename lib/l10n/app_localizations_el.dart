@@ -39,7 +39,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get settingsTitle => 'Ρυθμίσεις';
 
   @override
-  String get adStatusLabel => 'Κατάσταση διαφημίσεων:';
+  String get adStatusLabel => 'Κατάσταση διαφημίσεων';
 
   @override
   String get adsShownStatus => 'Οι διαφημίσεις εμφανίζονται';

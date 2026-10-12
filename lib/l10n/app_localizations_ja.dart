@@ -39,7 +39,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get settingsTitle => '設定';
 
   @override
-  String get adStatusLabel => '広告ステータス:';
+  String get adStatusLabel => '広告ステータス';
 
   @override
   String get adsShownStatus => '広告表示中';

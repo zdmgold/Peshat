@@ -39,7 +39,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get settingsTitle => 'ترتیبات';
 
   @override
-  String get adStatusLabel => 'اشتہار کی حیثیت:';
+  String get adStatusLabel => 'اشتہار کی حیثیت';
 
   @override
   String get adsShownStatus => 'اشتہارات دکھائے جا رہے ہیں';

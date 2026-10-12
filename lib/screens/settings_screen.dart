@@ -178,6 +178,23 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final pageBg =
+        isDark ? AppColors.bgPrimaryDark : AppColors.bgPrimaryLight;
+    final cardBg =
+        isDark ? AppColors.bgSecondaryDark : AppColors.bgSecondaryLight;
+    final cardDecoration = BoxDecoration(
+      color: cardBg,
+      borderRadius: BorderRadius.circular(12),
+    );
+    Widget hdr(String text) => Text(
+          text.toUpperCase(),
+          style: AppTypography.chrome.copyWith(
+            fontSize: 12,
+            fontWeight: FontWeight.w600,
+            letterSpacing: 0.6,
+            color: textTertiary,
+          ),
+        );
 
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
@@ -201,9 +218,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                 children: [
                   // --- Language ---
                   CupertinoListSection.insetGrouped(
-                    header: Text(l10n.appLanguageLabel.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                    header: hdr(l10n.appLanguageLabel),
                     children: [
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.globe),
                         title: Text(l10n.uiLanguageLabel),
                         trailing: _TrailingValue(
@@ -218,8 +238,9 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ValueListenableBuilder<String>(
                         valueListenable: widget.settings,
                         builder: (_, code, __) => CupertinoListTile(
+                        backgroundColor: cardBg,
                           leading: const PeshatIcon(icon: AppIcons.globe),
-                          title: Text(l10n.defaultLanguageLabel),
+                          title: Text(l10n.defaultLanguageLabel, maxLines: 2),
                           trailing: _TrailingValue(
                             text: languageDisplayName(code),
                             color: textTertiary,
@@ -232,9 +253,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // --- Appearance ---
                   CupertinoListSection.insetGrouped(
-                    header: Text(l10n.themeLabel.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                    header: hdr(l10n.themeLabel),
                     children: [
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.palette),
                         title: Text(l10n.themeLabel),
                       ),
@@ -299,9 +323,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // --- History ---
                   CupertinoListSection.insetGrouped(
-                    header: Text(l10n.historyLabel.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                    header: hdr(l10n.historyLabel),
                     children: [
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.history),
                         title: Text(l10n.historyLabel),
                         trailing: _kChevron,
@@ -312,17 +339,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // --- Notifications ---
                   CupertinoListSection.insetGrouped(
-                    header:
-                        Text(l10n.notificationsSectionLabel.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                    header: hdr(l10n.notificationsSectionLabel),
                     children: [
                       ValueListenableBuilder<bool>(
                         valueListenable: widget.notification,
                         builder: (_, enabled, __) => CupertinoListTile(
+                        backgroundColor: cardBg,
                           leading: const PeshatIcon(
                               icon: AppIcons.notifications),
                           title: Text(l10n.reminderNotificationsLabel),
                           subtitle:
-                              Text(l10n.reminderNotificationsSubtitle),
+                              Text(l10n.reminderNotificationsSubtitle, maxLines: 2),
                           trailing: CupertinoSwitch(
                             value: enabled,
                             onChanged: (v) async {
@@ -351,9 +380,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     builder: (_, adsRemoved, __) {
                       if (adsRemoved) {
                         return CupertinoListSection.insetGrouped(
-                          header: Text(l10n.adStatusLabel.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                          header: hdr(l10n.adStatusLabel),
                           children: [
                             CupertinoListTile(
+                        backgroundColor: cardBg,
                               leading: const PeshatIcon(icon: AppIcons.verified),
                               title: Text(l10n.adStatusLabel),
                               trailing: const AdsRemovedBadge(),
@@ -362,9 +394,12 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         );
                       }
                       return CupertinoListSection.insetGrouped(
-                        header: Text(l10n.adStatusLabel.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                        header: hdr(l10n.adStatusLabel),
                         children: [
                           CupertinoListTile(
+                        backgroundColor: cardBg,
                             leading: const PeshatIcon(icon: AppIcons.adsClick),
                             title: Text(l10n.removeAdsButton),
                             subtitle: Text(l10n.removeAdsSubtitle),
@@ -375,12 +410,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             ),
                           ),
                           CupertinoListTile(
+                        backgroundColor: cardBg,
                             leading: const PeshatIcon(icon: AppIcons.restore),
                             title: Text(l10n.restorePurchaseButton),
                             onTap: _restorePurchase,
                           ),
                           if (AdConsent.instance.privacyOptionsRequired.value)
                             CupertinoListTile(
+                        backgroundColor: cardBg,
                               leading: const PeshatIcon(icon: AppIcons.privacy),
                               title: Text(l10n.adPrivacyChoices),
                               trailing: _kChevron,
@@ -393,27 +430,33 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // --- Legal & help ---
                   CupertinoListSection.insetGrouped(
-                    header: Text(l10n.supportLink.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                    header: hdr(l10n.supportLink),
                     children: [
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.privacy),
                         title: Text(l10n.privacyPolicyLink),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_privacyUrl),
                       ),
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.docText),
                         title: Text(l10n.termsLink),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_termsUrl),
                       ),
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.support),
                         title: Text(l10n.supportLink),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_supportUrl),
                       ),
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.code),
                         title: Text(l10n.licensesLabel),
                         trailing: _kChevron,
@@ -424,15 +467,19 @@ class _SettingsScreenState extends State<SettingsScreen> {
 
                   // --- About ---
                   CupertinoListSection.insetGrouped(
-                    header: Text(l10n.aboutLabel.toUpperCase()),
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                    header: hdr(l10n.aboutLabel),
                     children: [
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.verified),
                         title: Text(l10n.rateAppLabel),
                         trailing: _kChevron,
                         onTap: _requestReview,
                       ),
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.share),
                         title: Text(l10n.shareAppLabel),
                         trailing: _kChevron,
@@ -442,6 +489,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         ),
                       ),
                       CupertinoListTile(
+                        backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.info),
                         title: Text(l10n.aboutLabel),
                         subtitle: Text('${l10n.versionLabel} $_version'),

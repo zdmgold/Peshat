@@ -39,7 +39,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get settingsTitle => 'Настройки';
 
   @override
-  String get adStatusLabel => 'Статус рекламы:';
+  String get adStatusLabel => 'Статус рекламы';
 
   @override
   String get adsShownStatus => 'Реклама показывается';

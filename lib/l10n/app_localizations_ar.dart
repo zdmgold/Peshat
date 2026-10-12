@@ -39,7 +39,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get settingsTitle => 'الإعدادات';
 
   @override
-  String get adStatusLabel => 'حالة الإعلانات:';
+  String get adStatusLabel => 'حالة الإعلانات';
 
   @override
   String get adsShownStatus => 'الإعلانات معروضة';

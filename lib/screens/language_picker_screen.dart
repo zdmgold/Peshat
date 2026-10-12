@@ -8,6 +8,7 @@ import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/ad_slot.dart';
+import '../widgets/alpha_index.dart';
 
 class LanguagePickerScreen extends StatefulWidget {
   final String? current;
@@ -114,6 +115,56 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final recents = _recentList(all);
     final groups = _groupByLetter(filtered);
 
+    final entries = <IndexEntry>[
+      if (recents.isNotEmpty) ...[
+        IndexEntry(
+          extent: _kLabelExtent,
+          child: _SectionLabel(
+            text: l10n.recentLanguagesLabel,
+            color: textTertiary,
+          ),
+        ),
+        for (final r in recents)
+          IndexEntry(
+            extent: _kRowExtent,
+            child: _Row(
+              language: r,
+              selected: r.code == widget.current,
+              textPrimary: textPrimary,
+              textSecondary: textSecondary,
+              accent: accent,
+              onTap: () => Navigator.pop(context, r.code),
+            ),
+          ),
+        IndexEntry(
+          extent: _kLabelExtent,
+          child: _SectionLabel(
+            text: l10n.allLanguagesLabel,
+            color: textTertiary,
+          ),
+        ),
+      ],
+      for (final group in groups) ...[
+        IndexEntry(
+          extent: _kLetterExtent,
+          letter: group.letter,
+          child: _LetterLabel(letter: group.letter, color: textTertiary),
+        ),
+        for (final lang in group.languages)
+          IndexEntry(
+            extent: _kRowExtent,
+            child: _Row(
+              language: lang,
+              selected: lang.code == widget.current,
+              textPrimary: textPrimary,
+              textSecondary: textSecondary,
+              accent: accent,
+              onTap: () => Navigator.pop(context, lang.code),
+            ),
+          ),
+      ],
+    ];
+
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         leading: peshatBackButton(context, color: textPrimary),
@@ -130,116 +181,61 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         top: false,
         child: Column(
           children: [
-            Expanded(
-              child: CustomScrollView(
-                slivers: [
-                  // Search field — scrolls away with the list.
-                  SliverToBoxAdapter(
-                    child: Padding(
-                      padding: const EdgeInsets.fromLTRB(
-                        Spacing.md,
-                        Spacing.sm,
-                        Spacing.md,
-                        Spacing.sm,
-                      ),
-                      child: CupertinoSearchTextField(
-                        controller: _search,
-                        onChanged: (v) => setState(() => _query = v),
-                        placeholder: l10n.searchLanguagesHint,
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 15,
-                          color: textPrimary,
-                        ),
-                        placeholderStyle: AppTypography.chrome.copyWith(
-                          fontSize: 15,
-                          color: textTertiary,
-                        ),
-                        cursorColor: accent,
-                        itemColor: textTertiary,
-                        backgroundColor: inputFill,
-                        borderRadius: BorderRadius.circular(12),
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: Spacing.md,
-                          vertical: 10,
-                        ),
-                      ),
-                    ),
-                  ),
-
-                  // Empty search state.
-                  if (filtered.isEmpty)
-                    SliverFillRemaining(
-                      hasScrollBody: false,
-                      child: _EmptySearchState(
-                        title: l10n.noResults,
-                        subtitle: l10n.noResultsSubtitle,
-                        isDark: isDark,
-                      ),
-                    )
-                  else ...[
-                    // RECENT section — only when not searching.
-                    if (recents.isNotEmpty) ...[
-                      SliverToBoxAdapter(
-                        child: _SectionLabel(
-                          text: l10n.recentLanguagesLabel,
-                          color: textTertiary,
-                        ),
-                      ),
-                      SliverList(
-                        delegate: SliverChildBuilderDelegate(
-                          (context, i) => _Row(
-                            language: recents[i],
-                            selected: recents[i].code == widget.current,
-                            textPrimary: textPrimary,
-                            textSecondary: textSecondary,
-                            accent: accent,
-                            onTap: () =>
-                                Navigator.pop(context, recents[i].code),
-                          ),
-                          childCount: recents.length,
-                        ),
-                      ),
-                      SliverToBoxAdapter(
-                        child: _SectionLabel(
-                          text: l10n.allLanguagesLabel,
-                          color: textTertiary,
-                        ),
-                      ),
-                    ],
-
-                    // Letter-grouped sections with sticky headers.
-                    for (final group in groups) ...[
-                      SliverToBoxAdapter(
-                        child: _LetterLabel(
-                          letter: group.letter,
-                          color: textTertiary,
-                        ),
-                      ),
-                      SliverList(
-                        delegate: SliverChildBuilderDelegate(
-                          (context, i) => _Row(
-                            language: group.languages[i],
-                            selected:
-                                group.languages[i].code == widget.current,
-                            textPrimary: textPrimary,
-                            textSecondary: textSecondary,
-                            accent: accent,
-                            onTap: () => Navigator.pop(
-                              context,
-                              group.languages[i].code,
-                            ),
-                          ),
-                          childCount: group.languages.length,
-                        ),
-                      ),
-                    ],
-
-                    const SliverToBoxAdapter(
-                      child: SizedBox(height: Spacing.xl),
-                    ),
-                  ],
-                ],
+            Padding(
+              padding: const EdgeInsets.fromLTRB(
+                Spacing.md,
+                Spacing.sm,
+                Spacing.md,
+                Spacing.sm,
               ),
+              child: CupertinoSearchTextField(
+                controller: _search,
+                onChanged: (v) => setState(() => _query = v),
+                onSuffixTap: () {
+                  _search.clear();
+                  setState(() => _query = '');
+                },
+                placeholder: l10n.searchLanguagesHint,
+                prefixIcon: PeshatIcon(
+                  icon: AppIcons.search,
+                  size: 18,
+                  color: textTertiary,
+                ),
+                suffixIcon: PeshatIcon(
+                  icon: AppIcons.close,
+                  size: 18,
+                  color: textTertiary,
+                ),
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 15,
+                  color: textPrimary,
+                ),
+                placeholderStyle: AppTypography.chrome.copyWith(
+                  fontSize: 15,
+                  color: textTertiary,
+                ),
+                cursorColor: accent,
+                itemColor: textTertiary,
+                backgroundColor: inputFill,
+                borderRadius: BorderRadius.circular(12),
+                padding: const EdgeInsets.symmetric(
+                  horizontal: Spacing.md,
+                  vertical: 10,
+                ),
+              ),
+            ),
+            Expanded(
+              child: filtered.isEmpty
+                  ? _EmptySearchState(
+                      title: l10n.noResults,
+                      subtitle: l10n.noResultsSubtitle,
+                      isDark: isDark,
+                    )
+                  : AlphaIndexedList(
+                      entries: entries,
+                      letterColor: accent,
+                      showIndex: _query.isEmpty,
+                    ),
             ),
             const AdSlot(),
           ],
@@ -248,6 +244,10 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     );
   }
 }
+
+const double _kRowExtent = 64;
+const double _kLabelExtent = 40;
+const double _kLetterExtent = 32;
 
 // ---------------------------------------------------------------------------
 // Section label — RECENT / ALL LANGUAGES headers, not sticky.
@@ -326,9 +326,14 @@ class _RowState extends State<_Row> {
           opacity: _pressed ? 0.6 : 1.0,
           child: Container(
             constraints: const BoxConstraints(minHeight: 56),
-            padding: const EdgeInsets.symmetric(
-              horizontal: Spacing.md,
-              vertical: Spacing.sm,
+            color: widget.selected
+                ? widget.accent.withValues(alpha: 0.10)
+                : null,
+            padding: const EdgeInsetsDirectional.fromSTEB(
+              Spacing.md,
+              Spacing.sm,
+              28,
+              Spacing.sm,
             ),
             child: Row(
               children: [

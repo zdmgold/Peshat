@@ -8,6 +8,7 @@ import '../core/utils/locale_resolution.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/ad_slot.dart';
+import '../widgets/alpha_index.dart';
 
 class UiLanguagePickerScreen extends StatelessWidget {
   final Locale? current;
@@ -54,6 +55,58 @@ class UiLanguagePickerScreen extends StatelessWidget {
           a.englishName.toLowerCase().compareTo(b.englishName.toLowerCase()));
     final groups = _groupByLetter(sorted);
 
+    final entries = <IndexEntry>[
+      IndexEntry(
+        extent: _kLabelExtent,
+        child: _SectionLabel(
+          text: l10n.sectionSystemLabel,
+          color: textTertiary,
+        ),
+      ),
+      IndexEntry(
+        extent: _kRowExtent,
+        child: _UiLanguageRow(
+          leading: AppIcons.smartphone,
+          title: l10n.followSystemLabel,
+          subtitle: null,
+          selected: current == null,
+          textPrimary: textPrimary,
+          textSecondary: textSecondary,
+          accent: accent,
+          onTap: () => Navigator.pop(context, 'system'),
+        ),
+      ),
+      IndexEntry(
+        extent: _kLabelExtent,
+        child: _SectionLabel(
+          text: l10n.appLanguageLabel,
+          color: textTertiary,
+        ),
+      ),
+      for (final group in groups) ...[
+        IndexEntry(
+          extent: _kLetterExtent,
+          letter: group.letter,
+          child: _LetterLabel(letter: group.letter, color: textTertiary),
+        ),
+        for (final lang in group.languages)
+          IndexEntry(
+            extent: _kRowExtent,
+            child: _UiLanguageRow(
+              leading: null,
+              title: lang.nativeName,
+              subtitle: lang.englishName,
+              nativeIsRtl: lang.isRtl,
+              selected: current?.languageCode == lang.code,
+              textPrimary: textPrimary,
+              textSecondary: textSecondary,
+              accent: accent,
+              onTap: () => Navigator.pop(context, lang.code),
+            ),
+          ),
+      ],
+    ];
+
     return CupertinoPageScaffold(
       navigationBar: CupertinoNavigationBar(
         leading: peshatBackButton(context, color: textPrimary),
@@ -71,70 +124,9 @@ class UiLanguagePickerScreen extends StatelessWidget {
         child: Column(
           children: [
             Expanded(
-              child: CustomScrollView(
-                slivers: [
-                  // SYSTEM section — header + Follow system row.
-                  SliverToBoxAdapter(
-                    child: _SectionLabel(
-                      text: l10n.sectionSystemLabel,
-                      color: textTertiary,
-                    ),
-                  ),
-                  SliverToBoxAdapter(
-                    child: _UiLanguageRow(
-                      leading: AppIcons.smartphone,
-                      title: l10n.followSystemLabel,
-                      subtitle: null,
-                      selected: current == null,
-                      textPrimary: textPrimary,
-                      textSecondary: textSecondary,
-                      accent: accent,
-                      onTap: () => Navigator.pop(context, 'system'),
-                    ),
-                  ),
-
-                  // APP LANGUAGE section header.
-                  SliverToBoxAdapter(
-                    child: _SectionLabel(
-                      text: l10n.appLanguageLabel,
-                      color: textTertiary,
-                    ),
-                  ),
-
-                  // Letter-grouped sections with sticky headers.
-                  for (final group in groups) ...[
-                    SliverToBoxAdapter(
-                        child: _LetterLabel(
-                          letter: group.letter,
-                          color: textTertiary,
-                        ),
-                      ),
-                    SliverList(
-                      delegate: SliverChildBuilderDelegate(
-                        (context, i) => _UiLanguageRow(
-                          leading: null,
-                          title: group.languages[i].nativeName,
-                          subtitle: group.languages[i].englishName,
-                          nativeIsRtl: group.languages[i].isRtl,
-                          selected: current?.languageCode ==
-                              group.languages[i].code,
-                          textPrimary: textPrimary,
-                          textSecondary: textSecondary,
-                          accent: accent,
-                          onTap: () => Navigator.pop(
-                            context,
-                            group.languages[i].code,
-                          ),
-                        ),
-                        childCount: group.languages.length,
-                      ),
-                    ),
-                  ],
-
-                  const SliverToBoxAdapter(
-                    child: SizedBox(height: Spacing.xl),
-                  ),
-                ],
+              child: AlphaIndexedList(
+                entries: entries,
+                letterColor: accent,
               ),
             ),
             const AdSlot(),
@@ -144,6 +136,10 @@ class UiLanguagePickerScreen extends StatelessWidget {
     );
   }
 }
+
+const double _kRowExtent = 64;
+const double _kLabelExtent = 40;
+const double _kLetterExtent = 32;
 
 // ---------------------------------------------------------------------------
 // Letter group — internal data structure for the sectioned list.
@@ -240,9 +236,14 @@ class _UiLanguageRowState extends State<_UiLanguageRow> {
           opacity: _pressed ? 0.6 : 1.0,
           child: Container(
             constraints: const BoxConstraints(minHeight: 56),
-            padding: const EdgeInsets.symmetric(
-              horizontal: Spacing.md,
-              vertical: Spacing.sm,
+            color: widget.selected
+                ? widget.accent.withValues(alpha: 0.10)
+                : null,
+            padding: const EdgeInsetsDirectional.fromSTEB(
+              Spacing.md,
+              Spacing.sm,
+              28,
+              Spacing.sm,
             ),
             child: Row(
               children: [

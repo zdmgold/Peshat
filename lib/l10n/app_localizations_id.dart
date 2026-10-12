@@ -39,7 +39,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get settingsTitle => 'Pengaturan';
 
   @override
-  String get adStatusLabel => 'Status iklan:';
+  String get adStatusLabel => 'Status iklan';
 
   @override
   String get adsShownStatus => 'Iklan ditampilkan';

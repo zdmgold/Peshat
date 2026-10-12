@@ -39,7 +39,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get settingsTitle => 'Ayarlar';
 
   @override
-  String get adStatusLabel => 'Reklam durumu:';
+  String get adStatusLabel => 'Reklam durumu';
 
   @override
   String get adsShownStatus => 'Reklamlar gösteriliyor';

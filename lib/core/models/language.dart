@@ -12,7 +12,7 @@ class Language {
 
 const List<Language> supportedLanguages = <Language>[
   Language(code: 'en', nativeName: 'English', englishName: 'English', isRtl: false),
-  Language(code: 'zh', nativeName: '中文', englishName: 'Mandarin Chinese', isRtl: false),
+  Language(code: 'zh', nativeName: '中文', englishName: 'Chinese (Simplified)', isRtl: false),
   Language(code: 'es', nativeName: 'Español', englishName: 'Spanish', isRtl: false),
   Language(code: 'ar', nativeName: 'العربية', englishName: 'Arabic', isRtl: true),
   Language(code: 'fr', nativeName: 'Français', englishName: 'French', isRtl: false),

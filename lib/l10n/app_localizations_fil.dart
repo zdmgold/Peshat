@@ -39,7 +39,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get settingsTitle => 'Mga setting';
 
   @override
-  String get adStatusLabel => 'Status ng ad:';
+  String get adStatusLabel => 'Status ng ad';
 
   @override
   String get adsShownStatus => 'Ipinapakita ang mga ad';

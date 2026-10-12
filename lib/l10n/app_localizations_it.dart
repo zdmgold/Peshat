@@ -39,7 +39,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get settingsTitle => 'Impostazioni';
 
   @override
-  String get adStatusLabel => 'Stato annunci:';
+  String get adStatusLabel => 'Stato annunci';
 
   @override
   String get adsShownStatus => 'Annunci attivi';

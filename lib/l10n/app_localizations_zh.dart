@@ -39,7 +39,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get settingsTitle => '设置';
 
   @override
-  String get adStatusLabel => '广告状态：';
+  String get adStatusLabel => '广告状态';
 
   @override
   String get adsShownStatus => '显示广告';

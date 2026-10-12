@@ -39,7 +39,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get settingsTitle => 'Instellingen';
 
   @override
-  String get adStatusLabel => 'Advertentiestatus:';
+  String get adStatusLabel => 'Advertentiestatus';
 
   @override
   String get adsShownStatus => 'Advertenties weergegeven';

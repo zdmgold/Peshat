@@ -39,7 +39,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get settingsTitle => 'Beállítások';
 
   @override
-  String get adStatusLabel => 'Hirdetések állapota:';
+  String get adStatusLabel => 'Hirdetések állapota';
 
   @override
   String get adsShownStatus => 'Hirdetések megjelennek';
