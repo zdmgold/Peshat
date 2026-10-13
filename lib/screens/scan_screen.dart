@@ -2,6 +2,7 @@ import 'dart:io';
 import 'dart:ui' show ImageFilter;
 import 'package:file_picker/file_picker.dart';
 import 'package:flutter/cupertino.dart';
+import '../widgets/press_scale.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
@@ -406,19 +407,21 @@ class _ChipButton extends StatelessWidget {
     return Semantics(
       label: semanticLabel,
       button: true,
-      child: CupertinoButton(
-        padding: EdgeInsets.zero,
-        minSize: 40,
-        onPressed: onPressed,
-        child: Container(
-          width: 40,
-          height: 40,
-          decoration: BoxDecoration(
-            color: chipBg,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          child: Center(
-            child: PeshatIcon(icon: icon, size: 22, color: iconColor),
+      child: PressScale(
+        child: CupertinoButton(
+          padding: EdgeInsets.zero,
+          minSize: 40,
+          onPressed: onPressed,
+          child: Container(
+            width: 40,
+            height: 40,
+            decoration: BoxDecoration(
+              color: chipBg,
+              borderRadius: BorderRadius.circular(12),
+            ),
+            child: Center(
+              child: PeshatIcon(icon: icon, size: 22, color: iconColor),
+            ),
           ),
         ),
       ),

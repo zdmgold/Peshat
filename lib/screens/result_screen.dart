@@ -256,7 +256,17 @@ class _ResultScreenState extends State<ResultScreen> {
               child: Column(
                 children: [
                   Expanded(
-                    child: _buildContent(context, state, l10n, isDark),
+                    child: AnimatedSwitcher(
+                      duration: const Duration(milliseconds: 200),
+                      layoutBuilder: (current, previous) => Stack(
+                        fit: StackFit.expand,
+                        children: [...previous, if (current != null) current],
+                      ),
+                      child: KeyedSubtree(
+                        key: ValueKey(state.runtimeType),
+                        child: _buildContent(context, state, l10n, isDark),
+                      ),
+                    ),
                   ),
                   const AdSlot(),
                 ],
@@ -307,6 +317,11 @@ class _ResultScreenState extends State<ResultScreen> {
               Spacing.sm,
             ),
             child: CupertinoSlidingSegmentedControl<_ResultTab>(
+              thumbColor: (isDark ? AppColors.accentDark : AppColors.accentLight)
+                  .withValues(alpha: 0.28),
+              backgroundColor: isDark
+                  ? AppColors.bgTertiaryDark
+                  : AppColors.bgTertiaryLight,
               groupValue: _tab,
               onValueChanged: (v) {
                 if (v != null) setState(() => _tab = v);

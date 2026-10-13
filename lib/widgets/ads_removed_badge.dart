@@ -18,8 +18,8 @@ class AdsRemovedBadge extends StatelessWidget {
       ),
       child: Text(
         l10n.adsRemovedBadge,
-        style: const TextStyle(
-          color: Color(0xFFFFFFFF),
+        style: TextStyle(
+          color: isDark ? AppColors.onAccentDark : AppColors.onAccentLight,
           fontSize: 12,
           fontWeight: FontWeight.bold,
         ),

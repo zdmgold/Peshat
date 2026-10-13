@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import '../widgets/press_scale.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
 import 'package:in_app_review/in_app_review.dart';
@@ -273,6 +274,10 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           valueListenable: widget.theme,
                           builder: (_, mode, __) =>
                               CupertinoSlidingSegmentedControl<AppThemeMode>(
+                            thumbColor: accent.withValues(alpha: 0.28),
+                            backgroundColor: isDark
+                                ? AppColors.bgTertiaryDark
+                                : AppColors.bgTertiaryLight,
                             groupValue: mode,
                             onValueChanged: (v) {
                               if (v != null) widget.theme.setMode(v);
@@ -526,7 +531,7 @@ class _SmallOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CupertinoButton(
+    return PressScale(child: CupertinoButton(
       padding: EdgeInsets.zero,
       minSize: 44,
       onPressed: onPressed,
@@ -547,7 +552,7 @@ class _SmallOutlinedButton extends StatelessWidget {
           ),
         ),
       ),
-    );
+    ));
   }
 }
 

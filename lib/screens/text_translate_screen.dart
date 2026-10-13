@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import '../widgets/press_scale.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
 import '../widgets/action_card.dart';
@@ -218,7 +219,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
               child: SizedBox(
                 width: double.infinity,
                 height: 56,
-                child: CupertinoButton(
+                child: PressScale(child: CupertinoButton(
                   padding: EdgeInsets.zero,
                   onPressed: hasText ? _translate : null,
                   child: Container(
@@ -234,11 +235,11 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                       style: AppTypography.chrome.copyWith(
                         fontSize: 15,
                         fontWeight: FontWeight.w600,
-                        color: const Color(0xFFFFFFFF),
+                        color: isDark ? AppColors.onAccentDark : AppColors.onAccentLight,
                       ),
                     ),
                   ),
-                ),
+                )),
               ),
             ),
           ],

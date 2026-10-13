@@ -9,6 +9,10 @@ class AppColors {
   static const bgTertiaryDark  = Color(0xFF262A30);
   static const accentLight    = Color(0xFF9C7038);
   static const accentDark     = Color(0xFFC39A5B);
+  /// Text/icon colour on a filled accent surface. White on the dark-mode brass
+  /// is only 2.6:1, so dark mode uses the page graphite (6.9:1).
+  static const onAccentLight  = Color(0xFFFFFFFF);
+  static const onAccentDark   = Color(0xFF14171C);
   static const accentDimLight = Color(0xFF7C5A2C);
   static const accentDimDark  = Color(0xFF976B39);
   static const textPrimaryLight = Color(0xFF1A1A1A);
