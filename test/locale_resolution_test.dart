@@ -26,7 +26,7 @@ void main() {
     expect(resolveDeviceLocales(null, supported), const Locale('en'));
   });
 
-  test('exactly 36 app languages are selectable and all load', () async {
+  test('exactly 48 app languages are selectable and all load', () async {
     final ui = supportedLanguages
         .where((l) => isUiLanguageSupported(l.code))
         .toList();
