@@ -104,7 +104,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get errorImageUnreadable => 'Kuvaa ei voitu lukea';
 
   @override
-  String get errorModelDownloadFailed => 'Käännösmallia ei voitu ladata';
+  String get errorModelDownloadFailed => 'Kielipakettia ei voitu vastaanottaa. Tarkista internetyhteytesi ja yritä uudelleen.';
 
   @override
   String get errorUnsupportedLanguage => 'Tätä kieltä ei tueta vielä';
@@ -314,8 +314,20 @@ class AppLocalizationsFi extends AppLocalizations {
   String get couldNotOpenLink => 'Linkkiä ei voitu avata';
 
   @override
-  String get pdfFontDownloading => 'Ladataan fonttia tähän PDF-tiedostoon…';
+  String get pdfFontDownloading => 'Vastaanotetaan fonttia tälle PDF:lle…';
 
   @override
-  String get pdfFontDownloadFailed => 'Tämän PDF-tiedoston fonttia ei voitu ladata. Tarkista yhteys ja yritä uudelleen.';
+  String get pdfFontDownloadFailed => 'Tämän PDF:n fonttia ei voitu vastaanottaa. Tarkista internetyhteytesi ja yritä uudelleen.';
+
+  @override
+  String get packReceivingTitle => 'Vastaanotetaan kielipakettia…';
+
+  @override
+  String get packReceivedTitle => 'Paketti vastaanotettu';
+
+  @override
+  String get errorOfflinePackNeeded => 'Ei internetyhteyttä. Tämä kieli tarvitsee kertaluonteisen paketin vastaanottamisen. Muodosta internetyhteys ja yritä uudelleen.';
+
+  @override
+  String get errorPackTooSlow => 'Kielipaketin vastaanottaminen kestää liian kauan. Internetyhteytesi voi olla heikko. Yritä uudelleen.';
 }

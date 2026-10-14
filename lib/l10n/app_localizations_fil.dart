@@ -104,7 +104,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get errorImageUnreadable => 'Hindi mabasa ang larawan';
 
   @override
-  String get errorModelDownloadFailed => 'Hindi ma-download ang modelo ng pagsasalin';
+  String get errorModelDownloadFailed => 'Hindi natanggap ang language pack. Suriin ang iyong koneksyon sa internet at subukan muli.';
 
   @override
   String get errorUnsupportedLanguage => 'Hindi pa sinusuportahan ang wikang ito';
@@ -314,8 +314,20 @@ class AppLocalizationsFil extends AppLocalizations {
   String get couldNotOpenLink => 'Hindi mabuksan ang link';
 
   @override
-  String get pdfFontDownloading => 'Dina-download ang font para sa PDF na ito…';
+  String get pdfFontDownloading => 'Tinatanggap ang font para sa PDF na ito…';
 
   @override
-  String get pdfFontDownloadFailed => 'Hindi ma-download ang font para sa PDF na ito. Suriin ang iyong koneksyon at subukang muli.';
+  String get pdfFontDownloadFailed => 'Hindi natanggap ang font para sa PDF na ito. Suriin ang iyong koneksyon sa internet at subukan muli.';
+
+  @override
+  String get packReceivingTitle => 'Tinatanggap ang language pack…';
+
+  @override
+  String get packReceivedTitle => 'Natanggap na ang pack';
+
+  @override
+  String get errorOfflinePackNeeded => 'Walang koneksyon sa internet. Kailangan ng wikang ito ng pack na isang beses lang tatanggapin. Kumonekta sa internet at subukan muli.';
+
+  @override
+  String get errorPackTooSlow => 'Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli.';
 }

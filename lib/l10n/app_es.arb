@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "No se encontró texto en la imagen",
   "errorImageUnreadable": "No se pudo leer la imagen",
-  "errorModelDownloadFailed": "No se pudo descargar el modelo de traducción",
+  "errorModelDownloadFailed": "No se pudo recibir el paquete de idioma. Comprueba tu conexión a internet e inténtalo de nuevo.",
   "errorUnsupportedLanguage": "Este idioma aún no es compatible",
   "errorOcrFailed": "Falló el reconocimiento de texto",
   "errorTranslationFailed": "Falló la traducción",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Opciones de privacidad de anuncios",
   "followSystemLabel": "Seguir el sistema",
   "couldNotOpenLink": "No se pudo abrir el enlace",
-  "pdfFontDownloading": "Descargando la fuente para este PDF…",
-  "pdfFontDownloadFailed": "No se pudo descargar la fuente para este PDF. Comprueba tu conexión e inténtalo de nuevo."
+  "pdfFontDownloading": "Recibiendo la fuente para este PDF…",
+  "pdfFontDownloadFailed": "No se pudo recibir la fuente para este PDF. Comprueba tu conexión a internet e inténtalo de nuevo.",
+  "packReceivingTitle": "Recibiendo paquete de idioma…",
+  "packReceivedTitle": "Paquete recibido",
+  "errorOfflinePackNeeded": "Sin conexión a internet. Este idioma necesita recibir un paquete una sola vez. Conéctate a internet e inténtalo de nuevo.",
+  "errorPackTooSlow": "El paquete de idioma tarda demasiado en recibirse. Es posible que tu conexión a internet sea débil. Inténtalo de nuevo."
 }

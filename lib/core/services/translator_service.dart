@@ -96,6 +96,34 @@ class TranslatorService {
     }
   }
 
+  /// App codes of the language packs still to be received for this pair
+  /// (empty when everything is already on the phone). ML Kit translates
+  /// through English, so English counts when neither side is English.
+  Future<List<String>> missingPacks({
+    required String fromBcp,
+    required String toBcp,
+  }) async {
+    if (!isTranslatable(fromBcp) || !isTranslatable(toBcp)) {
+      throw TranslatorException(AppErrorCode.unsupportedLanguage);
+    }
+    final codes = <String>{fromBcp.toLowerCase(), toBcp.toLowerCase(), 'en'};
+    final missing = <String>[];
+    for (final c in codes) {
+      try {
+        if (!await _manager.isModelDownloaded(_map[c]!.bcpCode)) {
+          missing.add(c);
+        }
+      } catch (e) {
+        throw TranslatorException(AppErrorCode.modelDownloadFailed,
+            detail: e.toString());
+      }
+    }
+    return missing;
+  }
+
+  /// Receives one language pack (app code).
+  Future<void> receivePack(String code) => _ensure(_map[code.toLowerCase()]!.bcpCode);
+
   Future<void> _ensure(String bcp) async {
     try {
       if (await _manager.isModelDownloaded(bcp)) return;

@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Aucun texte trouvé dans l’image",
   "errorImageUnreadable": "L’image n’a pas pu être lue",
-  "errorModelDownloadFailed": "Impossible de télécharger le modèle de traduction",
+  "errorModelDownloadFailed": "Le pack de langue n'a pas pu être reçu. Vérifiez votre connexion internet et réessayez.",
   "errorUnsupportedLanguage": "Cette langue n’est pas encore prise en charge",
   "errorOcrFailed": "Échec de la reconnaissance de texte",
   "errorTranslationFailed": "Échec de la traduction",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Choix de confidentialité des annonces",
   "followSystemLabel": "Suivre le système",
   "couldNotOpenLink": "Impossible d’ouvrir le lien",
-  "pdfFontDownloading": "Téléchargement de la police pour ce PDF…",
-  "pdfFontDownloadFailed": "Impossible de télécharger la police pour ce PDF. Vérifiez votre connexion et réessayez."
+  "pdfFontDownloading": "Réception de la police pour ce PDF…",
+  "pdfFontDownloadFailed": "La police de ce PDF n'a pas pu être reçue. Vérifiez votre connexion internet et réessayez.",
+  "packReceivingTitle": "Réception du pack de langue…",
+  "packReceivedTitle": "Pack reçu",
+  "errorOfflinePackNeeded": "Pas de connexion internet. Cette langue nécessite la réception d'un pack, une seule fois. Connectez-vous à internet et réessayez.",
+  "errorPackTooSlow": "La réception du pack de langue prend trop de temps. Votre connexion internet est peut-être faible. Réessayez."
 }

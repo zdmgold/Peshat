@@ -104,7 +104,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get errorImageUnreadable => 'Görsel okunamadı';
 
   @override
-  String get errorModelDownloadFailed => 'Çeviri modeli indirilemedi';
+  String get errorModelDownloadFailed => 'Dil paketi alınamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.';
 
   @override
   String get errorUnsupportedLanguage => 'Bu dil henüz desteklenmiyor';
@@ -314,8 +314,20 @@ class AppLocalizationsTr extends AppLocalizations {
   String get couldNotOpenLink => 'Bağlantı açılamadı';
 
   @override
-  String get pdfFontDownloading => 'Bu PDF için yazı tipi indiriliyor…';
+  String get pdfFontDownloading => 'Bu PDF için yazı tipi alınıyor…';
 
   @override
-  String get pdfFontDownloadFailed => 'Bu PDF için yazı tipi indirilemedi. Bağlantınızı kontrol edip tekrar deneyin.';
+  String get pdfFontDownloadFailed => 'Bu PDF için yazı tipi alınamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.';
+
+  @override
+  String get packReceivingTitle => 'Dil paketi alınıyor…';
+
+  @override
+  String get packReceivedTitle => 'Paket alındı';
+
+  @override
+  String get errorOfflinePackNeeded => 'İnternet bağlantısı yok. Bu dil, bir kez alınması gereken bir paket gerektiriyor. İnternete bağlanıp tekrar deneyin.';
+
+  @override
+  String get errorPackTooSlow => 'Dil paketinin alınması çok uzun sürüyor. İnternet bağlantınız zayıf olabilir. Tekrar deneyin.';
 }

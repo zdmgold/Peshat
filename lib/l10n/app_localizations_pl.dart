@@ -104,7 +104,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get errorImageUnreadable => 'Nie można odczytać obrazu';
 
   @override
-  String get errorModelDownloadFailed => 'Nie udało się pobrać modelu tłumaczenia';
+  String get errorModelDownloadFailed => 'Nie udało się odebrać pakietu językowego. Sprawdź połączenie z internetem i spróbuj ponownie.';
 
   @override
   String get errorUnsupportedLanguage => 'Ten język nie jest jeszcze obsługiwany';
@@ -314,8 +314,20 @@ class AppLocalizationsPl extends AppLocalizations {
   String get couldNotOpenLink => 'Nie można otworzyć linku';
 
   @override
-  String get pdfFontDownloading => 'Pobieranie czcionki dla tego pliku PDF…';
+  String get pdfFontDownloading => 'Odbieranie czcionki dla tego pliku PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Nie udało się pobrać czcionki dla tego pliku PDF. Sprawdź połączenie i spróbuj ponownie.';
+  String get pdfFontDownloadFailed => 'Nie udało się odebrać czcionki dla tego pliku PDF. Sprawdź połączenie z internetem i spróbuj ponownie.';
+
+  @override
+  String get packReceivingTitle => 'Odbieranie pakietu językowego…';
+
+  @override
+  String get packReceivedTitle => 'Pakiet odebrany';
+
+  @override
+  String get errorOfflinePackNeeded => 'Brak połączenia z internetem. Ten język wymaga jednorazowego odebrania pakietu. Połącz się z internetem i spróbuj ponownie.';
+
+  @override
+  String get errorPackTooSlow => 'Odbieranie pakietu językowego trwa zbyt długo. Twoje połączenie z internetem może być słabe. Spróbuj ponownie.';
 }

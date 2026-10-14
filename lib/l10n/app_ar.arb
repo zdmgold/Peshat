@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}، {nativeName}",
   "errorNoTextDetected": "لم يتم العثور على نص في الصورة",
   "errorImageUnreadable": "تعذر قراءة الصورة",
-  "errorModelDownloadFailed": "تعذر تنزيل نموذج الترجمة",
+  "errorModelDownloadFailed": "تعذّر استلام حزمة اللغة. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.",
   "errorUnsupportedLanguage": "هذه اللغة غير مدعومة بعد",
   "errorOcrFailed": "فشل التعرف على النص",
   "errorTranslationFailed": "فشلت الترجمة",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "خيارات خصوصية الإعلانات",
   "followSystemLabel": "اتباع النظام",
   "couldNotOpenLink": "تعذّر فتح الرابط",
-  "pdfFontDownloading": "جارٍ تنزيل الخط لهذا الملف PDF…",
-  "pdfFontDownloadFailed": "تعذّر تنزيل الخط لهذا الملف PDF. تحقق من اتصالك وحاول مرة أخرى."
+  "pdfFontDownloading": "جارٍ استلام الخط لملف PDF هذا…",
+  "pdfFontDownloadFailed": "تعذّر استلام الخط لملف PDF هذا. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.",
+  "packReceivingTitle": "جارٍ استلام حزمة اللغة…",
+  "packReceivedTitle": "تم استلام الحزمة",
+  "errorOfflinePackNeeded": "لا يوجد اتصال بالإنترنت. تحتاج هذه اللغة إلى حزمة تُستلم مرة واحدة. اتصل بالإنترنت وحاول مرة أخرى.",
+  "errorPackTooSlow": "يستغرق استلام حزمة اللغة وقتًا طويلًا. قد يكون اتصالك بالإنترنت ضعيفًا. حاول مرة أخرى."
 }

@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "ไม่พบข้อความในภาพ",
   "errorImageUnreadable": "ไม่สามารถอ่านภาพได้",
-  "errorModelDownloadFailed": "ไม่สามารถดาวน์โหลดโมเดลการแปลได้",
+  "errorModelDownloadFailed": "ไม่สามารถรับแพ็กภาษาได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง",
   "errorUnsupportedLanguage": "ยังไม่รองรับภาษานี้",
   "errorOcrFailed": "การรู้จำข้อความล้มเหลว",
   "errorTranslationFailed": "การแปลล้มเหลว",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "ตัวเลือกความเป็นส่วนตัวของโฆษณา",
   "followSystemLabel": "ตามระบบ",
   "couldNotOpenLink": "ไม่สามารถเปิดลิงก์ได้",
-  "pdfFontDownloading": "กำลังดาวน์โหลดฟอนต์สำหรับ PDF นี้…",
-  "pdfFontDownloadFailed": "ไม่สามารถดาวน์โหลดฟอนต์สำหรับ PDF นี้ได้ ตรวจสอบการเชื่อมต่อแล้วลองอีกครั้ง"
+  "pdfFontDownloading": "กำลังรับฟอนต์สำหรับ PDF นี้…",
+  "pdfFontDownloadFailed": "ไม่สามารถรับฟอนต์สำหรับ PDF นี้ได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง",
+  "packReceivingTitle": "กำลังรับแพ็กภาษา…",
+  "packReceivedTitle": "รับแพ็กแล้ว",
+  "errorOfflinePackNeeded": "ไม่มีการเชื่อมต่ออินเทอร์เน็ต ภาษานี้ต้องรับแพ็กหนึ่งครั้ง เชื่อมต่ออินเทอร์เน็ตแล้วลองอีกครั้ง",
+  "errorPackTooSlow": "การรับแพ็กภาษาใช้เวลานานเกินไป การเชื่อมต่ออินเทอร์เน็ตของคุณอาจอ่อน ลองอีกครั้ง"
 }

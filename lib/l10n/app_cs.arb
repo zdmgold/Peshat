@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "V obrázku nebyl nalezen žádný text",
   "errorImageUnreadable": "Obrázek nelze přečíst",
-  "errorModelDownloadFailed": "Model překladu nelze stáhnout",
+  "errorModelDownloadFailed": "Jazykový balíček se nepodařilo přijmout. Zkontrolujte připojení k internetu a zkuste to znovu.",
   "errorUnsupportedLanguage": "Tento jazyk zatím není podporován",
   "errorOcrFailed": "Rozpoznání textu selhalo",
   "errorTranslationFailed": "Překlad selhal",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Volby ochrany soukromí u reklam",
   "followSystemLabel": "Podle systému",
   "couldNotOpenLink": "Odkaz se nepodařilo otevřít",
-  "pdfFontDownloading": "Stahuje se písmo pro toto PDF…",
-  "pdfFontDownloadFailed": "Písmo pro toto PDF se nepodařilo stáhnout. Zkontrolujte připojení a zkuste to znovu."
+  "pdfFontDownloading": "Přijímá se písmo pro toto PDF…",
+  "pdfFontDownloadFailed": "Písmo pro toto PDF se nepodařilo přijmout. Zkontrolujte připojení k internetu a zkuste to znovu.",
+  "packReceivingTitle": "Přijímá se jazykový balíček…",
+  "packReceivedTitle": "Balíček přijat",
+  "errorOfflinePackNeeded": "Žádné připojení k internetu. Tento jazyk vyžaduje jednorázové přijetí balíčku. Připojte se k internetu a zkuste to znovu.",
+  "errorPackTooSlow": "Přijetí jazykového balíčku trvá příliš dlouho. Vaše připojení k internetu může být slabé. Zkuste to znovu."
 }

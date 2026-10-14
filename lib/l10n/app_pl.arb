@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Nie znaleziono tekstu na obrazie",
   "errorImageUnreadable": "Nie można odczytać obrazu",
-  "errorModelDownloadFailed": "Nie udało się pobrać modelu tłumaczenia",
+  "errorModelDownloadFailed": "Nie udało się odebrać pakietu językowego. Sprawdź połączenie z internetem i spróbuj ponownie.",
   "errorUnsupportedLanguage": "Ten język nie jest jeszcze obsługiwany",
   "errorOcrFailed": "Rozpoznawanie tekstu nie powiodło się",
   "errorTranslationFailed": "Tłumaczenie nie powiodło się",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Opcje prywatności reklam",
   "followSystemLabel": "Zgodnie z systemem",
   "couldNotOpenLink": "Nie można otworzyć linku",
-  "pdfFontDownloading": "Pobieranie czcionki dla tego pliku PDF…",
-  "pdfFontDownloadFailed": "Nie udało się pobrać czcionki dla tego pliku PDF. Sprawdź połączenie i spróbuj ponownie."
+  "pdfFontDownloading": "Odbieranie czcionki dla tego pliku PDF…",
+  "pdfFontDownloadFailed": "Nie udało się odebrać czcionki dla tego pliku PDF. Sprawdź połączenie z internetem i spróbuj ponownie.",
+  "packReceivingTitle": "Odbieranie pakietu językowego…",
+  "packReceivedTitle": "Pakiet odebrany",
+  "errorOfflinePackNeeded": "Brak połączenia z internetem. Ten język wymaga jednorazowego odebrania pakietu. Połącz się z internetem i spróbuj ponownie.",
+  "errorPackTooSlow": "Odbieranie pakietu językowego trwa zbyt długo. Twoje połączenie z internetem może być słabe. Spróbuj ponownie."
 }

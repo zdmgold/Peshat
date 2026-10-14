@@ -104,7 +104,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get errorImageUnreadable => 'Не вдалося прочитати зображення';
 
   @override
-  String get errorModelDownloadFailed => 'Не вдалося завантажити модель перекладу';
+  String get errorModelDownloadFailed => 'Не вдалося отримати мовний пакет. Перевірте підключення до інтернету та повторіть спробу.';
 
   @override
   String get errorUnsupportedLanguage => 'Ця мова поки не підтримується';
@@ -314,8 +314,20 @@ class AppLocalizationsUk extends AppLocalizations {
   String get couldNotOpenLink => 'Не вдалося відкрити посилання';
 
   @override
-  String get pdfFontDownloading => 'Завантаження шрифту для цього PDF…';
+  String get pdfFontDownloading => 'Отримання шрифту для цього PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Не вдалося завантажити шрифт для цього PDF. Перевірте підключення й повторіть спробу.';
+  String get pdfFontDownloadFailed => 'Не вдалося отримати шрифт для цього PDF. Перевірте підключення до інтернету та повторіть спробу.';
+
+  @override
+  String get packReceivingTitle => 'Отримання мовного пакета…';
+
+  @override
+  String get packReceivedTitle => 'Пакет отримано';
+
+  @override
+  String get errorOfflinePackNeeded => 'Немає підключення до інтернету. Для цієї мови потрібно один раз отримати пакет. Підключіться до інтернету та повторіть спробу.';
+
+  @override
+  String get errorPackTooSlow => 'Отримання мовного пакета триває надто довго. Можливо, у вас слабке підключення до інтернету. Повторіть спробу.';
 }

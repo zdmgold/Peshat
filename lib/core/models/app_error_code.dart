@@ -12,6 +12,12 @@ enum AppErrorCode {
   /// languages involved (network failure, storage full, MDM block).
   modelDownloadFailed,
 
+  /// A language pack is needed but the phone has no internet connection.
+  offlinePackNeeded,
+
+  /// A language pack took too long to arrive (weak connection).
+  packTooSlow,
+
   /// The requested language is not one ML Kit can translate.
   unsupportedLanguage,
 

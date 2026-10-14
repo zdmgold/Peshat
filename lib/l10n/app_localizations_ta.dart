@@ -104,7 +104,7 @@ class AppLocalizationsTa extends AppLocalizations {
   String get errorImageUnreadable => 'படத்தைப் படிக்க முடியவில்லை';
 
   @override
-  String get errorModelDownloadFailed => 'மொழிபெயர்ப்பு மாடலைப் பதிவிறக்க முடியவில்லை';
+  String get errorModelDownloadFailed => 'மொழித் தொகுப்பைப் பெற முடியவில்லை. உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்.';
 
   @override
   String get errorUnsupportedLanguage => 'இந்த மொழி இன்னும் ஆதரிக்கப்படவில்லை';
@@ -314,8 +314,20 @@ class AppLocalizationsTa extends AppLocalizations {
   String get couldNotOpenLink => 'இணைப்பைத் திறக்க முடியவில்லை';
 
   @override
-  String get pdfFontDownloading => 'இந்த PDF-க்கான எழுத்துருவைப் பதிவிறக்குகிறது…';
+  String get pdfFontDownloading => 'இந்த PDF-க்கான எழுத்துருவைப் பெறுகிறது…';
 
   @override
-  String get pdfFontDownloadFailed => 'இந்த PDF-க்கான எழுத்துருவைப் பதிவிறக்க முடியவில்லை. உங்கள் இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்.';
+  String get pdfFontDownloadFailed => 'இந்த PDF-க்கான எழுத்துருவைப் பெற முடியவில்லை. உங்கள் இணைய இணைப்பைச் சரிபார்த்து மீண்டும் முயலவும்.';
+
+  @override
+  String get packReceivingTitle => 'மொழித் தொகுப்பைப் பெறுகிறது…';
+
+  @override
+  String get packReceivedTitle => 'தொகுப்பு பெறப்பட்டது';
+
+  @override
+  String get errorOfflinePackNeeded => 'இணைய இணைப்பு இல்லை. இந்த மொழிக்கு ஒருமுறை பெற வேண்டிய தொகுப்பு தேவை. இணையத்துடன் இணைந்து மீண்டும் முயலவும்.';
+
+  @override
+  String get errorPackTooSlow => 'மொழித் தொகுப்பைப் பெற அதிக நேரம் ஆகிறது. உங்கள் இணைய இணைப்பு பலவீனமாக இருக்கலாம். மீண்டும் முயலவும்.';
 }

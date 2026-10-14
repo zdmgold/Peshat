@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}، {nativeName}",
   "errorNoTextDetected": "تصویر میں کوئی متن نہیں ملا",
   "errorImageUnreadable": "تصویر پڑھی نہیں جا سکی",
-  "errorModelDownloadFailed": "ترجمہ ماڈل ڈاؤن لوڈ نہیں ہو سکا",
+  "errorModelDownloadFailed": "زبان کا پیک موصول نہیں ہو سکا۔ اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔",
   "errorUnsupportedLanguage": "یہ زبان ابھی معاون نہیں",
   "errorOcrFailed": "متن کی شناخت ناکام",
   "errorTranslationFailed": "ترجمہ ناکام",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "اشتہارات کی رازداری کے اختیارات",
   "followSystemLabel": "سسٹم کے مطابق",
   "couldNotOpenLink": "لنک نہیں کھل سکا",
-  "pdfFontDownloading": "اس PDF کے لیے فونٹ ڈاؤن لوڈ ہو رہا ہے…",
-  "pdfFontDownloadFailed": "اس PDF کے لیے فونٹ ڈاؤن لوڈ نہیں ہو سکا۔ اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔"
+  "pdfFontDownloading": "اس PDF کے لیے فونٹ موصول ہو رہا ہے…",
+  "pdfFontDownloadFailed": "اس PDF کے لیے فونٹ موصول نہیں ہو سکا۔ اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔",
+  "packReceivingTitle": "زبان کا پیک موصول ہو رہا ہے…",
+  "packReceivedTitle": "پیک موصول ہو گیا",
+  "errorOfflinePackNeeded": "انٹرنیٹ کنکشن نہیں ہے۔ اس زبان کے لیے ایک بار موصول کیے جانے والے پیک کی ضرورت ہے۔ انٹرنیٹ سے جڑیں اور دوبارہ کوشش کریں۔",
+  "errorPackTooSlow": "زبان کا پیک موصول ہونے میں بہت وقت لگ رہا ہے۔ ہو سکتا ہے آپ کا انٹرنیٹ کنکشن کمزور ہو۔ دوبارہ کوشش کریں۔"
 }

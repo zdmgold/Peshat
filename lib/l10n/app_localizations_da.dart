@@ -104,7 +104,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get errorImageUnreadable => 'Billedet kunne ikke læses';
 
   @override
-  String get errorModelDownloadFailed => 'Oversættelsesmodellen kunne ikke downloades';
+  String get errorModelDownloadFailed => 'Sprogpakken kunne ikke modtages. Tjek din internetforbindelse, og prøv igen.';
 
   @override
   String get errorUnsupportedLanguage => 'Dette sprog understøttes ikke endnu';
@@ -314,8 +314,20 @@ class AppLocalizationsDa extends AppLocalizations {
   String get couldNotOpenLink => 'Linket kunne ikke åbnes';
 
   @override
-  String get pdfFontDownloading => 'Downloader skrifttype til denne PDF…';
+  String get pdfFontDownloading => 'Modtager skrifttype til denne PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Skrifttypen til denne PDF kunne ikke downloades. Tjek din forbindelse, og prøv igen.';
+  String get pdfFontDownloadFailed => 'Skrifttypen til denne PDF kunne ikke modtages. Tjek din internetforbindelse, og prøv igen.';
+
+  @override
+  String get packReceivingTitle => 'Modtager sprogpakke…';
+
+  @override
+  String get packReceivedTitle => 'Pakke modtaget';
+
+  @override
+  String get errorOfflinePackNeeded => 'Ingen internetforbindelse. Dette sprog kræver, at en pakke modtages én gang. Opret forbindelse til internettet, og prøv igen.';
+
+  @override
+  String get errorPackTooSlow => 'Det tager for lang tid at modtage sprogpakken. Din internetforbindelse kan være svag. Prøv igen.';
 }

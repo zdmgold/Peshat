@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "រកមិនឃើញអត្ថបទក្នុងរូបភាព",
   "errorImageUnreadable": "មិនអាចអានរូបភាពបានទេ",
-  "errorModelDownloadFailed": "មិនអាចទាញយកគំរូបកប្រែបានទេ",
+  "errorModelDownloadFailed": "មិនអាចទទួលកញ្ចប់ភាសាបានទេ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក ហើយសាកល្បងម្តងទៀត។",
   "errorUnsupportedLanguage": "ភាសានេះមិនទាន់ត្រូវបានគាំទ្រនៅឡើយទេ",
   "errorOcrFailed": "ការស្គាល់អត្ថបទបរាជ័យ",
   "errorTranslationFailed": "ការបកប្រែបរាជ័យ",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "ជម្រើសឯកជនភាពនៃការផ្សាយពាណិជ្ជកម្ម",
   "followSystemLabel": "តាមប្រព័ន្ធ",
   "couldNotOpenLink": "មិនអាចបើកតំណបានទេ",
-  "pdfFontDownloading": "កំពុងទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះ…",
-  "pdfFontDownloadFailed": "មិនអាចទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះបានទេ។ សូមពិនិត្យការតភ្ជាប់របស់អ្នក ហើយព្យាយាមម្ដងទៀត។"
+  "pdfFontDownloading": "កំពុងទទួលពុម្ពអក្សរសម្រាប់ PDF នេះ…",
+  "pdfFontDownloadFailed": "មិនអាចទទួលពុម្ពអក្សរសម្រាប់ PDF នេះបានទេ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក ហើយសាកល្បងម្តងទៀត។",
+  "packReceivingTitle": "កំពុងទទួលកញ្ចប់ភាសា…",
+  "packReceivedTitle": "បានទទួលកញ្ចប់",
+  "errorOfflinePackNeeded": "គ្មានការតភ្ជាប់អ៊ីនធឺណិតទេ។ ភាសានេះត្រូវការកញ្ចប់មួយដែលទទួលតែម្តង។ សូមភ្ជាប់អ៊ីនធឺណិត ហើយសាកល្បងម្តងទៀត។",
+  "errorPackTooSlow": "កញ្ចប់ភាសាកំពុងចំណាយពេលយូរពេកក្នុងការទទួល។ ការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នកប្រហែលជាខ្សោយ។ សូមសាកល្បងម្តងទៀត។"
 }

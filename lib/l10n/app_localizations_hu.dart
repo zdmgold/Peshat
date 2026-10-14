@@ -104,7 +104,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get errorImageUnreadable => 'A kép nem olvasható';
 
   @override
-  String get errorModelDownloadFailed => 'A fordítási modellt nem sikerült letölteni';
+  String get errorModelDownloadFailed => 'A nyelvi csomagot nem sikerült megkapni. Ellenőrizze az internetkapcsolatot, és próbálja újra.';
 
   @override
   String get errorUnsupportedLanguage => 'Ez a nyelv még nem támogatott';
@@ -314,8 +314,20 @@ class AppLocalizationsHu extends AppLocalizations {
   String get couldNotOpenLink => 'A hivatkozás nem nyitható meg';
 
   @override
-  String get pdfFontDownloading => 'Betűtípus letöltése ehhez a PDF-hez…';
+  String get pdfFontDownloading => 'Betűtípus fogadása ehhez a PDF-hez…';
 
   @override
-  String get pdfFontDownloadFailed => 'Nem sikerült letölteni a betűtípust ehhez a PDF-hez. Ellenőrizd a kapcsolatot, és próbáld újra.';
+  String get pdfFontDownloadFailed => 'A PDF betűtípusát nem sikerült megkapni. Ellenőrizze az internetkapcsolatot, és próbálja újra.';
+
+  @override
+  String get packReceivingTitle => 'Nyelvi csomag fogadása…';
+
+  @override
+  String get packReceivedTitle => 'Csomag megkapva';
+
+  @override
+  String get errorOfflinePackNeeded => 'Nincs internetkapcsolat. Ehhez a nyelvhez egyszeri csomagfogadás szükséges. Csatlakozzon az internethez, és próbálja újra.';
+
+  @override
+  String get errorPackTooSlow => 'A nyelvi csomag fogadása túl sokáig tart. Lehet, hogy gyenge az internetkapcsolata. Próbálja újra.';
 }

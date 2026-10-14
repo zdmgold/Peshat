@@ -136,6 +136,10 @@ class _ResultScreenState extends State<ResultScreen> {
         return l10n.errorImageUnreadable;
       case AppErrorCode.modelDownloadFailed:
         return l10n.errorModelDownloadFailed;
+      case AppErrorCode.offlinePackNeeded:
+        return l10n.errorOfflinePackNeeded;
+      case AppErrorCode.packTooSlow:
+        return l10n.errorPackTooSlow;
       case AppErrorCode.unsupportedLanguage:
         return l10n.errorUnsupportedLanguage;
       case AppErrorCode.ocrFailed:
@@ -298,6 +302,24 @@ class _ResultScreenState extends State<ResultScreen> {
       return _StatusView(
         message:
             '${l10n.statusPreparingModel} ${languageDisplayName(state.targetLanguage)}',
+      );
+    }
+    if (state is ScanReceivingPack) {
+      return _PackView(
+        title: l10n.packReceivingTitle,
+        languageName: languageDisplayName(state.current),
+        received: false,
+        cancelLabel: l10n.cancelButtonLabel,
+        onCancel: () {
+          _provider.cancel();
+          Navigator.of(context).maybePop();
+        },
+      );
+    }
+    if (state is ScanPackReceived) {
+      return _PackView(
+        title: l10n.packReceivedTitle,
+        received: true,
       );
     }
     if (state is ScanTranslating) {
@@ -534,6 +556,139 @@ class _TranslationTab extends StatelessWidget {
 // ---------------------------------------------------------------------------
 // Status + error views
 // ---------------------------------------------------------------------------
+
+/// Shown while a language pack is arriving: a bar that keeps moving (Google
+/// gives no progress figure, so it never claims a percentage), then fills and
+/// shows a tick once the pack is received.
+class _PackView extends StatefulWidget {
+  final String title;
+  final String? languageName;
+  final bool received;
+  final String? cancelLabel;
+  final VoidCallback? onCancel;
+  const _PackView({
+    required this.title,
+    required this.received,
+    this.languageName,
+    this.cancelLabel,
+    this.onCancel,
+  });
+
+  @override
+  State<_PackView> createState() => _PackViewState();
+}
+
+class _PackViewState extends State<_PackView>
+    with SingleTickerProviderStateMixin {
+  late final AnimationController _c = AnimationController(
+    vsync: this,
+    duration: const Duration(milliseconds: 1400),
+  )..repeat();
+
+  @override
+  void dispose() {
+    _c.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
+    final textPrimary =
+        isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
+    final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
+    final track =
+        isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
+    const barWidth = 220.0;
+    const barHeight = 6.0;
+    return Center(
+      child: Padding(
+        padding: const EdgeInsets.all(Spacing.xl),
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            if (widget.received)
+              PeshatIcon(icon: AppIcons.check, size: 36, color: accent)
+            else
+              const SizedBox(height: 36),
+            const SizedBox(height: Spacing.md),
+            Semantics(
+              liveRegion: true,
+              child: Text(
+                widget.title,
+                textAlign: TextAlign.center,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 17,
+                  fontWeight: FontWeight.w600,
+                  color: textPrimary,
+                ),
+              ),
+            ),
+            if (widget.languageName != null) ...[
+              const SizedBox(height: 4),
+              Text(
+                widget.languageName!,
+                textAlign: TextAlign.center,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 15,
+                  color: textSecondary,
+                ),
+              ),
+            ],
+            const SizedBox(height: Spacing.lg),
+            ClipRRect(
+              borderRadius: BorderRadius.circular(barHeight / 2),
+              child: SizedBox(
+                width: barWidth,
+                height: barHeight,
+                child: ColoredBox(
+                  color: track,
+                  child: widget.received
+                      ? ColoredBox(color: accent)
+                      : AnimatedBuilder(
+                          animation: _c,
+                          builder: (_, __) {
+                            const seg = barWidth * 0.4;
+                            final left =
+                                (barWidth + seg) * _c.value - seg;
+                            return Stack(
+                              children: [
+                                Positioned(
+                                  left: left,
+                                  width: seg,
+                                  top: 0,
+                                  bottom: 0,
+                                  child: ColoredBox(color: accent),
+                                ),
+                              ],
+                            );
+                          },
+                        ),
+                ),
+              ),
+            ),
+            if (!widget.received && widget.onCancel != null) ...[
+              const SizedBox(height: Spacing.lg),
+              CupertinoButton(
+                onPressed: widget.onCancel,
+                child: Text(
+                  widget.cancelLabel ?? '',
+                  style: AppTypography.chrome.copyWith(
+                    fontSize: 15,
+                    fontWeight: FontWeight.w600,
+                    color: accent,
+                  ),
+                ),
+              ),
+            ],
+          ],
+        ),
+      ),
+    );
+  }
+}
 
 class _StatusView extends StatelessWidget {
   final String message;

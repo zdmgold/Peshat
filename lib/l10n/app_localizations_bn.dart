@@ -104,7 +104,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get errorImageUnreadable => 'ছবিটি পড়া যায়নি';
 
   @override
-  String get errorModelDownloadFailed => 'অনুবাদ মডেল ডাউনলোড করা যায়নি';
+  String get errorModelDownloadFailed => 'ভাষা প্যাকটি গ্রহণ করা যায়নি। আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।';
 
   @override
   String get errorUnsupportedLanguage => 'এই ভাষা এখনো সমর্থিত নয়';
@@ -314,8 +314,20 @@ class AppLocalizationsBn extends AppLocalizations {
   String get couldNotOpenLink => 'লিংক খোলা যায়নি';
 
   @override
-  String get pdfFontDownloading => 'এই PDF-এর জন্য ফন্ট ডাউনলোড হচ্ছে…';
+  String get pdfFontDownloading => 'এই PDF-এর ফন্ট গ্রহণ করা হচ্ছে…';
 
   @override
-  String get pdfFontDownloadFailed => 'এই PDF-এর জন্য ফন্ট ডাউনলোড করা যায়নি। আপনার সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।';
+  String get pdfFontDownloadFailed => 'এই PDF-এর ফন্ট গ্রহণ করা যায়নি। আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।';
+
+  @override
+  String get packReceivingTitle => 'ভাষা প্যাক গ্রহণ করা হচ্ছে…';
+
+  @override
+  String get packReceivedTitle => 'প্যাক গ্রহণ করা হয়েছে';
+
+  @override
+  String get errorOfflinePackNeeded => 'ইন্টারনেট সংযোগ নেই। এই ভাষার জন্য একবারের একটি প্যাক গ্রহণ করতে হবে। ইন্টারনেটে সংযুক্ত হয়ে আবার চেষ্টা করুন।';
+
+  @override
+  String get errorPackTooSlow => 'ভাষা প্যাক গ্রহণ করতে অনেক সময় লাগছে। আপনার ইন্টারনেট সংযোগ দুর্বল হতে পারে। আবার চেষ্টা করুন।';
 }

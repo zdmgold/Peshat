@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "В изображението не е намерен текст",
   "errorImageUnreadable": "Изображението не можа да бъде прочетено",
-  "errorModelDownloadFailed": "Моделът за превод не можа да бъде изтеглен",
+  "errorModelDownloadFailed": "Езиковият пакет не можа да бъде получен. Проверете интернет връзката си и опитайте отново.",
   "errorUnsupportedLanguage": "Този език все още не се поддържа",
   "errorOcrFailed": "Разпознаването на текст не бе успешно",
   "errorTranslationFailed": "Преводът не бе успешен",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Опции за поверителност на рекламите",
   "followSystemLabel": "Следване на системата",
   "couldNotOpenLink": "Връзката не можа да бъде отворена",
-  "pdfFontDownloading": "Изтегляне на шрифт за този PDF…",
-  "pdfFontDownloadFailed": "Шрифтът за този PDF не можа да бъде изтеглен. Проверете връзката си и опитайте отново."
+  "pdfFontDownloading": "Получава се шрифт за този PDF…",
+  "pdfFontDownloadFailed": "Шрифтът за този PDF не можа да бъде получен. Проверете интернет връзката си и опитайте отново.",
+  "packReceivingTitle": "Получава се езиков пакет…",
+  "packReceivedTitle": "Пакетът е получен",
+  "errorOfflinePackNeeded": "Няма връзка с интернет. Този език изисква еднократно получаване на пакет. Свържете се с интернет и опитайте отново.",
+  "errorPackTooSlow": "Получаването на езиковия пакет отнема твърде дълго. Интернет връзката ви може да е слаба. Опитайте отново."
 }

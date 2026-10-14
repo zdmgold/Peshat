@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Kuvasta ei löytynyt tekstiä",
   "errorImageUnreadable": "Kuvaa ei voitu lukea",
-  "errorModelDownloadFailed": "Käännösmallia ei voitu ladata",
+  "errorModelDownloadFailed": "Kielipakettia ei voitu vastaanottaa. Tarkista internetyhteytesi ja yritä uudelleen.",
   "errorUnsupportedLanguage": "Tätä kieltä ei tueta vielä",
   "errorOcrFailed": "Tekstintunnistus epäonnistui",
   "errorTranslationFailed": "Käännös epäonnistui",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Mainosten tietosuojavalinnat",
   "followSystemLabel": "Seuraa järjestelmää",
   "couldNotOpenLink": "Linkkiä ei voitu avata",
-  "pdfFontDownloading": "Ladataan fonttia tähän PDF-tiedostoon…",
-  "pdfFontDownloadFailed": "Tämän PDF-tiedoston fonttia ei voitu ladata. Tarkista yhteys ja yritä uudelleen."
+  "pdfFontDownloading": "Vastaanotetaan fonttia tälle PDF:lle…",
+  "pdfFontDownloadFailed": "Tämän PDF:n fonttia ei voitu vastaanottaa. Tarkista internetyhteytesi ja yritä uudelleen.",
+  "packReceivingTitle": "Vastaanotetaan kielipakettia…",
+  "packReceivedTitle": "Paketti vastaanotettu",
+  "errorOfflinePackNeeded": "Ei internetyhteyttä. Tämä kieli tarvitsee kertaluonteisen paketin vastaanottamisen. Muodosta internetyhteys ja yritä uudelleen.",
+  "errorPackTooSlow": "Kielipaketin vastaanottaminen kestää liian kauan. Internetyhteytesi voi olla heikko. Yritä uudelleen."
 }

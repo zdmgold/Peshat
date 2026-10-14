@@ -104,7 +104,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get errorImageUnreadable => '画像を読み取れませんでした';
 
   @override
-  String get errorModelDownloadFailed => '翻訳モデルをダウンロードできませんでした';
+  String get errorModelDownloadFailed => '言語パックを受信できませんでした。インターネット接続を確認して、もう一度お試しください。';
 
   @override
   String get errorUnsupportedLanguage => 'この言語はまだ対応していません';
@@ -314,8 +314,20 @@ class AppLocalizationsJa extends AppLocalizations {
   String get couldNotOpenLink => 'リンクを開けませんでした';
 
   @override
-  String get pdfFontDownloading => 'このPDF用のフォントをダウンロード中…';
+  String get pdfFontDownloading => 'このPDF用のフォントを受信中…';
 
   @override
-  String get pdfFontDownloadFailed => 'このPDF用のフォントをダウンロードできませんでした。接続を確認して、もう一度お試しください。';
+  String get pdfFontDownloadFailed => 'このPDF用のフォントを受信できませんでした。インターネット接続を確認して、もう一度お試しください。';
+
+  @override
+  String get packReceivingTitle => '言語パックを受信中…';
+
+  @override
+  String get packReceivedTitle => 'パックを受信しました';
+
+  @override
+  String get errorOfflinePackNeeded => 'インターネットに接続されていません。この言語には、一度だけ受信するパックが必要です。インターネットに接続して、もう一度お試しください。';
+
+  @override
+  String get errorPackTooSlow => '言語パックの受信に時間がかかっています。インターネット接続が弱い可能性があります。もう一度お試しください。';
 }

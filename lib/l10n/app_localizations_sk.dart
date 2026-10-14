@@ -104,7 +104,7 @@ class AppLocalizationsSk extends AppLocalizations {
   String get errorImageUnreadable => 'Obrázok sa nepodarilo prečítať';
 
   @override
-  String get errorModelDownloadFailed => 'Model prekladu sa nepodarilo stiahnuť';
+  String get errorModelDownloadFailed => 'Jazykový balík sa nepodarilo prijať. Skontrolujte pripojenie na internet a skúste to znova.';
 
   @override
   String get errorUnsupportedLanguage => 'Tento jazyk zatiaľ nie je podporovaný';
@@ -314,8 +314,20 @@ class AppLocalizationsSk extends AppLocalizations {
   String get couldNotOpenLink => 'Odkaz sa nepodarilo otvoriť';
 
   @override
-  String get pdfFontDownloading => 'Sťahuje sa písmo pre tento PDF…';
+  String get pdfFontDownloading => 'Prijíma sa písmo pre toto PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Písmo pre tento PDF sa nepodarilo stiahnuť. Skontrolujte pripojenie a skúste to znova.';
+  String get pdfFontDownloadFailed => 'Písmo pre toto PDF sa nepodarilo prijať. Skontrolujte pripojenie na internet a skúste to znova.';
+
+  @override
+  String get packReceivingTitle => 'Prijíma sa jazykový balík…';
+
+  @override
+  String get packReceivedTitle => 'Balík prijatý';
+
+  @override
+  String get errorOfflinePackNeeded => 'Žiadne pripojenie na internet. Tento jazyk vyžaduje jednorazové prijatie balíka. Pripojte sa na internet a skúste to znova.';
+
+  @override
+  String get errorPackTooSlow => 'Prijatie jazykového balíka trvá príliš dlho. Vaše pripojenie na internet môže byť slabé. Skúste to znova.';
 }

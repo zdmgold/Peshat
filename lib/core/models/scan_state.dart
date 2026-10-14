@@ -7,6 +7,8 @@ sealed class ScanState {
   const factory ScanState.idle() = ScanIdle;
   const factory ScanState.recognizing() = ScanRecognizing;
   const factory ScanState.preparingModel(String t) = ScanPreparingModel;
+  const factory ScanState.receivingPack(String current) = ScanReceivingPack;
+  const factory ScanState.packReceived() = ScanPackReceived;
   const factory ScanState.translating(String src, String lang) = ScanTranslating;
   const factory ScanState.done({
     required String sourceText,
@@ -27,6 +29,17 @@ class ScanRecognizing extends ScanState { const ScanRecognizing(); }
 class ScanPreparingModel extends ScanState {
   final String targetLanguage;
   const ScanPreparingModel(this.targetLanguage);
+}
+
+/// A language pack is arriving. [current] is the app code of the language
+/// whose pack is being received right now.
+class ScanReceivingPack extends ScanState {
+  final String current;
+  const ScanReceivingPack(this.current);
+}
+
+class ScanPackReceived extends ScanState {
+  const ScanPackReceived();
 }
 
 class ScanTranslating extends ScanState {

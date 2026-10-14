@@ -104,7 +104,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get errorImageUnreadable => 'Không thể đọc ảnh';
 
   @override
-  String get errorModelDownloadFailed => 'Không thể tải xuống mô hình dịch';
+  String get errorModelDownloadFailed => 'Không thể nhận gói ngôn ngữ. Hãy kiểm tra kết nối internet của bạn và thử lại.';
 
   @override
   String get errorUnsupportedLanguage => 'Ngôn ngữ này chưa được hỗ trợ';
@@ -314,8 +314,20 @@ class AppLocalizationsVi extends AppLocalizations {
   String get couldNotOpenLink => 'Không thể mở liên kết';
 
   @override
-  String get pdfFontDownloading => 'Đang tải phông chữ cho PDF này…';
+  String get pdfFontDownloading => 'Đang nhận phông chữ cho tệp PDF này…';
 
   @override
-  String get pdfFontDownloadFailed => 'Không thể tải phông chữ cho PDF này. Hãy kiểm tra kết nối và thử lại.';
+  String get pdfFontDownloadFailed => 'Không thể nhận phông chữ cho tệp PDF này. Hãy kiểm tra kết nối internet của bạn và thử lại.';
+
+  @override
+  String get packReceivingTitle => 'Đang nhận gói ngôn ngữ…';
+
+  @override
+  String get packReceivedTitle => 'Đã nhận gói';
+
+  @override
+  String get errorOfflinePackNeeded => 'Không có kết nối internet. Ngôn ngữ này cần nhận một gói duy nhất một lần. Hãy kết nối internet và thử lại.';
+
+  @override
+  String get errorPackTooSlow => 'Việc nhận gói ngôn ngữ mất quá nhiều thời gian. Kết nối internet của bạn có thể yếu. Hãy thử lại.';
 }

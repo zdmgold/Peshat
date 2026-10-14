@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Na obrázku sa nenašiel žiadny text",
   "errorImageUnreadable": "Obrázok sa nepodarilo prečítať",
-  "errorModelDownloadFailed": "Model prekladu sa nepodarilo stiahnuť",
+  "errorModelDownloadFailed": "Jazykový balík sa nepodarilo prijať. Skontrolujte pripojenie na internet a skúste to znova.",
   "errorUnsupportedLanguage": "Tento jazyk zatiaľ nie je podporovaný",
   "errorOcrFailed": "Rozpoznávanie textu zlyhalo",
   "errorTranslationFailed": "Preklad zlyhal",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Voľby ochrany súkromia reklám",
   "followSystemLabel": "Podľa systému",
   "couldNotOpenLink": "Odkaz sa nepodarilo otvoriť",
-  "pdfFontDownloading": "Sťahuje sa písmo pre tento PDF…",
-  "pdfFontDownloadFailed": "Písmo pre tento PDF sa nepodarilo stiahnuť. Skontrolujte pripojenie a skúste to znova."
+  "pdfFontDownloading": "Prijíma sa písmo pre toto PDF…",
+  "pdfFontDownloadFailed": "Písmo pre toto PDF sa nepodarilo prijať. Skontrolujte pripojenie na internet a skúste to znova.",
+  "packReceivingTitle": "Prijíma sa jazykový balík…",
+  "packReceivedTitle": "Balík prijatý",
+  "errorOfflinePackNeeded": "Žiadne pripojenie na internet. Tento jazyk vyžaduje jednorazové prijatie balíka. Pripojte sa na internet a skúste to znova.",
+  "errorPackTooSlow": "Prijatie jazykového balíka trvá príliš dlho. Vaše pripojenie na internet môže byť slabé. Skúste to znova."
 }

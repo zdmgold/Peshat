@@ -41,7 +41,7 @@
   },
   "errorNoTextDetected": "No text found in the image",
   "errorImageUnreadable": "The image could not be read",
-  "errorModelDownloadFailed": "Translation model could not be downloaded",
+  "errorModelDownloadFailed": "The language pack could not be received. Check your internet connection and try again.",
   "errorUnsupportedLanguage": "This language is not supported yet",
   "errorOcrFailed": "Text recognition failed",
   "errorTranslationFailed": "Translation failed",
@@ -156,6 +156,10 @@
   "adPrivacyChoices": "Ad privacy choices",
   "followSystemLabel": "Follow system",
   "couldNotOpenLink": "Could not open link",
-  "pdfFontDownloading": "Downloading font for this PDF…",
-  "pdfFontDownloadFailed": "Could not download the font for this PDF. Check your connection and try again."
+  "pdfFontDownloading": "Receiving font for this PDF…",
+  "pdfFontDownloadFailed": "The font for this PDF could not be received. Check your internet connection and try again.",
+  "packReceivingTitle": "Receiving language pack…",
+  "packReceivedTitle": "Pack received",
+  "errorOfflinePackNeeded": "No internet connection. This language needs a one-time pack to be received. Connect to the internet and try again.",
+  "errorPackTooSlow": "The language pack is taking too long to be received. Your internet connection may be weak. Try again."
 }

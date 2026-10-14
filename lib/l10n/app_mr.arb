@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "प्रतिमेमध्ये मजकूर आढळला नाही",
   "errorImageUnreadable": "प्रतिमा वाचता आली नाही",
-  "errorModelDownloadFailed": "भाषांतर मॉडेल डाउनलोड करता आले नाही",
+  "errorModelDownloadFailed": "भाषा पॅक मिळू शकला नाही. तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.",
   "errorUnsupportedLanguage": "ही भाषा अद्याप समर्थित नाही",
   "errorOcrFailed": "मजकूर ओळख अयशस्वी झाली",
   "errorTranslationFailed": "भाषांतर अयशस्वी झाले",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "जाहिरात गोपनीयता पर्याय",
   "followSystemLabel": "सिस्टमनुसार",
   "couldNotOpenLink": "लिंक उघडता आली नाही",
-  "pdfFontDownloading": "या PDF साठी फॉन्ट डाउनलोड करत आहे…",
-  "pdfFontDownloadFailed": "या PDF साठी फॉन्ट डाउनलोड करता आला नाही. तुमचे कनेक्शन तपासा आणि पुन्हा प्रयत्न करा."
+  "pdfFontDownloading": "या PDF साठी फॉन्ट मिळत आहे…",
+  "pdfFontDownloadFailed": "या PDF साठी फॉन्ट मिळू शकला नाही. तुमचे इंटरनेट कनेक्शन तपासा आणि पुन्हा प्रयत्न करा.",
+  "packReceivingTitle": "भाषा पॅक मिळत आहे…",
+  "packReceivedTitle": "पॅक मिळाला",
+  "errorOfflinePackNeeded": "इंटरनेट कनेक्शन नाही. या भाषेसाठी एकदाच मिळवायचा पॅक आवश्यक आहे. इंटरनेटशी कनेक्ट करा आणि पुन्हा प्रयत्न करा.",
+  "errorPackTooSlow": "भाषा पॅक मिळण्यास खूप वेळ लागत आहे. तुमचे इंटरनेट कनेक्शन कमकुवत असू शकते. पुन्हा प्रयत्न करा."
 }

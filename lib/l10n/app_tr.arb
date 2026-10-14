@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Görselde metin bulunamadı",
   "errorImageUnreadable": "Görsel okunamadı",
-  "errorModelDownloadFailed": "Çeviri modeli indirilemedi",
+  "errorModelDownloadFailed": "Dil paketi alınamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.",
   "errorUnsupportedLanguage": "Bu dil henüz desteklenmiyor",
   "errorOcrFailed": "Metin tanıma başarısız",
   "errorTranslationFailed": "Çeviri başarısız",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Reklam gizlilik seçenekleri",
   "followSystemLabel": "Sistemi takip et",
   "couldNotOpenLink": "Bağlantı açılamadı",
-  "pdfFontDownloading": "Bu PDF için yazı tipi indiriliyor…",
-  "pdfFontDownloadFailed": "Bu PDF için yazı tipi indirilemedi. Bağlantınızı kontrol edip tekrar deneyin."
+  "pdfFontDownloading": "Bu PDF için yazı tipi alınıyor…",
+  "pdfFontDownloadFailed": "Bu PDF için yazı tipi alınamadı. İnternet bağlantınızı kontrol edip tekrar deneyin.",
+  "packReceivingTitle": "Dil paketi alınıyor…",
+  "packReceivedTitle": "Paket alındı",
+  "errorOfflinePackNeeded": "İnternet bağlantısı yok. Bu dil, bir kez alınması gereken bir paket gerektiriyor. İnternete bağlanıp tekrar deneyin.",
+  "errorPackTooSlow": "Dil paketinin alınması çok uzun sürüyor. İnternet bağlantınız zayıf olabilir. Tekrar deneyin."
 }

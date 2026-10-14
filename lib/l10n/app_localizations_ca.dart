@@ -104,7 +104,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get errorImageUnreadable => 'No s\'ha pogut llegir la imatge';
 
   @override
-  String get errorModelDownloadFailed => 'No s\'ha pogut baixar el model de traducció';
+  String get errorModelDownloadFailed => 'No s\'ha pogut rebre el paquet d\'idioma. Comprova la connexió a internet i torna-ho a provar.';
 
   @override
   String get errorUnsupportedLanguage => 'Aquest idioma encara no és compatible';
@@ -314,8 +314,20 @@ class AppLocalizationsCa extends AppLocalizations {
   String get couldNotOpenLink => 'No s\'ha pogut obrir l\'enllaç';
 
   @override
-  String get pdfFontDownloading => 'S\'està baixant el tipus de lletra per a aquest PDF…';
+  String get pdfFontDownloading => 'S\'està rebent el tipus de lletra d\'aquest PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'No s\'ha pogut baixar el tipus de lletra d\'aquest PDF. Comprova la connexió i torna-ho a provar.';
+  String get pdfFontDownloadFailed => 'No s\'ha pogut rebre el tipus de lletra d\'aquest PDF. Comprova la connexió a internet i torna-ho a provar.';
+
+  @override
+  String get packReceivingTitle => 'S\'està rebent el paquet d\'idioma…';
+
+  @override
+  String get packReceivedTitle => 'Paquet rebut';
+
+  @override
+  String get errorOfflinePackNeeded => 'No hi ha connexió a internet. Aquest idioma necessita rebre un paquet una sola vegada. Connecta\'t a internet i torna-ho a provar.';
+
+  @override
+  String get errorPackTooSlow => 'El paquet d\'idioma triga massa a rebre\'s. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.';
 }

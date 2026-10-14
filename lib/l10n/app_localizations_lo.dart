@@ -104,7 +104,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get errorImageUnreadable => 'ບໍ່ສາມາດອ່ານຮູບພາບໄດ້';
 
   @override
-  String get errorModelDownloadFailed => 'ບໍ່ສາມາດດາວໂຫລດໂມເດວແປໄດ້';
+  String get errorModelDownloadFailed => 'ບໍ່ສາມາດຮັບແພັກພາສາໄດ້. ກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລ້ວລອງໃໝ່.';
 
   @override
   String get errorUnsupportedLanguage => 'ພາສານີ້ຍັງບໍ່ໄດ້ຮັບການຮອງຮັບ';
@@ -314,8 +314,20 @@ class AppLocalizationsLo extends AppLocalizations {
   String get couldNotOpenLink => 'ບໍ່ສາມາດເປີດລິ້ງໄດ້';
 
   @override
-  String get pdfFontDownloading => 'ກຳລັງດາວໂຫຼດຟອນສຳລັບ PDF ນີ້…';
+  String get pdfFontDownloading => 'ກຳລັງຮັບຟອນສຳລັບ PDF ນີ້…';
 
   @override
-  String get pdfFontDownloadFailed => 'ບໍ່ສາມາດດາວໂຫຼດຟອນສຳລັບ PDF ນີ້ໄດ້. ກວດສອບການເຊື່ອມຕໍ່ຂອງທ່ານ ແລ້ວລອງໃໝ່.';
+  String get pdfFontDownloadFailed => 'ບໍ່ສາມາດຮັບຟອນສຳລັບ PDF ນີ້ໄດ້. ກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລ້ວລອງໃໝ່.';
+
+  @override
+  String get packReceivingTitle => 'ກຳລັງຮັບແພັກພາສາ…';
+
+  @override
+  String get packReceivedTitle => 'ໄດ້ຮັບແພັກແລ້ວ';
+
+  @override
+  String get errorOfflinePackNeeded => 'ບໍ່ມີການເຊື່ອມຕໍ່ອິນເຕີເນັດ. ພາສານີ້ຕ້ອງການແພັກທີ່ຮັບພຽງຄັ້ງດຽວ. ເຊື່ອມຕໍ່ອິນເຕີເນັດ ແລ້ວລອງໃໝ່.';
+
+  @override
+  String get errorPackTooSlow => 'ແພັກພາສາໃຊ້ເວລາຮັບດົນເກີນໄປ. ການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານອາດຈະອ່ອນ. ລອງໃໝ່.';
 }

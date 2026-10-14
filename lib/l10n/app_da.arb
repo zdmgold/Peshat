@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Der blev ikke fundet tekst i billedet",
   "errorImageUnreadable": "Billedet kunne ikke læses",
-  "errorModelDownloadFailed": "Oversættelsesmodellen kunne ikke downloades",
+  "errorModelDownloadFailed": "Sprogpakken kunne ikke modtages. Tjek din internetforbindelse, og prøv igen.",
   "errorUnsupportedLanguage": "Dette sprog understøttes ikke endnu",
   "errorOcrFailed": "Tekstgenkendelse mislykkedes",
   "errorTranslationFailed": "Oversættelsen mislykkedes",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Valg for annoncers privatliv",
   "followSystemLabel": "Følg systemet",
   "couldNotOpenLink": "Linket kunne ikke åbnes",
-  "pdfFontDownloading": "Downloader skrifttype til denne PDF…",
-  "pdfFontDownloadFailed": "Skrifttypen til denne PDF kunne ikke downloades. Tjek din forbindelse, og prøv igen."
+  "pdfFontDownloading": "Modtager skrifttype til denne PDF…",
+  "pdfFontDownloadFailed": "Skrifttypen til denne PDF kunne ikke modtages. Tjek din internetforbindelse, og prøv igen.",
+  "packReceivingTitle": "Modtager sprogpakke…",
+  "packReceivedTitle": "Pakke modtaget",
+  "errorOfflinePackNeeded": "Ingen internetforbindelse. Dette sprog kræver, at en pakke modtages én gang. Opret forbindelse til internettet, og prøv igen.",
+  "errorPackTooSlow": "Det tager for lang tid at modtage sprogpakken. Din internetforbindelse kan være svag. Prøv igen."
 }

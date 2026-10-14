@@ -104,7 +104,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get errorImageUnreadable => 'Imaginea nu a putut fi citită';
 
   @override
-  String get errorModelDownloadFailed => 'Modelul de traducere nu a putut fi descărcat';
+  String get errorModelDownloadFailed => 'Pachetul de limbă nu a putut fi primit. Verificați conexiunea la internet și încercați din nou.';
 
   @override
   String get errorUnsupportedLanguage => 'Această limbă nu este încă acceptată';
@@ -314,8 +314,20 @@ class AppLocalizationsRo extends AppLocalizations {
   String get couldNotOpenLink => 'Linkul nu a putut fi deschis';
 
   @override
-  String get pdfFontDownloading => 'Se descarcă fontul pentru acest PDF…';
+  String get pdfFontDownloading => 'Se primește fontul pentru acest PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Fontul pentru acest PDF nu a putut fi descărcat. Verifică conexiunea și încearcă din nou.';
+  String get pdfFontDownloadFailed => 'Fontul pentru acest PDF nu a putut fi primit. Verificați conexiunea la internet și încercați din nou.';
+
+  @override
+  String get packReceivingTitle => 'Se primește pachetul de limbă…';
+
+  @override
+  String get packReceivedTitle => 'Pachet primit';
+
+  @override
+  String get errorOfflinePackNeeded => 'Nu există conexiune la internet. Această limbă are nevoie de un pachet care se primește o singură dată. Conectați-vă la internet și încercați din nou.';
+
+  @override
+  String get errorPackTooSlow => 'Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou.';
 }

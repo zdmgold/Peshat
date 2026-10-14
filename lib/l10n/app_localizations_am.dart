@@ -104,7 +104,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get errorImageUnreadable => 'ምስሉን ማንበብ አልተቻለም';
 
   @override
-  String get errorModelDownloadFailed => 'የትርጉም ሞዴል ማውረድ አልተቻለም';
+  String get errorModelDownloadFailed => 'የቋንቋ ጥቅሉን መቀበል አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።';
 
   @override
   String get errorUnsupportedLanguage => 'ይህ ቋንቋ ገና አልተደገፈም';
@@ -314,8 +314,20 @@ class AppLocalizationsAm extends AppLocalizations {
   String get couldNotOpenLink => 'ሊንኩን መክፈት አልተቻለም';
 
   @override
-  String get pdfFontDownloading => 'ለዚህ PDF ቅርጸ-ቁምፊ በማውረድ ላይ…';
+  String get pdfFontDownloading => 'የዚህ PDF ፎንት በመቀበል ላይ…';
 
   @override
-  String get pdfFontDownloadFailed => 'ለዚህ PDF ቅርጸ-ቁምፊውን ማውረድ አልተቻለም። ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።';
+  String get pdfFontDownloadFailed => 'የዚህ PDF ፎንት መቀበል አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።';
+
+  @override
+  String get packReceivingTitle => 'የቋንቋ ጥቅል በመቀበል ላይ…';
+
+  @override
+  String get packReceivedTitle => 'ጥቅሉ ተቀብሏል';
+
+  @override
+  String get errorOfflinePackNeeded => 'የበይነመረብ ግንኙነት የለም። ይህ ቋንቋ አንድ ጊዜ የሚቀበሉት ጥቅል ያስፈልገዋል። ከበይነመረብ ጋር ተገናኝተው እንደገና ይሞክሩ።';
+
+  @override
+  String get errorPackTooSlow => 'የቋንቋ ጥቅሉ ለመድረስ ከመጠን በላይ እየወሰደ ነው። የበይነመረብ ግንኙነትዎ ደካማ ሊሆን ይችላል። እንደገና ይሞክሩ።';
 }

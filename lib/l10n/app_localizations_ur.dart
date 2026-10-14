@@ -104,7 +104,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get errorImageUnreadable => 'تصویر پڑھی نہیں جا سکی';
 
   @override
-  String get errorModelDownloadFailed => 'ترجمہ ماڈل ڈاؤن لوڈ نہیں ہو سکا';
+  String get errorModelDownloadFailed => 'زبان کا پیک موصول نہیں ہو سکا۔ اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔';
 
   @override
   String get errorUnsupportedLanguage => 'یہ زبان ابھی معاون نہیں';
@@ -314,8 +314,20 @@ class AppLocalizationsUr extends AppLocalizations {
   String get couldNotOpenLink => 'لنک نہیں کھل سکا';
 
   @override
-  String get pdfFontDownloading => 'اس PDF کے لیے فونٹ ڈاؤن لوڈ ہو رہا ہے…';
+  String get pdfFontDownloading => 'اس PDF کے لیے فونٹ موصول ہو رہا ہے…';
 
   @override
-  String get pdfFontDownloadFailed => 'اس PDF کے لیے فونٹ ڈاؤن لوڈ نہیں ہو سکا۔ اپنا کنکشن چیک کریں اور دوبارہ کوشش کریں۔';
+  String get pdfFontDownloadFailed => 'اس PDF کے لیے فونٹ موصول نہیں ہو سکا۔ اپنا انٹرنیٹ کنکشن چیک کریں اور دوبارہ کوشش کریں۔';
+
+  @override
+  String get packReceivingTitle => 'زبان کا پیک موصول ہو رہا ہے…';
+
+  @override
+  String get packReceivedTitle => 'پیک موصول ہو گیا';
+
+  @override
+  String get errorOfflinePackNeeded => 'انٹرنیٹ کنکشن نہیں ہے۔ اس زبان کے لیے ایک بار موصول کیے جانے والے پیک کی ضرورت ہے۔ انٹرنیٹ سے جڑیں اور دوبارہ کوشش کریں۔';
+
+  @override
+  String get errorPackTooSlow => 'زبان کا پیک موصول ہونے میں بہت وقت لگ رہا ہے۔ ہو سکتا ہے آپ کا انٹرنیٹ کنکشن کمزور ہو۔ دوبارہ کوشش کریں۔';
 }

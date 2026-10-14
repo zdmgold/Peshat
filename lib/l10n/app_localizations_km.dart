@@ -104,7 +104,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get errorImageUnreadable => 'មិនអាចអានរូបភាពបានទេ';
 
   @override
-  String get errorModelDownloadFailed => 'មិនអាចទាញយកគំរូបកប្រែបានទេ';
+  String get errorModelDownloadFailed => 'មិនអាចទទួលកញ្ចប់ភាសាបានទេ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក ហើយសាកល្បងម្តងទៀត។';
 
   @override
   String get errorUnsupportedLanguage => 'ភាសានេះមិនទាន់ត្រូវបានគាំទ្រនៅឡើយទេ';
@@ -314,8 +314,20 @@ class AppLocalizationsKm extends AppLocalizations {
   String get couldNotOpenLink => 'មិនអាចបើកតំណបានទេ';
 
   @override
-  String get pdfFontDownloading => 'កំពុងទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះ…';
+  String get pdfFontDownloading => 'កំពុងទទួលពុម្ពអក្សរសម្រាប់ PDF នេះ…';
 
   @override
-  String get pdfFontDownloadFailed => 'មិនអាចទាញយកពុម្ពអក្សរសម្រាប់ PDF នេះបានទេ។ សូមពិនិត្យការតភ្ជាប់របស់អ្នក ហើយព្យាយាមម្ដងទៀត។';
+  String get pdfFontDownloadFailed => 'មិនអាចទទួលពុម្ពអក្សរសម្រាប់ PDF នេះបានទេ។ សូមពិនិត្យការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នក ហើយសាកល្បងម្តងទៀត។';
+
+  @override
+  String get packReceivingTitle => 'កំពុងទទួលកញ្ចប់ភាសា…';
+
+  @override
+  String get packReceivedTitle => 'បានទទួលកញ្ចប់';
+
+  @override
+  String get errorOfflinePackNeeded => 'គ្មានការតភ្ជាប់អ៊ីនធឺណិតទេ។ ភាសានេះត្រូវការកញ្ចប់មួយដែលទទួលតែម្តង។ សូមភ្ជាប់អ៊ីនធឺណិត ហើយសាកល្បងម្តងទៀត។';
+
+  @override
+  String get errorPackTooSlow => 'កញ្ចប់ភាសាកំពុងចំណាយពេលយូរពេកក្នុងការទទួល។ ការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នកប្រហែលជាខ្សោយ។ សូមសាកល្បងម្តងទៀត។';
 }

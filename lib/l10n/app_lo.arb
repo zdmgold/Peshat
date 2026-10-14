@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "ບໍ່ພົບຂໍ້ຄວາມໃນຮູບພາບ",
   "errorImageUnreadable": "ບໍ່ສາມາດອ່ານຮູບພາບໄດ້",
-  "errorModelDownloadFailed": "ບໍ່ສາມາດດາວໂຫລດໂມເດວແປໄດ້",
+  "errorModelDownloadFailed": "ບໍ່ສາມາດຮັບແພັກພາສາໄດ້. ກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລ້ວລອງໃໝ່.",
   "errorUnsupportedLanguage": "ພາສານີ້ຍັງບໍ່ໄດ້ຮັບການຮອງຮັບ",
   "errorOcrFailed": "ການຮັບຮູ້ຂໍ້ຄວາມລົ້ມເຫລວ",
   "errorTranslationFailed": "ການແປລົ້ມເຫລວ",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "ທາງເລືອກຄວາມເປັນສ່ວນຕົວຂອງໂຄສະນາ",
   "followSystemLabel": "ຕາມລະບົບ",
   "couldNotOpenLink": "ບໍ່ສາມາດເປີດລິ້ງໄດ້",
-  "pdfFontDownloading": "ກຳລັງດາວໂຫຼດຟອນສຳລັບ PDF ນີ້…",
-  "pdfFontDownloadFailed": "ບໍ່ສາມາດດາວໂຫຼດຟອນສຳລັບ PDF ນີ້ໄດ້. ກວດສອບການເຊື່ອມຕໍ່ຂອງທ່ານ ແລ້ວລອງໃໝ່."
+  "pdfFontDownloading": "ກຳລັງຮັບຟອນສຳລັບ PDF ນີ້…",
+  "pdfFontDownloadFailed": "ບໍ່ສາມາດຮັບຟອນສຳລັບ PDF ນີ້ໄດ້. ກວດສອບການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານ ແລ້ວລອງໃໝ່.",
+  "packReceivingTitle": "ກຳລັງຮັບແພັກພາສາ…",
+  "packReceivedTitle": "ໄດ້ຮັບແພັກແລ້ວ",
+  "errorOfflinePackNeeded": "ບໍ່ມີການເຊື່ອມຕໍ່ອິນເຕີເນັດ. ພາສານີ້ຕ້ອງການແພັກທີ່ຮັບພຽງຄັ້ງດຽວ. ເຊື່ອມຕໍ່ອິນເຕີເນັດ ແລ້ວລອງໃໝ່.",
+  "errorPackTooSlow": "ແພັກພາສາໃຊ້ເວລາຮັບດົນເກີນໄປ. ການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານອາດຈະອ່ອນ. ລອງໃໝ່."
 }

@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "No s'ha trobat cap text a la imatge",
   "errorImageUnreadable": "No s'ha pogut llegir la imatge",
-  "errorModelDownloadFailed": "No s'ha pogut baixar el model de traducció",
+  "errorModelDownloadFailed": "No s'ha pogut rebre el paquet d'idioma. Comprova la connexió a internet i torna-ho a provar.",
   "errorUnsupportedLanguage": "Aquest idioma encara no és compatible",
   "errorOcrFailed": "El reconeixement de text ha fallat",
   "errorTranslationFailed": "La traducció ha fallat",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Opcions de privadesa dels anuncis",
   "followSystemLabel": "Segueix el sistema",
   "couldNotOpenLink": "No s'ha pogut obrir l'enllaç",
-  "pdfFontDownloading": "S'està baixant el tipus de lletra per a aquest PDF…",
-  "pdfFontDownloadFailed": "No s'ha pogut baixar el tipus de lletra d'aquest PDF. Comprova la connexió i torna-ho a provar."
+  "pdfFontDownloading": "S'està rebent el tipus de lletra d'aquest PDF…",
+  "pdfFontDownloadFailed": "No s'ha pogut rebre el tipus de lletra d'aquest PDF. Comprova la connexió a internet i torna-ho a provar.",
+  "packReceivingTitle": "S'està rebent el paquet d'idioma…",
+  "packReceivedTitle": "Paquet rebut",
+  "errorOfflinePackNeeded": "No hi ha connexió a internet. Aquest idioma necessita rebre un paquet una sola vegada. Connecta't a internet i torna-ho a provar.",
+  "errorPackTooSlow": "El paquet d'idioma triga massa a rebre's. Pot ser que la connexió a internet sigui feble. Torna-ho a provar."
 }

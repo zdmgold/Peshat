@@ -104,7 +104,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get errorImageUnreadable => 'ไม่สามารถอ่านภาพได้';
 
   @override
-  String get errorModelDownloadFailed => 'ไม่สามารถดาวน์โหลดโมเดลการแปลได้';
+  String get errorModelDownloadFailed => 'ไม่สามารถรับแพ็กภาษาได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง';
 
   @override
   String get errorUnsupportedLanguage => 'ยังไม่รองรับภาษานี้';
@@ -314,8 +314,20 @@ class AppLocalizationsTh extends AppLocalizations {
   String get couldNotOpenLink => 'ไม่สามารถเปิดลิงก์ได้';
 
   @override
-  String get pdfFontDownloading => 'กำลังดาวน์โหลดฟอนต์สำหรับ PDF นี้…';
+  String get pdfFontDownloading => 'กำลังรับฟอนต์สำหรับ PDF นี้…';
 
   @override
-  String get pdfFontDownloadFailed => 'ไม่สามารถดาวน์โหลดฟอนต์สำหรับ PDF นี้ได้ ตรวจสอบการเชื่อมต่อแล้วลองอีกครั้ง';
+  String get pdfFontDownloadFailed => 'ไม่สามารถรับฟอนต์สำหรับ PDF นี้ได้ ตรวจสอบการเชื่อมต่ออินเทอร์เน็ตของคุณแล้วลองอีกครั้ง';
+
+  @override
+  String get packReceivingTitle => 'กำลังรับแพ็กภาษา…';
+
+  @override
+  String get packReceivedTitle => 'รับแพ็กแล้ว';
+
+  @override
+  String get errorOfflinePackNeeded => 'ไม่มีการเชื่อมต่ออินเทอร์เน็ต ภาษานี้ต้องรับแพ็กหนึ่งครั้ง เชื่อมต่ออินเทอร์เน็ตแล้วลองอีกครั้ง';
+
+  @override
+  String get errorPackTooSlow => 'การรับแพ็กภาษาใช้เวลานานเกินไป การเชื่อมต่ออินเทอร์เน็ตของคุณอาจอ่อน ลองอีกครั้ง';
 }

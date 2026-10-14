@@ -376,7 +376,7 @@ abstract class AppLocalizations {
   /// No description provided for @errorModelDownloadFailed.
   ///
   /// In en, this message translates to:
-  /// **'Translation model could not be downloaded'**
+  /// **'The language pack could not be received. Check your internet connection and try again.'**
   String get errorModelDownloadFailed;
 
   /// No description provided for @errorUnsupportedLanguage.
@@ -796,14 +796,38 @@ abstract class AppLocalizations {
   /// No description provided for @pdfFontDownloading.
   ///
   /// In en, this message translates to:
-  /// **'Downloading font for this PDF…'**
+  /// **'Receiving font for this PDF…'**
   String get pdfFontDownloading;
 
   /// No description provided for @pdfFontDownloadFailed.
   ///
   /// In en, this message translates to:
-  /// **'Could not download the font for this PDF. Check your connection and try again.'**
+  /// **'The font for this PDF could not be received. Check your internet connection and try again.'**
   String get pdfFontDownloadFailed;
+
+  /// No description provided for @packReceivingTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Receiving language pack…'**
+  String get packReceivingTitle;
+
+  /// No description provided for @packReceivedTitle.
+  ///
+  /// In en, this message translates to:
+  /// **'Pack received'**
+  String get packReceivedTitle;
+
+  /// No description provided for @errorOfflinePackNeeded.
+  ///
+  /// In en, this message translates to:
+  /// **'No internet connection. This language needs a one-time pack to be received. Connect to the internet and try again.'**
+  String get errorOfflinePackNeeded;
+
+  /// No description provided for @errorPackTooSlow.
+  ///
+  /// In en, this message translates to:
+  /// **'The language pack is taking too long to be received. Your internet connection may be weak. Try again.'**
+  String get errorPackTooSlow;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

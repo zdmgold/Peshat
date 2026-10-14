@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "छविमा कुनै पाठ भेटिएन",
   "errorImageUnreadable": "छवि पढ्न सकिएन",
-  "errorModelDownloadFailed": "अनुवाद मोडेल डाउनलोड गर्न सकिएन",
+  "errorModelDownloadFailed": "भाषा प्याक प्राप्त गर्न सकिएन। आफ्नो इन्टरनेट जडान जाँच गरेर फेरि प्रयास गर्नुहोस्।",
   "errorUnsupportedLanguage": "यो भाषा अझै समर्थित छैन",
   "errorOcrFailed": "पाठ पहिचान असफल",
   "errorTranslationFailed": "अनुवाद असफल",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "विज्ञापन गोपनीयता विकल्पहरू",
   "followSystemLabel": "प्रणाली अनुसरण गर्नुहोस्",
   "couldNotOpenLink": "लिङ्क खोल्न सकिएन",
-  "pdfFontDownloading": "यो PDF का लागि फन्ट डाउनलोड गर्दै…",
-  "pdfFontDownloadFailed": "यो PDF का लागि फन्ट डाउनलोड गर्न सकिएन। आफ्नो जडान जाँच गरेर फेरि प्रयास गर्नुहोस्।"
+  "pdfFontDownloading": "यो PDF का लागि फन्ट प्राप्त हुँदैछ…",
+  "pdfFontDownloadFailed": "यो PDF का लागि फन्ट प्राप्त गर्न सकिएन। आफ्नो इन्टरनेट जडान जाँच गरेर फेरि प्रयास गर्नुहोस्।",
+  "packReceivingTitle": "भाषा प्याक प्राप्त हुँदैछ…",
+  "packReceivedTitle": "प्याक प्राप्त भयो",
+  "errorOfflinePackNeeded": "इन्टरनेट जडान छैन। यो भाषाका लागि एक पटक प्राप्त गर्नुपर्ने प्याक चाहिन्छ। इन्टरनेटमा जोडिएर फेरि प्रयास गर्नुहोस्।",
+  "errorPackTooSlow": "भाषा प्याक प्राप्त हुन धेरै समय लागिरहेको छ। तपाईंको इन्टरनेट जडान कमजोर हुन सक्छ। फेरि प्रयास गर्नुहोस्।"
 }

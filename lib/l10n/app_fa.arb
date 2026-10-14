@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}، {nativeName}",
   "errorNoTextDetected": "متنی در تصویر یافت نشد",
   "errorImageUnreadable": "تصویر خوانده نشد",
-  "errorModelDownloadFailed": "مدل ترجمه دانلود نشد",
+  "errorModelDownloadFailed": "بسته زبان دریافت نشد. اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید.",
   "errorUnsupportedLanguage": "این زبان هنوز پشتیبانی نمی‌شود",
   "errorOcrFailed": "تشخیص متن ناموفق بود",
   "errorTranslationFailed": "ترجمه ناموفق بود",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "گزینه‌های حریم خصوصی تبلیغات",
   "followSystemLabel": "پیروی از سیستم",
   "couldNotOpenLink": "باز کردن پیوند ممکن نشد",
-  "pdfFontDownloading": "در حال دانلود قلم برای این PDF…",
-  "pdfFontDownloadFailed": "دانلود قلم برای این PDF ممکن نشد. اتصال خود را بررسی کنید و دوباره تلاش کنید."
+  "pdfFontDownloading": "در حال دریافت قلم برای این PDF…",
+  "pdfFontDownloadFailed": "قلم این PDF دریافت نشد. اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید.",
+  "packReceivingTitle": "در حال دریافت بسته زبان…",
+  "packReceivedTitle": "بسته دریافت شد",
+  "errorOfflinePackNeeded": "اتصال به اینترنت وجود ندارد. این زبان به یک بسته نیاز دارد که فقط یک بار دریافت می‌شود. به اینترنت وصل شوید و دوباره تلاش کنید.",
+  "errorPackTooSlow": "دریافت بسته زبان بیش از حد طول می‌کشد. ممکن است اتصال اینترنت شما ضعیف باشد. دوباره تلاش کنید."
 }

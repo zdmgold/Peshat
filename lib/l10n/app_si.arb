@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "රූපයේ පෙළක් හමු නොවිණි",
   "errorImageUnreadable": "රූපය කියවිය නොහැක",
-  "errorModelDownloadFailed": "පරිවර්තන ආකෘතිය බාගත කළ නොහැක",
+  "errorModelDownloadFailed": "භාෂා පැකේජය ලබාගත නොහැකි විය. ඔබේ අන්තර්ජාල සම්බන්ධතාව පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
   "errorUnsupportedLanguage": "මෙම භාෂාව තවම සහාය නොදක්වයි",
   "errorOcrFailed": "පෙළ හඳුනා ගැනීම අසාර්ථකයි",
   "errorTranslationFailed": "පරිවර්තනය අසාර්ථකයි",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "දැන්වීම් පෞද්ගලිකත්ව තේරීම්",
   "followSystemLabel": "පද්ධතිය අනුගමනය කරන්න",
   "couldNotOpenLink": "සබැඳිය විවෘත කළ නොහැක",
-  "pdfFontDownloading": "මෙම PDF සඳහා අකුරු වර්ගය බාගත වෙමින්…",
-  "pdfFontDownloadFailed": "මෙම PDF සඳහා අකුරු වර්ගය බාගත කිරීමට නොහැකි විය. ඔබේ සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න."
+  "pdfFontDownloading": "මෙම PDF සඳහා අකුරු ලැබෙමින්…",
+  "pdfFontDownloadFailed": "මෙම PDF සඳහා අකුරු ලබාගත නොහැකි විය. ඔබේ අන්තර්ජාල සම්බන්ධතාව පරීක්ෂා කර නැවත උත්සාහ කරන්න.",
+  "packReceivingTitle": "භාෂා පැකේජය ලැබෙමින්…",
+  "packReceivedTitle": "පැකේජය ලැබුණා",
+  "errorOfflinePackNeeded": "අන්තර්ජාල සම්බන්ධතාවයක් නැත. මෙම භාෂාවට එක් වරක් ලබාගත යුතු පැකේජයක් අවශ්‍යයි. අන්තර්ජාලයට සම්බන්ධ වී නැවත උත්සාහ කරන්න.",
+  "errorPackTooSlow": "භාෂා පැකේජය ලැබීමට වැඩි කාලයක් ගත වේ. ඔබේ අන්තර්ජාල සම්බන්ධතාව දුර්වල විය හැක. නැවත උත්සාහ කරන්න."
 }

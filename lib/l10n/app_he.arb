@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "לא נמצא טקסט בתמונה",
   "errorImageUnreadable": "לא ניתן לקרוא את התמונה",
-  "errorModelDownloadFailed": "לא ניתן להוריד את מודל התרגום",
+  "errorModelDownloadFailed": "לא ניתן היה לקבל את חבילת השפה. בדוק את חיבור האינטרנט ונסה שוב.",
   "errorUnsupportedLanguage": "שפה זו עדיין לא נתמכת",
   "errorOcrFailed": "זיהוי הטקסט נכשל",
   "errorTranslationFailed": "התרגום נכשל",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "אפשרויות פרטיות למודעות",
   "followSystemLabel": "עקוב אחר המערכת",
   "couldNotOpenLink": "לא ניתן לפתוח את הקישור",
-  "pdfFontDownloading": "מוריד גופן עבור קובץ PDF זה…",
-  "pdfFontDownloadFailed": "לא ניתן להוריד את הגופן עבור קובץ PDF זה. בדקו את החיבור ונסו שוב."
+  "pdfFontDownloading": "מקבל גופן עבור ה-PDF הזה…",
+  "pdfFontDownloadFailed": "לא ניתן היה לקבל את הגופן עבור ה-PDF הזה. בדוק את חיבור האינטרנט ונסה שוב.",
+  "packReceivingTitle": "מקבל חבילת שפה…",
+  "packReceivedTitle": "החבילה התקבלה",
+  "errorOfflinePackNeeded": "אין חיבור לאינטרנט. שפה זו דורשת קבלת חבילה חד-פעמית. התחבר לאינטרנט ונסה שוב.",
+  "errorPackTooSlow": "קבלת חבילת השפה אורכת זמן רב מדי. ייתכן שחיבור האינטרנט שלך חלש. נסה שוב."
 }

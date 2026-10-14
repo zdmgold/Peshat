@@ -104,7 +104,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get errorImageUnreadable => '无法读取图像';
 
   @override
-  String get errorModelDownloadFailed => '无法下载翻译模型';
+  String get errorModelDownloadFailed => '无法接收语言包。请检查您的网络连接后重试。';
 
   @override
   String get errorUnsupportedLanguage => '暂不支持此语言';
@@ -314,8 +314,20 @@ class AppLocalizationsZh extends AppLocalizations {
   String get couldNotOpenLink => '无法打开链接';
 
   @override
-  String get pdfFontDownloading => '正在下载此 PDF 所需的字体…';
+  String get pdfFontDownloading => '正在接收此 PDF 的字体…';
 
   @override
-  String get pdfFontDownloadFailed => '无法下载此 PDF 所需的字体。请检查网络连接后重试。';
+  String get pdfFontDownloadFailed => '无法接收此 PDF 的字体。请检查您的网络连接后重试。';
+
+  @override
+  String get packReceivingTitle => '正在接收语言包…';
+
+  @override
+  String get packReceivedTitle => '语言包已接收';
+
+  @override
+  String get errorOfflinePackNeeded => '没有网络连接。此语言需要接收一次语言包。请连接互联网后重试。';
+
+  @override
+  String get errorPackTooSlow => '接收语言包耗时过长。您的网络连接可能较弱。请重试。';
 }

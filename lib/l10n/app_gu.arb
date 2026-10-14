@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "છબીમાં કોઈ ટેક્સ્ટ મળ્યો નથી",
   "errorImageUnreadable": "છબી વાંચી શકાઈ નથી",
-  "errorModelDownloadFailed": "અનુવાદ મૉડલ ડાઉનલોડ થઈ શક્યું નથી",
+  "errorModelDownloadFailed": "ભાષા પૅક પ્રાપ્ત થઈ શક્યું નથી. તમારું ઇન્ટરનેટ કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.",
   "errorUnsupportedLanguage": "આ ભાષા હજી સપોર્ટેડ નથી",
   "errorOcrFailed": "ટેક્સ્ટ ઓળખ નિષ્ફળ રહી",
   "errorTranslationFailed": "અનુવાદ નિષ્ફળ રહ્યો",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "જાહેરાત ગોપનીયતા વિકલ્પો",
   "followSystemLabel": "સિસ્ટમને અનુસરો",
   "couldNotOpenLink": "લિંક ખોલી શકાઈ નથી",
-  "pdfFontDownloading": "આ PDF માટે ફૉન્ટ ડાઉનલોડ કરી રહ્યું છે…",
-  "pdfFontDownloadFailed": "આ PDF માટે ફૉન્ટ ડાઉનલોડ થઈ શક્યો નથી. તમારું કનેક્શન તપાસો અને ફરી પ્રયાસ કરો."
+  "pdfFontDownloading": "આ PDF માટે ફૉન્ટ પ્રાપ્ત થઈ રહ્યો છે…",
+  "pdfFontDownloadFailed": "આ PDF માટે ફૉન્ટ પ્રાપ્ત થઈ શક્યો નથી. તમારું ઇન્ટરનેટ કનેક્શન તપાસો અને ફરી પ્રયાસ કરો.",
+  "packReceivingTitle": "ભાષા પૅક પ્રાપ્ત થઈ રહ્યું છે…",
+  "packReceivedTitle": "પૅક પ્રાપ્ત થયું",
+  "errorOfflinePackNeeded": "ઇન્ટરનેટ કનેક્શન નથી. આ ભાષાને એક વખત પ્રાપ્ત કરવા માટે પૅકની જરૂર છે. ઇન્ટરનેટ સાથે જોડાઓ અને ફરી પ્રયાસ કરો.",
+  "errorPackTooSlow": "ભાષા પૅક પ્રાપ્ત થવામાં ઘણો સમય લાગી રહ્યો છે. તમારું ઇન્ટરનેટ કનેક્શન નબળું હોઈ શકે. ફરી પ્રયાસ કરો."
 }

@@ -104,7 +104,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get errorImageUnreadable => '이미지를 읽을 수 없습니다';
 
   @override
-  String get errorModelDownloadFailed => '번역 모델을 다운로드할 수 없습니다';
+  String get errorModelDownloadFailed => '언어 팩을 받지 못했습니다. 인터넷 연결을 확인하고 다시 시도하세요.';
 
   @override
   String get errorUnsupportedLanguage => '이 언어는 아직 지원되지 않습니다';
@@ -314,8 +314,20 @@ class AppLocalizationsKo extends AppLocalizations {
   String get couldNotOpenLink => '링크를 열 수 없습니다';
 
   @override
-  String get pdfFontDownloading => '이 PDF용 글꼴을 다운로드하는 중…';
+  String get pdfFontDownloading => '이 PDF용 글꼴을 받는 중…';
 
   @override
-  String get pdfFontDownloadFailed => '이 PDF용 글꼴을 다운로드할 수 없습니다. 연결을 확인하고 다시 시도해 주세요.';
+  String get pdfFontDownloadFailed => '이 PDF용 글꼴을 받지 못했습니다. 인터넷 연결을 확인하고 다시 시도하세요.';
+
+  @override
+  String get packReceivingTitle => '언어 팩을 받는 중…';
+
+  @override
+  String get packReceivedTitle => '팩을 받았습니다';
+
+  @override
+  String get errorOfflinePackNeeded => '인터넷에 연결되어 있지 않습니다. 이 언어는 한 번만 받으면 되는 팩이 필요합니다. 인터넷에 연결한 후 다시 시도하세요.';
+
+  @override
+  String get errorPackTooSlow => '언어 팩을 받는 데 시간이 너무 오래 걸립니다. 인터넷 연결이 약할 수 있습니다. 다시 시도하세요.';
 }

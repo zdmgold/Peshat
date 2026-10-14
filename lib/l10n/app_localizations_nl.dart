@@ -104,7 +104,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get errorImageUnreadable => 'De afbeelding kon niet worden gelezen';
 
   @override
-  String get errorModelDownloadFailed => 'Vertaalmodel kon niet worden gedownload';
+  String get errorModelDownloadFailed => 'Het taalpakket kon niet worden ontvangen. Controleer je internetverbinding en probeer het opnieuw.';
 
   @override
   String get errorUnsupportedLanguage => 'Deze taal wordt nog niet ondersteund';
@@ -314,8 +314,20 @@ class AppLocalizationsNl extends AppLocalizations {
   String get couldNotOpenLink => 'Link kon niet worden geopend';
 
   @override
-  String get pdfFontDownloading => 'Lettertype voor deze pdf downloaden…';
+  String get pdfFontDownloading => 'Lettertype voor deze pdf wordt ontvangen…';
 
   @override
-  String get pdfFontDownloadFailed => 'Het lettertype voor deze pdf kon niet worden gedownload. Controleer je verbinding en probeer het opnieuw.';
+  String get pdfFontDownloadFailed => 'Het lettertype voor deze pdf kon niet worden ontvangen. Controleer je internetverbinding en probeer het opnieuw.';
+
+  @override
+  String get packReceivingTitle => 'Taalpakket wordt ontvangen…';
+
+  @override
+  String get packReceivedTitle => 'Pakket ontvangen';
+
+  @override
+  String get errorOfflinePackNeeded => 'Geen internetverbinding. Voor deze taal moet eenmalig een pakket worden ontvangen. Maak verbinding met internet en probeer het opnieuw.';
+
+  @override
+  String get errorPackTooSlow => 'Het ontvangen van het taalpakket duurt te lang. Je internetverbinding is mogelijk zwak. Probeer het opnieuw.';
 }

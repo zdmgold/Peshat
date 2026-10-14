@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Tidak ada teks dalam gambar",
   "errorImageUnreadable": "Gambar tidak dapat dibaca",
-  "errorModelDownloadFailed": "Model terjemahan tidak dapat diunduh",
+  "errorModelDownloadFailed": "Paket bahasa tidak dapat diterima. Periksa koneksi internet Anda dan coba lagi.",
   "errorUnsupportedLanguage": "Bahasa ini belum didukung",
   "errorOcrFailed": "Pengenalan teks gagal",
   "errorTranslationFailed": "Terjemahan gagal",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Pilihan privasi iklan",
   "followSystemLabel": "Ikuti sistem",
   "couldNotOpenLink": "Tidak dapat membuka tautan",
-  "pdfFontDownloading": "Mengunduh font untuk PDF ini…",
-  "pdfFontDownloadFailed": "Tidak dapat mengunduh font untuk PDF ini. Periksa koneksi Anda dan coba lagi."
+  "pdfFontDownloading": "Menerima font untuk PDF ini…",
+  "pdfFontDownloadFailed": "Font untuk PDF ini tidak dapat diterima. Periksa koneksi internet Anda dan coba lagi.",
+  "packReceivingTitle": "Menerima paket bahasa…",
+  "packReceivedTitle": "Paket diterima",
+  "errorOfflinePackNeeded": "Tidak ada koneksi internet. Bahasa ini memerlukan satu paket yang diterima sekali saja. Hubungkan ke internet dan coba lagi.",
+  "errorPackTooSlow": "Paket bahasa terlalu lama diterima. Koneksi internet Anda mungkin lemah. Coba lagi."
 }

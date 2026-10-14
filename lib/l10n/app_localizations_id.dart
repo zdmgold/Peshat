@@ -104,7 +104,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get errorImageUnreadable => 'Gambar tidak dapat dibaca';
 
   @override
-  String get errorModelDownloadFailed => 'Model terjemahan tidak dapat diunduh';
+  String get errorModelDownloadFailed => 'Paket bahasa tidak dapat diterima. Periksa koneksi internet Anda dan coba lagi.';
 
   @override
   String get errorUnsupportedLanguage => 'Bahasa ini belum didukung';
@@ -314,8 +314,20 @@ class AppLocalizationsId extends AppLocalizations {
   String get couldNotOpenLink => 'Tidak dapat membuka tautan';
 
   @override
-  String get pdfFontDownloading => 'Mengunduh font untuk PDF ini…';
+  String get pdfFontDownloading => 'Menerima font untuk PDF ini…';
 
   @override
-  String get pdfFontDownloadFailed => 'Tidak dapat mengunduh font untuk PDF ini. Periksa koneksi Anda dan coba lagi.';
+  String get pdfFontDownloadFailed => 'Font untuk PDF ini tidak dapat diterima. Periksa koneksi internet Anda dan coba lagi.';
+
+  @override
+  String get packReceivingTitle => 'Menerima paket bahasa…';
+
+  @override
+  String get packReceivedTitle => 'Paket diterima';
+
+  @override
+  String get errorOfflinePackNeeded => 'Tidak ada koneksi internet. Bahasa ini memerlukan satu paket yang diterima sekali saja. Hubungkan ke internet dan coba lagi.';
+
+  @override
+  String get errorPackTooSlow => 'Paket bahasa terlalu lama diterima. Koneksi internet Anda mungkin lemah. Coba lagi.';
 }

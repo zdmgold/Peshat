@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Geen tekst gevonden in de afbeelding",
   "errorImageUnreadable": "De afbeelding kon niet worden gelezen",
-  "errorModelDownloadFailed": "Vertaalmodel kon niet worden gedownload",
+  "errorModelDownloadFailed": "Het taalpakket kon niet worden ontvangen. Controleer je internetverbinding en probeer het opnieuw.",
   "errorUnsupportedLanguage": "Deze taal wordt nog niet ondersteund",
   "errorOcrFailed": "Tekstherkenning mislukt",
   "errorTranslationFailed": "Vertaling mislukt",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Privacykeuzes voor advertenties",
   "followSystemLabel": "Systeem volgen",
   "couldNotOpenLink": "Link kon niet worden geopend",
-  "pdfFontDownloading": "Lettertype voor deze pdf downloaden…",
-  "pdfFontDownloadFailed": "Het lettertype voor deze pdf kon niet worden gedownload. Controleer je verbinding en probeer het opnieuw."
+  "pdfFontDownloading": "Lettertype voor deze pdf wordt ontvangen…",
+  "pdfFontDownloadFailed": "Het lettertype voor deze pdf kon niet worden ontvangen. Controleer je internetverbinding en probeer het opnieuw.",
+  "packReceivingTitle": "Taalpakket wordt ontvangen…",
+  "packReceivedTitle": "Pakket ontvangen",
+  "errorOfflinePackNeeded": "Geen internetverbinding. Voor deze taal moet eenmalig een pakket worden ontvangen. Maak verbinding met internet en probeer het opnieuw.",
+  "errorPackTooSlow": "Het ontvangen van het taalpakket duurt te lang. Je internetverbinding is mogelijk zwak. Probeer het opnieuw."
 }

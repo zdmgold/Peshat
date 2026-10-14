@@ -104,7 +104,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get errorImageUnreadable => 'Δεν ήταν δυνατή η ανάγνωση της εικόνας';
 
   @override
-  String get errorModelDownloadFailed => 'Δεν ήταν δυνατή η λήψη του μοντέλου μετάφρασης';
+  String get errorModelDownloadFailed => 'Δεν ήταν δυνατή η λήψη του πακέτου γλώσσας. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά.';
 
   @override
   String get errorUnsupportedLanguage => 'Αυτή η γλώσσα δεν υποστηρίζεται ακόμη';
@@ -317,5 +317,17 @@ class AppLocalizationsEl extends AppLocalizations {
   String get pdfFontDownloading => 'Λήψη γραμματοσειράς για αυτό το PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Δεν ήταν δυνατή η λήψη της γραμματοσειράς για αυτό το PDF. Ελέγξτε τη σύνδεσή σας και δοκιμάστε ξανά.';
+  String get pdfFontDownloadFailed => 'Δεν ήταν δυνατή η λήψη της γραμματοσειράς για αυτό το PDF. Ελέγξτε τη σύνδεσή σας στο διαδίκτυο και δοκιμάστε ξανά.';
+
+  @override
+  String get packReceivingTitle => 'Λήψη πακέτου γλώσσας…';
+
+  @override
+  String get packReceivedTitle => 'Το πακέτο ελήφθη';
+
+  @override
+  String get errorOfflinePackNeeded => 'Δεν υπάρχει σύνδεση στο διαδίκτυο. Αυτή η γλώσσα χρειάζεται ένα πακέτο που λαμβάνεται μία φορά. Συνδεθείτε στο διαδίκτυο και δοκιμάστε ξανά.';
+
+  @override
+  String get errorPackTooSlow => 'Η λήψη του πακέτου γλώσσας διαρκεί πολύ. Η σύνδεσή σας στο διαδίκτυο μπορεί να είναι αδύναμη. Δοκιμάστε ξανά.';
 }

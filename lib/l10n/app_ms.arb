@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Tiada teks ditemui dalam imej",
   "errorImageUnreadable": "Imej tidak dapat dibaca",
-  "errorModelDownloadFailed": "Model terjemahan tidak dapat dimuat turun",
+  "errorModelDownloadFailed": "Pakej bahasa tidak dapat diterima. Semak sambungan internet anda dan cuba lagi.",
   "errorUnsupportedLanguage": "Bahasa ini belum disokong",
   "errorOcrFailed": "Pengecaman teks gagal",
   "errorTranslationFailed": "Terjemahan gagal",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Pilihan privasi iklan",
   "followSystemLabel": "Ikut sistem",
   "couldNotOpenLink": "Pautan tidak dapat dibuka",
-  "pdfFontDownloading": "Memuat turun fon untuk PDF ini…",
-  "pdfFontDownloadFailed": "Fon untuk PDF ini tidak dapat dimuat turun. Semak sambungan anda dan cuba lagi."
+  "pdfFontDownloading": "Menerima fon untuk PDF ini…",
+  "pdfFontDownloadFailed": "Fon untuk PDF ini tidak dapat diterima. Semak sambungan internet anda dan cuba lagi.",
+  "packReceivingTitle": "Menerima pakej bahasa…",
+  "packReceivedTitle": "Pakej diterima",
+  "errorOfflinePackNeeded": "Tiada sambungan internet. Bahasa ini memerlukan satu pakej yang diterima sekali sahaja. Sambung ke internet dan cuba lagi.",
+  "errorPackTooSlow": "Pakej bahasa mengambil masa terlalu lama untuk diterima. Sambungan internet anda mungkin lemah. Cuba lagi."
 }

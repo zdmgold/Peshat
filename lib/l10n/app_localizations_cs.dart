@@ -104,7 +104,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get errorImageUnreadable => 'Obrázek nelze přečíst';
 
   @override
-  String get errorModelDownloadFailed => 'Model překladu nelze stáhnout';
+  String get errorModelDownloadFailed => 'Jazykový balíček se nepodařilo přijmout. Zkontrolujte připojení k internetu a zkuste to znovu.';
 
   @override
   String get errorUnsupportedLanguage => 'Tento jazyk zatím není podporován';
@@ -314,8 +314,20 @@ class AppLocalizationsCs extends AppLocalizations {
   String get couldNotOpenLink => 'Odkaz se nepodařilo otevřít';
 
   @override
-  String get pdfFontDownloading => 'Stahuje se písmo pro toto PDF…';
+  String get pdfFontDownloading => 'Přijímá se písmo pro toto PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Písmo pro toto PDF se nepodařilo stáhnout. Zkontrolujte připojení a zkuste to znovu.';
+  String get pdfFontDownloadFailed => 'Písmo pro toto PDF se nepodařilo přijmout. Zkontrolujte připojení k internetu a zkuste to znovu.';
+
+  @override
+  String get packReceivingTitle => 'Přijímá se jazykový balíček…';
+
+  @override
+  String get packReceivedTitle => 'Balíček přijat';
+
+  @override
+  String get errorOfflinePackNeeded => 'Žádné připojení k internetu. Tento jazyk vyžaduje jednorázové přijetí balíčku. Připojte se k internetu a zkuste to znovu.';
+
+  @override
+  String get errorPackTooSlow => 'Přijetí jazykového balíčku trvá příliš dlouho. Vaše připojení k internetu může být slabé. Zkuste to znovu.';
 }

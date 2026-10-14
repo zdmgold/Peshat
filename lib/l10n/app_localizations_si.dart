@@ -104,7 +104,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get errorImageUnreadable => 'රූපය කියවිය නොහැක';
 
   @override
-  String get errorModelDownloadFailed => 'පරිවර්තන ආකෘතිය බාගත කළ නොහැක';
+  String get errorModelDownloadFailed => 'භාෂා පැකේජය ලබාගත නොහැකි විය. ඔබේ අන්තර්ජාල සම්බන්ධතාව පරීක්ෂා කර නැවත උත්සාහ කරන්න.';
 
   @override
   String get errorUnsupportedLanguage => 'මෙම භාෂාව තවම සහාය නොදක්වයි';
@@ -314,8 +314,20 @@ class AppLocalizationsSi extends AppLocalizations {
   String get couldNotOpenLink => 'සබැඳිය විවෘත කළ නොහැක';
 
   @override
-  String get pdfFontDownloading => 'මෙම PDF සඳහා අකුරු වර්ගය බාගත වෙමින්…';
+  String get pdfFontDownloading => 'මෙම PDF සඳහා අකුරු ලැබෙමින්…';
 
   @override
-  String get pdfFontDownloadFailed => 'මෙම PDF සඳහා අකුරු වර්ගය බාගත කිරීමට නොහැකි විය. ඔබේ සම්බන්ධතාවය පරීක්ෂා කර නැවත උත්සාහ කරන්න.';
+  String get pdfFontDownloadFailed => 'මෙම PDF සඳහා අකුරු ලබාගත නොහැකි විය. ඔබේ අන්තර්ජාල සම්බන්ධතාව පරීක්ෂා කර නැවත උත්සාහ කරන්න.';
+
+  @override
+  String get packReceivingTitle => 'භාෂා පැකේජය ලැබෙමින්…';
+
+  @override
+  String get packReceivedTitle => 'පැකේජය ලැබුණා';
+
+  @override
+  String get errorOfflinePackNeeded => 'අන්තර්ජාල සම්බන්ධතාවයක් නැත. මෙම භාෂාවට එක් වරක් ලබාගත යුතු පැකේජයක් අවශ්‍යයි. අන්තර්ජාලයට සම්බන්ධ වී නැවත උත්සාහ කරන්න.';
+
+  @override
+  String get errorPackTooSlow => 'භාෂා පැකේජය ලැබීමට වැඩි කාලයක් ගත වේ. ඔබේ අන්තර්ජාල සම්බන්ධතාව දුර්වල විය හැක. නැවත උත්සාහ කරන්න.';
 }

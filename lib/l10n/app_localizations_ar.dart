@@ -104,7 +104,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get errorImageUnreadable => 'تعذر قراءة الصورة';
 
   @override
-  String get errorModelDownloadFailed => 'تعذر تنزيل نموذج الترجمة';
+  String get errorModelDownloadFailed => 'تعذّر استلام حزمة اللغة. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.';
 
   @override
   String get errorUnsupportedLanguage => 'هذه اللغة غير مدعومة بعد';
@@ -314,8 +314,20 @@ class AppLocalizationsAr extends AppLocalizations {
   String get couldNotOpenLink => 'تعذّر فتح الرابط';
 
   @override
-  String get pdfFontDownloading => 'جارٍ تنزيل الخط لهذا الملف PDF…';
+  String get pdfFontDownloading => 'جارٍ استلام الخط لملف PDF هذا…';
 
   @override
-  String get pdfFontDownloadFailed => 'تعذّر تنزيل الخط لهذا الملف PDF. تحقق من اتصالك وحاول مرة أخرى.';
+  String get pdfFontDownloadFailed => 'تعذّر استلام الخط لملف PDF هذا. تحقق من اتصالك بالإنترنت وحاول مرة أخرى.';
+
+  @override
+  String get packReceivingTitle => 'جارٍ استلام حزمة اللغة…';
+
+  @override
+  String get packReceivedTitle => 'تم استلام الحزمة';
+
+  @override
+  String get errorOfflinePackNeeded => 'لا يوجد اتصال بالإنترنت. تحتاج هذه اللغة إلى حزمة تُستلم مرة واحدة. اتصل بالإنترنت وحاول مرة أخرى.';
+
+  @override
+  String get errorPackTooSlow => 'يستغرق استلام حزمة اللغة وقتًا طويلًا. قد يكون اتصالك بالإنترنت ضعيفًا. حاول مرة أخرى.';
 }

@@ -104,7 +104,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get errorImageUnreadable => 'L’image n’a pas pu être lue';
 
   @override
-  String get errorModelDownloadFailed => 'Impossible de télécharger le modèle de traduction';
+  String get errorModelDownloadFailed => 'Le pack de langue n\'a pas pu être reçu. Vérifiez votre connexion internet et réessayez.';
 
   @override
   String get errorUnsupportedLanguage => 'Cette langue n’est pas encore prise en charge';
@@ -314,8 +314,20 @@ class AppLocalizationsFr extends AppLocalizations {
   String get couldNotOpenLink => 'Impossible d’ouvrir le lien';
 
   @override
-  String get pdfFontDownloading => 'Téléchargement de la police pour ce PDF…';
+  String get pdfFontDownloading => 'Réception de la police pour ce PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Impossible de télécharger la police pour ce PDF. Vérifiez votre connexion et réessayez.';
+  String get pdfFontDownloadFailed => 'La police de ce PDF n\'a pas pu être reçue. Vérifiez votre connexion internet et réessayez.';
+
+  @override
+  String get packReceivingTitle => 'Réception du pack de langue…';
+
+  @override
+  String get packReceivedTitle => 'Pack reçu';
+
+  @override
+  String get errorOfflinePackNeeded => 'Pas de connexion internet. Cette langue nécessite la réception d\'un pack, une seule fois. Connectez-vous à internet et réessayez.';
+
+  @override
+  String get errorPackTooSlow => 'La réception du pack de langue prend trop de temps. Votre connexion internet est peut-être faible. Réessayez.';
 }

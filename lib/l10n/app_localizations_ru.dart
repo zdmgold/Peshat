@@ -104,7 +104,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get errorImageUnreadable => 'Не удалось прочитать изображение';
 
   @override
-  String get errorModelDownloadFailed => 'Не удалось скачать модель перевода';
+  String get errorModelDownloadFailed => 'Не удалось получить языковой пакет. Проверьте подключение к интернету и повторите попытку.';
 
   @override
   String get errorUnsupportedLanguage => 'Этот язык пока не поддерживается';
@@ -314,8 +314,20 @@ class AppLocalizationsRu extends AppLocalizations {
   String get couldNotOpenLink => 'Не удалось открыть ссылку';
 
   @override
-  String get pdfFontDownloading => 'Загрузка шрифта для этого PDF…';
+  String get pdfFontDownloading => 'Получение шрифта для этого PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Не удалось загрузить шрифт для этого PDF. Проверьте подключение и повторите попытку.';
+  String get pdfFontDownloadFailed => 'Не удалось получить шрифт для этого PDF. Проверьте подключение к интернету и повторите попытку.';
+
+  @override
+  String get packReceivingTitle => 'Получение языкового пакета…';
+
+  @override
+  String get packReceivedTitle => 'Пакет получен';
+
+  @override
+  String get errorOfflinePackNeeded => 'Нет подключения к интернету. Для этого языка нужно один раз получить пакет. Подключитесь к интернету и повторите попытку.';
+
+  @override
+  String get errorPackTooSlow => 'Получение языкового пакета занимает слишком много времени. Возможно, у вас слабое подключение к интернету. Повторите попытку.';
 }

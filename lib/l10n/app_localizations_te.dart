@@ -104,7 +104,7 @@ class AppLocalizationsTe extends AppLocalizations {
   String get errorImageUnreadable => 'చిత్రాన్ని చదవడం సాధ్యం కాలేదు';
 
   @override
-  String get errorModelDownloadFailed => 'అనువాద మోడల్‌ను డౌన్‌లోడ్ చేయడం సాధ్యం కాలేదు';
+  String get errorModelDownloadFailed => 'భాషా ప్యాక్‌ను స్వీకరించడం సాధ్యం కాలేదు. మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.';
 
   @override
   String get errorUnsupportedLanguage => 'ఈ భాషకు ఇంకా మద్దతు లేదు';
@@ -314,8 +314,20 @@ class AppLocalizationsTe extends AppLocalizations {
   String get couldNotOpenLink => 'లింక్‌ను తెరవడం సాధ్యం కాలేదు';
 
   @override
-  String get pdfFontDownloading => 'ఈ PDF కోసం ఫాంట్‌ను డౌన్‌లోడ్ చేస్తోంది…';
+  String get pdfFontDownloading => 'ఈ PDF కోసం ఫాంట్‌ను స్వీకరిస్తోంది…';
 
   @override
-  String get pdfFontDownloadFailed => 'ఈ PDF కోసం ఫాంట్‌ను డౌన్‌లోడ్ చేయడం సాధ్యం కాలేదు. మీ కనెక్షన్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.';
+  String get pdfFontDownloadFailed => 'ఈ PDF కోసం ఫాంట్‌ను స్వీకరించడం సాధ్యం కాలేదు. మీ ఇంటర్నెట్ కనెక్షన్‌ను తనిఖీ చేసి మళ్లీ ప్రయత్నించండి.';
+
+  @override
+  String get packReceivingTitle => 'భాషా ప్యాక్‌ను స్వీకరిస్తోంది…';
+
+  @override
+  String get packReceivedTitle => 'ప్యాక్ స్వీకరించబడింది';
+
+  @override
+  String get errorOfflinePackNeeded => 'ఇంటర్నెట్ కనెక్షన్ లేదు. ఈ భాషకు ఒక్కసారి స్వీకరించాల్సిన ప్యాక్ అవసరం. ఇంటర్నెట్‌కు కనెక్ట్ అయి మళ్లీ ప్రయత్నించండి.';
+
+  @override
+  String get errorPackTooSlow => 'భాషా ప్యాక్‌ను స్వీకరించడానికి చాలా సమయం పడుతోంది. మీ ఇంటర్నెట్ కనెక్షన్ బలహీనంగా ఉండవచ్చు. మళ్లీ ప్రయత్నించండి.';
 }

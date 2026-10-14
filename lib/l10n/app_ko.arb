@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "이미지에서 텍스트를 찾을 수 없습니다",
   "errorImageUnreadable": "이미지를 읽을 수 없습니다",
-  "errorModelDownloadFailed": "번역 모델을 다운로드할 수 없습니다",
+  "errorModelDownloadFailed": "언어 팩을 받지 못했습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
   "errorUnsupportedLanguage": "이 언어는 아직 지원되지 않습니다",
   "errorOcrFailed": "텍스트 인식 실패",
   "errorTranslationFailed": "번역 실패",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "광고 개인정보 보호 옵션",
   "followSystemLabel": "시스템 설정 따르기",
   "couldNotOpenLink": "링크를 열 수 없습니다",
-  "pdfFontDownloading": "이 PDF용 글꼴을 다운로드하는 중…",
-  "pdfFontDownloadFailed": "이 PDF용 글꼴을 다운로드할 수 없습니다. 연결을 확인하고 다시 시도해 주세요."
+  "pdfFontDownloading": "이 PDF용 글꼴을 받는 중…",
+  "pdfFontDownloadFailed": "이 PDF용 글꼴을 받지 못했습니다. 인터넷 연결을 확인하고 다시 시도하세요.",
+  "packReceivingTitle": "언어 팩을 받는 중…",
+  "packReceivedTitle": "팩을 받았습니다",
+  "errorOfflinePackNeeded": "인터넷에 연결되어 있지 않습니다. 이 언어는 한 번만 받으면 되는 팩이 필요합니다. 인터넷에 연결한 후 다시 시도하세요.",
+  "errorPackTooSlow": "언어 팩을 받는 데 시간이 너무 오래 걸립니다. 인터넷 연결이 약할 수 있습니다. 다시 시도하세요."
 }

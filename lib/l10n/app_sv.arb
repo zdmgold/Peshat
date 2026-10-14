@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Ingen text hittades i bilden",
   "errorImageUnreadable": "Bilden kunde inte läsas",
-  "errorModelDownloadFailed": "Översättningsmodellen kunde inte laddas ner",
+  "errorModelDownloadFailed": "Språkpaketet kunde inte tas emot. Kontrollera din internetanslutning och försök igen.",
   "errorUnsupportedLanguage": "Detta språk stöds inte ännu",
   "errorOcrFailed": "Textigenkänning misslyckades",
   "errorTranslationFailed": "Översättning misslyckades",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Integritetsval för annonser",
   "followSystemLabel": "Följ systemet",
   "couldNotOpenLink": "Det gick inte att öppna länken",
-  "pdfFontDownloading": "Hämtar teckensnitt för denna PDF…",
-  "pdfFontDownloadFailed": "Det gick inte att hämta teckensnittet för denna PDF. Kontrollera anslutningen och försök igen."
+  "pdfFontDownloading": "Tar emot typsnitt för den här PDF:en…",
+  "pdfFontDownloadFailed": "Typsnittet för den här PDF:en kunde inte tas emot. Kontrollera din internetanslutning och försök igen.",
+  "packReceivingTitle": "Tar emot språkpaket…",
+  "packReceivedTitle": "Paketet har tagits emot",
+  "errorOfflinePackNeeded": "Ingen internetanslutning. Det här språket behöver ett paket som tas emot en gång. Anslut till internet och försök igen.",
+  "errorPackTooSlow": "Det tar för lång tid att ta emot språkpaketet. Din internetanslutning kan vara svag. Försök igen."
 }

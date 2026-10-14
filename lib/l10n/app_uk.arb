@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "У зображенні не знайдено тексту",
   "errorImageUnreadable": "Не вдалося прочитати зображення",
-  "errorModelDownloadFailed": "Не вдалося завантажити модель перекладу",
+  "errorModelDownloadFailed": "Не вдалося отримати мовний пакет. Перевірте підключення до інтернету та повторіть спробу.",
   "errorUnsupportedLanguage": "Ця мова поки не підтримується",
   "errorOcrFailed": "Розпізнавання тексту не вдалося",
   "errorTranslationFailed": "Переклад не вдався",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Параметри конфіденційності реклами",
   "followSystemLabel": "Як у системі",
   "couldNotOpenLink": "Не вдалося відкрити посилання",
-  "pdfFontDownloading": "Завантаження шрифту для цього PDF…",
-  "pdfFontDownloadFailed": "Не вдалося завантажити шрифт для цього PDF. Перевірте підключення й повторіть спробу."
+  "pdfFontDownloading": "Отримання шрифту для цього PDF…",
+  "pdfFontDownloadFailed": "Не вдалося отримати шрифт для цього PDF. Перевірте підключення до інтернету та повторіть спробу.",
+  "packReceivingTitle": "Отримання мовного пакета…",
+  "packReceivedTitle": "Пакет отримано",
+  "errorOfflinePackNeeded": "Немає підключення до інтернету. Для цієї мови потрібно один раз отримати пакет. Підключіться до інтернету та повторіть спробу.",
+  "errorPackTooSlow": "Отримання мовного пакета триває надто довго. Можливо, у вас слабке підключення до інтернету. Повторіть спробу."
 }

@@ -104,7 +104,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get errorImageUnreadable => 'ပုံကို ဖတ်၍မရပါ';
 
   @override
-  String get errorModelDownloadFailed => 'ဘာသာပြန်မော်ဒယ်ကို ဒေါင်းလုဒ်လုပ်၍မရပါ';
+  String get errorModelDownloadFailed => 'ဘာသာစကားပက်ကေ့ချ်ကို လက်ခံ၍ မရပါ။ သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။';
 
   @override
   String get errorUnsupportedLanguage => 'ဤဘာသာစကားကို မထောက်ပံ့သေးပါ';
@@ -314,8 +314,20 @@ class AppLocalizationsMy extends AppLocalizations {
   String get couldNotOpenLink => 'လင့်ခ်ကို ဖွင့်၍မရပါ';
 
   @override
-  String get pdfFontDownloading => 'ဤ PDF အတွက် ဖောင့်ကို ဒေါင်းလုဒ်လုပ်နေသည်…';
+  String get pdfFontDownloading => 'ဤ PDF အတွက် ဖောင့် လက်ခံနေသည်…';
 
   @override
-  String get pdfFontDownloadFailed => 'ဤ PDF အတွက် ဖောင့်ကို ဒေါင်းလုဒ်လုပ်၍မရပါ။ သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်စမ်းကြည့်ပါ။';
+  String get pdfFontDownloadFailed => 'ဤ PDF အတွက် ဖောင့်ကို လက်ခံ၍ မရပါ။ သင့်အင်တာနက်ချိတ်ဆက်မှုကို စစ်ဆေးပြီး ထပ်မံကြိုးစားပါ။';
+
+  @override
+  String get packReceivingTitle => 'ဘာသာစကားပက်ကေ့ချ် လက်ခံနေသည်…';
+
+  @override
+  String get packReceivedTitle => 'ပက်ကေ့ချ် လက်ခံရရှိပြီး';
+
+  @override
+  String get errorOfflinePackNeeded => 'အင်တာနက်ချိတ်ဆက်မှု မရှိပါ။ ဤဘာသာစကားသည် တစ်ကြိမ်သာ လက်ခံရမည့် ပက်ကေ့ချ် လိုအပ်သည်။ အင်တာနက်နှင့် ချိတ်ဆက်ပြီး ထပ်မံကြိုးစားပါ။';
+
+  @override
+  String get errorPackTooSlow => 'ဘာသာစကားပက်ကေ့ချ် လက်ခံရန် အချိန်ကြာနေသည်။ သင့်အင်တာနက်ချိတ်ဆက်မှု အားနည်းနေနိုင်သည်။ ထပ်မံကြိုးစားပါ။';
 }

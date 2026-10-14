@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Không tìm thấy văn bản trong ảnh",
   "errorImageUnreadable": "Không thể đọc ảnh",
-  "errorModelDownloadFailed": "Không thể tải xuống mô hình dịch",
+  "errorModelDownloadFailed": "Không thể nhận gói ngôn ngữ. Hãy kiểm tra kết nối internet của bạn và thử lại.",
   "errorUnsupportedLanguage": "Ngôn ngữ này chưa được hỗ trợ",
   "errorOcrFailed": "Nhận dạng văn bản thất bại",
   "errorTranslationFailed": "Dịch thất bại",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Tùy chọn quyền riêng tư quảng cáo",
   "followSystemLabel": "Theo hệ thống",
   "couldNotOpenLink": "Không thể mở liên kết",
-  "pdfFontDownloading": "Đang tải phông chữ cho PDF này…",
-  "pdfFontDownloadFailed": "Không thể tải phông chữ cho PDF này. Hãy kiểm tra kết nối và thử lại."
+  "pdfFontDownloading": "Đang nhận phông chữ cho tệp PDF này…",
+  "pdfFontDownloadFailed": "Không thể nhận phông chữ cho tệp PDF này. Hãy kiểm tra kết nối internet của bạn và thử lại.",
+  "packReceivingTitle": "Đang nhận gói ngôn ngữ…",
+  "packReceivedTitle": "Đã nhận gói",
+  "errorOfflinePackNeeded": "Không có kết nối internet. Ngôn ngữ này cần nhận một gói duy nhất một lần. Hãy kết nối internet và thử lại.",
+  "errorPackTooSlow": "Việc nhận gói ngôn ngữ mất quá nhiều thời gian. Kết nối internet của bạn có thể yếu. Hãy thử lại."
 }

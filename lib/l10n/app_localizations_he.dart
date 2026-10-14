@@ -104,7 +104,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get errorImageUnreadable => 'לא ניתן לקרוא את התמונה';
 
   @override
-  String get errorModelDownloadFailed => 'לא ניתן להוריד את מודל התרגום';
+  String get errorModelDownloadFailed => 'לא ניתן היה לקבל את חבילת השפה. בדוק את חיבור האינטרנט ונסה שוב.';
 
   @override
   String get errorUnsupportedLanguage => 'שפה זו עדיין לא נתמכת';
@@ -314,8 +314,20 @@ class AppLocalizationsHe extends AppLocalizations {
   String get couldNotOpenLink => 'לא ניתן לפתוח את הקישור';
 
   @override
-  String get pdfFontDownloading => 'מוריד גופן עבור קובץ PDF זה…';
+  String get pdfFontDownloading => 'מקבל גופן עבור ה-PDF הזה…';
 
   @override
-  String get pdfFontDownloadFailed => 'לא ניתן להוריד את הגופן עבור קובץ PDF זה. בדקו את החיבור ונסו שוב.';
+  String get pdfFontDownloadFailed => 'לא ניתן היה לקבל את הגופן עבור ה-PDF הזה. בדוק את חיבור האינטרנט ונסה שוב.';
+
+  @override
+  String get packReceivingTitle => 'מקבל חבילת שפה…';
+
+  @override
+  String get packReceivedTitle => 'החבילה התקבלה';
+
+  @override
+  String get errorOfflinePackNeeded => 'אין חיבור לאינטרנט. שפה זו דורשת קבלת חבילה חד-פעמית. התחבר לאינטרנט ונסה שוב.';
+
+  @override
+  String get errorPackTooSlow => 'קבלת חבילת השפה אורכת זמן רב מדי. ייתכן שחיבור האינטרנט שלך חלש. נסה שוב.';
 }

@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Nem található szöveg a képen",
   "errorImageUnreadable": "A kép nem olvasható",
-  "errorModelDownloadFailed": "A fordítási modellt nem sikerült letölteni",
+  "errorModelDownloadFailed": "A nyelvi csomagot nem sikerült megkapni. Ellenőrizze az internetkapcsolatot, és próbálja újra.",
   "errorUnsupportedLanguage": "Ez a nyelv még nem támogatott",
   "errorOcrFailed": "A szövegfelismerés sikertelen",
   "errorTranslationFailed": "A fordítás sikertelen",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Hirdetési adatvédelmi beállítások",
   "followSystemLabel": "Rendszer követése",
   "couldNotOpenLink": "A hivatkozás nem nyitható meg",
-  "pdfFontDownloading": "Betűtípus letöltése ehhez a PDF-hez…",
-  "pdfFontDownloadFailed": "Nem sikerült letölteni a betűtípust ehhez a PDF-hez. Ellenőrizd a kapcsolatot, és próbáld újra."
+  "pdfFontDownloading": "Betűtípus fogadása ehhez a PDF-hez…",
+  "pdfFontDownloadFailed": "A PDF betűtípusát nem sikerült megkapni. Ellenőrizze az internetkapcsolatot, és próbálja újra.",
+  "packReceivingTitle": "Nyelvi csomag fogadása…",
+  "packReceivedTitle": "Csomag megkapva",
+  "errorOfflinePackNeeded": "Nincs internetkapcsolat. Ehhez a nyelvhez egyszeri csomagfogadás szükséges. Csatlakozzon az internethez, és próbálja újra.",
+  "errorPackTooSlow": "A nyelvi csomag fogadása túl sokáig tart. Lehet, hogy gyenge az internetkapcsolata. Próbálja újra."
 }

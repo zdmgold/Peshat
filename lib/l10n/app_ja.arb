@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}、{nativeName}",
   "errorNoTextDetected": "画像にテキストが見つかりません",
   "errorImageUnreadable": "画像を読み取れませんでした",
-  "errorModelDownloadFailed": "翻訳モデルをダウンロードできませんでした",
+  "errorModelDownloadFailed": "言語パックを受信できませんでした。インターネット接続を確認して、もう一度お試しください。",
   "errorUnsupportedLanguage": "この言語はまだ対応していません",
   "errorOcrFailed": "テキスト認識に失敗しました",
   "errorTranslationFailed": "翻訳に失敗しました",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "広告のプライバシー設定",
   "followSystemLabel": "システムに従う",
   "couldNotOpenLink": "リンクを開けませんでした",
-  "pdfFontDownloading": "このPDF用のフォントをダウンロード中…",
-  "pdfFontDownloadFailed": "このPDF用のフォントをダウンロードできませんでした。接続を確認して、もう一度お試しください。"
+  "pdfFontDownloading": "このPDF用のフォントを受信中…",
+  "pdfFontDownloadFailed": "このPDF用のフォントを受信できませんでした。インターネット接続を確認して、もう一度お試しください。",
+  "packReceivingTitle": "言語パックを受信中…",
+  "packReceivedTitle": "パックを受信しました",
+  "errorOfflinePackNeeded": "インターネットに接続されていません。この言語には、一度だけ受信するパックが必要です。インターネットに接続して、もう一度お試しください。",
+  "errorPackTooSlow": "言語パックの受信に時間がかかっています。インターネット接続が弱い可能性があります。もう一度お試しください。"
 }

@@ -104,7 +104,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get errorImageUnreadable => 'Изображението не можа да бъде прочетено';
 
   @override
-  String get errorModelDownloadFailed => 'Моделът за превод не можа да бъде изтеглен';
+  String get errorModelDownloadFailed => 'Езиковият пакет не можа да бъде получен. Проверете интернет връзката си и опитайте отново.';
 
   @override
   String get errorUnsupportedLanguage => 'Този език все още не се поддържа';
@@ -314,8 +314,20 @@ class AppLocalizationsBg extends AppLocalizations {
   String get couldNotOpenLink => 'Връзката не можа да бъде отворена';
 
   @override
-  String get pdfFontDownloading => 'Изтегляне на шрифт за този PDF…';
+  String get pdfFontDownloading => 'Получава се шрифт за този PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Шрифтът за този PDF не можа да бъде изтеглен. Проверете връзката си и опитайте отново.';
+  String get pdfFontDownloadFailed => 'Шрифтът за този PDF не можа да бъде получен. Проверете интернет връзката си и опитайте отново.';
+
+  @override
+  String get packReceivingTitle => 'Получава се езиков пакет…';
+
+  @override
+  String get packReceivedTitle => 'Пакетът е получен';
+
+  @override
+  String get errorOfflinePackNeeded => 'Няма връзка с интернет. Този език изисква еднократно получаване на пакет. Свържете се с интернет и опитайте отново.';
+
+  @override
+  String get errorPackTooSlow => 'Получаването на езиковия пакет отнема твърде дълго. Интернет връзката ви може да е слаба. Опитайте отново.';
 }

@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Hakuna maandishi yaliyopatikana kwenye picha",
   "errorImageUnreadable": "Picha haikuweza kusomwa",
-  "errorModelDownloadFailed": "Modeli ya tafsiri haikuweza kupakuliwa",
+  "errorModelDownloadFailed": "Kifurushi cha lugha hakikuweza kupokelewa. Angalia muunganisho wako wa intaneti kisha ujaribu tena.",
   "errorUnsupportedLanguage": "Lugha hii bado haitumiki",
   "errorOcrFailed": "Utambuzi wa maandishi umeshindwa",
   "errorTranslationFailed": "Tafsiri imeshindwa",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Chaguo za faragha ya matangazo",
   "followSystemLabel": "Fuata mfumo",
   "couldNotOpenLink": "Kiungo hakikuweza kufunguliwa",
-  "pdfFontDownloading": "Inapakua fonti ya PDF hii…",
-  "pdfFontDownloadFailed": "Fonti ya PDF hii haikuweza kupakuliwa. Angalia muunganisho wako kisha ujaribu tena."
+  "pdfFontDownloading": "Inapokea fonti ya PDF hii…",
+  "pdfFontDownloadFailed": "Fonti ya PDF hii haikuweza kupokelewa. Angalia muunganisho wako wa intaneti kisha ujaribu tena.",
+  "packReceivingTitle": "Inapokea kifurushi cha lugha…",
+  "packReceivedTitle": "Kifurushi kimepokelewa",
+  "errorOfflinePackNeeded": "Hakuna muunganisho wa intaneti. Lugha hii inahitaji kifurushi kinachopokelewa mara moja. Unganisha kwenye intaneti kisha ujaribu tena.",
+  "errorPackTooSlow": "Kifurushi cha lugha kinachukua muda mrefu sana kupokelewa. Muunganisho wako wa intaneti unaweza kuwa dhaifu. Jaribu tena."
 }

@@ -104,7 +104,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get errorImageUnreadable => 'Não foi possível ler a imagem';
 
   @override
-  String get errorModelDownloadFailed => 'Não foi possível baixar o modelo de tradução';
+  String get errorModelDownloadFailed => 'Não foi possível receber o pacote de idioma. Verifique sua conexão com a internet e tente novamente.';
 
   @override
   String get errorUnsupportedLanguage => 'Este idioma ainda não é compatível';
@@ -314,8 +314,20 @@ class AppLocalizationsPt extends AppLocalizations {
   String get couldNotOpenLink => 'Não foi possível abrir o link';
 
   @override
-  String get pdfFontDownloading => 'Baixando a fonte para este PDF…';
+  String get pdfFontDownloading => 'Recebendo a fonte para este PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'Não foi possível baixar a fonte para este PDF. Verifique sua conexão e tente novamente.';
+  String get pdfFontDownloadFailed => 'Não foi possível receber a fonte para este PDF. Verifique sua conexão com a internet e tente novamente.';
+
+  @override
+  String get packReceivingTitle => 'Recebendo pacote de idioma…';
+
+  @override
+  String get packReceivedTitle => 'Pacote recebido';
+
+  @override
+  String get errorOfflinePackNeeded => 'Sem conexão com a internet. Este idioma precisa que um pacote seja recebido uma única vez. Conecte-se à internet e tente novamente.';
+
+  @override
+  String get errorPackTooSlow => 'O pacote de idioma está demorando demais para ser recebido. Sua conexão com a internet pode estar fraca. Tente novamente.';
 }

@@ -104,7 +104,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get errorImageUnreadable => 'छवि पढ़ी नहीं जा सकी';
 
   @override
-  String get errorModelDownloadFailed => 'अनुवाद मॉडल डाउनलोड नहीं हो सका';
+  String get errorModelDownloadFailed => 'भाषा पैक प्राप्त नहीं हो सका। अपना इंटरनेट कनेक्शन जाँचें और फिर से कोशिश करें।';
 
   @override
   String get errorUnsupportedLanguage => 'यह भाषा अभी समर्थित नहीं है';
@@ -314,8 +314,20 @@ class AppLocalizationsHi extends AppLocalizations {
   String get couldNotOpenLink => 'लिंक नहीं खुल सका';
 
   @override
-  String get pdfFontDownloading => 'इस PDF के लिए फ़ॉन्ट डाउनलोड हो रहा है…';
+  String get pdfFontDownloading => 'इस PDF के लिए फ़ॉन्ट प्राप्त हो रहा है…';
 
   @override
-  String get pdfFontDownloadFailed => 'इस PDF के लिए फ़ॉन्ट डाउनलोड नहीं हो सका। अपना कनेक्शन जाँचें और पुनः प्रयास करें।';
+  String get pdfFontDownloadFailed => 'इस PDF के लिए फ़ॉन्ट प्राप्त नहीं हो सका। अपना इंटरनेट कनेक्शन जाँचें और फिर से कोशिश करें।';
+
+  @override
+  String get packReceivingTitle => 'भाषा पैक प्राप्त हो रहा है…';
+
+  @override
+  String get packReceivedTitle => 'पैक प्राप्त हो गया';
+
+  @override
+  String get errorOfflinePackNeeded => 'इंटरनेट कनेक्शन नहीं है। इस भाषा के लिए एक बार पैक प्राप्त करना ज़रूरी है। इंटरनेट से जुड़ें और फिर से कोशिश करें।';
+
+  @override
+  String get errorPackTooSlow => 'भाषा पैक प्राप्त होने में बहुत समय लग रहा है। हो सकता है आपका इंटरनेट कनेक्शन कमज़ोर हो। फिर से कोशिश करें।';
 }

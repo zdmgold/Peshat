@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Walang tekstong natagpuan sa larawan",
   "errorImageUnreadable": "Hindi mabasa ang larawan",
-  "errorModelDownloadFailed": "Hindi ma-download ang modelo ng pagsasalin",
+  "errorModelDownloadFailed": "Hindi natanggap ang language pack. Suriin ang iyong koneksyon sa internet at subukan muli.",
   "errorUnsupportedLanguage": "Hindi pa sinusuportahan ang wikang ito",
   "errorOcrFailed": "Nabigo ang pagkilala ng teksto",
   "errorTranslationFailed": "Nabigo ang pagsasalin",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Mga pagpipilian sa privacy ng ad",
   "followSystemLabel": "Sundin ang system",
   "couldNotOpenLink": "Hindi mabuksan ang link",
-  "pdfFontDownloading": "Dina-download ang font para sa PDF na ito…",
-  "pdfFontDownloadFailed": "Hindi ma-download ang font para sa PDF na ito. Suriin ang iyong koneksyon at subukang muli."
+  "pdfFontDownloading": "Tinatanggap ang font para sa PDF na ito…",
+  "pdfFontDownloadFailed": "Hindi natanggap ang font para sa PDF na ito. Suriin ang iyong koneksyon sa internet at subukan muli.",
+  "packReceivingTitle": "Tinatanggap ang language pack…",
+  "packReceivedTitle": "Natanggap na ang pack",
+  "errorOfflinePackNeeded": "Walang koneksyon sa internet. Kailangan ng wikang ito ng pack na isang beses lang tatanggapin. Kumonekta sa internet at subukan muli.",
+  "errorPackTooSlow": "Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli."
 }

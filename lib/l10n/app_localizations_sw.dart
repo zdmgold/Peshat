@@ -104,7 +104,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get errorImageUnreadable => 'Picha haikuweza kusomwa';
 
   @override
-  String get errorModelDownloadFailed => 'Modeli ya tafsiri haikuweza kupakuliwa';
+  String get errorModelDownloadFailed => 'Kifurushi cha lugha hakikuweza kupokelewa. Angalia muunganisho wako wa intaneti kisha ujaribu tena.';
 
   @override
   String get errorUnsupportedLanguage => 'Lugha hii bado haitumiki';
@@ -314,8 +314,20 @@ class AppLocalizationsSw extends AppLocalizations {
   String get couldNotOpenLink => 'Kiungo hakikuweza kufunguliwa';
 
   @override
-  String get pdfFontDownloading => 'Inapakua fonti ya PDF hii…';
+  String get pdfFontDownloading => 'Inapokea fonti ya PDF hii…';
 
   @override
-  String get pdfFontDownloadFailed => 'Fonti ya PDF hii haikuweza kupakuliwa. Angalia muunganisho wako kisha ujaribu tena.';
+  String get pdfFontDownloadFailed => 'Fonti ya PDF hii haikuweza kupokelewa. Angalia muunganisho wako wa intaneti kisha ujaribu tena.';
+
+  @override
+  String get packReceivingTitle => 'Inapokea kifurushi cha lugha…';
+
+  @override
+  String get packReceivedTitle => 'Kifurushi kimepokelewa';
+
+  @override
+  String get errorOfflinePackNeeded => 'Hakuna muunganisho wa intaneti. Lugha hii inahitaji kifurushi kinachopokelewa mara moja. Unganisha kwenye intaneti kisha ujaribu tena.';
+
+  @override
+  String get errorPackTooSlow => 'Kifurushi cha lugha kinachukua muda mrefu sana kupokelewa. Muunganisho wako wa intaneti unaweza kuwa dhaifu. Jaribu tena.';
 }

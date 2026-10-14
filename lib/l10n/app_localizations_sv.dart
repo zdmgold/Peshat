@@ -104,7 +104,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get errorImageUnreadable => 'Bilden kunde inte läsas';
 
   @override
-  String get errorModelDownloadFailed => 'Översättningsmodellen kunde inte laddas ner';
+  String get errorModelDownloadFailed => 'Språkpaketet kunde inte tas emot. Kontrollera din internetanslutning och försök igen.';
 
   @override
   String get errorUnsupportedLanguage => 'Detta språk stöds inte ännu';
@@ -314,8 +314,20 @@ class AppLocalizationsSv extends AppLocalizations {
   String get couldNotOpenLink => 'Det gick inte att öppna länken';
 
   @override
-  String get pdfFontDownloading => 'Hämtar teckensnitt för denna PDF…';
+  String get pdfFontDownloading => 'Tar emot typsnitt för den här PDF:en…';
 
   @override
-  String get pdfFontDownloadFailed => 'Det gick inte att hämta teckensnittet för denna PDF. Kontrollera anslutningen och försök igen.';
+  String get pdfFontDownloadFailed => 'Typsnittet för den här PDF:en kunde inte tas emot. Kontrollera din internetanslutning och försök igen.';
+
+  @override
+  String get packReceivingTitle => 'Tar emot språkpaket…';
+
+  @override
+  String get packReceivedTitle => 'Paketet har tagits emot';
+
+  @override
+  String get errorOfflinePackNeeded => 'Ingen internetanslutning. Det här språket behöver ett paket som tas emot en gång. Anslut till internet och försök igen.';
+
+  @override
+  String get errorPackTooSlow => 'Det tar för lång tid att ta emot språkpaketet. Din internetanslutning kan vara svag. Försök igen.';
 }

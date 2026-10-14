@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Nu s-a găsit text în imagine",
   "errorImageUnreadable": "Imaginea nu a putut fi citită",
-  "errorModelDownloadFailed": "Modelul de traducere nu a putut fi descărcat",
+  "errorModelDownloadFailed": "Pachetul de limbă nu a putut fi primit. Verificați conexiunea la internet și încercați din nou.",
   "errorUnsupportedLanguage": "Această limbă nu este încă acceptată",
   "errorOcrFailed": "Recunoașterea textului a eșuat",
   "errorTranslationFailed": "Traducerea a eșuat",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Opțiuni de confidențialitate pentru anunțuri",
   "followSystemLabel": "Urmează sistemul",
   "couldNotOpenLink": "Linkul nu a putut fi deschis",
-  "pdfFontDownloading": "Se descarcă fontul pentru acest PDF…",
-  "pdfFontDownloadFailed": "Fontul pentru acest PDF nu a putut fi descărcat. Verifică conexiunea și încearcă din nou."
+  "pdfFontDownloading": "Se primește fontul pentru acest PDF…",
+  "pdfFontDownloadFailed": "Fontul pentru acest PDF nu a putut fi primit. Verificați conexiunea la internet și încercați din nou.",
+  "packReceivingTitle": "Se primește pachetul de limbă…",
+  "packReceivedTitle": "Pachet primit",
+  "errorOfflinePackNeeded": "Nu există conexiune la internet. Această limbă are nevoie de un pachet care se primește o singură dată. Conectați-vă la internet și încercați din nou.",
+  "errorPackTooSlow": "Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou."
 }

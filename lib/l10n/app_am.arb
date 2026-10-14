@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "በምስሉ ውስጥ ጽሑፍ አልተገኘም",
   "errorImageUnreadable": "ምስሉን ማንበብ አልተቻለም",
-  "errorModelDownloadFailed": "የትርጉም ሞዴል ማውረድ አልተቻለም",
+  "errorModelDownloadFailed": "የቋንቋ ጥቅሉን መቀበል አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።",
   "errorUnsupportedLanguage": "ይህ ቋንቋ ገና አልተደገፈም",
   "errorOcrFailed": "የጽሑፍ ማወቂያ አልተሳካም",
   "errorTranslationFailed": "ትርጉም አልተሳካም",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "የማስታወቂያ ግላዊነት ምርጫዎች",
   "followSystemLabel": "ስርዓቱን ተከተል",
   "couldNotOpenLink": "ሊንኩን መክፈት አልተቻለም",
-  "pdfFontDownloading": "ለዚህ PDF ቅርጸ-ቁምፊ በማውረድ ላይ…",
-  "pdfFontDownloadFailed": "ለዚህ PDF ቅርጸ-ቁምፊውን ማውረድ አልተቻለም። ግንኙነትዎን ያረጋግጡ እና እንደገና ይሞክሩ።"
+  "pdfFontDownloading": "የዚህ PDF ፎንት በመቀበል ላይ…",
+  "pdfFontDownloadFailed": "የዚህ PDF ፎንት መቀበል አልተቻለም። የበይነመረብ ግንኙነትዎን ይፈትሹ እና እንደገና ይሞክሩ።",
+  "packReceivingTitle": "የቋንቋ ጥቅል በመቀበል ላይ…",
+  "packReceivedTitle": "ጥቅሉ ተቀብሏል",
+  "errorOfflinePackNeeded": "የበይነመረብ ግንኙነት የለም። ይህ ቋንቋ አንድ ጊዜ የሚቀበሉት ጥቅል ያስፈልገዋል። ከበይነመረብ ጋር ተገናኝተው እንደገና ይሞክሩ።",
+  "errorPackTooSlow": "የቋንቋ ጥቅሉ ለመድረስ ከመጠን በላይ እየወሰደ ነው። የበይነመረብ ግንኙነትዎ ደካማ ሊሆን ይችላል። እንደገና ይሞክሩ።"
 }

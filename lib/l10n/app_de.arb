@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "Kein Text im Bild gefunden",
   "errorImageUnreadable": "Das Bild konnte nicht gelesen werden",
-  "errorModelDownloadFailed": "Übersetzungsmodell konnte nicht heruntergeladen werden",
+  "errorModelDownloadFailed": "Das Sprachpaket konnte nicht empfangen werden. Prüfe deine Internetverbindung und versuche es erneut.",
   "errorUnsupportedLanguage": "Diese Sprache wird noch nicht unterstützt",
   "errorOcrFailed": "Texterkennung fehlgeschlagen",
   "errorTranslationFailed": "Übersetzung fehlgeschlagen",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "Datenschutzoptionen für Werbung",
   "followSystemLabel": "Systemeinstellung folgen",
   "couldNotOpenLink": "Link konnte nicht geöffnet werden",
-  "pdfFontDownloading": "Schriftart für dieses PDF wird heruntergeladen …",
-  "pdfFontDownloadFailed": "Die Schriftart für dieses PDF konnte nicht heruntergeladen werden. Prüfe deine Verbindung und versuche es erneut."
+  "pdfFontDownloading": "Schriftart für dieses PDF wird empfangen …",
+  "pdfFontDownloadFailed": "Die Schriftart für dieses PDF konnte nicht empfangen werden. Prüfe deine Internetverbindung und versuche es erneut.",
+  "packReceivingTitle": "Sprachpaket wird empfangen …",
+  "packReceivedTitle": "Paket empfangen",
+  "errorOfflinePackNeeded": "Keine Internetverbindung. Für diese Sprache muss einmalig ein Paket empfangen werden. Stelle eine Internetverbindung her und versuche es erneut.",
+  "errorPackTooSlow": "Das Empfangen des Sprachpakets dauert zu lange. Deine Internetverbindung ist möglicherweise schwach. Versuche es erneut."
 }

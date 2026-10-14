@@ -104,7 +104,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get errorImageUnreadable => 'تصویر خوانده نشد';
 
   @override
-  String get errorModelDownloadFailed => 'مدل ترجمه دانلود نشد';
+  String get errorModelDownloadFailed => 'بسته زبان دریافت نشد. اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید.';
 
   @override
   String get errorUnsupportedLanguage => 'این زبان هنوز پشتیبانی نمی‌شود';
@@ -314,8 +314,20 @@ class AppLocalizationsFa extends AppLocalizations {
   String get couldNotOpenLink => 'باز کردن پیوند ممکن نشد';
 
   @override
-  String get pdfFontDownloading => 'در حال دانلود قلم برای این PDF…';
+  String get pdfFontDownloading => 'در حال دریافت قلم برای این PDF…';
 
   @override
-  String get pdfFontDownloadFailed => 'دانلود قلم برای این PDF ممکن نشد. اتصال خود را بررسی کنید و دوباره تلاش کنید.';
+  String get pdfFontDownloadFailed => 'قلم این PDF دریافت نشد. اتصال اینترنت خود را بررسی کنید و دوباره تلاش کنید.';
+
+  @override
+  String get packReceivingTitle => 'در حال دریافت بسته زبان…';
+
+  @override
+  String get packReceivedTitle => 'بسته دریافت شد';
+
+  @override
+  String get errorOfflinePackNeeded => 'اتصال به اینترنت وجود ندارد. این زبان به یک بسته نیاز دارد که فقط یک بار دریافت می‌شود. به اینترنت وصل شوید و دوباره تلاش کنید.';
+
+  @override
+  String get errorPackTooSlow => 'دریافت بسته زبان بیش از حد طول می‌کشد. ممکن است اتصال اینترنت شما ضعیف باشد. دوباره تلاش کنید.';
 }

@@ -31,7 +31,7 @@
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "ছবিতে কোনো টেক্সট পাওয়া যায়নি",
   "errorImageUnreadable": "ছবিটি পড়া যায়নি",
-  "errorModelDownloadFailed": "অনুবাদ মডেল ডাউনলোড করা যায়নি",
+  "errorModelDownloadFailed": "ভাষা প্যাকটি গ্রহণ করা যায়নি। আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।",
   "errorUnsupportedLanguage": "এই ভাষা এখনো সমর্থিত নয়",
   "errorOcrFailed": "টেক্সট শনাক্তকরণ ব্যর্থ",
   "errorTranslationFailed": "অনুবাদ ব্যর্থ",
@@ -101,6 +101,10 @@
   "adPrivacyChoices": "বিজ্ঞাপনের গোপনীয়তা পছন্দ",
   "followSystemLabel": "সিস্টেম অনুসরণ করুন",
   "couldNotOpenLink": "লিংক খোলা যায়নি",
-  "pdfFontDownloading": "এই PDF-এর জন্য ফন্ট ডাউনলোড হচ্ছে…",
-  "pdfFontDownloadFailed": "এই PDF-এর জন্য ফন্ট ডাউনলোড করা যায়নি। আপনার সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।"
+  "pdfFontDownloading": "এই PDF-এর ফন্ট গ্রহণ করা হচ্ছে…",
+  "pdfFontDownloadFailed": "এই PDF-এর ফন্ট গ্রহণ করা যায়নি। আপনার ইন্টারনেট সংযোগ পরীক্ষা করে আবার চেষ্টা করুন।",
+  "packReceivingTitle": "ভাষা প্যাক গ্রহণ করা হচ্ছে…",
+  "packReceivedTitle": "প্যাক গ্রহণ করা হয়েছে",
+  "errorOfflinePackNeeded": "ইন্টারনেট সংযোগ নেই। এই ভাষার জন্য একবারের একটি প্যাক গ্রহণ করতে হবে। ইন্টারনেটে সংযুক্ত হয়ে আবার চেষ্টা করুন।",
+  "errorPackTooSlow": "ভাষা প্যাক গ্রহণ করতে অনেক সময় লাগছে। আপনার ইন্টারনেট সংযোগ দুর্বল হতে পারে। আবার চেষ্টা করুন।"
 }
