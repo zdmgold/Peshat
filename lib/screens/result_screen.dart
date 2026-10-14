@@ -77,6 +77,10 @@ class _ResultScreenState extends State<ResultScreen> {
     final s = _provider.value;
     if (s is ScanDone && !_saved) {
       _saved = true;
+      if (s.sameLanguage) {
+        if (mounted) setState(() => _tab = _ResultTab.translation);
+        return;
+      }
       widget.history.add(ScanResult(
         id: DateTime.now().microsecondsSinceEpoch.toString(),
         sourceText: s.sourceText,

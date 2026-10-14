@@ -40,11 +40,16 @@ class ScanDone extends ScanState {
   final String translatedText;
   final String sourceLanguage;
   final String targetLanguage;
+
+  /// True when the text is already in the target language, so nothing was
+  /// translated (and nothing should be saved to history).
+  final bool sameLanguage;
   const ScanDone({
     required this.sourceText,
     required this.translatedText,
     required this.sourceLanguage,
     required this.targetLanguage,
+    this.sameLanguage = false,
   });
 }
 

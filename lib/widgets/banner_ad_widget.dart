@@ -80,7 +80,7 @@ class _BannerAdWidgetState extends State<BannerAdWidget> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        const SizedBox(height: 32),
+        const SizedBox(height: 8),
         Center(
           child: SizedBox(
             width: 320,

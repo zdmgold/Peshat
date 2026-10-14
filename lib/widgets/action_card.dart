@@ -82,6 +82,7 @@ class _ActionCardState extends State<ActionCard> {
               Expanded(
                 child: Text(
                   widget.label,
+                  maxLines: 2,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.chrome.copyWith(
                     fontSize: 16,

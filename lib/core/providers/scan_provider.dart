@@ -8,6 +8,11 @@ import '../services/language_detector.dart';
 import '../services/text_recognizer_service.dart';
 import '../services/translator_service.dart';
 
+/// True when two BCP-47 codes name the same base language ('en' / 'en-US').
+bool isSameLanguage(String a, String b) =>
+    a.toLowerCase().split(RegExp('[-_]')).first ==
+    b.toLowerCase().split(RegExp('[-_]')).first;
+
 class ScanProvider extends ValueNotifier<ScanState> {
   final TextRecognizerService _ocr;
   final TranslatorService _translator;
@@ -75,6 +80,16 @@ class ScanProvider extends ValueNotifier<ScanState> {
       final d = await _detector.detect(src).timeout(const Duration(seconds: 5));
       if (d.isNotEmpty && d != 'und') srcLang = d;
     } catch (_) {}
+    if (isSameLanguage(srcLang, targetLanguage)) {
+      value = ScanDone(
+        sourceText: src,
+        translatedText: src,
+        sourceLanguage: srcLang,
+        targetLanguage: targetLanguage,
+        sameLanguage: true,
+      );
+      return;
+    }
     value = ScanPreparingModel(targetLanguage);
     await _translator
         .ensureModelsReady(fromBcp: srcLang, toBcp: targetLanguage)

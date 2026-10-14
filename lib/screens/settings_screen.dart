@@ -226,7 +226,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.globe),
-                        title: Text(l10n.uiLanguageLabel),
+                        title: Text(l10n.uiLanguageLabel, maxLines: 2),
                         trailing: _TrailingValue(
                           text: widget.uiLocale.value == null
                               ? l10n.sectionSystemLabel
@@ -261,7 +261,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.palette),
-                        title: Text(l10n.themeLabel),
+                        title: Text(l10n.themeLabel, maxLines: 2),
                       ),
                       Padding(
                         padding: const EdgeInsets.fromLTRB(
@@ -335,7 +335,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.history),
-                        title: Text(l10n.historyLabel),
+                        title: Text(l10n.historyLabel, maxLines: 2),
                         trailing: _kChevron,
                         onTap: _openHistory,
                       ),
@@ -354,7 +354,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         backgroundColor: cardBg,
                           leading: const PeshatIcon(
                               icon: AppIcons.notifications),
-                          title: Text(l10n.reminderNotificationsLabel),
+                          title: Text(l10n.reminderNotificationsLabel, maxLines: 2),
                           subtitle:
                               Text(l10n.reminderNotificationsSubtitle, maxLines: 2),
                           trailing: CupertinoSwitch(
@@ -392,7 +392,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                             CupertinoListTile(
                         backgroundColor: cardBg,
                               leading: const PeshatIcon(icon: AppIcons.verified),
-                              title: Text(l10n.adStatusLabel),
+                              title: Text(l10n.adStatusLabel, maxLines: 2),
                               trailing: const AdsRemovedBadge(),
                             ),
                           ],
@@ -406,8 +406,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           CupertinoListTile(
                         backgroundColor: cardBg,
                             leading: const PeshatIcon(icon: AppIcons.adsClick),
-                            title: Text(l10n.removeAdsButton),
-                            subtitle: Text(l10n.removeAdsSubtitle),
+                            title: Text(l10n.removeAdsButton, maxLines: 2),
+                            subtitle: Text(l10n.removeAdsSubtitle, maxLines: 2),
                             trailing: _SmallOutlinedButton(
                               label: l10n.removeAdsShortLabel,
                               accent: accent,
@@ -417,14 +417,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           CupertinoListTile(
                         backgroundColor: cardBg,
                             leading: const PeshatIcon(icon: AppIcons.restore),
-                            title: Text(l10n.restorePurchaseButton),
+                            title: Text(l10n.restorePurchaseButton, maxLines: 2),
                             onTap: _restorePurchase,
                           ),
                           if (AdConsent.instance.privacyOptionsRequired.value)
                             CupertinoListTile(
                         backgroundColor: cardBg,
                               leading: const PeshatIcon(icon: AppIcons.privacy),
-                              title: Text(l10n.adPrivacyChoices),
+                              title: Text(l10n.adPrivacyChoices, maxLines: 2),
                               trailing: _kChevron,
                               onTap: AdConsent.instance.showPrivacyOptions,
                             ),
@@ -442,28 +442,28 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.privacy),
-                        title: Text(l10n.privacyPolicyLink),
+                        title: Text(l10n.privacyPolicyLink, maxLines: 2),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_privacyUrl),
                       ),
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.docText),
-                        title: Text(l10n.termsLink),
+                        title: Text(l10n.termsLink, maxLines: 2),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_termsUrl),
                       ),
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.support),
-                        title: Text(l10n.supportLink),
+                        title: Text(l10n.supportLink, maxLines: 2),
                         trailing: _kChevron,
                         onTap: () => _openUrl(_supportUrl),
                       ),
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.code),
-                        title: Text(l10n.licensesLabel),
+                        title: Text(l10n.licensesLabel, maxLines: 2),
                         trailing: _kChevron,
                         onTap: _openLicenses,
                       ),
@@ -479,14 +479,14 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.verified),
-                        title: Text(l10n.rateAppLabel),
+                        title: Text(l10n.rateAppLabel, maxLines: 2),
                         trailing: _kChevron,
                         onTap: _requestReview,
                       ),
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.share),
-                        title: Text(l10n.shareAppLabel),
+                        title: Text(l10n.shareAppLabel, maxLines: 2),
                         trailing: _kChevron,
                         onTap: () => Share.share(
                           '${l10n.appName} — $_playStoreUrl',
@@ -496,7 +496,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       CupertinoListTile(
                         backgroundColor: cardBg,
                         leading: const PeshatIcon(icon: AppIcons.info),
-                        title: Text(l10n.aboutLabel),
+                        title: Text(l10n.aboutLabel, maxLines: 2),
                         subtitle: Text('${l10n.versionLabel} $_version'),
                       ),
                     ],

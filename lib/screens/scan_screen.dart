@@ -491,6 +491,7 @@ class _ScanLogoState extends State<_ScanLogo> {
                 height: 140,
                 child: Stack(
                   alignment: Alignment.center,
+                  clipBehavior: Clip.none,
                   children: [
                     Positioned(
                       top: 10,
