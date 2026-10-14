@@ -87,9 +87,6 @@ class ScanProvider extends ValueNotifier<ScanState> {
     super.value = v;
   }
 
-  @override
-  ScanState get value => super.value;
-
   Future<void> _translate(String src, String targetLanguage) async {
     final run = ++_run;
     String srcLang = 'en';
