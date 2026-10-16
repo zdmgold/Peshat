@@ -69,7 +69,7 @@ void main() {
     // Language selector row — ActionCard splits label and value
     // into two Text widgets, so assert on each separately.
     expect(find.text('Translate to'), findsOneWidget);
-    expect(find.text('Spanish'), findsOneWidget);
+    expect(find.text('Español · Spanish'), findsOneWidget);
 
     // Toolbar chips — three, one of each.
     expect(findHugeIcon(AppIcons.settings), findsOneWidget);
