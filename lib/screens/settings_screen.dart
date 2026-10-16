@@ -230,7 +230,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         trailing: _TrailingValue(
                           text: widget.uiLocale.value == null
                               ? l10n.sectionSystemLabel
-                              : languageDisplayName(
+                              : languageNativeName(
                                   widget.uiLocale.value!.languageCode),
                           color: textTertiary,
                         ),
@@ -243,7 +243,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           leading: const PeshatIcon(icon: AppIcons.globe),
                           title: Text(l10n.defaultLanguageLabel, maxLines: 2),
                           trailing: _TrailingValue(
-                            text: languageDisplayName(code),
+                            text: languageNativeName(code),
                             color: textTertiary,
                           ),
                           onTap: _pickTargetLanguage,

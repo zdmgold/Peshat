@@ -322,7 +322,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     ActionCard(
                       icon: AppIcons.globe,
                       label: l10n.translateToLabel,
-                      value: languageDisplayName(widget.settings.value),
+                      value: languageLabel(widget.settings.value),
                       showChevron: true,
                       onTap: _pickTargetLanguage,
                     ),

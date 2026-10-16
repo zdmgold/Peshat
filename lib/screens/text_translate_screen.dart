@@ -201,7 +201,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                 builder: (_, code, __) => ActionCard(
                   icon: AppIcons.globe,
                   label: l10n.translateToLabel,
-                  value: languageDisplayName(code),
+                  value: languageLabel(code),
                   showChevron: true,
                   onTap: _pickTarget,
                 ),

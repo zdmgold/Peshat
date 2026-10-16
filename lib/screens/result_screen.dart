@@ -301,13 +301,13 @@ class _ResultScreenState extends State<ResultScreen> {
     if (state is ScanPreparingModel) {
       return _StatusView(
         message:
-            '${l10n.statusPreparingModel} ${languageDisplayName(state.targetLanguage)}',
+            '${l10n.statusPreparingModel} ${languageLabel(state.targetLanguage)}',
       );
     }
     if (state is ScanReceivingPack) {
       return _PackView(
         title: l10n.packReceivingTitle,
-        languageName: languageDisplayName(state.current),
+        languageName: languageLabel(state.current),
         received: false,
         cancelLabel: l10n.cancelButtonLabel,
         onCancel: () {
@@ -526,7 +526,7 @@ class _TranslationTab extends StatelessWidget {
           child: ActionCard(
             icon: AppIcons.globe,
             label: l10n.translatedTo,
-            value: languageDisplayName(targetLanguage),
+            value: languageLabel(targetLanguage),
             showChevron: true,
             onTap: onPickLanguage,
           ),

@@ -19,6 +19,14 @@ String languageNativeName(String bcpCode) {
   return bcpCode.toUpperCase();
 }
 
+/// Native name first, with the English name after it ("Deutsch · German").
+/// Just the one name when both are the same (English).
+String languageLabel(String bcpCode) {
+  final native = languageNativeName(bcpCode);
+  final english = languageDisplayName(bcpCode);
+  return native == english ? native : '$native · $english';
+}
+
 /// True if the language is right-to-left.
 bool languageIsRtl(String bcpCode) {
   final lower = bcpCode.toLowerCase();
