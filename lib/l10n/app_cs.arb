@@ -106,5 +106,6 @@
   "packReceivingTitle": "Přijímá se jazykový balíček…",
   "packReceivedTitle": "Balíček přijat",
   "errorOfflinePackNeeded": "Žádné připojení k internetu. Tento jazyk vyžaduje jednorázové přijetí balíčku. Připojte se k internetu a zkuste to znovu.",
-  "errorPackTooSlow": "Přijetí jazykového balíčku trvá příliš dlouho. Vaše připojení k internetu může být slabé. Zkuste to znovu."
+  "errorPackTooSlow": "Přijetí jazykového balíčku trvá příliš dlouho. Vaše připojení k internetu může být slabé. Zkuste to znovu.",
+  "errorNoTextHint": "Skenování fotoaparátem čte latinku, čínské, japonské, korejské písmo a dévanágarí. U jiných písem text napište nebo vložte."
 }

@@ -106,5 +106,6 @@
   "packReceivingTitle": "Dil paketi alınıyor…",
   "packReceivedTitle": "Paket alındı",
   "errorOfflinePackNeeded": "İnternet bağlantısı yok. Bu dil, bir kez alınması gereken bir paket gerektiriyor. İnternete bağlanıp tekrar deneyin.",
-  "errorPackTooSlow": "Dil paketinin alınması çok uzun sürüyor. İnternet bağlantınız zayıf olabilir. Tekrar deneyin."
+  "errorPackTooSlow": "Dil paketinin alınması çok uzun sürüyor. İnternet bağlantınız zayıf olabilir. Tekrar deneyin.",
+  "errorNoTextHint": "Kamerayla tarama Latin, Çince, Japonca, Korece ve Devanagari yazısını okur. Diğer yazı sistemleri için metni yazın veya yapıştırın."
 }

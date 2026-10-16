@@ -330,4 +330,7 @@ class AppLocalizationsFil extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli.';
+
+  @override
+  String get errorNoTextHint => 'Binabasa ng camera scan ang Latin, Chinese, Japanese, Korean at Devanagari na pagsulat. Para sa ibang sistema ng pagsulat, i-type o i-paste na lang ang teksto.';
 }

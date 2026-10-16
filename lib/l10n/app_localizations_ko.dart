@@ -330,4 +330,7 @@ class AppLocalizationsKo extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => '언어 팩을 받는 데 시간이 너무 오래 걸립니다. 인터넷 연결이 약할 수 있습니다. 다시 시도하세요.';
+
+  @override
+  String get errorNoTextHint => '카메라 스캔은 라틴 문자, 중국어, 일본어, 한국어, 데바나가리 문자를 읽을 수 있습니다. 다른 문자 체계는 텍스트를 직접 입력하거나 붙여넣으세요.';
 }

@@ -330,4 +330,7 @@ class AppLocalizationsHi extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'भाषा पैक प्राप्त होने में बहुत समय लग रहा है। हो सकता है आपका इंटरनेट कनेक्शन कमज़ोर हो। फिर से कोशिश करें।';
+
+  @override
+  String get errorNoTextHint => 'कैमरा स्कैन लैटिन, चीनी, जापानी, कोरियाई और देवनागरी लिपि पढ़ता है। अन्य लिपियों के लिए टेक्स्ट टाइप करें या पेस्ट करें।';
 }

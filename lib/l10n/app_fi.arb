@@ -106,5 +106,6 @@
   "packReceivingTitle": "Vastaanotetaan kielipakettia…",
   "packReceivedTitle": "Paketti vastaanotettu",
   "errorOfflinePackNeeded": "Ei internetyhteyttä. Tämä kieli tarvitsee kertaluonteisen paketin vastaanottamisen. Muodosta internetyhteys ja yritä uudelleen.",
-  "errorPackTooSlow": "Kielipaketin vastaanottaminen kestää liian kauan. Internetyhteytesi voi olla heikko. Yritä uudelleen."
+  "errorPackTooSlow": "Kielipaketin vastaanottaminen kestää liian kauan. Internetyhteytesi voi olla heikko. Yritä uudelleen.",
+  "errorNoTextHint": "Kameraskannaus lukee latinalaista, kiinalaista, japanilaista, korealaista ja devanagari-kirjoitusta. Muissa kirjoitusjärjestelmissä kirjoita tai liitä teksti."
 }

@@ -106,5 +106,6 @@
   "packReceivingTitle": "Ricezione del pacchetto lingua…",
   "packReceivedTitle": "Pacchetto ricevuto",
   "errorOfflinePackNeeded": "Nessuna connessione a internet. Questa lingua richiede la ricezione di un pacchetto una sola volta. Connettiti a internet e riprova.",
-  "errorPackTooSlow": "La ricezione del pacchetto lingua richiede troppo tempo. La connessione a internet potrebbe essere debole. Riprova."
+  "errorPackTooSlow": "La ricezione del pacchetto lingua richiede troppo tempo. La connessione a internet potrebbe essere debole. Riprova.",
+  "errorNoTextHint": "La scansione con la fotocamera legge la scrittura latina, cinese, giapponese, coreana e devanagari. Per altri sistemi di scrittura, digita o incolla il testo."
 }

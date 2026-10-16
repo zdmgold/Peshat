@@ -330,4 +330,7 @@ class AppLocalizationsUk extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Отримання мовного пакета триває надто довго. Можливо, у вас слабке підключення до інтернету. Повторіть спробу.';
+
+  @override
+  String get errorNoTextHint => 'Сканування камерою розпізнає латиницю, китайське, японське, корейське письмо та деванагарі. Для інших систем письма введіть або вставте текст.';
 }

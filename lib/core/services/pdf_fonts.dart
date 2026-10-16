@@ -10,15 +10,30 @@ class PdfFontDownloadException implements Exception {
   String toString() => 'PdfFontDownloadException($detail)';
 }
 
-enum PdfScript { arabic, hebrew, thai, devanagari, chineseHan, japanese, korean }
+enum PdfScript {
+  arabic,
+  hebrew,
+  thai,
+  devanagari,
+  bengali,
+  gujarati,
+  kannada,
+  tamil,
+  telugu,
+  georgian,
+  chineseHan,
+  japanese,
+  korean,
+}
 
 /// Fonts for PDF export. Latin, Cyrillic and Greek plus Arabic, Hebrew, Thai
-/// and Devanagari are bundled in the app; the large Chinese, Japanese and
-/// Korean fonts are downloaded once from the Peshat website and cached.
+/// and Devanagari are bundled in the app; the Bengali, Gujarati, Kannada,
+/// Tamil, Telugu, Georgian, Chinese, Japanese and Korean fonts are received
+/// once from the Peshat website and cached.
 class PdfFonts {
   static const baseUrl = 'https://peshat.zdmgold.workers.dev/fonts/';
   static const _baseAsset = 'assets/fonts/NotoSans-Regular.ttf';
-  static const _minBytes = 1000000;
+  static const _minBytes = 40000;
 
   static const _bundled = <PdfScript, String>{
     PdfScript.arabic: 'assets/fonts/NotoSansArabic-Regular.ttf',
@@ -28,6 +43,12 @@ class PdfFonts {
   };
 
   static const _remote = <PdfScript, String>{
+    PdfScript.bengali: 'NotoSansBengali-Regular.ttf',
+    PdfScript.gujarati: 'NotoSansGujarati-Regular.ttf',
+    PdfScript.kannada: 'NotoSansKannada-Regular.ttf',
+    PdfScript.tamil: 'NotoSansTamil-Regular.ttf',
+    PdfScript.telugu: 'NotoSansTelugu-Regular.ttf',
+    PdfScript.georgian: 'NotoSansGeorgian-Regular.ttf',
     PdfScript.chineseHan: 'NotoSansSC-Regular.ttf',
     PdfScript.japanese: 'NotoSansJP-Regular.ttf',
     PdfScript.korean: 'NotoSansKR-Regular.ttf',
@@ -53,6 +74,20 @@ class PdfFonts {
         out.add(PdfScript.thai);
       } else if (_in(c, 0x0900, 0x097F)) {
         out.add(PdfScript.devanagari);
+      } else if (_in(c, 0x0980, 0x09FF)) {
+        out.add(PdfScript.bengali);
+      } else if (_in(c, 0x0A80, 0x0AFF)) {
+        out.add(PdfScript.gujarati);
+      } else if (_in(c, 0x0B80, 0x0BFF)) {
+        out.add(PdfScript.tamil);
+      } else if (_in(c, 0x0C00, 0x0C7F)) {
+        out.add(PdfScript.telugu);
+      } else if (_in(c, 0x0C80, 0x0CFF)) {
+        out.add(PdfScript.kannada);
+      } else if (_in(c, 0x10A0, 0x10FF) ||
+          _in(c, 0x1C90, 0x1CBF) ||
+          _in(c, 0x2D00, 0x2D2F)) {
+        out.add(PdfScript.georgian);
       } else if (_in(c, 0x3040, 0x30FF) || _in(c, 0x31F0, 0x31FF)) {
         kana = true;
       } else if (_in(c, 0xAC00, 0xD7AF) ||

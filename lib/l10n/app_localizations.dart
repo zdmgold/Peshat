@@ -828,6 +828,12 @@ abstract class AppLocalizations {
   /// In en, this message translates to:
   /// **'The language pack is taking too long to be received. Your internet connection may be weak. Try again.'**
   String get errorPackTooSlow;
+
+  /// No description provided for @errorNoTextHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera scanning reads Latin, Chinese, Japanese, Korean and Devanagari writing. For other writing systems, type or paste the text instead.'**
+  String get errorNoTextHint;
 }
 
 class _AppLocalizationsDelegate extends LocalizationsDelegate<AppLocalizations> {

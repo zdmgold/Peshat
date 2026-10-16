@@ -330,4 +330,7 @@ class AppLocalizationsIt extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'La ricezione del pacchetto lingua richiede troppo tempo. La connessione a internet potrebbe essere debole. Riprova.';
+
+  @override
+  String get errorNoTextHint => 'La scansione con la fotocamera legge la scrittura latina, cinese, giapponese, coreana e devanagari. Per altri sistemi di scrittura, digita o incolla il testo.';
 }

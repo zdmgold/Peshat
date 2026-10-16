@@ -330,4 +330,7 @@ class AppLocalizationsTh extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'การรับแพ็กภาษาใช้เวลานานเกินไป การเชื่อมต่ออินเทอร์เน็ตของคุณอาจอ่อน ลองอีกครั้ง';
+
+  @override
+  String get errorNoTextHint => 'การสแกนด้วยกล้องอ่านอักษรละติน จีน ญี่ปุ่น เกาหลี และเทวนาครีได้ สำหรับระบบการเขียนอื่น ให้พิมพ์หรือวางข้อความแทน';
 }

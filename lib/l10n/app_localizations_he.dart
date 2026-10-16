@@ -330,4 +330,7 @@ class AppLocalizationsHe extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'קבלת חבילת השפה אורכת זמן רב מדי. ייתכן שחיבור האינטרנט שלך חלש. נסה שוב.';
+
+  @override
+  String get errorNoTextHint => 'סריקת המצלמה קוראת כתב לטיני, סיני, יפני, קוריאני ודוונאגרי. עבור מערכות כתב אחרות, הקלידו או הדביקו את הטקסט.';
 }

@@ -95,7 +95,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
             child: _UiLanguageRow(
               leading: null,
               title: lang.nativeName,
-              subtitle: lang.englishName,
+              subtitle: lang.englishName == lang.nativeName ? null : lang.englishName,
               nativeIsRtl: lang.isRtl,
               selected: current?.languageCode == lang.code,
               textPrimary: textPrimary,

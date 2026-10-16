@@ -330,4 +330,7 @@ class AppLocalizationsKm extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'កញ្ចប់ភាសាកំពុងចំណាយពេលយូរពេកក្នុងការទទួល។ ការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នកប្រហែលជាខ្សោយ។ សូមសាកល្បងម្តងទៀត។';
+
+  @override
+  String get errorNoTextHint => 'ការស្កេនដោយកាមេរ៉ាអានអក្សរឡាតាំង ចិន ជប៉ុន កូរ៉េ និងទេវនាគរី។ សម្រាប់ប្រព័ន្ធអក្សរផ្សេងទៀត សូមវាយ ឬបិទភ្ជាប់អត្ថបទជំនួសវិញ។';
 }

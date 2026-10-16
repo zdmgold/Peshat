@@ -330,4 +330,7 @@ class AppLocalizationsUr extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'زبان کا پیک موصول ہونے میں بہت وقت لگ رہا ہے۔ ہو سکتا ہے آپ کا انٹرنیٹ کنکشن کمزور ہو۔ دوبارہ کوشش کریں۔';
+
+  @override
+  String get errorNoTextHint => 'کیمرا اسکین لاطینی، چینی، جاپانی، کوریائی اور دیوناگری تحریر پڑھتا ہے۔ دیگر رسم الخط کے لیے متن ٹائپ کریں یا پیسٹ کریں۔';
 }

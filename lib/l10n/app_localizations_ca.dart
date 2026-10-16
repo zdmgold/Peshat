@@ -330,4 +330,7 @@ class AppLocalizationsCa extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'El paquet d\'idioma triga massa a rebre\'s. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.';
+
+  @override
+  String get errorNoTextHint => 'L\'escaneig amb la càmera llegeix text en alfabet llatí, xinès, japonès, coreà i devanagari. Per a altres sistemes d\'escriptura, escriviu o enganxeu el text.';
 }

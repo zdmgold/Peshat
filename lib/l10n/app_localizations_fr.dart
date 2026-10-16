@@ -330,4 +330,7 @@ class AppLocalizationsFr extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'La réception du pack de langue prend trop de temps. Votre connexion internet est peut-être faible. Réessayez.';
+
+  @override
+  String get errorNoTextHint => 'La numérisation par caméra lit l\'écriture latine, chinoise, japonaise, coréenne et dévanagari. Pour les autres systèmes d\'écriture, saisissez ou collez le texte.';
 }

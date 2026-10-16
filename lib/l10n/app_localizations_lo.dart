@@ -330,4 +330,7 @@ class AppLocalizationsLo extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'ແພັກພາສາໃຊ້ເວລາຮັບດົນເກີນໄປ. ການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານອາດຈະອ່ອນ. ລອງໃໝ່.';
+
+  @override
+  String get errorNoTextHint => 'ການສະແກນດ້ວຍກ້ອງອ່ານໄດ້ຕົວອັກສອນລາຕິນ, ຈີນ, ຍີ່ປຸ່ນ, ເກົາຫຼີ ແລະ ເທວະນາຄະຣີ. ສຳລັບລະບົບການຂຽນອື່ນ, ໃຫ້ພິມ ຫຼື ວາງຂໍ້ຄວາມແທນ.';
 }

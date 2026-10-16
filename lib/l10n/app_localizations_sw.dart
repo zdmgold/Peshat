@@ -330,4 +330,7 @@ class AppLocalizationsSw extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Kifurushi cha lugha kinachukua muda mrefu sana kupokelewa. Muunganisho wako wa intaneti unaweza kuwa dhaifu. Jaribu tena.';
+
+  @override
+  String get errorNoTextHint => 'Kuchanganua kwa kamera husoma maandishi ya Kilatini, Kichina, Kijapani, Kikorea na Devanagari. Kwa mifumo mingine ya uandishi, andika au bandika maandishi badala yake.';
 }

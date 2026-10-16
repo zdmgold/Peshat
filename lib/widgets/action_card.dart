@@ -75,14 +75,14 @@ class _ActionCardState extends State<ActionCard> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: border, width: 0.5),
           ),
-          child: Row(
+          child: LayoutBuilder(builder: (context, box) => Row(
             children: [
               PeshatIcon(icon: widget.icon, size: 22, color: accent),
               const SizedBox(width: Spacing.md),
               Expanded(
                 child: Text(
                   widget.label,
-                  maxLines: 2,
+                  maxLines: 3,
                   overflow: TextOverflow.ellipsis,
                   style: AppTypography.chrome.copyWith(
                     fontSize: 16,
@@ -93,9 +93,12 @@ class _ActionCardState extends State<ActionCard> {
               ),
               if (widget.value != null) ...[
                 const SizedBox(width: Spacing.sm),
-                Flexible(
+                ConstrainedBox(
+                  constraints:
+                      BoxConstraints(maxWidth: box.maxWidth * 0.45),
                   child: Text(
                     widget.value!,
+                    maxLines: 2,
                     overflow: TextOverflow.ellipsis,
                     textAlign: TextAlign.right,
                     style: AppTypography.chrome.copyWith(
@@ -115,7 +118,7 @@ class _ActionCardState extends State<ActionCard> {
                 ),
               ],
             ],
-          ),
+          )),
         ),
       ),
     ));

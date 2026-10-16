@@ -330,4 +330,7 @@ class AppLocalizationsSv extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Det tar för lång tid att ta emot språkpaketet. Din internetanslutning kan vara svag. Försök igen.';
+
+  @override
+  String get errorNoTextHint => 'Kameraskanning läser latinsk, kinesisk, japansk, koreansk och devanagari-skrift. För andra skriftsystem kan du skriva eller klistra in texten i stället.';
 }

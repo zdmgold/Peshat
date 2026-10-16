@@ -330,4 +330,7 @@ class AppLocalizationsNl extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Het ontvangen van het taalpakket duurt te lang. Je internetverbinding is mogelijk zwak. Probeer het opnieuw.';
+
+  @override
+  String get errorNoTextHint => 'Camerascannen leest Latijnse, Chinese, Japanse, Koreaanse en Devanagari-tekst. Typ of plak de tekst voor andere schriften.';
 }

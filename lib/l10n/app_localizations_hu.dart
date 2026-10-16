@@ -330,4 +330,7 @@ class AppLocalizationsHu extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'A nyelvi csomag fogadása túl sokáig tart. Lehet, hogy gyenge az internetkapcsolata. Próbálja újra.';
+
+  @override
+  String get errorNoTextHint => 'A kameraszkennelés latin, kínai, japán, koreai és dévanágari írást olvas. Más írásrendszerekhez írja be vagy illessze be a szöveget.';
 }

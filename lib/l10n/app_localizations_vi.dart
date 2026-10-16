@@ -330,4 +330,7 @@ class AppLocalizationsVi extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Việc nhận gói ngôn ngữ mất quá nhiều thời gian. Kết nối internet của bạn có thể yếu. Hãy thử lại.';
+
+  @override
+  String get errorNoTextHint => 'Quét bằng camera đọc được chữ Latinh, Trung, Nhật, Hàn và Devanagari. Với các hệ chữ khác, hãy nhập hoặc dán văn bản.';
 }

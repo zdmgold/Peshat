@@ -330,4 +330,7 @@ class AppLocalizationsPl extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Odbieranie pakietu językowego trwa zbyt długo. Twoje połączenie z internetem może być słabe. Spróbuj ponownie.';
+
+  @override
+  String get errorNoTextHint => 'Skanowanie aparatem odczytuje pismo łacińskie, chińskie, japońskie, koreańskie i dewanagari. W przypadku innych systemów pisma wpisz lub wklej tekst.';
 }

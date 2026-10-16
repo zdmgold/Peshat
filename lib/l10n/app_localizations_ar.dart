@@ -330,4 +330,7 @@ class AppLocalizationsAr extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'يستغرق استلام حزمة اللغة وقتًا طويلًا. قد يكون اتصالك بالإنترنت ضعيفًا. حاول مرة أخرى.';
+
+  @override
+  String get errorNoTextHint => 'يقرأ مسح الكاميرا النصوص المكتوبة بالأحرف اللاتينية والصينية واليابانية والكورية والديفاناغارية. أما الأنظمة الكتابية الأخرى، فاكتب النص أو الصقه بدلاً من ذلك.';
 }

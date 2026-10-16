@@ -330,4 +330,7 @@ class AppLocalizationsMs extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Pakej bahasa mengambil masa terlalu lama untuk diterima. Sambungan internet anda mungkin lemah. Cuba lagi.';
+
+  @override
+  String get errorNoTextHint => 'Imbasan kamera membaca tulisan Latin, Cina, Jepun, Korea dan Devanagari. Untuk sistem tulisan lain, taip atau tampal teks sebaliknya.';
 }

@@ -330,4 +330,7 @@ class AppLocalizationsBg extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Получаването на езиковия пакет отнема твърде дълго. Интернет връзката ви може да е слаба. Опитайте отново.';
+
+  @override
+  String get errorNoTextHint => 'Сканирането с камерата чете латиница, китайско, японско, корейско писмо и деванагари. За други писмености въведете или поставете текста.';
 }

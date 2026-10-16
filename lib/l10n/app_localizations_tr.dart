@@ -330,4 +330,7 @@ class AppLocalizationsTr extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'Dil paketinin alınması çok uzun sürüyor. İnternet bağlantınız zayıf olabilir. Tekrar deneyin.';
+
+  @override
+  String get errorNoTextHint => 'Kamerayla tarama Latin, Çince, Japonca, Korece ve Devanagari yazısını okur. Diğer yazı sistemleri için metni yazın veya yapıştırın.';
 }

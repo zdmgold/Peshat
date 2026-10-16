@@ -8,6 +8,12 @@ void main() {
     expect(PdfFonts.scriptsIn('שלום'), {PdfScript.hebrew});
     expect(PdfFonts.scriptsIn('สวัสดี'), {PdfScript.thai});
     expect(PdfFonts.scriptsIn('नमस्ते'), {PdfScript.devanagari});
+    expect(PdfFonts.scriptsIn('বাংলা'), {PdfScript.bengali});
+    expect(PdfFonts.scriptsIn('ગુજરાતી'), {PdfScript.gujarati});
+    expect(PdfFonts.scriptsIn('ಕನ್ನಡ'), {PdfScript.kannada});
+    expect(PdfFonts.scriptsIn('தமிழ்'), {PdfScript.tamil});
+    expect(PdfFonts.scriptsIn('తెలుగు'), {PdfScript.telugu});
+    expect(PdfFonts.scriptsIn('ქართული'), {PdfScript.georgian});
     expect(PdfFonts.scriptsIn('你好'), {PdfScript.chineseHan});
     expect(PdfFonts.scriptsIn('日本語のテキスト'), {PdfScript.japanese});
     expect(PdfFonts.scriptsIn('안녕하세요'), {PdfScript.korean});

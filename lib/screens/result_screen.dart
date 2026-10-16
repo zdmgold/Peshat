@@ -328,6 +328,9 @@ class _ResultScreenState extends State<ResultScreen> {
     if (state is ScanError) {
       return _ErrorView(
         message: _errorText(l10n, state.code),
+        hint: state.code == AppErrorCode.noTextDetected
+            ? l10n.errorNoTextHint
+            : null,
         detail: kDebugMode ? state.detail : null,
         onRetry: _runPipeline,
       );
@@ -526,7 +529,7 @@ class _TranslationTab extends StatelessWidget {
           child: ActionCard(
             icon: AppIcons.globe,
             label: l10n.translatedTo,
-            value: languageLabel(targetLanguage),
+            value: languageNativeName(targetLanguage),
             showChevron: true,
             onTap: onPickLanguage,
           ),
@@ -725,11 +728,13 @@ class _StatusView extends StatelessWidget {
 
 class _ErrorView extends StatelessWidget {
   final String message;
+  final String? hint;
   final String? detail;
   final Future<void> Function() onRetry;
   const _ErrorView({
     required this.message,
     required this.onRetry,
+    this.hint,
     this.detail,
   });
 
@@ -739,6 +744,8 @@ class _ErrorView extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final error = isDark ? AppColors.errorDark : AppColors.errorLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
     return SingleChildScrollView(
@@ -756,6 +763,17 @@ class _ErrorView extends StatelessWidget {
               color: textPrimary,
             ),
           ),
+          if (hint != null) ...[
+            const SizedBox(height: Spacing.sm),
+            Text(
+              hint!,
+              textAlign: TextAlign.center,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 14,
+                color: textSecondary,
+              ),
+            ),
+          ],
           const SizedBox(height: Spacing.lg),
           SizedBox(
             width: 220,

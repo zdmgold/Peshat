@@ -330,4 +330,7 @@ class AppLocalizationsSi extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'භාෂා පැකේජය ලැබීමට වැඩි කාලයක් ගත වේ. ඔබේ අන්තර්ජාල සම්බන්ධතාව දුර්වල විය හැක. නැවත උත්සාහ කරන්න.';
+
+  @override
+  String get errorNoTextHint => 'කැමරා ස්කෑන් කිරීමෙන් ලතින්, චීන, ජපන්, කොරියානු සහ දේවනාගරි ලිවීම් කියවිය හැක. වෙනත් ලේඛන ක්‍රම සඳහා, ඒ වෙනුවට පෙළ ටයිප් කරන්න හෝ අලවන්න.';
 }

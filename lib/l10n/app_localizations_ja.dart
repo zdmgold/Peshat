@@ -330,4 +330,7 @@ class AppLocalizationsJa extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => '言語パックの受信に時間がかかっています。インターネット接続が弱い可能性があります。もう一度お試しください。';
+
+  @override
+  String get errorNoTextHint => 'カメラスキャンはラテン文字、中国語、日本語、韓国語、デーヴァナーガリー文字を読み取れます。その他の文字体系は、テキストを入力または貼り付けてください。';
 }

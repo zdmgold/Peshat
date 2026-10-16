@@ -330,4 +330,7 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'The language pack is taking too long to be received. Your internet connection may be weak. Try again.';
+
+  @override
+  String get errorNoTextHint => 'Camera scanning reads Latin, Chinese, Japanese, Korean and Devanagari writing. For other writing systems, type or paste the text instead.';
 }

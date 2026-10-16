@@ -330,4 +330,7 @@ class AppLocalizationsAm extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'የቋንቋ ጥቅሉ ለመድረስ ከመጠን በላይ እየወሰደ ነው። የበይነመረብ ግንኙነትዎ ደካማ ሊሆን ይችላል። እንደገና ይሞክሩ።';
+
+  @override
+  String get errorNoTextHint => 'የካሜራ ቅኝት የላቲን፣ የቻይንኛ፣ የጃፓንኛ፣ የኮሪያኛ እና የዴቫናጋሪ ጽሑፎችን ያነባል። ለሌሎች የጽሑፍ ሥርዓቶች ጽሑፉን በምትኩ ይተይቡ ወይም ይለጥፉ።';
 }

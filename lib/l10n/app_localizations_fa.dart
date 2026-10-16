@@ -330,4 +330,7 @@ class AppLocalizationsFa extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'دریافت بسته زبان بیش از حد طول می‌کشد. ممکن است اتصال اینترنت شما ضعیف باشد. دوباره تلاش کنید.';
+
+  @override
+  String get errorNoTextHint => 'اسکن با دوربین خط لاتین، چینی، ژاپنی، کره‌ای و دیوناگری را می‌خواند. برای سایر خط‌ها، متن را تایپ یا جای‌گذاری کنید.';
 }

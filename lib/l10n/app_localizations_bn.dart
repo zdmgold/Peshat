@@ -330,4 +330,7 @@ class AppLocalizationsBn extends AppLocalizations {
 
   @override
   String get errorPackTooSlow => 'ভাষা প্যাক গ্রহণ করতে অনেক সময় লাগছে। আপনার ইন্টারনেট সংযোগ দুর্বল হতে পারে। আবার চেষ্টা করুন।';
+
+  @override
+  String get errorNoTextHint => 'ক্যামেরা স্ক্যান ল্যাটিন, চীনা, জাপানি, কোরিয়ান ও দেবনাগরী লেখা পড়তে পারে। অন্য লিপির জন্য পাঠ্যটি টাইপ করুন বা পেস্ট করুন।';
 }

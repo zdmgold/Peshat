@@ -277,8 +277,6 @@ class _ScanScreenState extends State<ScanScreen> {
                         child: Text(
                           l10n.tagline,
                           textAlign: TextAlign.center,
-                          maxLines: 2,
-                          overflow: TextOverflow.ellipsis,
                           style: AppTypography.brand.copyWith(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
@@ -322,7 +320,7 @@ class _ScanScreenState extends State<ScanScreen> {
                     ActionCard(
                       icon: AppIcons.globe,
                       label: l10n.translateToLabel,
-                      value: languageLabel(widget.settings.value),
+                      value: languageNativeName(widget.settings.value),
                       showChevron: true,
                       onTap: _pickTargetLanguage,
                     ),

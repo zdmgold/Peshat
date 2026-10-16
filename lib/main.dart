@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart' show SystemUiOverlayStyle;
 import 'package:in_app_purchase/in_app_purchase.dart'
     show InAppPurchase, PurchaseDetails, PurchaseStatus;
 import 'package:intl/date_symbol_data_local.dart';
@@ -141,6 +142,19 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         localeListResolutionCallback: resolveDeviceLocales,
+        builder: (context, child) {
+          final dark =
+              CupertinoTheme.of(context).brightness == Brightness.dark;
+          return AnnotatedRegion<SystemUiOverlayStyle>(
+            value: SystemUiOverlayStyle(
+              statusBarColor: const Color(0x00000000),
+              statusBarIconBrightness:
+                  dark ? Brightness.light : Brightness.dark,
+              statusBarBrightness: dark ? Brightness.dark : Brightness.light,
+            ),
+            child: child ?? const SizedBox.shrink(),
+          );
+        },
         home: ScanScreen(
           theme: themeProvider,
           purchase: purchaseProvider,

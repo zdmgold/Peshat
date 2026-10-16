@@ -352,11 +352,18 @@ class _RowState extends State<_Row> {
                         ),
                       ),
                       const SizedBox(height: 2),
-                      Text(
-                        widget.language.englishName,
-                        style: AppTypography.chrome.copyWith(
-                          fontSize: 13,
-                          color: widget.textSecondary,
+                      Visibility(
+                        visible: widget.language.englishName !=
+                            widget.language.nativeName,
+                        maintainSize: true,
+                        maintainAnimation: true,
+                        maintainState: true,
+                        child: Text(
+                          widget.language.englishName,
+                          style: AppTypography.chrome.copyWith(
+                            fontSize: 13,
+                            color: widget.textSecondary,
+                          ),
                         ),
                       ),
                     ],
