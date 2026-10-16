@@ -37,7 +37,9 @@ void main() {
       if (msg.contains('overflowed')) {
         final text = details.toString().split('\n');
         final i = text.indexWhere((l) => l.contains('error-causing widget'));
-        final widget = i >= 0 && i + 1 < text.length ? text[i + 1].trim() : '';
+        final widget = i >= 0
+            ? text.skip(i + 1).take(3).map((l) => l.trim()).join(' ')
+            : '';
         problems.add('$where: ${msg.split('\n').first} [$widget]');
       } else {
         original?.call(details);

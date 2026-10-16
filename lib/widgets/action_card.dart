@@ -95,7 +95,7 @@ class _ActionCardState extends State<ActionCard> {
                 const SizedBox(width: Spacing.sm),
                 ConstrainedBox(
                   constraints: BoxConstraints(
-                    maxWidth: MediaQuery.sizeOf(context).width * 0.4,
+                    maxWidth: MediaQuery.sizeOf(context).width * 0.3,
                   ),
                   child: Text(
                     widget.value!,
