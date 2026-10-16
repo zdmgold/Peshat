@@ -75,7 +75,7 @@ class _ActionCardState extends State<ActionCard> {
             borderRadius: BorderRadius.circular(12),
             border: Border.all(color: border, width: 0.5),
           ),
-          child: LayoutBuilder(builder: (context, box) => Row(
+          child: Row(
             children: [
               PeshatIcon(icon: widget.icon, size: 22, color: accent),
               const SizedBox(width: Spacing.md),
@@ -94,8 +94,9 @@ class _ActionCardState extends State<ActionCard> {
               if (widget.value != null) ...[
                 const SizedBox(width: Spacing.sm),
                 ConstrainedBox(
-                  constraints:
-                      BoxConstraints(maxWidth: box.maxWidth * 0.45),
+                  constraints: BoxConstraints(
+                    maxWidth: MediaQuery.sizeOf(context).width * 0.4,
+                  ),
                   child: Text(
                     widget.value!,
                     maxLines: 2,
@@ -118,7 +119,7 @@ class _ActionCardState extends State<ActionCard> {
                 ),
               ],
             ],
-          )),
+          ),
         ),
       ),
     ));
