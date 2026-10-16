@@ -348,7 +348,7 @@ footer.site .spacer { flex: 1 0 auto; }
   html { scroll-behavior: auto; }
 }
 
-/* Store badges — vertical stack, App Store / Google Play style */
+/* Store badges — vertical stack, official-style artwork */
 .store-buttons {
   display: flex;
   flex-direction: column;
@@ -358,60 +358,30 @@ footer.site .spacer { flex: 1 0 auto; }
 }
 
 .store-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  width: 220px;
-  height: 62px;
-  padding: 0 18px;
-  background: #000;
-  color: #fff;
-  border-radius: 14px;
-  text-decoration: none;
-  font-family: var(--font-chrome);
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.18);
-  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+  display: inline-block;
+  line-height: 0;
+  border-radius: 8px;
+  transition: transform 0.15s ease;
 }
 
-.store-badge:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+.store-badge img {
+  display: block;
+  width: 180px;
+  height: 60px;
 }
+
+.store-badge:hover { transform: translateY(-2px); }
 
 .store-badge[aria-disabled="true"] {
-  opacity: 0.38;
   pointer-events: none;
-  cursor: not-allowed;
-  box-shadow: none;
+  cursor: default;
 }
 
-.store-badge-icon {
-  width: 26px;
-  height: 26px;
-  flex-shrink: 0;
-}
-
-.store-badge-text {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  line-height: 1.05;
-  text-align: left;
-}
-
-.store-badge-eyebrow {
-  font-size: 0.625rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  opacity: 0.9;
-  margin-bottom: 2px;
-}
-
-.store-badge-title {
-  font-size: 1.125rem;
-  font-weight: 600;
-  letter-spacing: -0.015em;
+.section-intro {
+  margin: calc(var(--sm) * -1) 0 var(--lg);
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+  line-height: 1.55;
 }
 
 .store-note {
