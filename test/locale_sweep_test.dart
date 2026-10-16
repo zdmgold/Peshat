@@ -30,46 +30,51 @@ void main() {
     addTearDown(tester.view.reset);
 
     final problems = <String>[];
+    var where = '';
     final original = FlutterError.onError;
     FlutterError.onError = (details) {
       final msg = details.exceptionAsString();
       if (msg.contains('overflowed')) {
-        problems.add(msg.split('\n').first);
+        final text = details.toString().split('\n');
+        final i = text.indexWhere((l) => l.contains('error-causing widget'));
+        final widget = i >= 0 && i + 1 < text.length ? text[i + 1].trim() : '';
+        problems.add('$where: ${msg.split('\n').first} [$widget]');
       } else {
         original?.call(details);
       }
     };
-    addTearDown(() => FlutterError.onError = original);
 
-    for (final locale in AppLocalizations.supportedLocales) {
-      for (final scale in const [1.0, 1.4]) {
-        await tester.pumpWidget(
-          MediaQuery(
-            data: MediaQueryData(
-              size: const Size(360, 640),
-              textScaler: TextScaler.linear(scale),
-            ),
-            child: CupertinoApp(
-              locale: locale,
-              localizationsDelegates: AppLocalizations.localizationsDelegates,
-              supportedLocales: AppLocalizations.supportedLocales,
-              home: ScanScreen(
-                theme: ThemeProvider(prefs),
-                purchase: PurchaseProvider(prefs),
-                settings: SettingsProvider(prefs),
-                history: HistoryProvider(prefs),
-                uiLocale: UiLocaleProvider(prefs),
-                notification: NotificationProvider(prefs),
+    try {
+      for (final locale in AppLocalizations.supportedLocales) {
+        for (final scale in const [1.0, 1.4]) {
+          where = '${locale.languageCode} x$scale';
+          await tester.pumpWidget(
+            MediaQuery(
+              data: MediaQueryData(
+                size: const Size(360, 640),
+                textScaler: TextScaler.linear(scale),
+              ),
+              child: CupertinoApp(
+                locale: locale,
+                localizationsDelegates:
+                    AppLocalizations.localizationsDelegates,
+                supportedLocales: AppLocalizations.supportedLocales,
+                home: ScanScreen(
+                  theme: ThemeProvider(prefs),
+                  purchase: PurchaseProvider(prefs),
+                  settings: SettingsProvider(prefs),
+                  history: HistoryProvider(prefs),
+                  uiLocale: UiLocaleProvider(prefs),
+                  notification: NotificationProvider(prefs),
+                ),
               ),
             ),
-          ),
-        );
-        await tester.pump();
-        final before = problems.length;
-        if (problems.length > before) {
-          problems.add('^ in ${locale.languageCode} at text scale $scale');
+          );
+          await tester.pump();
         }
       }
+    } finally {
+      FlutterError.onError = original;
     }
     // Print what was found so a failure can be read from the CI log.
     for (final p in problems) {
