@@ -62,9 +62,9 @@ class PdfRaster {
       final recorder = ui.PictureRecorder();
       const w = _pageW * _scale;
       const h = _pageH * _scale;
-      final canvas = Canvas(recorder, Rect.fromLTWH(0, 0, w, h));
+      final canvas = Canvas(recorder, const Rect.fromLTWH(0, 0, w, h));
       canvas.drawRect(
-          Rect.fromLTWH(0, 0, w, h), Paint()..color = const Color(0xFFFFFFFF));
+          const Rect.fromLTWH(0, 0, w, h), Paint()..color = const Color(0xFFFFFFFF));
       canvas.translate(_margin * _scale, _margin * _scale);
       canvas.clipRect(Rect.fromLTWH(0, 0, cw, r[1] - r[0]));
       canvas.translate(0, -r[0]);
