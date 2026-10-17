@@ -191,6 +191,9 @@ class AppLocalizationsBg extends AppLocalizations {
   String get translatedFrom => 'Преведено от';
 
   @override
+  String get scanLatinHint => 'Сканирането и импортът четат текст на латиница. За всяко друго писмо използвайте „Въведи текст“.';
+
+  @override
   String get translateToLabel => 'Превеждане на';
 
   @override

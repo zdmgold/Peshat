@@ -191,6 +191,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get translatedFrom => 'Đã dịch từ';
 
   @override
+  String get scanLatinHint => 'Quét và Nhập đọc văn bản chữ Latinh. Với các hệ chữ khác, hãy dùng Nhập văn bản.';
+
+  @override
   String get translateToLabel => 'Dịch sang';
 
   @override

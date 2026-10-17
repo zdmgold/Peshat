@@ -191,6 +191,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get translatedFrom => 'תורגם מ';
 
   @override
+  String get scanLatinHint => 'סריקה וייבוא קוראים טקסט באותיות לטיניות. לכל כתב אחר השתמשו ב״הקלדת טקסט״.';
+
+  @override
   String get translateToLabel => 'תרגם ל';
 
   @override

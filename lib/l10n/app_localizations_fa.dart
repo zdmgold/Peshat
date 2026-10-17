@@ -191,6 +191,9 @@ class AppLocalizationsFa extends AppLocalizations {
   String get translatedFrom => 'ترجمه شده از';
 
   @override
+  String get scanLatinHint => 'اسکن و درون‌ریزی متن با حروف لاتین را می‌خوانند. برای هر خط دیگری از «تایپ متن» استفاده کنید.';
+
+  @override
   String get translateToLabel => 'ترجم به';
 
   @override

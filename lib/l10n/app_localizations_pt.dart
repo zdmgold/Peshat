@@ -191,6 +191,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get translatedFrom => 'Traduzido de';
 
   @override
+  String get scanLatinHint => 'Digitalizar e Importar leem texto em alfabeto latino. Para qualquer outra escrita, use Digitar texto.';
+
+  @override
   String get translateToLabel => 'Traduzir para';
 
   @override

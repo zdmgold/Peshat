@@ -108,5 +108,6 @@
   "errorOfflinePackNeeded": "Žiadne pripojenie na internet. Tento jazyk vyžaduje jednorazové prijatie balíka. Pripojte sa na internet a skúste to znova.",
   "errorPackTooSlow": "Prijatie jazykového balíka trvá príliš dlho. Vaše pripojenie na internet môže byť slabé. Skúste to znova.",
   "errorNoTextHint": "Skenovanie fotoaparátom číta latinku, čínske, japonské, kórejské písmo a dévanágarí. Pri iných písmach text napíšte alebo vložte.",
-  "translatedFrom": "Preložené z jazyka"
+  "translatedFrom": "Preložené z jazyka",
+  "scanLatinHint": "Skenovanie a import čítajú text v latinke. Pre akékoľvek iné písmo použite Napísať text."
 }

@@ -191,6 +191,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get translatedFrom => 'Tradus din';
 
   @override
+  String get scanLatinHint => 'Scanarea și importul citesc text în alfabet latin. Pentru orice altă scriere, folosiți Introdu text.';
+
+  @override
   String get translateToLabel => 'Tradu în';
 
   @override

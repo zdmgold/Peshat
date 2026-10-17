@@ -191,6 +191,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get translatedFrom => 'Översatt från';
 
   @override
+  String get scanLatinHint => 'Skanna och Importera läser text med latinska bokstäver. Använd Skriv text för all annan skrift.';
+
+  @override
   String get translateToLabel => 'Översätt till';
 
   @override

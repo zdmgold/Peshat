@@ -191,6 +191,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get translatedFrom => 'የተተረጎመው ከ';
 
   @override
+  String get scanLatinHint => 'ስካን እና ማስመጣት የላቲን ፊደል ጽሑፍ ያነባሉ። ለሌላ ጽሑፍ «ጽሑፍ ይተይቡ»ን ይጠቀሙ።';
+
+  @override
   String get translateToLabel => 'ወደ ተርጉም';
 
   @override

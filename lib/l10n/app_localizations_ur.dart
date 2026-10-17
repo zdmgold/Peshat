@@ -191,6 +191,9 @@ class AppLocalizationsUr extends AppLocalizations {
   String get translatedFrom => 'جس زبان سے ترجمہ کیا گیا';
 
   @override
+  String get scanLatinHint => 'اسکین اور امپورٹ لاطینی رسم الخط کا متن پڑھتے ہیں۔ کسی اور رسم الخط کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔';
+
+  @override
   String get translateToLabel => 'پر ترجمہ کریں';
 
   @override

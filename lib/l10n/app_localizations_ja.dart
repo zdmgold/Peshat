@@ -191,6 +191,9 @@ class AppLocalizationsJa extends AppLocalizations {
   String get translatedFrom => '翻訳元';
 
   @override
+  String get scanLatinHint => 'スキャンとインポートはラテン文字のテキストを読み取ります。それ以外の文字には「テキストを入力」をご利用ください。';
+
+  @override
   String get translateToLabel => '翻訳先';
 
   @override

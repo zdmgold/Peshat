@@ -191,6 +191,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get translatedFrom => '원본 언어';
 
   @override
+  String get scanLatinHint => '스캔과 가져오기는 로마자 텍스트를 읽습니다. 다른 문자는 “텍스트 입력”을 사용하세요.';
+
+  @override
   String get translateToLabel => '번역 대상';
 
   @override

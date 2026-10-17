@@ -191,6 +191,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get translatedFrom => 'Kaynak dil';
 
   @override
+  String get scanLatinHint => 'Tarama ve İçe Aktarma Latin harfli metni okur. Diğer yazı sistemleri için Metin yaz seçeneğini kullanın.';
+
+  @override
   String get translateToLabel => 'Şuna çevir';
 
   @override

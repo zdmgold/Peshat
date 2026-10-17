@@ -191,6 +191,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get translatedFrom => 'Vertaald uit';
 
   @override
+  String get scanLatinHint => 'Scannen en Importeren lezen tekst in Latijns schrift. Gebruik voor elk ander schrift Tekst typen.';
+
+  @override
   String get translateToLabel => 'Vertalen naar';
 
   @override

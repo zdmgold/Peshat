@@ -191,6 +191,9 @@ class AppLocalizationsGu extends AppLocalizations {
   String get translatedFrom => 'આમાંથી અનુવાદિત';
 
   @override
+  String get scanLatinHint => 'સ્કેન અને ઇમ્પોર્ટ લેટિન લિપિનું લખાણ વાંચે છે. અન્ય કોઈપણ લિપિ માટે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો.';
+
+  @override
   String get translateToLabel => 'આમાં અનુવાદ કરો';
 
   @override

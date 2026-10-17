@@ -191,6 +191,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get translatedFrom => 'Forrásnyelv';
 
   @override
+  String get scanLatinHint => 'A beolvasás és az importálás latin betűs szöveget olvas. Minden más írásrendszerhez használd a Szöveg beírása lehetőséget.';
+
+  @override
   String get translateToLabel => 'Fordítás erre';
 
   @override

@@ -191,6 +191,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get translatedFrom => 'అనువదించిన మూల భాష';
 
   @override
+  String get scanLatinHint => 'స్కాన్ మరియు ఇంపోర్ట్ లాటిన్ లిపిలోని వచనాన్ని చదువుతాయి. ఇతర ఏ లిపికైనా “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి.';
+
+  @override
   String get translateToLabel => 'అనువదించాల్సిన భాష';
 
   @override

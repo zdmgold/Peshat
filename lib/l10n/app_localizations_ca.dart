@@ -191,6 +191,9 @@ class AppLocalizationsCa extends AppLocalizations {
   String get translatedFrom => 'Traduït des de';
 
   @override
+  String get scanLatinHint => 'L\'escaneig i la importació llegeixen text en alfabet llatí. Per a qualsevol altra escriptura, feu servir Escriu text.';
+
+  @override
   String get translateToLabel => 'Tradueix a';
 
   @override

@@ -191,6 +191,9 @@ class AppLocalizationsFil extends AppLocalizations {
   String get translatedFrom => 'Isinalin mula sa';
 
   @override
+  String get scanLatinHint => 'Binabasa ng Scan at Import ang teksto sa Latin na script. Para sa ibang script, gamitin ang I-type ang teksto.';
+
+  @override
   String get translateToLabel => 'Isalin sa';
 
   @override

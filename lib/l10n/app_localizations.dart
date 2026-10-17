@@ -547,6 +547,12 @@ abstract class AppLocalizations {
   /// **'Translated from'**
   String get translatedFrom;
 
+  /// No description provided for @scanLatinHint.
+  ///
+  /// In en, this message translates to:
+  /// **'Scan and Import read Latin-script text. For any other writing, use Type text.'**
+  String get scanLatinHint;
+
   /// No description provided for @translateToLabel.
   ///
   /// In en, this message translates to:

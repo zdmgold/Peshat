@@ -191,6 +191,9 @@ class AppLocalizationsRu extends AppLocalizations {
   String get translatedFrom => 'Переведено с';
 
   @override
+  String get scanLatinHint => 'Сканирование и импорт читают текст на латинице. Для любой другой письменности используйте «Ввести текст».';
+
+  @override
   String get translateToLabel => 'Перевести на';
 
   @override

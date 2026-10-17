@@ -108,5 +108,6 @@
   "errorOfflinePackNeeded": "Ingen internetanslutning. Det här språket behöver ett paket som tas emot en gång. Anslut till internet och försök igen.",
   "errorPackTooSlow": "Det tar för lång tid att ta emot språkpaketet. Din internetanslutning kan vara svag. Försök igen.",
   "errorNoTextHint": "Kameraskanning läser latinsk, kinesisk, japansk, koreansk och devanagari-skrift. För andra skriftsystem kan du skriva eller klistra in texten i stället.",
-  "translatedFrom": "Översatt från"
+  "translatedFrom": "Översatt från",
+  "scanLatinHint": "Skanna och Importera läser text med latinska bokstäver. Använd Skriv text för all annan skrift."
 }

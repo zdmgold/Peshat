@@ -314,7 +314,21 @@ class _ScanScreenState extends State<ScanScreen> {
                         ),
                       ],
                     ),
-                    const SizedBox(height: 20),
+                    const SizedBox(height: Spacing.sm),
+                    Padding(
+                      padding:
+                          const EdgeInsets.symmetric(horizontal: Spacing.xs),
+                      child: Text(
+                        l10n.scanLatinHint,
+                        textAlign: TextAlign.center,
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 12,
+                          height: 1.35,
+                          color: textTertiary,
+                        ),
+                      ),
+                    ),
+                    const SizedBox(height: 16),
 
                     // Language selector — filled card.
                     ActionCard(

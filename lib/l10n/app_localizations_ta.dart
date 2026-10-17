@@ -191,6 +191,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get translatedFrom => 'மொழிபெயர்க்கப்பட்ட மூலமொழி';
 
   @override
+  String get scanLatinHint => 'ஸ்கேன் மற்றும் இறக்குமதி லத்தீன் எழுத்துகளில் உள்ள உரையைப் படிக்கும். வேறு எந்த எழுத்துக்கும் “உரையை உள்ளிடு” ஐப் பயன்படுத்தவும்.';
+
+  @override
   String get translateToLabel => 'மொழிபெயர்க்க வேண்டிய மொழி';
 
   @override

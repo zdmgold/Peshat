@@ -191,6 +191,9 @@ class AppLocalizationsFi extends AppLocalizations {
   String get translatedFrom => 'Käännetty kielestä';
 
   @override
+  String get scanLatinHint => 'Skannaus ja tuonti lukevat latinalaisilla kirjaimilla kirjoitettua tekstiä. Käytä muille kirjoitusjärjestelmille Kirjoita teksti -toimintoa.';
+
+  @override
   String get translateToLabel => 'Käännä kielelle';
 
   @override

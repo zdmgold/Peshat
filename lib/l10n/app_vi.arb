@@ -108,5 +108,6 @@
   "errorOfflinePackNeeded": "Không có kết nối internet. Ngôn ngữ này cần nhận một gói duy nhất một lần. Hãy kết nối internet và thử lại.",
   "errorPackTooSlow": "Việc nhận gói ngôn ngữ mất quá nhiều thời gian. Kết nối internet của bạn có thể yếu. Hãy thử lại.",
   "errorNoTextHint": "Quét bằng camera đọc được chữ Latinh, Trung, Nhật, Hàn và Devanagari. Với các hệ chữ khác, hãy nhập hoặc dán văn bản.",
-  "translatedFrom": "Đã dịch từ"
+  "translatedFrom": "Đã dịch từ",
+  "scanLatinHint": "Quét và Nhập đọc văn bản chữ Latinh. Với các hệ chữ khác, hãy dùng Nhập văn bản."
 }

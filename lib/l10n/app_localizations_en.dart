@@ -191,6 +191,9 @@ class AppLocalizationsEn extends AppLocalizations {
   String get translatedFrom => 'Translated from';
 
   @override
+  String get scanLatinHint => 'Scan and Import read Latin-script text. For any other writing, use Type text.';
+
+  @override
   String get translateToLabel => 'Translate to';
 
   @override

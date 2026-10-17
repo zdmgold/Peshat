@@ -108,5 +108,6 @@
   "errorOfflinePackNeeded": "Ingen internetforbindelse. Dette sprog kræver, at en pakke modtages én gang. Opret forbindelse til internettet, og prøv igen.",
   "errorPackTooSlow": "Det tager for lang tid at modtage sprogpakken. Din internetforbindelse kan være svag. Prøv igen.",
   "errorNoTextHint": "Kameraskanning læser latinsk, kinesisk, japansk, koreansk og devanagari-skrift. For andre skriftsystemer skal du skrive eller indsætte teksten i stedet.",
-  "translatedFrom": "Oversat fra"
+  "translatedFrom": "Oversat fra",
+  "scanLatinHint": "Scan og Importér læser tekst med latinske bogstaver. Brug Skriv tekst til al anden skrift."
 }

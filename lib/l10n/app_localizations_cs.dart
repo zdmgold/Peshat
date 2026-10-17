@@ -191,6 +191,9 @@ class AppLocalizationsCs extends AppLocalizations {
   String get translatedFrom => 'Přeloženo z';
 
   @override
+  String get scanLatinHint => 'Skenování a import čtou text v latince. Pro jiné písmo použijte Napsat text.';
+
+  @override
   String get translateToLabel => 'Přeložit do';
 
   @override

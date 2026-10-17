@@ -191,6 +191,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get translatedFrom => 'Imetafsiriwa kutoka';
 
   @override
+  String get scanLatinHint => 'Changanua na Leta husoma maandishi ya herufi za Kilatini. Kwa maandishi mengine yoyote, tumia Andika maandishi.';
+
+  @override
   String get translateToLabel => 'Tafsiri kwa';
 
   @override

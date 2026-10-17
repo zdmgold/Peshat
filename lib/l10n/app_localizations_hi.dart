@@ -191,6 +191,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get translatedFrom => 'इस भाषा से अनुवादित';
 
   @override
+  String get scanLatinHint => 'स्कैन और इम्पोर्ट लैटिन लिपि का पाठ पढ़ते हैं। किसी भी अन्य लिपि के लिए “टेक्स्ट टाइप करें” का उपयोग करें।';
+
+  @override
   String get translateToLabel => 'इसमें अनुवाद करें';
 
   @override

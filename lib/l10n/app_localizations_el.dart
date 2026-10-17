@@ -191,6 +191,9 @@ class AppLocalizationsEl extends AppLocalizations {
   String get translatedFrom => 'Μεταφράστηκε από';
 
   @override
+  String get scanLatinHint => 'Η σάρωση και η εισαγωγή διαβάζουν κείμενο με λατινικούς χαρακτήρες. Για κάθε άλλη γραφή χρησιμοποιήστε Πληκτρολόγηση κειμένου.';
+
+  @override
   String get translateToLabel => 'Μετάφραση σε';
 
   @override

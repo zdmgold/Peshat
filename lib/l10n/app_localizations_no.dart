@@ -191,6 +191,9 @@ class AppLocalizationsNo extends AppLocalizations {
   String get translatedFrom => 'Oversatt fra';
 
   @override
+  String get scanLatinHint => 'Skann og Importer leser tekst med latinske bokstaver. Bruk Skriv tekst for all annen skrift.';
+
+  @override
   String get translateToLabel => 'Oversett til';
 
   @override

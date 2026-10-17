@@ -191,6 +191,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get translatedFrom => 'যে ভাষা থেকে অনুবাদ';
 
   @override
+  String get scanLatinHint => 'স্ক্যান ও ইমপোর্ট ল্যাটিন লিপির লেখা পড়ে। অন্য যেকোনো লিপির জন্য “টেক্সট টাইপ করুন” ব্যবহার করুন।';
+
+  @override
   String get translateToLabel => 'এতে অনুবাদ করুন';
 
   @override

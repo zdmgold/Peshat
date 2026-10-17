@@ -108,5 +108,6 @@
   "errorOfflinePackNeeded": "Geen internetverbinding. Voor deze taal moet eenmalig een pakket worden ontvangen. Maak verbinding met internet en probeer het opnieuw.",
   "errorPackTooSlow": "Het ontvangen van het taalpakket duurt te lang. Je internetverbinding is mogelijk zwak. Probeer het opnieuw.",
   "errorNoTextHint": "Camerascannen leest Latijnse, Chinese, Japanse, Koreaanse en Devanagari-tekst. Typ of plak de tekst voor andere schriften.",
-  "translatedFrom": "Vertaald uit"
+  "translatedFrom": "Vertaald uit",
+  "scanLatinHint": "Scannen en Importeren lezen tekst in Latijns schrift. Gebruik voor elk ander schrift Tekst typen."
 }

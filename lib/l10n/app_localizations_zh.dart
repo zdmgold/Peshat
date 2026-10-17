@@ -191,6 +191,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get translatedFrom => '翻译自';
 
   @override
+  String get scanLatinHint => '扫描和导入可识别拉丁字母文本。其他文字请使用“输入文本”。';
+
+  @override
   String get translateToLabel => '翻译为';
 
   @override

@@ -191,6 +191,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get translatedFrom => 'បកប្រែពី';
 
   @override
+  String get scanLatinHint => 'ការស្កេន និងការនាំចូលអានអត្ថបទអក្សរឡាតាំង។ សម្រាប់អក្សរផ្សេងទៀត សូមប្រើ «វាយអត្ថបទ»។';
+
+  @override
   String get translateToLabel => 'បកប្រែទៅ';
 
   @override

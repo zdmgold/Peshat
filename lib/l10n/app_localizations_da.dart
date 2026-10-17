@@ -191,6 +191,9 @@ class AppLocalizationsDa extends AppLocalizations {
   String get translatedFrom => 'Oversat fra';
 
   @override
+  String get scanLatinHint => 'Scan og Importér læser tekst med latinske bogstaver. Brug Skriv tekst til al anden skrift.';
+
+  @override
   String get translateToLabel => 'Oversæt til';
 
   @override

@@ -191,6 +191,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get translatedFrom => 'မှ ဘာသာပြန်ထားသည်';
 
   @override
+  String get scanLatinHint => 'စကင်န်နှင့် တင်သွင်းခြင်းတို့သည် လက်တင်အက္ခရာစာသားကို ဖတ်သည်။ အခြားစာလုံးများအတွက် “စာသားရိုက်ရန်” ကို သုံးပါ။';
+
+  @override
   String get translateToLabel => 'သို့ ဘာသာပြန်ပါ';
 
   @override

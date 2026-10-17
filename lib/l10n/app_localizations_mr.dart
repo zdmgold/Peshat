@@ -191,6 +191,9 @@ class AppLocalizationsMr extends AppLocalizations {
   String get translatedFrom => 'यामधून भाषांतरित';
 
   @override
+  String get scanLatinHint => 'स्कॅन आणि इम्पोर्ट लॅटिन लिपीतील मजकूर वाचतात. इतर कोणत्याही लिपीसाठी “मजकूर टाइप करा” वापरा.';
+
+  @override
   String get translateToLabel => 'यामध्ये भाषांतर करा';
 
   @override

@@ -191,6 +191,9 @@ class AppLocalizationsTh extends AppLocalizations {
   String get translatedFrom => 'แปลจาก';
 
   @override
+  String get scanLatinHint => 'การสแกนและการนำเข้าอ่านข้อความอักษรละติน สำหรับอักษรอื่น ๆ ให้ใช้ “พิมพ์ข้อความ”';
+
+  @override
   String get translateToLabel => 'แปลเป็น';
 
   @override

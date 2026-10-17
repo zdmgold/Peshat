@@ -191,6 +191,9 @@ class AppLocalizationsAr extends AppLocalizations {
   String get translatedFrom => 'تمت الترجمة من';
 
   @override
+  String get scanLatinHint => 'يقرأ المسح والاستيراد النصوص بالأحرف اللاتينية. لأي كتابة أخرى استخدم «كتابة نص».';
+
+  @override
   String get translateToLabel => 'ترجم إلى';
 
   @override

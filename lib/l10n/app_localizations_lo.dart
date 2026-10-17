@@ -191,6 +191,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get translatedFrom => 'ແປຈາກ';
 
   @override
+  String get scanLatinHint => 'ການສະແກນ ແລະ ນຳເຂົ້າ ອ່ານຂໍ້ຄວາມອັກສອນລາຕິນ. ສຳລັບຕົວອັກສອນອື່ນ ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ».';
+
+  @override
   String get translateToLabel => 'ແປເປັນ';
 
   @override

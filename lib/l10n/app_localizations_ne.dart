@@ -191,6 +191,9 @@ class AppLocalizationsNe extends AppLocalizations {
   String get translatedFrom => 'यस भाषाबाट अनुवाद गरियो';
 
   @override
+  String get scanLatinHint => 'स्क्यान र इम्पोर्टले ल्याटिन लिपिको पाठ पढ्छन्। अन्य कुनै लिपिका लागि “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्।';
+
+  @override
   String get translateToLabel => 'यसमा अनुवाद गर्नुहोस्';
 
   @override

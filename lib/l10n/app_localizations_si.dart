@@ -191,6 +191,9 @@ class AppLocalizationsSi extends AppLocalizations {
   String get translatedFrom => 'පරිවර්තනය කළ භාෂාව';
 
   @override
+  String get scanLatinHint => 'ස්කෑන් සහ ආනයනය ලතින් අක්ෂරවලින් ලියූ පෙළ කියවයි. වෙනත් ඕනෑම අක්ෂර මාලාවකට “පෙළ ටයිප් කරන්න” භාවිත කරන්න.';
+
+  @override
   String get translateToLabel => 'මෙයට පරිවර්තනය කරන්න';
 
   @override

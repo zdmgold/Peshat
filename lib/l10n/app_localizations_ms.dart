@@ -191,6 +191,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get translatedFrom => 'Diterjemahkan daripada';
 
   @override
+  String get scanLatinHint => 'Imbas dan Import membaca teks dalam tulisan Latin. Untuk tulisan lain, gunakan Taip teks.';
+
+  @override
   String get translateToLabel => 'Terjemah ke';
 
   @override

@@ -191,6 +191,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get translatedFrom => 'Перекладено з';
 
   @override
+  String get scanLatinHint => 'Сканування та імпорт читають текст латиницею. Для будь-якого іншого письма користуйтеся «Ввести текст».';
+
+  @override
   String get translateToLabel => 'Перекласти на';
 
   @override

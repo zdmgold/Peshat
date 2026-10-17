@@ -191,6 +191,9 @@ class AppLocalizationsSk extends AppLocalizations {
   String get translatedFrom => 'Preložené z jazyka';
 
   @override
+  String get scanLatinHint => 'Skenovanie a import čítajú text v latinke. Pre akékoľvek iné písmo použite Napísať text.';
+
+  @override
   String get translateToLabel => 'Preložiť do jazyka';
 
   @override

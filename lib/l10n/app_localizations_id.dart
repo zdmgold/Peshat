@@ -191,6 +191,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get translatedFrom => 'Diterjemahkan dari';
 
   @override
+  String get scanLatinHint => 'Pindai dan Impor membaca teks beraksara Latin. Untuk aksara lain, gunakan Ketik teks.';
+
+  @override
   String get translateToLabel => 'Terjemahkan ke';
 
   @override

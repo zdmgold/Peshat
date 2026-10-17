@@ -108,5 +108,6 @@
   "errorOfflinePackNeeded": "No hi ha connexió a internet. Aquest idioma necessita rebre un paquet una sola vegada. Connecta't a internet i torna-ho a provar.",
   "errorPackTooSlow": "El paquet d'idioma triga massa a rebre's. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.",
   "errorNoTextHint": "L'escaneig amb la càmera llegeix text en alfabet llatí, xinès, japonès, coreà i devanagari. Per a altres sistemes d'escriptura, escriviu o enganxeu el text.",
-  "translatedFrom": "Traduït des de"
+  "translatedFrom": "Traduït des de",
+  "scanLatinHint": "L'escaneig i la importació llegeixen text en alfabet llatí. Per a qualsevol altra escriptura, feu servir Escriu text."
 }
