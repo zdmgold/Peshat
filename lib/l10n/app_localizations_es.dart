@@ -338,5 +338,5 @@ class AppLocalizationsEs extends AppLocalizations {
   String get errorPackTooSlow => 'El paquete de idioma tarda demasiado en recibirse. Es posible que tu conexión a internet sea débil. Inténtalo de nuevo.';
 
   @override
-  String get errorNoTextHint => 'El escaneo con la cámara lee escritura latina, china, japonesa, coreana y devanagari. Para otros sistemas de escritura, escribe o pega el texto.';
+  String get errorNoTextHint => 'Escanear e Importar leen texto en alfabeto latino. Para cualquier otra escritura, usa Escribir texto.';
 }

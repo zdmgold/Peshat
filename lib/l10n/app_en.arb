@@ -162,7 +162,7 @@
   "packReceivedTitle": "Pack received",
   "errorOfflinePackNeeded": "No internet connection. This language needs a one-time pack to be received. Connect to the internet and try again.",
   "errorPackTooSlow": "The language pack is taking too long to be received. Your internet connection may be weak. Try again.",
-  "errorNoTextHint": "Camera scanning reads Latin, Chinese, Japanese, Korean and Devanagari writing. For other writing systems, type or paste the text instead.",
+  "errorNoTextHint": "Scan and Import read Latin-script text. For any other writing, use Type text.",
   "translatedFrom": "Translated from",
   "scanLatinHint": "Scan and Import read Latin-script text. For any other writing, use Type text."
 }

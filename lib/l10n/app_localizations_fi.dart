@@ -338,5 +338,5 @@ class AppLocalizationsFi extends AppLocalizations {
   String get errorPackTooSlow => 'Kielipaketin vastaanottaminen kestää liian kauan. Internetyhteytesi voi olla heikko. Yritä uudelleen.';
 
   @override
-  String get errorNoTextHint => 'Kameraskannaus lukee latinalaista, kiinalaista, japanilaista, korealaista ja devanagari-kirjoitusta. Muissa kirjoitusjärjestelmissä kirjoita tai liitä teksti.';
+  String get errorNoTextHint => 'Skannaus ja tuonti lukevat latinalaisilla kirjaimilla kirjoitettua tekstiä. Käytä muille kirjoitusjärjestelmille Kirjoita teksti -toimintoa.';
 }

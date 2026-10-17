@@ -107,7 +107,7 @@
   "packReceivedTitle": "Pakiet odebrany",
   "errorOfflinePackNeeded": "Brak połączenia z internetem. Ten język wymaga jednorazowego odebrania pakietu. Połącz się z internetem i spróbuj ponownie.",
   "errorPackTooSlow": "Odbieranie pakietu językowego trwa zbyt długo. Twoje połączenie z internetem może być słabe. Spróbuj ponownie.",
-  "errorNoTextHint": "Skanowanie aparatem odczytuje pismo łacińskie, chińskie, japońskie, koreańskie i dewanagari. W przypadku innych systemów pisma wpisz lub wklej tekst.",
+  "errorNoTextHint": "Skanowanie i import odczytują tekst pisany alfabetem łacińskim. Dla innych pism użyj opcji Wpisz tekst.",
   "translatedFrom": "Przetłumaczono z",
   "scanLatinHint": "Skanowanie i import odczytują tekst pisany alfabetem łacińskim. Dla innych pism użyj opcji Wpisz tekst."
 }

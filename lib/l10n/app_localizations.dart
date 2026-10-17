@@ -844,7 +844,7 @@ abstract class AppLocalizations {
   /// No description provided for @errorNoTextHint.
   ///
   /// In en, this message translates to:
-  /// **'Camera scanning reads Latin, Chinese, Japanese, Korean and Devanagari writing. For other writing systems, type or paste the text instead.'**
+  /// **'Scan and Import read Latin-script text. For any other writing, use Type text.'**
   String get errorNoTextHint;
 }
 

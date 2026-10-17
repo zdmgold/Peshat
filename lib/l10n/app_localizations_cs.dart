@@ -338,5 +338,5 @@ class AppLocalizationsCs extends AppLocalizations {
   String get errorPackTooSlow => 'Přijetí jazykového balíčku trvá příliš dlouho. Vaše připojení k internetu může být slabé. Zkuste to znovu.';
 
   @override
-  String get errorNoTextHint => 'Skenování fotoaparátem čte latinku, čínské, japonské, korejské písmo a dévanágarí. U jiných písem text napište nebo vložte.';
+  String get errorNoTextHint => 'Skenování a import čtou text v latince. Pro jiné písmo použijte Napsat text.';
 }

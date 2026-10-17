@@ -107,7 +107,7 @@
   "packReceivedTitle": "Paket diterima",
   "errorOfflinePackNeeded": "Tidak ada koneksi internet. Bahasa ini memerlukan satu paket yang diterima sekali saja. Hubungkan ke internet dan coba lagi.",
   "errorPackTooSlow": "Paket bahasa terlalu lama diterima. Koneksi internet Anda mungkin lemah. Coba lagi.",
-  "errorNoTextHint": "Pemindaian kamera membaca tulisan Latin, Tionghoa, Jepang, Korea, dan Devanagari. Untuk sistem tulisan lain, ketik atau tempel teksnya.",
+  "errorNoTextHint": "Pindai dan Impor membaca teks beraksara Latin. Untuk aksara lain, gunakan Ketik teks.",
   "translatedFrom": "Diterjemahkan dari",
   "scanLatinHint": "Pindai dan Impor membaca teks beraksara Latin. Untuk aksara lain, gunakan Ketik teks."
 }

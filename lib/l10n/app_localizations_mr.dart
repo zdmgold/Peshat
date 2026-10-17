@@ -338,5 +338,5 @@ class AppLocalizationsMr extends AppLocalizations {
   String get errorPackTooSlow => 'भाषा पॅक मिळण्यास खूप वेळ लागत आहे. तुमचे इंटरनेट कनेक्शन कमकुवत असू शकते. पुन्हा प्रयत्न करा.';
 
   @override
-  String get errorNoTextHint => 'कॅमेरा स्कॅन लॅटिन, चिनी, जपानी, कोरियन आणि देवनागरी लेखन वाचतो. इतर लिपींसाठी मजकूर टाइप करा किंवा पेस्ट करा.';
+  String get errorNoTextHint => 'स्कॅन आणि इम्पोर्ट लॅटिन लिपीतील मजकूर वाचतात. इतर कोणत्याही लिपीसाठी “मजकूर टाइप करा” वापरा.';
 }

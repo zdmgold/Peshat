@@ -338,5 +338,5 @@ class AppLocalizationsRo extends AppLocalizations {
   String get errorPackTooSlow => 'Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou.';
 
   @override
-  String get errorNoTextHint => 'Scanarea cu camera citește scrierea latină, chineză, japoneză, coreeană și devanagari. Pentru alte sisteme de scriere, tastați sau lipiți textul.';
+  String get errorNoTextHint => 'Scanarea și importul citesc text în alfabet latin. Pentru orice altă scriere, folosiți Introdu text.';
 }

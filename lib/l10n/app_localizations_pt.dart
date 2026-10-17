@@ -338,5 +338,5 @@ class AppLocalizationsPt extends AppLocalizations {
   String get errorPackTooSlow => 'O pacote de idioma está demorando demais para ser recebido. Sua conexão com a internet pode estar fraca. Tente novamente.';
 
   @override
-  String get errorNoTextHint => 'A digitalização pela câmera lê escrita latina, chinesa, japonesa, coreana e devanágari. Para outros sistemas de escrita, digite ou cole o texto.';
+  String get errorNoTextHint => 'Digitalizar e Importar leem texto em alfabeto latino. Para qualquer outra escrita, use Digitar texto.';
 }

@@ -338,5 +338,5 @@ class AppLocalizationsPa extends AppLocalizations {
   String get errorPackTooSlow => 'ਭਾਸ਼ਾ ਪੈਕ ਪ੍ਰਾਪਤ ਹੋਣ ਵਿੱਚ ਬਹੁਤ ਸਮਾਂ ਲੱਗ ਰਿਹਾ ਹੈ। ਤੁਹਾਡਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਕਮਜ਼ੋਰ ਹੋ ਸਕਦਾ ਹੈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
 
   @override
-  String get errorNoTextHint => 'ਕੈਮਰਾ ਸਕੈਨ ਲਾਤੀਨੀ, ਚੀਨੀ, ਜਪਾਨੀ, ਕੋਰੀਆਈ ਅਤੇ ਦੇਵਨਾਗਰੀ ਲਿਖਤ ਪੜ੍ਹਦਾ ਹੈ। ਹੋਰ ਲਿਪੀਆਂ ਲਈ ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ ਜਾਂ ਪੇਸਟ ਕਰੋ।';
+  String get errorNoTextHint => 'ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਲੈਟਿਨ ਲਿਪੀ ਦਾ ਪਾਠ ਪੜ੍ਹਦੇ ਹਨ। ਹੋਰ ਕਿਸੇ ਵੀ ਲਿਪੀ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ।';
 }

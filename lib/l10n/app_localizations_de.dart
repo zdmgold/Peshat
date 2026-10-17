@@ -338,5 +338,5 @@ class AppLocalizationsDe extends AppLocalizations {
   String get errorPackTooSlow => 'Das Empfangen des Sprachpakets dauert zu lange. Deine Internetverbindung ist möglicherweise schwach. Versuche es erneut.';
 
   @override
-  String get errorNoTextHint => 'Das Scannen mit der Kamera liest lateinische, chinesische, japanische, koreanische und Devanagari-Schrift. Für andere Schriftsysteme geben Sie den Text stattdessen ein oder fügen ihn ein.';
+  String get errorNoTextHint => 'Scannen und Importieren lesen Text in lateinischer Schrift. Für jede andere Schrift nutze Text eingeben.';
 }

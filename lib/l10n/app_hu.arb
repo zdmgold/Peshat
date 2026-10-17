@@ -107,7 +107,7 @@
   "packReceivedTitle": "Csomag megkapva",
   "errorOfflinePackNeeded": "Nincs internetkapcsolat. Ehhez a nyelvhez egyszeri csomagfogadás szükséges. Csatlakozzon az internethez, és próbálja újra.",
   "errorPackTooSlow": "A nyelvi csomag fogadása túl sokáig tart. Lehet, hogy gyenge az internetkapcsolata. Próbálja újra.",
-  "errorNoTextHint": "A kameraszkennelés latin, kínai, japán, koreai és dévanágari írást olvas. Más írásrendszerekhez írja be vagy illessze be a szöveget.",
+  "errorNoTextHint": "A beolvasás és az importálás latin betűs szöveget olvas. Minden más írásrendszerhez használd a Szöveg beírása lehetőséget.",
   "translatedFrom": "Forrásnyelv",
   "scanLatinHint": "A beolvasás és az importálás latin betűs szöveget olvas. Minden más írásrendszerhez használd a Szöveg beírása lehetőséget."
 }

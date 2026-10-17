@@ -338,5 +338,5 @@ class AppLocalizationsZh extends AppLocalizations {
   String get errorPackTooSlow => '接收语言包耗时过长。您的网络连接可能较弱。请重试。';
 
   @override
-  String get errorNoTextHint => '相机扫描可识别拉丁文、中文、日文、韩文和天城文。对于其他文字，请改为输入或粘贴文本。';
+  String get errorNoTextHint => '扫描和导入可识别拉丁字母文本。其他文字请使用“输入文本”。';
 }
