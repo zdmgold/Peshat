@@ -29,8 +29,8 @@ class PdfRaster {
       }
     }
     final fallback = fonts.keys.where((k) => k != 'PeshatPdf-base').toList();
-    final cw = (_pageW - 2 * _margin) * _scale;
-    final ch = (_pageH - 2 * _margin) * _scale;
+    const cw = (_pageW - 2 * _margin) * _scale;
+    const ch = (_pageH - 2 * _margin) * _scale;
     final tp = TextPainter(
       text: TextSpan(
         text: text,
@@ -60,7 +60,8 @@ class PdfRaster {
     final out = <Uint8List>[];
     for (final r in ranges) {
       final recorder = ui.PictureRecorder();
-      final w = _pageW * _scale, h = _pageH * _scale;
+      const w = _pageW * _scale;
+      const h = _pageH * _scale;
       final canvas = Canvas(recorder, Rect.fromLTWH(0, 0, w, h));
       canvas.drawRect(
           Rect.fromLTWH(0, 0, w, h), Paint()..color = const Color(0xFFFFFFFF));
