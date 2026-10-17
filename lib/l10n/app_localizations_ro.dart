@@ -188,6 +188,9 @@ class AppLocalizationsRo extends AppLocalizations {
   String get translatedTo => 'Tradus în';
 
   @override
+  String get translatedFrom => 'Tradus din';
+
+  @override
   String get translateToLabel => 'Tradu în';
 
   @override

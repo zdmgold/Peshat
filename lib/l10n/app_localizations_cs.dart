@@ -188,6 +188,9 @@ class AppLocalizationsCs extends AppLocalizations {
   String get translatedTo => 'Přeloženo do';
 
   @override
+  String get translatedFrom => 'Přeloženo z';
+
+  @override
   String get translateToLabel => 'Přeložit do';
 
   @override

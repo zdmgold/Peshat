@@ -188,6 +188,9 @@ class AppLocalizationsSw extends AppLocalizations {
   String get translatedTo => 'Imetafsiriwa kwa';
 
   @override
+  String get translatedFrom => 'Imetafsiriwa kutoka';
+
+  @override
   String get translateToLabel => 'Tafsiri kwa';
 
   @override

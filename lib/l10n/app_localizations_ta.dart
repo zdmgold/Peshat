@@ -188,6 +188,9 @@ class AppLocalizationsTa extends AppLocalizations {
   String get translatedTo => 'மொழிபெயர்க்கப்பட்ட மொழி';
 
   @override
+  String get translatedFrom => 'மொழிபெயர்க்கப்பட்ட மூலமொழி';
+
+  @override
   String get translateToLabel => 'மொழிபெயர்க்க வேண்டிய மொழி';
 
   @override

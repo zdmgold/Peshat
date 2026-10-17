@@ -188,6 +188,9 @@ class AppLocalizationsZh extends AppLocalizations {
   String get translatedTo => '翻译为';
 
   @override
+  String get translatedFrom => '翻译自';
+
+  @override
   String get translateToLabel => '翻译为';
 
   @override

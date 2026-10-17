@@ -188,6 +188,9 @@ class AppLocalizationsSk extends AppLocalizations {
   String get translatedTo => 'Preložené do jazyka';
 
   @override
+  String get translatedFrom => 'Preložené z jazyka';
+
+  @override
   String get translateToLabel => 'Preložiť do jazyka';
 
   @override

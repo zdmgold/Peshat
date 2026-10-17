@@ -188,6 +188,9 @@ class AppLocalizationsFa extends AppLocalizations {
   String get translatedTo => 'ترجمه شده به';
 
   @override
+  String get translatedFrom => 'ترجمه شده از';
+
+  @override
   String get translateToLabel => 'ترجم به';
 
   @override

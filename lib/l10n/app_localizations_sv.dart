@@ -188,6 +188,9 @@ class AppLocalizationsSv extends AppLocalizations {
   String get translatedTo => 'Översatt till';
 
   @override
+  String get translatedFrom => 'Översatt från';
+
+  @override
   String get translateToLabel => 'Översätt till';
 
   @override

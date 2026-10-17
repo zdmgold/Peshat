@@ -188,6 +188,9 @@ class AppLocalizationsPa extends AppLocalizations {
   String get translatedTo => 'ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ';
 
   @override
+  String get translatedFrom => 'ਇਸ ਤੋਂ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ';
+
+  @override
   String get translateToLabel => 'ਇਸ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ';
 
   @override

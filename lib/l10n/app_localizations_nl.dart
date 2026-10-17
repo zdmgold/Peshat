@@ -188,6 +188,9 @@ class AppLocalizationsNl extends AppLocalizations {
   String get translatedTo => 'Vertaald naar';
 
   @override
+  String get translatedFrom => 'Vertaald uit';
+
+  @override
   String get translateToLabel => 'Vertalen naar';
 
   @override

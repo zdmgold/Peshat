@@ -188,6 +188,9 @@ class AppLocalizationsRu extends AppLocalizations {
   String get translatedTo => 'Переведено на';
 
   @override
+  String get translatedFrom => 'Переведено с';
+
+  @override
   String get translateToLabel => 'Перевести на';
 
   @override

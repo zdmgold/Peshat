@@ -188,6 +188,9 @@ class AppLocalizationsHe extends AppLocalizations {
   String get translatedTo => 'תורגם ל';
 
   @override
+  String get translatedFrom => 'תורגם מ';
+
+  @override
   String get translateToLabel => 'תרגם ל';
 
   @override

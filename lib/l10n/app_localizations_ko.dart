@@ -188,6 +188,9 @@ class AppLocalizationsKo extends AppLocalizations {
   String get translatedTo => '번역 대상';
 
   @override
+  String get translatedFrom => '원본 언어';
+
+  @override
   String get translateToLabel => '번역 대상';
 
   @override

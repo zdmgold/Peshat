@@ -188,6 +188,9 @@ class AppLocalizationsGu extends AppLocalizations {
   String get translatedTo => 'આમાં અનુવાદિત';
 
   @override
+  String get translatedFrom => 'આમાંથી અનુવાદિત';
+
+  @override
   String get translateToLabel => 'આમાં અનુવાદ કરો';
 
   @override

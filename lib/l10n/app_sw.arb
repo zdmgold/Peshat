@@ -107,5 +107,6 @@
   "packReceivedTitle": "Kifurushi kimepokelewa",
   "errorOfflinePackNeeded": "Hakuna muunganisho wa intaneti. Lugha hii inahitaji kifurushi kinachopokelewa mara moja. Unganisha kwenye intaneti kisha ujaribu tena.",
   "errorPackTooSlow": "Kifurushi cha lugha kinachukua muda mrefu sana kupokelewa. Muunganisho wako wa intaneti unaweza kuwa dhaifu. Jaribu tena.",
-  "errorNoTextHint": "Kuchanganua kwa kamera husoma maandishi ya Kilatini, Kichina, Kijapani, Kikorea na Devanagari. Kwa mifumo mingine ya uandishi, andika au bandika maandishi badala yake."
+  "errorNoTextHint": "Kuchanganua kwa kamera husoma maandishi ya Kilatini, Kichina, Kijapani, Kikorea na Devanagari. Kwa mifumo mingine ya uandishi, andika au bandika maandishi badala yake.",
+  "translatedFrom": "Imetafsiriwa kutoka"
 }

@@ -188,6 +188,9 @@ class AppLocalizationsUk extends AppLocalizations {
   String get translatedTo => 'Перекладено на';
 
   @override
+  String get translatedFrom => 'Перекладено з';
+
+  @override
   String get translateToLabel => 'Перекласти на';
 
   @override

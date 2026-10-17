@@ -188,6 +188,9 @@ class AppLocalizationsUr extends AppLocalizations {
   String get translatedTo => 'ترجمہ کیا گیا';
 
   @override
+  String get translatedFrom => 'جس زبان سے ترجمہ کیا گیا';
+
+  @override
   String get translateToLabel => 'پر ترجمہ کریں';
 
   @override

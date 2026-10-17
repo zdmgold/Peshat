@@ -188,6 +188,9 @@ class AppLocalizationsMr extends AppLocalizations {
   String get translatedTo => 'यामध्ये भाषांतरित';
 
   @override
+  String get translatedFrom => 'यामधून भाषांतरित';
+
+  @override
   String get translateToLabel => 'यामध्ये भाषांतर करा';
 
   @override

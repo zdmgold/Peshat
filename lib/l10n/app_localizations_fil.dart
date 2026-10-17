@@ -188,6 +188,9 @@ class AppLocalizationsFil extends AppLocalizations {
   String get translatedTo => 'Isinalin sa';
 
   @override
+  String get translatedFrom => 'Isinalin mula sa';
+
+  @override
   String get translateToLabel => 'Isalin sa';
 
   @override

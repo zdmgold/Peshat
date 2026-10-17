@@ -188,6 +188,9 @@ class AppLocalizationsLo extends AppLocalizations {
   String get translatedTo => 'ແປເປັນ';
 
   @override
+  String get translatedFrom => 'ແປຈາກ';
+
+  @override
   String get translateToLabel => 'ແປເປັນ';
 
   @override

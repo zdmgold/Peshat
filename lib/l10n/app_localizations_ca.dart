@@ -188,6 +188,9 @@ class AppLocalizationsCa extends AppLocalizations {
   String get translatedTo => 'Traduït a';
 
   @override
+  String get translatedFrom => 'Traduït des de';
+
+  @override
   String get translateToLabel => 'Tradueix a';
 
   @override

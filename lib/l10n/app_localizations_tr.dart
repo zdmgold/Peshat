@@ -188,6 +188,9 @@ class AppLocalizationsTr extends AppLocalizations {
   String get translatedTo => 'Çevrildi';
 
   @override
+  String get translatedFrom => 'Kaynak dil';
+
+  @override
   String get translateToLabel => 'Şuna çevir';
 
   @override

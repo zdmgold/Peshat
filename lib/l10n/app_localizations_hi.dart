@@ -188,6 +188,9 @@ class AppLocalizationsHi extends AppLocalizations {
   String get translatedTo => 'अनुवादित';
 
   @override
+  String get translatedFrom => 'इस भाषा से अनुवादित';
+
+  @override
   String get translateToLabel => 'इसमें अनुवाद करें';
 
   @override

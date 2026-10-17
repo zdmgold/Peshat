@@ -188,6 +188,9 @@ class AppLocalizationsId extends AppLocalizations {
   String get translatedTo => 'Diterjemahkan ke';
 
   @override
+  String get translatedFrom => 'Diterjemahkan dari';
+
+  @override
   String get translateToLabel => 'Terjemahkan ke';
 
   @override

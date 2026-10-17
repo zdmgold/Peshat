@@ -188,6 +188,9 @@ class AppLocalizationsIt extends AppLocalizations {
   String get translatedTo => 'Tradotto in';
 
   @override
+  String get translatedFrom => 'Tradotto da';
+
+  @override
   String get translateToLabel => 'Traduci in';
 
   @override

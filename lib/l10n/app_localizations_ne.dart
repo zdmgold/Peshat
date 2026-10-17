@@ -188,6 +188,9 @@ class AppLocalizationsNe extends AppLocalizations {
   String get translatedTo => 'अनुवाद गरियो';
 
   @override
+  String get translatedFrom => 'यस भाषाबाट अनुवाद गरियो';
+
+  @override
   String get translateToLabel => 'यसमा अनुवाद गर्नुहोस्';
 
   @override

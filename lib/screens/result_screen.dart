@@ -391,6 +391,7 @@ class _ResultScreenState extends State<ResultScreen> {
                 ),
                 _TranslationTab(
                   translatedText: state.translatedText,
+                  sourceLanguage: state.sourceLanguage,
                   targetLanguage: state.targetLanguage,
                   onPickLanguage: _pickLanguage,
                   isDark: isDark,
@@ -506,12 +507,14 @@ class _OriginalTab extends StatelessWidget {
 
 class _TranslationTab extends StatelessWidget {
   final String translatedText;
+  final String sourceLanguage;
   final String targetLanguage;
   final VoidCallback onPickLanguage;
   final bool isDark;
 
   const _TranslationTab({
     required this.translatedText,
+    required this.sourceLanguage,
     required this.targetLanguage,
     required this.onPickLanguage,
     required this.isDark,
@@ -524,6 +527,16 @@ class _TranslationTab extends StatelessWidget {
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
     return Column(
       children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
+          child: ActionCard(
+            icon: AppIcons.globe,
+            label: l10n.translatedFrom,
+            value: languageNativeName(sourceLanguage),
+            onTap: () {},
+          ),
+        ),
+        const SizedBox(height: Spacing.sm),
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
           child: ActionCard(

@@ -188,6 +188,9 @@ class AppLocalizationsBn extends AppLocalizations {
   String get translatedTo => 'অনুবাদ করা হয়েছে';
 
   @override
+  String get translatedFrom => 'যে ভাষা থেকে অনুবাদ';
+
+  @override
   String get translateToLabel => 'এতে অনুবাদ করুন';
 
   @override

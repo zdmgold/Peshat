@@ -188,6 +188,9 @@ class AppLocalizationsSi extends AppLocalizations {
   String get translatedTo => 'පරිවර්තනය කරන ලදී';
 
   @override
+  String get translatedFrom => 'පරිවර්තනය කළ භාෂාව';
+
+  @override
   String get translateToLabel => 'මෙයට පරිවර්තනය කරන්න';
 
   @override

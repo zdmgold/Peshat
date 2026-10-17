@@ -107,5 +107,6 @@
   "packReceivedTitle": "Pachet primit",
   "errorOfflinePackNeeded": "Nu există conexiune la internet. Această limbă are nevoie de un pachet care se primește o singură dată. Conectați-vă la internet și încercați din nou.",
   "errorPackTooSlow": "Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou.",
-  "errorNoTextHint": "Scanarea cu camera citește scrierea latină, chineză, japoneză, coreeană și devanagari. Pentru alte sisteme de scriere, tastați sau lipiți textul."
+  "errorNoTextHint": "Scanarea cu camera citește scrierea latină, chineză, japoneză, coreeană și devanagari. Pentru alte sisteme de scriere, tastați sau lipiți textul.",
+  "translatedFrom": "Tradus din"
 }

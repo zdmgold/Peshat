@@ -188,6 +188,9 @@ class AppLocalizationsBg extends AppLocalizations {
   String get translatedTo => 'Преведено на';
 
   @override
+  String get translatedFrom => 'Преведено от';
+
+  @override
   String get translateToLabel => 'Превеждане на';
 
   @override

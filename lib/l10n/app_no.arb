@@ -107,5 +107,6 @@
   "packReceivedTitle": "Pakke mottatt",
   "errorOfflinePackNeeded": "Ingen internettforbindelse. Dette språket trenger en pakke som mottas én gang. Koble til internett og prøv igjen.",
   "errorPackTooSlow": "Det tar for lang tid å motta språkpakken. Internettforbindelsen din kan være svak. Prøv igjen.",
-  "errorNoTextHint": "Kameraskanning leser latinsk, kinesisk, japansk, koreansk og devanagari-skrift. For andre skriftsystemer kan du skrive eller lime inn teksten i stedet."
+  "errorNoTextHint": "Kameraskanning leser latinsk, kinesisk, japansk, koreansk og devanagari-skrift. For andre skriftsystemer kan du skrive eller lime inn teksten i stedet.",
+  "translatedFrom": "Oversatt fra"
 }

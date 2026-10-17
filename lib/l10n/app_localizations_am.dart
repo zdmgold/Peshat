@@ -188,6 +188,9 @@ class AppLocalizationsAm extends AppLocalizations {
   String get translatedTo => 'ወደ ተተርጉሟል';
 
   @override
+  String get translatedFrom => 'የተተረጎመው ከ';
+
+  @override
   String get translateToLabel => 'ወደ ተርጉም';
 
   @override

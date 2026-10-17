@@ -188,6 +188,9 @@ class AppLocalizationsTe extends AppLocalizations {
   String get translatedTo => 'అనువదించిన భాష';
 
   @override
+  String get translatedFrom => 'అనువదించిన మూల భాష';
+
+  @override
   String get translateToLabel => 'అనువదించాల్సిన భాష';
 
   @override

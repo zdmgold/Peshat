@@ -107,5 +107,6 @@
   "packReceivedTitle": "Pacote recebido",
   "errorOfflinePackNeeded": "Sem conexão com a internet. Este idioma precisa que um pacote seja recebido uma única vez. Conecte-se à internet e tente novamente.",
   "errorPackTooSlow": "O pacote de idioma está demorando demais para ser recebido. Sua conexão com a internet pode estar fraca. Tente novamente.",
-  "errorNoTextHint": "A digitalização pela câmera lê escrita latina, chinesa, japonesa, coreana e devanágari. Para outros sistemas de escrita, digite ou cole o texto."
+  "errorNoTextHint": "A digitalização pela câmera lê escrita latina, chinesa, japonesa, coreana e devanágari. Para outros sistemas de escrita, digite ou cole o texto.",
+  "translatedFrom": "Traduzido de"
 }

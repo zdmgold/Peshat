@@ -188,6 +188,9 @@ class AppLocalizationsKm extends AppLocalizations {
   String get translatedTo => 'បកប្រែជា';
 
   @override
+  String get translatedFrom => 'បកប្រែពី';
+
+  @override
   String get translateToLabel => 'បកប្រែទៅ';
 
   @override

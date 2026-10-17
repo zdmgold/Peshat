@@ -188,6 +188,9 @@ class AppLocalizationsDe extends AppLocalizations {
   String get translatedTo => 'Übersetzt nach';
 
   @override
+  String get translatedFrom => 'Übersetzt von';
+
+  @override
   String get translateToLabel => 'Übersetzen nach';
 
   @override

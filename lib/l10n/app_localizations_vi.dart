@@ -188,6 +188,9 @@ class AppLocalizationsVi extends AppLocalizations {
   String get translatedTo => 'Đã dịch sang';
 
   @override
+  String get translatedFrom => 'Đã dịch từ';
+
+  @override
   String get translateToLabel => 'Dịch sang';
 
   @override

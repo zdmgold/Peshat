@@ -107,5 +107,6 @@
   "packReceivedTitle": "Natanggap na ang pack",
   "errorOfflinePackNeeded": "Walang koneksyon sa internet. Kailangan ng wikang ito ng pack na isang beses lang tatanggapin. Kumonekta sa internet at subukan muli.",
   "errorPackTooSlow": "Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli.",
-  "errorNoTextHint": "Binabasa ng camera scan ang Latin, Chinese, Japanese, Korean at Devanagari na pagsulat. Para sa ibang sistema ng pagsulat, i-type o i-paste na lang ang teksto."
+  "errorNoTextHint": "Binabasa ng camera scan ang Latin, Chinese, Japanese, Korean at Devanagari na pagsulat. Para sa ibang sistema ng pagsulat, i-type o i-paste na lang ang teksto.",
+  "translatedFrom": "Isinalin mula sa"
 }

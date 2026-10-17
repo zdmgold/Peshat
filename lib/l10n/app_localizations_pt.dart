@@ -188,6 +188,9 @@ class AppLocalizationsPt extends AppLocalizations {
   String get translatedTo => 'Traduzido para';
 
   @override
+  String get translatedFrom => 'Traduzido de';
+
+  @override
   String get translateToLabel => 'Traduzir para';
 
   @override

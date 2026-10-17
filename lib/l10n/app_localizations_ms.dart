@@ -188,6 +188,9 @@ class AppLocalizationsMs extends AppLocalizations {
   String get translatedTo => 'Diterjemahkan ke';
 
   @override
+  String get translatedFrom => 'Diterjemahkan daripada';
+
+  @override
   String get translateToLabel => 'Terjemah ke';
 
   @override

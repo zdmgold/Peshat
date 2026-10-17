@@ -188,6 +188,9 @@ class AppLocalizationsMy extends AppLocalizations {
   String get translatedTo => 'သို့ ဘာသာပြန်ထားသည်';
 
   @override
+  String get translatedFrom => 'မှ ဘာသာပြန်ထားသည်';
+
+  @override
   String get translateToLabel => 'သို့ ဘာသာပြန်ပါ';
 
   @override

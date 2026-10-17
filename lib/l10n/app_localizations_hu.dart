@@ -188,6 +188,9 @@ class AppLocalizationsHu extends AppLocalizations {
   String get translatedTo => 'Lefordítva';
 
   @override
+  String get translatedFrom => 'Forrásnyelv';
+
+  @override
   String get translateToLabel => 'Fordítás erre';
 
   @override
