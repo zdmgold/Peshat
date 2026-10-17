@@ -1,0 +1,33 @@
+
+✅ /home/runner/work/Peshat/Peshat/test/l10n_completeness_test.dart: all ARB files have the same key set as app_en.arb
+✅ /home/runner/work/Peshat/Peshat/test/widget_test.dart: ScanScreen renders core controls
+✅ /home/runner/work/Peshat/Peshat/test/widget_test.dart: ScanScreen scrolls on a short screen and labels its buttons
+✅ /home/runner/work/Peshat/Peshat/test/pdf_fonts_test.dart: detects the extra scripts a text needs
+✅ /home/runner/work/Peshat/Peshat/test/pdf_fonts_test.dart: right-to-left detection
+✅ /home/runner/work/Peshat/Peshat/test/pdf_fonts_test.dart: letter-joining scripts are drawn as images, others stay text
+✅ /home/runner/work/Peshat/Peshat/test/auto_direction_text_test.dart: follows the direction of its own content
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: unsupported language falls back to English
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: supported language keeps its code and drops the country
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: Norwegian Bokmål and Nynorsk map to the Norwegian strings
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: device list resolution picks first supported, else English
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: exactly 48 app languages are selectable and all load
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: pack on the phone: no receiving bar, goes straight to translating
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: pack missing and offline: offline error, nothing received
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: pack missing and online: receiving, received, then translated
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: same language: no packs needed, nothing translated
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: cancel stops the scan: nothing further is shown
+✅ /home/runner/work/Peshat/Peshat/test/date_labels_test.dart: 23:00 last night is yesterday, not today
+✅ /home/runner/work/Peshat/Peshat/test/date_labels_test.dart: today shows only the time, other days show a date too
+✅ /home/runner/work/Peshat/Peshat/test/contrast_test.dart: text on filled accent buttons is readable in dark mode
+✅ /home/runner/work/Peshat/Peshat/test/contrast_test.dart: text on filled accent buttons in light mode stays above 4:1
+✅ /home/runner/work/Peshat/Peshat/test/contrast_test.dart: primary text is comfortably readable on both page backgrounds
+✅ /home/runner/work/Peshat/Peshat/test/same_language_test.dart: same base language is detected regardless of region or case
+✅ /home/runner/work/Peshat/Peshat/test/language_label_test.dart: native name first, English after it
+✅ /home/runner/work/Peshat/Peshat/test/language_label_test.dart: English shows once
+✅ /home/runner/work/Peshat/Peshat/test/language_label_test.dart: unknown code falls back to upper-case code
+✅ /home/runner/work/Peshat/Peshat/test/alpha_index_test.dart: tapping a letter in the rail scrolls to that section
+✅ /home/runner/work/Peshat/Peshat/test/translator_service_test.dart: Filipino maps to the ML Kit model code, not the app code
+✅ /home/runner/work/Peshat/Peshat/test/translator_service_test.dart: every translatable language has a model code
+✅ /home/runner/work/Peshat/Peshat/test/locale_sweep_test.dart: Home screen has no overflow in any menu language
+
+🎉 30 tests passed.
