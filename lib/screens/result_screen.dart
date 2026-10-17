@@ -18,6 +18,7 @@ import '../core/providers/history_provider.dart';
 import '../core/providers/scan_provider.dart';
 import '../core/services/interstitial_service.dart';
 import '../core/services/pdf_fonts.dart';
+import '../core/services/pdf_raster.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -431,22 +432,37 @@ class _ResultScreenState extends State<ResultScreen> {
         if (await PdfFonts.needsDownload(scripts) && mounted) {
           CupertinoToast.show(context, l10n.pdfFontDownloading);
         }
-        final theme = await PdfFonts.themeFor(scripts);
-        final doc = pw.Document(theme: theme);
-        doc.addPage(
-          pw.MultiPage(
-            pageFormat: PdfPageFormat.a4,
-            textDirection: PdfFonts.isMostlyRtl(text)
-                ? pw.TextDirection.rtl
-                : pw.TextDirection.ltr,
-            build: (ctx) => [
-              pw.Paragraph(
-                text: text,
-                style: const pw.TextStyle(fontSize: 12),
+        final rtl = PdfFonts.isMostlyRtl(text);
+        final doc = pw.Document();
+        if (PdfFonts.needsRaster(scripts)) {
+          final pages = await PdfRaster.pages(text, scripts, rtl: rtl);
+          for (final bytes in pages) {
+            final image = pw.MemoryImage(bytes);
+            doc.addPage(
+              pw.Page(
+                pageFormat: PdfPageFormat.a4,
+                margin: pw.EdgeInsets.zero,
+                build: (ctx) => pw.Image(image, fit: pw.BoxFit.fill),
               ),
-            ],
-          ),
-        );
+            );
+          }
+        } else {
+          final theme = await PdfFonts.themeFor(scripts);
+          doc.addPage(
+            pw.MultiPage(
+              theme: theme,
+              pageFormat: PdfPageFormat.a4,
+              textDirection:
+                  rtl ? pw.TextDirection.rtl : pw.TextDirection.ltr,
+              build: (ctx) => [
+                pw.Paragraph(
+                  text: text,
+                  style: const pw.TextStyle(fontSize: 12),
+                ),
+              ],
+            ),
+          );
+        }
         final path = '${dir.path}/$baseName.pdf';
         file = File(path);
         await file.writeAsBytes(await doc.save());

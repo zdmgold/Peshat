@@ -1,4 +1,5 @@
 import 'dart:io';
+import 'dart:typed_data';
 import 'package:flutter/services.dart' show ByteData, rootBundle;
 import 'package:path_provider/path_provider.dart';
 import 'package:pdf/widgets.dart' as pw;
@@ -53,6 +54,22 @@ class PdfFonts {
     PdfScript.japanese: 'NotoSansJP-Regular.ttf',
     PdfScript.korean: 'NotoSansKR-Regular.ttf',
   };
+
+  /// Scripts whose letters must be joined or repositioned (vowel signs,
+  /// conjuncts, stacked marks). The `pdf` package cannot do that, so text in
+  /// these scripts is drawn as page images by the app's own text engine.
+  static const _shaped = <PdfScript>{
+    PdfScript.devanagari,
+    PdfScript.bengali,
+    PdfScript.gujarati,
+    PdfScript.kannada,
+    PdfScript.tamil,
+    PdfScript.telugu,
+    PdfScript.thai,
+  };
+
+  static bool needsRaster(Set<PdfScript> scripts) =>
+      scripts.any(_shaped.contains);
 
   static bool _in(int c, int a, int b) => c >= a && c <= b;
 
@@ -211,5 +228,29 @@ class PdfFonts {
       boldItalic: base,
       fontFallback: fallback,
     );
+  }
+
+  /// Raw font bytes keyed by a stable family name: the base Latin font plus
+  /// one per script in [scripts]. Used to draw shaped text as images.
+  static Future<Map<String, Uint8List>> fontBytes(
+      Set<PdfScript> scripts) async {
+    Uint8List bytesOf(ByteData d) =>
+        d.buffer.asUint8List(d.offsetInBytes, d.lengthInBytes);
+    final out = <String, Uint8List>{
+      'PeshatPdf-base': bytesOf(await rootBundle.load(_baseAsset)),
+    };
+    for (final s in scripts) {
+      final asset = _bundled[s];
+      if (asset != null) {
+        out['PeshatPdf-${s.name}'] = bytesOf(await rootBundle.load(asset));
+        continue;
+      }
+      final name = _remote[s];
+      if (name != null) {
+        out['PeshatPdf-${s.name}'] =
+            await (await _ensureDownloaded(name)).readAsBytes();
+      }
+    }
+    return out;
   }
 }

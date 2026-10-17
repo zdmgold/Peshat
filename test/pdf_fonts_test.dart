@@ -23,4 +23,13 @@ void main() {
     expect(PdfFonts.isMostlyRtl('مرحبا بالعالم'), isTrue);
     expect(PdfFonts.isMostlyRtl('Hello world'), isFalse);
   });
+
+  test('letter-joining scripts are drawn as images, others stay text', () {
+    for (final t in ['हिन्दी', 'বাংলা', 'ગુજરાતી', 'ಕನ್ನಡ', 'தமிழ்', 'తెలుగు', 'ไทย']) {
+      expect(PdfFonts.needsRaster(PdfFonts.scriptsIn(t)), isTrue, reason: t);
+    }
+    for (final t in ['Hello', 'مرحبا', 'שלום', 'ქართული', '你好', '日本語', '안녕']) {
+      expect(PdfFonts.needsRaster(PdfFonts.scriptsIn(t)), isFalse, reason: t);
+    }
+  });
 }
