@@ -331,12 +331,15 @@ class _ScanScreenState extends State<ScanScreen> {
                     const SizedBox(height: 16),
 
                     // Language selector — filled card.
-                    ActionCard(
-                      icon: AppIcons.globe,
-                      label: l10n.translateToLabel,
-                      value: languageNativeName(widget.settings.value),
-                      showChevron: true,
-                      onTap: _pickTargetLanguage,
+                    ValueListenableBuilder<String>(
+                      valueListenable: widget.settings,
+                      builder: (context, target, _) => ActionCard(
+                        icon: AppIcons.globe,
+                        label: l10n.translateToLabel,
+                        value: languageNativeName(target),
+                        showChevron: true,
+                        onTap: _pickTargetLanguage,
+                      ),
                     ),
                     const SizedBox(height: 32),
 

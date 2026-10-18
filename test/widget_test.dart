@@ -124,4 +124,37 @@ void main() {
     );
     semantics.dispose();
   });
+
+  testWidgets('Home card shows a newly picked target language at once',
+      (tester) async {
+    SharedPreferences.setMockInitialValues({
+      'ads_removed': true,
+      'theme_mode': 'light',
+      'target_language': 'es',
+      'ui_locale': 'system',
+    });
+    final prefs = await SharedPreferences.getInstance();
+    final settings = SettingsProvider(prefs);
+    await tester.pumpWidget(
+      CupertinoApp(
+        localizationsDelegates: AppLocalizations.localizationsDelegates,
+        supportedLocales: AppLocalizations.supportedLocales,
+        home: ScanScreen(
+          theme: ThemeProvider(prefs),
+          purchase: PurchaseProvider(prefs),
+          settings: settings,
+          history: HistoryProvider(prefs),
+          uiLocale: UiLocaleProvider(prefs),
+          notification: NotificationProvider(prefs),
+        ),
+      ),
+    );
+    await tester.pump();
+    expect(find.text('Español'), findsOneWidget);
+
+    settings.setTarget('fr');
+    await tester.pump();
+    expect(find.text('Français'), findsOneWidget);
+    expect(find.text('Español'), findsNothing);
+  });
 }
