@@ -73,12 +73,9 @@ void main() {
       await tester.pump(const Duration(seconds: 1));
       await tester.pump(const Duration(seconds: 1));
 
-      final tabs = tester
-          .widgetList<IndexedStack>(find.byType(IndexedStack))
-          .where((w) => w.children.length == 2)
-          .toList();
-      expect(tabs, isNotEmpty);
-      expect(tabs.every((w) => w.index == 1), isTrue);
+      final control = tester.widget<CupertinoSlidingSegmentedControl<Object>>(
+          find.byWidgetPredicate((w) => w is CupertinoSlidingSegmentedControl));
+      expect(control.groupValue.toString(), endsWith('translation'));
       expect(find.text('T:hola'), findsOneWidget);
       // One slim line: source, arrow, target.
       expect(find.text('Español'), findsOneWidget);
