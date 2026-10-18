@@ -107,7 +107,7 @@
   "packReceivedTitle": "Pachet primit",
   "errorOfflinePackNeeded": "Nu există conexiune la internet. Această limbă are nevoie de un pachet care se primește o singură dată. Conectați-vă la internet și încercați din nou.",
   "errorPackTooSlow": "Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou.",
-  "errorNoTextHint": "Scanarea și importul citesc text în alfabet latin. Pentru orice altă scriere, folosiți Introdu text.",
+  "errorNoTextHint": "Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.",
   "translatedFrom": "Tradus din",
-  "scanLatinHint": "Scanarea și importul citesc text în alfabet latin. Pentru orice altă scriere, folosiți Introdu text."
+  "scanLatinHint": "Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin."
 }

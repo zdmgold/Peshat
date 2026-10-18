@@ -191,7 +191,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get translatedFrom => 'የተተረጎመው ከ';
 
   @override
-  String get scanLatinHint => 'ስካን እና ማስመጣት የላቲን ፊደል ጽሑፍ ያነባሉ። ለሌላ ጽሑፍ «ጽሑፍ ይተይቡ»ን ይጠቀሙ።';
+  String get scanLatinHint => 'ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ። ስካን እና ማስመጣት በግልጽ የላቲን ፊደል ጽሑፍ ላይ በተሻለ ይሰራሉ።';
 
   @override
   String get translateToLabel => 'ወደ ተርጉም';
@@ -338,5 +338,5 @@ class AppLocalizationsAm extends AppLocalizations {
   String get errorPackTooSlow => 'የቋንቋ ጥቅሉ ለመድረስ ከመጠን በላይ እየወሰደ ነው። የበይነመረብ ግንኙነትዎ ደካማ ሊሆን ይችላል። እንደገና ይሞክሩ።';
 
   @override
-  String get errorNoTextHint => 'ስካን እና ማስመጣት የላቲን ፊደል ጽሑፍ ያነባሉ። ለሌላ ጽሑፍ «ጽሑፍ ይተይቡ»ን ይጠቀሙ።';
+  String get errorNoTextHint => 'ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ። ስካን እና ማስመጣት በግልጽ የላቲን ፊደል ጽሑፍ ላይ በተሻለ ይሰራሉ።';
 }

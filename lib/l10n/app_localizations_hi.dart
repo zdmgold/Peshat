@@ -191,7 +191,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get translatedFrom => 'इस भाषा से अनुवादित';
 
   @override
-  String get scanLatinHint => 'स्कैन और इम्पोर्ट लैटिन लिपि का पाठ पढ़ते हैं। किसी भी अन्य लिपि के लिए “टेक्स्ट टाइप करें” का उपयोग करें।';
+  String get scanLatinHint => 'सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें। स्कैन और इम्पोर्ट साफ़ लैटिन लिपि के पाठ के साथ सबसे अच्छा काम करते हैं।';
 
   @override
   String get translateToLabel => 'इसमें अनुवाद करें';
@@ -338,5 +338,5 @@ class AppLocalizationsHi extends AppLocalizations {
   String get errorPackTooSlow => 'भाषा पैक प्राप्त होने में बहुत समय लग रहा है। हो सकता है आपका इंटरनेट कनेक्शन कमज़ोर हो। फिर से कोशिश करें।';
 
   @override
-  String get errorNoTextHint => 'स्कैन और इम्पोर्ट लैटिन लिपि का पाठ पढ़ते हैं। किसी भी अन्य लिपि के लिए “टेक्स्ट टाइप करें” का उपयोग करें।';
+  String get errorNoTextHint => 'सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें। स्कैन और इम्पोर्ट साफ़ लैटिन लिपि के पाठ के साथ सबसे अच्छा काम करते हैं।';
 }

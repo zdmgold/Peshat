@@ -191,7 +191,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get translatedFrom => 'ترجمه شده از';
 
   @override
-  String get scanLatinHint => 'اسکن و درون‌ریزی متن با حروف لاتین را می‌خوانند. برای هر خط دیگری از «تایپ متن» استفاده کنید.';
+  String get scanLatinHint => 'برای دقیق‌ترین ترجمه از «تایپ متن» استفاده کنید. اسکن و درون‌ریزی با متن واضح به حروف لاتین بهترین نتیجه را می‌دهند.';
 
   @override
   String get translateToLabel => 'ترجم به';
@@ -338,5 +338,5 @@ class AppLocalizationsFa extends AppLocalizations {
   String get errorPackTooSlow => 'دریافت بسته زبان بیش از حد طول می‌کشد. ممکن است اتصال اینترنت شما ضعیف باشد. دوباره تلاش کنید.';
 
   @override
-  String get errorNoTextHint => 'اسکن و درون‌ریزی متن با حروف لاتین را می‌خوانند. برای هر خط دیگری از «تایپ متن» استفاده کنید.';
+  String get errorNoTextHint => 'برای دقیق‌ترین ترجمه از «تایپ متن» استفاده کنید. اسکن و درون‌ریزی با متن واضح به حروف لاتین بهترین نتیجه را می‌دهند.';
 }

@@ -107,7 +107,7 @@
   "packReceivedTitle": "Pack reçu",
   "errorOfflinePackNeeded": "Pas de connexion internet. Cette langue nécessite la réception d'un pack, une seule fois. Connectez-vous à internet et réessayez.",
   "errorPackTooSlow": "La réception du pack de langue prend trop de temps. Votre connexion internet est peut-être faible. Réessayez.",
-  "errorNoTextHint": "Le scan et l'import lisent le texte en écriture latine. Pour toute autre écriture, utilisez Saisir du texte.",
+  "errorNoTextHint": "Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l'import fonctionnent mieux avec un texte net en écriture latine.",
   "translatedFrom": "Traduit de",
-  "scanLatinHint": "Le scan et l'import lisent le texte en écriture latine. Pour toute autre écriture, utilisez Saisir du texte."
+  "scanLatinHint": "Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l'import fonctionnent mieux avec un texte net en écriture latine."
 }

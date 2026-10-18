@@ -191,7 +191,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get translatedFrom => 'Przetłumaczono z';
 
   @override
-  String get scanLatinHint => 'Skanowanie i import odczytują tekst pisany alfabetem łacińskim. Dla innych pism użyj opcji Wpisz tekst.';
+  String get scanLatinHint => 'Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim.';
 
   @override
   String get translateToLabel => 'Przetłumacz na';
@@ -338,5 +338,5 @@ class AppLocalizationsPl extends AppLocalizations {
   String get errorPackTooSlow => 'Odbieranie pakietu językowego trwa zbyt długo. Twoje połączenie z internetem może być słabe. Spróbuj ponownie.';
 
   @override
-  String get errorNoTextHint => 'Skanowanie i import odczytują tekst pisany alfabetem łacińskim. Dla innych pism użyj opcji Wpisz tekst.';
+  String get errorNoTextHint => 'Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim.';
 }

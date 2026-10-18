@@ -191,7 +191,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get translatedFrom => 'Přeloženo z';
 
   @override
-  String get scanLatinHint => 'Skenování a import čtou text v latince. Pro jiné písmo použijte Napsat text.';
+  String get scanLatinHint => 'Pro nejpřesnější překlad použijte Napsat text. Skenování a import fungují nejlépe s čitelným textem v latince.';
 
   @override
   String get translateToLabel => 'Přeložit do';
@@ -338,5 +338,5 @@ class AppLocalizationsCs extends AppLocalizations {
   String get errorPackTooSlow => 'Přijetí jazykového balíčku trvá příliš dlouho. Vaše připojení k internetu může být slabé. Zkuste to znovu.';
 
   @override
-  String get errorNoTextHint => 'Skenování a import čtou text v latince. Pro jiné písmo použijte Napsat text.';
+  String get errorNoTextHint => 'Pro nejpřesnější překlad použijte Napsat text. Skenování a import fungují nejlépe s čitelným textem v latince.';
 }

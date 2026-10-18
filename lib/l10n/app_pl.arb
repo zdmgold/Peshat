@@ -107,7 +107,7 @@
   "packReceivedTitle": "Pakiet odebrany",
   "errorOfflinePackNeeded": "Brak połączenia z internetem. Ten język wymaga jednorazowego odebrania pakietu. Połącz się z internetem i spróbuj ponownie.",
   "errorPackTooSlow": "Odbieranie pakietu językowego trwa zbyt długo. Twoje połączenie z internetem może być słabe. Spróbuj ponownie.",
-  "errorNoTextHint": "Skanowanie i import odczytują tekst pisany alfabetem łacińskim. Dla innych pism użyj opcji Wpisz tekst.",
+  "errorNoTextHint": "Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim.",
   "translatedFrom": "Przetłumaczono z",
-  "scanLatinHint": "Skanowanie i import odczytują tekst pisany alfabetem łacińskim. Dla innych pism użyj opcji Wpisz tekst."
+  "scanLatinHint": "Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim."
 }

@@ -107,7 +107,7 @@
   "packReceivedTitle": "Paket diterima",
   "errorOfflinePackNeeded": "Tidak ada koneksi internet. Bahasa ini memerlukan satu paket yang diterima sekali saja. Hubungkan ke internet dan coba lagi.",
   "errorPackTooSlow": "Paket bahasa terlalu lama diterima. Koneksi internet Anda mungkin lemah. Coba lagi.",
-  "errorNoTextHint": "Pindai dan Impor membaca teks beraksara Latin. Untuk aksara lain, gunakan Ketik teks.",
+  "errorNoTextHint": "Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas.",
   "translatedFrom": "Diterjemahkan dari",
-  "scanLatinHint": "Pindai dan Impor membaca teks beraksara Latin. Untuk aksara lain, gunakan Ketik teks."
+  "scanLatinHint": "Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas."
 }

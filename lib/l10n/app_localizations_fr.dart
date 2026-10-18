@@ -191,7 +191,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get translatedFrom => 'Traduit de';
 
   @override
-  String get scanLatinHint => 'Le scan et l\'import lisent le texte en écriture latine. Pour toute autre écriture, utilisez Saisir du texte.';
+  String get scanLatinHint => 'Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l\'import fonctionnent mieux avec un texte net en écriture latine.';
 
   @override
   String get translateToLabel => 'Traduire en';
@@ -338,5 +338,5 @@ class AppLocalizationsFr extends AppLocalizations {
   String get errorPackTooSlow => 'La réception du pack de langue prend trop de temps. Votre connexion internet est peut-être faible. Réessayez.';
 
   @override
-  String get errorNoTextHint => 'Le scan et l\'import lisent le texte en écriture latine. Pour toute autre écriture, utilisez Saisir du texte.';
+  String get errorNoTextHint => 'Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l\'import fonctionnent mieux avec un texte net en écriture latine.';
 }

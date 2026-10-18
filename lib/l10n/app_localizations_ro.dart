@@ -191,7 +191,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get translatedFrom => 'Tradus din';
 
   @override
-  String get scanLatinHint => 'Scanarea și importul citesc text în alfabet latin. Pentru orice altă scriere, folosiți Introdu text.';
+  String get scanLatinHint => 'Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.';
 
   @override
   String get translateToLabel => 'Tradu în';
@@ -338,5 +338,5 @@ class AppLocalizationsRo extends AppLocalizations {
   String get errorPackTooSlow => 'Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou.';
 
   @override
-  String get errorNoTextHint => 'Scanarea și importul citesc text în alfabet latin. Pentru orice altă scriere, folosiți Introdu text.';
+  String get errorNoTextHint => 'Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.';
 }

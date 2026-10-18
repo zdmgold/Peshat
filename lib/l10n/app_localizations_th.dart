@@ -191,7 +191,7 @@ class AppLocalizationsTh extends AppLocalizations {
   String get translatedFrom => 'แปลจาก';
 
   @override
-  String get scanLatinHint => 'การสแกนและการนำเข้าอ่านข้อความอักษรละติน สำหรับอักษรอื่น ๆ ให้ใช้ “พิมพ์ข้อความ”';
+  String get scanLatinHint => 'เพื่อการแปลที่แม่นยำที่สุด ให้ใช้ “พิมพ์ข้อความ” การสแกนและการนำเข้าทำงานได้ดีที่สุดกับข้อความอักษรละตินที่ชัดเจน';
 
   @override
   String get translateToLabel => 'แปลเป็น';
@@ -338,5 +338,5 @@ class AppLocalizationsTh extends AppLocalizations {
   String get errorPackTooSlow => 'การรับแพ็กภาษาใช้เวลานานเกินไป การเชื่อมต่ออินเทอร์เน็ตของคุณอาจอ่อน ลองอีกครั้ง';
 
   @override
-  String get errorNoTextHint => 'การสแกนและการนำเข้าอ่านข้อความอักษรละติน สำหรับอักษรอื่น ๆ ให้ใช้ “พิมพ์ข้อความ”';
+  String get errorNoTextHint => 'เพื่อการแปลที่แม่นยำที่สุด ให้ใช้ “พิมพ์ข้อความ” การสแกนและการนำเข้าทำงานได้ดีที่สุดกับข้อความอักษรละตินที่ชัดเจน';
 }

@@ -191,7 +191,7 @@ class AppLocalizationsEn extends AppLocalizations {
   String get translatedFrom => 'Translated from';
 
   @override
-  String get scanLatinHint => 'Scan and Import read Latin-script text. For any other writing, use Type text.';
+  String get scanLatinHint => 'For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.';
 
   @override
   String get translateToLabel => 'Translate to';
@@ -338,5 +338,5 @@ class AppLocalizationsEn extends AppLocalizations {
   String get errorPackTooSlow => 'The language pack is taking too long to be received. Your internet connection may be weak. Try again.';
 
   @override
-  String get errorNoTextHint => 'Scan and Import read Latin-script text. For any other writing, use Type text.';
+  String get errorNoTextHint => 'For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.';
 }

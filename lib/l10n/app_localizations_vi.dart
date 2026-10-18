@@ -191,7 +191,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get translatedFrom => 'Đã dịch từ';
 
   @override
-  String get scanLatinHint => 'Quét và Nhập đọc văn bản chữ Latinh. Với các hệ chữ khác, hãy dùng Nhập văn bản.';
+  String get scanLatinHint => 'Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.';
 
   @override
   String get translateToLabel => 'Dịch sang';
@@ -338,5 +338,5 @@ class AppLocalizationsVi extends AppLocalizations {
   String get errorPackTooSlow => 'Việc nhận gói ngôn ngữ mất quá nhiều thời gian. Kết nối internet của bạn có thể yếu. Hãy thử lại.';
 
   @override
-  String get errorNoTextHint => 'Quét và Nhập đọc văn bản chữ Latinh. Với các hệ chữ khác, hãy dùng Nhập văn bản.';
+  String get errorNoTextHint => 'Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.';
 }

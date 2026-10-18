@@ -322,9 +322,10 @@ class _ScanScreenState extends State<ScanScreen> {
                         l10n.scanLatinHint,
                         textAlign: TextAlign.center,
                         style: AppTypography.chrome.copyWith(
-                          fontSize: 12,
+                          fontSize: 13,
                           height: 1.35,
-                          color: textTertiary,
+                          fontWeight: FontWeight.w500,
+                          color: textSecondary,
                         ),
                       ),
                     ),

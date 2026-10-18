@@ -191,7 +191,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get translatedFrom => 'Oversat fra';
 
   @override
-  String get scanLatinHint => 'Scan og Importér læser tekst med latinske bogstaver. Brug Skriv tekst til al anden skrift.';
+  String get scanLatinHint => 'Brug Skriv tekst for den mest nøjagtige oversættelse. Scan og Importér fungerer bedst med tydelig tekst med latinske bogstaver.';
 
   @override
   String get translateToLabel => 'Oversæt til';
@@ -338,5 +338,5 @@ class AppLocalizationsDa extends AppLocalizations {
   String get errorPackTooSlow => 'Det tager for lang tid at modtage sprogpakken. Din internetforbindelse kan være svag. Prøv igen.';
 
   @override
-  String get errorNoTextHint => 'Scan og Importér læser tekst med latinske bogstaver. Brug Skriv tekst til al anden skrift.';
+  String get errorNoTextHint => 'Brug Skriv tekst for den mest nøjagtige oversættelse. Scan og Importér fungerer bedst med tydelig tekst med latinske bogstaver.';
 }

@@ -191,7 +191,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get translatedFrom => 'תורגם מ';
 
   @override
-  String get scanLatinHint => 'סריקה וייבוא קוראים טקסט באותיות לטיניות. לכל כתב אחר השתמשו ב״הקלדת טקסט״.';
+  String get scanLatinHint => 'לתרגום המדויק ביותר השתמשו ב״הקלדת טקסט״. סריקה וייבוא עובדים הכי טוב עם טקסט ברור באותיות לטיניות.';
 
   @override
   String get translateToLabel => 'תרגם ל';
@@ -338,5 +338,5 @@ class AppLocalizationsHe extends AppLocalizations {
   String get errorPackTooSlow => 'קבלת חבילת השפה אורכת זמן רב מדי. ייתכן שחיבור האינטרנט שלך חלש. נסה שוב.';
 
   @override
-  String get errorNoTextHint => 'סריקה וייבוא קוראים טקסט באותיות לטיניות. לכל כתב אחר השתמשו ב״הקלדת טקסט״.';
+  String get errorNoTextHint => 'לתרגום המדויק ביותר השתמשו ב״הקלדת טקסט״. סריקה וייבוא עובדים הכי טוב עם טקסט ברור באותיות לטיניות.';
 }

@@ -191,7 +191,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get translatedFrom => 'Översatt från';
 
   @override
-  String get scanLatinHint => 'Skanna och Importera läser text med latinska bokstäver. Använd Skriv text för all annan skrift.';
+  String get scanLatinHint => 'Använd Skriv text för den mest exakta översättningen. Skanna och Importera fungerar bäst med tydlig text med latinska bokstäver.';
 
   @override
   String get translateToLabel => 'Översätt till';
@@ -338,5 +338,5 @@ class AppLocalizationsSv extends AppLocalizations {
   String get errorPackTooSlow => 'Det tar för lång tid att ta emot språkpaketet. Din internetanslutning kan vara svag. Försök igen.';
 
   @override
-  String get errorNoTextHint => 'Skanna och Importera läser text med latinska bokstäver. Använd Skriv text för all annan skrift.';
+  String get errorNoTextHint => 'Använd Skriv text för den mest exakta översättningen. Skanna och Importera fungerar bäst med tydlig text med latinska bokstäver.';
 }

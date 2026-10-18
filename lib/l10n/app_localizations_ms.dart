@@ -191,7 +191,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get translatedFrom => 'Diterjemahkan daripada';
 
   @override
-  String get scanLatinHint => 'Imbas dan Import membaca teks dalam tulisan Latin. Untuk tulisan lain, gunakan Taip teks.';
+  String get scanLatinHint => 'Untuk terjemahan paling tepat, gunakan Taip teks. Imbas dan Import berfungsi paling baik dengan teks tulisan Latin yang jelas.';
 
   @override
   String get translateToLabel => 'Terjemah ke';
@@ -338,5 +338,5 @@ class AppLocalizationsMs extends AppLocalizations {
   String get errorPackTooSlow => 'Pakej bahasa mengambil masa terlalu lama untuk diterima. Sambungan internet anda mungkin lemah. Cuba lagi.';
 
   @override
-  String get errorNoTextHint => 'Imbas dan Import membaca teks dalam tulisan Latin. Untuk tulisan lain, gunakan Taip teks.';
+  String get errorNoTextHint => 'Untuk terjemahan paling tepat, gunakan Taip teks. Imbas dan Import berfungsi paling baik dengan teks tulisan Latin yang jelas.';
 }

@@ -550,7 +550,7 @@ abstract class AppLocalizations {
   /// No description provided for @scanLatinHint.
   ///
   /// In en, this message translates to:
-  /// **'Scan and Import read Latin-script text. For any other writing, use Type text.'**
+  /// **'For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.'**
   String get scanLatinHint;
 
   /// No description provided for @translateToLabel.
@@ -844,7 +844,7 @@ abstract class AppLocalizations {
   /// No description provided for @errorNoTextHint.
   ///
   /// In en, this message translates to:
-  /// **'Scan and Import read Latin-script text. For any other writing, use Type text.'**
+  /// **'For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.'**
   String get errorNoTextHint;
 }
 

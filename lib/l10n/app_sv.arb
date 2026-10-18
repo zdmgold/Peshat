@@ -107,7 +107,7 @@
   "packReceivedTitle": "Paketet har tagits emot",
   "errorOfflinePackNeeded": "Ingen internetanslutning. Det här språket behöver ett paket som tas emot en gång. Anslut till internet och försök igen.",
   "errorPackTooSlow": "Det tar för lång tid att ta emot språkpaketet. Din internetanslutning kan vara svag. Försök igen.",
-  "errorNoTextHint": "Skanna och Importera läser text med latinska bokstäver. Använd Skriv text för all annan skrift.",
+  "errorNoTextHint": "Använd Skriv text för den mest exakta översättningen. Skanna och Importera fungerar bäst med tydlig text med latinska bokstäver.",
   "translatedFrom": "Översatt från",
-  "scanLatinHint": "Skanna och Importera läser text med latinska bokstäver. Använd Skriv text för all annan skrift."
+  "scanLatinHint": "Använd Skriv text för den mest exakta översättningen. Skanna och Importera fungerar bäst med tydlig text med latinska bokstäver."
 }

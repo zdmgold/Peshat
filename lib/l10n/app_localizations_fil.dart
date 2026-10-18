@@ -191,7 +191,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get translatedFrom => 'Isinalin mula sa';
 
   @override
-  String get scanLatinHint => 'Binabasa ng Scan at Import ang teksto sa Latin na script. Para sa ibang script, gamitin ang I-type ang teksto.';
+  String get scanLatinHint => 'Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.';
 
   @override
   String get translateToLabel => 'Isalin sa';
@@ -338,5 +338,5 @@ class AppLocalizationsFil extends AppLocalizations {
   String get errorPackTooSlow => 'Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli.';
 
   @override
-  String get errorNoTextHint => 'Binabasa ng Scan at Import ang teksto sa Latin na script. Para sa ibang script, gamitin ang I-type ang teksto.';
+  String get errorNoTextHint => 'Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.';
 }

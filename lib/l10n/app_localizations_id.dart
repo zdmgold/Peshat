@@ -191,7 +191,7 @@ class AppLocalizationsId extends AppLocalizations {
   String get translatedFrom => 'Diterjemahkan dari';
 
   @override
-  String get scanLatinHint => 'Pindai dan Impor membaca teks beraksara Latin. Untuk aksara lain, gunakan Ketik teks.';
+  String get scanLatinHint => 'Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas.';
 
   @override
   String get translateToLabel => 'Terjemahkan ke';
@@ -338,5 +338,5 @@ class AppLocalizationsId extends AppLocalizations {
   String get errorPackTooSlow => 'Paket bahasa terlalu lama diterima. Koneksi internet Anda mungkin lemah. Coba lagi.';
 
   @override
-  String get errorNoTextHint => 'Pindai dan Impor membaca teks beraksara Latin. Untuk aksara lain, gunakan Ketik teks.';
+  String get errorNoTextHint => 'Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas.';
 }

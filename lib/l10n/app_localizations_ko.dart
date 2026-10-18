@@ -191,7 +191,7 @@ class AppLocalizationsKo extends AppLocalizations {
   String get translatedFrom => '원본 언어';
 
   @override
-  String get scanLatinHint => '스캔과 가져오기는 로마자 텍스트를 읽습니다. 다른 문자는 “텍스트 입력”을 사용하세요.';
+  String get scanLatinHint => '가장 정확한 번역을 원하면 “텍스트 입력”을 사용하세요. 스캔과 가져오기는 선명한 로마자 텍스트에서 가장 잘 작동합니다.';
 
   @override
   String get translateToLabel => '번역 대상';
@@ -338,5 +338,5 @@ class AppLocalizationsKo extends AppLocalizations {
   String get errorPackTooSlow => '언어 팩을 받는 데 시간이 너무 오래 걸립니다. 인터넷 연결이 약할 수 있습니다. 다시 시도하세요.';
 
   @override
-  String get errorNoTextHint => '스캔과 가져오기는 로마자 텍스트를 읽습니다. 다른 문자는 “텍스트 입력”을 사용하세요.';
+  String get errorNoTextHint => '가장 정확한 번역을 원하면 “텍스트 입력”을 사용하세요. 스캔과 가져오기는 선명한 로마자 텍스트에서 가장 잘 작동합니다.';
 }

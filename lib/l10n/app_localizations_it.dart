@@ -191,7 +191,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get translatedFrom => 'Tradotto da';
 
   @override
-  String get scanLatinHint => 'Scansione e Importazione leggono testo in alfabeto latino. Per qualsiasi altra scrittura usa Digita testo.';
+  String get scanLatinHint => 'Per la traduzione più accurata usa Digita testo. Scansione e Importazione funzionano meglio con testo chiaro in alfabeto latino.';
 
   @override
   String get translateToLabel => 'Traduci in';
@@ -338,5 +338,5 @@ class AppLocalizationsIt extends AppLocalizations {
   String get errorPackTooSlow => 'La ricezione del pacchetto lingua richiede troppo tempo. La connessione a internet potrebbe essere debole. Riprova.';
 
   @override
-  String get errorNoTextHint => 'Scansione e Importazione leggono testo in alfabeto latino. Per qualsiasi altra scrittura usa Digita testo.';
+  String get errorNoTextHint => 'Per la traduzione più accurata usa Digita testo. Scansione e Importazione funzionano meglio con testo chiaro in alfabeto latino.';
 }

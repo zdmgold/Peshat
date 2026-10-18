@@ -191,7 +191,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get translatedFrom => 'ແປຈາກ';
 
   @override
-  String get scanLatinHint => 'ການສະແກນ ແລະ ນຳເຂົ້າ ອ່ານຂໍ້ຄວາມອັກສອນລາຕິນ. ສຳລັບຕົວອັກສອນອື່ນ ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ».';
+  String get scanLatinHint => 'ເພື່ອການແປທີ່ຖືກຕ້ອງທີ່ສຸດ ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ». ການສະແກນ ແລະ ນຳເຂົ້າ ເຮັດວຽກໄດ້ດີທີ່ສຸດກັບຂໍ້ຄວາມອັກສອນລາຕິນທີ່ຊັດເຈນ.';
 
   @override
   String get translateToLabel => 'ແປເປັນ';
@@ -338,5 +338,5 @@ class AppLocalizationsLo extends AppLocalizations {
   String get errorPackTooSlow => 'ແພັກພາສາໃຊ້ເວລາຮັບດົນເກີນໄປ. ການເຊື່ອມຕໍ່ອິນເຕີເນັດຂອງທ່ານອາດຈະອ່ອນ. ລອງໃໝ່.';
 
   @override
-  String get errorNoTextHint => 'ການສະແກນ ແລະ ນຳເຂົ້າ ອ່ານຂໍ້ຄວາມອັກສອນລາຕິນ. ສຳລັບຕົວອັກສອນອື່ນ ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ».';
+  String get errorNoTextHint => 'ເພື່ອການແປທີ່ຖືກຕ້ອງທີ່ສຸດ ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ». ການສະແກນ ແລະ ນຳເຂົ້າ ເຮັດວຽກໄດ້ດີທີ່ສຸດກັບຂໍ້ຄວາມອັກສອນລາຕິນທີ່ຊັດເຈນ.';
 }

@@ -191,7 +191,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get translatedFrom => 'جس زبان سے ترجمہ کیا گیا';
 
   @override
-  String get scanLatinHint => 'اسکین اور امپورٹ لاطینی رسم الخط کا متن پڑھتے ہیں۔ کسی اور رسم الخط کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔';
+  String get scanLatinHint => 'سب سے درست ترجمے کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔ اسکین اور امپورٹ واضح لاطینی رسم الخط کے متن کے ساتھ بہترین کام کرتے ہیں۔';
 
   @override
   String get translateToLabel => 'پر ترجمہ کریں';
@@ -338,5 +338,5 @@ class AppLocalizationsUr extends AppLocalizations {
   String get errorPackTooSlow => 'زبان کا پیک موصول ہونے میں بہت وقت لگ رہا ہے۔ ہو سکتا ہے آپ کا انٹرنیٹ کنکشن کمزور ہو۔ دوبارہ کوشش کریں۔';
 
   @override
-  String get errorNoTextHint => 'اسکین اور امپورٹ لاطینی رسم الخط کا متن پڑھتے ہیں۔ کسی اور رسم الخط کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔';
+  String get errorNoTextHint => 'سب سے درست ترجمے کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔ اسکین اور امپورٹ واضح لاطینی رسم الخط کے متن کے ساتھ بہترین کام کرتے ہیں۔';
 }

@@ -107,7 +107,7 @@
   "packReceivedTitle": "Natanggap na ang pack",
   "errorOfflinePackNeeded": "Walang koneksyon sa internet. Kailangan ng wikang ito ng pack na isang beses lang tatanggapin. Kumonekta sa internet at subukan muli.",
   "errorPackTooSlow": "Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli.",
-  "errorNoTextHint": "Binabasa ng Scan at Import ang teksto sa Latin na script. Para sa ibang script, gamitin ang I-type ang teksto.",
+  "errorNoTextHint": "Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.",
   "translatedFrom": "Isinalin mula sa",
-  "scanLatinHint": "Binabasa ng Scan at Import ang teksto sa Latin na script. Para sa ibang script, gamitin ang I-type ang teksto."
+  "scanLatinHint": "Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script."
 }

@@ -191,7 +191,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get translatedFrom => 'පරිවර්තනය කළ භාෂාව';
 
   @override
-  String get scanLatinHint => 'ස්කෑන් සහ ආනයනය ලතින් අක්ෂරවලින් ලියූ පෙළ කියවයි. වෙනත් ඕනෑම අක්ෂර මාලාවකට “පෙළ ටයිප් කරන්න” භාවිත කරන්න.';
+  String get scanLatinHint => 'වඩාත්ම නිවැරදි පරිවර්තනය සඳහා “පෙළ ටයිප් කරන්න” භාවිත කරන්න. ස්කෑන් සහ ආනයනය හොඳම ක්‍රියා කරන්නේ පැහැදිලි ලතින් අක්ෂර පෙළ සමඟයි.';
 
   @override
   String get translateToLabel => 'මෙයට පරිවර්තනය කරන්න';
@@ -338,5 +338,5 @@ class AppLocalizationsSi extends AppLocalizations {
   String get errorPackTooSlow => 'භාෂා පැකේජය ලැබීමට වැඩි කාලයක් ගත වේ. ඔබේ අන්තර්ජාල සම්බන්ධතාව දුර්වල විය හැක. නැවත උත්සාහ කරන්න.';
 
   @override
-  String get errorNoTextHint => 'ස්කෑන් සහ ආනයනය ලතින් අක්ෂරවලින් ලියූ පෙළ කියවයි. වෙනත් ඕනෑම අක්ෂර මාලාවකට “පෙළ ටයිප් කරන්න” භාවිත කරන්න.';
+  String get errorNoTextHint => 'වඩාත්ම නිවැරදි පරිවර්තනය සඳහා “පෙළ ටයිප් කරන්න” භාවිත කරන්න. ස්කෑන් සහ ආනයනය හොඳම ක්‍රියා කරන්නේ පැහැදිලි ලතින් අක්ෂර පෙළ සමඟයි.';
 }

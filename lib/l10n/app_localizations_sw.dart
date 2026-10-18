@@ -191,7 +191,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get translatedFrom => 'Imetafsiriwa kutoka';
 
   @override
-  String get scanLatinHint => 'Changanua na Leta husoma maandishi ya herufi za Kilatini. Kwa maandishi mengine yoyote, tumia Andika maandishi.';
+  String get scanLatinHint => 'Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini.';
 
   @override
   String get translateToLabel => 'Tafsiri kwa';
@@ -338,5 +338,5 @@ class AppLocalizationsSw extends AppLocalizations {
   String get errorPackTooSlow => 'Kifurushi cha lugha kinachukua muda mrefu sana kupokelewa. Muunganisho wako wa intaneti unaweza kuwa dhaifu. Jaribu tena.';
 
   @override
-  String get errorNoTextHint => 'Changanua na Leta husoma maandishi ya herufi za Kilatini. Kwa maandishi mengine yoyote, tumia Andika maandishi.';
+  String get errorNoTextHint => 'Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini.';
 }

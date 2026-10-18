@@ -191,7 +191,7 @@ class AppLocalizationsJa extends AppLocalizations {
   String get translatedFrom => '翻訳元';
 
   @override
-  String get scanLatinHint => 'スキャンとインポートはラテン文字のテキストを読み取ります。それ以外の文字には「テキストを入力」をご利用ください。';
+  String get scanLatinHint => '最も正確に翻訳するには「テキストを入力」をご利用ください。スキャンとインポートは、鮮明なラテン文字のテキストで最も効果的です。';
 
   @override
   String get translateToLabel => '翻訳先';
@@ -338,5 +338,5 @@ class AppLocalizationsJa extends AppLocalizations {
   String get errorPackTooSlow => '言語パックの受信に時間がかかっています。インターネット接続が弱い可能性があります。もう一度お試しください。';
 
   @override
-  String get errorNoTextHint => 'スキャンとインポートはラテン文字のテキストを読み取ります。それ以外の文字には「テキストを入力」をご利用ください。';
+  String get errorNoTextHint => '最も正確に翻訳するには「テキストを入力」をご利用ください。スキャンとインポートは、鮮明なラテン文字のテキストで最も効果的です。';
 }

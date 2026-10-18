@@ -191,7 +191,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get translatedFrom => 'Kaynak dil';
 
   @override
-  String get scanLatinHint => 'Tarama ve İçe Aktarma Latin harfli metni okur. Diğer yazı sistemleri için Metin yaz seçeneğini kullanın.';
+  String get scanLatinHint => 'En doğru çeviri için Metin yaz seçeneğini kullanın. Tarama ve İçe Aktarma, net Latin harfli metinlerle en iyi sonucu verir.';
 
   @override
   String get translateToLabel => 'Şuna çevir';
@@ -338,5 +338,5 @@ class AppLocalizationsTr extends AppLocalizations {
   String get errorPackTooSlow => 'Dil paketinin alınması çok uzun sürüyor. İnternet bağlantınız zayıf olabilir. Tekrar deneyin.';
 
   @override
-  String get errorNoTextHint => 'Tarama ve İçe Aktarma Latin harfli metni okur. Diğer yazı sistemleri için Metin yaz seçeneğini kullanın.';
+  String get errorNoTextHint => 'En doğru çeviri için Metin yaz seçeneğini kullanın. Tarama ve İçe Aktarma, net Latin harfli metinlerle en iyi sonucu verir.';
 }

@@ -191,7 +191,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get translatedFrom => 'ਇਸ ਤੋਂ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ';
 
   @override
-  String get scanLatinHint => 'ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਲੈਟਿਨ ਲਿਪੀ ਦਾ ਪਾਠ ਪੜ੍ਹਦੇ ਹਨ। ਹੋਰ ਕਿਸੇ ਵੀ ਲਿਪੀ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ।';
+  String get scanLatinHint => 'ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ। ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਸਾਫ਼ ਲੈਟਿਨ ਲਿਪੀ ਦੇ ਪਾਠ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦੇ ਹਨ।';
 
   @override
   String get translateToLabel => 'ਇਸ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ';
@@ -338,5 +338,5 @@ class AppLocalizationsPa extends AppLocalizations {
   String get errorPackTooSlow => 'ਭਾਸ਼ਾ ਪੈਕ ਪ੍ਰਾਪਤ ਹੋਣ ਵਿੱਚ ਬਹੁਤ ਸਮਾਂ ਲੱਗ ਰਿਹਾ ਹੈ। ਤੁਹਾਡਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਕਮਜ਼ੋਰ ਹੋ ਸਕਦਾ ਹੈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
 
   @override
-  String get errorNoTextHint => 'ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਲੈਟਿਨ ਲਿਪੀ ਦਾ ਪਾਠ ਪੜ੍ਹਦੇ ਹਨ। ਹੋਰ ਕਿਸੇ ਵੀ ਲਿਪੀ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ।';
+  String get errorNoTextHint => 'ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ। ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਸਾਫ਼ ਲੈਟਿਨ ਲਿਪੀ ਦੇ ਪਾਠ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦੇ ਹਨ।';
 }

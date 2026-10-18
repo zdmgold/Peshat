@@ -191,7 +191,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get translatedFrom => 'បកប្រែពី';
 
   @override
-  String get scanLatinHint => 'ការស្កេន និងការនាំចូលអានអត្ថបទអក្សរឡាតាំង។ សម្រាប់អក្សរផ្សេងទៀត សូមប្រើ «វាយអត្ថបទ»។';
+  String get scanLatinHint => 'សម្រាប់ការបកប្រែដែលត្រឹមត្រូវបំផុត សូមប្រើ «វាយអត្ថបទ»។ ការស្កេន និងការនាំចូលដំណើរការល្អបំផុតជាមួយអត្ថបទអក្សរឡាតាំងច្បាស់។';
 
   @override
   String get translateToLabel => 'បកប្រែទៅ';
@@ -338,5 +338,5 @@ class AppLocalizationsKm extends AppLocalizations {
   String get errorPackTooSlow => 'កញ្ចប់ភាសាកំពុងចំណាយពេលយូរពេកក្នុងការទទួល។ ការតភ្ជាប់អ៊ីនធឺណិតរបស់អ្នកប្រហែលជាខ្សោយ។ សូមសាកល្បងម្តងទៀត។';
 
   @override
-  String get errorNoTextHint => 'ការស្កេន និងការនាំចូលអានអត្ថបទអក្សរឡាតាំង។ សម្រាប់អក្សរផ្សេងទៀត សូមប្រើ «វាយអត្ថបទ»។';
+  String get errorNoTextHint => 'សម្រាប់ការបកប្រែដែលត្រឹមត្រូវបំផុត សូមប្រើ «វាយអត្ថបទ»។ ការស្កេន និងការនាំចូលដំណើរការល្អបំផុតជាមួយអត្ថបទអក្សរឡាតាំងច្បាស់។';
 }

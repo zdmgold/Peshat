@@ -107,7 +107,7 @@
   "packReceivedTitle": "Pakket ontvangen",
   "errorOfflinePackNeeded": "Geen internetverbinding. Voor deze taal moet eenmalig een pakket worden ontvangen. Maak verbinding met internet en probeer het opnieuw.",
   "errorPackTooSlow": "Het ontvangen van het taalpakket duurt te lang. Je internetverbinding is mogelijk zwak. Probeer het opnieuw.",
-  "errorNoTextHint": "Scannen en Importeren lezen tekst in Latijns schrift. Gebruik voor elk ander schrift Tekst typen.",
+  "errorNoTextHint": "Gebruik Tekst typen voor de nauwkeurigste vertaling. Scannen en Importeren werken het best met duidelijke tekst in Latijns schrift.",
   "translatedFrom": "Vertaald uit",
-  "scanLatinHint": "Scannen en Importeren lezen tekst in Latijns schrift. Gebruik voor elk ander schrift Tekst typen."
+  "scanLatinHint": "Gebruik Tekst typen voor de nauwkeurigste vertaling. Scannen en Importeren werken het best met duidelijke tekst in Latijns schrift."
 }

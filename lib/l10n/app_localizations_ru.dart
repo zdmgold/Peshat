@@ -191,7 +191,7 @@ class AppLocalizationsRu extends AppLocalizations {
   String get translatedFrom => 'Переведено с';
 
   @override
-  String get scanLatinHint => 'Сканирование и импорт читают текст на латинице. Для любой другой письменности используйте «Ввести текст».';
+  String get scanLatinHint => 'Для самого точного перевода используйте «Ввести текст». Сканирование и импорт лучше всего работают с чётким текстом на латинице.';
 
   @override
   String get translateToLabel => 'Перевести на';
@@ -338,5 +338,5 @@ class AppLocalizationsRu extends AppLocalizations {
   String get errorPackTooSlow => 'Получение языкового пакета занимает слишком много времени. Возможно, у вас слабое подключение к интернету. Повторите попытку.';
 
   @override
-  String get errorNoTextHint => 'Сканирование и импорт читают текст на латинице. Для любой другой письменности используйте «Ввести текст».';
+  String get errorNoTextHint => 'Для самого точного перевода используйте «Ввести текст». Сканирование и импорт лучше всего работают с чётким текстом на латинице.';
 }

@@ -191,7 +191,7 @@ class AppLocalizationsGu extends AppLocalizations {
   String get translatedFrom => 'આમાંથી અનુવાદિત';
 
   @override
-  String get scanLatinHint => 'સ્કેન અને ઇમ્પોર્ટ લેટિન લિપિનું લખાણ વાંચે છે. અન્ય કોઈપણ લિપિ માટે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો.';
+  String get scanLatinHint => 'સૌથી સચોટ અનુવાદ માટે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો. સ્કેન અને ઇમ્પોર્ટ સ્પષ્ટ લેટિન લિપિના લખાણ સાથે શ્રેષ્ઠ કામ કરે છે.';
 
   @override
   String get translateToLabel => 'આમાં અનુવાદ કરો';
@@ -338,5 +338,5 @@ class AppLocalizationsGu extends AppLocalizations {
   String get errorPackTooSlow => 'ભાષા પૅક પ્રાપ્ત થવામાં ઘણો સમય લાગી રહ્યો છે. તમારું ઇન્ટરનેટ કનેક્શન નબળું હોઈ શકે. ફરી પ્રયાસ કરો.';
 
   @override
-  String get errorNoTextHint => 'સ્કેન અને ઇમ્પોર્ટ લેટિન લિપિનું લખાણ વાંચે છે. અન્ય કોઈપણ લિપિ માટે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો.';
+  String get errorNoTextHint => 'સૌથી સચોટ અનુવાદ માટે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો. સ્કેન અને ઇમ્પોર્ટ સ્પષ્ટ લેટિન લિપિના લખાણ સાથે શ્રેષ્ઠ કામ કરે છે.';
 }

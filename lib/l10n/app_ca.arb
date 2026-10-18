@@ -107,7 +107,7 @@
   "packReceivedTitle": "Paquet rebut",
   "errorOfflinePackNeeded": "No hi ha connexió a internet. Aquest idioma necessita rebre un paquet una sola vegada. Connecta't a internet i torna-ho a provar.",
   "errorPackTooSlow": "El paquet d'idioma triga massa a rebre's. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.",
-  "errorNoTextHint": "L'escaneig i la importació llegeixen text en alfabet llatí. Per a qualsevol altra escriptura, feu servir Escriu text.",
+  "errorNoTextHint": "Per a la traducció més precisa, feu servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí.",
   "translatedFrom": "Traduït des de",
-  "scanLatinHint": "L'escaneig i la importació llegeixen text en alfabet llatí. Per a qualsevol altra escriptura, feu servir Escriu text."
+  "scanLatinHint": "Per a la traducció més precisa, feu servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí."
 }

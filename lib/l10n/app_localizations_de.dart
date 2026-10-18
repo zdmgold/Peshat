@@ -191,7 +191,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get translatedFrom => 'Übersetzt von';
 
   @override
-  String get scanLatinHint => 'Scannen und Importieren lesen Text in lateinischer Schrift. Für jede andere Schrift nutze Text eingeben.';
+  String get scanLatinHint => 'Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift.';
 
   @override
   String get translateToLabel => 'Übersetzen nach';
@@ -338,5 +338,5 @@ class AppLocalizationsDe extends AppLocalizations {
   String get errorPackTooSlow => 'Das Empfangen des Sprachpakets dauert zu lange. Deine Internetverbindung ist möglicherweise schwach. Versuche es erneut.';
 
   @override
-  String get errorNoTextHint => 'Scannen und Importieren lesen Text in lateinischer Schrift. Für jede andere Schrift nutze Text eingeben.';
+  String get errorNoTextHint => 'Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift.';
 }

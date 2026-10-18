@@ -191,7 +191,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get translatedFrom => 'Forrásnyelv';
 
   @override
-  String get scanLatinHint => 'A beolvasás és az importálás latin betűs szöveget olvas. Minden más írásrendszerhez használd a Szöveg beírása lehetőséget.';
+  String get scanLatinHint => 'A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.';
 
   @override
   String get translateToLabel => 'Fordítás erre';
@@ -338,5 +338,5 @@ class AppLocalizationsHu extends AppLocalizations {
   String get errorPackTooSlow => 'A nyelvi csomag fogadása túl sokáig tart. Lehet, hogy gyenge az internetkapcsolata. Próbálja újra.';
 
   @override
-  String get errorNoTextHint => 'A beolvasás és az importálás latin betűs szöveget olvas. Minden más írásrendszerhez használd a Szöveg beírása lehetőséget.';
+  String get errorNoTextHint => 'A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.';
 }

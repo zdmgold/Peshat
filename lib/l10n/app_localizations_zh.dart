@@ -191,7 +191,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get translatedFrom => '翻译自';
 
   @override
-  String get scanLatinHint => '扫描和导入可识别拉丁字母文本。其他文字请使用“输入文本”。';
+  String get scanLatinHint => '如需最准确的翻译，请使用“输入文本”。扫描和导入对清晰的拉丁字母文本效果最佳。';
 
   @override
   String get translateToLabel => '翻译为';
@@ -338,5 +338,5 @@ class AppLocalizationsZh extends AppLocalizations {
   String get errorPackTooSlow => '接收语言包耗时过长。您的网络连接可能较弱。请重试。';
 
   @override
-  String get errorNoTextHint => '扫描和导入可识别拉丁字母文本。其他文字请使用“输入文本”。';
+  String get errorNoTextHint => '如需最准确的翻译，请使用“输入文本”。扫描和导入对清晰的拉丁字母文本效果最佳。';
 }

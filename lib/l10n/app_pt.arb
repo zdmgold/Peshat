@@ -107,7 +107,7 @@
   "packReceivedTitle": "Pacote recebido",
   "errorOfflinePackNeeded": "Sem conexão com a internet. Este idioma precisa que um pacote seja recebido uma única vez. Conecte-se à internet e tente novamente.",
   "errorPackTooSlow": "O pacote de idioma está demorando demais para ser recebido. Sua conexão com a internet pode estar fraca. Tente novamente.",
-  "errorNoTextHint": "Digitalizar e Importar leem texto em alfabeto latino. Para qualquer outra escrita, use Digitar texto.",
+  "errorNoTextHint": "Para a tradução mais precisa, use Digitar texto. Digitalizar e Importar funcionam melhor com texto nítido em alfabeto latino.",
   "translatedFrom": "Traduzido de",
-  "scanLatinHint": "Digitalizar e Importar leem texto em alfabeto latino. Para qualquer outra escrita, use Digitar texto."
+  "scanLatinHint": "Para a tradução mais precisa, use Digitar texto. Digitalizar e Importar funcionam melhor com texto nítido em alfabeto latino."
 }

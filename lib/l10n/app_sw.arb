@@ -107,7 +107,7 @@
   "packReceivedTitle": "Kifurushi kimepokelewa",
   "errorOfflinePackNeeded": "Hakuna muunganisho wa intaneti. Lugha hii inahitaji kifurushi kinachopokelewa mara moja. Unganisha kwenye intaneti kisha ujaribu tena.",
   "errorPackTooSlow": "Kifurushi cha lugha kinachukua muda mrefu sana kupokelewa. Muunganisho wako wa intaneti unaweza kuwa dhaifu. Jaribu tena.",
-  "errorNoTextHint": "Changanua na Leta husoma maandishi ya herufi za Kilatini. Kwa maandishi mengine yoyote, tumia Andika maandishi.",
+  "errorNoTextHint": "Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini.",
   "translatedFrom": "Imetafsiriwa kutoka",
-  "scanLatinHint": "Changanua na Leta husoma maandishi ya herufi za Kilatini. Kwa maandishi mengine yoyote, tumia Andika maandishi."
+  "scanLatinHint": "Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini."
 }

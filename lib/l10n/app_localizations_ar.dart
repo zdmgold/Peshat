@@ -191,7 +191,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get translatedFrom => 'تمت الترجمة من';
 
   @override
-  String get scanLatinHint => 'يقرأ المسح والاستيراد النصوص بالأحرف اللاتينية. لأي كتابة أخرى استخدم «كتابة نص».';
+  String get scanLatinHint => 'للحصول على ترجمة أدق، استخدم «كتابة نص». يعمل المسح والاستيراد بأفضل شكل مع نص واضح بالأحرف اللاتينية.';
 
   @override
   String get translateToLabel => 'ترجم إلى';
@@ -338,5 +338,5 @@ class AppLocalizationsAr extends AppLocalizations {
   String get errorPackTooSlow => 'يستغرق استلام حزمة اللغة وقتًا طويلًا. قد يكون اتصالك بالإنترنت ضعيفًا. حاول مرة أخرى.';
 
   @override
-  String get errorNoTextHint => 'يقرأ المسح والاستيراد النصوص بالأحرف اللاتينية. لأي كتابة أخرى استخدم «كتابة نص».';
+  String get errorNoTextHint => 'للحصول على ترجمة أدق، استخدم «كتابة نص». يعمل المسح والاستيراد بأفضل شكل مع نص واضح بالأحرف اللاتينية.';
 }

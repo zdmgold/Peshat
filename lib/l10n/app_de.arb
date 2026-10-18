@@ -107,7 +107,7 @@
   "packReceivedTitle": "Paket empfangen",
   "errorOfflinePackNeeded": "Keine Internetverbindung. Für diese Sprache muss einmalig ein Paket empfangen werden. Stelle eine Internetverbindung her und versuche es erneut.",
   "errorPackTooSlow": "Das Empfangen des Sprachpakets dauert zu lange. Deine Internetverbindung ist möglicherweise schwach. Versuche es erneut.",
-  "errorNoTextHint": "Scannen und Importieren lesen Text in lateinischer Schrift. Für jede andere Schrift nutze Text eingeben.",
+  "errorNoTextHint": "Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift.",
   "translatedFrom": "Übersetzt von",
-  "scanLatinHint": "Scannen und Importieren lesen Text in lateinischer Schrift. Für jede andere Schrift nutze Text eingeben."
+  "scanLatinHint": "Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift."
 }

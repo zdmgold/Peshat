@@ -191,7 +191,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get translatedFrom => 'Traducido de';
 
   @override
-  String get scanLatinHint => 'Escanear e Importar leen texto en alfabeto latino. Para cualquier otra escritura, usa Escribir texto.';
+  String get scanLatinHint => 'Para una traducción más precisa, usa Escribir texto. Escanear e Importar funcionan mejor con texto claro en alfabeto latino.';
 
   @override
   String get translateToLabel => 'Traducir a';
@@ -338,5 +338,5 @@ class AppLocalizationsEs extends AppLocalizations {
   String get errorPackTooSlow => 'El paquete de idioma tarda demasiado en recibirse. Es posible que tu conexión a internet sea débil. Inténtalo de nuevo.';
 
   @override
-  String get errorNoTextHint => 'Escanear e Importar leen texto en alfabeto latino. Para cualquier otra escritura, usa Escribir texto.';
+  String get errorNoTextHint => 'Para una traducción más precisa, usa Escribir texto. Escanear e Importar funcionan mejor con texto claro en alfabeto latino.';
 }

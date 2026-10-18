@@ -107,7 +107,7 @@
   "packReceivedTitle": "Pakke modtaget",
   "errorOfflinePackNeeded": "Ingen internetforbindelse. Dette sprog kræver, at en pakke modtages én gang. Opret forbindelse til internettet, og prøv igen.",
   "errorPackTooSlow": "Det tager for lang tid at modtage sprogpakken. Din internetforbindelse kan være svag. Prøv igen.",
-  "errorNoTextHint": "Scan og Importér læser tekst med latinske bogstaver. Brug Skriv tekst til al anden skrift.",
+  "errorNoTextHint": "Brug Skriv tekst for den mest nøjagtige oversættelse. Scan og Importér fungerer bedst med tydelig tekst med latinske bogstaver.",
   "translatedFrom": "Oversat fra",
-  "scanLatinHint": "Scan og Importér læser tekst med latinske bogstaver. Brug Skriv tekst til al anden skrift."
+  "scanLatinHint": "Brug Skriv tekst for den mest nøjagtige oversættelse. Scan og Importér fungerer bedst med tydelig tekst med latinske bogstaver."
 }

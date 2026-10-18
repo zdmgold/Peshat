@@ -191,7 +191,7 @@ class AppLocalizationsCa extends AppLocalizations {
   String get translatedFrom => 'Traduït des de';
 
   @override
-  String get scanLatinHint => 'L\'escaneig i la importació llegeixen text en alfabet llatí. Per a qualsevol altra escriptura, feu servir Escriu text.';
+  String get scanLatinHint => 'Per a la traducció més precisa, feu servir Escriu text. L\'escaneig i la importació funcionen millor amb text clar en alfabet llatí.';
 
   @override
   String get translateToLabel => 'Tradueix a';
@@ -338,5 +338,5 @@ class AppLocalizationsCa extends AppLocalizations {
   String get errorPackTooSlow => 'El paquet d\'idioma triga massa a rebre\'s. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.';
 
   @override
-  String get errorNoTextHint => 'L\'escaneig i la importació llegeixen text en alfabet llatí. Per a qualsevol altra escriptura, feu servir Escriu text.';
+  String get errorNoTextHint => 'Per a la traducció més precisa, feu servir Escriu text. L\'escaneig i la importació funcionen millor amb text clar en alfabet llatí.';
 }

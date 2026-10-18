@@ -191,7 +191,7 @@ class AppLocalizationsNo extends AppLocalizations {
   String get translatedFrom => 'Oversatt fra';
 
   @override
-  String get scanLatinHint => 'Skann og Importer leser tekst med latinske bokstaver. Bruk Skriv tekst for all annen skrift.';
+  String get scanLatinHint => 'Bruk Skriv tekst for den mest nøyaktige oversettelsen. Skann og Importer fungerer best med tydelig tekst med latinske bokstaver.';
 
   @override
   String get translateToLabel => 'Oversett til';
@@ -338,5 +338,5 @@ class AppLocalizationsNo extends AppLocalizations {
   String get errorPackTooSlow => 'Det tar for lang tid å motta språkpakken. Internettforbindelsen din kan være svak. Prøv igjen.';
 
   @override
-  String get errorNoTextHint => 'Skann og Importer leser tekst med latinske bokstaver. Bruk Skriv tekst for all annen skrift.';
+  String get errorNoTextHint => 'Bruk Skriv tekst for den mest nøyaktige oversettelsen. Skann og Importer fungerer best med tydelig tekst med latinske bokstaver.';
 }

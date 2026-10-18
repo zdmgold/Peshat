@@ -191,7 +191,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get translatedFrom => 'Käännetty kielestä';
 
   @override
-  String get scanLatinHint => 'Skannaus ja tuonti lukevat latinalaisilla kirjaimilla kirjoitettua tekstiä. Käytä muille kirjoitusjärjestelmille Kirjoita teksti -toimintoa.';
+  String get scanLatinHint => 'Tarkimman käännöksen saat Kirjoita teksti -toiminnolla. Skannaus ja tuonti toimivat parhaiten selkeällä latinalaisilla kirjaimilla kirjoitetulla tekstillä.';
 
   @override
   String get translateToLabel => 'Käännä kielelle';
@@ -338,5 +338,5 @@ class AppLocalizationsFi extends AppLocalizations {
   String get errorPackTooSlow => 'Kielipaketin vastaanottaminen kestää liian kauan. Internetyhteytesi voi olla heikko. Yritä uudelleen.';
 
   @override
-  String get errorNoTextHint => 'Skannaus ja tuonti lukevat latinalaisilla kirjaimilla kirjoitettua tekstiä. Käytä muille kirjoitusjärjestelmille Kirjoita teksti -toimintoa.';
+  String get errorNoTextHint => 'Tarkimman käännöksen saat Kirjoita teksti -toiminnolla. Skannaus ja tuonti toimivat parhaiten selkeällä latinalaisilla kirjaimilla kirjoitetulla tekstillä.';
 }
