@@ -570,10 +570,11 @@ class _TranslationTab extends StatelessWidget {
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: Spacing.sm),
                     child: Icon(
-                      CupertinoIcons.arrow_right,
+                      Directionality.of(context) == TextDirection.rtl
+                          ? CupertinoIcons.arrow_left
+                          : CupertinoIcons.arrow_right,
                       size: 14,
                       color: textSecondary,
-                      matchTextDirection: true,
                     ),
                   ),
                   Flexible(
