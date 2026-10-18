@@ -73,7 +73,12 @@ void main() {
       await tester.pump(const Duration(milliseconds: 100));
       await tester.pump(const Duration(milliseconds: 100));
 
-      expect(tester.widget<IndexedStack>(find.byType(IndexedStack)).index, 1);
+      final tabs = tester
+          .widgetList<IndexedStack>(find.byType(IndexedStack))
+          .where((w) => w.children.length == 2)
+          .toList();
+      expect(tabs, isNotEmpty);
+      expect(tabs.every((w) => w.index == 1), isTrue);
       expect(find.text('T:hola'), findsOneWidget);
       // One slim line: source, arrow, target.
       expect(find.text('Español'), findsOneWidget);
