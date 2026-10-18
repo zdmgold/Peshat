@@ -109,5 +109,13 @@
   "errorPackTooSlow": "接收语言包耗时过长。您的网络连接可能较弱。请重试。",
   "errorNoTextHint": "如需最准确的翻译，请使用“输入文本”。扫描和导入对清晰的拉丁字母文本效果最佳。",
   "translatedFrom": "翻译自",
-  "scanLatinHint": "如需最准确的翻译，请使用“输入文本”。扫描和导入对清晰的拉丁字母文本效果最佳。"
+  "scanLatinHint": "如需最准确的翻译，请使用“输入文本”。扫描和导入对清晰的拉丁字母文本效果最佳。",
+  "sourceLanguageLabel": "源语言",
+  "destinationLanguageLabel": "目标语言",
+  "languageAuto": "自动",
+  "languageAutoLatin": "自动（拉丁字母）",
+  "pickerCameraReads": "相机可识别",
+  "pickerTypeOnly": "仅限输入或粘贴",
+  "cameraCannotReadLanguage": "相机无法识别这种语言。请改用“输入文本”。",
+  "scanResultNote": "扫描的文本可能有错误。如需最准确的翻译，请使用“输入文本”。"
 }

@@ -15,6 +15,7 @@ import '../core/providers/theme_provider.dart';
 import '../core/providers/ui_locale_provider.dart';
 import '../core/providers/notification_provider.dart';
 import '../core/services/language_names.dart';
+import '../core/services/scan_scripts.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/spacing.dart';
@@ -23,6 +24,7 @@ import '../platform/document_scanner_service.dart';
 import '../widgets/action_card.dart';
 import '../widgets/ad_slot.dart';
 import '../widgets/cupertino_toast.dart';
+import '../widgets/language_pair_card.dart';
 import '../widgets/recent_item_card.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
@@ -107,6 +109,29 @@ class _ScanScreenState extends State<ScanScreen> {
     if (selected != null) widget.settings.setTarget(selected);
   }
 
+  Future<void> _pickSourceLanguage() async {
+    final selected = await Navigator.push<String>(
+      context,
+      CupertinoPageRoute(
+        builder: (_) => LanguagePickerScreen(
+          current: widget.settings.source.value,
+          sourceMode: true,
+        ),
+      ),
+    );
+    if (selected != null) widget.settings.setSource(selected);
+  }
+
+  /// A photo can't be read in a language the camera has no reader for. Sends
+  /// the person to Type text instead and says why. Returns true when it did.
+  bool _redirectIfUnreadable() {
+    if (cameraCanRead(widget.settings.source.value)) return false;
+    CupertinoToast.show(
+        context, AppLocalizations.of(context)!.cameraCannotReadLanguage);
+    _openTextTranslate();
+    return true;
+  }
+
   Future<void> _pickUiLanguage() async {
     final selected = await Navigator.push<dynamic>(
       context,
@@ -132,6 +157,7 @@ class _ScanScreenState extends State<ScanScreen> {
 
   Future<void> _handleScan() async {
     if (_isScanning) return;
+    if (_redirectIfUnreadable()) return;
     setState(() => _isScanning = true);
     try {
       final paths = await _scanner.scan();
@@ -142,6 +168,7 @@ class _ScanScreenState extends State<ScanScreen> {
           builder: (_) => ResultScreen(
             imagePath: paths.first,
             initialTargetLanguage: widget.settings.value,
+            sourceLanguage: widget.settings.source.value,
             history: widget.history,
           ),
         ),
@@ -176,12 +203,14 @@ class _ScanScreenState extends State<ScanScreen> {
           ),
         );
       } else {
+        if (_redirectIfUnreadable()) return;
         await Navigator.push(
           context,
           CupertinoPageRoute(
             builder: (_) => ResultScreen(
               imagePath: path,
               initialTargetLanguage: widget.settings.value,
+              sourceLanguage: widget.settings.source.value,
               history: widget.history,
             ),
           ),
@@ -332,14 +361,18 @@ class _ScanScreenState extends State<ScanScreen> {
                     const SizedBox(height: 16),
 
                     // Language selector — filled card.
-                    ValueListenableBuilder<String>(
-                      valueListenable: widget.settings,
-                      builder: (context, target, _) => ActionCard(
-                        icon: AppIcons.globe,
-                        label: l10n.translateToLabel,
-                        value: languageNativeName(target),
-                        showChevron: true,
-                        onTap: _pickTargetLanguage,
+                    ListenableBuilder(
+                      listenable:
+                          Listenable.merge([widget.settings, widget.settings.source]),
+                      builder: (context, _) => LanguagePairCard(
+                        sourceLabel: l10n.sourceLanguageLabel,
+                        sourceValue: widget.settings.source.value == sourceAuto
+                            ? l10n.languageAuto
+                            : languageNativeName(widget.settings.source.value),
+                        onTapSource: _pickSourceLanguage,
+                        destinationLabel: l10n.destinationLanguageLabel,
+                        destinationValue: languageNativeName(widget.settings.value),
+                        onTapDestination: _pickTargetLanguage,
                       ),
                     ),
                     const SizedBox(height: 32),

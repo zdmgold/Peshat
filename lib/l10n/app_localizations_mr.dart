@@ -194,6 +194,30 @@ class AppLocalizationsMr extends AppLocalizations {
   String get scanLatinHint => 'सर्वात अचूक भाषांतरासाठी “मजकूर टाइप करा” वापरा. स्कॅन आणि इम्पोर्ट स्पष्ट लॅटिन लिपीतील मजकुरासह सर्वोत्तम काम करतात.';
 
   @override
+  String get sourceLanguageLabel => 'स्रोत भाषा';
+
+  @override
+  String get destinationLanguageLabel => 'लक्ष्य भाषा';
+
+  @override
+  String get languageAuto => 'ऑटो';
+
+  @override
+  String get languageAutoLatin => 'ऑटो (लॅटिन लिपी)';
+
+  @override
+  String get pickerCameraReads => 'कॅमेरा वाचू शकतो';
+
+  @override
+  String get pickerTypeOnly => 'फक्त टाइप किंवा पेस्ट';
+
+  @override
+  String get cameraCannotReadLanguage => 'कॅमेरा ही भाषा वाचू शकत नाही. त्याऐवजी “मजकूर टाइप करा” वापरा.';
+
+  @override
+  String get scanResultNote => 'स्कॅन केलेल्या मजकुरात चुका असू शकतात. सर्वात अचूक भाषांतरासाठी “मजकूर टाइप करा” वापरा.';
+
+  @override
   String get translateToLabel => 'यामध्ये भाषांतर करा';
 
   @override

@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Paket bahasa terlalu lama diterima. Koneksi internet Anda mungkin lemah. Coba lagi.",
   "errorNoTextHint": "Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas.",
   "translatedFrom": "Diterjemahkan dari",
-  "scanLatinHint": "Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas."
+  "scanLatinHint": "Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas.",
+  "sourceLanguageLabel": "Bahasa sumber",
+  "destinationLanguageLabel": "Bahasa tujuan",
+  "languageAuto": "Otomatis",
+  "languageAutoLatin": "Otomatis (aksara Latin)",
+  "pickerCameraReads": "Kamera dapat membaca",
+  "pickerTypeOnly": "Hanya ketik atau tempel",
+  "cameraCannotReadLanguage": "Kamera tidak dapat membaca bahasa ini. Gunakan Ketik teks.",
+  "scanResultNote": "Teks hasil pindaian bisa mengandung kesalahan. Untuk terjemahan paling akurat, gunakan Ketik teks."
 }

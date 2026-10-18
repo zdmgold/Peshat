@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Prijatie jazykového balíka trvá príliš dlho. Vaše pripojenie na internet môže byť slabé. Skúste to znova.",
   "errorNoTextHint": "Pre najpresnejší preklad použite Napísať text. Skenovanie a import fungujú najlepšie s čitateľným textom v latinke.",
   "translatedFrom": "Preložené z jazyka",
-  "scanLatinHint": "Pre najpresnejší preklad použite Napísať text. Skenovanie a import fungujú najlepšie s čitateľným textom v latinke."
+  "scanLatinHint": "Pre najpresnejší preklad použite Napísať text. Skenovanie a import fungujú najlepšie s čitateľným textom v latinke.",
+  "sourceLanguageLabel": "Zdrojový jazyk",
+  "destinationLanguageLabel": "Cieľový jazyk",
+  "languageAuto": "Automaticky",
+  "languageAutoLatin": "Automaticky (latinka)",
+  "pickerCameraReads": "Fotoaparát vie čítať",
+  "pickerTypeOnly": "Iba písanie alebo vloženie",
+  "cameraCannotReadLanguage": "Fotoaparát tento jazyk prečítať nevie. Použite Napísať text.",
+  "scanResultNote": "Naskenovaný text môže obsahovať chyby. Pre najpresnejší preklad použite Napísať text."
 }

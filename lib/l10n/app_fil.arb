@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli.",
   "errorNoTextHint": "Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.",
   "translatedFrom": "Isinalin mula sa",
-  "scanLatinHint": "Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script."
+  "scanLatinHint": "Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.",
+  "sourceLanguageLabel": "Wikang pinagmulan",
+  "destinationLanguageLabel": "Wikang patutunguhan",
+  "languageAuto": "Awtomatiko",
+  "languageAutoLatin": "Awtomatiko (Latin na script)",
+  "pickerCameraReads": "Kayang basahin ng camera",
+  "pickerTypeOnly": "I-type o i-paste lang",
+  "cameraCannotReadLanguage": "Hindi mababasa ng camera ang wikang ito. Gamitin na lang ang I-type ang teksto.",
+  "scanResultNote": "Maaaring may mali ang na-scan na teksto. Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto."
 }

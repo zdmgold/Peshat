@@ -194,6 +194,30 @@ class AppLocalizationsBn extends AppLocalizations {
   String get scanLatinHint => 'সবচেয়ে নির্ভুল অনুবাদের জন্য “টেক্সট টাইপ করুন” ব্যবহার করুন। স্ক্যান ও ইমপোর্ট স্পষ্ট ল্যাটিন লিপির লেখায় সবচেয়ে ভালো কাজ করে।';
 
   @override
+  String get sourceLanguageLabel => 'উৎস ভাষা';
+
+  @override
+  String get destinationLanguageLabel => 'গন্তব্য ভাষা';
+
+  @override
+  String get languageAuto => 'স্বয়ংক্রিয়';
+
+  @override
+  String get languageAutoLatin => 'স্বয়ংক্রিয় (ল্যাটিন লিপি)';
+
+  @override
+  String get pickerCameraReads => 'ক্যামেরা পড়তে পারে';
+
+  @override
+  String get pickerTypeOnly => 'শুধু টাইপ বা পেস্ট';
+
+  @override
+  String get cameraCannotReadLanguage => 'ক্যামেরা এই ভাষা পড়তে পারে না। এর পরিবর্তে “টেক্সট টাইপ করুন” ব্যবহার করুন।';
+
+  @override
+  String get scanResultNote => 'স্ক্যান করা লেখায় ভুল থাকতে পারে। সবচেয়ে নির্ভুল অনুবাদের জন্য “টেক্সট টাইপ করুন” ব্যবহার করুন।';
+
+  @override
   String get translateToLabel => 'এতে অনুবাদ করুন';
 
   @override

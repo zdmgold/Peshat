@@ -164,5 +164,13 @@
   "errorPackTooSlow": "The language pack is taking too long to be received. Your internet connection may be weak. Try again.",
   "errorNoTextHint": "For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.",
   "translatedFrom": "Translated from",
-  "scanLatinHint": "For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text."
+  "scanLatinHint": "For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.",
+  "sourceLanguageLabel": "Source language",
+  "destinationLanguageLabel": "Destination language",
+  "languageAuto": "Auto",
+  "languageAutoLatin": "Auto (Latin script)",
+  "pickerCameraReads": "Camera can read",
+  "pickerTypeOnly": "Type or paste only",
+  "cameraCannotReadLanguage": "The camera can't read this language. Use Type text instead.",
+  "scanResultNote": "Scanned text can contain mistakes. For the most accurate translation, use Type text."
 }

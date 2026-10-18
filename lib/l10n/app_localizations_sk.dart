@@ -194,6 +194,30 @@ class AppLocalizationsSk extends AppLocalizations {
   String get scanLatinHint => 'Pre najpresnejší preklad použite Napísať text. Skenovanie a import fungujú najlepšie s čitateľným textom v latinke.';
 
   @override
+  String get sourceLanguageLabel => 'Zdrojový jazyk';
+
+  @override
+  String get destinationLanguageLabel => 'Cieľový jazyk';
+
+  @override
+  String get languageAuto => 'Automaticky';
+
+  @override
+  String get languageAutoLatin => 'Automaticky (latinka)';
+
+  @override
+  String get pickerCameraReads => 'Fotoaparát vie čítať';
+
+  @override
+  String get pickerTypeOnly => 'Iba písanie alebo vloženie';
+
+  @override
+  String get cameraCannotReadLanguage => 'Fotoaparát tento jazyk prečítať nevie. Použite Napísať text.';
+
+  @override
+  String get scanResultNote => 'Naskenovaný text môže obsahovať chyby. Pre najpresnejší preklad použite Napísať text.';
+
+  @override
   String get translateToLabel => 'Preložiť do jazyka';
 
   @override

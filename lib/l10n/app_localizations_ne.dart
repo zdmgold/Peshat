@@ -194,6 +194,30 @@ class AppLocalizationsNe extends AppLocalizations {
   String get scanLatinHint => 'सबैभन्दा सही अनुवादका लागि “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्। स्क्यान र इम्पोर्टले स्पष्ट ल्याटिन लिपिको पाठसँग उत्तम काम गर्छन्।';
 
   @override
+  String get sourceLanguageLabel => 'स्रोत भाषा';
+
+  @override
+  String get destinationLanguageLabel => 'गन्तव्य भाषा';
+
+  @override
+  String get languageAuto => 'स्वचालित';
+
+  @override
+  String get languageAutoLatin => 'स्वचालित (ल्याटिन लिपि)';
+
+  @override
+  String get pickerCameraReads => 'क्यामेराले पढ्न सक्छ';
+
+  @override
+  String get pickerTypeOnly => 'टाइप वा पेस्ट मात्र';
+
+  @override
+  String get cameraCannotReadLanguage => 'क्यामेराले यो भाषा पढ्न सक्दैन। यसको सट्टा “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्।';
+
+  @override
+  String get scanResultNote => 'स्क्यान गरिएको पाठमा गल्ती हुन सक्छ। सबैभन्दा सही अनुवादका लागि “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्।';
+
+  @override
   String get translateToLabel => 'यसमा अनुवाद गर्नुहोस्';
 
   @override

@@ -194,6 +194,30 @@ class AppLocalizationsPl extends AppLocalizations {
   String get scanLatinHint => 'Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim.';
 
   @override
+  String get sourceLanguageLabel => 'Język źródłowy';
+
+  @override
+  String get destinationLanguageLabel => 'Język docelowy';
+
+  @override
+  String get languageAuto => 'Automatycznie';
+
+  @override
+  String get languageAutoLatin => 'Automatycznie (alfabet łaciński)';
+
+  @override
+  String get pickerCameraReads => 'Aparat potrafi czytać';
+
+  @override
+  String get pickerTypeOnly => 'Tylko wpisywanie lub wklejanie';
+
+  @override
+  String get cameraCannotReadLanguage => 'Aparat nie potrafi odczytać tego języka. Użyj zamiast tego opcji Wpisz tekst.';
+
+  @override
+  String get scanResultNote => 'Zeskanowany tekst może zawierać błędy. Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst.';
+
+  @override
   String get translateToLabel => 'Przetłumacz na';
 
   @override

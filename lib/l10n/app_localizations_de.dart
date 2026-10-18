@@ -194,6 +194,30 @@ class AppLocalizationsDe extends AppLocalizations {
   String get scanLatinHint => 'Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift.';
 
   @override
+  String get sourceLanguageLabel => 'Ausgangssprache';
+
+  @override
+  String get destinationLanguageLabel => 'Zielsprache';
+
+  @override
+  String get languageAuto => 'Automatisch';
+
+  @override
+  String get languageAutoLatin => 'Automatisch (lateinische Schrift)';
+
+  @override
+  String get pickerCameraReads => 'Kamera kann lesen';
+
+  @override
+  String get pickerTypeOnly => 'Nur Eingabe oder Einfügen';
+
+  @override
+  String get cameraCannotReadLanguage => 'Die Kamera kann diese Sprache nicht lesen. Nutze stattdessen Text eingeben.';
+
+  @override
+  String get scanResultNote => 'Gescannter Text kann Fehler enthalten. Für die genaueste Übersetzung nutze Text eingeben.';
+
+  @override
   String get translateToLabel => 'Übersetzen nach';
 
   @override

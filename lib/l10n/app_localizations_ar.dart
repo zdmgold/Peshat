@@ -194,6 +194,30 @@ class AppLocalizationsAr extends AppLocalizations {
   String get scanLatinHint => 'للحصول على ترجمة أدق، استخدم «كتابة نص». يعمل المسح والاستيراد بأفضل شكل مع نص واضح بالأحرف اللاتينية.';
 
   @override
+  String get sourceLanguageLabel => 'لغة المصدر';
+
+  @override
+  String get destinationLanguageLabel => 'لغة الوجهة';
+
+  @override
+  String get languageAuto => 'تلقائي';
+
+  @override
+  String get languageAutoLatin => 'تلقائي (الأحرف اللاتينية)';
+
+  @override
+  String get pickerCameraReads => 'يمكن للكاميرا قراءتها';
+
+  @override
+  String get pickerTypeOnly => 'كتابة أو لصق فقط';
+
+  @override
+  String get cameraCannotReadLanguage => 'لا تستطيع الكاميرا قراءة هذه اللغة. استخدم «كتابة نص» بدلاً من ذلك.';
+
+  @override
+  String get scanResultNote => 'قد يحتوي النص الممسوح على أخطاء. للحصول على ترجمة أدق، استخدم «كتابة نص».';
+
+  @override
   String get translateToLabel => 'ترجم إلى';
 
   @override

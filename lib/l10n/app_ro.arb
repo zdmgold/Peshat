@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou.",
   "errorNoTextHint": "Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.",
   "translatedFrom": "Tradus din",
-  "scanLatinHint": "Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin."
+  "scanLatinHint": "Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.",
+  "sourceLanguageLabel": "Limba sursă",
+  "destinationLanguageLabel": "Limba destinație",
+  "languageAuto": "Automat",
+  "languageAutoLatin": "Automat (alfabet latin)",
+  "pickerCameraReads": "Camera poate citi",
+  "pickerTypeOnly": "Doar tastare sau lipire",
+  "cameraCannotReadLanguage": "Camera nu poate citi această limbă. Folosiți Introdu text.",
+  "scanResultNote": "Textul scanat poate conține greșeli. Pentru cea mai precisă traducere, folosiți Introdu text."
 }

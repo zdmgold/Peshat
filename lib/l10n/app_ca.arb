@@ -109,5 +109,13 @@
   "errorPackTooSlow": "El paquet d'idioma triga massa a rebre's. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.",
   "errorNoTextHint": "Per a la traducció més precisa, feu servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí.",
   "translatedFrom": "Traduït des de",
-  "scanLatinHint": "Per a la traducció més precisa, feu servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí."
+  "scanLatinHint": "Per a la traducció més precisa, feu servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí.",
+  "sourceLanguageLabel": "Llengua d'origen",
+  "destinationLanguageLabel": "Llengua de destinació",
+  "languageAuto": "Automàtic",
+  "languageAutoLatin": "Automàtic (alfabet llatí)",
+  "pickerCameraReads": "La càmera pot llegir",
+  "pickerTypeOnly": "Només escriure o enganxar",
+  "cameraCannotReadLanguage": "La càmera no pot llegir aquesta llengua. Feu servir Escriu text.",
+  "scanResultNote": "El text escanejat pot contenir errors. Per a la traducció més precisa, feu servir Escriu text."
 }

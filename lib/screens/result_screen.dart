@@ -18,6 +18,7 @@ import '../core/providers/scan_provider.dart';
 import '../core/services/interstitial_service.dart';
 import '../core/services/pdf_fonts.dart';
 import '../core/services/pdf_raster.dart';
+import '../core/services/scan_scripts.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -33,6 +34,9 @@ class ResultScreen extends StatefulWidget {
   final String? imagePath;
   final String? inputText;
   final String initialTargetLanguage;
+
+  /// Language of the text in a photo, or [sourceAuto]. Picks the text reader.
+  final String sourceLanguage;
   final HistoryProvider history;
 
   /// False when reopening an entry from History, so it isn't saved again.
@@ -46,6 +50,7 @@ class ResultScreen extends StatefulWidget {
     this.imagePath,
     this.inputText,
     required this.initialTargetLanguage,
+    this.sourceLanguage = sourceAuto,
     required this.history,
     this.saveToHistory = true,
     this.provider,
@@ -102,6 +107,7 @@ class _ResultScreenState extends State<ResultScreen> {
       await _provider.runImagePipeline(
         image: XFile(widget.imagePath!),
         targetLanguage: _targetLanguage,
+        sourceLanguage: widget.sourceLanguage,
       );
     } else {
       await _provider.runTextPipeline(
@@ -395,6 +401,7 @@ class _ResultScreenState extends State<ResultScreen> {
                   translatedText: state.translatedText,
                   sourceLanguage: state.sourceLanguage,
                   targetLanguage: state.targetLanguage,
+                  showScanNote: widget.imagePath != null,
                   onPickLanguage: _pickLanguage,
                   isDark: isDark,
                 ),
@@ -526,6 +533,7 @@ class _TranslationTab extends StatelessWidget {
   final String translatedText;
   final String sourceLanguage;
   final String targetLanguage;
+  final bool showScanNote;
   final VoidCallback onPickLanguage;
   final bool isDark;
 
@@ -533,6 +541,7 @@ class _TranslationTab extends StatelessWidget {
     required this.translatedText,
     required this.sourceLanguage,
     required this.targetLanguage,
+    required this.showScanNote,
     required this.onPickLanguage,
     required this.isDark,
   });
@@ -614,6 +623,22 @@ class _TranslationTab extends StatelessWidget {
             ),
           ),
         ),
+        if (showScanNote)
+          Padding(
+            padding: const EdgeInsets.fromLTRB(
+                Spacing.md, Spacing.xs, Spacing.md, 0),
+            child: Align(
+              alignment: AlignmentDirectional.centerStart,
+              child: Text(
+                l10n.scanResultNote,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 12,
+                  height: 1.35,
+                  color: textSecondary,
+                ),
+              ),
+            ),
+          ),
         const SizedBox(height: Spacing.sm),
         Expanded(
           child: SingleChildScrollView(

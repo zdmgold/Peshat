@@ -194,6 +194,30 @@ class AppLocalizationsCa extends AppLocalizations {
   String get scanLatinHint => 'Per a la traducció més precisa, feu servir Escriu text. L\'escaneig i la importació funcionen millor amb text clar en alfabet llatí.';
 
   @override
+  String get sourceLanguageLabel => 'Llengua d\'origen';
+
+  @override
+  String get destinationLanguageLabel => 'Llengua de destinació';
+
+  @override
+  String get languageAuto => 'Automàtic';
+
+  @override
+  String get languageAutoLatin => 'Automàtic (alfabet llatí)';
+
+  @override
+  String get pickerCameraReads => 'La càmera pot llegir';
+
+  @override
+  String get pickerTypeOnly => 'Només escriure o enganxar';
+
+  @override
+  String get cameraCannotReadLanguage => 'La càmera no pot llegir aquesta llengua. Feu servir Escriu text.';
+
+  @override
+  String get scanResultNote => 'El text escanejat pot contenir errors. Per a la traducció més precisa, feu servir Escriu text.';
+
+  @override
   String get translateToLabel => 'Tradueix a';
 
   @override

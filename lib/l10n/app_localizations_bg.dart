@@ -194,6 +194,30 @@ class AppLocalizationsBg extends AppLocalizations {
   String get scanLatinHint => 'За най-точен превод използвайте „Въведи текст“. Сканирането и импортът работят най-добре с ясен текст на латиница.';
 
   @override
+  String get sourceLanguageLabel => 'Език на източника';
+
+  @override
+  String get destinationLanguageLabel => 'Език на превода';
+
+  @override
+  String get languageAuto => 'Автоматично';
+
+  @override
+  String get languageAutoLatin => 'Автоматично (латиница)';
+
+  @override
+  String get pickerCameraReads => 'Камерата може да чете';
+
+  @override
+  String get pickerTypeOnly => 'Само въвеждане или поставяне';
+
+  @override
+  String get cameraCannotReadLanguage => 'Камерата не може да чете този език. Използвайте „Въведи текст“.';
+
+  @override
+  String get scanResultNote => 'Сканираният текст може да съдържа грешки. За най-точен превод използвайте „Въведи текст“.';
+
+  @override
   String get translateToLabel => 'Превеждане на';
 
   @override

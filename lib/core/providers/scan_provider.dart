@@ -6,6 +6,7 @@ import '../models/app_error_code.dart';
 import '../models/scan_state.dart';
 import '../services/connectivity_check.dart';
 import '../services/language_detector.dart';
+import '../services/scan_scripts.dart';
 import '../services/text_recognizer_service.dart';
 import '../services/translator_service.dart';
 
@@ -36,18 +37,21 @@ class ScanProvider extends ValueNotifier<ScanState> {
   Future<void> runImagePipeline({
     required XFile image,
     required String targetLanguage,
+    String sourceLanguage = sourceAuto,
   }) async {
     try {
       value = const ScanState.recognizing();
       final recognized = await _ocr
-          .recognize(InputImage.fromFilePath(image.path))
+          .recognize(InputImage.fromFilePath(image.path),
+              script: scanScriptFor(sourceLanguage))
           .timeout(const Duration(seconds: 30));
       final src = recognized.text.trim();
       if (src.isEmpty) {
         value = const ScanState.error(AppErrorCode.noTextDetected);
         return;
       }
-      await _translate(src, targetLanguage);
+      await _translate(src, targetLanguage,
+          knownSource: sourceLanguage == sourceAuto ? null : sourceLanguage);
     } on TimeoutException catch (e) {
       value = ScanState.error(AppErrorCode.timeout, detail: e.toString());
     } on TranslatorException catch (e) {
@@ -87,13 +91,19 @@ class ScanProvider extends ValueNotifier<ScanState> {
     super.value = v;
   }
 
-  Future<void> _translate(String src, String targetLanguage) async {
+  Future<void> _translate(String src, String targetLanguage,
+      {String? knownSource}) async {
     final run = ++_run;
     String srcLang = 'en';
-    try {
-      final d = await _detector.detect(src).timeout(const Duration(seconds: 5));
-      if (d.isNotEmpty && d != 'und') srcLang = d;
-    } catch (_) {}
+    if (knownSource != null) {
+      srcLang = knownSource;
+    } else {
+      try {
+        final d =
+            await _detector.detect(src).timeout(const Duration(seconds: 5));
+        if (d.isNotEmpty && d != 'und') srcLang = d;
+      } catch (_) {}
+    }
     if (isSameLanguage(srcLang, targetLanguage)) {
       value = ScanDone(
         sourceText: src,

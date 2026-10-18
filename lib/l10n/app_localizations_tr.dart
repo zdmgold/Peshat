@@ -194,6 +194,30 @@ class AppLocalizationsTr extends AppLocalizations {
   String get scanLatinHint => 'En doğru çeviri için Metin yaz seçeneğini kullanın. Tarama ve İçe Aktarma, net Latin harfli metinlerle en iyi sonucu verir.';
 
   @override
+  String get sourceLanguageLabel => 'Kaynak dil';
+
+  @override
+  String get destinationLanguageLabel => 'Hedef dil';
+
+  @override
+  String get languageAuto => 'Otomatik';
+
+  @override
+  String get languageAutoLatin => 'Otomatik (Latin harfleri)';
+
+  @override
+  String get pickerCameraReads => 'Kamera okuyabilir';
+
+  @override
+  String get pickerTypeOnly => 'Yalnızca yazma veya yapıştırma';
+
+  @override
+  String get cameraCannotReadLanguage => 'Kamera bu dili okuyamaz. Bunun yerine Metin yaz seçeneğini kullanın.';
+
+  @override
+  String get scanResultNote => 'Taranan metin hatalar içerebilir. En doğru çeviri için Metin yaz seçeneğini kullanın.';
+
+  @override
   String get translateToLabel => 'Şuna çevir';
 
   @override

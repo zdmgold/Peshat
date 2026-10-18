@@ -194,6 +194,30 @@ class AppLocalizationsId extends AppLocalizations {
   String get scanLatinHint => 'Untuk terjemahan paling akurat, gunakan Ketik teks. Pindai dan Impor bekerja paling baik dengan teks beraksara Latin yang jelas.';
 
   @override
+  String get sourceLanguageLabel => 'Bahasa sumber';
+
+  @override
+  String get destinationLanguageLabel => 'Bahasa tujuan';
+
+  @override
+  String get languageAuto => 'Otomatis';
+
+  @override
+  String get languageAutoLatin => 'Otomatis (aksara Latin)';
+
+  @override
+  String get pickerCameraReads => 'Kamera dapat membaca';
+
+  @override
+  String get pickerTypeOnly => 'Hanya ketik atau tempel';
+
+  @override
+  String get cameraCannotReadLanguage => 'Kamera tidak dapat membaca bahasa ini. Gunakan Ketik teks.';
+
+  @override
+  String get scanResultNote => 'Teks hasil pindaian bisa mengandung kesalahan. Untuk terjemahan paling akurat, gunakan Ketik teks.';
+
+  @override
   String get translateToLabel => 'Terjemahkan ke';
 
   @override

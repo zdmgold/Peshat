@@ -194,6 +194,30 @@ class AppLocalizationsRu extends AppLocalizations {
   String get scanLatinHint => 'Для самого точного перевода используйте «Ввести текст». Сканирование и импорт лучше всего работают с чётким текстом на латинице.';
 
   @override
+  String get sourceLanguageLabel => 'Исходный язык';
+
+  @override
+  String get destinationLanguageLabel => 'Язык перевода';
+
+  @override
+  String get languageAuto => 'Авто';
+
+  @override
+  String get languageAutoLatin => 'Авто (латиница)';
+
+  @override
+  String get pickerCameraReads => 'Камера может прочитать';
+
+  @override
+  String get pickerTypeOnly => 'Только ввод или вставка';
+
+  @override
+  String get cameraCannotReadLanguage => 'Камера не может прочитать этот язык. Используйте «Ввести текст».';
+
+  @override
+  String get scanResultNote => 'Отсканированный текст может содержать ошибки. Для самого точного перевода используйте «Ввести текст».';
+
+  @override
   String get translateToLabel => 'Перевести на';
 
   @override

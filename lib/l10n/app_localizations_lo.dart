@@ -194,6 +194,30 @@ class AppLocalizationsLo extends AppLocalizations {
   String get scanLatinHint => 'ເພື່ອການແປທີ່ຖືກຕ້ອງທີ່ສຸດ ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ». ການສະແກນ ແລະ ນຳເຂົ້າ ເຮັດວຽກໄດ້ດີທີ່ສຸດກັບຂໍ້ຄວາມອັກສອນລາຕິນທີ່ຊັດເຈນ.';
 
   @override
+  String get sourceLanguageLabel => 'ພາສາຕົ້ນສະບັບ';
+
+  @override
+  String get destinationLanguageLabel => 'ພາສາປາຍທາງ';
+
+  @override
+  String get languageAuto => 'ອັດຕະໂນມັດ';
+
+  @override
+  String get languageAutoLatin => 'ອັດຕະໂນມັດ (ອັກສອນລາຕິນ)';
+
+  @override
+  String get pickerCameraReads => 'ກ້ອງອ່ານໄດ້';
+
+  @override
+  String get pickerTypeOnly => 'ພິມ ຫຼື ວາງເທົ່ານັ້ນ';
+
+  @override
+  String get cameraCannotReadLanguage => 'ກ້ອງບໍ່ສາມາດອ່ານພາສານີ້ໄດ້. ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ» ແທນ.';
+
+  @override
+  String get scanResultNote => 'ຂໍ້ຄວາມທີ່ສະແກນອາດມີຄວາມຜິດພາດ. ເພື່ອການແປທີ່ຖືກຕ້ອງທີ່ສຸດ ໃຫ້ໃຊ້ «ພິມຂໍ້ຄວາມ».';
+
+  @override
   String get translateToLabel => 'ແປເປັນ';
 
   @override

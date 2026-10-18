@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Das Empfangen des Sprachpakets dauert zu lange. Deine Internetverbindung ist möglicherweise schwach. Versuche es erneut.",
   "errorNoTextHint": "Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift.",
   "translatedFrom": "Übersetzt von",
-  "scanLatinHint": "Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift."
+  "scanLatinHint": "Für die genaueste Übersetzung nutze Text eingeben. Scannen und Importieren funktionieren am besten mit klarem Text in lateinischer Schrift.",
+  "sourceLanguageLabel": "Ausgangssprache",
+  "destinationLanguageLabel": "Zielsprache",
+  "languageAuto": "Automatisch",
+  "languageAutoLatin": "Automatisch (lateinische Schrift)",
+  "pickerCameraReads": "Kamera kann lesen",
+  "pickerTypeOnly": "Nur Eingabe oder Einfügen",
+  "cameraCannotReadLanguage": "Die Kamera kann diese Sprache nicht lesen. Nutze stattdessen Text eingeben.",
+  "scanResultNote": "Gescannter Text kann Fehler enthalten. Für die genaueste Übersetzung nutze Text eingeben."
 }

@@ -194,6 +194,30 @@ class AppLocalizationsNo extends AppLocalizations {
   String get scanLatinHint => 'Bruk Skriv tekst for den mest nøyaktige oversettelsen. Skann og Importer fungerer best med tydelig tekst med latinske bokstaver.';
 
   @override
+  String get sourceLanguageLabel => 'Kildespråk';
+
+  @override
+  String get destinationLanguageLabel => 'Målspråk';
+
+  @override
+  String get languageAuto => 'Automatisk';
+
+  @override
+  String get languageAutoLatin => 'Automatisk (latinsk skrift)';
+
+  @override
+  String get pickerCameraReads => 'Kameraet kan lese';
+
+  @override
+  String get pickerTypeOnly => 'Bare skriv eller lim inn';
+
+  @override
+  String get cameraCannotReadLanguage => 'Kameraet kan ikke lese dette språket. Bruk Skriv tekst i stedet.';
+
+  @override
+  String get scanResultNote => 'Skannet tekst kan inneholde feil. Bruk Skriv tekst for den mest nøyaktige oversettelsen.';
+
+  @override
   String get translateToLabel => 'Oversett til';
 
   @override

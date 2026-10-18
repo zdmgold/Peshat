@@ -194,6 +194,30 @@ class AppLocalizationsFr extends AppLocalizations {
   String get scanLatinHint => 'Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l\'import fonctionnent mieux avec un texte net en écriture latine.';
 
   @override
+  String get sourceLanguageLabel => 'Langue source';
+
+  @override
+  String get destinationLanguageLabel => 'Langue de destination';
+
+  @override
+  String get languageAuto => 'Auto';
+
+  @override
+  String get languageAutoLatin => 'Auto (écriture latine)';
+
+  @override
+  String get pickerCameraReads => 'La caméra peut lire';
+
+  @override
+  String get pickerTypeOnly => 'Saisie ou collage uniquement';
+
+  @override
+  String get cameraCannotReadLanguage => 'La caméra ne peut pas lire cette langue. Utilisez Saisir du texte.';
+
+  @override
+  String get scanResultNote => 'Le texte scanné peut contenir des erreurs. Pour la traduction la plus précise, utilisez Saisir du texte.';
+
+  @override
   String get translateToLabel => 'Traduire en';
 
   @override

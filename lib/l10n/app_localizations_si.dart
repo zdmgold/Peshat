@@ -194,6 +194,30 @@ class AppLocalizationsSi extends AppLocalizations {
   String get scanLatinHint => 'වඩාත්ම නිවැරදි පරිවර්තනය සඳහා “පෙළ ටයිප් කරන්න” භාවිත කරන්න. ස්කෑන් සහ ආනයනය හොඳම ක්‍රියා කරන්නේ පැහැදිලි ලතින් අක්ෂර පෙළ සමඟයි.';
 
   @override
+  String get sourceLanguageLabel => 'මූලාශ්‍ර භාෂාව';
+
+  @override
+  String get destinationLanguageLabel => 'ගමනාන්ත භාෂාව';
+
+  @override
+  String get languageAuto => 'ස්වයංක්‍රීය';
+
+  @override
+  String get languageAutoLatin => 'ස්වයංක්‍රීය (ලතින් අක්ෂර)';
+
+  @override
+  String get pickerCameraReads => 'කැමරාවට කියවිය හැක';
+
+  @override
+  String get pickerTypeOnly => 'ටයිප් හෝ පේස්ට් පමණි';
+
+  @override
+  String get cameraCannotReadLanguage => 'කැමරාවට මෙම භාෂාව කියවිය නොහැක. ඒ වෙනුවට “පෙළ ටයිප් කරන්න” භාවිත කරන්න.';
+
+  @override
+  String get scanResultNote => 'ස්කෑන් කළ පෙළෙහි වැරදි තිබිය හැක. වඩාත්ම නිවැරදි පරිවර්තනය සඳහා “පෙළ ටයිප් කරන්න” භාවිත කරන්න.';
+
+  @override
   String get translateToLabel => 'මෙයට පරිවර්තනය කරන්න';
 
   @override

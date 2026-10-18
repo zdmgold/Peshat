@@ -194,6 +194,30 @@ class AppLocalizationsNl extends AppLocalizations {
   String get scanLatinHint => 'Gebruik Tekst typen voor de nauwkeurigste vertaling. Scannen en Importeren werken het best met duidelijke tekst in Latijns schrift.';
 
   @override
+  String get sourceLanguageLabel => 'Brontaal';
+
+  @override
+  String get destinationLanguageLabel => 'Doeltaal';
+
+  @override
+  String get languageAuto => 'Automatisch';
+
+  @override
+  String get languageAutoLatin => 'Automatisch (Latijns schrift)';
+
+  @override
+  String get pickerCameraReads => 'Camera kan lezen';
+
+  @override
+  String get pickerTypeOnly => 'Alleen typen of plakken';
+
+  @override
+  String get cameraCannotReadLanguage => 'De camera kan deze taal niet lezen. Gebruik in plaats daarvan Tekst typen.';
+
+  @override
+  String get scanResultNote => 'Gescande tekst kan fouten bevatten. Gebruik Tekst typen voor de nauwkeurigste vertaling.';
+
+  @override
   String get translateToLabel => 'Vertalen naar';
 
   @override

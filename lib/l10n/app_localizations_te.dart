@@ -194,6 +194,30 @@ class AppLocalizationsTe extends AppLocalizations {
   String get scanLatinHint => 'అత్యంత ఖచ్చితమైన అనువాదం కోసం “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి. స్కాన్ మరియు ఇంపోర్ట్ స్పష్టమైన లాటిన్ లిపి వచనంతో ఉత్తమంగా పనిచేస్తాయి.';
 
   @override
+  String get sourceLanguageLabel => 'మూల భాష';
+
+  @override
+  String get destinationLanguageLabel => 'గమ్యం భాష';
+
+  @override
+  String get languageAuto => 'ఆటో';
+
+  @override
+  String get languageAutoLatin => 'ఆటో (లాటిన్ లిపి)';
+
+  @override
+  String get pickerCameraReads => 'కెమెరా చదవగలదు';
+
+  @override
+  String get pickerTypeOnly => 'టైప్ లేదా పేస్ట్ మాత్రమే';
+
+  @override
+  String get cameraCannotReadLanguage => 'కెమెరా ఈ భాషను చదవలేదు. బదులుగా “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి.';
+
+  @override
+  String get scanResultNote => 'స్కాన్ చేసిన వచనంలో తప్పులు ఉండవచ్చు. అత్యంత ఖచ్చితమైన అనువాదం కోసం “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి.';
+
+  @override
   String get translateToLabel => 'అనువదించాల్సిన భాష';
 
   @override

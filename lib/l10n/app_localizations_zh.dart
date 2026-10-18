@@ -194,6 +194,30 @@ class AppLocalizationsZh extends AppLocalizations {
   String get scanLatinHint => '如需最准确的翻译，请使用“输入文本”。扫描和导入对清晰的拉丁字母文本效果最佳。';
 
   @override
+  String get sourceLanguageLabel => '源语言';
+
+  @override
+  String get destinationLanguageLabel => '目标语言';
+
+  @override
+  String get languageAuto => '自动';
+
+  @override
+  String get languageAutoLatin => '自动（拉丁字母）';
+
+  @override
+  String get pickerCameraReads => '相机可识别';
+
+  @override
+  String get pickerTypeOnly => '仅限输入或粘贴';
+
+  @override
+  String get cameraCannotReadLanguage => '相机无法识别这种语言。请改用“输入文本”。';
+
+  @override
+  String get scanResultNote => '扫描的文本可能有错误。如需最准确的翻译，请使用“输入文本”。';
+
+  @override
   String get translateToLabel => '翻译为';
 
   @override

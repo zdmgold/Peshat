@@ -194,6 +194,30 @@ class AppLocalizationsEl extends AppLocalizations {
   String get scanLatinHint => 'Για την πιο ακριβή μετάφραση χρησιμοποιήστε Πληκτρολόγηση κειμένου. Η σάρωση και η εισαγωγή λειτουργούν καλύτερα με καθαρό κείμενο σε λατινικούς χαρακτήρες.';
 
   @override
+  String get sourceLanguageLabel => 'Γλώσσα πηγής';
+
+  @override
+  String get destinationLanguageLabel => 'Γλώσσα προορισμού';
+
+  @override
+  String get languageAuto => 'Αυτόματα';
+
+  @override
+  String get languageAutoLatin => 'Αυτόματα (λατινικοί χαρακτήρες)';
+
+  @override
+  String get pickerCameraReads => 'Η κάμερα μπορεί να διαβάσει';
+
+  @override
+  String get pickerTypeOnly => 'Μόνο πληκτρολόγηση ή επικόλληση';
+
+  @override
+  String get cameraCannotReadLanguage => 'Η κάμερα δεν μπορεί να διαβάσει αυτή τη γλώσσα. Χρησιμοποιήστε Πληκτρολόγηση κειμένου.';
+
+  @override
+  String get scanResultNote => 'Το σαρωμένο κείμενο μπορεί να έχει λάθη. Για την πιο ακριβή μετάφραση χρησιμοποιήστε Πληκτρολόγηση κειμένου.';
+
+  @override
   String get translateToLabel => 'Μετάφραση σε';
 
   @override

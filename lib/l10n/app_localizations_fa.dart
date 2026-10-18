@@ -194,6 +194,30 @@ class AppLocalizationsFa extends AppLocalizations {
   String get scanLatinHint => 'برای دقیق‌ترین ترجمه از «تایپ متن» استفاده کنید. اسکن و درون‌ریزی با متن واضح به حروف لاتین بهترین نتیجه را می‌دهند.';
 
   @override
+  String get sourceLanguageLabel => 'زبان مبدأ';
+
+  @override
+  String get destinationLanguageLabel => 'زبان مقصد';
+
+  @override
+  String get languageAuto => 'خودکار';
+
+  @override
+  String get languageAutoLatin => 'خودکار (حروف لاتین)';
+
+  @override
+  String get pickerCameraReads => 'دوربین می‌تواند بخواند';
+
+  @override
+  String get pickerTypeOnly => 'فقط تایپ یا چسباندن';
+
+  @override
+  String get cameraCannotReadLanguage => 'دوربین نمی‌تواند این زبان را بخواند. به جای آن از «تایپ متن» استفاده کنید.';
+
+  @override
+  String get scanResultNote => 'متن اسکن‌شده ممکن است اشتباه داشته باشد. برای دقیق‌ترین ترجمه از «تایپ متن» استفاده کنید.';
+
+  @override
   String get translateToLabel => 'ترجم به';
 
   @override

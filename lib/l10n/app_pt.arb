@@ -109,5 +109,13 @@
   "errorPackTooSlow": "O pacote de idioma está demorando demais para ser recebido. Sua conexão com a internet pode estar fraca. Tente novamente.",
   "errorNoTextHint": "Para a tradução mais precisa, use Digitar texto. Digitalizar e Importar funcionam melhor com texto nítido em alfabeto latino.",
   "translatedFrom": "Traduzido de",
-  "scanLatinHint": "Para a tradução mais precisa, use Digitar texto. Digitalizar e Importar funcionam melhor com texto nítido em alfabeto latino."
+  "scanLatinHint": "Para a tradução mais precisa, use Digitar texto. Digitalizar e Importar funcionam melhor com texto nítido em alfabeto latino.",
+  "sourceLanguageLabel": "Idioma de origem",
+  "destinationLanguageLabel": "Idioma de destino",
+  "languageAuto": "Automático",
+  "languageAutoLatin": "Automático (alfabeto latino)",
+  "pickerCameraReads": "A câmera consegue ler",
+  "pickerTypeOnly": "Somente digitar ou colar",
+  "cameraCannotReadLanguage": "A câmera não consegue ler este idioma. Use Digitar texto.",
+  "scanResultNote": "O texto digitalizado pode conter erros. Para a tradução mais precisa, use Digitar texto."
 }

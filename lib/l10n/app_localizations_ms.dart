@@ -194,6 +194,30 @@ class AppLocalizationsMs extends AppLocalizations {
   String get scanLatinHint => 'Untuk terjemahan paling tepat, gunakan Taip teks. Imbas dan Import berfungsi paling baik dengan teks tulisan Latin yang jelas.';
 
   @override
+  String get sourceLanguageLabel => 'Bahasa sumber';
+
+  @override
+  String get destinationLanguageLabel => 'Bahasa destinasi';
+
+  @override
+  String get languageAuto => 'Automatik';
+
+  @override
+  String get languageAutoLatin => 'Automatik (tulisan Latin)';
+
+  @override
+  String get pickerCameraReads => 'Kamera boleh membaca';
+
+  @override
+  String get pickerTypeOnly => 'Taip atau tampal sahaja';
+
+  @override
+  String get cameraCannotReadLanguage => 'Kamera tidak dapat membaca bahasa ini. Gunakan Taip teks.';
+
+  @override
+  String get scanResultNote => 'Teks yang diimbas mungkin mengandungi kesilapan. Untuk terjemahan paling tepat, gunakan Taip teks.';
+
+  @override
   String get translateToLabel => 'Terjemah ke';
 
   @override

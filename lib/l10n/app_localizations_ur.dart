@@ -194,6 +194,30 @@ class AppLocalizationsUr extends AppLocalizations {
   String get scanLatinHint => 'سب سے درست ترجمے کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔ اسکین اور امپورٹ واضح لاطینی رسم الخط کے متن کے ساتھ بہترین کام کرتے ہیں۔';
 
   @override
+  String get sourceLanguageLabel => 'ماخذ زبان';
+
+  @override
+  String get destinationLanguageLabel => 'منزل کی زبان';
+
+  @override
+  String get languageAuto => 'خودکار';
+
+  @override
+  String get languageAutoLatin => 'خودکار (لاطینی رسم الخط)';
+
+  @override
+  String get pickerCameraReads => 'کیمرا پڑھ سکتا ہے';
+
+  @override
+  String get pickerTypeOnly => 'صرف ٹائپ یا پیسٹ';
+
+  @override
+  String get cameraCannotReadLanguage => 'کیمرا اس زبان کو نہیں پڑھ سکتا۔ اس کے بجائے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔';
+
+  @override
+  String get scanResultNote => 'اسکین شدہ متن میں غلطیاں ہو سکتی ہیں۔ سب سے درست ترجمے کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔';
+
+  @override
   String get translateToLabel => 'پر ترجمہ کریں';
 
   @override

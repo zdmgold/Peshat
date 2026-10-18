@@ -194,6 +194,30 @@ class AppLocalizationsHe extends AppLocalizations {
   String get scanLatinHint => 'לתרגום המדויק ביותר השתמשו ב״הקלדת טקסט״. סריקה וייבוא עובדים הכי טוב עם טקסט ברור באותיות לטיניות.';
 
   @override
+  String get sourceLanguageLabel => 'שפת מקור';
+
+  @override
+  String get destinationLanguageLabel => 'שפת יעד';
+
+  @override
+  String get languageAuto => 'אוטומטי';
+
+  @override
+  String get languageAutoLatin => 'אוטומטי (אותיות לטיניות)';
+
+  @override
+  String get pickerCameraReads => 'המצלמה יכולה לקרוא';
+
+  @override
+  String get pickerTypeOnly => 'הקלדה או הדבקה בלבד';
+
+  @override
+  String get cameraCannotReadLanguage => 'המצלמה לא יכולה לקרוא שפה זו. השתמשו ב״הקלדת טקסט״ במקום.';
+
+  @override
+  String get scanResultNote => 'טקסט שנסרק עלול להכיל טעויות. לתרגום המדויק ביותר השתמשו ב״הקלדת טקסט״.';
+
+  @override
   String get translateToLabel => 'תרגם ל';
 
   @override

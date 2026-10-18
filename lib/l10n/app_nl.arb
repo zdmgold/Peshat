@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Het ontvangen van het taalpakket duurt te lang. Je internetverbinding is mogelijk zwak. Probeer het opnieuw.",
   "errorNoTextHint": "Gebruik Tekst typen voor de nauwkeurigste vertaling. Scannen en Importeren werken het best met duidelijke tekst in Latijns schrift.",
   "translatedFrom": "Vertaald uit",
-  "scanLatinHint": "Gebruik Tekst typen voor de nauwkeurigste vertaling. Scannen en Importeren werken het best met duidelijke tekst in Latijns schrift."
+  "scanLatinHint": "Gebruik Tekst typen voor de nauwkeurigste vertaling. Scannen en Importeren werken het best met duidelijke tekst in Latijns schrift.",
+  "sourceLanguageLabel": "Brontaal",
+  "destinationLanguageLabel": "Doeltaal",
+  "languageAuto": "Automatisch",
+  "languageAutoLatin": "Automatisch (Latijns schrift)",
+  "pickerCameraReads": "Camera kan lezen",
+  "pickerTypeOnly": "Alleen typen of plakken",
+  "cameraCannotReadLanguage": "De camera kan deze taal niet lezen. Gebruik in plaats daarvan Tekst typen.",
+  "scanResultNote": "Gescande tekst kan fouten bevatten. Gebruik Tekst typen voor de nauwkeurigste vertaling."
 }

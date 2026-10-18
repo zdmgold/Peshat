@@ -194,6 +194,30 @@ class AppLocalizationsMy extends AppLocalizations {
   String get scanLatinHint => 'အမှန်ကန်ဆုံး ဘာသာပြန်ရန် “စာသားရိုက်ရန်” ကို သုံးပါ။ စကင်န်နှင့် တင်သွင်းခြင်းတို့သည် ရှင်းလင်းသော လက်တင်အက္ခရာစာသားနှင့် အကောင်းဆုံး အလုပ်လုပ်သည်။';
 
   @override
+  String get sourceLanguageLabel => 'မူရင်းဘာသာစကား';
+
+  @override
+  String get destinationLanguageLabel => 'ပန်းတိုင်ဘာသာစကား';
+
+  @override
+  String get languageAuto => 'အလိုအလျောက်';
+
+  @override
+  String get languageAutoLatin => 'အလိုအလျောက် (လက်တင်အက္ခရာ)';
+
+  @override
+  String get pickerCameraReads => 'ကင်မရာ ဖတ်နိုင်သည်';
+
+  @override
+  String get pickerTypeOnly => 'ရိုက်ရန် သို့မဟုတ် ကူးထည့်ရန်သာ';
+
+  @override
+  String get cameraCannotReadLanguage => 'ကင်မရာသည် ဤဘာသာစကားကို မဖတ်နိုင်ပါ။ “စာသားရိုက်ရန်” ကို သုံးပါ။';
+
+  @override
+  String get scanResultNote => 'စကင်န်ဖတ်ထားသော စာသားတွင် အမှားများ ပါနိုင်သည်။ အမှန်ကန်ဆုံး ဘာသာပြန်ရန် “စာသားရိုက်ရန်” ကို သုံးပါ။';
+
+  @override
   String get translateToLabel => 'သို့ ဘာသာပြန်ပါ';
 
   @override

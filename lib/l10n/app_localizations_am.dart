@@ -194,6 +194,30 @@ class AppLocalizationsAm extends AppLocalizations {
   String get scanLatinHint => 'ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ። ስካን እና ማስመጣት በግልጽ የላቲን ፊደል ጽሑፍ ላይ በተሻለ ይሰራሉ።';
 
   @override
+  String get sourceLanguageLabel => 'የምንጭ ቋንቋ';
+
+  @override
+  String get destinationLanguageLabel => 'የመድረሻ ቋንቋ';
+
+  @override
+  String get languageAuto => 'ራስ-ሰር';
+
+  @override
+  String get languageAutoLatin => 'ራስ-ሰር (የላቲን ፊደል)';
+
+  @override
+  String get pickerCameraReads => 'ካሜራ ማንበብ ይችላል';
+
+  @override
+  String get pickerTypeOnly => 'መተየብ ወይም መለጠፍ ብቻ';
+
+  @override
+  String get cameraCannotReadLanguage => 'ካሜራው ይህን ቋንቋ ማንበብ አይችልም። በምትኩ «ጽሑፍ ይተይቡ»ን ይጠቀሙ።';
+
+  @override
+  String get scanResultNote => 'የተቃኘ ጽሑፍ ስህተቶችን ሊይዝ ይችላል። ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ።';
+
+  @override
   String get translateToLabel => 'ወደ ተርጉም';
 
   @override

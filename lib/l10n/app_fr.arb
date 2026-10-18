@@ -109,5 +109,13 @@
   "errorPackTooSlow": "La réception du pack de langue prend trop de temps. Votre connexion internet est peut-être faible. Réessayez.",
   "errorNoTextHint": "Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l'import fonctionnent mieux avec un texte net en écriture latine.",
   "translatedFrom": "Traduit de",
-  "scanLatinHint": "Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l'import fonctionnent mieux avec un texte net en écriture latine."
+  "scanLatinHint": "Pour la traduction la plus précise, utilisez Saisir du texte. Le scan et l'import fonctionnent mieux avec un texte net en écriture latine.",
+  "sourceLanguageLabel": "Langue source",
+  "destinationLanguageLabel": "Langue de destination",
+  "languageAuto": "Auto",
+  "languageAutoLatin": "Auto (écriture latine)",
+  "pickerCameraReads": "La caméra peut lire",
+  "pickerTypeOnly": "Saisie ou collage uniquement",
+  "cameraCannotReadLanguage": "La caméra ne peut pas lire cette langue. Utilisez Saisir du texte.",
+  "scanResultNote": "Le texte scanné peut contenir des erreurs. Pour la traduction la plus précise, utilisez Saisir du texte."
 }

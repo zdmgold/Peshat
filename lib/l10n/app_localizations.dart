@@ -553,6 +553,54 @@ abstract class AppLocalizations {
   /// **'For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.'**
   String get scanLatinHint;
 
+  /// No description provided for @sourceLanguageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Source language'**
+  String get sourceLanguageLabel;
+
+  /// No description provided for @destinationLanguageLabel.
+  ///
+  /// In en, this message translates to:
+  /// **'Destination language'**
+  String get destinationLanguageLabel;
+
+  /// No description provided for @languageAuto.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto'**
+  String get languageAuto;
+
+  /// No description provided for @languageAutoLatin.
+  ///
+  /// In en, this message translates to:
+  /// **'Auto (Latin script)'**
+  String get languageAutoLatin;
+
+  /// No description provided for @pickerCameraReads.
+  ///
+  /// In en, this message translates to:
+  /// **'Camera can read'**
+  String get pickerCameraReads;
+
+  /// No description provided for @pickerTypeOnly.
+  ///
+  /// In en, this message translates to:
+  /// **'Type or paste only'**
+  String get pickerTypeOnly;
+
+  /// No description provided for @cameraCannotReadLanguage.
+  ///
+  /// In en, this message translates to:
+  /// **'The camera can't read this language. Use Type text instead.'**
+  String get cameraCannotReadLanguage;
+
+  /// No description provided for @scanResultNote.
+  ///
+  /// In en, this message translates to:
+  /// **'Scanned text can contain mistakes. For the most accurate translation, use Type text.'**
+  String get scanResultNote;
+
   /// No description provided for @translateToLabel.
   ///
   /// In en, this message translates to:

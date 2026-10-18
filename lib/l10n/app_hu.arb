@@ -109,5 +109,13 @@
   "errorPackTooSlow": "A nyelvi csomag fogadása túl sokáig tart. Lehet, hogy gyenge az internetkapcsolata. Próbálja újra.",
   "errorNoTextHint": "A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.",
   "translatedFrom": "Forrásnyelv",
-  "scanLatinHint": "A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban."
+  "scanLatinHint": "A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.",
+  "sourceLanguageLabel": "Forrásnyelv",
+  "destinationLanguageLabel": "Célnyelv",
+  "languageAuto": "Automatikus",
+  "languageAutoLatin": "Automatikus (latin betűk)",
+  "pickerCameraReads": "A kamera el tudja olvasni",
+  "pickerTypeOnly": "Csak beírás vagy beillesztés",
+  "cameraCannotReadLanguage": "A kamera nem tudja elolvasni ezt a nyelvet. Használd inkább a Szöveg beírása lehetőséget.",
+  "scanResultNote": "A beolvasott szöveg hibákat tartalmazhat. A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget."
 }

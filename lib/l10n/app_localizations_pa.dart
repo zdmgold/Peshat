@@ -194,6 +194,30 @@ class AppLocalizationsPa extends AppLocalizations {
   String get scanLatinHint => 'ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ। ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਸਾਫ਼ ਲੈਟਿਨ ਲਿਪੀ ਦੇ ਪਾਠ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦੇ ਹਨ।';
 
   @override
+  String get sourceLanguageLabel => 'ਸਰੋਤ ਭਾਸ਼ਾ';
+
+  @override
+  String get destinationLanguageLabel => 'ਮੰਜ਼ਿਲ ਭਾਸ਼ਾ';
+
+  @override
+  String get languageAuto => 'ਆਟੋ';
+
+  @override
+  String get languageAutoLatin => 'ਆਟੋ (ਲੈਟਿਨ ਲਿਪੀ)';
+
+  @override
+  String get pickerCameraReads => 'ਕੈਮਰਾ ਪੜ੍ਹ ਸਕਦਾ ਹੈ';
+
+  @override
+  String get pickerTypeOnly => 'ਸਿਰਫ਼ ਟਾਈਪ ਜਾਂ ਪੇਸਟ';
+
+  @override
+  String get cameraCannotReadLanguage => 'ਕੈਮਰਾ ਇਹ ਭਾਸ਼ਾ ਨਹੀਂ ਪੜ੍ਹ ਸਕਦਾ। ਇਸ ਦੀ ਬਜਾਏ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ।';
+
+  @override
+  String get scanResultNote => 'ਸਕੈਨ ਕੀਤੇ ਪਾਠ ਵਿੱਚ ਗਲਤੀਆਂ ਹੋ ਸਕਦੀਆਂ ਹਨ। ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ।';
+
+  @override
   String get translateToLabel => 'ਇਸ ਵਿੱਚ ਅਨੁਵਾਦ ਕਰੋ';
 
   @override

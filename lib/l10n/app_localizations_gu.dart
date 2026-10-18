@@ -194,6 +194,30 @@ class AppLocalizationsGu extends AppLocalizations {
   String get scanLatinHint => 'સૌથી સચોટ અનુવાદ માટે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો. સ્કેન અને ઇમ્પોર્ટ સ્પષ્ટ લેટિન લિપિના લખાણ સાથે શ્રેષ્ઠ કામ કરે છે.';
 
   @override
+  String get sourceLanguageLabel => 'સ્રોત ભાષા';
+
+  @override
+  String get destinationLanguageLabel => 'લક્ષ્ય ભાષા';
+
+  @override
+  String get languageAuto => 'ઓટો';
+
+  @override
+  String get languageAutoLatin => 'ઓટો (લેટિન લિપિ)';
+
+  @override
+  String get pickerCameraReads => 'કૅમેરા વાંચી શકે છે';
+
+  @override
+  String get pickerTypeOnly => 'ફક્ત ટાઇપ અથવા પેસ્ટ';
+
+  @override
+  String get cameraCannotReadLanguage => 'કૅમેરા આ ભાષા વાંચી શકતો નથી. તેના બદલે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો.';
+
+  @override
+  String get scanResultNote => 'સ્કેન કરેલા લખાણમાં ભૂલો હોઈ શકે છે. સૌથી સચોટ અનુવાદ માટે “ટેક્સ્ટ ટાઇપ કરો” નો ઉપયોગ કરો.';
+
+  @override
   String get translateToLabel => 'આમાં અનુવાદ કરો';
 
   @override

@@ -13,7 +13,8 @@ import 'package:peshat/screens/result_screen.dart';
 
 class _Ocr implements TextRecognizerService {
   @override
-  Future<RecognizedText> recognize(InputImage image) =>
+  Future<RecognizedText> recognize(InputImage image,
+          {TextRecognitionScript? script}) =>
       throw UnimplementedError();
   @override
   void dispose() {}

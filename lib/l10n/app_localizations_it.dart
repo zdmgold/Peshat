@@ -194,6 +194,30 @@ class AppLocalizationsIt extends AppLocalizations {
   String get scanLatinHint => 'Per la traduzione più accurata usa Digita testo. Scansione e Importazione funzionano meglio con testo chiaro in alfabeto latino.';
 
   @override
+  String get sourceLanguageLabel => 'Lingua di origine';
+
+  @override
+  String get destinationLanguageLabel => 'Lingua di destinazione';
+
+  @override
+  String get languageAuto => 'Automatico';
+
+  @override
+  String get languageAutoLatin => 'Automatico (alfabeto latino)';
+
+  @override
+  String get pickerCameraReads => 'La fotocamera può leggere';
+
+  @override
+  String get pickerTypeOnly => 'Solo digitazione o incolla';
+
+  @override
+  String get cameraCannotReadLanguage => 'La fotocamera non può leggere questa lingua. Usa Digita testo.';
+
+  @override
+  String get scanResultNote => 'Il testo scansionato può contenere errori. Per la traduzione più accurata usa Digita testo.';
+
+  @override
   String get translateToLabel => 'Traduci in';
 
   @override

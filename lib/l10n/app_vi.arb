@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Việc nhận gói ngôn ngữ mất quá nhiều thời gian. Kết nối internet của bạn có thể yếu. Hãy thử lại.",
   "errorNoTextHint": "Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.",
   "translatedFrom": "Đã dịch từ",
-  "scanLatinHint": "Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng."
+  "scanLatinHint": "Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.",
+  "sourceLanguageLabel": "Ngôn ngữ nguồn",
+  "destinationLanguageLabel": "Ngôn ngữ đích",
+  "languageAuto": "Tự động",
+  "languageAutoLatin": "Tự động (chữ Latinh)",
+  "pickerCameraReads": "Camera có thể đọc",
+  "pickerTypeOnly": "Chỉ nhập hoặc dán",
+  "cameraCannotReadLanguage": "Camera không thể đọc ngôn ngữ này. Hãy dùng Nhập văn bản.",
+  "scanResultNote": "Văn bản quét có thể có lỗi. Để dịch chính xác nhất, hãy dùng Nhập văn bản."
 }

@@ -194,6 +194,30 @@ class AppLocalizationsCs extends AppLocalizations {
   String get scanLatinHint => 'Pro nejpřesnější překlad použijte Napsat text. Skenování a import fungují nejlépe s čitelným textem v latince.';
 
   @override
+  String get sourceLanguageLabel => 'Zdrojový jazyk';
+
+  @override
+  String get destinationLanguageLabel => 'Cílový jazyk';
+
+  @override
+  String get languageAuto => 'Automaticky';
+
+  @override
+  String get languageAutoLatin => 'Automaticky (latinka)';
+
+  @override
+  String get pickerCameraReads => 'Fotoaparát umí číst';
+
+  @override
+  String get pickerTypeOnly => 'Pouze psát nebo vložit';
+
+  @override
+  String get cameraCannotReadLanguage => 'Fotoaparát tento jazyk přečíst neumí. Použijte Napsat text.';
+
+  @override
+  String get scanResultNote => 'Naskenovaný text může obsahovat chyby. Pro nejpřesnější překlad použijte Napsat text.';
+
+  @override
   String get translateToLabel => 'Přeložit do';
 
   @override

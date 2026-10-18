@@ -194,6 +194,30 @@ class AppLocalizationsFil extends AppLocalizations {
   String get scanLatinHint => 'Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.';
 
   @override
+  String get sourceLanguageLabel => 'Wikang pinagmulan';
+
+  @override
+  String get destinationLanguageLabel => 'Wikang patutunguhan';
+
+  @override
+  String get languageAuto => 'Awtomatiko';
+
+  @override
+  String get languageAutoLatin => 'Awtomatiko (Latin na script)';
+
+  @override
+  String get pickerCameraReads => 'Kayang basahin ng camera';
+
+  @override
+  String get pickerTypeOnly => 'I-type o i-paste lang';
+
+  @override
+  String get cameraCannotReadLanguage => 'Hindi mababasa ng camera ang wikang ito. Gamitin na lang ang I-type ang teksto.';
+
+  @override
+  String get scanResultNote => 'Maaaring may mali ang na-scan na teksto. Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto.';
+
+  @override
   String get translateToLabel => 'Isalin sa';
 
   @override

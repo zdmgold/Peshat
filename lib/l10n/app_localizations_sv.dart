@@ -194,6 +194,30 @@ class AppLocalizationsSv extends AppLocalizations {
   String get scanLatinHint => 'Använd Skriv text för den mest exakta översättningen. Skanna och Importera fungerar bäst med tydlig text med latinska bokstäver.';
 
   @override
+  String get sourceLanguageLabel => 'Källspråk';
+
+  @override
+  String get destinationLanguageLabel => 'Målspråk';
+
+  @override
+  String get languageAuto => 'Automatiskt';
+
+  @override
+  String get languageAutoLatin => 'Automatiskt (latinska bokstäver)';
+
+  @override
+  String get pickerCameraReads => 'Kameran kan läsa';
+
+  @override
+  String get pickerTypeOnly => 'Endast skriv eller klistra in';
+
+  @override
+  String get cameraCannotReadLanguage => 'Kameran kan inte läsa det här språket. Använd Skriv text i stället.';
+
+  @override
+  String get scanResultNote => 'Skannad text kan innehålla fel. Använd Skriv text för den mest exakta översättningen.';
+
+  @override
   String get translateToLabel => 'Översätt till';
 
   @override

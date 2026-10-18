@@ -194,6 +194,30 @@ class AppLocalizationsFi extends AppLocalizations {
   String get scanLatinHint => 'Tarkimman käännöksen saat Kirjoita teksti -toiminnolla. Skannaus ja tuonti toimivat parhaiten selkeällä latinalaisilla kirjaimilla kirjoitetulla tekstillä.';
 
   @override
+  String get sourceLanguageLabel => 'Lähdekieli';
+
+  @override
+  String get destinationLanguageLabel => 'Kohdekieli';
+
+  @override
+  String get languageAuto => 'Automaattinen';
+
+  @override
+  String get languageAutoLatin => 'Automaattinen (latinalaiset kirjaimet)';
+
+  @override
+  String get pickerCameraReads => 'Kamera osaa lukea';
+
+  @override
+  String get pickerTypeOnly => 'Vain kirjoitus tai liittäminen';
+
+  @override
+  String get cameraCannotReadLanguage => 'Kamera ei osaa lukea tätä kieltä. Käytä Kirjoita teksti -toimintoa.';
+
+  @override
+  String get scanResultNote => 'Skannattu teksti voi sisältää virheitä. Tarkimman käännöksen saat Kirjoita teksti -toiminnolla.';
+
+  @override
   String get translateToLabel => 'Käännä kielelle';
 
   @override

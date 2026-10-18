@@ -13,7 +13,15 @@ class TextRecognizerService {
 
   final _recognizers = <TextRecognitionScript, TextRecognizer>{};
 
-  Future<RecognizedText> recognize(InputImage image) async {
+  /// Reads [image]. With [script] set, only that reader runs (the user chose
+  /// the source language); otherwise the readers are tried in order.
+  Future<RecognizedText> recognize(InputImage image,
+      {TextRecognitionScript? script}) async {
+    if (script != null) {
+      final recognizer = _recognizers.putIfAbsent(
+          script, () => TextRecognizer(script: script));
+      return recognizer.processImage(image);
+    }
     RecognizedText? last;
     for (final script in _scripts) {
       final recognizer = _recognizers.putIfAbsent(

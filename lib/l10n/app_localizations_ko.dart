@@ -194,6 +194,30 @@ class AppLocalizationsKo extends AppLocalizations {
   String get scanLatinHint => '가장 정확한 번역을 원하면 “텍스트 입력”을 사용하세요. 스캔과 가져오기는 선명한 로마자 텍스트에서 가장 잘 작동합니다.';
 
   @override
+  String get sourceLanguageLabel => '원본 언어';
+
+  @override
+  String get destinationLanguageLabel => '대상 언어';
+
+  @override
+  String get languageAuto => '자동';
+
+  @override
+  String get languageAutoLatin => '자동(로마자)';
+
+  @override
+  String get pickerCameraReads => '카메라로 읽을 수 있음';
+
+  @override
+  String get pickerTypeOnly => '입력 또는 붙여넣기만 가능';
+
+  @override
+  String get cameraCannotReadLanguage => '카메라가 이 언어를 읽을 수 없습니다. 대신 “텍스트 입력”을 사용하세요.';
+
+  @override
+  String get scanResultNote => '스캔한 텍스트에는 오류가 있을 수 있습니다. 가장 정확한 번역을 원하면 “텍스트 입력”을 사용하세요.';
+
+  @override
   String get translateToLabel => '번역 대상';
 
   @override

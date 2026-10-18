@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Kifurushi cha lugha kinachukua muda mrefu sana kupokelewa. Muunganisho wako wa intaneti unaweza kuwa dhaifu. Jaribu tena.",
   "errorNoTextHint": "Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini.",
   "translatedFrom": "Imetafsiriwa kutoka",
-  "scanLatinHint": "Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini."
+  "scanLatinHint": "Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini.",
+  "sourceLanguageLabel": "Lugha chanzo",
+  "destinationLanguageLabel": "Lugha lengwa",
+  "languageAuto": "Otomatiki",
+  "languageAutoLatin": "Otomatiki (herufi za Kilatini)",
+  "pickerCameraReads": "Kamera inaweza kusoma",
+  "pickerTypeOnly": "Andika au bandika tu",
+  "cameraCannotReadLanguage": "Kamera haiwezi kusoma lugha hii. Tumia Andika maandishi badala yake.",
+  "scanResultNote": "Maandishi yaliyochanganuliwa yanaweza kuwa na makosa. Kwa tafsiri sahihi zaidi, tumia Andika maandishi."
 }

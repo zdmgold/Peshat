@@ -9,7 +9,8 @@ import 'package:peshat/core/services/translator_service.dart';
 
 class _FakeOcr implements TextRecognizerService {
   @override
-  Future<RecognizedText> recognize(InputImage image) =>
+  Future<RecognizedText> recognize(InputImage image,
+          {TextRecognitionScript? script}) =>
       throw UnimplementedError();
   @override
   void dispose() {}

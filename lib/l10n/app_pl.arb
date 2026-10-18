@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Odbieranie pakietu językowego trwa zbyt długo. Twoje połączenie z internetem może być słabe. Spróbuj ponownie.",
   "errorNoTextHint": "Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim.",
   "translatedFrom": "Przetłumaczono z",
-  "scanLatinHint": "Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim."
+  "scanLatinHint": "Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst. Skanowanie i import działają najlepiej z wyraźnym tekstem w alfabecie łacińskim.",
+  "sourceLanguageLabel": "Język źródłowy",
+  "destinationLanguageLabel": "Język docelowy",
+  "languageAuto": "Automatycznie",
+  "languageAutoLatin": "Automatycznie (alfabet łaciński)",
+  "pickerCameraReads": "Aparat potrafi czytać",
+  "pickerTypeOnly": "Tylko wpisywanie lub wklejanie",
+  "cameraCannotReadLanguage": "Aparat nie potrafi odczytać tego języka. Użyj zamiast tego opcji Wpisz tekst.",
+  "scanResultNote": "Zeskanowany tekst może zawierać błędy. Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst."
 }

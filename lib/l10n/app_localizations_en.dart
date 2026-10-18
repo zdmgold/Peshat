@@ -194,6 +194,30 @@ class AppLocalizationsEn extends AppLocalizations {
   String get scanLatinHint => 'For the most accurate translation, use Type text. Scan and Import work best with clear Latin-script text.';
 
   @override
+  String get sourceLanguageLabel => 'Source language';
+
+  @override
+  String get destinationLanguageLabel => 'Destination language';
+
+  @override
+  String get languageAuto => 'Auto';
+
+  @override
+  String get languageAutoLatin => 'Auto (Latin script)';
+
+  @override
+  String get pickerCameraReads => 'Camera can read';
+
+  @override
+  String get pickerTypeOnly => 'Type or paste only';
+
+  @override
+  String get cameraCannotReadLanguage => 'The camera can\'t read this language. Use Type text instead.';
+
+  @override
+  String get scanResultNote => 'Scanned text can contain mistakes. For the most accurate translation, use Type text.';
+
+  @override
   String get translateToLabel => 'Translate to';
 
   @override

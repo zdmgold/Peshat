@@ -194,6 +194,30 @@ class AppLocalizationsJa extends AppLocalizations {
   String get scanLatinHint => '最も正確に翻訳するには「テキストを入力」をご利用ください。スキャンとインポートは、鮮明なラテン文字のテキストで最も効果的です。';
 
   @override
+  String get sourceLanguageLabel => '原文の言語';
+
+  @override
+  String get destinationLanguageLabel => '翻訳先の言語';
+
+  @override
+  String get languageAuto => '自動';
+
+  @override
+  String get languageAutoLatin => '自動（ラテン文字）';
+
+  @override
+  String get pickerCameraReads => 'カメラで読み取り可能';
+
+  @override
+  String get pickerTypeOnly => '入力または貼り付けのみ';
+
+  @override
+  String get cameraCannotReadLanguage => 'カメラはこの言語を読み取れません。代わりに「テキストを入力」をご利用ください。';
+
+  @override
+  String get scanResultNote => 'スキャンしたテキストには誤りが含まれる場合があります。最も正確に翻訳するには「テキストを入力」をご利用ください。';
+
+  @override
   String get translateToLabel => '翻訳先';
 
   @override

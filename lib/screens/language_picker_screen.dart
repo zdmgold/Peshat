@@ -3,6 +3,7 @@ import 'package:flutter/material.dart' show Icons;
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
 import '../core/models/language.dart';
+import '../core/services/scan_scripts.dart';
 import '../core/services/translator_service.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
@@ -15,10 +16,15 @@ class LanguagePickerScreen extends StatefulWidget {
   final String? current;
   final List<String> recents;
 
+  /// Picks the language of the text in a photo: adds an Auto row and splits
+  /// the list into what the camera can read and what must be typed or pasted.
+  final bool sourceMode;
+
   const LanguagePickerScreen({
     super.key,
     this.current,
     this.recents = const [],
+    this.sourceMode = false,
   });
 
   @override
@@ -116,7 +122,42 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final recents = _recentList(all);
     final groups = _groupByLetter(filtered);
 
-    final entries = <IndexEntry>[
+    IndexEntry rowEntry(Language lang) => IndexEntry(
+          extent: _kRowExtent,
+          child: _Row(
+            language: lang,
+            selected: lang.code == widget.current,
+            textPrimary: textPrimary,
+            textSecondary: textSecondary,
+            accent: accent,
+            onTap: () => Navigator.pop(context, lang.code),
+          ),
+        );
+    IndexEntry labelEntry(String text) => IndexEntry(
+          extent: _kLabelExtent,
+          child: _SectionLabel(text: text, color: textTertiary),
+        );
+
+    final readable = filtered.where((l) => cameraCanRead(l.code)).toList();
+    final typeOnly = filtered.where((l) => !cameraCanRead(l.code)).toList();
+    final entries = widget.sourceMode
+        ? <IndexEntry>[
+            if (_query.isEmpty)
+              rowEntry(Language(
+                code: sourceAuto,
+                nativeName: l10n.languageAutoLatin,
+                englishName: l10n.languageAutoLatin,
+              )),
+            if (readable.isNotEmpty) ...[
+              labelEntry(l10n.pickerCameraReads),
+              for (final l in readable) rowEntry(l),
+            ],
+            if (typeOnly.isNotEmpty) ...[
+              labelEntry(l10n.pickerTypeOnly),
+              for (final l in typeOnly) rowEntry(l),
+            ],
+          ]
+        : <IndexEntry>[
       if (recents.isNotEmpty) ...[
         IndexEntry(
           extent: _kLabelExtent,
@@ -170,7 +211,9 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
       navigationBar: CupertinoNavigationBar(
         leading: peshatBackButton(context, color: textPrimary),
         middle: Text(
-          l10n.selectLanguageTitle,
+          widget.sourceMode
+              ? l10n.sourceLanguageLabel
+              : l10n.selectLanguageTitle,
           style: AppTypography.chrome.copyWith(
             fontSize: 17,
             fontWeight: FontWeight.w600,
@@ -233,7 +276,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
                   : AlphaIndexedList(
                       entries: entries,
                       letterColor: accent,
-                      showIndex: _query.isEmpty,
+                      showIndex: _query.isEmpty && !widget.sourceMode,
                     ),
             ),
             const AdSlot(),

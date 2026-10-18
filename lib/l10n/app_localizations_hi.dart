@@ -194,6 +194,30 @@ class AppLocalizationsHi extends AppLocalizations {
   String get scanLatinHint => 'सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें। स्कैन और इम्पोर्ट साफ़ लैटिन लिपि के पाठ के साथ सबसे अच्छा काम करते हैं।';
 
   @override
+  String get sourceLanguageLabel => 'स्रोत भाषा';
+
+  @override
+  String get destinationLanguageLabel => 'गंतव्य भाषा';
+
+  @override
+  String get languageAuto => 'ऑटो';
+
+  @override
+  String get languageAutoLatin => 'ऑटो (लैटिन लिपि)';
+
+  @override
+  String get pickerCameraReads => 'कैमरा पढ़ सकता है';
+
+  @override
+  String get pickerTypeOnly => 'केवल टाइप या पेस्ट';
+
+  @override
+  String get cameraCannotReadLanguage => 'कैमरा इस भाषा को नहीं पढ़ सकता। इसके बजाय “टेक्स्ट टाइप करें” का उपयोग करें।';
+
+  @override
+  String get scanResultNote => 'स्कैन किए गए पाठ में गलतियाँ हो सकती हैं। सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें।';
+
+  @override
   String get translateToLabel => 'इसमें अनुवाद करें';
 
   @override

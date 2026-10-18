@@ -194,6 +194,30 @@ class AppLocalizationsTh extends AppLocalizations {
   String get scanLatinHint => 'เพื่อการแปลที่แม่นยำที่สุด ให้ใช้ “พิมพ์ข้อความ” การสแกนและการนำเข้าทำงานได้ดีที่สุดกับข้อความอักษรละตินที่ชัดเจน';
 
   @override
+  String get sourceLanguageLabel => 'ภาษาต้นทาง';
+
+  @override
+  String get destinationLanguageLabel => 'ภาษาปลายทาง';
+
+  @override
+  String get languageAuto => 'อัตโนมัติ';
+
+  @override
+  String get languageAutoLatin => 'อัตโนมัติ (อักษรละติน)';
+
+  @override
+  String get pickerCameraReads => 'กล้องอ่านได้';
+
+  @override
+  String get pickerTypeOnly => 'พิมพ์หรือวางเท่านั้น';
+
+  @override
+  String get cameraCannotReadLanguage => 'กล้องอ่านภาษานี้ไม่ได้ ให้ใช้ “พิมพ์ข้อความ” แทน';
+
+  @override
+  String get scanResultNote => 'ข้อความที่สแกนอาจมีข้อผิดพลาด เพื่อการแปลที่แม่นยำที่สุด ให้ใช้ “พิมพ์ข้อความ”';
+
+  @override
   String get translateToLabel => 'แปลเป็น';
 
   @override

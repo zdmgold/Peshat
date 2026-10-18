@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Kielipaketin vastaanottaminen kestää liian kauan. Internetyhteytesi voi olla heikko. Yritä uudelleen.",
   "errorNoTextHint": "Tarkimman käännöksen saat Kirjoita teksti -toiminnolla. Skannaus ja tuonti toimivat parhaiten selkeällä latinalaisilla kirjaimilla kirjoitetulla tekstillä.",
   "translatedFrom": "Käännetty kielestä",
-  "scanLatinHint": "Tarkimman käännöksen saat Kirjoita teksti -toiminnolla. Skannaus ja tuonti toimivat parhaiten selkeällä latinalaisilla kirjaimilla kirjoitetulla tekstillä."
+  "scanLatinHint": "Tarkimman käännöksen saat Kirjoita teksti -toiminnolla. Skannaus ja tuonti toimivat parhaiten selkeällä latinalaisilla kirjaimilla kirjoitetulla tekstillä.",
+  "sourceLanguageLabel": "Lähdekieli",
+  "destinationLanguageLabel": "Kohdekieli",
+  "languageAuto": "Automaattinen",
+  "languageAutoLatin": "Automaattinen (latinalaiset kirjaimet)",
+  "pickerCameraReads": "Kamera osaa lukea",
+  "pickerTypeOnly": "Vain kirjoitus tai liittäminen",
+  "cameraCannotReadLanguage": "Kamera ei osaa lukea tätä kieltä. Käytä Kirjoita teksti -toimintoa.",
+  "scanResultNote": "Skannattu teksti voi sisältää virheitä. Tarkimman käännöksen saat Kirjoita teksti -toiminnolla."
 }

@@ -194,6 +194,30 @@ class AppLocalizationsVi extends AppLocalizations {
   String get scanLatinHint => 'Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.';
 
   @override
+  String get sourceLanguageLabel => 'Ngôn ngữ nguồn';
+
+  @override
+  String get destinationLanguageLabel => 'Ngôn ngữ đích';
+
+  @override
+  String get languageAuto => 'Tự động';
+
+  @override
+  String get languageAutoLatin => 'Tự động (chữ Latinh)';
+
+  @override
+  String get pickerCameraReads => 'Camera có thể đọc';
+
+  @override
+  String get pickerTypeOnly => 'Chỉ nhập hoặc dán';
+
+  @override
+  String get cameraCannotReadLanguage => 'Camera không thể đọc ngôn ngữ này. Hãy dùng Nhập văn bản.';
+
+  @override
+  String get scanResultNote => 'Văn bản quét có thể có lỗi. Để dịch chính xác nhất, hãy dùng Nhập văn bản.';
+
+  @override
   String get translateToLabel => 'Dịch sang';
 
   @override

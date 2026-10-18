@@ -194,6 +194,30 @@ class AppLocalizationsHu extends AppLocalizations {
   String get scanLatinHint => 'A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.';
 
   @override
+  String get sourceLanguageLabel => 'Forrásnyelv';
+
+  @override
+  String get destinationLanguageLabel => 'Célnyelv';
+
+  @override
+  String get languageAuto => 'Automatikus';
+
+  @override
+  String get languageAutoLatin => 'Automatikus (latin betűk)';
+
+  @override
+  String get pickerCameraReads => 'A kamera el tudja olvasni';
+
+  @override
+  String get pickerTypeOnly => 'Csak beírás vagy beillesztés';
+
+  @override
+  String get cameraCannotReadLanguage => 'A kamera nem tudja elolvasni ezt a nyelvet. Használd inkább a Szöveg beírása lehetőséget.';
+
+  @override
+  String get scanResultNote => 'A beolvasott szöveg hibákat tartalmazhat. A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget.';
+
+  @override
   String get translateToLabel => 'Fordítás erre';
 
   @override

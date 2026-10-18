@@ -194,6 +194,30 @@ class AppLocalizationsTa extends AppLocalizations {
   String get scanLatinHint => 'மிகத் துல்லியமான மொழிபெயர்ப்புக்கு “உரையை உள்ளிடு” ஐப் பயன்படுத்தவும். ஸ்கேன் மற்றும் இறக்குமதி தெளிவான லத்தீன் எழுத்து உரையுடன் சிறப்பாக வேலை செய்யும்.';
 
   @override
+  String get sourceLanguageLabel => 'மூல மொழி';
+
+  @override
+  String get destinationLanguageLabel => 'இலக்கு மொழி';
+
+  @override
+  String get languageAuto => 'தானியங்கி';
+
+  @override
+  String get languageAutoLatin => 'தானியங்கி (லத்தீன் எழுத்து)';
+
+  @override
+  String get pickerCameraReads => 'கேமரா படிக்கக்கூடியவை';
+
+  @override
+  String get pickerTypeOnly => 'தட்டச்சு அல்லது ஒட்டுதல் மட்டும்';
+
+  @override
+  String get cameraCannotReadLanguage => 'கேமராவால் இந்த மொழியைப் படிக்க முடியாது. அதற்குப் பதிலாக “உரையை உள்ளிடு” ஐப் பயன்படுத்தவும்.';
+
+  @override
+  String get scanResultNote => 'ஸ்கேன் செய்த உரையில் பிழைகள் இருக்கலாம். மிகத் துல்லியமான மொழிபெயர்ப்புக்கு “உரையை உள்ளிடு” ஐப் பயன்படுத்தவும்.';
+
+  @override
   String get translateToLabel => 'மொழிபெயர்க்க வேண்டிய மொழி';
 
   @override

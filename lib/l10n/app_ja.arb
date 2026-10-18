@@ -109,5 +109,13 @@
   "errorPackTooSlow": "言語パックの受信に時間がかかっています。インターネット接続が弱い可能性があります。もう一度お試しください。",
   "errorNoTextHint": "最も正確に翻訳するには「テキストを入力」をご利用ください。スキャンとインポートは、鮮明なラテン文字のテキストで最も効果的です。",
   "translatedFrom": "翻訳元",
-  "scanLatinHint": "最も正確に翻訳するには「テキストを入力」をご利用ください。スキャンとインポートは、鮮明なラテン文字のテキストで最も効果的です。"
+  "scanLatinHint": "最も正確に翻訳するには「テキストを入力」をご利用ください。スキャンとインポートは、鮮明なラテン文字のテキストで最も効果的です。",
+  "sourceLanguageLabel": "原文の言語",
+  "destinationLanguageLabel": "翻訳先の言語",
+  "languageAuto": "自動",
+  "languageAutoLatin": "自動（ラテン文字）",
+  "pickerCameraReads": "カメラで読み取り可能",
+  "pickerTypeOnly": "入力または貼り付けのみ",
+  "cameraCannotReadLanguage": "カメラはこの言語を読み取れません。代わりに「テキストを入力」をご利用ください。",
+  "scanResultNote": "スキャンしたテキストには誤りが含まれる場合があります。最も正確に翻訳するには「テキストを入力」をご利用ください。"
 }

@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Pakej bahasa mengambil masa terlalu lama untuk diterima. Sambungan internet anda mungkin lemah. Cuba lagi.",
   "errorNoTextHint": "Untuk terjemahan paling tepat, gunakan Taip teks. Imbas dan Import berfungsi paling baik dengan teks tulisan Latin yang jelas.",
   "translatedFrom": "Diterjemahkan daripada",
-  "scanLatinHint": "Untuk terjemahan paling tepat, gunakan Taip teks. Imbas dan Import berfungsi paling baik dengan teks tulisan Latin yang jelas."
+  "scanLatinHint": "Untuk terjemahan paling tepat, gunakan Taip teks. Imbas dan Import berfungsi paling baik dengan teks tulisan Latin yang jelas.",
+  "sourceLanguageLabel": "Bahasa sumber",
+  "destinationLanguageLabel": "Bahasa destinasi",
+  "languageAuto": "Automatik",
+  "languageAutoLatin": "Automatik (tulisan Latin)",
+  "pickerCameraReads": "Kamera boleh membaca",
+  "pickerTypeOnly": "Taip atau tampal sahaja",
+  "cameraCannotReadLanguage": "Kamera tidak dapat membaca bahasa ini. Gunakan Taip teks.",
+  "scanResultNote": "Teks yang diimbas mungkin mengandungi kesilapan. Untuk terjemahan paling tepat, gunakan Taip teks."
 }

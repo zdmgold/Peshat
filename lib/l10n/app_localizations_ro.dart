@@ -194,6 +194,30 @@ class AppLocalizationsRo extends AppLocalizations {
   String get scanLatinHint => 'Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.';
 
   @override
+  String get sourceLanguageLabel => 'Limba sursă';
+
+  @override
+  String get destinationLanguageLabel => 'Limba destinație';
+
+  @override
+  String get languageAuto => 'Automat';
+
+  @override
+  String get languageAutoLatin => 'Automat (alfabet latin)';
+
+  @override
+  String get pickerCameraReads => 'Camera poate citi';
+
+  @override
+  String get pickerTypeOnly => 'Doar tastare sau lipire';
+
+  @override
+  String get cameraCannotReadLanguage => 'Camera nu poate citi această limbă. Folosiți Introdu text.';
+
+  @override
+  String get scanResultNote => 'Textul scanat poate conține greșeli. Pentru cea mai precisă traducere, folosiți Introdu text.';
+
+  @override
   String get translateToLabel => 'Tradu în';
 
   @override

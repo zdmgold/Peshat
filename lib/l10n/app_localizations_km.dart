@@ -194,6 +194,30 @@ class AppLocalizationsKm extends AppLocalizations {
   String get scanLatinHint => 'សម្រាប់ការបកប្រែដែលត្រឹមត្រូវបំផុត សូមប្រើ «វាយអត្ថបទ»។ ការស្កេន និងការនាំចូលដំណើរការល្អបំផុតជាមួយអត្ថបទអក្សរឡាតាំងច្បាស់។';
 
   @override
+  String get sourceLanguageLabel => 'ភាសាប្រភព';
+
+  @override
+  String get destinationLanguageLabel => 'ភាសាគោលដៅ';
+
+  @override
+  String get languageAuto => 'ស្វ័យប្រវត្តិ';
+
+  @override
+  String get languageAutoLatin => 'ស្វ័យប្រវត្តិ (អក្សរឡាតាំង)';
+
+  @override
+  String get pickerCameraReads => 'កាមេរ៉ាអាចអានបាន';
+
+  @override
+  String get pickerTypeOnly => 'វាយ ឬបិទភ្ជាប់តែប៉ុណ្ណោះ';
+
+  @override
+  String get cameraCannotReadLanguage => 'កាមេរ៉ាមិនអាចអានភាសានេះបានទេ។ សូមប្រើ «វាយអត្ថបទ» ជំនួស។';
+
+  @override
+  String get scanResultNote => 'អត្ថបទដែលបានស្កេនអាចមានកំហុស។ សម្រាប់ការបកប្រែដែលត្រឹមត្រូវបំផុត សូមប្រើ «វាយអត្ថបទ»។';
+
+  @override
   String get translateToLabel => 'បកប្រែទៅ';
 
   @override

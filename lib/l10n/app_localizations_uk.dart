@@ -194,6 +194,30 @@ class AppLocalizationsUk extends AppLocalizations {
   String get scanLatinHint => 'Для найточнішого перекладу користуйтеся «Ввести текст». Сканування та імпорт найкраще працюють із чітким текстом латиницею.';
 
   @override
+  String get sourceLanguageLabel => 'Мова оригіналу';
+
+  @override
+  String get destinationLanguageLabel => 'Мова перекладу';
+
+  @override
+  String get languageAuto => 'Авто';
+
+  @override
+  String get languageAutoLatin => 'Авто (латиниця)';
+
+  @override
+  String get pickerCameraReads => 'Камера може прочитати';
+
+  @override
+  String get pickerTypeOnly => 'Лише введення або вставлення';
+
+  @override
+  String get cameraCannotReadLanguage => 'Камера не може прочитати цю мову. Користуйтеся «Ввести текст».';
+
+  @override
+  String get scanResultNote => 'Відсканований текст може містити помилки. Для найточнішого перекладу користуйтеся «Ввести текст».';
+
+  @override
   String get translateToLabel => 'Перекласти на';
 
   @override

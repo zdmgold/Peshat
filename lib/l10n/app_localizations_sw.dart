@@ -194,6 +194,30 @@ class AppLocalizationsSw extends AppLocalizations {
   String get scanLatinHint => 'Kwa tafsiri sahihi zaidi, tumia Andika maandishi. Changanua na Leta hufanya kazi vizuri zaidi na maandishi wazi ya herufi za Kilatini.';
 
   @override
+  String get sourceLanguageLabel => 'Lugha chanzo';
+
+  @override
+  String get destinationLanguageLabel => 'Lugha lengwa';
+
+  @override
+  String get languageAuto => 'Otomatiki';
+
+  @override
+  String get languageAutoLatin => 'Otomatiki (herufi za Kilatini)';
+
+  @override
+  String get pickerCameraReads => 'Kamera inaweza kusoma';
+
+  @override
+  String get pickerTypeOnly => 'Andika au bandika tu';
+
+  @override
+  String get cameraCannotReadLanguage => 'Kamera haiwezi kusoma lugha hii. Tumia Andika maandishi badala yake.';
+
+  @override
+  String get scanResultNote => 'Maandishi yaliyochanganuliwa yanaweza kuwa na makosa. Kwa tafsiri sahihi zaidi, tumia Andika maandishi.';
+
+  @override
   String get translateToLabel => 'Tafsiri kwa';
 
   @override

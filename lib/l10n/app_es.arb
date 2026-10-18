@@ -109,5 +109,13 @@
   "errorPackTooSlow": "El paquete de idioma tarda demasiado en recibirse. Es posible que tu conexión a internet sea débil. Inténtalo de nuevo.",
   "errorNoTextHint": "Para una traducción más precisa, usa Escribir texto. Escanear e Importar funcionan mejor con texto claro en alfabeto latino.",
   "translatedFrom": "Traducido de",
-  "scanLatinHint": "Para una traducción más precisa, usa Escribir texto. Escanear e Importar funcionan mejor con texto claro en alfabeto latino."
+  "scanLatinHint": "Para una traducción más precisa, usa Escribir texto. Escanear e Importar funcionan mejor con texto claro en alfabeto latino.",
+  "sourceLanguageLabel": "Idioma de origen",
+  "destinationLanguageLabel": "Idioma de destino",
+  "languageAuto": "Automático",
+  "languageAutoLatin": "Automático (alfabeto latino)",
+  "pickerCameraReads": "La cámara puede leer",
+  "pickerTypeOnly": "Solo escribir o pegar",
+  "cameraCannotReadLanguage": "La cámara no puede leer este idioma. Usa Escribir texto.",
+  "scanResultNote": "El texto escaneado puede contener errores. Para una traducción más precisa, usa Escribir texto."
 }

@@ -109,5 +109,13 @@
   "errorPackTooSlow": "Det tar for lang tid å motta språkpakken. Internettforbindelsen din kan være svak. Prøv igjen.",
   "errorNoTextHint": "Bruk Skriv tekst for den mest nøyaktige oversettelsen. Skann og Importer fungerer best med tydelig tekst med latinske bokstaver.",
   "translatedFrom": "Oversatt fra",
-  "scanLatinHint": "Bruk Skriv tekst for den mest nøyaktige oversettelsen. Skann og Importer fungerer best med tydelig tekst med latinske bokstaver."
+  "scanLatinHint": "Bruk Skriv tekst for den mest nøyaktige oversettelsen. Skann og Importer fungerer best med tydelig tekst med latinske bokstaver.",
+  "sourceLanguageLabel": "Kildespråk",
+  "destinationLanguageLabel": "Målspråk",
+  "languageAuto": "Automatisk",
+  "languageAutoLatin": "Automatisk (latinsk skrift)",
+  "pickerCameraReads": "Kameraet kan lese",
+  "pickerTypeOnly": "Bare skriv eller lim inn",
+  "cameraCannotReadLanguage": "Kameraet kan ikke lese dette språket. Bruk Skriv tekst i stedet.",
+  "scanResultNote": "Skannet tekst kan inneholde feil. Bruk Skriv tekst for den mest nøyaktige oversettelsen."
 }
