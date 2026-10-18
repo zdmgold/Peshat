@@ -76,8 +76,8 @@ void main() {
     // Toolbar chips — three, one of each.
     expect(findHugeIcon(AppIcons.settings), findsOneWidget);
     expect(findHugeIcon(AppIcons.moon), findsOneWidget);
-    // Globe appears twice: toolbar chip + language selector row.
-    expect(findHugeIcon(AppIcons.globe), findsNWidgets(2));
+    // Globe: toolbar chip only; the language card has two labelled halves.
+    expect(findHugeIcon(AppIcons.globe), findsOneWidget);
 
     // Secondary action card icons.
     expect(findHugeIcon(AppIcons.typeText), findsOneWidget);
