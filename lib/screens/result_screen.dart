@@ -3,7 +3,6 @@ import 'package:flutter/cupertino.dart';
 import '../widgets/auto_direction_text.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
-import '../widgets/action_card.dart';
 import 'package:flutter/material.dart' show SelectionArea;
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/services.dart';
@@ -39,6 +38,9 @@ class ResultScreen extends StatefulWidget {
   /// False when reopening an entry from History, so it isn't saved again.
   final bool saveToHistory;
 
+  /// Lets tests supply a provider with fake services.
+  final ScanProvider? provider;
+
   const ResultScreen({
     super.key,
     this.imagePath,
@@ -46,6 +48,7 @@ class ResultScreen extends StatefulWidget {
     required this.initialTargetLanguage,
     required this.history,
     this.saveToHistory = true,
+    this.provider,
   }) : assert(imagePath != null || inputText != null,
             'Either imagePath or inputText must be provided');
 
@@ -54,7 +57,7 @@ class ResultScreen extends StatefulWidget {
 }
 
 class _ResultScreenState extends State<ResultScreen> {
-  final ScanProvider _provider = ScanProvider();
+  late final ScanProvider _provider = widget.provider ?? ScanProvider();
   late String _targetLanguage;
   _ResultTab _tab = _ResultTab.original;
   late bool _saved = !widget.saveToHistory;
@@ -76,24 +79,22 @@ class _ResultScreenState extends State<ResultScreen> {
 
   void _onStateChanged() {
     final s = _provider.value;
-    if (s is ScanDone && !_saved) {
-      _saved = true;
-      if (s.sameLanguage) {
-        if (mounted) setState(() => _tab = _ResultTab.translation);
-        return;
-      }
-      widget.history.add(ScanResult(
-        id: DateTime.now().microsecondsSinceEpoch.toString(),
-        sourceText: s.sourceText,
-        translatedText: s.translatedText,
-        sourceLang: s.sourceLanguage,
-        targetLang: s.targetLanguage,
-        timestamp: DateTime.now(),
-        confidence: 1.0,
-      ));
-      InterstitialService.instance.onTranslationCompleted();
-      if (mounted) setState(() => _tab = _ResultTab.translation);
-    }
+    if (s is! ScanDone) return;
+    // Always land on the translation, including when reopened from History.
+    if (mounted) setState(() => _tab = _ResultTab.translation);
+    if (_saved) return;
+    _saved = true;
+    if (s.sameLanguage) return;
+    widget.history.add(ScanResult(
+      id: DateTime.now().microsecondsSinceEpoch.toString(),
+      sourceText: s.sourceText,
+      translatedText: s.translatedText,
+      sourceLang: s.sourceLanguage,
+      targetLang: s.targetLanguage,
+      timestamp: DateTime.now(),
+      confidence: 1.0,
+    ));
+    InterstitialService.instance.onTranslationCompleted();
   }
 
   Future<void> _runPipeline() async {
@@ -541,29 +542,78 @@ class _TranslationTab extends StatelessWidget {
     final l10n = AppLocalizations.of(context)!;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     return Column(
       children: [
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-          child: ActionCard(
-            icon: AppIcons.globe,
-            label: l10n.translatedFrom,
-            value: languageNativeName(sourceLanguage),
-            onTap: () {},
+          child: Semantics(
+            button: true,
+            label: '${l10n.translatedFrom} ${languageNativeName(sourceLanguage)}, '
+                '${l10n.translatedTo} ${languageNativeName(targetLanguage)}',
+            child: ExcludeSemantics(
+              child: Row(
+                children: [
+                  Flexible(
+                    child: Text(
+                      languageNativeName(sourceLanguage),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                      style: AppTypography.chrome.copyWith(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w500,
+                        color: textSecondary,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: Spacing.sm),
+                    child: Icon(
+                      CupertinoIcons.arrow_right,
+                      size: 14,
+                      color: textSecondary,
+                      matchTextDirection: true,
+                    ),
+                  ),
+                  Flexible(
+                    child: GestureDetector(
+                      behavior: HitTestBehavior.opaque,
+                      onTap: onPickLanguage,
+                      child: Padding(
+                        padding: const EdgeInsets.symmetric(vertical: 6),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Flexible(
+                              child: Text(
+                                languageNativeName(targetLanguage),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                                style: AppTypography.chrome.copyWith(
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700,
+                                  color: textPrimary,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(width: Spacing.xs),
+                            Icon(
+                              CupertinoIcons.chevron_down,
+                              size: 12,
+                              color: textSecondary,
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
         ),
         const SizedBox(height: Spacing.sm),
-        Padding(
-          padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
-          child: ActionCard(
-            icon: AppIcons.globe,
-            label: l10n.translatedTo,
-            value: languageNativeName(targetLanguage),
-            showChevron: true,
-            onTap: onPickLanguage,
-          ),
-        ),
-        const SizedBox(height: Spacing.md),
         Expanded(
           child: SingleChildScrollView(
             padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
