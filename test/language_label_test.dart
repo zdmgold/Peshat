@@ -14,4 +14,10 @@ void main() {
   test('unknown code falls back to upper-case code', () {
     expect(languageLabel('xx'), 'XX');
   });
+
+  test('English subtitle only when it differs from the native name', () {
+    expect(languageEnglishSubtitle('sq'), 'Albanian');
+    expect(languageEnglishSubtitle('te'), 'Telugu');
+    expect(languageEnglishSubtitle('en'), isNull);
+  });
 }

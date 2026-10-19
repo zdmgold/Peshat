@@ -559,21 +559,17 @@ class _TranslationTab extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: Spacing.md),
           child: Semantics(
             button: true,
-            label: '${l10n.translatedFrom} ${languageNativeName(sourceLanguage)}, '
-                '${l10n.translatedTo} ${languageNativeName(targetLanguage)}',
+            label: '${l10n.translatedFrom} ${languageLabel(sourceLanguage)}, '
+                '${l10n.translatedTo} ${languageLabel(targetLanguage)}',
             child: ExcludeSemantics(
               child: Row(
                 children: [
                   Flexible(
-                    child: Text(
-                      languageNativeName(sourceLanguage),
-                      maxLines: 1,
-                      overflow: TextOverflow.ellipsis,
-                      style: AppTypography.chrome.copyWith(
-                        fontSize: 14,
-                        fontWeight: FontWeight.w500,
-                        color: textSecondary,
-                      ),
+                    child: _LangName(
+                      code: sourceLanguage,
+                      nativeColor: textSecondary,
+                      englishColor: textSecondary,
+                      nativeWeight: FontWeight.w500,
                     ),
                   ),
                   Padding(
@@ -596,15 +592,11 @@ class _TranslationTab extends StatelessWidget {
                           mainAxisSize: MainAxisSize.min,
                           children: [
                             Flexible(
-                              child: Text(
-                                languageNativeName(targetLanguage),
-                                maxLines: 1,
-                                overflow: TextOverflow.ellipsis,
-                                style: AppTypography.chrome.copyWith(
-                                  fontSize: 14,
-                                  fontWeight: FontWeight.w700,
-                                  color: textPrimary,
-                                ),
+                              child: _LangName(
+                                code: targetLanguage,
+                                nativeColor: textPrimary,
+                                englishColor: textSecondary,
+                                nativeWeight: FontWeight.w700,
                               ),
                             ),
                             const SizedBox(width: Spacing.xs),
@@ -632,8 +624,9 @@ class _TranslationTab extends StatelessWidget {
               child: Text(
                 l10n.scanResultNote,
                 style: AppTypography.chrome.copyWith(
-                  fontSize: 12,
+                  fontSize: 13,
                   height: 1.35,
+                  fontWeight: FontWeight.w500,
                   color: textSecondary,
                 ),
               ),
@@ -920,6 +913,50 @@ class _ErrorView extends StatelessWidget {
           ],
         ],
       ),
+    );
+  }
+}
+
+/// A language's own name with its English name after it in a smaller grey
+/// font ("Shqip · Albanian"). May wrap to a second line on narrow screens.
+class _LangName extends StatelessWidget {
+  final String code;
+  final Color nativeColor;
+  final Color englishColor;
+  final FontWeight nativeWeight;
+
+  const _LangName({
+    required this.code,
+    required this.nativeColor,
+    required this.englishColor,
+    required this.nativeWeight,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    final english = languageEnglishSubtitle(code);
+    return Text.rich(
+      TextSpan(
+        text: languageNativeName(code),
+        style: AppTypography.chrome.copyWith(
+          fontSize: 14,
+          fontWeight: nativeWeight,
+          color: nativeColor,
+        ),
+        children: [
+          if (english != null)
+            TextSpan(
+              text: ' · $english',
+              style: AppTypography.chrome.copyWith(
+                fontSize: 12,
+                fontWeight: FontWeight.w500,
+                color: englishColor,
+              ),
+            ),
+        ],
+      ),
+      maxLines: 2,
+      overflow: TextOverflow.ellipsis,
     );
   }
 }

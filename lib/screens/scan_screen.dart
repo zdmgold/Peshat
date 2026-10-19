@@ -369,9 +369,16 @@ class _ScanScreenState extends State<ScanScreen> {
                         sourceValue: widget.settings.source.value == sourceAuto
                             ? l10n.languageAuto
                             : languageNativeName(widget.settings.source.value),
+                        sourceSubtitle:
+                            widget.settings.source.value == sourceAuto
+                                ? null
+                                : languageEnglishSubtitle(
+                                    widget.settings.source.value),
                         onTapSource: _pickSourceLanguage,
                         destinationLabel: l10n.destinationLanguageLabel,
                         destinationValue: languageNativeName(widget.settings.value),
+                        destinationSubtitle:
+                            languageEnglishSubtitle(widget.settings.value),
                         onTapDestination: _pickTargetLanguage,
                       ),
                     ),

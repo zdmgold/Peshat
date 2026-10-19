@@ -202,6 +202,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
                   icon: AppIcons.globe,
                   label: l10n.translateToLabel,
                   value: languageNativeName(code),
+                  valueSubtitle: languageEnglishSubtitle(code),
                   showChevron: true,
                   onTap: _pickTarget,
                 ),

@@ -11,18 +11,22 @@ import 'peshat_icon.dart';
 class LanguagePairCard extends StatelessWidget {
   final String sourceLabel;
   final String sourceValue;
+  final String? sourceSubtitle;
   final VoidCallback onTapSource;
   final String destinationLabel;
   final String destinationValue;
+  final String? destinationSubtitle;
   final VoidCallback onTapDestination;
 
   const LanguagePairCard({
     super.key,
     required this.sourceLabel,
     required this.sourceValue,
+    this.sourceSubtitle,
     required this.onTapSource,
     required this.destinationLabel,
     required this.destinationValue,
+    this.destinationSubtitle,
     required this.onTapDestination,
   });
 
@@ -39,13 +43,15 @@ class LanguagePairCard extends StatelessWidget {
         borderRadius: BorderRadius.circular(12),
         border: Border.all(color: border, width: 0.5),
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: IntrinsicHeight(
+        child: Row(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
           Expanded(
             child: _Half(
               label: sourceLabel,
               value: sourceValue,
+              subtitle: sourceSubtitle,
               onTap: onTapSource,
             ),
           ),
@@ -59,11 +65,13 @@ class LanguagePairCard extends StatelessWidget {
               child: _Half(
                 label: destinationLabel,
                 value: destinationValue,
+                subtitle: destinationSubtitle,
                 onTap: onTapDestination,
               ),
             ),
           ),
         ],
+      ),
       ),
     );
   }
@@ -72,8 +80,14 @@ class LanguagePairCard extends StatelessWidget {
 class _Half extends StatefulWidget {
   final String label;
   final String value;
+  final String? subtitle;
   final VoidCallback onTap;
-  const _Half({required this.label, required this.value, required this.onTap});
+  const _Half({
+    required this.label,
+    required this.value,
+    required this.onTap,
+    this.subtitle,
+  });
 
   @override
   State<_Half> createState() => _HalfState();
@@ -93,7 +107,8 @@ class _HalfState extends State<_Half> {
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     return Semantics(
       button: true,
-      label: '${widget.label}, ${widget.value}',
+      label: '${widget.label}, ${widget.value}'
+          '${widget.subtitle == null ? '' : ', ${widget.subtitle}'}',
       excludeSemantics: true,
       child: GestureDetector(
         behavior: HitTestBehavior.opaque,
@@ -107,7 +122,7 @@ class _HalfState extends State<_Half> {
           child: Padding(
             padding: const EdgeInsets.symmetric(
               horizontal: Spacing.md,
-              vertical: 10,
+              vertical: 8,
             ),
             child: Row(
               children: [
@@ -126,7 +141,7 @@ class _HalfState extends State<_Half> {
                           color: textSecondary,
                         ),
                       ),
-                      const SizedBox(height: 4),
+                      const SizedBox(height: 2),
                       Text(
                         widget.value,
                         maxLines: 1,
@@ -137,6 +152,17 @@ class _HalfState extends State<_Half> {
                           color: textPrimary,
                         ),
                       ),
+                      if (widget.subtitle != null)
+                        Text(
+                          widget.subtitle!,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          style: AppTypography.chrome.copyWith(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: textSecondary,
+                          ),
+                        ),
                     ],
                   ),
                 ),

@@ -19,6 +19,9 @@ class ActionCard extends StatefulWidget {
   final List<List<dynamic>> icon;
   final String label;
   final String? value;
+
+  /// Smaller line under [value], e.g. the English name of a language.
+  final String? valueSubtitle;
   final bool showChevron;
   final VoidCallback onTap;
   final double minHeight;
@@ -28,6 +31,7 @@ class ActionCard extends StatefulWidget {
     required this.icon,
     required this.label,
     this.value,
+    this.valueSubtitle,
     this.showChevron = false,
     required this.onTap,
     this.minHeight = 56,
@@ -49,6 +53,8 @@ class _ActionCardState extends State<ActionCard> {
         isDark ? AppColors.borderSubtleDark : AppColors.borderSubtleLight;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
@@ -95,18 +101,37 @@ class _ActionCardState extends State<ActionCard> {
                 const SizedBox(width: Spacing.sm),
                 ConstrainedBox(
                   constraints: BoxConstraints(
-                    maxWidth: MediaQuery.sizeOf(context).width * 0.3,
+                    maxWidth: MediaQuery.sizeOf(context).width *
+                        (widget.valueSubtitle == null ? 0.3 : 0.38),
                   ),
-                  child: Text(
-                    widget.value!,
-                    maxLines: 2,
-                    overflow: TextOverflow.ellipsis,
-                    textAlign: TextAlign.right,
-                    style: AppTypography.chrome.copyWith(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                      color: textPrimary,
-                    ),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        widget.value!,
+                        maxLines: 2,
+                        overflow: TextOverflow.ellipsis,
+                        textAlign: TextAlign.right,
+                        style: AppTypography.chrome.copyWith(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w500,
+                          color: textPrimary,
+                        ),
+                      ),
+                      if (widget.valueSubtitle != null)
+                        Text(
+                          widget.valueSubtitle!,
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
+                          textAlign: TextAlign.right,
+                          style: AppTypography.chrome.copyWith(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500,
+                            color: textSecondary,
+                          ),
+                        ),
+                    ],
                   ),
                 ),
               ],

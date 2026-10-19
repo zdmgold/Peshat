@@ -27,6 +27,14 @@ String languageLabel(String bcpCode) {
   return native == english ? native : '$native · $english';
 }
 
+/// The English name to show under or beside the native name, or null when
+/// both are the same (English).
+String? languageEnglishSubtitle(String bcpCode) {
+  final native = languageNativeName(bcpCode);
+  final english = languageDisplayName(bcpCode);
+  return native == english ? null : english;
+}
+
 /// True if the language is right-to-left.
 bool languageIsRtl(String bcpCode) {
   final lower = bcpCode.toLowerCase();

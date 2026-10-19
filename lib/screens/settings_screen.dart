@@ -176,6 +176,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
     final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final textPrimary =
         isDark ? AppColors.textPrimaryDark : AppColors.textPrimaryLight;
+    final textSecondary =
+        isDark ? AppColors.textSecondaryDark : AppColors.textSecondaryLight;
     final textTertiary =
         isDark ? AppColors.textTertiaryDark : AppColors.textTertiaryLight;
     final accent = isDark ? AppColors.accentDark : AppColors.accentLight;
@@ -232,7 +234,11 @@ class _SettingsScreenState extends State<SettingsScreen> {
                               ? l10n.sectionSystemLabel
                               : languageNativeName(
                                   widget.uiLocale.value!.languageCode),
-                          color: textTertiary,
+                          subtitle: widget.uiLocale.value == null
+                              ? null
+                              : languageEnglishSubtitle(
+                                  widget.uiLocale.value!.languageCode),
+                          color: textSecondary,
                         ),
                         onTap: _pickUiLanguage,
                       ),
@@ -244,7 +250,8 @@ class _SettingsScreenState extends State<SettingsScreen> {
                           title: Text(l10n.defaultLanguageLabel, maxLines: 2),
                           trailing: _TrailingValue(
                             text: languageNativeName(code),
-                            color: textTertiary,
+                            subtitle: languageEnglishSubtitle(code),
+                            color: textSecondary,
                           ),
                           onTap: _pickTargetLanguage,
                         ),
@@ -562,21 +569,37 @@ class _SmallOutlinedButton extends StatelessWidget {
 
 class _TrailingValue extends StatelessWidget {
   final String text;
+  final String? subtitle;
   final Color color;
 
-  const _TrailingValue({required this.text, required this.color});
+  const _TrailingValue(
+      {required this.text, required this.color, this.subtitle});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text(
-          text,
-          style: AppTypography.chrome.copyWith(
-            fontSize: 15,
-            color: color,
-          ),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              text,
+              style: AppTypography.chrome.copyWith(
+                fontSize: 15,
+                color: color,
+              ),
+            ),
+            if (subtitle != null)
+              Text(
+                subtitle!,
+                style: AppTypography.chrome.copyWith(
+                  fontSize: 12,
+                  color: color,
+                ),
+              ),
+          ],
         ),
         const SizedBox(width: Spacing.xs),
         _kChevron,

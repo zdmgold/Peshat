@@ -79,7 +79,9 @@ void main() {
       expect(control.groupValue.toString(), endsWith('translation'));
       expect(find.text('T:hola'), findsOneWidget);
       // One slim line: source, arrow, target.
-      expect(find.text('Español'), findsOneWidget);
+      // Native name first, English after it where they differ.
+      expect(find.textContaining('Español'), findsOneWidget);
+      expect(find.textContaining('Spanish'), findsOneWidget);
       expect(find.text('English'), findsOneWidget);
       expect(find.byIcon(CupertinoIcons.arrow_right), findsOneWidget);
     });
