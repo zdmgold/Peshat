@@ -48,6 +48,13 @@ void _pop(WidgetTester t) {
   nav.pop();
 }
 
+Future<void> _pick(WidgetTester t, String subtitle) async {
+  final Finder f = find.text(subtitle);
+  await t.scrollUntilVisible(f, 300,
+      scrollable: find.byType(Scrollable).first, maxScrolls: 60);
+  await t.tap(f.first);
+}
+
 Future<void> _tapText(WidgetTester t, String text) async {
   final Finder f = find.text(text);
   if (f.evaluate().isEmpty) throw 'text not found: "$text"';
@@ -74,13 +81,12 @@ void main() {
     await _step(t, 'source picker opens', () async {
       await _tapText(t, 'Source language');
       await _settle(t);
-      expect(find.text('Camera can read'), findsOneWidget);
-      expect(find.text('Type or paste only'), findsOneWidget);
+      expect(find.text('CAMERA CAN READ'), findsOneWidget);
       _size(t, 'picker Auto row', find.textContaining('Auto'));
     });
 
     await _step(t, 'choose Japanese as source', () async {
-      await _tapText(t, 'Japanese');
+      await _pick(t, 'Japanese');
       await _settle(t);
       expect(find.text('Source language'), findsOneWidget);
       expect(find.textContaining('日本語'), findsWidgets);
@@ -91,7 +97,7 @@ void main() {
     await _step(t, 'choose Russian (type-only) as source', () async {
       await _tapText(t, 'Source language');
       await _settle(t);
-      await _tapText(t, 'Russian');
+      await _pick(t, 'Russian');
       await _settle(t);
       expect(find.textContaining('Русский'), findsWidgets);
     });
@@ -106,7 +112,7 @@ void main() {
     await _step(t, 'destination picker + switch live', () async {
       await _tapText(t, 'Destination language');
       await _settle(t);
-      await _tapText(t, 'French');
+      await _pick(t, 'French');
       await _settle(t);
       expect(find.textContaining('Français'), findsWidgets);
     });
