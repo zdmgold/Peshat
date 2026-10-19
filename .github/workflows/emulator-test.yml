@@ -56,7 +56,7 @@ jobs:
           [ -d emu-out ] && cp -r emu-out/. /tmp/emu-publish/
           grep -E "EMU |══╡|Exception|overflow|RenderFlex|Some tests failed|All tests passed" emu-out/test.log > /tmp/emu-publish/highlights.txt 2>/dev/null
           tail -n 3000 emu-out/test.log > /tmp/emu-publish/test.log 2>/dev/null
-          grep -E "FATAL|AndroidRuntime|flutter.*Exception|E/flutter" emu-out/logcat.txt | tail -n 300 > /tmp/emu-publish/logcat-errors.txt 2>/dev/null
+          grep -E "FATAL|AndroidRuntime|flutter|Flutter|peshat|ActivityManager|Impeller|Vulkan|GLES|ANR|crash" emu-out/logcat.txt | tail -n 1500 > /tmp/emu-publish/logcat-filtered.txt 2>/dev/null
           rm -f /tmp/emu-publish/logcat.txt
           cd /tmp/emu-publish
           git init -q
