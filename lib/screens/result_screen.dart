@@ -574,10 +574,10 @@ class _TranslationTab extends StatelessWidget {
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(horizontal: Spacing.sm),
-                    child: Icon(
-                      Directionality.of(context) == TextDirection.rtl
-                          ? CupertinoIcons.arrow_left
-                          : CupertinoIcons.arrow_right,
+                    child: PeshatIcon(
+                      icon: Directionality.of(context) == TextDirection.rtl
+                          ? AppIcons.chevronBack
+                          : AppIcons.chevronForward,
                       size: 14,
                       color: textSecondary,
                     ),
@@ -600,8 +600,8 @@ class _TranslationTab extends StatelessWidget {
                               ),
                             ),
                             const SizedBox(width: Spacing.xs),
-                            Icon(
-                              CupertinoIcons.chevron_down,
+                            PeshatIcon(
+                              icon: AppIcons.chevronDown,
                               size: 12,
                               color: textSecondary,
                             ),

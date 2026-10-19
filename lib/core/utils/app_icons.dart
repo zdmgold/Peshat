@@ -51,6 +51,10 @@ class AppIcons {
   static const List<List<dynamic>> chevronForward =
       HugeIcons.strokeRoundedArrowRight01;
 
+  /// Down-pointing dropdown indicator.
+  static const List<List<dynamic>> chevronDown =
+      HugeIcons.strokeRoundedArrowDown01;
+
   // -------------------------------------------------------------------------
   // Home screen
   // -------------------------------------------------------------------------
