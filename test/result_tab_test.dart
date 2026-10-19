@@ -8,7 +8,9 @@ import 'package:peshat/core/providers/scan_provider.dart';
 import 'package:peshat/core/services/language_detector.dart';
 import 'package:peshat/core/services/text_recognizer_service.dart';
 import 'package:peshat/core/services/translator_service.dart';
+import 'package:peshat/core/utils/app_icons.dart';
 import 'package:peshat/l10n/app_localizations.dart';
+import 'package:peshat/widgets/peshat_icon.dart';
 import 'package:peshat/screens/result_screen.dart';
 
 class _Ocr implements TextRecognizerService {
@@ -83,7 +85,14 @@ void main() {
       expect(find.textContaining('Español'), findsOneWidget);
       expect(find.textContaining('Spanish'), findsOneWidget);
       expect(find.text('English'), findsOneWidget);
-      expect(find.byIcon(CupertinoIcons.arrow_right), findsOneWidget);
+      expect(
+          find.byWidgetPredicate(
+              (w) => w is PeshatIcon && identical(w.icon, AppIcons.chevronForward)),
+          findsOneWidget);
+      expect(
+          find.byWidgetPredicate(
+              (w) => w is PeshatIcon && identical(w.icon, AppIcons.chevronDown)),
+          findsOneWidget);
     });
   }
 }
