@@ -1,0 +1,69 @@
+name: Emulator Test
+
+# Manual only. Boots an Android emulator, runs the integration walk-through in
+# integration_test/, and publishes logs + screenshots to the `emu-logs` branch.
+# Never builds or uploads a release APK.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write # only used to update the emu-logs branch
+
+jobs:
+  emulator:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.2'
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      - name: Run walk-through on emulator
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          script: ./tool/emulator_run.sh
+
+      - name: Publish logs and screenshots to emu-logs branch
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set +e
+          mkdir -p /tmp/emu-publish
+          [ -d emu-out ] && cp -r emu-out/. /tmp/emu-publish/
+          grep -E "EMU |══╡|Exception|overflow|RenderFlex|Some tests failed|All tests passed" emu-out/test.log > /tmp/emu-publish/highlights.txt 2>/dev/null
+          tail -n 3000 emu-out/test.log > /tmp/emu-publish/test.log 2>/dev/null
+          grep -E "FATAL|AndroidRuntime|flutter.*Exception|E/flutter" emu-out/logcat.txt | tail -n 300 > /tmp/emu-publish/logcat-errors.txt 2>/dev/null
+          rm -f /tmp/emu-publish/logcat.txt
+          cd /tmp/emu-publish
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b emu-logs
+          git add -A
+          git commit -q -m "emulator logs for ${GITHUB_SHA}"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" emu-logs:refs/heads/emu-logs
+          exit 0
