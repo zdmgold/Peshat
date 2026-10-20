@@ -2,7 +2,6 @@ import 'dart:convert';
 
 import 'package:flutter_test/flutter_test.dart';
 import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart';
-import 'package:camera/camera.dart' show XFile;
 
 import 'package:peshat/core/models/scan_state.dart';
 import 'package:peshat/core/providers/scan_provider.dart';
