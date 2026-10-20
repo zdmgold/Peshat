@@ -112,6 +112,12 @@ void main() {
     await _step(t, 'back to Auto', () async {
       await _tapText(t, 'Source language');
       await _settle(t);
+      final Finder list = find
+          .byWidgetPredicate((Widget w) =>
+              w is Scrollable && w.axisDirection == AxisDirection.down)
+          .last;
+      await t.fling(list, const Offset(0, 2500), 3000);
+      await _settle(t);
       await t.tap(find.textContaining('Auto').first);
       await _settle(t);
     });
