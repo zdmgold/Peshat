@@ -2,6 +2,7 @@
 // ML Kit readers on the emulator, in Auto mode and with the chosen script.
 // Logging only: results are printed as "OCR ..." lines, nothing here fails.
 import 'dart:io';
+import 'dart:typed_data';
 import 'dart:ui' as ui;
 
 import 'package:flutter/cupertino.dart';
