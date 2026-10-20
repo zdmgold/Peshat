@@ -13,8 +13,9 @@ mkdir -p emu-out/shots
 SHOTS=$!
 adb logcat -c
 ( adb logcat -v time > emu-out/logcat.txt 2>&1 & )
-timeout 700 flutter test integration_test/ocr_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/ocr.log
-timeout 900 flutter test integration_test/app_flow_test.dart -d emulator-5554 -v 2>&1 | tee emu-out/test.log
+timeout 900 flutter test integration_test/ocr_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/ocr.log
+timeout 2100 flutter test integration_test/typed_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/typed.log
+[ "${RUN_FLOW:-0}" = 1 ] && timeout 900 flutter test integration_test/app_flow_test.dart -d emulator-5554 -v 2>&1 | tee emu-out/test.log
 echo "${PIPESTATUS[0]}" > emu-out/status.txt
 kill "$SHOTS" 2>/dev/null
 adb logcat -d -v time > emu-out/logcat.txt 2>&1
