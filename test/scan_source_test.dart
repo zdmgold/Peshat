@@ -72,9 +72,9 @@ void main() {
       expect(scanScriptFor(c), isNull, reason: c);
       expect(cameraCanRead(c), isFalse, reason: c);
     }
-    expect(cameraTypeOnly.length, 17);
-    expect(codes.where(cameraCanRead).length, 42);
-    expect(codes.where((c) => scanScriptFor(c) != null).length, 42);
+    expect(cameraTypeOnly.length, 16);
+    expect(codes.where(cameraCanRead).length, 43);
+    expect(codes.where((c) => scanScriptFor(c) != null).length, 43);
   });
 
   test('each source language picks its own reader', () {
@@ -83,6 +83,7 @@ void main() {
     expect(scanScriptFor('ko'), TextRecognitionScript.korean);
     expect(scanScriptFor('hi'), TextRecognitionScript.devanagiri);
     expect(scanScriptFor('mr'), TextRecognitionScript.devanagiri);
+    expect(scanScriptFor('bn'), TextRecognitionScript.devanagiri);
     for (final c in ['en', 'fr', 'es', 'de', 'tr', 'vi', 'id', 'fil']) {
       expect(scanScriptFor(c), TextRecognitionScript.latin, reason: c);
     }

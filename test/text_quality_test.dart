@@ -53,8 +53,9 @@ class _Tr implements TranslatorService {
 
 TextRecognizerService _service(
     Map<TextRecognitionScript, String> readings, List<TextRecognitionScript> ran,
-    {double confidence = 0.9}) {
+    {double confidence = 0.9, Map<String, double> reading = const {}}) {
   return TextRecognizerService(
+    readingConfidence: (r) => reading[r.text],
     reader: (script, image) async {
       ran.add(script);
       return RecognizedText(text: readings[script] ?? '', blocks: const []);
@@ -139,6 +140,62 @@ void main() {
           {TextRecognitionScript.devanagiri: 'नमस्ते दुनिया धन्यवाद'}, ran);
       final r = await svc.recognize(InputImage.fromFilePath('x.png'));
       expect(r.text, 'नमस्ते दुनिया धन्यवाद');
+    });
+
+    test('the most confident reading wins, wrong readers are ignored', () async {
+      final ran = <TextRecognitionScript>[];
+      // Measured on the emulator for a Hindi photo.
+      final svc = _service({
+        TextRecognitionScript.japanese: 'V司,3T可3Tqあ対き',
+        TextRecognitionScript.korean: '니, 3어I 3[4 하 ?',
+        TextRecognitionScript.devanagiri: 'सुप्रभात, आज आप कैसे हैं?',
+      }, ran, confidence: 0.2, reading: {
+        'V司,3T可3Tqあ対き': 0.14,
+        '니, 3어I 3[4 하 ?': 0.16,
+        'सुप्रभात, आज आप कैसे हैं?': 0.86,
+      });
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, 'सुप्रभात, आज आप कैसे हैं?');
+    });
+
+    test('a pure-looking but low-confidence reading is dropped', () async {
+      final ran = <TextRecognitionScript>[];
+      final svc = _service({
+        TextRecognitionScript.chinese: '香201巴E2才是0 0国4旦',
+      }, ran, confidence: 0.2, reading: {'香201巴E2才是0 0国4旦': 0.21});
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, isEmpty);
+    });
+
+    test('Japanese beats Chinese when both read it', () async {
+      final ran = <TextRecognitionScript>[];
+      final svc = _service({
+        TextRecognitionScript.japanese: 'おはようございます、今日はお元気ですか？',
+        TextRecognitionScript.chinese: 'ですか？',
+      }, ran, confidence: 0.2, reading: {
+        'おはようございます、今日はお元気ですか？': 0.87,
+        'ですか？': 0.64,
+      });
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, 'おはようございます、今日はお元気ですか？');
+    });
+
+    test('Bengali is read by the Devanagari reader', () async {
+      final ran = <TextRecognitionScript>[];
+      final svc = _service(
+          {TextRecognitionScript.devanagiri: 'শুভ সকাল, আজ আপনি কেমন আছেন?'},
+          ran,
+          confidence: 0.2,
+          reading: {'শুভ সকাল, আজ আপনি কেমন আছেন?': 0.89});
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, 'শুভ সকাল, আজ আপনি কেমন আছেন?');
+    });
+
+    test('Latin reading with very low reader confidence is not trusted', () {
+      expect(TextQuality.latinLooksReal('t?', 0.5, readingConfidence: 0.42),
+          isFalse);
+      expect(TextQuality.latinLooksReal('Good morning', 0.9, readingConfidence: 0.9),
+          isTrue);
     });
 
     test('a chosen source still runs only that reader', () async {

@@ -36,7 +36,8 @@ class TextQuality {
         (r >= 0x3130 && r <= 0x318F)) {
       return ScriptGroup.hangul;
     }
-    if (r >= 0x0900 && r <= 0x097F) return ScriptGroup.devanagari;
+    // Devanagari and Bengali: the Devanagari reader reads both.
+    if (r >= 0x0900 && r <= 0x09FF) return ScriptGroup.devanagari;
     return ScriptGroup.other;
   }
 
@@ -86,7 +87,11 @@ class TextQuality {
   /// True when [text], returned by the Latin reader, looks like real
   /// Latin-script text. [languageConfidence] is the top language-identification
   /// confidence (0-1) for [text].
-  static bool latinLooksReal(String text, double languageConfidence) {
+  static bool latinLooksReal(String text, double languageConfidence,
+      {double? readingConfidence}) {
+    // The reader's own confidence: real Latin text scored 0.80-0.91 in
+    // emulator runs; look-alike readings of other scripts scored 0.16-0.42.
+    if (readingConfidence != null && readingConfidence < 0.5) return false;
     final counts = letterCounts(text);
     final total = counts.values.fold<int>(0, (a, b) => a + b);
     if (total == 0) return _digit.hasMatch(text);

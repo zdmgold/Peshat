@@ -11,7 +11,7 @@ const Set<String> cameraTypeOnly = {
   'ar', 'fa', 'ur', // Arabic script
   'he', // Hebrew
   'th', // Thai
-  'bn', 'gu', 'kn', 'ta', 'te', // other Indic
+  'gu', 'kn', 'ta', 'te', // other Indic
   'ka', // Georgian
 };
 
@@ -28,6 +28,7 @@ TextRecognitionScript? scanScriptFor(String code) {
       return TextRecognitionScript.korean;
     case 'hi':
     case 'mr':
+    case 'bn': // the Devanagari reader reads Bengali too
       return TextRecognitionScript.devanagiri;
     default:
       return TextRecognitionScript.latin;
