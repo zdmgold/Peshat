@@ -91,11 +91,16 @@ class TextQuality {
       {double? readingConfidence}) {
     // The reader's own confidence: real Latin text scored 0.80-0.91 in
     // emulator runs; look-alike readings of other scripts scored 0.16-0.61.
-    if (readingConfidence != null && readingConfidence < 0.65) return false;
     final counts = letterCounts(text);
     final total = counts.values.fold<int>(0, (a, b) => a + b);
     if (total == 0) return _digit.hasMatch(text);
     if ((counts[ScriptGroup.latin] ?? 0) / total < 0.85) return false;
+    // A confident reader is trusted: URLs, codes and languages that language
+    // identification doesn't know (Filipino, Welsh) all scored 0.80+.
+    if (readingConfidence != null) {
+      if (readingConfidence >= 0.7) return true;
+      if (readingConfidence < 0.65) return false;
+    }
     final odd = oddTokenShare(text);
     if (odd >= 0.5) return false;
     if (text.length >= 12) {
@@ -106,8 +111,12 @@ class TextQuality {
   }
 
   /// True when [text] from a non-Latin reader is mostly that reader's script.
-  static bool scriptLooksReal(String text, ScriptGroup group) {
-    final min = group == ScriptGroup.cjk ? 0.85 : 0.6;
+  /// Mixed text (a menu line with Latin and Japanese) passes when the reader
+  /// is confident.
+  static bool scriptLooksReal(String text, ScriptGroup group,
+      {double? readingConfidence}) {
+    final confident = readingConfidence != null && readingConfidence >= 0.7;
+    final min = confident ? 0.3 : (group == ScriptGroup.cjk ? 0.85 : 0.6);
     return share(text, group) >= min;
   }
 }

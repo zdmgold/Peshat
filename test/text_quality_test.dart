@@ -205,6 +205,36 @@ void main() {
           isTrue);
     });
 
+    test('a confident Latin reading of a URL or an unrecognised language is kept',
+        () {
+      expect(
+          TextQuality.latinLooksReal('www.example.com/path?id=42', 0.5,
+              readingConfidence: 0.85),
+          isTrue);
+      expect(
+          TextQuality.latinLooksReal('Magandang umaga, kumusta ka ngayon?', 0.2,
+              readingConfidence: 0.85),
+          isTrue);
+      expect(
+          TextQuality.latinLooksReal('Bore da, sut ydych chi heddiw?', 0.2,
+              readingConfidence: 0.85),
+          isTrue);
+    });
+
+    test('mixed Latin and Japanese text is read when the reader is confident',
+        () async {
+      final ran = <TextRecognitionScript>[];
+      final svc = _service({
+        TextRecognitionScript.latin: 'Menu',
+        TextRecognitionScript.japanese: 'Menu メニュー ラーメン 900円',
+      }, ran, confidence: 0.2, reading: {
+        'Menu': 0.4,
+        'Menu メニュー ラーメン 900円': 0.85,
+      });
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, 'Menu メニュー ラーメン 900円');
+    });
+
     test('a chosen source still runs only that reader', () async {
       final ran = <TextRecognitionScript>[];
       final svc = _service({TextRecognitionScript.korean: '안녕하세요'}, ran);
@@ -240,6 +270,25 @@ void main() {
       await p.runTextPipeline(
           text: 'Hello', targetLanguage: 'fr', sourceLanguage: 'ja');
       expect(tr.from, 'en');
+    });
+
+    test('a language detection cannot recognise follows the chosen source',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('und'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'Magandang umaga', targetLanguage: 'en', sourceLanguage: 'fil');
+      expect(tr.from, 'fil');
+    });
+
+    test('Malay detected as Indonesian follows a chosen Malay', () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('id'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'Selamat pagi', targetLanguage: 'en', sourceLanguage: 'ms');
+      expect(tr.from, 'ms');
     });
 
     test('Auto keeps plain detection', () async {

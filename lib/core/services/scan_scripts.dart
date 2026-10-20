@@ -46,6 +46,8 @@ const List<Set<String>> confusableLanguages = [
   {'ar', 'fa', 'ur'}, // Arabic script
   {'hi', 'mr'}, // Devanagari
   {'zh', 'ja'}, // Han
+  {'id', 'ms'}, // Malay / Indonesian (Malay read as Indonesian on the emulator)
+  {'hr', 'sl'}, // Slovenian read as Croatian on the emulator
 ];
 
 /// True when [a] and [b] are different languages that share a script group.

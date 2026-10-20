@@ -92,8 +92,11 @@ class TextRecognizerService {
     for (final s in _others) {
       final r = await _run(s.script, image);
       final text = r.text.trim();
-      if (text.isEmpty || !TextQuality.scriptLooksReal(text, s.group)) continue;
       final c = _confidenceOf(r);
+      if (text.isEmpty ||
+          !TextQuality.scriptLooksReal(text, s.group, readingConfidence: c)) {
+        continue;
+      }
       if (c != null && c < _minOtherConfidence) continue;
       if ((c ?? _minOtherConfidence) > bestConfidence) {
         best = r;

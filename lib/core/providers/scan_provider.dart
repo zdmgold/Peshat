@@ -100,14 +100,21 @@ class ScanProvider extends ValueNotifier<ScanState> {
     if (knownSource != null) {
       srcLang = knownSource;
     } else {
+      var undetermined = false;
       try {
         final d =
             await _detector.detect(src).timeout(const Duration(seconds: 5));
-        if (d.isNotEmpty && d != 'und') srcLang = d;
+        if (d.isNotEmpty && d != 'und') {
+          srcLang = d;
+        } else {
+          undetermined = true;
+        }
       } catch (_) {}
       // Detection can mix up look-alike languages on short text (Macedonian as
-      // Bulgarian). If the user chose one of that group, trust their choice.
-      if (preferredSource != null && confusableWith(srcLang, preferredSource)) {
+      // Bulgarian), or not recognise a language at all (Filipino, Welsh). If
+      // the user chose a source in either case, trust their choice.
+      if (preferredSource != null &&
+          (undetermined || confusableWith(srcLang, preferredSource))) {
         srcLang = preferredSource;
       }
     }
