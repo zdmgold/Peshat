@@ -65,6 +65,7 @@ class ScanProvider extends ValueNotifier<ScanState> {
   Future<void> runTextPipeline({
     required String text,
     required String targetLanguage,
+    String sourceLanguage = sourceAuto,
   }) async {
     try {
       final src = text.trim();
@@ -73,7 +74,8 @@ class ScanProvider extends ValueNotifier<ScanState> {
         return;
       }
       value = const ScanState.recognizing();
-      await _translate(src, targetLanguage);
+      await _translate(src, targetLanguage,
+          preferredSource: sourceLanguage == sourceAuto ? null : sourceLanguage);
     } on TimeoutException catch (e) {
       value = ScanState.error(AppErrorCode.timeout, detail: e.toString());
     } on TranslatorException catch (e) {
@@ -92,7 +94,7 @@ class ScanProvider extends ValueNotifier<ScanState> {
   }
 
   Future<void> _translate(String src, String targetLanguage,
-      {String? knownSource}) async {
+      {String? knownSource, String? preferredSource}) async {
     final run = ++_run;
     String srcLang = 'en';
     if (knownSource != null) {
@@ -103,6 +105,11 @@ class ScanProvider extends ValueNotifier<ScanState> {
             await _detector.detect(src).timeout(const Duration(seconds: 5));
         if (d.isNotEmpty && d != 'und') srcLang = d;
       } catch (_) {}
+      // Detection can mix up look-alike languages on short text (Macedonian as
+      // Bulgarian). If the user chose one of that group, trust their choice.
+      if (preferredSource != null && confusableWith(srcLang, preferredSource)) {
+        srcLang = preferredSource;
+      }
     }
     if (isSameLanguage(srcLang, targetLanguage)) {
       value = ScanDone(

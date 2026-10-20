@@ -37,3 +37,18 @@ TextRecognitionScript? scanScriptFor(String code) {
 /// True when a photo in this source language can be read by the camera.
 bool cameraCanRead(String code) =>
     code == sourceAuto || !cameraTypeOnly.contains(code);
+
+/// Languages written in the same script that language detection can mix up on a
+/// short phrase (Macedonian read as Bulgarian, Marathi as Hindi).
+const List<Set<String>> confusableLanguages = [
+  {'ru', 'uk', 'bg', 'be', 'mk'}, // Cyrillic
+  {'ar', 'fa', 'ur'}, // Arabic script
+  {'hi', 'mr'}, // Devanagari
+  {'zh', 'ja'}, // Han
+];
+
+/// True when [a] and [b] are different languages that share a script group.
+bool confusableWith(String a, String b) {
+  if (a == b) return false;
+  return confusableLanguages.any((g) => g.contains(a) && g.contains(b));
+}

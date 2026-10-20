@@ -197,6 +197,7 @@ class _ScanScreenState extends State<ScanScreen> {
           CupertinoPageRoute(
             builder: (_) => ResultScreen(
               inputText: text,
+              sourceLanguage: widget.settings.source.value,
               initialTargetLanguage: widget.settings.value,
               history: widget.history,
             ),

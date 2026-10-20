@@ -113,6 +113,7 @@ class _ResultScreenState extends State<ResultScreen> {
       await _provider.runTextPipeline(
         text: widget.inputText!,
         targetLanguage: _targetLanguage,
+        sourceLanguage: widget.sourceLanguage,
       );
     }
   }

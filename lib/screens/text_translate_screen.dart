@@ -97,6 +97,7 @@ class _TextTranslateScreenState extends State<TextTranslateScreen> {
       CupertinoPageRoute(
         builder: (_) => ResultScreen(
           inputText: text,
+          sourceLanguage: widget.settings.source.value,
           initialTargetLanguage: widget.settings.value,
           history: widget.history,
         ),
