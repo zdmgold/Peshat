@@ -117,13 +117,21 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final inputFill =
         isDark ? AppColors.bgTertiaryDark : AppColors.bgTertiaryLight;
 
+    // Rows have a fixed height so the A-Z index can jump to a letter; grow it
+    // with the text size so large text isn't clipped (the row needs about
+    // 16 + 36 x scale; measured as a 24 px overflow at 200% text).
+    final textScale = MediaQuery.textScalerOf(context).scale(16) / 16;
+    final rowExtent = (16 + 36 * textScale) > _kRowExtent
+        ? (16 + 36 * textScale)
+        : _kRowExtent;
+
     final all = _all;
     final filtered = _filtered(all);
     final recents = _recentList(all);
     final groups = _groupByLetter(filtered);
 
     IndexEntry rowEntry(Language lang) => IndexEntry(
-          extent: _kRowExtent,
+          extent: rowExtent,
           child: _Row(
             language: lang,
             selected: lang.code == widget.current,
@@ -168,7 +176,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         ),
         for (final r in recents)
           IndexEntry(
-            extent: _kRowExtent,
+            extent: rowExtent,
             child: _Row(
               language: r,
               selected: r.code == widget.current,
@@ -194,7 +202,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         ),
         for (final lang in group.languages)
           IndexEntry(
-            extent: _kRowExtent,
+            extent: rowExtent,
             child: _Row(
               language: lang,
               selected: lang.code == widget.current,
