@@ -44,7 +44,7 @@ Future<String> _render(String text, String name, {required bool hard}) async {
   final ui.PictureRecorder rec = ui.PictureRecorder();
   final Canvas canvas = Canvas(rec);
   const double w = 1400, h = 360;
-  canvas.drawRect(Rect.fromLTWH(0, 0, w, h),
+  canvas.drawRect(const Rect.fromLTWH(0, 0, w, h),
       Paint()..color = hard ? const Color(0xFFDADADA) : const Color(0xFFFFFFFF));
   final TextPainter tp = TextPainter(
     text: TextSpan(
