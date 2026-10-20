@@ -1,0 +1,82 @@
+name: Emulator Matrix
+
+# Manual only. Runs the screen walk-through on several screen sizes, Android
+# versions, text sizes and dark mode. Never builds a release APK. Logs and
+# screenshots go to one `emu-matrix-<name>` branch per configuration.
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  matrix:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - { name: small-480x800, profile: 'Nexus One', api: 29, font: '1.0', night: 'no' }
+          - { name: pixel2-api29, profile: pixel_2, api: 29, font: '1.0', night: 'no' }
+          - { name: pixel6-bigtext, profile: pixel_6, api: 34, font: '2.0', night: 'no' }
+          - { name: pixel6-dark, profile: pixel_6, api: 34, font: '1.0', night: 'yes' }
+          - { name: tablet-nexus10, profile: 'Nexus 10', api: 34, font: '1.0', night: 'no' }
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Enable KVM
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+
+      - uses: actions/setup-java@v5
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.29.2'
+          channel: stable
+          cache: true
+
+      - run: flutter pub get
+
+      - name: Run walk-through
+        env:
+          PROBES: flow
+          FONT_SCALE: ${{ matrix.font }}
+          NIGHT: ${{ matrix.night }}
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api }}
+          target: google_apis
+          arch: x86_64
+          profile: ${{ matrix.profile }}
+          disable-animations: true
+          script: ./tool/emulator_run.sh
+
+      - name: Publish
+        if: always()
+        env:
+          GH_TOKEN: ${{ github.token }}
+          NAME: ${{ matrix.name }}
+        run: |
+          set +e
+          mkdir -p /tmp/pub
+          [ -d emu-out ] && cp -r emu-out/. /tmp/pub/
+          grep -E "EMU |══╡|Exception|overflow|RenderFlex|Some tests failed|All tests passed" emu-out/test.log > /tmp/pub/highlights.txt 2>/dev/null
+          tail -n 2000 emu-out/test.log > /tmp/pub/test.log 2>/dev/null
+          rm -f /tmp/pub/logcat.txt
+          cd /tmp/pub
+          git init -q
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git checkout -q -b b
+          git add -A
+          git commit -q -m "matrix logs $NAME"
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" b:refs/heads/emu-matrix-$NAME
+          exit 0

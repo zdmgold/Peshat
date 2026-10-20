@@ -12,6 +12,9 @@ mkdir -p emu-out/shots
   done ) &
 SHOTS=$!
 adb logcat -c
+[ -n "$FONT_SCALE" ] && adb shell settings put system font_scale "$FONT_SCALE"
+[ "$NIGHT" = yes ] && adb shell cmd uimode night yes
+sleep 3
 ( adb logcat -v time > emu-out/logcat.txt 2>&1 & )
 has() { case ",${PROBES:-ocr,typed}," in *",$1,"*) return 0;; esac; return 1; }
 has ocr && timeout 2700 flutter test integration_test/ocr_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/ocr.log
