@@ -1,0 +1,111 @@
+
+Running Gradle task 'assembleDebug'...                          
+Checking the license for package NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/licenses
+License for package NDK (Side by side) 27.0.12077973 accepted.
+Preparing "Install NDK (Side by side) 27.0.12077973 v.27.0.12077973".
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" ready.
+Installing NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/ndk/27.0.12077973
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" complete.
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" finished.
+Checking the license for package CMake 3.22.1 in /usr/local/lib/android/sdk/licenses
+License for package CMake 3.22.1 accepted.
+Preparing "Install CMake 3.22.1 v.3.22.1".
+"Install CMake 3.22.1 v.3.22.1" ready.
+Installing CMake 3.22.1 in /usr/local/lib/android/sdk/cmake/3.22.1
+"Install CMake 3.22.1 v.3.22.1" complete.
+"Install CMake 3.22.1 v.3.22.1" finished.
+Running Gradle task 'assembleDebug'...                            260.9s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...        1,200ms
+::group::✅ OCR readers on rendered samples
+EMU 2026-10-20T12:21:16.542144 OCR ru Russian clean AUTO score=0 (16850 ms): ""
+EMU 2026-10-20T12:21:16.548165 OCR ru Russian clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:21:33.094016 OCR uk Ukrainian clean AUTO score=0 (16468 ms): ""
+EMU 2026-10-20T12:21:33.095080 OCR uk Ukrainian clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:21:49.415120 OCR bg Bulgarian clean AUTO score=0 (16156 ms): ""
+EMU 2026-10-20T12:21:49.415694 OCR bg Bulgarian clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:22:06.079303 OCR be Belarusian clean AUTO score=0 (16631 ms): ""
+EMU 2026-10-20T12:22:06.079644 OCR be Belarusian clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:22:20.469880 OCR mk Macedonian clean AUTO score=0 (14361 ms): ""
+EMU 2026-10-20T12:22:20.470496 OCR mk Macedonian clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:22:36.611115 OCR el Greek clean AUTO score=0 (16102 ms): ""
+EMU 2026-10-20T12:22:36.613079 OCR el Greek clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:22:51.798176 OCR ar Arabic clean AUTO score=0 (15160 ms): ""
+EMU 2026-10-20T12:22:51.813221 OCR ar Arabic clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:23:10.277241 OCR fa Persian clean AUTO score=0 (18440 ms): ""
+EMU 2026-10-20T12:23:10.277856 OCR fa Persian clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:23:25.701447 OCR ur Urdu clean AUTO score=0 (15387 ms): ""
+EMU 2026-10-20T12:23:25.701762 OCR ur Urdu clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:23:40.872001 OCR he Hebrew clean AUTO score=0 (15147 ms): ""
+EMU 2026-10-20T12:23:40.872350 OCR he Hebrew clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:23:58.485404 OCR th Thai clean AUTO score=0 (17589 ms): ""
+EMU 2026-10-20T12:23:58.486147 OCR th Thai clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:24:14.117471 OCR hi Hindi clean AUTO score=100 (15602 ms): "सुप्रभात, आज आप कैसे हैं?"
+EMU 2026-10-20T12:24:17.061109 OCR hi Hindi clean CHOSEN devanagiri score=100 (2942 ms): "सुप्रभात, आज आप कैसे हैं?"
+EMU 2026-10-20T12:24:32.850731 OCR mr Marathi clean AUTO score=96 (15760 ms): "सुप्रभात, आज तुम्ही क्से आहात?"
+EMU 2026-10-20T12:24:36.086820 OCR mr Marathi clean CHOSEN devanagiri score=96 (3235 ms): "सुप्रभात, आज तुम्ही क्से आहात?"
+EMU 2026-10-20T12:24:52.410830 OCR bn Bengali clean AUTO score=100 (16296 ms): "শুভ সকাল, আজ আপনি কেমন আছেন?"
+EMU 2026-10-20T12:24:55.669474 OCR bn Bengali clean CHOSEN devanagiri score=100 (3257 ms): "শুভ সকাল, আজ আপনি কেমন আছেন?"
+EMU 2026-10-20T12:25:11.950701 OCR gu Gujarati clean AUTO score=0 (16256 ms): ""
+EMU 2026-10-20T12:25:11.951134 OCR gu Gujarati clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:25:28.090514 OCR kn Kannada clean AUTO score=0 (16105 ms): ""
+EMU 2026-10-20T12:25:28.091099 OCR kn Kannada clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:25:45.443266 OCR ta Tamil clean AUTO score=0 (17326 ms): ""
+EMU 2026-10-20T12:25:45.444031 OCR ta Tamil clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:26:00.796312 OCR te Telugu clean AUTO score=0 (15325 ms): ""
+EMU 2026-10-20T12:26:00.797051 OCR te Telugu clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:26:16.632184 OCR ka Georgian clean AUTO score=0 (15785 ms): ""
+EMU 2026-10-20T12:26:16.632940 OCR ka Georgian clean CHOSEN none (type-only language)
+EMU 2026-10-20T12:26:34.626175 OCR zh Chinese clean AUTO score=100 (17955 ms): "早上好,你今天好吗?"
+EMU 2026-10-20T12:26:38.130 OCR zh Chinese clean CHOSEN chinese score=100 (3503 ms): "早上好,你今天好吗?"
+EMU 2026-10-20T12:26:54.628579 OCR ja Japanese clean AUTO score=100 (16467 ms): "おはようございます、今日はお元気 ですか?"
+EMU 2026-10-20T12:26:58.338936 OCR ja Japanese clean CHOSEN japanese score=100 (3709 ms): "おはようございます、今日はお元気 ですか?"
+EMU 2026-10-20T12:27:13.948595 OCR ko Korean clean AUTO score=100 (15575 ms): "좋은 아침입니다, 오늘 기분이 어떠세요?"
+EMU 2026-10-20T12:27:17.476948 OCR ko Korean clean CHOSEN korean score=100 (3515 ms): "좋은 아침입니다, 오늘 기분이 어떠세요?"
+EMU 2026-10-20T12:27:34.562111 OCR ru Russian HARD AUTO score=0 (17000 ms): ""
+EMU 2026-10-20T12:27:34.562802 OCR ru Russian HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:27:51.701712 OCR uk Ukrainian HARD AUTO score=0 (17108 ms): ""
+EMU 2026-10-20T12:27:51.702457 OCR uk Ukrainian HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:28:08.202074 OCR bg Bulgarian HARD AUTO score=0 (16478 ms): ""
+EMU 2026-10-20T12:28:08.202376 OCR bg Bulgarian HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:28:23.992611 OCR be Belarusian HARD AUTO score=0 (15762 ms): ""
+EMU 2026-10-20T12:28:23.993288 OCR be Belarusian HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:28:41.116626 OCR mk Macedonian HARD AUTO score=0 (17103 ms): ""
+EMU 2026-10-20T12:28:41.117393 OCR mk Macedonian HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:28:58.434806 OCR el Greek HARD AUTO score=0 (17283 ms): ""
+EMU 2026-10-20T12:28:58.435435 OCR el Greek HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:29:15.341492 OCR ar Arabic HARD AUTO score=0 (16882 ms): ""
+EMU 2026-10-20T12:29:15.342350 OCR ar Arabic HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:29:32.201913 OCR fa Persian HARD AUTO score=0 (16828 ms): ""
+EMU 2026-10-20T12:29:32.202605 OCR fa Persian HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:29:48.458796 OCR ur Urdu HARD AUTO score=0 (16233 ms): ""
+EMU 2026-10-20T12:29:48.459502 OCR ur Urdu HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:30:04.856927 OCR he Hebrew HARD AUTO score=0 (16368 ms): ""
+EMU 2026-10-20T12:30:04.857627 OCR he Hebrew HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:30:21.363620 OCR th Thai HARD AUTO score=0 (16472 ms): ""
+EMU 2026-10-20T12:30:21.364356 OCR th Thai HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:30:37.250313 OCR hi Hindi HARD AUTO score=100 (15753 ms): "सुप्रभात, आज आप कैसे हैं?"
+EMU 2026-10-20T12:30:40.256345 OCR hi Hindi HARD CHOSEN devanagiri score=100 (3005 ms): "सुप्रभात, आज आप कैसे हैं?"
+EMU 2026-10-20T12:30:57.599696 OCR mr Marathi HARD AUTO score=100 (17319 ms): "सुप्रभात, आज तुम्ही कसे आहात?"
+EMU 2026-10-20T12:31:01.232761 OCR mr Marathi HARD CHOSEN devanagiri score=100 (3632 ms): "सुप्रभात, आज तुम्ही कसे आहात?"
+EMU 2026-10-20T12:31:18.362050 OCR bn Bengali HARD AUTO score=95 (17098 ms): "শুভ সকাল, আজ আপনি কোমন আছেন?"
+EMU 2026-10-20T12:31:21.557163 OCR bn Bengali HARD CHOSEN devanagiri score=95 (3194 ms): "শুভ সকাল, আজ আপনি কোমন আছেন?"
+EMU 2026-10-20T12:31:37.720382 OCR gu Gujarati HARD AUTO score=0 (16140 ms): "सुप्रभात, Iे तमें डभ धछ?"
+EMU 2026-10-20T12:31:37.721100 OCR gu Gujarati HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:31:54.357364 OCR kn Kannada HARD AUTO score=0 (16614 ms): ""
+EMU 2026-10-20T12:31:54.358055 OCR kn Kannada HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:32:12.219908 OCR ta Tamil HARD AUTO score=0 (17829 ms): ""
+EMU 2026-10-20T12:32:12.220606 OCR ta Tamil HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:32:29.147705 OCR te Telugu HARD AUTO score=0 (16898 ms): ""
+EMU 2026-10-20T12:32:29.148406 OCR te Telugu HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:32:46.623007 OCR ka Georgian HARD AUTO score=0 (17442 ms): ""
+EMU 2026-10-20T12:32:46.623734 OCR ka Georgian HARD CHOSEN none (type-only language)
+EMU 2026-10-20T12:33:03.519444 OCR zh Chinese HARD AUTO score=75 (16870 ms): "早上好,休今天好鳴?"
+EMU 2026-10-20T12:33:06.696384 OCR zh Chinese HARD CHOSEN chinese score=100 (3176 ms): "早上好,你今天好吗?"
+EMU 2026-10-20T12:33:24.117632 OCR ja Japanese HARD AUTO score=100 (17390 ms): "おはようございます、今日はお元気ですか?"
+EMU 2026-10-20T12:33:27.255066 OCR ja Japanese HARD CHOSEN japanese score=100 (3136 ms): "おはようございます、今日はお元気ですか?"
+EMU 2026-10-20T12:33:42.547345 OCR ko Korean HARD AUTO score=100 (15269 ms): "좋은 아침입니다, 오늘 기분이 어떠세요?"
+EMU 2026-10-20T12:33:45.870892 OCR ko Korean HARD CHOSEN korean score=100 (3322 ms): "좋은 아침입니다, 오늘 기분이 어떠세요?"
+::endgroup::
+
+🎉 1 test passed.
