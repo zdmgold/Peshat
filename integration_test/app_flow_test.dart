@@ -44,14 +44,20 @@ Future<void> _step(WidgetTester t, String name, Future<void> Function() body) as
 }
 
 void _pop(WidgetTester t) {
-  final NavigatorState nav = t.state<NavigatorState>(find.byType(Navigator).first);
-  nav.pop();
+  final Finder navs = find.byType(Navigator);
+  if (navs.evaluate().isEmpty) return;
+  final NavigatorState nav = t.state<NavigatorState>(navs.first);
+  if (nav.canPop()) nav.pop();
 }
 
 Future<void> _pick(WidgetTester t, String subtitle) async {
   final Finder f = find.text(subtitle);
   await t.scrollUntilVisible(f, 300,
-      scrollable: find.byType(Scrollable).first, maxScrolls: 60);
+      scrollable: find
+          .byWidgetPredicate((Widget w) =>
+              w is Scrollable && w.axisDirection == AxisDirection.down)
+          .last,
+      maxScrolls: 60);
   await t.tap(f.first);
 }
 
