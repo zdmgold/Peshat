@@ -90,8 +90,8 @@ class TextQuality {
   static bool latinLooksReal(String text, double languageConfidence,
       {double? readingConfidence}) {
     // The reader's own confidence: real Latin text scored 0.80-0.91 in
-    // emulator runs; look-alike readings of other scripts scored 0.16-0.42.
-    if (readingConfidence != null && readingConfidence < 0.5) return false;
+    // emulator runs; look-alike readings of other scripts scored 0.16-0.61.
+    if (readingConfidence != null && readingConfidence < 0.65) return false;
     final counts = letterCounts(text);
     final total = counts.values.fold<int>(0, (a, b) => a + b);
     if (total == 0) return _digit.hasMatch(text);

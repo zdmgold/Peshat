@@ -14,7 +14,7 @@ SHOTS=$!
 adb logcat -c
 ( adb logcat -v time > emu-out/logcat.txt 2>&1 & )
 has() { case ",${PROBES:-ocr,typed}," in *",$1,"*) return 0;; esac; return 1; }
-has ocr && timeout 900 flutter test integration_test/ocr_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/ocr.log
+has ocr && timeout 2700 flutter test integration_test/ocr_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/ocr.log
 has matrix && timeout 1500 flutter test integration_test/reader_matrix_test.dart -d emulator-5554 2>&1 | tee emu-out/matrix.log
 has langid && timeout 600 flutter test integration_test/langid_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/langid.log
 has typed && timeout 2100 flutter test integration_test/typed_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/typed.log

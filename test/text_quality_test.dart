@@ -194,7 +194,14 @@ void main() {
     test('Latin reading with very low reader confidence is not trusted', () {
       expect(TextQuality.latinLooksReal('t?', 0.5, readingConfidence: 0.42),
           isFalse);
+      // Cyrillic photo read as Latin look-alikes scored 0.55-0.61.
+      expect(
+          TextQuality.latinLooksReal('Aoópoe yTpo, Kak y TeóA gena?', 0.9,
+              readingConfidence: 0.60),
+          isFalse);
       expect(TextQuality.latinLooksReal('Good morning', 0.9, readingConfidence: 0.9),
+          isTrue);
+      expect(TextQuality.latinLooksReal('Der Zug fährt', 0.9, readingConfidence: 0.8),
           isTrue);
     });
 
