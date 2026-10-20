@@ -16,6 +16,9 @@ adb logcat -c
 has() { case ",${PROBES:-ocr,typed}," in *",$1,"*) return 0;; esac; return 1; }
 has ocr && timeout 2700 flutter test integration_test/ocr_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/ocr.log
 has latin && timeout 2700 flutter test integration_test/latin_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/latin.log
+has photo && timeout 3300 flutter test integration_test/photo_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/photo.log
+has pdf && timeout 900 flutter test integration_test/pdf_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/pdf.log
+has translate && timeout 4200 flutter test integration_test/translate_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/translate.log
 has matrix && timeout 1500 flutter test integration_test/reader_matrix_test.dart -d emulator-5554 2>&1 | tee emu-out/matrix.log
 has langid && timeout 600 flutter test integration_test/langid_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/langid.log
 has typed && timeout 2100 flutter test integration_test/typed_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/typed.log

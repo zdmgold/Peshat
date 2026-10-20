@@ -8,8 +8,11 @@ on:
   workflow_dispatch:
     inputs:
       probes:
-        description: 'Comma list: ocr,typed,langid,flow'
+        description: 'Comma list: ocr,typed,langid,latin,matrix,photo,pdf,translate,flow'
         default: 'ocr,typed'
+      branch:
+        description: 'Branch that receives the logs'
+        default: 'emu-logs'
 
 permissions:
   contents: write # only used to update the emu-logs branch
@@ -17,7 +20,7 @@ permissions:
 jobs:
   emulator:
     runs-on: ubuntu-latest
-    timeout-minutes: 120
+    timeout-minutes: 180
     steps:
       - uses: actions/checkout@v4
 
@@ -56,6 +59,7 @@ jobs:
         if: always()
         env:
           GH_TOKEN: ${{ github.token }}
+          BRANCH: ${{ github.event.inputs.branch }}
         run: |
           set +e
           mkdir -p /tmp/emu-publish
@@ -64,6 +68,7 @@ jobs:
           tail -n 3000 emu-out/test.log > /tmp/emu-publish/test.log 2>/dev/null
           grep -E "FATAL|AndroidRuntime|flutter|Flutter|peshat|ActivityManager|Impeller|Vulkan|GLES|ANR|crash" emu-out/logcat.txt | tail -n 1500 > /tmp/emu-publish/logcat-filtered.txt 2>/dev/null
           grep -E "EMU |Some tests failed|All tests passed" emu-out/ocr.log > /tmp/emu-publish/ocr-highlights.txt 2>/dev/null
+          for n in photo pdf translate; do grep -E "EMU " emu-out/$n.log > /tmp/emu-publish/$n-highlights.txt 2>/dev/null; done
           grep -E "EMU " emu-out/latin.log > /tmp/emu-publish/latin-highlights.txt 2>/dev/null
           grep -E "EMU " emu-out/matrix.log > /tmp/emu-publish/matrix-highlights.txt 2>/dev/null
           grep -E "EMU " emu-out/langid.log > /tmp/emu-publish/langid-highlights.txt 2>/dev/null
@@ -76,5 +81,5 @@ jobs:
           git checkout -q -b emu-logs
           git add -A
           git commit -q -m "emulator logs for ${GITHUB_SHA}"
-          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" emu-logs:refs/heads/emu-logs
+          git push -q --force "https://x-access-token:${GH_TOKEN}@github.com/${GITHUB_REPOSITORY}.git" emu-logs:refs/heads/${BRANCH}
           exit 0
