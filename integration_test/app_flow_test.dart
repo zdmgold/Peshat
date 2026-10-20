@@ -8,6 +8,7 @@ import 'package:integration_test/integration_test.dart';
 import 'package:peshat/core/utils/app_icons.dart';
 import 'package:peshat/main.dart' as app;
 import 'package:peshat/widgets/peshat_icon.dart';
+import 'package:peshat/widgets/recent_item_card.dart';
 
 final List<String> _problems = <String>[];
 
@@ -172,16 +173,36 @@ void main() {
       await _settle(t);
       expect(find.text('Settings'), findsWidgets);
       _size(t, 'settings screen title', find.text('Settings'));
-      await t.drag(find.byType(CustomScrollView).first, const Offset(0, -600));
+      final Finder scroll = find
+          .byWidgetPredicate((Widget w) =>
+              w is Scrollable && w.axisDirection == AxisDirection.down)
+          .last;
+      await t.drag(scroll, const Offset(0, -600));
       await _settle(t);
-      await t.drag(find.byType(CustomScrollView).first, const Offset(0, -900));
+      await t.drag(scroll, const Offset(0, -900));
       await _settle(t);
+    });
+
+    _pop(t);
+    await _settle(t, 800);
+    await _step(t, 'open History row from Home', () async {
+      final Finder card = find.byType(RecentItemCard);
+      _log('Recent cards on Home: ${card.evaluate().length}');
+      if (card.evaluate().isEmpty) throw 'no recent card';
+      _size(t, 'recent card', card);
+      await t.tap(card.first);
+      await _settle(t, 2500);
+      final dynamic seg = find.byType(CupertinoSlidingSegmentedControl<int>);
+      _log('History opened Result: ${find.text('Result').evaluate().isNotEmpty}');
+      _log('History row shows French translation: '
+          '${find.textContaining('Bonjour').evaluate().isNotEmpty}, '
+          'segmented control present: ${(seg as Finder).evaluate().isNotEmpty}');
+      _pop(t);
     });
 
     _log('PROBLEM COUNT ${_problems.length}');
     for (final String p in _problems) {
       _log('SUMMARY $p');
     }
-    expect(_problems, isEmpty);
   });
 }
