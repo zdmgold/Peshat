@@ -60,6 +60,12 @@ Future<void> _pick(WidgetTester t, String subtitle) async {
               w is Scrollable && w.axisDirection == AxisDirection.down)
           .last,
       maxScrolls: 60);
+  // scrollUntilVisible stops once the row is built (inside the cache extent),
+  // which can still be off screen: centre it before tapping.
+  try {
+    await Scrollable.ensureVisible(t.element(f.first), alignment: 0.5);
+  } catch (_) {}
+  await t.pump(const Duration(milliseconds: 400));
   await t.tap(f.first);
 }
 
