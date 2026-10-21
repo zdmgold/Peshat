@@ -1,0 +1,28 @@
+[        ] Compiling xml file /home/runner/.gradle/caches/8.10.2/transforms/12490dc5fec11d7951fbecb44aae17fc/transformed/appcompat-1.6.1/res/drawable/abc_ic_menu_overflow_material.xml to /home/runner/.gradle/caches/8.10.2/transforms/02e56a27dad03be701b0ac9207cd6b63-b597a767-caa5-44af-9293-225cfae6cd6c/transformed/androidx.appcompat/drawable_abc_ic_menu_overflow_material.xml.flat
+EMU 2026-10-21T09:42:37.335461 STEP home
+EMU 2026-10-21T09:42:37.418646 SIZE home language card: 76.9 x 14.0
+EMU 2026-10-21T09:42:37.429420 SIZE home pair card (IntrinsicHeight): 287.0 x 65.0
+EMU 2026-10-21T09:42:37.440524 SIZE home Type text: 69.0 x 19.0
+EMU 2026-10-21T09:42:38.422203 STEP source picker opens
+EMU 2026-10-21T09:42:40.965654 SIZE picker Auto row: 127.8 x 19.0
+EMU 2026-10-21T09:42:42.216063 STEP choose Japanese as source
+EMU 2026-10-21T09:42:45.392702 SIZE home pair after Japanese: 287.0 x 70.0
+EMU 2026-10-21T09:42:46.322444 STEP choose Russian (type-only) as source
+EMU 2026-10-21T09:42:52.838946 STEP back to Auto
+EMU 2026-10-21T09:42:57.872383 STEP destination picker + switch live
+EMU 2026-10-21T09:43:03.705834 STEP Type text screen
+EMU 2026-10-21T09:43:06.079888 SIZE Type text card: 124.5 x 19.0
+EMU 2026-10-21T09:43:08.138815 STEP translate (needs model download; soft)
+EMU 2026-10-21T09:43:19.067063 RESULT screen: true, Bonjour: true
+EMU 2026-10-21T09:43:19.068731 SIZE result language line: 114.2 x 18.0
+EMU 2026-10-21T09:43:19.070971 RESULT down-chevron icon present: true
+EMU 2026-10-21T09:43:20.072135 STEP result tabs
+EMU 2026-10-21T09:43:28.325915 STEP settings
+EMU 2026-10-21T09:43:30.202015 SIZE settings screen title: 63.1 x 21.0
+EMU 2026-10-21T09:43:36.076661 STEP open History row from Home
+EMU 2026-10-21T09:43:36.078367 Recent cards on Home: 1
+EMU 2026-10-21T09:43:36.079445 SIZE recent card: 288.0 x 82.0
+EMU 2026-10-21T09:43:39.362717 History opened Result: false
+EMU 2026-10-21T09:43:39.363955 History row shows French translation: true, segmented control present: false
+EMU 2026-10-21T09:43:40.298370 PROBLEM COUNT 0
+EMU 2026-10-21T09:43:40.374441 FLUTTERERR 
