@@ -124,6 +124,10 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     final rowExtent = (16 + 36 * textScale) > _kRowExtent
         ? (16 + 36 * textScale)
         : _kRowExtent;
+    // Section and letter headers also grow (7 px and 3 px overflow at 200%).
+    final extra = textScale > 1 ? textScale - 1 : 0.0;
+    final labelExtent = _kLabelExtent + 10 * extra;
+    final letterExtent = _kLetterExtent + 5 * extra;
 
     final all = _all;
     final filtered = _filtered(all);
@@ -142,7 +146,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
           ),
         );
     IndexEntry labelEntry(String text) => IndexEntry(
-          extent: _kLabelExtent,
+          extent: labelExtent,
           child: _SectionLabel(text: text, color: textTertiary),
         );
 
@@ -168,7 +172,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
         : <IndexEntry>[
       if (recents.isNotEmpty) ...[
         IndexEntry(
-          extent: _kLabelExtent,
+          extent: labelExtent,
           child: _SectionLabel(
             text: l10n.recentLanguagesLabel,
             color: textTertiary,
@@ -187,7 +191,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
             ),
           ),
         IndexEntry(
-          extent: _kLabelExtent,
+          extent: labelExtent,
           child: _SectionLabel(
             text: l10n.allLanguagesLabel,
             color: textTertiary,
@@ -196,7 +200,7 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
       ],
       for (final group in groups) ...[
         IndexEntry(
-          extent: _kLetterExtent,
+          extent: letterExtent,
           letter: group.letter,
           child: _LetterLabel(letter: group.letter, color: textTertiary),
         ),

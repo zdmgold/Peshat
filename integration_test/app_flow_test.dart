@@ -74,6 +74,19 @@ void main() {
   testWidgets('walk through the main screens', (WidgetTester t) async {
     app.main();
     await _settle(t, 4000);
+    // The app's own error handler swallows layout errors; report where each
+    // one came from (file and widget) so overflows can be traced.
+    final FlutterExceptionHandler? previous = FlutterError.onError;
+    FlutterError.onError = (FlutterErrorDetails d) {
+      final List<String> lines = d
+          .toStringDeep()
+          .split('\n')
+          .where((String l) => l.contains('lib/') || l.contains('overflowed'))
+          .take(5)
+          .toList();
+      _log('FLUTTERERR ${lines.join(' || ')}');
+      previous?.call(d);
+    };
 
     await _step(t, 'home', () async {
       expect(find.text('Source language'), findsOneWidget);
