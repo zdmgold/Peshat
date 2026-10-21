@@ -141,8 +141,10 @@ void main() {
           .byWidgetPredicate((Widget w) =>
               w is Scrollable && w.axisDirection == AxisDirection.down)
           .last;
-      await t.fling(list, const Offset(0, 2500), 3000);
-      await _settle(t);
+      for (int i = 0; i < 20 && find.textContaining('Auto').evaluate().isEmpty; i++) {
+        await t.fling(list, const Offset(0, 2500), 3000);
+        await _settle(t, 800);
+      }
       await t.tap(find.textContaining('Auto').first);
       await _settle(t);
     });
