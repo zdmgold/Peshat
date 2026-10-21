@@ -68,7 +68,7 @@ Future<void> _tapText(WidgetTester t, String text) async {
   if (f.evaluate().isEmpty) throw 'text not found: "$text"';
   try {
     await Scrollable.ensureVisible(t.element(f.first),
-        alignment: 0.4, duration: const Duration(milliseconds: 200));
+        alignment: 0.4);
   } catch (_) {}
   await t.pump(const Duration(milliseconds: 400));
   final Finder ad = find.byType(AdSlot);
