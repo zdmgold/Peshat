@@ -127,7 +127,13 @@ class _HalfState extends State<_Half> {
             child: Row(
               children: [
                 Expanded(
-                  child: Column(
+                  // Large text can round up 1 px past the measured height;
+                  // let it spill into the 8 px padding instead of overflowing.
+                  child: OverflowBox(
+                    alignment: AlignmentDirectional.topStart,
+                    minHeight: 0,
+                    maxHeight: double.infinity,
+                    child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       Text(
@@ -164,6 +170,7 @@ class _HalfState extends State<_Half> {
                           ),
                         ),
                     ],
+                  ),
                   ),
                 ),
                 const SizedBox(width: Spacing.xs),

@@ -65,6 +65,8 @@ Future<void> _pick(WidgetTester t, String subtitle) async {
 Future<void> _tapText(WidgetTester t, String text) async {
   final Finder f = find.text(text);
   if (f.evaluate().isEmpty) throw 'text not found: "$text"';
+  await t.ensureVisible(f.first);
+  await t.pump(const Duration(milliseconds: 300));
   await t.tap(f.first);
 }
 
