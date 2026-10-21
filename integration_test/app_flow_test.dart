@@ -7,6 +7,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:peshat/core/utils/app_icons.dart';
 import 'package:peshat/main.dart' as app;
+import 'package:peshat/widgets/ad_slot.dart';
 import 'package:peshat/widgets/peshat_icon.dart';
 import 'package:peshat/widgets/recent_item_card.dart';
 
@@ -65,8 +66,17 @@ Future<void> _pick(WidgetTester t, String subtitle) async {
 Future<void> _tapText(WidgetTester t, String text) async {
   final Finder f = find.text(text);
   if (f.evaluate().isEmpty) throw 'text not found: "$text"';
-  await t.ensureVisible(f.first);
-  await t.pump(const Duration(milliseconds: 300));
+  try {
+    await Scrollable.ensureVisible(t.element(f.first),
+        alignment: 0.4, duration: const Duration(milliseconds: 200));
+  } catch (_) {}
+  await t.pump(const Duration(milliseconds: 400));
+  final Finder ad = find.byType(AdSlot);
+  if (ad.evaluate().isNotEmpty) {
+    final double ay = t.getTopLeft(ad.first).dy;
+    final double ty = t.getCenter(f.first).dy;
+    if (ty > ay - 4) _log('PROBLEM "$text" centre y=$ty is under the ad slot (top y=$ay)');
+  }
   await t.tap(f.first);
 }
 
