@@ -1,0 +1,2000 @@
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_native_splash:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :flutter_native_splash:extractDebugAnnotations
+[        ] Caching disabled for task ':flutter_native_splash:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':flutter_native_splash:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/flutter_native_splash-2.4.6/android/src/debug/java', not found
+[        ] Resolve mutations for :flutter_native_splash:extractDeepLinksForAarDebug (Thread[Execution worker,5,main]) started.
+[        ] :flutter_native_splash:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_native_splash:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':flutter_native_splash:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':flutter_native_splash:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_native_splash:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :flutter_native_splash:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :flutter_native_splash:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':flutter_native_splash:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':flutter_native_splash:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_native_splash:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :flutter_native_splash:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :flutter_native_splash:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':flutter_native_splash:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':flutter_native_splash:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_native_splash:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_native_splash:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_native_splash:prepareDebugArtProfile
+[        ] Caching disabled for task ':flutter_native_splash:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_native_splash:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_native_splash:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] :flutter_native_splash:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[ +100 ms] > Task :flutter_native_splash:prepareLintJarForPublish
+[        ] Caching disabled for task ':flutter_native_splash:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_native_splash:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_native_splash:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] :flutter_native_splash:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':flutter_plugin_android_lifecycle:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_native_splash:mergeDebugJavaResource
+[        ] Caching disabled for task ':flutter_native_splash:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_native_splash:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':flutter_native_splash:mergeDebugJavaResource'.
+[        ] > Task :flutter_plugin_android_lifecycle:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_plugin_android_lifecycle:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :flutter_plugin_android_lifecycle:extractDebugAnnotations
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':flutter_plugin_android_lifecycle:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.31/android/src/debug/java', not found
+[        ] Resolve mutations for :flutter_native_splash:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_native_splash:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_native_splash:syncDebugLibJars
+[        ] Caching disabled for task ':flutter_native_splash:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':flutter_native_splash:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_native_splash:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_native_splash:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_native_splash:bundleDebugAar
+[        ] Caching disabled for task ':flutter_native_splash:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_native_splash:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_native_splash/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_native_splash/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_native_splash/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_native_splash/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_native_splash/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_native_splash/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :flutter_native_splash:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_native_splash:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :flutter_native_splash:assembleDebug
+[        ] Skipping task ':flutter_native_splash:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':flutter_plugin_android_lifecycle:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':flutter_plugin_android_lifecycle:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[   +6 ms]   Simple merging task
+[        ] Task ':flutter_plugin_android_lifecycle:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:prepareDebugArtProfile
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_plugin_android_lifecycle:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:prepareLintJarForPublish
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_plugin_android_lifecycle:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_commons:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_commons:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_commons:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':google_mlkit_commons:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :google_mlkit_commons:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_commons:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:mergeDebugJavaResource
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_plugin_android_lifecycle:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':flutter_plugin_android_lifecycle:mergeDebugJavaResource'.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_commons:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':google_mlkit_commons:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_commons:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :flutter_plugin_android_lifecycle:syncDebugLibJars
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':flutter_plugin_android_lifecycle:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:bundleDebugAar
+[        ] Caching disabled for task ':flutter_plugin_android_lifecycle:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':flutter_plugin_android_lifecycle:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_plugin_android_lifecycle/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_plugin_android_lifecycle/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_plugin_android_lifecycle/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_plugin_android_lifecycle/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/flutter_plugin_android_lifecycle/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :flutter_plugin_android_lifecycle:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :flutter_plugin_android_lifecycle:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :flutter_plugin_android_lifecycle:assembleDebug
+[        ] Skipping task ':flutter_plugin_android_lifecycle:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :google_mlkit_commons:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_commons:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[  +87 ms] > Task :google_mlkit_commons:extractDebugAnnotations
+[        ] Caching disabled for task ':google_mlkit_commons:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_commons:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/google_mlkit_commons-0.8.1/android/src/debug/java', not found
+[        ] Resolve mutations for :google_mlkit_commons:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_commons:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_commons:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':google_mlkit_commons:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_commons:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_commons:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_commons:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_commons:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':google_mlkit_commons:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_commons:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_commons:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_commons:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_commons:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':google_mlkit_commons:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_commons:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_commons:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_commons:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_commons:prepareDebugArtProfile
+[        ] Caching disabled for task ':google_mlkit_commons:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_commons:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_commons:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_commons:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :google_mlkit_commons:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_commons:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_commons:prepareLintJarForPublish
+[        ] Caching disabled for task ':google_mlkit_commons:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_commons:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_language_id:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_language_id:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_language_id:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':google_mlkit_language_id:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :google_mlkit_language_id:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_language_id:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_commons:mergeDebugJavaResource
+[        ] Caching disabled for task ':google_mlkit_commons:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_commons:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':google_mlkit_commons:mergeDebugJavaResource'.
+[        ] Resolve mutations for :google_mlkit_commons:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_commons:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_language_id:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':google_mlkit_language_id:copyDebugJniLibsProjectAndLocalJars' because:
+[   +5 ms]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_language_id:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :google_mlkit_commons:syncDebugLibJars
+[        ] Caching disabled for task ':google_mlkit_commons:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_commons:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_commons:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_commons:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_commons:bundleDebugAar
+[        ] Caching disabled for task ':google_mlkit_commons:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_commons:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_commons/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_commons/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_commons/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_commons/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_commons/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_commons/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :google_mlkit_commons:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_commons:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_commons:assembleDebug
+[        ] Skipping task ':google_mlkit_commons:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :google_mlkit_language_id:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_language_id:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_language_id:extractDebugAnnotations
+[        ] Caching disabled for task ':google_mlkit_language_id:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_language_id:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/google_mlkit_language_id-0.11.1/android/src/debug/java', not found
+[        ] Resolve mutations for :google_mlkit_language_id:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_language_id:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_language_id:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':google_mlkit_language_id:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_language_id:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_language_id:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_language_id:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_language_id:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':google_mlkit_language_id:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_language_id:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_language_id:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_language_id:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_language_id:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':google_mlkit_language_id:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_language_id:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_language_id:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_language_id:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_language_id:prepareDebugArtProfile
+[        ] Caching disabled for task ':google_mlkit_language_id:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_language_id:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_language_id:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_language_id:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[  +87 ms] Resolve mutations for :google_mlkit_language_id:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_language_id:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_language_id:prepareLintJarForPublish
+[        ] Caching disabled for task ':google_mlkit_language_id:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_language_id:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_text_recognition:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_text_recognition:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':google_mlkit_text_recognition:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :google_mlkit_text_recognition:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_text_recognition:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_language_id:mergeDebugJavaResource
+[        ] Caching disabled for task ':google_mlkit_language_id:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_language_id:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':google_mlkit_language_id:mergeDebugJavaResource'.
+[        ] Resolve mutations for :google_mlkit_language_id:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_language_id:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':google_mlkit_text_recognition:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_text_recognition:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :google_mlkit_language_id:syncDebugLibJars
+[        ] Caching disabled for task ':google_mlkit_language_id:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_language_id:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_language_id:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_language_id:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_language_id:bundleDebugAar
+[        ] Caching disabled for task ':google_mlkit_language_id:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_language_id:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_language_id/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_language_id/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_language_id/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_language_id/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_language_id/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_language_id/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :google_mlkit_language_id:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_language_id:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_language_id:assembleDebug
+[        ] Skipping task ':google_mlkit_language_id:assembleDebug' as it has no actions.
+[   +4 ms] Resolve mutations for :google_mlkit_text_recognition:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_text_recognition:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:extractDebugAnnotations
+[        ] Caching disabled for task ':google_mlkit_text_recognition:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_text_recognition:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/google_mlkit_text_recognition-0.13.1/android/src/debug/java', not found
+[        ] Resolve mutations for :google_mlkit_text_recognition:extractDeepLinksForAarDebug (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_text_recognition:extractDeepLinksForAarDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':google_mlkit_text_recognition:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_text_recognition:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_text_recognition:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_text_recognition:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[  +94 ms] > Task :google_mlkit_text_recognition:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':google_mlkit_text_recognition:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_text_recognition:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_text_recognition:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_text_recognition:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':google_mlkit_text_recognition:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_text_recognition:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_text_recognition:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_text_recognition:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:prepareDebugArtProfile
+[        ] Caching disabled for task ':google_mlkit_text_recognition:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_text_recognition:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_text_recognition:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_text_recognition:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:prepareLintJarForPublish
+[        ] Caching disabled for task ':google_mlkit_text_recognition:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_text_recognition:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_text_recognition:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_text_recognition:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] Resolve mutations for :google_mlkit_translation:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_translation:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:mergeDebugJavaResource
+[        ] Caching disabled for task ':google_mlkit_text_recognition:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_text_recognition:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':google_mlkit_text_recognition:mergeDebugJavaResource'.
+[        ] > Task :google_mlkit_translation:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':google_mlkit_translation:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :google_mlkit_text_recognition:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_text_recognition:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:syncDebugLibJars
+[        ] Caching disabled for task ':google_mlkit_text_recognition:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_text_recognition:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_text_recognition:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_text_recognition:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:bundleDebugAar
+[        ] Caching disabled for task ':google_mlkit_text_recognition:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_text_recognition:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_text_recognition/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_text_recognition/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_text_recognition/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[   +2 ms] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_text_recognition/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_text_recognition/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_text_recognition/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :google_mlkit_text_recognition:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_text_recognition:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_text_recognition:assembleDebug
+[        ] Skipping task ':google_mlkit_text_recognition:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :google_mlkit_translation:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] :google_mlkit_translation:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :google_mlkit_translation:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_translation:extractDebugAnnotations (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':google_mlkit_translation:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_translation:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :google_mlkit_translation:extractDebugAnnotations
+[        ] Caching disabled for task ':google_mlkit_translation:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_translation:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/google_mlkit_translation-0.11.1/android/src/debug/java', not found
+[        ] Resolve mutations for :google_mlkit_translation:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_translation:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':google_mlkit_translation:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_translation:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_translation:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_translation:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':google_mlkit_translation:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_translation:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_translation:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[   +2 ms] :google_mlkit_translation:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[  +88 ms] > Task :google_mlkit_translation:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':google_mlkit_translation:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mlkit_translation:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_translation:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_translation:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:prepareDebugArtProfile
+[        ] Caching disabled for task ':google_mlkit_translation:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_translation:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_translation:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_translation:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :google_mlkit_translation:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mlkit_translation:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mlkit_translation:prepareLintJarForPublish
+[        ] Caching disabled for task ':google_mlkit_translation:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_translation:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mobile_ads:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mobile_ads:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:mergeDebugJavaResource
+[        ] Caching disabled for task ':google_mlkit_translation:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_translation:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':google_mlkit_translation:mergeDebugJavaResource'.
+[        ] > Task :google_mobile_ads:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':google_mobile_ads:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :google_mlkit_translation:syncDebugLibJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_translation:syncDebugLibJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:syncDebugLibJars
+[        ] Caching disabled for task ':google_mlkit_translation:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mlkit_translation:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mlkit_translation:bundleDebugAar (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_translation:bundleDebugAar (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:bundleDebugAar
+[        ] Caching disabled for task ':google_mlkit_translation:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mlkit_translation:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_translation/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_translation/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_translation/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_translation/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_translation/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mlkit_translation/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :google_mlkit_translation:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mlkit_translation:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :google_mlkit_translation:assembleDebug
+[        ] Skipping task ':google_mlkit_translation:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :google_mobile_ads:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :google_mobile_ads:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :google_mobile_ads:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] :google_mobile_ads:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mobile_ads:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':google_mobile_ads:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mobile_ads:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :google_mobile_ads:extractDebugAnnotations
+[        ] Caching disabled for task ':google_mobile_ads:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mobile_ads:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/google_mobile_ads-6.0.0/android/src/debug/java', not found
+[        ] Resolve mutations for :google_mobile_ads:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mobile_ads:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mobile_ads:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':google_mobile_ads:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mobile_ads:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mobile_ads:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :google_mobile_ads:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mobile_ads:mergeDebugGeneratedProguardFiles
+[   +6 ms] Caching disabled for task ':google_mobile_ads:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mobile_ads:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mobile_ads:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :google_mobile_ads:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mobile_ads:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':google_mobile_ads:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':google_mobile_ads:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mobile_ads:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] :google_mobile_ads:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mobile_ads:prepareDebugArtProfile
+[        ] Caching disabled for task ':google_mobile_ads:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mobile_ads:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mobile_ads:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] :google_mobile_ads:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] > Task :google_mobile_ads:prepareLintJarForPublish
+[        ] Caching disabled for task ':google_mobile_ads:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mobile_ads:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mobile_ads:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] :google_mobile_ads:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :in_app_purchase_android:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :in_app_purchase_android:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':in_app_purchase_android:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :in_app_purchase_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :in_app_purchase_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[  +89 ms] Resolve mutations for :in_app_purchase_android:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mobile_ads:mergeDebugJavaResource
+[        ] Caching disabled for task ':google_mobile_ads:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mobile_ads:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':google_mobile_ads:mergeDebugJavaResource'.
+[        ] > Task :in_app_purchase_android:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':in_app_purchase_android:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_purchase_android:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :in_app_purchase_android:extractDebugAnnotations
+[        ] Caching disabled for task ':in_app_purchase_android:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':in_app_purchase_android:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/in_app_purchase_android-0.4.0+5/android/src/debug/java', not found
+[        ] Resolve mutations for :google_mobile_ads:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mobile_ads:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mobile_ads:syncDebugLibJars
+[        ] Caching disabled for task ':google_mobile_ads:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':google_mobile_ads:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :google_mobile_ads:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mobile_ads:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mobile_ads:bundleDebugAar
+[        ] Caching disabled for task ':google_mobile_ads:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':google_mobile_ads:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mobile_ads/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mobile_ads/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mobile_ads/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mobile_ads/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mobile_ads/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/google_mobile_ads/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :google_mobile_ads:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :google_mobile_ads:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :google_mobile_ads:assembleDebug
+[        ] Skipping task ':google_mobile_ads:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :in_app_purchase_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :in_app_purchase_android:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':in_app_purchase_android:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':in_app_purchase_android:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[   +3 ms] Resolve mutations for :in_app_purchase_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[  +96 ms] > Task :in_app_purchase_android:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':in_app_purchase_android:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':in_app_purchase_android:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_purchase_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :in_app_purchase_android:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':in_app_purchase_android:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':in_app_purchase_android:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_purchase_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :in_app_purchase_android:prepareDebugArtProfile
+[        ] Caching disabled for task ':in_app_purchase_android:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_purchase_android:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_purchase_android:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] Resolve mutations for :in_app_purchase_android:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :in_app_purchase_android:prepareLintJarForPublish
+[        ] Caching disabled for task ':in_app_purchase_android:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_purchase_android:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] :in_app_purchase_android:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :in_app_review:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_review:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_purchase_android:mergeDebugJavaResource
+[        ] Caching disabled for task ':in_app_purchase_android:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_purchase_android:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':in_app_purchase_android:mergeDebugJavaResource'.
+[        ] > Task :in_app_review:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':in_app_review:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :in_app_purchase_android:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] :in_app_purchase_android:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_purchase_android:syncDebugLibJars
+[        ] Caching disabled for task ':in_app_purchase_android:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':in_app_purchase_android:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_purchase_android:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :in_app_purchase_android:bundleDebugAar
+[        ] Caching disabled for task ':in_app_purchase_android:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_purchase_android:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_purchase_android/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_purchase_android/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_purchase_android/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_purchase_android/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_purchase_android/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[   +3 ms] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_purchase_android/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :in_app_purchase_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_purchase_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :in_app_purchase_android:assembleDebug
+[        ] Skipping task ':in_app_purchase_android:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :in_app_review:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_review:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] Resolve mutations for :in_app_review:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] :in_app_review:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_review:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':in_app_review:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_review:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[  +92 ms] > Task :in_app_review:extractDebugAnnotations
+[        ] Caching disabled for task ':in_app_review:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':in_app_review:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/in_app_review-2.0.12/android/src/main/java', not found
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/in_app_review-2.0.12/android/src/debug/java', not found
+[        ] Resolve mutations for :in_app_review:extractDeepLinksForAarDebug (Thread[Execution worker,5,main]) started.
+[        ] :in_app_review:extractDeepLinksForAarDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_review:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':in_app_review:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':in_app_review:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_review:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :in_app_review:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_review:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':in_app_review:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':in_app_review:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_review:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :in_app_review:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_review:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':in_app_review:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':in_app_review:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_review:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] :in_app_review:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_review:prepareDebugArtProfile
+[        ] Caching disabled for task ':in_app_review:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_review:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_review:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] :in_app_review:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_review:prepareLintJarForPublish
+[        ] Caching disabled for task ':in_app_review:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_review:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_review:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :in_app_review:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :integration_test:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] :integration_test:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :integration_test:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':integration_test:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :integration_test:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] :integration_test:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :in_app_review:mergeDebugJavaResource
+[        ] Caching disabled for task ':in_app_review:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_review:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':in_app_review:mergeDebugJavaResource'.
+[        ] Resolve mutations for :in_app_review:syncDebugLibJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :in_app_review:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':integration_test:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':integration_test:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :in_app_review:syncDebugLibJars
+[        ] Caching disabled for task ':in_app_review:syncDebugLibJars' because:
+[   +6 ms]   Build cache is disabled
+[        ] Task ':in_app_review:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :in_app_review:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_review:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[  +91 ms] > Task :in_app_review:bundleDebugAar
+[        ] Caching disabled for task ':in_app_review:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':in_app_review:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_review/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_review/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_review/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_review/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_review/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/in_app_review/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :in_app_review:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :in_app_review:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :in_app_review:assembleDebug
+[        ] Skipping task ':in_app_review:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :integration_test:extractDebugAnnotations (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :integration_test:extractDebugAnnotations (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :integration_test:extractDebugAnnotations
+[        ] Caching disabled for task ':integration_test:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':integration_test:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/opt/hostedtoolcache/flutter/stable-3.29.2-x64/flutter/packages/integration_test/android/src/debug/java', not found
+[        ] Resolve mutations for :integration_test:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :integration_test:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :integration_test:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':integration_test:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':integration_test:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :integration_test:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :integration_test:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':integration_test:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':integration_test:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :integration_test:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :integration_test:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':integration_test:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':integration_test:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :integration_test:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :integration_test:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:prepareDebugArtProfile
+[        ] Caching disabled for task ':integration_test:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':integration_test:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :integration_test:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :integration_test:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] Resolve mutations for :integration_test:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :integration_test:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :integration_test:prepareLintJarForPublish
+[        ] Caching disabled for task ':integration_test:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':integration_test:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :package_info_plus:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] :package_info_plus:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :package_info_plus:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':package_info_plus:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :package_info_plus:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] :package_info_plus:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :package_info_plus:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :package_info_plus:extractDebugAnnotations (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:mergeDebugJavaResource
+[        ] Caching disabled for task ':integration_test:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':integration_test:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':integration_test:mergeDebugJavaResource'.
+[        ] > Task :package_info_plus:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':package_info_plus:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':package_info_plus:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[  +98 ms] > Task :package_info_plus:extractDebugAnnotations
+[        ] Caching disabled for task ':package_info_plus:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':package_info_plus:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/package_info_plus-8.3.1/android/src/main/java', not found
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/package_info_plus-8.3.1/android/src/debug/java', not found
+[        ] Resolve mutations for :integration_test:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :integration_test:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:syncDebugLibJars
+[        ] Caching disabled for task ':integration_test:syncDebugLibJars' because:
+[   +1 ms]   Build cache is disabled
+[        ] Task ':integration_test:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :integration_test:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :integration_test:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:bundleDebugAar
+[        ] Caching disabled for task ':integration_test:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':integration_test:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/integration_test/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/integration_test/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/integration_test/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/integration_test/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/integration_test/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :integration_test:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :integration_test:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :integration_test:assembleDebug
+[        ] Skipping task ':integration_test:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :package_info_plus:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :package_info_plus:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :package_info_plus:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':package_info_plus:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':package_info_plus:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :package_info_plus:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :package_info_plus:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :package_info_plus:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':package_info_plus:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':package_info_plus:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :package_info_plus:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :package_info_plus:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :package_info_plus:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':package_info_plus:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':package_info_plus:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :package_info_plus:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] :package_info_plus:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] > Task :package_info_plus:prepareDebugArtProfile
+[        ] Caching disabled for task ':package_info_plus:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':package_info_plus:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :package_info_plus:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] :package_info_plus:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :package_info_plus:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :package_info_plus:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[   +2 ms] > Task :package_info_plus:prepareLintJarForPublish
+[        ] Caching disabled for task ':package_info_plus:prepareLintJarForPublish' because:
+[   +2 ms]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':package_info_plus:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[  +89 ms] Resolve mutations for :path_provider_android:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] :path_provider_android:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :path_provider_android:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':path_provider_android:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :path_provider_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :path_provider_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :path_provider_android:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] :path_provider_android:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] > Task :path_provider_android:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':path_provider_android:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':path_provider_android:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :package_info_plus:mergeDebugJavaResource
+[        ] Caching disabled for task ':package_info_plus:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':package_info_plus:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':package_info_plus:mergeDebugJavaResource'.
+[        ] > Task :path_provider_android:extractDebugAnnotations
+[        ] Caching disabled for task ':path_provider_android:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':path_provider_android:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/path_provider_android-2.2.19/android/src/debug/java', not found
+[        ] Resolve mutations for :package_info_plus:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] :package_info_plus:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :package_info_plus:syncDebugLibJars
+[        ] Caching disabled for task ':package_info_plus:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':package_info_plus:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :package_info_plus:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :package_info_plus:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :package_info_plus:bundleDebugAar
+[        ] Caching disabled for task ':package_info_plus:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':package_info_plus:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/package_info_plus/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/package_info_plus/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/package_info_plus/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/package_info_plus/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/package_info_plus/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/package_info_plus/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :package_info_plus:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] :package_info_plus:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :package_info_plus:assembleDebug
+[        ] Skipping task ':package_info_plus:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :path_provider_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :path_provider_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :path_provider_android:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':path_provider_android:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':path_provider_android:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :path_provider_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :path_provider_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :path_provider_android:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':path_provider_android:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':path_provider_android:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :path_provider_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :path_provider_android:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :path_provider_android:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':path_provider_android:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':path_provider_android:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :path_provider_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :path_provider_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :path_provider_android:prepareDebugArtProfile
+[        ] Caching disabled for task ':path_provider_android:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':path_provider_android:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :path_provider_android:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[   +3 ms] :path_provider_android:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :path_provider_android:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :path_provider_android:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :path_provider_android:prepareLintJarForPublish
+[        ] Caching disabled for task ':path_provider_android:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':path_provider_android:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :share_plus:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :share_plus:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :share_plus:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':share_plus:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :share_plus:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] :share_plus:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :share_plus:extractDebugAnnotations (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :share_plus:extractDebugAnnotations (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :share_plus:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':share_plus:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':share_plus:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :path_provider_android:mergeDebugJavaResource
+[        ] Caching disabled for task ':path_provider_android:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':path_provider_android:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':path_provider_android:mergeDebugJavaResource'.
+[        ] > Task :share_plus:extractDebugAnnotations
+[        ] Caching disabled for task ':share_plus:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':share_plus:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/share_plus-10.1.4/android/src/main/java', not found
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/share_plus-10.1.4/android/src/debug/java', not found
+[        ] Resolve mutations for :path_provider_android:syncDebugLibJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :path_provider_android:syncDebugLibJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :path_provider_android:syncDebugLibJars
+[        ] Caching disabled for task ':path_provider_android:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':path_provider_android:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :path_provider_android:bundleDebugAar (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :path_provider_android:bundleDebugAar (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :path_provider_android:bundleDebugAar
+[        ] Caching disabled for task ':path_provider_android:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':path_provider_android:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/path_provider_android/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/path_provider_android/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/path_provider_android/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/path_provider_android/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/path_provider_android/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/path_provider_android/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :path_provider_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :path_provider_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :path_provider_android:assembleDebug
+[        ] Skipping task ':path_provider_android:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :share_plus:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :share_plus:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :share_plus:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':share_plus:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[   +3 ms] Task ':share_plus:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :share_plus:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :share_plus:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :share_plus:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':share_plus:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':share_plus:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :share_plus:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :share_plus:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :share_plus:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':share_plus:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':share_plus:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :share_plus:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :share_plus:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :share_plus:prepareDebugArtProfile
+[        ] Caching disabled for task ':share_plus:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':share_plus:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :share_plus:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :share_plus:prepareLintJarForPublish (Thread[Execution worker Thread 3,5,main]) started.
+[        ] Resolve mutations for :share_plus:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :share_plus:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :share_plus:prepareLintJarForPublish
+[        ] Caching disabled for task ':share_plus:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':share_plus:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :shared_preferences_android:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :shared_preferences_android:stripDebugDebugSymbols (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':shared_preferences_android:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :shared_preferences_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :shared_preferences_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] Resolve mutations for :shared_preferences_android:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] :shared_preferences_android:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] > Task :shared_preferences_android:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':shared_preferences_android:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':shared_preferences_android:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :share_plus:mergeDebugJavaResource
+[        ] Caching disabled for task ':share_plus:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':share_plus:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':share_plus:mergeDebugJavaResource'.
+[        ] > Task :shared_preferences_android:extractDebugAnnotations
+[        ] Caching disabled for task ':shared_preferences_android:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':shared_preferences_android:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/shared_preferences_android-2.4.13/android/src/debug/java', not found
+[        ] Resolve mutations for :share_plus:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[  +87 ms] :share_plus:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :share_plus:syncDebugLibJars
+[        ] Caching disabled for task ':share_plus:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':share_plus:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :share_plus:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] :share_plus:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] > Task :share_plus:bundleDebugAar
+[        ] Caching disabled for task ':share_plus:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':share_plus:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/share_plus/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/share_plus/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/share_plus/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/share_plus/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/share_plus/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/share_plus/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :share_plus:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] :share_plus:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :share_plus:assembleDebug
+[        ] Skipping task ':share_plus:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :shared_preferences_android:extractDeepLinksForAarDebug (Thread[Execution worker,5,main]) started.
+[        ] :shared_preferences_android:extractDeepLinksForAarDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :shared_preferences_android:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':shared_preferences_android:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':shared_preferences_android:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :shared_preferences_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :shared_preferences_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :shared_preferences_android:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':shared_preferences_android:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':shared_preferences_android:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :shared_preferences_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :shared_preferences_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :shared_preferences_android:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':shared_preferences_android:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':shared_preferences_android:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :shared_preferences_android:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :shared_preferences_android:prepareDebugArtProfile (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :shared_preferences_android:prepareDebugArtProfile
+[        ] Caching disabled for task ':shared_preferences_android:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':shared_preferences_android:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :shared_preferences_android:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] :shared_preferences_android:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :shared_preferences_android:mergeDebugJavaResource (Thread[Execution worker Thread 2,5,main]) started.
+[   +3 ms] :shared_preferences_android:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :shared_preferences_android:prepareLintJarForPublish
+[        ] Caching disabled for task ':shared_preferences_android:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':shared_preferences_android:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :url_launcher_android:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] :url_launcher_android:stripDebugDebugSymbols (Thread[Execution worker,5,main]) started.
+[        ] > Task :url_launcher_android:stripDebugDebugSymbols NO-SOURCE
+[        ] Skipping task ':url_launcher_android:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :url_launcher_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] :url_launcher_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker,5,main]) started.
+[        ] Resolve mutations for :url_launcher_android:extractDebugAnnotations (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :url_launcher_android:extractDebugAnnotations (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :url_launcher_android:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':url_launcher_android:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':url_launcher_android:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :shared_preferences_android:mergeDebugJavaResource
+[        ] Caching disabled for task ':shared_preferences_android:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':shared_preferences_android:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':shared_preferences_android:mergeDebugJavaResource'.
+[        ] > Task :url_launcher_android:extractDebugAnnotations
+[        ] Caching disabled for task ':url_launcher_android:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':url_launcher_android:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/url_launcher_android-6.3.20/android/src/debug/java', not found
+[        ] Resolve mutations for :shared_preferences_android:syncDebugLibJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :shared_preferences_android:syncDebugLibJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :shared_preferences_android:syncDebugLibJars
+[        ] Caching disabled for task ':shared_preferences_android:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':shared_preferences_android:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :shared_preferences_android:bundleDebugAar (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :shared_preferences_android:bundleDebugAar (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :shared_preferences_android:bundleDebugAar
+[        ] Caching disabled for task ':shared_preferences_android:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':shared_preferences_android:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/shared_preferences_android/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/shared_preferences_android/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/shared_preferences_android/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/shared_preferences_android/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/shared_preferences_android/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/shared_preferences_android/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :shared_preferences_android:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :shared_preferences_android:assembleDebug (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :shared_preferences_android:assembleDebug
+[        ] Skipping task ':shared_preferences_android:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :url_launcher_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[  +90 ms] > Task :url_launcher_android:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':url_launcher_android:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':url_launcher_android:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :url_launcher_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :url_launcher_android:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':url_launcher_android:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':url_launcher_android:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :url_launcher_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:mergeDebugConsumerProguardFiles (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :url_launcher_android:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':url_launcher_android:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':url_launcher_android:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :url_launcher_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:prepareDebugArtProfile (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :url_launcher_android:prepareDebugArtProfile
+[        ] Caching disabled for task ':url_launcher_android:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':url_launcher_android:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :url_launcher_android:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :url_launcher_android:prepareLintJarForPublish (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :url_launcher_android:prepareLintJarForPublish
+[        ] Caching disabled for task ':url_launcher_android:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':url_launcher_android:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :url_launcher_android:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:mergeDebugJavaResource (Thread[Execution worker Thread 3,5,main]) started.
+[        ] Resolve mutations for :webview_flutter_android:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :webview_flutter_android:stripDebugDebugSymbols (Thread[Execution worker Thread 2,5,main]) started.
+[        ] > Task :webview_flutter_android:stripDebugDebugSymbols NO-SOURCE
+[   +2 ms] Skipping task ':webview_flutter_android:stripDebugDebugSymbols' as it has no source files and no previous output files.
+[        ] Resolve mutations for :webview_flutter_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] :webview_flutter_android:copyDebugJniLibsProjectAndLocalJars (Thread[Execution worker Thread 2,5,main]) started.
+[        ] Resolve mutations for :webview_flutter_android:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:extractDebugAnnotations (Thread[Execution worker,5,main]) started.
+[        ] > Task :url_launcher_android:mergeDebugJavaResource
+[        ] Caching disabled for task ':url_launcher_android:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':url_launcher_android:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':url_launcher_android:mergeDebugJavaResource'.
+[        ] > Task :webview_flutter_android:copyDebugJniLibsProjectAndLocalJars
+[        ] Caching disabled for task ':webview_flutter_android:copyDebugJniLibsProjectAndLocalJars' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':webview_flutter_android:copyDebugJniLibsProjectAndLocalJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] > Task :webview_flutter_android:extractDebugAnnotations
+[        ] Caching disabled for task ':webview_flutter_android:extractDebugAnnotations' because:
+[        ]   Build cache is disabled
+[        ] Task ':webview_flutter_android:extractDebugAnnotations' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/.pub-cache/hosted/pub.dev/webview_flutter_android-4.10.1/android/src/debug/java', not found
+[        ] Resolve mutations for :url_launcher_android:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:syncDebugLibJars (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :url_launcher_android:syncDebugLibJars
+[        ] Caching disabled for task ':url_launcher_android:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':url_launcher_android:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :url_launcher_android:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:bundleDebugAar (Thread[Execution worker Thread 3,5,main]) started.
+[  +94 ms] > Task :url_launcher_android:bundleDebugAar
+[        ] Caching disabled for task ':url_launcher_android:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':url_launcher_android:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/url_launcher_android/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/url_launcher_android/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/url_launcher_android/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/url_launcher_android/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/url_launcher_android/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/url_launcher_android/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :url_launcher_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :url_launcher_android:assembleDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :url_launcher_android:assembleDebug
+[        ] Skipping task ':url_launcher_android:assembleDebug' as it has no actions.
+[        ] Resolve mutations for :webview_flutter_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] :webview_flutter_android:extractDeepLinksForAarDebug (Thread[Execution worker Thread 3,5,main]) started.
+[        ] > Task :webview_flutter_android:extractDeepLinksForAarDebug
+[        ] Caching disabled for task ':webview_flutter_android:extractDeepLinksForAarDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':webview_flutter_android:extractDeepLinksForAarDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :webview_flutter_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:mergeDebugGeneratedProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:mergeDebugGeneratedProguardFiles
+[        ] Caching disabled for task ':webview_flutter_android:mergeDebugGeneratedProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':webview_flutter_android:mergeDebugGeneratedProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :webview_flutter_android:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:mergeDebugConsumerProguardFiles (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:mergeDebugConsumerProguardFiles
+[        ] Caching disabled for task ':webview_flutter_android:mergeDebugConsumerProguardFiles' because:
+[        ]   Build cache is disabled
+[        ]   Simple merging task
+[        ] Task ':webview_flutter_android:mergeDebugConsumerProguardFiles' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :webview_flutter_android:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:prepareDebugArtProfile (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:prepareDebugArtProfile
+[        ] Caching disabled for task ':webview_flutter_android:prepareDebugArtProfile' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':webview_flutter_android:prepareDebugArtProfile' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :webview_flutter_android:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:prepareLintJarForPublish (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:prepareLintJarForPublish
+[        ] Caching disabled for task ':webview_flutter_android:prepareLintJarForPublish' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':webview_flutter_android:prepareLintJarForPublish' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :webview_flutter_android:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:mergeDebugJavaResource (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:mergeDebugJavaResource
+[        ] Caching disabled for task ':webview_flutter_android:mergeDebugJavaResource' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':webview_flutter_android:mergeDebugJavaResource' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':webview_flutter_android:mergeDebugJavaResource'.
+[        ] Resolve mutations for :webview_flutter_android:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:syncDebugLibJars (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:syncDebugLibJars
+[        ] Caching disabled for task ':webview_flutter_android:syncDebugLibJars' because:
+[        ]   Build cache is disabled
+[        ] Task ':webview_flutter_android:syncDebugLibJars' is not up-to-date because:
+[        ]   No history is available.
+[        ] Resolve mutations for :webview_flutter_android:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[  +96 ms] :webview_flutter_android:bundleDebugAar (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:bundleDebugAar
+[        ] Caching disabled for task ':webview_flutter_android:bundleDebugAar' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':webview_flutter_android:bundleDebugAar' is not up-to-date because:
+[        ]   No history is available.
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/webview_flutter_android/intermediates/public_res/debug/packageDebugResources/public.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/webview_flutter_android/intermediates/navigation_json_for_aar/debug/extractDeepLinksForAarDebug/navigation.json', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/webview_flutter_android/intermediates/annotations_zip/debug/extractDebugAnnotations/annotations.zip', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/webview_flutter_android/intermediates/merged_consumer_proguard_file/debug/mergeDebugConsumerProguardFiles/proguard.txt', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/webview_flutter_android/intermediates/lint_publish_jar/global/prepareLintJarForPublish/lint.jar', not found
+[        ] file or directory '/home/runner/work/Peshat/Peshat/build/webview_flutter_android/intermediates/library_art_profile/debug/prepareDebugArtProfile/baseline-prof.txt', not found
+[        ] Resolve mutations for :webview_flutter_android:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] :webview_flutter_android:assembleDebug (Thread[Execution worker,5,main]) started.
+[        ] > Task :webview_flutter_android:assembleDebug
+[        ] Skipping task ':webview_flutter_android:assembleDebug' as it has no actions.
+[ +197 ms] > Task :app:packageDebug
+[        ] Custom actions are attached to task ':app:packageDebug'.
+[        ] Caching disabled for task ':app:packageDebug' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':app:packageDebug' is not up-to-date because:
+[        ]   No history is available.
+[        ] The input changes require a full rebuild for incremental task ':app:packageDebug'.
+[ +998 ms] Resolve mutations for :app:createDebugApkListingFileRedirect (Thread[included builds Thread 2,5,main]) started.
+[        ] :app:createDebugApkListingFileRedirect (Thread[included builds Thread 2,5,main]) started.
+[        ] > Task :app:createDebugApkListingFileRedirect
+[        ] Caching disabled for task ':app:createDebugApkListingFileRedirect' because:
+[        ]   Build cache is disabled
+[        ]   Caching has been disabled for the task
+[        ] Task ':app:createDebugApkListingFileRedirect' is not up-to-date because:
+[        ]   No history is available.
+[   +2 ms] Resolve mutations for :app:assembleDebug (Thread[included builds Thread 2,5,main]) started.
+[        ] :app:assembleDebug (Thread[included builds Thread 2,5,main]) started.
+[ +196 ms] > Task :app:assembleDebug
+[        ] Caching disabled for task ':app:assembleDebug' because:
+[        ]   Build cache is disabled
+[        ] Task ':app:assembleDebug' is not up-to-date because:
+[        ]   Task has not declared any outputs despite executing actions.
+[ +199 ms] AAPT2 aapt2-8.7.0-12006047-linux Daemon #0: shutdown
+[        ] AAPT2 aapt2-8.7.0-12006047-linux Daemon #1: shutdown
+[        ] BUILD SUCCESSFUL in 7m 2s
+[        ] 607 actionable tasks: 601 executed, 6 up-to-date
+[ +404 ms] Running Gradle task 'assembleDebug'... (completed in 423.3s)
+[   +1 ms] Calculate SHA1: LocalDirectory: '/home/runner/work/Peshat/Peshat/build/app/outputs/flutter-apk'/app-debug.apk
+[+2250 ms] ✓ Built build/app/outputs/flutter-apk/app-debug.apk
+[   +4 ms] executing: /usr/local/lib/android/sdk/build-tools/37.0.0/aapt dump xmltree /home/runner/work/Peshat/Peshat/build/app/outputs/flutter-apk/app-debug.apk AndroidManifest.xml
+[ +340 ms] Exit code 0 from: /usr/local/lib/android/sdk/build-tools/37.0.0/aapt dump xmltree /home/runner/work/Peshat/Peshat/build/app/outputs/flutter-apk/app-debug.apk AndroidManifest.xml
+[        ] N: android=http://schemas.android.com/apk/res/android
+             E: manifest (line=2)
+               A: android:versionCode(0x0101021b)=(type 0x10)0x2
+               A: android:versionName(0x0101021c)="1.0.0" (Raw: "1.0.0")
+               A: android:compileSdkVersion(0x01010572)=(type 0x10)0x23
+               A: android:compileSdkVersionCodename(0x01010573)="15" (Raw: "15")
+               A: package="com.zdmgold.peshat" (Raw: "com.zdmgold.peshat")
+               A: platformBuildVersionCode=(type 0x10)0x23
+               A: platformBuildVersionName=(type 0x10)0xf
+               E: uses-sdk (line=7)
+                 A: android:minSdkVersion(0x0101020c)=(type 0x10)0x17
+                 A: android:targetSdkVersion(0x01010270)=(type 0x10)0x24
+               E: uses-permission (line=15)
+                 A: android:name(0x01010003)="android.permission.INTERNET" (Raw: "android.permission.INTERNET")
+               E: uses-permission (line=16)
+                 A: android:name(0x01010003)="android.permission.CAMERA" (Raw: "android.permission.CAMERA")
+               E: uses-feature (line=18)
+                 A: android:name(0x01010003)="android.hardware.camera" (Raw: "android.hardware.camera")
+                 A: android:required(0x0101028e)=(type 0x12)0x0
+               E: uses-permission (line=22)
+                 A: android:name(0x01010003)="android.permission.POST_NOTIFICATIONS" (Raw: "android.permission.POST_NOTIFICATIONS")
+               E: uses-permission (line=23)
+                 A: android:name(0x01010003)="android.permission.RECEIVE_BOOT_COMPLETED" (Raw: "android.permission.RECEIVE_BOOT_COMPLETED")
+               E: queries (line=31)
+                 E: intent (line=32)
+                   E: action (line=33)
+                     A: android:name(0x01010003)="android.intent.action.PROCESS_TEXT" (Raw: "android.intent.action.PROCESS_TEXT")
+                   E: data (line=35)
+                     A: android:mimeType(0x01010026)="text/plain" (Raw: "text/plain")
+                 E: intent (line=37)
+                   E: action (line=38)
+                     A: android:name(0x01010003)="android.intent.action.GET_CONTENT" (Raw: "android.intent.action.GET_CONTENT")
+                   E: data (line=40)
+                     A: android:mimeType(0x01010026)="*/*" (Raw: "*/*")
+                 E: intent (line=42)
+                   E: action (line=43)
+                     A: android:name(0x01010003)="com.android.vending.billing.InAppBillingService.BIND" (Raw: "com.android.vending.billing.InAppBillingService.BIND")
+                 E: intent (line=45)
+                   E: action (line=46)
+                     A: android:name(0x01010003)="com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND" (Raw: "com.google.android.apps.play.billingtestcompanion.BillingOverrideService.BIND")
+                 E: intent (line=48)
+                   E: action (line=49)
+                     A: android:name(0x01010003)="android.intent.action.VIEW" (Raw: "android.intent.action.VIEW")
+                   E: category (line=51)
+                     A: android:name(0x01010003)="android.intent.category.BROWSABLE" (Raw: "android.intent.category.BROWSABLE")
+                   E: data (line=53)
+                     A: android:scheme(0x01010027)="https" (Raw: "https")
+                 E: intent (line=56)
+                   E: action (line=57)
+                     A: android:name(0x01010003)="android.support.customtabs.action.CustomTabsService" (Raw: "android.support.customtabs.action.CustomTabsService")
+                 E: intent (line=60)
+                   E: action (line=61)
+                     A: android:name(0x01010003)="android.intent.action.INSERT" (Raw: "android.intent.action.INSERT")
+                   E: data (line=63)
+                     A: android:mimeType(0x01010026)="vnd.android.cursor.dir/event" (Raw: "vnd.android.cursor.dir/event")
+                 E: intent (line=65)
+                   E: action (line=66)
+                     A: android:name(0x01010003)="android.intent.action.VIEW" (Raw: "android.intent.action.VIEW")
+                   E: data (line=68)
+                     A: android:scheme(0x01010027)="sms" (Raw: "sms")
+                 E: intent (line=70)
+                   E: action (line=71)
+                     A: android:name(0x01010003)="android.intent.action.DIAL" (Raw: "android.intent.action.DIAL")
+                   E: data (line=73)
+                     A: android:path(0x0101002a)="tel:" (Raw: "tel:")
+               E: uses-feature (line=77)
+                 A: android:name(0x01010003)="android.hardware.camera.any" (Raw: "android.hardware.camera.any")
+               E: uses-permission (line=79)
+                 A: android:name(0x01010003)="android.permission.RECORD_AUDIO" (Raw: "android.permission.RECORD_AUDIO")
+               E: uses-permission (line=80)
+                 A: android:name(0x01010003)="android.permission.WRITE_EXTERNAL_STORAGE" (Raw: "android.permission.WRITE_EXTERNAL_STORAGE")
+                 A: android:maxSdkVersion(0x01010271)=(type 0x10)0x1c
+               E: uses-permission (line=83)
+                 A: android:name(0x01010003)="android.permission.READ_EXTERNAL_STORAGE" (Raw: "android.permission.READ_EXTERNAL_STORAGE")
+               E: uses-permission (line=84)
+                 A: android:name(0x01010003)="android.permission.VIBRATE" (Raw: "android.permission.VIBRATE")
+               E: uses-permission (line=85)
+                 A: android:name(0x01010003)="android.permission.ACCESS_NETWORK_STATE" (Raw: "android.permission.ACCESS_NETWORK_STATE")
+               E: uses-permission (line=86)
+                 A: android:name(0x01010003)="com.android.vending.BILLING" (Raw: "com.android.vending.BILLING")
+               E: uses-permission (line=87)
+                 A: android:name(0x01010003)="com.google.android.gms.permission.AD_ID" (Raw: "com.google.android.gms.permission.AD_ID")
+               E: uses-permission (line=88)
+                 A: android:name(0x01010003)="android.permission.ACCESS_ADSERVICES_AD_ID" (Raw: "android.permission.ACCESS_ADSERVICES_AD_ID")
+               E: uses-permission (line=89)
+                 A: android:name(0x01010003)="android.permission.ACCESS_ADSERVICES_ATTRIBUTION" (Raw: "android.permission.ACCESS_ADSERVICES_ATTRIBUTION")
+               E: uses-permission (line=90)
+                 A: android:name(0x01010003)="android.permission.ACCESS_ADSERVICES_TOPICS" (Raw: "android.permission.ACCESS_ADSERVICES_TOPICS")
+               E: uses-permission (line=91)
+                 A: android:name(0x01010003)="android.permission.WAKE_LOCK" (Raw: "android.permission.WAKE_LOCK")
+               E: uses-permission (line=92)
+                 A: android:name(0x01010003)="android.permission.FOREGROUND_SERVICE" (Raw: "android.permission.FOREGROUND_SERVICE")
+               E: permission (line=94)
+                 A: android:name(0x01010003)="com.zdmgold.peshat.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" (Raw: "com.zdmgold.peshat.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION")
+                 A: android:protectionLevel(0x01010009)=(type 0x11)0x2
+               E: uses-permission (line=98)
+                 A: android:name(0x01010003)="com.zdmgold.peshat.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" (Raw: "com.zdmgold.peshat.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION")
+               E: application (line=100)
+                 A: android:label(0x01010001)=@0x7f0e001c
+                 A: android:icon(0x01010002)=@0x7f0c0000
+                 A: android:name(0x01010003)="android.app.Application" (Raw: "android.app.Application")
+                 A: android:debuggable(0x0101000f)=(type 0x12)0xffffffff
+                 A: android:extractNativeLibs(0x010104ea)=(type 0x12)0x0
+                 A: android:appComponentFactory(0x0101057a)="androidx.core.app.CoreComponentFactory" (Raw: "androidx.core.app.CoreComponentFactory")
+                 E: meta-data (line=107)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.APPLICATION_ID" (Raw: "com.google.android.gms.ads.APPLICATION_ID")
+                   A: android:value(0x01010024)="ca-app-pub-3940256099942544~3347511713" (Raw: "ca-app-pub-3940256099942544~3347511713")
+                 E: activity (line=111)
+                   A: android:theme(0x01010000)=@0x7f0f00a2
+                   A: android:name(0x01010003)="com.zdmgold.peshat.MainActivity" (Raw: "com.zdmgold.peshat.MainActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:taskAffinity(0x01010012)="" (Raw: "")
+                   A: android:launchMode(0x0101001d)=(type 0x10)0x1
+                   A: android:configChanges(0x0101001f)=(type 0x11)0x40003fb4
+                   A: android:windowSoftInputMode(0x0101022b)=(type 0x11)0x10
+                   A: android:hardwareAccelerated(0x010102d3)=(type 0x12)0xffffffff
+                   E: meta-data (line=127)
+                     A: android:name(0x01010003)="io.flutter.embedding.android.NormalTheme" (Raw: "io.flutter.embedding.android.NormalTheme")
+                     A: android:resource(0x01010025)=@0x7f0f00a3
+                   E: intent-filter (line=131)
+                     E: action (line=132)
+                       A: android:name(0x01010003)="android.intent.action.MAIN" (Raw: "android.intent.action.MAIN")
+                     E: category (line=134)
+                       A: android:name(0x01010003)="android.intent.category.LAUNCHER" (Raw: "android.intent.category.LAUNCHER")
+                 E: receiver (line=141)
+                   A: android:name(0x01010003)="com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver" (Raw: "com.dexterous.flutterlocalnotifications.ScheduledNotificationReceiver")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: receiver (line=144)
+                   A: android:name(0x01010003)="com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver" (Raw: "com.dexterous.flutterlocalnotifications.ScheduledNotificationBootReceiver")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   E: intent-filter (line=147)
+                     E: action (line=148)
+                       A: android:name(0x01010003)="android.intent.action.BOOT_COMPLETED" (Raw: "android.intent.action.BOOT_COMPLETED")
+                     E: action (line=149)
+                       A: android:name(0x01010003)="android.intent.action.MY_PACKAGE_REPLACED" (Raw: "android.intent.action.MY_PACKAGE_REPLACED")
+                     E: action (line=150)
+                       A: android:name(0x01010003)="android.intent.action.QUICKBOOT_POWERON" (Raw: "android.intent.action.QUICKBOOT_POWERON")
+                     E: action (line=151)
+                       A: android:name(0x01010003)="com.htc.intent.action.QUICKBOOT_POWERON" (Raw: "com.htc.intent.action.QUICKBOOT_POWERON")
+                 E: meta-data (line=158)
+                   A: android:name(0x01010003)="flutterEmbedding" (Raw: "flutterEmbedding")
+                   A: android:value(0x01010024)=(type 0x10)0x2
+                 E: provider (line=165)
+                   A: android:name(0x01010003)="dev.fluttercommunity.plus.share.ShareFileProvider" (Raw: "dev.fluttercommunity.plus.share.ShareFileProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="com.zdmgold.peshat.flutter.share_provider" (Raw: "com.zdmgold.peshat.flutter.share_provider")
+                   A: android:grantUriPermissions(0x0101001b)=(type 0x12)0xffffffff
+                   E: meta-data (line=170)
+                     A: android:name(0x01010003)="android.support.FILE_PROVIDER_PATHS" (Raw: "android.support.FILE_PROVIDER_PATHS")
+                     A: android:resource(0x01010025)=@0x7f110001
+                 E: receiver (line=178)
+                   A: android:name(0x01010003)="dev.fluttercommunity.plus.share.SharePlusPendingIntent" (Raw: "dev.fluttercommunity.plus.share.SharePlusPendingIntent")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   E: intent-filter (line=181)
+                     E: action (line=182)
+                       A: android:name(0x01010003)="EXTRA_CHOSEN_COMPONENT" (Raw: "EXTRA_CHOSEN_COMPONENT")
+                 E: meta-data (line=186)
+                   A: android:name(0x01010003)="io.flutter.embedded_views_preview" (Raw: "io.flutter.embedded_views_preview")
+                   A: android:value(0x01010024)=(type 0x12)0xffffffff
+                 E: service (line=190)
+                   A: android:name(0x01010003)="androidx.camera.core.impl.MetadataHolderService" (Raw: "androidx.camera.core.impl.MetadataHolderService")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   E: meta-data (line=194)
+                     A: android:name(0x01010003)="androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER" (Raw: "androidx.camera.core.impl.MetadataHolderService.DEFAULT_CONFIG_PROVIDER")
+                     A: android:value(0x01010024)="androidx.camera.camera2.Camera2Config$DefaultProvider" (Raw: "androidx.camera.camera2.Camera2Config$DefaultProvider")
+                 E: activity (line=199)
+                   A: android:theme(0x01010000)=@0x01030007
+                   A: android:name(0x01010003)="io.flutter.plugins.urllauncher.WebViewActivity" (Raw: "io.flutter.plugins.urllauncher.WebViewActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: service (line=204)
+                   A: android:name(0x01010003)="com.google.mlkit.common.internal.MlKitComponentDiscoveryService" (Raw: "com.google.mlkit.common.internal.MlKitComponentDiscoveryService")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0xffffffff
+                   E: meta-data (line=208)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.mlkit.nl.translate.NaturalLanguageTranslateRegistrar" (Raw: "com.google.firebase.components:com.google.mlkit.nl.translate.NaturalLanguageTranslateRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw: "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=211)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar" (Raw: "com.google.firebase.components:com.google.mlkit.vision.text.internal.TextRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw: "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=214)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar" (Raw: "com.google.firebase.components:com.google.mlkit.vision.common.internal.VisionCommonRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw: "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=217)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.mlkit.nl.languageid.bundled.internal.ThickLanguageIdRegistrar" (Raw: "com.google.firebase.components:com.google.mlkit.nl.languageid.bundled.internal.ThickLanguageIdRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw: "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=220)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.mlkit.nl.languageid.internal.LanguageIdRegistrar" (Raw: "com.google.firebase.components:com.google.mlkit.nl.languageid.internal.LanguageIdRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw: "com.google.firebase.components.ComponentRegistrar")
+                   E: meta-data (line=223)
+                     A: android:name(0x01010003)="com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar" (Raw: "com.google.firebase.components:com.google.mlkit.common.internal.CommonComponentRegistrar")
+                     A: android:value(0x01010024)="com.google.firebase.components.ComponentRegistrar" (Raw: "com.google.firebase.components.ComponentRegistrar")
+                 E: activity (line=232)
+                   A: android:theme(0x01010000)=@0x0103000a
+                   A: android:name(0x01010003)="com.google.mlkit.vision.documentscanner.internal.GmsDocumentScanningDelegateActivity" (Raw: "com.google.mlkit.vision.documentscanner.internal.GmsDocumentScanningDelegateActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:screenOrientation(0x0101001e)=(type 0x10)0x1
+                 E: meta-data (line=239)
+                   A: android:name(0x01010003)="com.google.android.play.billingclient.version" (Raw: "com.google.android.play.billingclient.version")
+                   A: android:value(0x01010024)="7.1.1" (Raw: "7.1.1")
+                 E: activity (line=243)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.android.billingclient.api.ProxyBillingActivity" (Raw: "com.android.billingclient.api.ProxyBillingActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:configChanges(0x0101001f)=(type 0x11)0x5b0
+                 E: activity (line=248)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.android.billingclient.api.ProxyBillingActivityV2" (Raw: "com.android.billingclient.api.ProxyBillingActivityV2")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:configChanges(0x0101001f)=(type 0x11)0x5b0
+                 E: provider (line=254)
+                   A: android:name(0x01010003)="com.google.mlkit.common.internal.MlKitInitProvider" (Raw: "com.google.mlkit.common.internal.MlKitInitProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="com.zdmgold.peshat.mlkitinitprovider" (Raw: "com.zdmgold.peshat.mlkitinitprovider")
+                   A: android:initOrder(0x0101001a)=(type 0x10)0x63
+                 E: activity (line=260)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.google.android.gms.common.api.GoogleApiActivity" (Raw: "com.google.android.gms.common.api.GoogleApiActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: activity (line=264)
+                   A: android:theme(0x01010000)=@0x0103000f
+                   A: android:name(0x01010003)="com.google.android.gms.ads.AdActivity" (Raw: "com.google.android.gms.ads.AdActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:configChanges(0x0101001f)=(type 0x11)0xfb0
+                 E: provider (line=270)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.MobileAdsInitProvider" (Raw: "com.google.android.gms.ads.MobileAdsInitProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="com.zdmgold.peshat.mobileadsinitprovider" (Raw: "com.zdmgold.peshat.mobileadsinitprovider")
+                   A: android:initOrder(0x0101001a)=(type 0x10)0x64
+                 E: service (line=276)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.AdService" (Raw: "com.google.android.gms.ads.AdService")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: activity (line=281)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.OutOfContextTestingActivity" (Raw: "com.google.android.gms.ads.OutOfContextTestingActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:configChanges(0x0101001f)=(type 0x11)0xfb0
+                 E: activity (line=285)
+                   A: android:theme(0x01010000)=@0x01030010
+                   A: android:name(0x01010003)="com.google.android.gms.ads.NotificationHandlerActivity" (Raw: "com.google.android.gms.ads.NotificationHandlerActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:taskAffinity(0x01010012)="" (Raw: "")
+                   A: android:excludeFromRecents(0x01010017)=(type 0x12)0xffffffff
+                   A: android:launchMode(0x0101001d)=(type 0x10)0x2
+                 E: meta-data (line=293)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING" (Raw: "com.google.android.gms.ads.flag.OPTIMIZE_AD_LOADING")
+                   A: android:value(0x01010024)=(type 0x12)0xffffffff
+                 E: meta-data (line=296)
+                   A: android:name(0x01010003)="com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION" (Raw: "com.google.android.gms.ads.flag.OPTIMIZE_INITIALIZATION")
+                   A: android:value(0x01010024)=(type 0x12)0xffffffff
+                 E: uses-library (line=300)
+                   A: android:name(0x01010003)="androidx.window.extensions" (Raw: "androidx.window.extensions")
+                   A: android:required(0x0101028e)=(type 0x12)0x0
+                 E: uses-library (line=303)
+                   A: android:name(0x01010003)="androidx.window.sidecar" (Raw: "androidx.window.sidecar")
+                   A: android:required(0x0101028e)=(type 0x12)0x0
+                 E: meta-data (line=307)
+                   A: android:name(0x01010003)="com.google.android.gms.version" (Raw: "com.google.android.gms.version")
+                   A: android:value(0x01010024)=@0x7f090004
+                 E: provider (line=311)
+                   A: android:name(0x01010003)="androidx.startup.InitializationProvider" (Raw: "androidx.startup.InitializationProvider")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:authorities(0x01010018)="com.zdmgold.peshat.androidx-startup" (Raw: "com.zdmgold.peshat.androidx-startup")
+                   E: meta-data (line=315)
+                     A: android:name(0x01010003)="androidx.work.WorkManagerInitializer" (Raw: "androidx.work.WorkManagerInitializer")
+                     A: android:value(0x01010024)="androidx.startup" (Raw: "androidx.startup")
+                   E: meta-data (line=318)
+                     A: android:name(0x01010003)="androidx.emoji2.text.EmojiCompatInitializer" (Raw: "androidx.emoji2.text.EmojiCompatInitializer")
+                     A: android:value(0x01010024)="androidx.startup" (Raw: "androidx.startup")
+                   E: meta-data (line=321)
+                     A: android:name(0x01010003)="androidx.lifecycle.ProcessLifecycleInitializer" (Raw: "androidx.lifecycle.ProcessLifecycleInitializer")
+                     A: android:value(0x01010024)="androidx.startup" (Raw: "androidx.startup")
+                   E: meta-data (line=324)
+                     A: android:name(0x01010003)="androidx.profileinstaller.ProfileInstallerInitializer" (Raw: "androidx.profileinstaller.ProfileInstallerInitializer")
+                     A: android:value(0x01010024)="androidx.startup" (Raw: "androidx.startup")
+                 E: service (line=329)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.SystemAlarmService" (Raw: "androidx.work.impl.background.systemalarm.SystemAlarmService")
+                   A: android:enabled(0x0101000e)=@0x7f040003
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: service (line=334)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemjob.SystemJobService" (Raw: "androidx.work.impl.background.systemjob.SystemJobService")
+                   A: android:permission(0x01010006)="android.permission.BIND_JOB_SERVICE" (Raw: "android.permission.BIND_JOB_SERVICE")
+                   A: android:enabled(0x0101000e)=@0x7f040005
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: service (line=340)
+                   A: android:name(0x01010003)="androidx.work.impl.foreground.SystemForegroundService" (Raw: "androidx.work.impl.foreground.SystemForegroundService")
+                   A: android:enabled(0x0101000e)=@0x7f040004
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: receiver (line=346)
+                   A: android:name(0x01010003)="androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver" (Raw: "androidx.work.impl.utils.ForceStopRunnable$BroadcastReceiver")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                 E: receiver (line=351)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy" (Raw: "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryChargingProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=356)
+                     E: action (line=357)
+                       A: android:name(0x01010003)="android.intent.action.ACTION_POWER_CONNECTED" (Raw: "android.intent.action.ACTION_POWER_CONNECTED")
+                     E: action (line=358)
+                       A: android:name(0x01010003)="android.intent.action.ACTION_POWER_DISCONNECTED" (Raw: "android.intent.action.ACTION_POWER_DISCONNECTED")
+                 E: receiver (line=361)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy" (Raw: "androidx.work.impl.background.systemalarm.ConstraintProxy$BatteryNotLowProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=366)
+                     E: action (line=367)
+                       A: android:name(0x01010003)="android.intent.action.BATTERY_OKAY" (Raw: "android.intent.action.BATTERY_OKAY")
+                     E: action (line=368)
+                       A: android:name(0x01010003)="android.intent.action.BATTERY_LOW" (Raw: "android.intent.action.BATTERY_LOW")
+                 E: receiver (line=371)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy" (Raw: "androidx.work.impl.background.systemalarm.ConstraintProxy$StorageNotLowProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=376)
+                     E: action (line=377)
+                       A: android:name(0x01010003)="android.intent.action.DEVICE_STORAGE_LOW" (Raw: "android.intent.action.DEVICE_STORAGE_LOW")
+                     E: action (line=378)
+                       A: android:name(0x01010003)="android.intent.action.DEVICE_STORAGE_OK" (Raw: "android.intent.action.DEVICE_STORAGE_OK")
+                 E: receiver (line=381)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy" (Raw: "androidx.work.impl.background.systemalarm.ConstraintProxy$NetworkStateProxy")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=386)
+                     E: action (line=387)
+                       A: android:name(0x01010003)="android.net.conn.CONNECTIVITY_CHANGE" (Raw: "android.net.conn.CONNECTIVITY_CHANGE")
+                 E: receiver (line=390)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.RescheduleReceiver" (Raw: "androidx.work.impl.background.systemalarm.RescheduleReceiver")
+                   A: android:enabled(0x0101000e)=(type 0x12)0x0
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=395)
+                     E: action (line=396)
+                       A: android:name(0x01010003)="android.intent.action.BOOT_COMPLETED" (Raw: "android.intent.action.BOOT_COMPLETED")
+                     E: action (line=397)
+                       A: android:name(0x01010003)="android.intent.action.TIME_SET" (Raw: "android.intent.action.TIME_SET")
+                     E: action (line=398)
+                       A: android:name(0x01010003)="android.intent.action.TIMEZONE_CHANGED" (Raw: "android.intent.action.TIMEZONE_CHANGED")
+                 E: receiver (line=401)
+                   A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" (Raw: "androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver")
+                   A: android:enabled(0x0101000e)=@0x7f040003
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=406)
+                     E: action (line=407)
+                       A: android:name(0x01010003)="androidx.work.impl.background.systemalarm.UpdateProxies" (Raw: "androidx.work.impl.background.systemalarm.UpdateProxies")
+                 E: receiver (line=410)
+                   A: android:name(0x01010003)="androidx.work.impl.diagnostics.DiagnosticsReceiver" (Raw: "androidx.work.impl.diagnostics.DiagnosticsReceiver")
+                   A: android:permission(0x01010006)="android.permission.DUMP" (Raw: "android.permission.DUMP")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=416)
+                     E: action (line=417)
+                       A: android:name(0x01010003)="androidx.work.diagnostics.REQUEST_DIAGNOSTICS" (Raw: "androidx.work.diagnostics.REQUEST_DIAGNOSTICS")
+                 E: uses-library (line=421)
+                   A: android:name(0x01010003)="android.ext.adservices" (Raw: "android.ext.adservices")
+                   A: android:required(0x0101028e)=(type 0x12)0x0
+                 E: receiver (line=425)
+                   A: android:name(0x01010003)="androidx.profileinstaller.ProfileInstallReceiver" (Raw: "androidx.profileinstaller.ProfileInstallReceiver")
+                   A: android:permission(0x01010006)="android.permission.DUMP" (Raw: "android.permission.DUMP")
+                   A: android:enabled(0x0101000e)=(type 0x12)0xffffffff
+                   A: android:exported(0x01010010)=(type 0x12)0xffffffff
+                   A: android:directBootAware(0x01010505)=(type 0x12)0x0
+                   E: intent-filter (line=431)
+                     E: action (line=432)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.INSTALL_PROFILE" (Raw: "androidx.profileinstaller.action.INSTALL_PROFILE")
+                   E: intent-filter (line=434)
+                     E: action (line=435)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.SKIP_FILE" (Raw: "androidx.profileinstaller.action.SKIP_FILE")
+                   E: intent-filter (line=437)
+                     E: action (line=438)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.SAVE_PROFILE" (Raw: "androidx.profileinstaller.action.SAVE_PROFILE")
+                   E: intent-filter (line=440)
+                     E: action (line=441)
+                       A: android:name(0x01010003)="androidx.profileinstaller.action.BENCHMARK_OPERATION" (Raw: "androidx.profileinstaller.action.BENCHMARK_OPERATION")
+                 E: service (line=445)
+                   A: android:name(0x01010003)="androidx.room.MultiInstanceInvalidationService" (Raw: "androidx.room.MultiInstanceInvalidationService")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:directBootAware(0x01010505)=(type 0x12)0xffffffff
+                 E: service (line=449)
+                   A: android:name(0x01010003)="com.google.android.datatransport.runtime.backends.TransportBackendDiscovery" (Raw: "com.google.android.datatransport.runtime.backends.TransportBackendDiscovery")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   E: meta-data (line=452)
+                     A: android:name(0x01010003)="backend:com.google.android.datatransport.cct.CctBackendFactory" (Raw: "backend:com.google.android.datatransport.cct.CctBackendFactory")
+                     A: android:value(0x01010024)="cct" (Raw: "cct")
+                 E: service (line=456)
+                   A: android:name(0x01010003)="com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService" (Raw: "com.google.android.datatransport.runtime.scheduling.jobscheduling.JobInfoSchedulerService")
+                   A: android:permission(0x01010006)="android.permission.BIND_JOB_SERVICE" (Raw: "android.permission.BIND_JOB_SERVICE")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: receiver (line=462)
+                   A: android:name(0x01010003)="com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver" (Raw: "com.google.android.datatransport.runtime.scheduling.jobscheduling.AlarmManagerSchedulerBroadcastReceiver")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                 E: activity (line=465)
+                   A: android:theme(0x01010000)=@0x7f0f0132
+                   A: android:name(0x01010003)="com.google.android.play.core.common.PlayCoreDialogWrapperActivity" (Raw: "com.google.android.play.core.common.PlayCoreDialogWrapperActivity")
+                   A: android:exported(0x01010010)=(type 0x12)0x0
+                   A: android:stateNotNeeded(0x01010016)=(type 0x12)0xffffffff
+[   +6 ms] Stopping app 'app-debug.apk' on sdk gphone64 x86 64.
+[        ] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell am force-stop com.zdmgold.peshat
+[  +55 ms] Installing APK.
+[   +1 ms] Installing build/app/outputs/flutter-apk/app-debug.apk...
+[        ] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 install -t -r /home/runner/work/Peshat/Peshat/build/app/outputs/flutter-apk/app-debug.apk
+[+1453 ms] Performing Streamed Install
+           Success
+[   +1 ms] Installing build/app/outputs/flutter-apk/app-debug.apk... (completed in 1,454ms)
+[   +1 ms] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell echo -n d7dc952488027ccba67ca2178edbb00a50c113e0 > /data/local/tmp/sky.com.zdmgold.peshat.sha1
+[  +60 ms] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell -x logcat -v time -t 1
+[  +95 ms] --------- beginning of main
+           10-21 09:44:19.066 D/CarrierSvcBindHelper( 1056): No carrier app for: 0
+[  +44 ms] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell am start -a android.intent.action.MAIN -c android.intent.category.LAUNCHER -f 0x20000000 --ez enable-dart-profiling true --ez enable-checked-mode true --ez verify-entry-points true com.zdmgold.peshat/com.zdmgold.peshat.MainActivity
+[ +418 ms] Starting: Intent { act=android.intent.action.MAIN cat=[android.intent.category.LAUNCHER] flg=0x20000000 cmp=com.zdmgold.peshat/.MainActivity (has extras) }
+[        ] Waiting for VM Service port to be available...
+[+3630 ms] VM Service URL on device: http://127.0.0.1:39605/Uq1VfGMSYKU=/
+[        ] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 forward tcp:0 tcp:39605
+[  +37 ms] 39823
+[        ] Forwarded host port 39823 to device port 39605 for VM Service
+[  +10 ms] test 0: Starting Dart Development Service
+[   +3 ms] Launching a Dart Developer Service (DDS) instance at http://127.0.0.1:0, connecting to VM service at http://127.0.0.1:39823/Uq1VfGMSYKU=/.
+[ +773 ms] test 0: Dart Development Service started at http://127.0.0.1:38183/JBeBgnjzg5Y=/, forwarding to VM service at http://127.0.0.1:39823/Uq1VfGMSYKU=/.
+[   +1 ms] test 0: Connecting to vm service
+[  +13 ms] test 0: VM Service uri is available at http://127.0.0.1:38183/JBeBgnjzg5Y=/
+[ +120 ms] test 0: Finding the correct isolate with the integration test service extension
+[ +357 ms] test 0: connected to test device, now awaiting test result
+[        ] test 0: Waiting for test harness or tests to finish
+::group::✅ walk through the main screens
+EMU 2026-10-21T09:44:30.407894 STEP home
+EMU 2026-10-21T09:44:30.469342 SIZE home language card: 76.6 x 14.0
+EMU 2026-10-21T09:44:30.476493 SIZE home pair card (IntrinsicHeight): 378.4 x 51.0
+EMU 2026-10-21T09:44:30.481142 SIZE home Type text: 114.7 x 19.0
+EMU 2026-10-21T09:44:31.440094 STEP source picker opens
+EMU 2026-10-21T09:44:35.309018 SIZE picker Auto row: 127.8 x 19.0
+EMU 2026-10-21T09:44:36.690070 STEP choose Japanese as source
+EMU 2026-10-21T09:44:39.774865 SIZE home pair after Japanese: 378.4 x 70.0
+EMU 2026-10-21T09:44:40.705713 STEP choose Russian (type-only) as source
+EMU 2026-10-21T09:44:48.040532 STEP back to Auto
+Ad with id `3` is not available for onPaidEvent.
+EMU 2026-10-21T09:44:53.472567 STEP destination picker + switch live
+EMU 2026-10-21T09:44:59.522567 STEP Type text screen
+EMU 2026-10-21T09:45:01.807776 SIZE Type text card: 216.0 x 19.0
+EMU 2026-10-21T09:45:03.727179 STEP translate (needs model download; soft)
+EMU 2026-10-21T09:45:16.735180 RESULT screen: true, Bonjour: true
+EMU 2026-10-21T09:45:16.736363 SIZE result language line: 97.9 x 17.0
+EMU 2026-10-21T09:45:16.740061 RESULT down-chevron icon present: true
+EMU 2026-10-21T09:45:17.705742 STEP result tabs
+EMU 2026-10-21T09:45:25.822380 STEP settings
+EMU 2026-10-21T09:45:28.032138 SIZE settings screen title: 63.1 x 21.0
+EMU 2026-10-21T09:45:33.833664 STEP open History row from Home
+EMU 2026-10-21T09:45:33.835224 Recent cards on Home: 1
+EMU 2026-10-21T09:45:33.836566 SIZE recent card: 379.4 x 82.0
+EMU 2026-10-21T09:45:37.093808 History opened Result: false
+EMU 2026-10-21T09:45:37.095228 History row shows French translation: true, segmented control present: false
+EMU 2026-10-21T09:45:38.040031 PROBLEM COUNT 0
+EMU 2026-10-21T09:45:38.077383 FLUTTERERR 
+The value of ErrorWidget.builder was changed by the test.
+::endgroup::
+[+73664 ms] test 0: Test harness is no longer needed by test process
+[   +2 ms] test 0: finished
+[   +1 ms] test 0: cleaning up...
+[        ] test 0: ensuring test device is terminated.
+[        ] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 shell am force-stop com.zdmgold.peshat
+[   +1 ms] test 0: Test process is no longer needed by test harness
+[ +116 ms] executing: /usr/local/lib/android/sdk/platform-tools/adb -s emulator-5554 uninstall com.zdmgold.peshat
+[+1561 ms] Success
+[   +1 ms] test 0: deleting temporary directory
+[   +1 ms] test 0: finished
+
+🎉 1 test passed.
+[  +13 ms] test package returned with exit code 0
+[        ] Runtime for phase TestRunner: Wall-clock: 0:08:28.803146; combined: 0:08:28.803178.
+[        ] Runtime for phase Compile: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase Run: Wall-clock: 0:08:26.818352; combined: 0:08:26.818383.
+[        ] Runtime for phase CoverageTotal: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageCollect: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageParseJson: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageAddHitmap: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase CoverageDataCollect: Wall-clock: 0:00:00.000000; combined: 0:00:00.000000.
+[        ] Runtime for phase WatcherFinishedTest: Wall-clock: 0:00:00.000042; combined: 0:00:00.000047.
+[        ] "flutter test" took 510,984ms.
+[   +2 ms] Running 4 shutdown hooks
+[   +1 ms] Shutdown hooks complete
+[        ] exiting with code 0
