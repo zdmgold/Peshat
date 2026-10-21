@@ -229,6 +229,10 @@ void main() {
       _log('Recent cards on Home: ${card.evaluate().length}');
       if (card.evaluate().isEmpty) throw 'no recent card';
       _size(t, 'recent card', card);
+      try {
+        await Scrollable.ensureVisible(t.element(card.first), alignment: 0.4);
+      } catch (_) {}
+      await t.pump(const Duration(milliseconds: 400));
       await t.tap(card.first);
       await _settle(t, 2500);
       final dynamic seg = find.byType(CupertinoSlidingSegmentedControl<int>);
