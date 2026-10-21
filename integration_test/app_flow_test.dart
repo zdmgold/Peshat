@@ -76,10 +76,10 @@ void main() {
     await _settle(t, 4000);
     // The app's own error handler swallows layout errors; report where each
     // one came from (file and widget) so overflows can be traced.
-    final FlutterExceptionHandler? previous = FlutterError.onError;
+    final void Function(FlutterErrorDetails)? previous = FlutterError.onError;
     FlutterError.onError = (FlutterErrorDetails d) {
       final List<String> lines = d
-          .toStringDeep()
+          .toString()
           .split('\n')
           .where((String l) => l.contains('lib/') || l.contains('overflowed'))
           .take(5)
