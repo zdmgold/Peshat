@@ -152,6 +152,13 @@ void main() {
       expect(r.text, 'Gujarati sample');
     });
 
+    test('strayForeignLetters', () {
+      expect(TextQuality.strayForeignLetters('Ao0poe yTpo, KaK y Te6月 Aea?'), isTrue);
+      expect(TextQuality.strayForeignLetters('Belarusian sample J00pbl 끄3eHb'), isTrue);
+      expect(TextQuality.strayForeignLetters('Chinese sample 早上好,你今天好吗? 你好'), isFalse);
+      expect(TextQuality.strayForeignLetters('Hello 你好'), isFalse);
+      expect(TextQuality.strayForeignLetters('plain text'), isFalse);
+    });
     test('mixesForeignScripts', () {
       expect(TextQuality.mixesForeignScripts('ण्ট'), isTrue);
       expect(TextQuality.mixesForeignScripts('सुप्रभात, आज आप कैसे हैं?'), isFalse);
@@ -459,6 +466,17 @@ void main() {
           targetLanguage: 'en');
       expect(tr.texts, ['आज मैं office जा रहा हूँ और मेरी meeting दस बजे है।']);
       expect(tr.from, 'hi');
+    });
+
+    test('a four-word English name inside a foreign sentence stays whole',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _DetScript(), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'वह Prime Minister Narendra Modi से मिले',
+          targetLanguage: 'en');
+      expect(tr.texts, ['वह Prime Minister Narendra Modi से मिले']);
     });
 
     test('English sign over a Hindi line: only the Hindi is translated',

@@ -142,7 +142,8 @@ class TextRecognizerService {
       final text = r.text.trim();
       if (text.isEmpty ||
           TextQuality.foreignLetters(text) == 0 ||
-          TextQuality.mixesForeignScripts(text)) {
+          TextQuality.mixesForeignScripts(text) ||
+          TextQuality.strayForeignLetters(text)) {
         continue;
       }
       final c = _foreignConfidenceOf(r);

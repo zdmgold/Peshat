@@ -93,9 +93,9 @@ class MixedTranslation {
   /// Longest English (Latin) stretch, in words, that still counts as words
   /// dropped into a foreign sentence ("office", "WiFi password reception").
   /// Emulator runs: foreign sentences with such words translated best whole
-  /// (1-3 words); with a full English sentence inside (5-9 words) they
-  /// translated best run by run.
-  static const int embeddedLatinWords = 3;
+  /// (1-4 words, e.g. "Prime Minister Narendra Modi"); with a full English
+  /// sentence inside (5-9 words) they translated best run by run.
+  static const int embeddedLatinWords = 4;
 
   /// When [text] is a foreign sentence with a few Latin words inside (it starts
   /// and ends in the same foreign script, and every Latin stretch is short):

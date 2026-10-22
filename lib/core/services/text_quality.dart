@@ -129,6 +129,24 @@ class TextQuality {
     return true;
   }
 
+  /// True when the only non-Latin letters are one or two stray ones glued to
+  /// Latin letters or digits inside a word ("Te6月", "끄3eHb", "এopoe"): a Cyrillic
+  /// photo read as Latin look-alikes with a stray letter, not mixed text.
+  /// Emulator runs: the Russian, Belarusian, Bulgarian and Macedonian sample
+  /// leaks each had exactly one such letter.
+  static bool strayForeignLetters(String text) {
+    final total = foreignLetters(text);
+    if (total == 0 || total > 2) return false;
+    for (final word in text.split(RegExp(r'\s+'))) {
+      if (foreignLetters(word) == 0) continue;
+      final glued = word.runes.any((r) =>
+          MixedText.keyOf(r) == MixedText.latinKey ||
+          (r >= 0x30 && r <= 0x39));
+      if (!glued) return false;
+    }
+    return true;
+  }
+
   /// True when a word mixes letters of two different non-Latin scripts
   /// (Devanagari with Bengali inside one word). Real words never do; a reader
   /// forced onto a script it cannot read produces them.
