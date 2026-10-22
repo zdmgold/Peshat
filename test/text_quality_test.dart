@@ -98,14 +98,50 @@ void main() {
   });
 
   group('Auto reading', () {
-    test('a long real Latin text stops at the Latin reader', () async {
+    test('a long real Latin text with nothing foreign is returned as read',
+        () async {
       final ran = <TextRecognitionScript>[];
       const text = 'Opening hours: Monday to Friday, 9am to 5pm. Please keep '
           'this door closed at all times and report any problems at reception.';
       final svc = _service({TextRecognitionScript.latin: text}, ran);
       final r = await svc.recognize(InputImage.fromFilePath('x.png'));
       expect(r.text, text);
-      expect(ran, [TextRecognitionScript.latin]);
+    });
+
+    test('a long English paragraph with one Chinese phrase: the Chinese reading wins',
+        () async {
+      final ran = <TextRecognitionScript>[];
+      const latin = 'Please ask for when you order at the restaurant. It is '
+          'the best dish on the menu. Please keep this door closed.';
+      const zh = 'Please ask for 麻婆豆腐 when you order at the restaurant. It is '
+          'the best dish on the menu. Please keep this door closed.';
+      final svc = _service({
+        TextRecognitionScript.latin: latin,
+        TextRecognitionScript.chinese: zh,
+      }, ran, reading: {zh: 0.85});
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, zh);
+    });
+
+    test('Devanagari reader on Gujarati: letters of two scripts in one word are rejected',
+        () async {
+      final ran = <TextRecognitionScript>[];
+      const garble = 'Gujarati sample सुप्रभात, ण्ট तभे भ ভ২ते';
+      final svc = _service({
+        TextRecognitionScript.latin: 'Gujarati sample',
+        TextRecognitionScript.devanagiri: garble,
+      }, ran, reading: {garble: 0.46});
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, 'Gujarati sample');
+    });
+
+    test('mixesForeignScripts', () {
+      expect(TextQuality.mixesForeignScripts('ण्ট'), isTrue);
+      expect(TextQuality.mixesForeignScripts('सुप्रभात, आज आप कैसे हैं?'), isFalse);
+      expect(TextQuality.mixesForeignScripts('শুভ সকাল, আজ আপনি'), isFalse);
+      expect(TextQuality.mixesForeignScripts('早上好 ラーメン 餃子'), isFalse);
+      expect(TextQuality.mixesForeignScripts('iPhone拍照 WiFi密码'), isFalse);
+      expect(TextQuality.mixesForeignScripts('café नमस्ते'), isFalse);
     });
 
     test('short real Latin text with nothing else on the photo stays Latin',

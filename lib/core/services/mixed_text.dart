@@ -29,6 +29,8 @@ class MixedText {
   /// character is not a letter (digits, spaces, punctuation, accents on their
   /// own), which stays with the run before it.
   static String? keyOf(int r) {
+    // Accents on their own (U+0300-036F) belong to the letter before them.
+    if (r >= 0x300 && r <= 0x36F) return null;
     final g = TextQuality.scriptOf(r);
     if (g == ScriptGroup.latin) return latinKey;
     if (!_isLetter(r)) return null;

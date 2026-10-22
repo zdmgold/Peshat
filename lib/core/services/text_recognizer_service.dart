@@ -47,44 +47,58 @@ class TextRecognizerService {
     }
   }
 
-  /// Mean of the reader's own per-line confidence, or null when it has none.
-  /// With [foreignOnly] the Latin lines (a caption read perfectly beside badly
-  /// read Gujarati) are left out, so they cannot lift the score of the rest.
-  static double? readingConfidence(RecognizedText r, {bool foreignOnly = false}) {
-    double sum = 0, foreignSum = 0;
-    var n = 0, foreignN = 0;
+  /// Mean of the reader's own confidence over the words that contain letters
+  /// of a non-Latin script, or null when there are none. Judging only those
+  /// words keeps a clean English line beside them from lifting the score.
+  /// Emulator runs: right readings 0.6-0.95 per word, wrong readers 0.05-0.29.
+  static double? foreignConfidence(RecognizedText r) {
+    var sum = 0.0, n = 0;
     for (final b in r.blocks) {
       for (final l in b.lines) {
-        final c = l.confidence;
-        if (c == null) continue;
-        sum += c;
-        n++;
-        if (TextQuality.foreignLetters(l.text) >
-            (TextQuality.letterCounts(l.text)[ScriptGroup.latin] ?? 0)) {
-          foreignSum += c;
-          foreignN++;
+        for (final e in l.elements) {
+          final c = e.confidence;
+          if (c != null && TextQuality.foreignLetters(e.text) > 0) {
+            sum += c;
+            n++;
+          }
         }
       }
     }
-    if (foreignOnly && foreignN > 0) return foreignSum / foreignN;
     return n == 0 ? null : sum / n;
   }
 
-  double? _confidenceOf(RecognizedText r, {bool foreignOnly = false}) {
-    final custom = _readingConfidence;
-    if (custom != null) return custom(r);
-    return readingConfidence(r, foreignOnly: foreignOnly);
+  /// Mean of the reader's own per-line confidence, or null when it has none.
+  static double? readingConfidence(RecognizedText r) {
+    var sum = 0.0, n = 0;
+    for (final b in r.blocks) {
+      for (final l in b.lines) {
+        final c = l.confidence;
+        if (c != null) {
+          sum += c;
+          n++;
+        }
+      }
+    }
+    return n == 0 ? null : sum / n;
   }
+
+  double? _confidenceOf(RecognizedText r) =>
+      (_readingConfidence ?? readingConfidence)(r);
+
+  double? _foreignConfidenceOf(RecognizedText r) =>
+      (_readingConfidence ?? foreignConfidence)(r);
 
   /// Reads [image]. With [script] set, only that reader runs (the user chose
   /// the source language).
   ///
-  /// In Auto the Latin reader runs first and its answer is kept when it looks
-  /// like real text. Otherwise every other reader reads the photo, readings
-  /// that are not their own script or are low-confidence are dropped, and the
-  /// most confident remaining one wins. When nothing looks real the result is
-  /// empty, so no gibberish is translated. (Emulator runs: the right reader
-  /// scored 0.60-0.91, wrong readers 0.14-0.32.)
+  /// In Auto every reader reads the photo. The Latin reading is kept when it
+  /// looks like real text and no other reader finds convincing text in its own
+  /// script. A non-Latin reading counts when its non-Latin words are read with
+  /// confidence and none of them mixes letters of two scripts (look-alike
+  /// garbage such as Devanagari with Bengali letters inside one word); the most
+  /// confident one wins and also carries any Latin lines, which every reader
+  /// reads the same. When nothing looks real the result is empty, so no
+  /// gibberish is translated.
   Future<RecognizedText> recognize(InputImage image,
       {TextRecognitionScript? script}) async {
     if (script != null) return _run(script, image);
@@ -95,49 +109,38 @@ class TextRecognizerService {
         TextQuality.latinLooksReal(
             latinText, await _languageConfidence(latinText),
             readingConfidence: _confidenceOf(latin));
-    // A long Latin reading is a Latin photo. A short one may be only a caption
-    // or label beside text in another script ("Hindi sample" above a Hindi
-    // sentence), which the Latin reader cannot see, so the others look too.
-    if (latinOk &&
-        (TextQuality.letterCounts(latinText)[ScriptGroup.latin] ?? 0) >=
-            _longLatinLetters) {
-      return latin;
-    }
 
+    final readings = await Future.wait(
+        _others.map((s) async => (reading: await _run(s, image))));
     RecognizedText? best;
     var bestConfidence = -1.0;
-    for (final s in _others) {
-      final r = await _run(s.script, image);
+    for (final x in readings) {
+      final r = x.reading;
       final text = r.text.trim();
-      final c = _confidenceOf(r, foreignOnly: true);
       if (text.isEmpty ||
-          !TextQuality.scriptLooksReal(text, s.group, readingConfidence: c)) {
+          TextQuality.foreignLetters(text) == 0 ||
+          TextQuality.mixesForeignScripts(text)) {
         continue;
       }
-      if (c != null && c < _minOtherConfidence) continue;
-      if ((c ?? _minOtherConfidence) > bestConfidence) {
+      final c = _foreignConfidenceOf(r);
+      if (c != null && c < _minForeignConfidence) continue;
+      if ((c ?? _minForeignConfidence) > bestConfidence) {
         best = r;
-        bestConfidence = c ?? _minOtherConfidence;
+        bestConfidence = c ?? _minForeignConfidence;
       }
     }
-    if (best != null &&
-        (!latinOk || TextQuality.foreignLetters(best.text) >= _minForeign)) {
-      return best;
-    }
+    if (best != null) return best;
     return latinOk ? latin : RecognizedText(text: '', blocks: const []);
   }
 
-  /// Latin letters from which the Latin reading is taken as the whole photo.
-  static const int _longLatinLetters = 80;
-
-  /// Foreign letters a reading needs to be preferred over a short Latin one.
-  static const int _minForeign = 4;
-  static const double _minOtherConfidence = 0.5;
-  static const _others = <({TextRecognitionScript script, ScriptGroup group})>[
-    (script: TextRecognitionScript.japanese, group: ScriptGroup.cjk),
-    (script: TextRecognitionScript.chinese, group: ScriptGroup.cjk),
-    (script: TextRecognitionScript.korean, group: ScriptGroup.hangul),
-    (script: TextRecognitionScript.devanagiri, group: ScriptGroup.devanagari),
+  /// Halfway between the best wrong reading (0.29) and the worst right one
+  /// (0.62) in the emulator runs.
+  static const double _minForeignConfidence = 0.45;
+  static const _others = <TextRecognitionScript>[
+    TextRecognitionScript.japanese,
+    TextRecognitionScript.chinese,
+    TextRecognitionScript.korean,
+    TextRecognitionScript.devanagiri,
   ];
 
   void dispose() {

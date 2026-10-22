@@ -1,3 +1,5 @@
+import 'mixed_text.dart';
+
 /// Judges whether text read from a photo looks real.
 ///
 /// The Latin reader never returns nothing: given a photo of Cyrillic, Tamil or
@@ -144,15 +146,22 @@ class TextQuality {
     return true;
   }
 
-  /// True when [text] from a non-Latin reader is mostly that reader's script.
-  /// Mixed text (a menu line with Latin and Japanese) passes when the reader
-  /// is confident.
-  static bool scriptLooksReal(String text, ScriptGroup group,
-      {double? readingConfidence}) {
-    // Right readers scored 0.60-0.91 on emulator runs (Chinese 0.60-0.65),
-    // wrong readers 0.14-0.32, so 0.55 cleanly separates them.
-    final confident = readingConfidence != null && readingConfidence >= 0.55;
-    final min = confident ? 0.3 : (group == ScriptGroup.cjk ? 0.85 : 0.6);
-    return share(text, group) >= min;
+  /// True when a word mixes letters of two different non-Latin scripts
+  /// (Devanagari with Bengali inside one word). Real words never do; a reader
+  /// forced onto a script it cannot read produces them.
+  static bool mixesForeignScripts(String text) {
+    for (final word in text.split(RegExp(r'\s+'))) {
+      String? first;
+      for (final r in word.runes) {
+        final k = MixedText.keyOf(r);
+        if (k == null || k == MixedText.latinKey) continue;
+        if (first == null) {
+          first = k;
+        } else if (k != first) {
+          return true;
+        }
+      }
+    }
+    return false;
   }
 }
