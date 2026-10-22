@@ -1,0 +1,112 @@
+EMU 2026-10-22T07:17:01.609675 SEG G hi share=0.28 "नमस्ते। Please keep the door closed at all times. धन्यवाद।"
+EMU 2026-10-22T07:17:01.620779 SEG G hi runs=[devanagari:"नमस्ते। ", latin:"Please keep the door closed at all times. ", devanagari:"धन्यवाद।"]
+EMU 2026-10-22T07:17:02.187761 SEG G hi langid("नमस्ते। धन्यवाद।") hi:0.74 ne:0.22
+EMU 2026-10-22T07:17:12.011153 SEG G hi ->en whole: "Hello. Please keep the door closed at all times Thank you."
+EMU 2026-10-22T07:17:12.011713 SEG G hi ->en segmented[hi,-,hi]: "Hello. Please keep the door closed at all times. Thank you."
+EMU 2026-10-22T07:17:20.266674 SEG G hi ->fr whole: "Bonjour. S'il vous plaît garder la porte fermée à tout moment merci."
+EMU 2026-10-22T07:17:20.268343 SEG G hi ->fr segmented[hi,en,hi]: "Bonjour. S'il vous plaît garder la porte fermée à tout moment. Merci."
+EMU 2026-10-22T07:17:20.268992 SEG G zh share=0.10 "你好。The meeting starts at nine tomorrow morning. 谢谢。"
+EMU 2026-10-22T07:17:20.273051 SEG G zh runs=[cjk:"你好。", latin:"The meeting starts at nine tomorrow morning. ", cjk:"谢谢。"]
+EMU 2026-10-22T07:17:20.278176 SEG G zh langid("你好。 谢谢。") zh:1.00
+EMU 2026-10-22T07:17:29.419058 SEG G zh ->en whole: "Hello. Thank you."
+EMU 2026-10-22T07:17:29.419352 SEG G zh ->en segmented[zh,-,zh]: "Hello. The meeting starts at nine tomorrow morning. Thank you."
+EMU 2026-10-22T07:17:30.321534 SEG G zh ->fr whole: "Bonjour. Merci."
+EMU 2026-10-22T07:17:30.322219 SEG G zh ->fr segmented[zh,en,zh]: "Bonjour. La réunion commence à neuf demain matin. Merci."
+EMU 2026-10-22T07:17:30.323158 SEG G ru share=0.25 "Привет! Please bring your passport with you. Пока!"
+EMU 2026-10-22T07:17:30.323913 SEG G ru runs=[cyrillic:"Привет! ", latin:"Please bring your passport with you. ", cyrillic:"Пока!"]
+EMU 2026-10-22T07:17:30.326797 SEG G ru langid("Привет! Пока!") ru:0.99
+EMU 2026-10-22T07:17:38.185512 SEG G ru ->en whole: "Hello! Please Bring Your Passport with You. So far!"
+EMU 2026-10-22T07:17:38.185842 SEG G ru ->en segmented[ru,-,ru]: "Hello! Please bring your passport with you. So far!"
+EMU 2026-10-22T07:17:39.089974 SEG G ru ->fr whole: "Salut! Veuillez apporter votre passeport avec vous. Jusqu'à présent!"
+EMU 2026-10-22T07:17:39.090731 SEG G ru ->fr segmented[ru,en,ru]: "Salut! Veuillez apporter votre passeport avec vous. Jusqu'à présent!"
+EMU 2026-10-22T07:17:39.092053 SEG G ja share=0.43 "こんにちは。Thank you for your order. ありがとうございます。"
+EMU 2026-10-22T07:17:39.092842 SEG G ja runs=[cjk:"こんにちは。", latin:"Thank you for your order. ", cjk:"ありがとうございます。"]
+EMU 2026-10-22T07:17:39.095126 SEG G ja langid("こんにちは。 ありがとうございます。") ja:1.00
+EMU 2026-10-22T07:17:51.160153 SEG G ja ->en whole: "Hi there Thank you for your order. Thank you."
+EMU 2026-10-22T07:17:51.160773 SEG G ja ->en segmented[ja,-,ja]: "Hi there Thank you for your order. Thank you very much."
+EMU 2026-10-22T07:17:52.069966 SEG G ja ->fr whole: "Salut là-bas merci pour votre commande. Merci."
+EMU 2026-10-22T07:17:52.070247 SEG G ja ->fr segmented[ja,en,ja]: "Salut là-bas Merci pour votre commande. Merci beaucoup."
+EMU 2026-10-22T07:17:52.070455 SEG G hi share=0.40 "आज का मेनू: Paneer Butter Masala with naan, कीमत 250 रुपये"
+EMU 2026-10-22T07:17:52.070726 SEG G hi runs=[devanagari:"आज का मेनू: ", latin:"Paneer Butter Masala with naan, ", devanagari:"कीमत 250 रुपये"]
+EMU 2026-10-22T07:17:52.072919 SEG G hi langid("आज का मेनू: कीमत 250 रुपये") hi:0.99
+EMU 2026-10-22T07:17:52.641667 SEG G hi ->en whole: "Today's Menu: Paneer Butter Masala with Naan, Price 250"
+EMU 2026-10-22T07:17:52.643571 SEG G hi ->en segmented[hi,-,hi]: "Today's menu: Paneer Butter Masala with naan, Price Rs 250"
+EMU 2026-10-22T07:17:53.777538 SEG G hi ->fr whole: "Menu d'aujourd'hui: Paneer Beurre Masala avec Naan, Prix 250"
+EMU 2026-10-22T07:17:53.777853 SEG G hi ->fr segmented[hi,en,hi]: "Menu d'aujourd'hui: Paneer Beurre Masala avec Naan, Prix Rs 250"
+EMU 2026-10-22T07:17:53.778124 SEG G ar share=0.22 "مرحبا. Check-in starts at two in the afternoon. شكرا."
+EMU 2026-10-22T07:17:53.779398 SEG G ar runs=[arabic:"مرحبا. ", latin:"Check-in starts at two in the afternoon. ", arabic:"شكرا."]
+EMU 2026-10-22T07:17:53.782021 SEG G ar langid("مرحبا. شكرا.") ar:0.83 sd:0.10
+EMU 2026-10-22T07:18:02.055587 SEG G ar ->en whole: "Hello. Check-in Starts at Two In The Afternoon. Thank you."
+EMU 2026-10-22T07:18:02.055882 SEG G ar ->en segmented[ar,-,ar]: "Hello. Check-in starts at two in the afternoon. Thank you."
+EMU 2026-10-22T07:18:03.148818 SEG G ar ->fr whole: "Bonjour. L'enregistrement commence à deux heures de l'après-midi. Merci."
+EMU 2026-10-22T07:18:03.149129 SEG G ar ->fr segmented[ar,en,ar]: "Bonjour. L'enregistrement commence à deux heures de l'après-midi. Merci."
+EMU 2026-10-22T07:18:03.150677 SEG H hi share=0.24 "वह Prime Minister Narendra Modi से मिले"
+EMU 2026-10-22T07:18:03.151744 SEG H hi runs=[devanagari:"वह ", latin:"Prime Minister Narendra Modi ", devanagari:"से मिले"]
+EMU 2026-10-22T07:18:03.158082 SEG H hi langid("वह से मिले") hi:0.72 ne:0.16 mr:0.11
+EMU 2026-10-22T07:18:03.697522 SEG H hi ->en whole: "She met Prime Minister Narendra Modi"
+EMU 2026-10-22T07:18:03.697785 SEG H hi ->en segmented[hi,-,hi]: "That Prime Minister Narendra Modi From"
+EMU 2026-10-22T07:18:04.665601 SEG H hi ->fr whole: "Elle a rencontré le Premier ministre Narendra Modi"
+EMU 2026-10-22T07:18:04.665959 SEG H hi ->fr segmented[hi,en,hi]: "Que Premier ministre Narendra Modi À partir"
+EMU 2026-10-22T07:18:04.666217 SEG H hi share=0.52 "आज मैं Google Maps app खोल रहा हूँ"
+EMU 2026-10-22T07:18:04.666584 SEG H hi runs=[devanagari:"आज मैं ", latin:"Google Maps app ", devanagari:"खोल रहा हूँ"]
+EMU 2026-10-22T07:18:04.674103 SEG H hi langid("आज मैं खोल रहा हूँ") hi:1.00
+EMU 2026-10-22T07:18:05.212558 SEG H hi ->en whole: "Today I am opening the Google Maps app"
+EMU 2026-10-22T07:18:05.212824 SEG H hi ->en segmented[hi,-,hi]: "Today i Google Maps app I'm opening"
+EMU 2026-10-22T07:18:06.319504 SEG H hi ->fr whole: "Aujourd'hui, j'ouvre l'application Google Maps"
+EMU 2026-10-22T07:18:06.319785 SEG H hi ->fr segmented[hi,en,hi]: "Aujourd'hui je Application Google Maps J'ouvre"
+EMU 2026-10-22T07:18:06.319967 SEG H zh share=0.31 "我在Google Maps App Store上找到了这个"
+EMU 2026-10-22T07:18:06.320170 SEG H zh runs=[cjk:"我在", latin:"Google Maps App Store", cjk:"上找到了这个"]
+EMU 2026-10-22T07:18:06.329726 SEG H zh langid("我在 上找到了这个") zh:1.00
+EMU 2026-10-22T07:18:06.737441 SEG H zh ->en whole: "I found this on the Google Maps App Store."
+EMU 2026-10-22T07:18:06.737724 SEG H zh ->en segmented[zh,-,zh]: "I'm here Google Maps App Store I found this"
+EMU 2026-10-22T07:18:07.575521 SEG H zh ->fr whole: "J'ai trouvé cela sur l'App Store Google Maps."
+EMU 2026-10-22T07:18:07.575819 SEG H zh ->fr segmented[zh,en,zh]: "Je suis là Google Maps App Store J'ai trouvé ça"
+EMU 2026-10-22T07:18:07.576006 SEG H ja share=0.31 "私はGoogle Play Store Appで買いました"
+EMU 2026-10-22T07:18:07.576183 SEG H ja runs=[cjk:"私は", latin:"Google Play Store App", cjk:"で買いました"]
+EMU 2026-10-22T07:18:07.578763 SEG H ja langid("私は で買いました") ja:1.00
+EMU 2026-10-22T07:18:08.005538 SEG H ja ->en whole: "I bought at Google Play Store App"
+EMU 2026-10-22T07:18:08.005823 SEG H ja ->en segmented[ja,-,ja]: "I Google Play Store App I bought at"
+EMU 2026-10-22T07:18:08.845854 SEG H ja ->fr whole: "J'ai acheté sur Google Play Store App"
+EMU 2026-10-22T07:18:08.846125 SEG H ja ->fr segmented[ja,en,ja]: "Je Google Play Store app J'ai acheté à"
+EMU 2026-10-22T07:18:08.846330 SEG S ru share=0.56 "Exit Выход"
+EMU 2026-10-22T07:18:08.846524 SEG S ru runs=[latin:"Exit ", cyrillic:"Выход"]
+EMU 2026-10-22T07:18:08.850056 SEG S ru langid("Выход") ru:0.79 be:0.17
+EMU 2026-10-22T07:18:09.218783 SEG S ru ->en whole: "Exit"
+EMU 2026-10-22T07:18:09.219490 SEG S ru ->en segmented[-,ru]: "Exit Exit"
+EMU 2026-10-22T07:18:09.841231 SEG S ru ->fr whole: "Sortie"
+EMU 2026-10-22T07:18:09.841587 SEG S ru ->fr segmented[en,ru]: "Sortie Sortie"
+EMU 2026-10-22T07:18:09.841752 SEG S ru share=0.64 "Open Открыто"
+EMU 2026-10-22T07:18:09.841904 SEG S ru runs=[latin:"Open ", cyrillic:"Открыто"]
+EMU 2026-10-22T07:18:09.849044 SEG S ru langid("Открыто") ru:0.67 bg:0.13 mk:0.10
+EMU 2026-10-22T07:18:10.139042 SEG S ru ->en whole: "Open open"
+EMU 2026-10-22T07:18:10.139299 SEG S ru ->en segmented[-,ru]: "Open Open"
+EMU 2026-10-22T07:18:10.718067 SEG S ru ->fr whole: "Ouvrir"
+EMU 2026-10-22T07:18:10.718406 SEG S ru ->fr segmented[en,ru]: "Ouvert Ouvert"
+EMU 2026-10-22T07:18:10.718578 SEG S ru share=0.26 "Please say Спасибо to the driver"
+EMU 2026-10-22T07:18:10.718735 SEG S ru runs=[latin:"Please say ", cyrillic:"Спасибо ", latin:"to the driver"]
+EMU 2026-10-22T07:18:10.721785 SEG S ru langid("Спасибо") ru:0.75 sr:0.15
+EMU 2026-10-22T07:18:11.028473 SEG S ru ->en whole: "Please Say Thanks to The Driver"
+EMU 2026-10-22T07:18:11.028762 SEG S ru ->en segmented[-,ru,-]: "Please say Thank to the driver"
+EMU 2026-10-22T07:18:11.815010 SEG S ru ->fr whole: "S'il vous plaît dites merci au conducteur"
+EMU 2026-10-22T07:18:11.815293 SEG S ru ->fr segmented[en,ru,en]: "Veuillez dire Merci au conducteur"
+EMU 2026-10-22T07:18:11.815500 SEG S hi share=0.26 "Please say धन्यवाद to the driver"
+EMU 2026-10-22T07:18:11.815662 SEG S hi runs=[latin:"Please say ", devanagari:"धन्यवाद ", latin:"to the driver"]
+EMU 2026-10-22T07:18:11.820762 SEG S hi langid("धन्यवाद") hi:0.86 ne:0.09
+EMU 2026-10-22T07:18:12.171214 SEG S hi ->en whole: "Please say thanks to the driver"
+EMU 2026-10-22T07:18:12.172024 SEG S hi ->en segmented[-,hi,-]: "Please say Thank you to the driver"
+EMU 2026-10-22T07:18:13.098932 SEG S hi ->fr whole: "S'il vous plaît dites merci au conducteur"
+EMU 2026-10-22T07:18:13.099210 SEG S hi ->fr segmented[en,hi,en]: "Veuillez dire Merci au conducteur"
+EMU 2026-10-22T07:18:13.099412 SEG S hi share=0.19 "The word पानी means water"
+EMU 2026-10-22T07:18:13.099793 SEG S hi runs=[latin:"The word ", devanagari:"पानी ", latin:"means water"]
+EMU 2026-10-22T07:18:13.108269 SEG S hi langid("पानी") hi:0.69 ne:0.20 mr:0.11
+EMU 2026-10-22T07:18:13.449106 SEG S hi ->en whole: "The Word Water Means Water"
+EMU 2026-10-22T07:18:13.449455 SEG S hi ->en segmented[-,hi,-]: "The word Water means water"
+EMU 2026-10-22T07:18:14.245894 SEG S hi ->fr whole: "Le mot eau signifie de l'eau"
+EMU 2026-10-22T07:18:14.246732 SEG S hi ->fr segmented[en,hi,en]: "Le mot Eau signifie de l'eau"
+EMU 2026-10-22T07:18:14.247603 SEG S ar share=0.15 "The word ماء means water"
+EMU 2026-10-22T07:18:14.248109 SEG S ar runs=[latin:"The word ", arabic:"ماء ", latin:"means water"]
+EMU 2026-10-22T07:18:14.251395 SEG S ar langid("ماء") ar:0.82 sd:0.15
+EMU 2026-10-22T07:18:14.621235 SEG S ar ->en whole: "The Word Waterproof Means Water"
+EMU 2026-10-22T07:18:14.621551 SEG S ar ->en segmented[-,ar,-]: "The word Water means water"
+EMU 2026-10-22T07:18:15.418632 SEG S ar ->fr whole: "Le mot imperméable signifie de l'eau"
+EMU 2026-10-22T07:18:15.418897 SEG S ar ->fr segmented[en,ar,en]: "Le mot Eau signifie de l'eau"
