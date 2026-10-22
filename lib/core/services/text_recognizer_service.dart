@@ -48,22 +48,33 @@ class TextRecognizerService {
   }
 
   /// Mean of the reader's own per-line confidence, or null when it has none.
-  static double? readingConfidence(RecognizedText r) {
-    var sum = 0.0, n = 0;
+  /// With [foreignOnly] the Latin lines (a caption read perfectly beside badly
+  /// read Gujarati) are left out, so they cannot lift the score of the rest.
+  static double? readingConfidence(RecognizedText r, {bool foreignOnly = false}) {
+    double sum = 0, foreignSum = 0;
+    var n = 0, foreignN = 0;
     for (final b in r.blocks) {
       for (final l in b.lines) {
         final c = l.confidence;
-        if (c != null) {
-          sum += c;
-          n++;
+        if (c == null) continue;
+        sum += c;
+        n++;
+        if (TextQuality.foreignLetters(l.text) >
+            (TextQuality.letterCounts(l.text)[ScriptGroup.latin] ?? 0)) {
+          foreignSum += c;
+          foreignN++;
         }
       }
     }
+    if (foreignOnly && foreignN > 0) return foreignSum / foreignN;
     return n == 0 ? null : sum / n;
   }
 
-  double? _confidenceOf(RecognizedText r) =>
-      (_readingConfidence ?? readingConfidence)(r);
+  double? _confidenceOf(RecognizedText r, {bool foreignOnly = false}) {
+    final custom = _readingConfidence;
+    if (custom != null) return custom(r);
+    return readingConfidence(r, foreignOnly: foreignOnly);
+  }
 
   /// Reads [image]. With [script] set, only that reader runs (the user chose
   /// the source language).
@@ -98,7 +109,7 @@ class TextRecognizerService {
     for (final s in _others) {
       final r = await _run(s.script, image);
       final text = r.text.trim();
-      final c = _confidenceOf(r);
+      final c = _confidenceOf(r, foreignOnly: true);
       if (text.isEmpty ||
           !TextQuality.scriptLooksReal(text, s.group, readingConfidence: c)) {
         continue;
