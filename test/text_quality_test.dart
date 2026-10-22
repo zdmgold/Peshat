@@ -376,13 +376,24 @@ void main() {
       expect(tr.from, 'mr');
     });
 
-    test('a language with no stand-in is passed on unchanged',
+    test('a short Latin caption detected as an unsupported language is English',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('ha'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(text: 'Gujarati sample', targetLanguage: 'fr');
+      expect(tr.from, 'en');
+    });
+
+    test('a longer unsupported language is passed on for the translator to report',
         () async {
       final tr = _Tr();
       final p = ScanProvider(
           detector: _Det('la'), translator: tr, internetCheck: () async => true);
-      await p.runTextPipeline(text: 'Salve mundi', targetLanguage: 'en');
-      expect(tr.from, 'la'); // no stand-in: the real translator reports it
+      await p.runTextPipeline(
+          text: 'Gallia est omnis divisa in partes tres, quarum unam incolunt Belgae',
+          targetLanguage: 'en');
+      expect(tr.from, 'la');
     });
 
     test('foreignCore keeps the non-Latin words only', () {
