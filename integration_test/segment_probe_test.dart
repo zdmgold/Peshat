@@ -37,8 +37,8 @@ void main() {
     for (final List<String> c in kMixed) {
       final String kind = c[0], code = c[1], text = c[2];
       final double share = MixedText.foreignShare(text);
-      _log('SEG ${kind} ${code} share=${share.toStringAsFixed(2)} "${text.replaceAll('\n', ' | ')}"');
-      _log('SEG ${kind} ${code} runs=${MixedText.split(text)}'.replaceAll('\n', '\\n'));
+      _log('SEG $kind $code share=${share.toStringAsFixed(2)} "${text.replaceAll('\n', ' | ')}"');
+      _log('SEG $kind $code runs=${MixedText.split(text)}'.replaceAll('\n', '\\n'));
       for (final String to in <String>['en', 'fr']) {
         final String whole = await _tr(svc, text, code, to);
         String seg;
