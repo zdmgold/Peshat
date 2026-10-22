@@ -34,7 +34,7 @@ void main() {
   testWidgets('mixed-language text', (WidgetTester t) async {
     final LanguageDetector det = LanguageDetector();
     final TranslatorService svc = TranslatorService();
-    for (final List<String> c in kMixed) {
+    for (final List<String> c in <List<String>>[...kMixed, ...kMixedFrame]) {
       final String kind = c[0], code = c[1], text = c[2];
       String whole = '?', core = '-';
       try {
