@@ -130,6 +130,11 @@ class ScanProvider extends ValueNotifier<ScanState> {
                   confusableWith(standIn, preferredSource)
               ? preferredSource
               : standIn;
+        } else if (TextQuality.isShortLatin(src)) {
+          // A word or two ("Gujarati sample", a name) gives detection too
+          // little to go on and it names some rare language. Treat it as
+          // English rather than saying the language is not supported.
+          srcLang = 'en';
         }
       }
     }

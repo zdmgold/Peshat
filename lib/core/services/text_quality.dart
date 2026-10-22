@@ -86,6 +86,13 @@ class TextQuality {
     return foreignLetters(core) < 4 ? null : core;
   }
 
+  /// Under 25 letters, nearly all Latin: too little for language detection.
+  static bool isShortLatin(String text) {
+    final counts = letterCounts(text);
+    final total = counts.values.fold<int>(0, (a, b) => a + b);
+    return total > 0 && total < 25 && share(text, ScriptGroup.latin) >= 0.85;
+  }
+
   static bool hasKana(String text) =>
       text.runes.any((r) => r >= 0x3040 && r <= 0x30FF);
 
