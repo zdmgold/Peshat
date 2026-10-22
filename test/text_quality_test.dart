@@ -31,6 +31,20 @@ class _Det implements LanguageDetector {
   void dispose() {}
 }
 
+/// Labels text by its script like the real detector does: Devanagari as Hindi,
+/// Han as Chinese, everything else as English.
+class _DetScript implements LanguageDetector {
+  @override
+  Future<String> detect(String text) async {
+    if (RegExp(r'[\u0900-\u097F]').hasMatch(text)) return 'hi';
+    if (RegExp(r'[\u4E00-\u9FFF]').hasMatch(text)) return 'zh';
+    return 'en';
+  }
+
+  @override
+  void dispose() {}
+}
+
 class _DetRec implements LanguageDetector {
   final String code;
   final List<String> seen;
@@ -439,7 +453,7 @@ void main() {
         () async {
       final tr = _Tr();
       final p = ScanProvider(
-          detector: _Det('hi'), translator: tr, internetCheck: () async => true);
+          detector: _DetScript(), translator: tr, internetCheck: () async => true);
       await p.runTextPipeline(
           text: 'आज मैं office जा रहा हूँ और मेरी meeting दस बजे है।',
           targetLanguage: 'en');
@@ -451,7 +465,7 @@ void main() {
         () async {
       final tr = _Tr();
       final p = ScanProvider(
-          detector: _Det('hi'), translator: tr, internetCheck: () async => true);
+          detector: _DetScript(), translator: tr, internetCheck: () async => true);
       await p.runTextPipeline(
           text: 'Welcome to the City Library\nनगर पुस्तकालय में आपका स्वागत है',
           targetLanguage: 'en');
@@ -464,7 +478,7 @@ void main() {
         () async {
       final tr = _Tr();
       final p = ScanProvider(
-          detector: _Det('hi'), translator: tr, internetCheck: () async => true);
+          detector: _DetScript(), translator: tr, internetCheck: () async => true);
       await p.runTextPipeline(
           text: 'नमस्ते। Please keep the door closed at all times. धन्यवाद।',
           targetLanguage: 'en');
@@ -477,7 +491,7 @@ void main() {
         () async {
       final tr = _Tr();
       final p = ScanProvider(
-          detector: _Det('zh'), translator: tr, internetCheck: () async => true);
+          detector: _DetScript(), translator: tr, internetCheck: () async => true);
       await p.runTextPipeline(
           text: 'Please ask for 麻婆豆腐 when you order at the restaurant.',
           targetLanguage: 'en');
@@ -489,7 +503,7 @@ void main() {
     test('Chinese full stop followed by English gets a space', () async {
       final tr = _Tr();
       final p = ScanProvider(
-          detector: _Det('zh'), translator: tr, internetCheck: () async => true);
+          detector: _DetScript(), translator: tr, internetCheck: () async => true);
       await p.runTextPipeline(
           text: '你好。The meeting starts at nine tomorrow morning. 谢谢。',
           targetLanguage: 'en');
@@ -500,7 +514,7 @@ void main() {
     test('a chosen Latin-script source is used for the Latin part', () async {
       final tr = _Tr();
       final p = ScanProvider(
-          detector: _Det('zh'), translator: tr, internetCheck: () async => true);
+          detector: _DetScript(), translator: tr, internetCheck: () async => true);
       await p.runTextPipeline(
           text: 'Bonjour tout le monde 你好', targetLanguage: 'en',
           sourceLanguage: 'fr');

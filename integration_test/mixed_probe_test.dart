@@ -8,7 +8,6 @@ import 'package:integration_test/integration_test.dart';
 import 'package:peshat/core/models/scan_state.dart';
 import 'package:peshat/core/providers/scan_provider.dart';
 import 'package:peshat/core/services/language_detector.dart';
-import 'package:peshat/core/services/text_quality.dart';
 import 'package:peshat/core/services/translator_service.dart';
 
 import 'mixed_cases.dart';
@@ -40,8 +39,7 @@ void main() {
       String whole = '?', core = '-';
       try {
         whole = await det.detect(text);
-        final String? fc = TextQuality.foreignCore(text);
-        if (fc != null) core = await det.detect(fc);
+        core = await det.detect(text.replaceAll(RegExp(r'[A-Za-z0-9 ,.!?]+'), ' ').trim());
       } catch (e) {
         whole = 'ERR';
       }
