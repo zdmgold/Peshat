@@ -11,10 +11,7 @@ import '../services/text_quality.dart';
 import '../services/text_recognizer_service.dart';
 import '../services/translator_service.dart';
 
-/// True when two BCP-47 codes name the same base language ('en' / 'en-US').
-bool isSameLanguage(String a, String b) =>
-    a.toLowerCase().split(RegExp('[-_]')).first ==
-    b.toLowerCase().split(RegExp('[-_]')).first;
+export '../services/scan_scripts.dart' show isSameLanguage;
 
 class ScanProvider extends ValueNotifier<ScanState> {
   final TextRecognizerService _ocr;

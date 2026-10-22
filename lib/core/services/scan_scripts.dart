@@ -66,3 +66,8 @@ const Map<String, String> unsupportedStandIn = <String, String>{
   'bho': 'hi',
   'new': 'hi',
 };
+
+/// True when two BCP-47 codes name the same base language ('en' / 'en-US').
+bool isSameLanguage(String a, String b) =>
+    a.toLowerCase().split(RegExp('[-_]')).first ==
+    b.toLowerCase().split(RegExp('[-_]')).first;

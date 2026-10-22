@@ -11,39 +11,9 @@ import 'package:peshat/core/services/language_detector.dart';
 import 'package:peshat/core/services/text_quality.dart';
 import 'package:peshat/core/services/translator_service.dart';
 
-void _log(String m) => debugPrint('EMU ${DateTime.now().toIso8601String()} $m');
+import 'mixed_cases.dart';
 
-// kind: E = English with a short foreign phrase, F = foreign sentence with
-// English words, B = balanced. [kind, foreign code, text]
-const List<List<String>> kMixed = <List<String>>[
-  ['E', 'hi', 'She replied नमस्ते with a smile and walked into the room.'],
-  ['E', 'hi', 'The shop sign says दुकान बंद है today, so we went home.'],
-  ['E', 'zh', 'The sign at the entrance says 早上好 which means good morning.'],
-  ['E', 'zh', 'Please ask for 麻婆豆腐 when you order at the restaurant.'],
-  ['E', 'ja', 'The menu lists ラーメン and 餃子 for lunch today.'],
-  ['E', 'ja', 'I learned the word ありがとう from my Japanese teacher yesterday.'],
-  ['E', 'ko', 'My friend said 안녕하세요 when we met at the station.'],
-  ['E', 'ru', 'My Russian friend always says Привет when he calls me.'],
-  ['E', 'ar', 'He greeted us with مرحبا and offered some tea.'],
-  ['E', 'th', 'The waiter said สวัสดี and showed us to the table.'],
-  ['F', 'hi', 'आज मैं office जा रहा हूँ और मेरी meeting दस बजे है।'],
-  ['F', 'hi', 'मुझे यह phone बहुत पसंद है, battery भी अच्छी है।'],
-  ['F', 'hi', 'कृपया WiFi password reception से पूछें।'],
-  ['F', 'ru', 'Я вчера купил новый iPhone в магазине.'],
-  ['F', 'ru', 'Пожалуйста, введите ваш password и email.'],
-  ['F', 'ja', '今日は午後三時からMeetingがあります。'],
-  ['F', 'ja', 'このレストランのWiFiパスワードを教えてください。'],
-  ['F', 'zh', '我喜欢用iPhone拍照，也常用WeChat聊天。'],
-  ['F', 'zh', '请在前台询问WiFi密码。'],
-  ['F', 'ko', '오늘 오후에 meeting이 있어요.'],
-  ['F', 'ar', 'اشتريت iPhone جديد أمس من المتجر.'],
-  ['F', 'th', 'วันนี้ฉันมี meeting ตอนบ่ายสามโมง'],
-  ['F', 'bn', 'আমি আজ office যাচ্ছি এবং meeting আছে।'],
-  ['B', 'hi', 'Hello दोस्त, how are you? आज मौसम अच्छा है।'],
-  ['B', 'ja', 'Hello 友達、元気ですか? How are you today?'],
-  ['B', 'zh', 'Good morning 朋友，你今天好吗? See you soon.'],
-  ['B', 'ru', 'Hello друг, как дела? I hope you are fine.'],
-];
+void _log(String m) => debugPrint('EMU ${DateTime.now().toIso8601String()} $m');
 
 Future<String> _tr(TranslatorService svc, String text, String from, String to) async {
   try {
