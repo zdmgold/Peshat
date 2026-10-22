@@ -1,0 +1,170 @@
+
+Running Gradle task 'assembleDebug'...                          
+Checking the license for package NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/licenses
+License for package NDK (Side by side) 27.0.12077973 accepted.
+Preparing "Install NDK (Side by side) 27.0.12077973 v.27.0.12077973".
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" ready.
+Installing NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/ndk/27.0.12077973
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" complete.
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" finished.
+Checking the license for package CMake 3.22.1 in /usr/local/lib/android/sdk/licenses
+License for package CMake 3.22.1 accepted.
+Preparing "Install CMake 3.22.1 v.3.22.1".
+"Install CMake 3.22.1 v.3.22.1" ready.
+Installing CMake 3.22.1 in /usr/local/lib/android/sdk/cmake/3.22.1
+"Install CMake 3.22.1 v.3.22.1" complete.
+"Install CMake 3.22.1 v.3.22.1" finished.
+Running Gradle task 'assembleDebug'...                            392.3s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...        1,703ms
+::group::✅ user sample images
+EMU 2026-10-22T07:03:53.374972 USER image ar source=auto: DONE src=en same=true text="Arabic sample" -> "Arabic sample"
+EMU 2026-10-22T07:04:20.043701 USER image ar source=ar: DONE src=ar same=false text="Arabic sample" -> "Arabic Sample"
+EMU 2026-10-22T07:04:50.154175 USER image be source=auto: DONE src=ko same=false text="Belarusian sample J00pbl 끄3eHb, AK TBae cnpaBbl? IpbIBİTaHHe" -> "Belarusian sample J00pbl Turning 3 eHb, AK TBae cnpaBbl? IpbIBİTaHHe"
+EMU 2026-10-22T07:05:10.296213 USER image be source=be: DONE src=ko same=false text="Belarusian sample J00pbl 끄3eHb, AK TBae cnpaBbl? IpbIBİTaHHe" -> "Belarusian sample J00pbl Turning 3 eHb, AK TBae cnpaBbl? IpbIBİTaHHe"
+EMU 2026-10-22T07:05:29.228678 USER image bg source=auto: DONE src=ko same=false text="Bulgarian sample 1o6po yTpO, KaK CM 파Hec? 3ApaBeń" -> "Bulgarian sample 1o6po yTpO, KaK CM Wave Hec? 3ApaBeń"
+EMU 2026-10-22T07:05:48.668991 USER image bg source=bg: DONE src=ko same=false text="Bulgarian sample 1o6po yTpO, KaK CM 파Hec? 3ApaBeń" -> "Bulgarian sample 1o6po yTpO, KaK CM Wave Hec? 3ApaBeń"
+EMU 2026-10-22T07:06:16.756729 USER image bn source=auto: DONE src=bn same=false text="Bengali sample শুভ সকাল, আজ আপনি কমন আছেন? নমস্কার" -> "Bengali sample Good morning, today you are Common? Hi"
+EMU 2026-10-22T07:06:20.104771 USER image bn source=bn: DONE src=bn same=false text="Bengali sample শুভ সকাল, আজ আপনি কমন আছেন? নমস্কার" -> "Bengali sample Good morning, today you are Common? Hi"
+EMU 2026-10-22T07:06:38.886226 USER image el source=auto: ERROR noTextDetected 
+EMU 2026-10-22T07:06:57.689262 USER image el source=el: ERROR noTextDetected 
+EMU 2026-10-22T07:07:15.976379 USER image fa source=auto: ERROR noTextDetected 
+EMU 2026-10-22T07:07:33.963492 USER image fa source=fa: ERROR noTextDetected 
+EMU 2026-10-22T07:07:51.411820 USER image gu source=auto: DONE src=en same=true text="Gujarati sample" -> "Gujarati sample"
+EMU 2026-10-22T07:08:17.935717 USER image gu source=gu: DONE src=gu same=false text="Gujarati sample" -> "Gujarati Sample"
+EMU 2026-10-22T07:08:36.243917 USER image he source=auto: ERROR noTextDetected 
+EMU 2026-10-22T07:08:55.238163 USER image he source=he: ERROR noTextDetected 
+EMU 2026-10-22T07:09:20.013082 USER image hi source=auto: DONE src=hi same=false text="Hindi sample सुप्रभात, आज आप कैसे हैं? नमस्ते" -> "Hindi sample Good morning, how are you today? Hi"
+EMU 2026-10-22T07:09:23.527294 USER image hi source=hi: DONE src=hi same=false text="Hindi sample सुप्रभात, आज आप कैसे हैं? नमस्ते" -> "Hindi sample Good morning, how are you today? Hi"
+EMU 2026-10-22T07:09:51.667753 USER image ja source=auto: DONE src=ja same=false text="Japanese sample おはようございます、今日はお元気ですか? こんにちは" -> "Japanese sample Good morning, how are you today? Hello"
+EMU 2026-10-22T07:09:54.990185 USER image ja source=ja: DONE src=ja same=false text="Japanese sample おはようございます、今日はお元気ですか? こんにちは" -> "Japanese sample Good morning, how are you today? Hello"
+EMU 2026-10-22T07:10:12.765012 USER image ka source=auto: ERROR noTextDetected 
+EMU 2026-10-22T07:10:31.106811 USER image ka source=ka: ERROR noTextDetected 
+EMU 2026-10-22T07:10:51.144902 USER image kn source=auto: DONE src=en same=true text="Kannada sample" -> "Kannada sample"
+EMU 2026-10-22T07:11:19.655460 USER image kn source=kn: DONE src=kn same=false text="Kannada sample" -> "Kannada Sample"
+EMU 2026-10-22T07:11:40.145969 USER image ko source=auto: DONE src=ko same=false text="Korean sample 좋은 아침입니다, 오늘 기분이 어떠세요? 안녕하세요" -> "Korean sample Good morning, how are you feeling today? Hi"
+EMU 2026-10-22T07:11:43.939220 USER image ko source=ko: DONE src=ko same=false text="Korean sample 좋은 아침입니다, 오늘 기분이 어떠세요? 안녕하세요" -> "Korean sample Good morning, how are you feeling today? Hi"
+EMU 2026-10-22T07:12:14.057449 USER image mk source=auto: DONE src=pl same=false text="Macedonian sample 06po yTpO, KaKo CM 미eHec? 3ApaB0" -> "Macedonian Sample 06PO YTPO, Kako cm Mi ehec? 3apab0"
+EMU 2026-10-22T07:12:35.293394 USER image mk source=mk: DONE src=pl same=false text="Macedonian sample 06po yTpO, KaKo CM 미eHec? 3ApaB0" -> "Macedonian Sample 06PO YTPO, Kako cm Mi ehec? 3apab0"
+EMU 2026-10-22T07:13:03.160612 USER image mr source=auto: DONE src=mr same=false text="Marathi sample सुप्रभात, आज तुम्ही क्से आहात? नमस्कार" -> "Marathi sample Good morning, are you today? Hello"
+EMU 2026-10-22T07:13:07.276829 USER image mr source=mr: DONE src=mr same=false text="Marathi sample सुप्रभात, आज तुम्ही क्से आहात? नमस्कार" -> "Marathi sample Good morning, are you today? Hello"
+EMU 2026-10-22T07:13:27.907948 USER image ru source=auto: DONE src=bn same=false text="Russian sample এopoe yTpo, Kak y Te6 Jena? ipuBeT" -> "Russian sample In the opoe yTpo, Kak y Te6 Jena? ipuBeT"
+EMU 2026-10-22T07:13:48.291081 USER image ru source=ru: DONE src=bn same=false text="Russian sample এopoe yTpo, Kak y Te6 Jena? ipuBeT" -> "Russian sample In the opoe yTpo, Kak y Te6 Jena? ipuBeT"
+EMU 2026-10-22T07:14:09.223880 USER image ta source=auto: ERROR noTextDetected 
+EMU 2026-10-22T07:14:31.220017 USER image ta source=ta: ERROR noTextDetected 
+EMU 2026-10-22T07:14:51.609494 USER image te source=auto: DONE src=en same=true text="Telugu sample" -> "Telugu sample"
+EMU 2026-10-22T07:15:19.413482 USER image te source=te: DONE src=te same=false text="Telugu sample" -> "Telugu sample"
+EMU 2026-10-22T07:15:39.270898 USER image th source=auto: ERROR noTextDetected 
+EMU 2026-10-22T07:15:58.798556 USER image th source=th: ERROR noTextDetected 
+EMU 2026-10-22T07:16:19.211269 USER image uk source=auto: ERROR noTextDetected 
+EMU 2026-10-22T07:16:39.854818 USER image uk source=uk: ERROR noTextDetected 
+EMU 2026-10-22T07:17:09.251721 USER image ur source=auto: DONE src=ro same=false text="Urdu sample" -> "Urdu Sample"
+EMU 2026-10-22T07:17:38.074313 USER image ur source=ur: DONE src=ur same=false text="Urdu sample" -> "Urdu Sample"
+EMU 2026-10-22T07:18:06.219270 USER image zh source=auto: DONE src=zh same=false text="Chinese sample 早上好,你今天好吗? 你好" -> "Chinese sample Good morning, are you today? Hello"
+EMU 2026-10-22T07:18:10.236979 USER image zh source=zh: DONE src=zh same=false text="Chinese sample 早上好,你今天好吗? 你好" -> "Chinese sample Good morning, are you today? Hello"
+::endgroup::
+::group::✅ user typed texts
+EMU 2026-10-22T07:18:10.326547 USER detect "Hello दोस्त, how are you? आज मौसम अच्छा है।" -> ne
+EMU 2026-10-22T07:18:10.332117 USER detect "नमस्ते" -> hi
+EMU 2026-10-22T07:18:10.333483 USER detect "Привет" -> ru
+EMU 2026-10-22T07:18:10.338810 USER detect "مرحبا" -> ar
+EMU 2026-10-22T07:18:10.341409 USER detect "こんにちは" -> ja
+EMU 2026-10-22T07:18:10.353440 USER detect "Доброе утро, как у тебя дела?" -> ru
+EMU 2026-10-22T07:18:10.362132 USER detect "Добрий ранок, як у тебе справи?" -> uk
+EMU 2026-10-22T07:18:10.364423 USER detect "Добро утро, как си днес?" -> bg
+EMU 2026-10-22T07:18:10.367101 USER detect "Добры дзень, як твае справы?" -> be
+EMU 2026-10-22T07:18:10.368858 USER detect "Добро утро, како си денес?" -> mk
+EMU 2026-10-22T07:18:10.371876 USER detect "Καλημέρα, πώς είσαι σήμερα;" -> el
+EMU 2026-10-22T07:18:10.374022 USER detect "صباح الخير، كيف حالك اليوم؟" -> ar
+EMU 2026-10-22T07:18:10.375839 USER detect "صبح بخیر، امروز حال شما چطور است؟" -> fa
+EMU 2026-10-22T07:18:10.377533 USER detect "صبح بخیر، آج آپ کیسے ہیں؟" -> ur
+EMU 2026-10-22T07:18:10.379575 USER detect "בוקר טוב, מה שלומך היום?" -> he
+EMU 2026-10-22T07:18:10.385223 USER detect "สวัสดีตอนเช้า วันนี้คุณสบายดีไหม" -> th
+EMU 2026-10-22T07:18:10.390625 USER detect "सुप्रभात, आज आप कैसे हैं?" -> hi
+EMU 2026-10-22T07:18:10.393185 USER detect "सुप्रभात, आज तुम्ही कसे आहात?" -> mr
+EMU 2026-10-22T07:18:10.395435 USER detect "শুভ সকাল, আজ আপনি কেমন আছেন?" -> bn
+EMU 2026-10-22T07:18:10.397982 USER detect "સુપ્રભાત, આજે તમે કેમ છો?" -> gu
+EMU 2026-10-22T07:18:10.399812 USER detect "ಶುಭೋದಯ, ಇಂದು ನೀವು ಹೇಗಿದ್ದೀರಿ?" -> kn
+EMU 2026-10-22T07:18:10.403534 USER detect "காலை வணக்கம், இன்று நீங்கள் எப்படி இருக்கிறீர்கள்?" -> ta
+EMU 2026-10-22T07:18:10.406083 USER detect "శుభోదయం, ఈ రోజు మీరు ఎలా ఉన్నారు?" -> te
+EMU 2026-10-22T07:18:10.408810 USER detect "დილა მშვიდობისა, დღეს როგორ ხართ?" -> ka
+EMU 2026-10-22T07:18:10.411009 USER detect "早上好，你今天好吗？" -> zh
+EMU 2026-10-22T07:18:10.415094 USER detect "おはようございます、今日はお元気ですか？" -> ja
+EMU 2026-10-22T07:18:10.416964 USER detect "좋은 아침입니다, 오늘 기분이 어떠세요?" -> ko
+EMU 2026-10-22T07:18:18.287812 USER typed ru source=auto: DONE src=ru same=false text="Доброе утро, как у тебя дела?" -> "Good morning, how are you doing?"
+EMU 2026-10-22T07:18:18.473843 USER typed ru source=ru: DONE src=ru same=false text="Доброе утро, как у тебя дела?" -> "Good morning, how are you doing?"
+EMU 2026-10-22T07:18:27.292632 USER typed uk source=auto: DONE src=uk same=false text="Добрий ранок, як у тебе справи?" -> "Good morning, how are you doing?"
+EMU 2026-10-22T07:18:27.474165 USER typed uk source=uk: DONE src=uk same=false text="Добрий ранок, як у тебе справи?" -> "Good morning, how are you doing?"
+EMU 2026-10-22T07:18:35.230822 USER typed bg source=auto: DONE src=bg same=false text="Добро утро, как си днес?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:18:35.455877 USER typed bg source=bg: DONE src=bg same=false text="Добро утро, как си днес?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:18:44.476911 USER typed be source=auto: DONE src=be same=false text="Добры дзень, як твае справы?" -> "Hello how are your business?"
+EMU 2026-10-22T07:18:44.669369 USER typed be source=be: DONE src=be same=false text="Добры дзень, як твае справы?" -> "Hello how are your business?"
+EMU 2026-10-22T07:18:53.421134 USER typed mk source=auto: DONE src=mk same=false text="Добро утро, како си денес?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:18:53.613334 USER typed mk source=mk: DONE src=mk same=false text="Добро утро, како си денес?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:01.305884 USER typed el source=auto: DONE src=el same=false text="Καλημέρα, πώς είσαι σήμερα;" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:01.532343 USER typed el source=el: DONE src=el same=false text="Καλημέρα, πώς είσαι σήμερα;" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:01.895186 USER typed ar source=auto: DONE src=ar same=false text="صباح الخير، كيف حالك اليوم؟" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:02.090628 USER typed ar source=ar: DONE src=ar same=false text="صباح الخير، كيف حالك اليوم؟" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:09.565325 USER typed fa source=auto: DONE src=fa same=false text="صبح بخیر، امروز حال شما چطور است؟" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:09.829932 USER typed fa source=fa: DONE src=fa same=false text="صبح بخیر، امروز حال شما چطور است؟" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:10.146901 USER typed ur source=auto: DONE src=ur same=false text="صبح بخیر، آج آپ کیسے ہیں؟" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:10.441829 USER typed ur source=ur: DONE src=ur same=false text="صبح بخیر، آج آپ کیسے ہیں؟" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:18.352695 USER typed he source=auto: DONE src=he same=false text="בוקר טוב, מה שלומך היום?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:18.542668 USER typed he source=he: DONE src=he same=false text="בוקר טוב, מה שלומך היום?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:26.852168 USER typed th source=auto: DONE src=th same=false text="สวัสดีตอนเช้า วันนี้คุณสบายดีไหม" -> "Good morning How are you doing today?"
+EMU 2026-10-22T07:19:27.047124 USER typed th source=th: DONE src=th same=false text="สวัสดีตอนเช้า วันนี้คุณสบายดีไหม" -> "Good morning How are you doing today?"
+EMU 2026-10-22T07:19:27.389227 USER typed hi source=auto: DONE src=hi same=false text="सुप्रभात, आज आप कैसे हैं?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:27.591689 USER typed hi source=hi: DONE src=hi same=false text="सुप्रभात, आज आप कैसे हैं?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:27.964736 USER typed mr source=auto: DONE src=mr same=false text="सुप्रभात, आज तुम्ही कसे आहात?" -> "Good morning, how are you doing today?"
+EMU 2026-10-22T07:19:28.171134 USER typed mr source=mr: DONE src=mr same=false text="सुप्रभात, आज तुम्ही कसे आहात?" -> "Good morning, how are you doing today?"
+EMU 2026-10-22T07:19:28.427999 USER typed bn source=auto: DONE src=bn same=false text="শুভ সকাল, আজ আপনি কেমন আছেন?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:28.680991 USER typed bn source=bn: DONE src=bn same=false text="শুভ সকাল, আজ আপনি কেমন আছেন?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:28.987817 USER typed gu source=auto: DONE src=gu same=false text="સુપ્રભાત, આજે તમે કેમ છો?" -> "Goodlight, how are you today?"
+EMU 2026-10-22T07:19:29.210465 USER typed gu source=gu: DONE src=gu same=false text="સુપ્રભાત, આજે તમે કેમ છો?" -> "Goodlight, how are you today?"
+EMU 2026-10-22T07:19:29.501634 USER typed kn source=auto: DONE src=kn same=false text="ಶುಭೋದಯ, ಇಂದು ನೀವು ಹೇಗಿದ್ದೀರಿ?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:29.716881 USER typed kn source=kn: DONE src=kn same=false text="ಶುಭೋದಯ, ಇಂದು ನೀವು ಹೇಗಿದ್ದೀರಿ?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:38.120754 USER typed ta source=auto: DONE src=ta same=false text="காலை வணக்கம், இன்று நீங்கள் எப்படி இருக்கிறீர்கள்?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:38.363923 USER typed ta source=ta: DONE src=ta same=false text="காலை வணக்கம், இன்று நீங்கள் எப்படி இருக்கிறீர்கள்?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:38.739800 USER typed te source=auto: DONE src=te same=false text="శుభోదయం, ఈ రోజు మీరు ఎలా ఉన్నారు?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:38.967568 USER typed te source=te: DONE src=te same=false text="శుభోదయం, ఈ రోజు మీరు ఎలా ఉన్నారు?" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:46.379615 USER typed ka source=auto: DONE src=ka same=false text="დილა მშვიდობისა, დღეს როგორ ხართ?" -> "Good morning, how are you?"
+EMU 2026-10-22T07:19:46.576867 USER typed ka source=ka: DONE src=ka same=false text="დილა მშვიდობისა, დღეს როგორ ხართ?" -> "Good morning, how are you?"
+EMU 2026-10-22T07:19:46.856722 USER typed zh source=auto: DONE src=zh same=false text="早上好，你今天好吗？" -> "Good morning, are you today?"
+EMU 2026-10-22T07:19:47.004903 USER typed zh source=zh: DONE src=zh same=false text="早上好，你今天好吗？" -> "Good morning, are you today?"
+EMU 2026-10-22T07:19:47.244678 USER typed ja source=auto: DONE src=ja same=false text="おはようございます、今日はお元気ですか？" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:47.470099 USER typed ja source=ja: DONE src=ja same=false text="おはようございます、今日はお元気ですか？" -> "Good morning, how are you today?"
+EMU 2026-10-22T07:19:47.749304 USER typed ko source=auto: DONE src=ko same=false text="좋은 아침입니다, 오늘 기분이 어떠세요?" -> "Good morning, how are you feeling today?"
+EMU 2026-10-22T07:19:47.925117 USER typed ko source=ko: DONE src=ko same=false text="좋은 아침입니다, 오늘 기분이 어떠세요?" -> "Good morning, how are you feeling today?"
+EMU 2026-10-22T07:19:48.313998 USER typed-extra "Hello दोस्त, how are you? आज मौसम अच्छा है।" source=auto: DONE src=hi same=false text="Hello दोस्त, how are you? आज मौसम अच्छा है।" -> "Hello Friends, how are you? Today the weather is good."
+EMU 2026-10-22T07:19:48.681726 USER typed-extra "Hello दोस्त, how are you? आज मौसम अच्छा है।" source=hi: DONE src=hi same=false text="Hello दोस्त, how are you? आज मौसम अच्छा है।" -> "Hello Friends, how are you? Today the weather is good."
+EMU 2026-10-22T07:19:49.045394 USER typed-extra "Hello दोस्त, how are you? आज मौसम अच्छा है।" source=en: DONE src=hi same=false text="Hello दोस्त, how are you? आज मौसम अच्छा है।" -> "Hello Friends, how are you? Today the weather is good."
+EMU 2026-10-22T07:19:49.429197 USER typed-extra "Hello दोस्त, how are you? आज मौसम अच्छा है।" source=ru: DONE src=hi same=false text="Hello दोस्त, how are you? आज मौसम अच्छा है।" -> "Hello Friends, how are you? Today the weather is good."
+EMU 2026-10-22T07:19:49.805951 USER typed-extra "Hello दोस्त, how are you? आज मौसम अच्छा है।" source=ar: DONE src=hi same=false text="Hello दोस्त, how are you? आज मौसम अच्छा है।" -> "Hello Friends, how are you? Today the weather is good."
+EMU 2026-10-22T07:19:50.201739 USER typed-extra "Hello दोस्त, how are you? आज मौसम अच्छा है।" source=ja: DONE src=hi same=false text="Hello दोस्त, how are you? आज मौसम अच्छा है।" -> "Hello Friends, how are you? Today the weather is good."
+EMU 2026-10-22T07:19:50.361316 USER typed-extra "नमस्ते" source=auto: DONE src=hi same=false text="नमस्ते" -> "Hi"
+EMU 2026-10-22T07:19:50.531611 USER typed-extra "नमस्ते" source=hi: DONE src=hi same=false text="नमस्ते" -> "Hi"
+EMU 2026-10-22T07:19:50.760587 USER typed-extra "नमस्ते" source=en: DONE src=hi same=false text="नमस्ते" -> "Hi"
+EMU 2026-10-22T07:19:50.960852 USER typed-extra "नमस्ते" source=ru: DONE src=hi same=false text="नमस्ते" -> "Hi"
+EMU 2026-10-22T07:19:51.111245 USER typed-extra "नमस्ते" source=ar: DONE src=hi same=false text="नमस्ते" -> "Hi"
+EMU 2026-10-22T07:19:51.260228 USER typed-extra "नमस्ते" source=ja: DONE src=hi same=false text="नमस्ते" -> "Hi"
+EMU 2026-10-22T07:19:51.434293 USER typed-extra "Привет" source=auto: DONE src=ru same=false text="Привет" -> "Hi"
+EMU 2026-10-22T07:19:51.561617 USER typed-extra "Привет" source=hi: DONE src=ru same=false text="Привет" -> "Hi"
+EMU 2026-10-22T07:19:51.675626 USER typed-extra "Привет" source=en: DONE src=ru same=false text="Привет" -> "Hi"
+EMU 2026-10-22T07:19:51.803753 USER typed-extra "Привет" source=ru: DONE src=ru same=false text="Привет" -> "Hi"
+EMU 2026-10-22T07:19:51.956894 USER typed-extra "Привет" source=ar: DONE src=ru same=false text="Привет" -> "Hi"
+EMU 2026-10-22T07:19:52.077995 USER typed-extra "Привет" source=ja: DONE src=ru same=false text="Привет" -> "Hi"
+EMU 2026-10-22T07:19:52.251997 USER typed-extra "مرحبا" source=auto: DONE src=ar same=false text="مرحبا" -> "Hi"
+EMU 2026-10-22T07:19:52.417718 USER typed-extra "مرحبا" source=hi: DONE src=ar same=false text="مرحبا" -> "Hi"
+EMU 2026-10-22T07:19:52.587958 USER typed-extra "مرحبا" source=en: DONE src=ar same=false text="مرحبا" -> "Hi"
+EMU 2026-10-22T07:19:52.752337 USER typed-extra "مرحبا" source=ru: DONE src=ar same=false text="مرحبا" -> "Hi"
+EMU 2026-10-22T07:19:52.923679 USER typed-extra "مرحبا" source=ar: DONE src=ar same=false text="مرحبا" -> "Hi"
+EMU 2026-10-22T07:19:53.074443 USER typed-extra "مرحبا" source=ja: DONE src=ar same=false text="مرحبا" -> "Hi"
+EMU 2026-10-22T07:19:53.199755 USER typed-extra "こんにちは" source=auto: DONE src=ja same=false text="こんにちは" -> "Good afternoon"
+EMU 2026-10-22T07:19:53.327797 USER typed-extra "こんにちは" source=hi: DONE src=ja same=false text="こんにちは" -> "Good afternoon"
+EMU 2026-10-22T07:19:53.459047 USER typed-extra "こんにちは" source=en: DONE src=ja same=false text="こんにちは" -> "Good afternoon"
+EMU 2026-10-22T07:19:53.585995 USER typed-extra "こんにちは" source=ru: DONE src=ja same=false text="こんにちは" -> "Good afternoon"
+EMU 2026-10-22T07:19:53.742964 USER typed-extra "こんにちは" source=ar: DONE src=ja same=false text="こんにちは" -> "Good afternoon"
+EMU 2026-10-22T07:19:53.933356 USER typed-extra "こんにちは" source=ja: DONE src=ja same=false text="こんにちは" -> "Good afternoon"
+::endgroup::
+
+🎉 2 tests passed.
