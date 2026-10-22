@@ -52,4 +52,22 @@ const List<List<String>> kMixedExtra = <List<String>>[
   ['B', 'th', 'Thank you ขอบคุณ for visiting'],
 ];
 
+// A foreign sentence on both sides of a whole English sentence, and short
+// foreign words in a Latin text that language detection may confuse.
+const List<List<String>> kMixedFrame = <List<String>>[
+  ['G', 'hi', 'नमस्ते। Please keep the door closed at all times. धन्यवाद।'],
+  ['G', 'zh', '你好。The meeting starts at nine tomorrow morning. 谢谢。'],
+  ['G', 'ru', 'Привет! Please bring your passport with you. Пока!'],
+  ['G', 'ja', 'こんにちは。Thank you for your order. ありがとうございます。'],
+  ['G', 'hi', 'आज का मेनू: Paneer Butter Masala with naan, कीमत 250 रुपये'],
+  ['G', 'ar', 'مرحبا. Check-in starts at two in the afternoon. شكرا.'],
+  ['S', 'ru', 'Exit Выход'],
+  ['S', 'ru', 'Open Открыто'],
+  ['S', 'ru', 'Please say Спасибо to the driver'],
+  ['S', 'hi', 'Please say धन्यवाद to the driver'],
+  ['S', 'hi', 'The word पानी means water'],
+  ['S', 'ar', 'The word ماء means water'],
+];
+
 final List<List<String>> kMixed = <List<String>>[...kMixedBase, ...kMixedExtra];
+

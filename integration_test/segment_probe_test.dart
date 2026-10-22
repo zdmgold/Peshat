@@ -3,6 +3,7 @@
 // switch-over point can be read off the results. Nothing here fails.
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:google_mlkit_language_id/google_mlkit_language_id.dart';
 import 'package:integration_test/integration_test.dart';
 import 'package:peshat/core/services/language_detector.dart';
 import 'package:peshat/core/services/mixed_text.dart';
@@ -32,13 +33,27 @@ void main() {
 
   testWidgets('segmented versus whole', (WidgetTester t) async {
     final LanguageDetector det = LanguageDetector();
+    final LanguageIdentifier lid = LanguageIdentifier(confidenceThreshold: 0.05);
     final TranslatorService svc = TranslatorService();
     final MixedTranslation mt = MixedTranslation(det);
-    for (final List<String> c in kMixed) {
+    for (final List<String> c in kMixedFrame) {
       final String kind = c[0], code = c[1], text = c[2];
       final double share = MixedText.foreignShare(text);
       _log('SEG $kind $code share=${share.toStringAsFixed(2)} "${text.replaceAll('\n', ' | ')}"');
       _log('SEG $kind $code runs=${MixedText.split(text)}'.replaceAll('\n', '\\n'));
+      final String core = MixedText.split(text)
+          .where((r) => !r.isLatin)
+          .map((r) => r.text.trim())
+          .join(' ');
+      try {
+        final List<String> shown = <String>[];
+        for (final l in await lid.identifyPossibleLanguages(core)) {
+          shown.add('${l.languageTag}:${l.confidence.toStringAsFixed(2)}');
+        }
+        _log('SEG $kind $code langid("$core") ${shown.join(' ')}');
+      } catch (e) {
+        _log('SEG $kind $code langid ERROR $e');
+      }
       for (final String to in <String>['en', 'fr']) {
         final String whole = await _tr(svc, text, code, to);
         String seg;
@@ -57,5 +72,6 @@ void main() {
       }
     }
     det.dispose();
+    lid.close();
   });
 }
