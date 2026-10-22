@@ -7,6 +7,7 @@ import '../models/scan_state.dart';
 import '../services/connectivity_check.dart';
 import '../services/language_detector.dart';
 import '../services/scan_scripts.dart';
+import '../services/text_quality.dart';
 import '../services/text_recognizer_service.dart';
 import '../services/translator_service.dart';
 
@@ -102,8 +103,11 @@ class ScanProvider extends ValueNotifier<ScanState> {
     } else {
       var undetermined = false;
       try {
-        final d =
-            await _detector.detect(src).timeout(const Duration(seconds: 5));
+        // Mixed text: judge the foreign part (a caption in English beside
+        // Hindi would otherwise be detected as English or Nepali).
+        final d = await _detector
+            .detect(TextQuality.foreignCore(src) ?? src)
+            .timeout(const Duration(seconds: 5));
         if (d.isNotEmpty && d != 'und') {
           srcLang = d;
         } else {
@@ -116,6 +120,17 @@ class ScanProvider extends ValueNotifier<ScanState> {
       if (preferredSource != null &&
           (undetermined || confusableWith(srcLang, preferredSource))) {
         srcLang = preferredSource;
+      } else if (!undetermined && !TranslatorService.isTranslatable(srcLang)) {
+        // Detected a language there is no model for (Nepali for Hindi-looking
+        // text): use its close relative, or the user's own choice if that is
+        // the same kind of text.
+        final standIn = unsupportedStandIn[srcLang];
+        if (standIn != null) {
+          srcLang = preferredSource != null &&
+                  confusableWith(standIn, preferredSource)
+              ? preferredSource
+              : standIn;
+        }
       }
     }
     if (isSameLanguage(srcLang, targetLanguage)) {

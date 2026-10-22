@@ -30,6 +30,20 @@ class _Det implements LanguageDetector {
   void dispose() {}
 }
 
+class _DetRec implements LanguageDetector {
+  final String code;
+  final List<String> seen;
+  _DetRec(this.code, this.seen);
+  @override
+  Future<String> detect(String text) async {
+    seen.add(text);
+    return code;
+  }
+
+  @override
+  void dispose() {}
+}
+
 class _Tr implements TranslatorService {
   String? from;
   @override
@@ -84,13 +98,57 @@ void main() {
   });
 
   group('Auto reading', () {
-    test('real Latin text stops at the Latin reader', () async {
+    test('a long real Latin text stops at the Latin reader', () async {
+      final ran = <TextRecognitionScript>[];
+      const text = 'Opening hours: Monday to Friday, 9am to 5pm. Please keep '
+          'this door closed at all times and report any problems at reception.';
+      final svc = _service({TextRecognitionScript.latin: text}, ran);
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, text);
+      expect(ran, [TextRecognitionScript.latin]);
+    });
+
+    test('short real Latin text with nothing else on the photo stays Latin',
+        () async {
       final ran = <TextRecognitionScript>[];
       final svc = _service(
           {TextRecognitionScript.latin: 'Good morning, how are you?'}, ran);
       final r = await svc.recognize(InputImage.fromFilePath('x.png'));
       expect(r.text, 'Good morning, how are you?');
-      expect(ran, [TextRecognitionScript.latin]);
+      expect(ran.length, 5); // the other readers looked and found nothing
+    });
+
+    test('a Latin caption above Hindi text: the Hindi reading wins', () async {
+      final ran = <TextRecognitionScript>[];
+      const hi = 'Hindi sample सुप्रभात, आज आप कैसे हैं? नमस्ते';
+      final svc = _service({
+        TextRecognitionScript.latin: 'Hindi sample',
+        TextRecognitionScript.devanagiri: hi,
+      }, ran, reading: {hi: 0.8});
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, hi);
+    });
+
+    test('a Latin caption above Chinese text: the Chinese reading wins',
+        () async {
+      final ran = <TextRecognitionScript>[];
+      const zh = 'Chinese sample 早上好，你今天好吗？ 你好';
+      final svc = _service({
+        TextRecognitionScript.latin: 'Chinese sample',
+        TextRecognitionScript.chinese: zh,
+      }, ran, reading: {zh: 0.62});
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, zh);
+    });
+
+    test('a weak or stray reading never replaces a real Latin one', () async {
+      final ran = <TextRecognitionScript>[];
+      final svc = _service({
+        TextRecognitionScript.latin: 'Exit 12B',
+        TextRecognitionScript.chinese: 'Exit 12B 出',
+      }, ran, reading: {'Exit 12B 出': 0.3});
+      final r = await svc.recognize(InputImage.fromFilePath('x.png'));
+      expect(r.text, 'Exit 12B');
     });
 
     test('Japanese photo: Latin garbage is passed over, Japanese reader wins',
@@ -289,6 +347,51 @@ void main() {
       await p.runTextPipeline(
           text: 'Selamat pagi', targetLanguage: 'en', sourceLanguage: 'ms');
       expect(tr.from, 'ms');
+    });
+
+    test('Nepali detected for mixed Hindi/English text uses Hindi', () async {
+      final tr = _Tr();
+      final seen = <String>[];
+      final p = ScanProvider(
+          detector: _DetRec('ne', seen),
+          translator: tr,
+          internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'Hello दोस्त, how are you? आज मौसम अच्छा है।',
+          targetLanguage: 'en');
+      expect(tr.from, 'hi');
+      expect(p.value, isA<ScanDone>());
+      // detection judged the Hindi words, not the English ones
+      expect(seen.single, 'दोस्त, आज मौसम अच्छा है।');
+    });
+
+    test('a chosen Marathi is kept when detection says Nepali', () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('ne'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'सुप्रभात, आज तुम्ही कसे आहात?',
+          targetLanguage: 'en',
+          sourceLanguage: 'mr');
+      expect(tr.from, 'mr');
+    });
+
+    test('a language with no stand-in is passed on unchanged',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('la'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(text: 'Salve mundi', targetLanguage: 'en');
+      expect(tr.from, 'la'); // no stand-in: the real translator reports it
+    });
+
+    test('foreignCore keeps the non-Latin words only', () {
+      expect(TextQuality.foreignCore('Hello दोस्त, how are you? आज मौसम अच्छा है।'),
+          'दोस्त, आज मौसम अच्छा है।');
+      expect(TextQuality.foreignCore('Hello world'), isNull);
+      expect(TextQuality.foreignCore('Hindi sample'), isNull);
+      expect(TextQuality.foreignCore('I love 日本'), isNull); // too short
+      expect(TextQuality.foreignCore('नमस्ते दोस्त'), isNull); // not mixed
     });
 
     test('Auto keeps plain detection', () async {

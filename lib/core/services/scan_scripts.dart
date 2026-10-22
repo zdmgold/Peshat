@@ -55,3 +55,14 @@ bool confusableWith(String a, String b) {
   if (a == b) return false;
   return confusableLanguages.any((g) => g.contains(a) && g.contains(b));
 }
+
+/// Languages detection can name that the translator has no model for, but whose
+/// text a supported close relative reads well (Nepali, Sanskrit and Maithili are
+/// written in Devanagari like Hindi). Others stay "not supported yet".
+const Map<String, String> unsupportedStandIn = <String, String>{
+  'ne': 'hi',
+  'sa': 'hi',
+  'mai': 'hi',
+  'bho': 'hi',
+  'new': 'hi',
+};

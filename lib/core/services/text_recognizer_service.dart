@@ -80,10 +80,16 @@ class TextRecognizerService {
 
     final latin = await _run(TextRecognitionScript.latin, image);
     final latinText = latin.text.trim();
-    if (latinText.isNotEmpty &&
+    final latinOk = latinText.isNotEmpty &&
         TextQuality.latinLooksReal(
             latinText, await _languageConfidence(latinText),
-            readingConfidence: _confidenceOf(latin))) {
+            readingConfidence: _confidenceOf(latin));
+    // A long Latin reading is a Latin photo. A short one may be only a caption
+    // or label beside text in another script ("Hindi sample" above a Hindi
+    // sentence), which the Latin reader cannot see, so the others look too.
+    if (latinOk &&
+        (TextQuality.letterCounts(latinText)[ScriptGroup.latin] ?? 0) >=
+            _longLatinLetters) {
       return latin;
     }
 
@@ -103,9 +109,18 @@ class TextRecognizerService {
         bestConfidence = c ?? _minOtherConfidence;
       }
     }
-    return best ?? RecognizedText(text: '', blocks: const []);
+    if (best != null &&
+        (!latinOk || TextQuality.foreignLetters(best.text) >= _minForeign)) {
+      return best;
+    }
+    return latinOk ? latin : RecognizedText(text: '', blocks: const []);
   }
 
+  /// Latin letters from which the Latin reading is taken as the whole photo.
+  static const int _longLatinLetters = 80;
+
+  /// Foreign letters a reading needs to be preferred over a short Latin one.
+  static const int _minForeign = 4;
   static const double _minOtherConfidence = 0.5;
   static const _others = <({TextRecognitionScript script, ScriptGroup group})>[
     (script: TextRecognitionScript.japanese, group: ScriptGroup.cjk),
