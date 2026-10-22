@@ -38,7 +38,7 @@ void main() {
           final RecognizedText got =
               await r.processImage(InputImage.fromFilePath(f.path));
           _log('MIXIMG ${e.key} reader=${s.name} conf=${TextRecognizerService.readingConfidence(got)?.toStringAsFixed(2)} '
-              'foreignConf=${TextRecognizerService.readingConfidence(got, foreignOnly: true)?.toStringAsFixed(2)} '
+              'foreignConf=${TextRecognizerService.foreignConfidence(got)?.toStringAsFixed(2)} '
               'text="${got.text.replaceAll('\n', ' | ')}"');
         } catch (err) {
           _log('MIXIMG ${e.key} reader=${s.name} ERROR $err');
