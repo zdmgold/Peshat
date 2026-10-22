@@ -42,6 +42,12 @@ class MixedTranslation {
   Future<String?> _languageOf(
       String key, String joined, String? preferred) async {
     if (key == 'cjk' && TextQuality.hasKana(joined)) return 'ja';
+    // Letters only: a full stop after a Cyrillic word flipped Russian to
+    // Belarusian in emulator runs.
+    joined = joined
+        .replaceAll(RegExp(r'[^\p{L}\p{M}\s]', unicode: true), ' ')
+        .replaceAll(RegExp(r'\s+'), ' ')
+        .trim();
     var found = 'und';
     try {
       found = await _detector.detect(joined).timeout(const Duration(seconds: 5));
@@ -84,6 +90,41 @@ class MixedTranslation {
     'hangul': {'ko'},
   };
 
+  /// Longest English (Latin) stretch, in words, that still counts as words
+  /// dropped into a foreign sentence ("office", "WiFi password reception").
+  /// Emulator runs: foreign sentences with such words translated best whole
+  /// (1-3 words); with a full English sentence inside (5-9 words) they
+  /// translated best run by run.
+  static const int embeddedLatinWords = 3;
+
+  /// When [text] is a foreign sentence with a few Latin words inside (it starts
+  /// and ends in the same foreign script, and every Latin stretch is short):
+  /// the language to translate all of it from. Otherwise null.
+  Future<String?> wholeTextLanguage(String text, String? preferredSource) async {
+    final runs = MixedText.split(text);
+    if (runs.length < 3) return null;
+    final first = runs.first, last = runs.last;
+    if (first.isLatin || first.key != last.key) return null;
+    for (final r in runs) {
+      if (r.isLatin &&
+          r.text.trim().split(RegExp(r'\s+')).length > embeddedLatinWords) {
+        return null;
+      }
+    }
+    final joined = runs.where((r) => r.key == first.key).map((r) => r.text).join(' ');
+    return _languageOf(first.key, joined, preferredSource);
+  }
+
+  /// The foreign language with the most text in [pieces], or 'en'.
+  static String mainLanguage(List<MixedPiece> pieces) {
+    final size = <String, int>{};
+    for (final p in pieces) {
+      if (p.from != null) size[p.from!] = (size[p.from!] ?? 0) + p.text.length;
+    }
+    if (size.isEmpty) return 'en';
+    return size.entries.reduce((a, b) => b.value > a.value ? b : a).key;
+  }
+
   /// Cuts [text] into pieces and says which model each goes to for [target].
   Future<List<MixedPiece>> plan(String text, String target,
       {String? preferredSource}) async {
@@ -100,7 +141,11 @@ class MixedTranslation {
     }
     final latin = runs.where((r) => r.isLatin).map((r) => r.text).join(' ');
     var latinLang = 'en';
-    if (latin.isNotEmpty && !TextQuality.isShortLatin(latin)) {
+    if (preferredSource != null &&
+        _scriptOf(preferredSource) == null &&
+        TranslatorService.isTranslatable(preferredSource)) {
+      latinLang = preferredSource; // the user chose a Latin-script language
+    } else if (latin.isNotEmpty && !TextQuality.isShortLatin(latin)) {
       try {
         final d = await _detector.detect(latin).timeout(const Duration(seconds: 5));
         if (d != 'und' && TranslatorService.isTranslatable(d)) latinLang = d;
@@ -131,19 +176,32 @@ class MixedTranslation {
     Future<String> Function(String text, String from, String to) translate,
   ) async {
     final out = StringBuffer();
+    var last = '';
+    void write(String t) {
+      if (t.isEmpty) return;
+      // Chinese and Japanese write no space after a full stop; the English
+      // after it needs one.
+      if (last.isNotEmpty &&
+          !RegExp(r'\s').hasMatch(last) &&
+          RegExp(r'^[\p{L}\p{N}]', unicode: true).hasMatch(t)) {
+        out.write(' ');
+      }
+      out.write(t);
+      last = t.substring(t.length - 1);
+    }
+
     for (final p in pieces) {
       final from = p.from;
       final core = p.text.trim();
       if (from == null || core.isEmpty) {
-        out.write(p.text);
+        write(p.text);
         continue;
       }
       final lead = p.text.substring(0, p.text.indexOf(core));
       final trail = p.text.substring(lead.length + core.length);
-      out
-        ..write(lead)
-        ..write(await translate(core, from, target))
-        ..write(trail);
+      write(lead);
+      write(await translate(core, from, target));
+      write(trail);
     }
     return out.toString();
   }

@@ -6,6 +6,8 @@ import '../models/app_error_code.dart';
 import '../models/scan_state.dart';
 import '../services/connectivity_check.dart';
 import '../services/language_detector.dart';
+import '../services/mixed_text.dart';
+import '../services/mixed_translation.dart';
 import '../services/scan_scripts.dart';
 import '../services/text_quality.dart';
 import '../services/text_recognizer_service.dart';
@@ -94,17 +96,18 @@ class ScanProvider extends ValueNotifier<ScanState> {
   Future<void> _translate(String src, String targetLanguage,
       {String? knownSource, String? preferredSource}) async {
     final run = ++_run;
+    if (MixedText.isMixed(src)) {
+      await _translateMixed(src, targetLanguage, knownSource ?? preferredSource, run);
+      return;
+    }
     String srcLang = 'en';
     if (knownSource != null) {
       srcLang = knownSource;
     } else {
       var undetermined = false;
       try {
-        // Mixed text: judge the foreign part (a caption in English beside
-        // Hindi would otherwise be detected as English or Nepali).
-        final d = await _detector
-            .detect(TextQuality.foreignCore(src) ?? src)
-            .timeout(const Duration(seconds: 5));
+        final d =
+            await _detector.detect(src).timeout(const Duration(seconds: 5));
         if (d.isNotEmpty && d != 'und') {
           srcLang = d;
         } else {
@@ -135,6 +138,12 @@ class ScanProvider extends ValueNotifier<ScanState> {
         }
       }
     }
+    await _translateWhole(src, srcLang, targetLanguage, run);
+  }
+
+  /// All of [src] through the one model for [srcLang].
+  Future<void> _translateWhole(
+      String src, String srcLang, String targetLanguage, int run) async {
     if (isSameLanguage(srcLang, targetLanguage)) {
       value = ScanDone(
         sourceText: src,
@@ -149,25 +158,7 @@ class ScanProvider extends ValueNotifier<ScanState> {
     final missing = await _translator.missingPacks(
         fromBcp: srcLang, toBcp: targetLanguage);
     if (_cancelled) return;
-    if (missing.isNotEmpty) {
-      if (!await _hasInternet()) {
-        if (_cancelled) return;
-        value = const ScanState.error(AppErrorCode.offlinePackNeeded);
-        return;
-      }
-      try {
-        await _receivePacks(missing, run).timeout(const Duration(minutes: 3));
-      } on TimeoutException {
-        _run++; // stop the slow pack loop from touching the screen later
-        if (_cancelled) return;
-        value = const ScanState.error(AppErrorCode.packTooSlow);
-        return;
-      }
-      if (_cancelled) return;
-      value = const ScanState.packReceived();
-      await Future<void>.delayed(const Duration(milliseconds: 700));
-      if (_cancelled) return;
-    }
+    if (!await _ensurePacks(missing, run)) return;
     value = ScanTranslating(src, srcLang);
     final translated = await _translator
         .translate(text: src, fromBcp: srcLang, toBcp: targetLanguage)
@@ -177,6 +168,91 @@ class ScanProvider extends ValueNotifier<ScanState> {
       sourceText: src,
       translatedText: translated,
       sourceLanguage: srcLang,
+      targetLanguage: targetLanguage,
+    );
+  }
+
+  /// Receives the language packs still missing. False when the scan stopped:
+  /// no internet, too slow, or cancelled (the error is already shown).
+  Future<bool> _ensurePacks(List<String> missing, int run) async {
+    if (missing.isEmpty) return true;
+    if (!await _hasInternet()) {
+      if (_cancelled) return false;
+      value = const ScanState.error(AppErrorCode.offlinePackNeeded);
+      return false;
+    }
+    try {
+      await _receivePacks(missing, run).timeout(const Duration(minutes: 3));
+    } on TimeoutException {
+      _run++; // stop the slow pack loop from touching the screen later
+      if (_cancelled) return false;
+      value = const ScanState.error(AppErrorCode.packTooSlow);
+      return false;
+    }
+    if (_cancelled) return false;
+    value = const ScanState.packReceived();
+    await Future<void>.delayed(const Duration(milliseconds: 700));
+    return !_cancelled;
+  }
+
+  /// Text with Latin and another script together (a sign in English over a
+  /// Hindi line, a menu with Japanese names, a Hindi sentence with "office" in
+  /// it). A foreign sentence with a few Latin words inside goes through the
+  /// foreign model whole; otherwise each run goes to the model for its own
+  /// language, so the English is left as it is. See [MixedTranslation].
+  Future<void> _translateMixed(
+      String src, String targetLanguage, String? chosen, int run) async {
+    final mt = MixedTranslation(_detector);
+    final whole = await mt.wholeTextLanguage(src, chosen);
+    if (_cancelled) return;
+    if (whole != null) {
+      if (isSameLanguage(whole, targetLanguage)) {
+        value = ScanDone(
+          sourceText: src,
+          translatedText: src,
+          sourceLanguage: whole,
+          targetLanguage: targetLanguage,
+          sameLanguage: true,
+        );
+        return;
+      }
+      await _translateWhole(src, whole, targetLanguage, run);
+      return;
+    }
+    final plan = await mt.plan(src, targetLanguage, preferredSource: chosen);
+    if (_cancelled) return;
+    final languages = MixedTranslation.languagesIn(plan);
+    final main = MixedTranslation.mainLanguage(plan);
+    if (languages.isEmpty) {
+      value = ScanDone(
+        sourceText: src,
+        translatedText: src,
+        sourceLanguage: targetLanguage,
+        targetLanguage: targetLanguage,
+        sameLanguage: true,
+      );
+      return;
+    }
+    final missing = <String>{};
+    for (final from in languages) {
+      missing.addAll(await _translator.missingPacks(
+          fromBcp: from, toBcp: targetLanguage));
+    }
+    if (_cancelled) return;
+    if (!await _ensurePacks(missing.toList(), run)) return;
+    value = ScanTranslating(src, main);
+    final translated = await MixedTranslation.run(
+      plan,
+      targetLanguage,
+      (text, from, to) => _translator
+          .translate(text: text, fromBcp: from, toBcp: to)
+          .timeout(const Duration(seconds: 60)),
+    );
+    if (_cancelled) return;
+    value = ScanDone(
+      sourceText: src,
+      translatedText: translated,
+      sourceLanguage: main,
       targetLanguage: targetLanguage,
     );
   }

@@ -71,23 +71,6 @@ class TextQuality {
     return n;
   }
 
-  /// Mixed text (an English word or caption beside another script): just the
-  /// words that are not mostly Latin, so language detection judges the foreign
-  /// part instead of being pulled to English or a stray language. Null when the
-  /// text is not mixed or the foreign part is too short to judge.
-  static String? foreignCore(String text) {
-    final counts = letterCounts(text);
-    if ((counts[ScriptGroup.latin] ?? 0) == 0 || foreignLetters(text) < 4) {
-      return null;
-    }
-    final words = text
-        .split(RegExp(r'\s+'))
-        .where((w) => w.isNotEmpty && share(w, ScriptGroup.latin) < 0.5)
-        .toList();
-    final core = words.join(' ');
-    return foreignLetters(core) < 4 ? null : core;
-  }
-
   /// Under 25 letters, nearly all Latin: too little for language detection.
   static bool isShortLatin(String text) {
     final counts = letterCounts(text);

@@ -67,6 +67,29 @@ class TextRecognizerService {
     return n == 0 ? null : sum / n;
   }
 
+  /// Non-Latin letters the reader read with confidence (words at or above
+  /// [_minForeignConfidence]). The reader that reads most of them has read the
+  /// photo best: on a Japanese menu the Chinese reader read one word at 0.77,
+  /// the Japanese reader the whole menu at 0.65.
+  static int foreignCoverage(RecognizedText r) {
+    var n = 0;
+    for (final b in r.blocks) {
+      for (final l in b.lines) {
+        for (final e in l.elements) {
+          final c = e.confidence;
+          if (c != null && c >= _minForeignConfidence) {
+            n += TextQuality.foreignLetters(e.text);
+          }
+        }
+      }
+    }
+    return n;
+  }
+
+  int _coverageOf(RecognizedText r) => _readingConfidence != null
+      ? TextQuality.foreignLetters(r.text)
+      : foreignCoverage(r);
+
   /// Mean of the reader's own per-line confidence, or null when it has none.
   static double? readingConfidence(RecognizedText r) {
     var sum = 0.0, n = 0;
@@ -95,8 +118,8 @@ class TextRecognizerService {
   /// looks like real text and no other reader finds convincing text in its own
   /// script. A non-Latin reading counts when its non-Latin words are read with
   /// confidence and none of them mixes letters of two scripts (look-alike
-  /// garbage such as Devanagari with Bengali letters inside one word); the most
-  /// confident one wins and also carries any Latin lines, which every reader
+  /// garbage such as Devanagari with Bengali letters inside one word); the one that
+  /// reads the most of them confidently wins and also carries any Latin lines, which every reader
   /// reads the same. When nothing looks real the result is empty, so no
   /// gibberish is translated.
   Future<RecognizedText> recognize(InputImage image,
@@ -113,7 +136,7 @@ class TextRecognizerService {
     final readings = await Future.wait(
         _others.map((s) async => (reading: await _run(s, image))));
     RecognizedText? best;
-    var bestConfidence = -1.0;
+    var bestCoverage = -1, bestConfidence = -1.0;
     for (final x in readings) {
       final r = x.reading;
       final text = r.text.trim();
@@ -124,9 +147,13 @@ class TextRecognizerService {
       }
       final c = _foreignConfidenceOf(r);
       if (c != null && c < _minForeignConfidence) continue;
-      if ((c ?? _minForeignConfidence) > bestConfidence) {
+      final coverage = _coverageOf(r);
+      final conf = c ?? _minForeignConfidence;
+      if (coverage > bestCoverage ||
+          (coverage == bestCoverage && conf > bestConfidence)) {
         best = r;
-        bestConfidence = c ?? _minForeignConfidence;
+        bestCoverage = coverage;
+        bestConfidence = conf;
       }
     }
     if (best != null) return best;

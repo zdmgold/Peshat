@@ -6,6 +6,7 @@ import 'package:google_mlkit_text_recognition/google_mlkit_text_recognition.dart
 import 'package:peshat/core/models/scan_state.dart';
 import 'package:peshat/core/providers/scan_provider.dart';
 import 'package:peshat/core/services/language_detector.dart';
+import 'package:peshat/core/services/mixed_text.dart';
 import 'package:peshat/core/services/scan_scripts.dart';
 import 'package:peshat/core/services/text_quality.dart';
 import 'package:peshat/core/services/text_recognizer_service.dart';
@@ -46,6 +47,7 @@ class _DetRec implements LanguageDetector {
 
 class _Tr implements TranslatorService {
   String? from;
+  final texts = <String>[];
   @override
   Future<List<String>> missingPacks(
           {required String fromBcp, required String toBcp}) async =>
@@ -61,6 +63,7 @@ class _Tr implements TranslatorService {
       required String fromBcp,
       required String toBcp}) async {
     from = fromBcp;
+    texts.add(text);
     return 'T:$text';
   }
 }
@@ -397,8 +400,8 @@ void main() {
           targetLanguage: 'en');
       expect(tr.from, 'hi');
       expect(p.value, isA<ScanDone>());
-      // detection judged the Hindi words, not the English ones
-      expect(seen.single, 'दोस्त, आज मौसम अच्छा है।');
+      // detection judged the Hindi words (letters only), not the English ones
+      expect(seen.single, 'दोस्त आज मौसम अच्छा है');
     });
 
     test('a chosen Marathi is kept when detection says Nepali', () async {
@@ -432,13 +435,88 @@ void main() {
       expect(tr.from, 'la');
     });
 
-    test('foreignCore keeps the non-Latin words only', () {
-      expect(TextQuality.foreignCore('Hello दोस्त, how are you? आज मौसम अच्छा है।'),
-          'दोस्त, आज मौसम अच्छा है।');
-      expect(TextQuality.foreignCore('Hello world'), isNull);
-      expect(TextQuality.foreignCore('Hindi sample'), isNull);
-      expect(TextQuality.foreignCore('I love 日本'), isNull); // too short
-      expect(TextQuality.foreignCore('नमस्ते दोस्त'), isNull); // not mixed
+    test('a foreign sentence with a few English words goes through whole',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('hi'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'आज मैं office जा रहा हूँ और मेरी meeting दस बजे है।',
+          targetLanguage: 'en');
+      expect(tr.texts, ['आज मैं office जा रहा हूँ और मेरी meeting दस बजे है।']);
+      expect(tr.from, 'hi');
+    });
+
+    test('English sign over a Hindi line: only the Hindi is translated',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('hi'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'Welcome to the City Library\nनगर पुस्तकालय में आपका स्वागत है',
+          targetLanguage: 'en');
+      expect(tr.texts, ['नगर पुस्तकालय में आपका स्वागत है']);
+      expect((p.value as ScanDone).translatedText,
+          'Welcome to the City Library\nT:नगर पुस्तकालय में आपका स्वागत है');
+    });
+
+    test('a whole English sentence inside a foreign one is left as written',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('hi'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'नमस्ते। Please keep the door closed at all times. धन्यवाद।',
+          targetLanguage: 'en');
+      expect(tr.texts, ['नमस्ते।', 'धन्यवाद।']);
+      expect((p.value as ScanDone).translatedText,
+          'T:नमस्ते। Please keep the door closed at all times. T:धन्यवाद।');
+    });
+
+    test('a short foreign phrase in an English sentence is translated alone',
+        () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('zh'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'Please ask for 麻婆豆腐 when you order at the restaurant.',
+          targetLanguage: 'en');
+      expect(tr.texts, ['麻婆豆腐']);
+      expect((p.value as ScanDone).translatedText,
+          'Please ask for T:麻婆豆腐 when you order at the restaurant.');
+    });
+
+    test('Chinese full stop followed by English gets a space', () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('zh'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: '你好。The meeting starts at nine tomorrow morning. 谢谢。',
+          targetLanguage: 'en');
+      expect((p.value as ScanDone).translatedText,
+          'T:你好。 The meeting starts at nine tomorrow morning. T:谢谢。');
+    });
+
+    test('a chosen Latin-script source is used for the Latin part', () async {
+      final tr = _Tr();
+      final p = ScanProvider(
+          detector: _Det('zh'), translator: tr, internetCheck: () async => true);
+      await p.runTextPipeline(
+          text: 'Bonjour tout le monde 你好', targetLanguage: 'en',
+          sourceLanguage: 'fr');
+      expect(tr.texts, ['Bonjour tout le monde', '你好']);
+    });
+
+    test('text splits into one run per script', () {
+      final runs = MixedText.split('Hello दोस्त, how are you? आज');
+      expect(runs.map((r) => r.key).toList(),
+          ['latin', 'devanagari', 'latin', 'devanagari']);
+      expect(runs.map((r) => r.text).join(), 'Hello दोस्त, how are you? आज');
+      expect(MixedText.isMixed('Hello world'), isFalse);
+      expect(MixedText.isMixed('नमस्ते दोस्त'), isFalse);
+      expect(MixedText.isMixed('Hello 你好'), isTrue);
+      expect(MixedText.split('今日はMeetingがあります').map((r) => r.key).toList(),
+          ['cjk', 'latin', 'cjk']);
     });
 
     test('Auto keeps plain detection', () async {
