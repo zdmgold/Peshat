@@ -1,0 +1,84 @@
+
+✅ /home/runner/work/Peshat/Peshat/test/scan_source_test.dart: every translatable language is either readable by a reader or type-only
+✅ /home/runner/work/Peshat/Peshat/test/scan_source_test.dart: each source language picks its own reader
+✅ /home/runner/work/Peshat/Peshat/test/scan_source_test.dart: chosen source runs only that reader and skips language detection
+✅ /home/runner/work/Peshat/Peshat/test/scan_source_test.dart: Auto keeps today's behaviour: reader order and detection
+✅ /home/runner/work/Peshat/Peshat/test/scan_source_test.dart: source choice is remembered and bad values fall back to Auto
+✅ /home/runner/work/Peshat/Peshat/test/result_tab_test.dart: result opens on the Translation tab (from History)
+✅ /home/runner/work/Peshat/Peshat/test/result_tab_test.dart: result opens on the Translation tab (new scan)
+✅ /home/runner/work/Peshat/Peshat/test/l10n_completeness_test.dart: all ARB files have the same key set as app_en.arb
+✅ /home/runner/work/Peshat/Peshat/test/widget_test.dart: ScanScreen renders core controls
+✅ /home/runner/work/Peshat/Peshat/test/widget_test.dart: ScanScreen scrolls on a short screen and labels its buttons
+✅ /home/runner/work/Peshat/Peshat/test/widget_test.dart: Home card shows a newly picked target language at once
+✅ /home/runner/work/Peshat/Peshat/test/pdf_fonts_test.dart: detects the extra scripts a text needs
+✅ /home/runner/work/Peshat/Peshat/test/pdf_fonts_test.dart: right-to-left detection
+✅ /home/runner/work/Peshat/Peshat/test/pdf_fonts_test.dart: letter-joining scripts are drawn as images, others stay text
+✅ /home/runner/work/Peshat/Peshat/test/auto_direction_text_test.dart: follows the direction of its own content
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: unsupported language falls back to English
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: supported language keeps its code and drops the country
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: Norwegian Bokmål and Nynorsk map to the Norwegian strings
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: device list resolution picks first supported, else English
+✅ /home/runner/work/Peshat/Peshat/test/locale_resolution_test.dart: exactly 48 app languages are selectable and all load
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: pack on the phone: no receiving bar, goes straight to translating
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: pack missing and offline: offline error, nothing received
+✅ /home/runner/work/Peshat/Peshat/test/date_labels_test.dart: 23:00 last night is yesterday, not today
+✅ /home/runner/work/Peshat/Peshat/test/date_labels_test.dart: today shows only the time, other days show a date too
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: pack missing and online: receiving, received, then translated
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: same language: no packs needed, nothing translated
+✅ /home/runner/work/Peshat/Peshat/test/pack_flow_test.dart: cancel stops the scan: nothing further is shown
+✅ /home/runner/work/Peshat/Peshat/test/contrast_test.dart: text on filled accent buttons is readable in dark mode
+✅ /home/runner/work/Peshat/Peshat/test/contrast_test.dart: text on filled accent buttons in light mode stays above 4:1
+✅ /home/runner/work/Peshat/Peshat/test/contrast_test.dart: primary text is comfortably readable on both page backgrounds
+✅ /home/runner/work/Peshat/Peshat/test/same_language_test.dart: same base language is detected regardless of region or case
+✅ /home/runner/work/Peshat/Peshat/test/language_label_test.dart: native name first, English after it
+✅ /home/runner/work/Peshat/Peshat/test/language_label_test.dart: English shows once
+✅ /home/runner/work/Peshat/Peshat/test/language_label_test.dart: unknown code falls back to upper-case code
+✅ /home/runner/work/Peshat/Peshat/test/language_label_test.dart: English subtitle only when it differs from the native name
+✅ /home/runner/work/Peshat/Peshat/test/translator_service_test.dart: Filipino maps to the ML Kit model code, not the app code
+✅ /home/runner/work/Peshat/Peshat/test/translator_service_test.dart: every translatable language has a model code
+✅ /home/runner/work/Peshat/Peshat/test/alpha_index_test.dart: tapping a letter in the rail scrolls to that section
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Latin reader output real text is accepted
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Latin reader output look-alike garbage from other scripts is rejected
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a long real Latin text with nothing foreign is returned as read
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a long English paragraph with one Chinese phrase: the Chinese reading wins
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Devanagari reader on Gujarati: letters of two scripts in one word are rejected
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading strayForeignLetters
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading mixesForeignScripts
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading short real Latin text with nothing else on the photo stays Latin
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a Latin caption above Hindi text: the Hindi reading wins
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a Latin caption above Chinese text: the Chinese reading wins
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a weak or stray reading never replaces a real Latin one
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Japanese photo: Latin garbage is passed over, Japanese reader wins
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Chinese, Korean and Hindi photos reach their own readers
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Cyrillic photo: nothing looks real, so nothing is returned
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Latin empty (clean Hindi photo): other readers still get a turn
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading the most confident reading wins, wrong readers are ignored
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a pure-looking but low-confidence reading is dropped
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Japanese beats Chinese when both read it
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Bengali is read by the Devanagari reader
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading Latin reading with very low reader confidence is not trusted
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a confident Latin reading of a URL or an unrecognised language is kept
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading mixed Latin and Japanese text is read when the reader is confident
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: Auto reading a chosen source still runs only that reader
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a look-alike language in the same script follows the choice
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source Macedonian word detected as Bulgarian uses the chosen Macedonian
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source an unrelated chosen source never overrides detection
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a language detection cannot recognise follows the chosen source
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source Malay detected as Indonesian follows a chosen Malay
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source Nepali detected for mixed Hindi/English text uses Hindi
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a chosen Marathi is kept when detection says Nepali
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a short Latin caption detected as an unsupported language is English
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a longer unsupported language is passed on for the translator to report
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a foreign sentence with a few English words goes through whole
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a four-word English name inside a foreign sentence stays whole
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source English sign over a Hindi line: only the Hindi is translated
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a whole English sentence inside a foreign one is left as written
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a short foreign phrase in an English sentence is translated alone
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source Chinese full stop followed by English gets a space
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source a chosen Latin-script source is used for the Latin part
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source text splits into one run per script
+✅ /home/runner/work/Peshat/Peshat/test/text_quality_test.dart: typed text with a chosen source Auto keeps plain detection
+✅ /home/runner/work/Peshat/Peshat/test/locale_sweep_test.dart: Home screen has no overflow in any menu language
+✅ /home/runner/work/Peshat/Peshat/test/locale_sweep_test.dart: Type text screen has no overflow in any menu language
+
+🎉 81 tests passed.
