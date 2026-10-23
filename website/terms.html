@@ -32,7 +32,7 @@
   <div class="container">
 
     <h1>Terms of Service</h1>
-    <p class="meta">Effective 14 October 2026</p>
+    <p class="meta">Effective 23 October 2026</p>
 
     <p>These terms govern your use of the Peshat mobile application ("the App") for iOS and Android. By installing or using the App, you agree to these terms.</p>
 
@@ -96,7 +96,7 @@
 
 <footer class="site">
   <div class="container">
-    <span>© 2026 Peshat</span>
+    <span>© <span id="yr">2026</span> Peshat</span>
     <span class="spacer"></span>
     <a href="index.html">Home</a>
     <a href="privacy.html">Privacy</a>
@@ -104,5 +104,6 @@
   </div>
 </footer>
 
+<script>document.getElementById("yr").textContent=new Date().getFullYear();</script>
 </body>
 </html>
