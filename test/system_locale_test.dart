@@ -3,17 +3,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'package:peshat/core/providers/history_provider.dart';
-import 'package:peshat/core/providers/notification_provider.dart';
-import 'package:peshat/core/providers/purchase_provider.dart';
-import 'package:peshat/core/providers/settings_provider.dart';
-import 'package:peshat/core/providers/theme_provider.dart';
 import 'package:peshat/core/providers/ui_locale_provider.dart';
 import 'package:peshat/l10n/app_localizations.dart';
 import 'package:peshat/main.dart';
 import 'package:peshat/screens/history_screen.dart';
 import 'package:peshat/screens/language_picker_screen.dart';
 import 'package:peshat/screens/scan_screen.dart';
-import 'package:peshat/screens/settings_screen.dart';
 import 'package:peshat/screens/ui_language_picker_screen.dart';
 
 const _rtl = {'ar', 'he', 'fa', 'ur'};
