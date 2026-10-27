@@ -30,6 +30,7 @@ has mixed && timeout 5400 flutter test integration_test/mixed_probe_test.dart -d
 has mixedimg && timeout 5400 flutter test integration_test/mixed_image_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/mixedimg.log
 has rd && timeout 5400 flutter test integration_test/reader_detail_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/rd.log
 has seg && timeout 5400 flutter test integration_test/segment_probe_test.dart -d emulator-5554 2>&1 | tee emu-out/seg.log
+has locales && timeout 3000 flutter test integration_test/locale_screens_test.dart -d emulator-5554 2>&1 | tee emu-out/locales.log
 has flow && timeout 900 flutter test integration_test/app_flow_test.dart -d emulator-5554 -v 2>&1 | tee emu-out/test.log
 echo "${PIPESTATUS[0]}" > emu-out/status.txt
 kill "$SHOTS" 2>/dev/null

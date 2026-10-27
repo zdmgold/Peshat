@@ -68,7 +68,7 @@ jobs:
           tail -n 3000 emu-out/test.log > /tmp/emu-publish/test.log 2>/dev/null
           grep -E "FATAL|AndroidRuntime|flutter|Flutter|peshat|ActivityManager|Impeller|Vulkan|GLES|ANR|crash" emu-out/logcat.txt | tail -n 1500 > /tmp/emu-publish/logcat-filtered.txt 2>/dev/null
           grep -E "EMU |Some tests failed|All tests passed" emu-out/ocr.log > /tmp/emu-publish/ocr-highlights.txt 2>/dev/null
-          for n in photo pdf translate user mixed mixedimg rd seg; do grep -E "EMU " emu-out/$n.log > /tmp/emu-publish/$n-highlights.txt 2>/dev/null; done
+          for n in photo pdf translate user mixed mixedimg rd seg locales; do grep -E "EMU " emu-out/$n.log > /tmp/emu-publish/$n-highlights.txt 2>/dev/null; done
           grep -E "EMU " emu-out/latin.log > /tmp/emu-publish/latin-highlights.txt 2>/dev/null
           grep -E "EMU " emu-out/matrix.log > /tmp/emu-publish/matrix-highlights.txt 2>/dev/null
           grep -E "EMU " emu-out/langid.log > /tmp/emu-publish/langid-highlights.txt 2>/dev/null

@@ -1,8 +1,13 @@
 import 'dart:ui' show Locale;
 import '../../l10n/app_localizations.dart';
 
-/// Norwegian Bokmål/Nynorsk device locales use the app's Norwegian strings.
-String _uiCode(String code) => (code == 'nb' || code == 'nn') ? 'no' : code;
+/// Norwegian Bokmål/Nynorsk device locales use the app's Norwegian strings;
+/// older Android reports Filipino as `tl`, the app's strings are `fil`.
+String _uiCode(String code) => (code == 'nb' || code == 'nn')
+    ? 'no'
+    : code == 'tl'
+        ? 'fil'
+        : code;
 
 /// True when the app ships UI strings for [languageCode].
 bool isUiLanguageSupported(String languageCode) => AppLocalizations
