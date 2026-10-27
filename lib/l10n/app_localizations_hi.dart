@@ -239,7 +239,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get historyToday => 'आज';
 
   @override
-  String get historyYesterday => 'कल';
+  String get historyYesterday => 'बीता कल';
 
   @override
   String get historyOlder => 'पुराना';

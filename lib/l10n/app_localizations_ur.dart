@@ -239,7 +239,7 @@ class AppLocalizationsUr extends AppLocalizations {
   String get historyToday => 'آج';
 
   @override
-  String get historyYesterday => 'کل';
+  String get historyYesterday => 'گزشتہ کل';
 
   @override
   String get historyOlder => 'پرانے';

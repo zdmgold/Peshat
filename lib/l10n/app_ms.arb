@@ -36,7 +36,7 @@
   "errorOcrFailed": "Pengecaman teks gagal",
   "errorTranslationFailed": "Terjemahan gagal",
   "errorTimeout": "Operasi mengambil masa terlalu lama",
-  "errorUnknown": "Sesuatu telah berlaku",
+  "errorUnknown": "Sesuatu tidak kena",
   "statusRecognizing": "Membaca teks…",
   "statusPreparingModel": "Menyediakan terjemahan…",
   "statusTranslating": "Menterjemah…",

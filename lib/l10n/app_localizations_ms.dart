@@ -119,7 +119,7 @@ class AppLocalizationsMs extends AppLocalizations {
   String get errorTimeout => 'Operasi mengambil masa terlalu lama';
 
   @override
-  String get errorUnknown => 'Sesuatu telah berlaku';
+  String get errorUnknown => 'Sesuatu tidak kena';
 
   @override
   String get statusRecognizing => 'Membaca teks…';

@@ -239,7 +239,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get historyToday => 'ਅੱਜ';
 
   @override
-  String get historyYesterday => 'ਕੱਲ੍ਹ';
+  String get historyYesterday => 'ਬੀਤਿਆ ਕੱਲ੍ਹ';
 
   @override
   String get historyOlder => 'ਪੁਰਾਣਾ';
