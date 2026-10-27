@@ -1,0 +1,83 @@
+
+Running Gradle task 'assembleDebug'...                          
+Checking the license for package NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/licenses
+License for package NDK (Side by side) 27.0.12077973 accepted.
+Preparing "Install NDK (Side by side) 27.0.12077973 v.27.0.12077973".
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" ready.
+Installing NDK (Side by side) 27.0.12077973 in /usr/local/lib/android/sdk/ndk/27.0.12077973
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" complete.
+"Install NDK (Side by side) 27.0.12077973 v.27.0.12077973" finished.
+Checking the license for package CMake 3.22.1 in /usr/local/lib/android/sdk/licenses
+License for package CMake 3.22.1 accepted.
+Preparing "Install CMake 3.22.1 v.3.22.1".
+"Install CMake 3.22.1 v.3.22.1" ready.
+Installing CMake 3.22.1 in /usr/local/lib/android/sdk/cmake/3.22.1
+"Install CMake 3.22.1 v.3.22.1" complete.
+"Install CMake 3.22.1 v.3.22.1" finished.
+Running Gradle task 'assembleDebug'...                            315.0s
+✓ Built build/app/outputs/flutter-apk/app-debug.apk
+Installing build/app/outputs/flutter-apk/app-debug.apk...          978ms
+::group::✅ screens in every menu language, real fonts
+EMU LOCALE OVERFLOW am ui-language-picker x1.0: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW am ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW am ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW am ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW am ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW am ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ar ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ar source-picker x1.0: A RenderFlex overflowed by 3.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/language_picker_screen.dart:395:26 ]
+EMU LOCALE OVERFLOW ar ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ar ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ar ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ar ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ar ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ar source-picker x1.3: A RenderFlex overflowed by 6.2 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/language_picker_screen.dart:395:26 ]
+EMU LOCALE OVERFLOW bg ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bg ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bg ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bg ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bg ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bg ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bn ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bn ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bn ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bn ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bn ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW bn ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ca ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ca ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ca ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ca ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ca ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW ca ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW cs ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW cs ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW cs ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW cs ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW cs ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW cs ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW da ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW da ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW da ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW da ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW da ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW da ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW de ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW de ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW de ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW de ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW de ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW de ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW de source-picker x1.3: A RenderFlex overflowed by 12 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/language_picker_screen.dart:395:26 ]
+EMU LOCALE OVERFLOW el ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW el ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW el ui-language-picker x1.3: A RenderFlex overflowed by 9.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW el ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW el ui-language-picker x1.3: A RenderFlex overflowed by 19 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW el ui-language-picker x1.3: A RenderFlex overflowed by 4.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW el source-picker x1.3: A RenderFlex overflowed by 12 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/language_picker_screen.dart:395:26 ]
+EMU LOCALE OVERFLOW en ui-language-picker x1.0: A RenderFlex overflowed by 5.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+EMU LOCALE OVERFLOW en ui-language-picker x1.3: A RenderFlex overflowed by 2.0 pixels on the bottom. [Column Column:file:///home/runner/work/Peshat/Peshat/lib/screens/ui_language_picker_screen.dart:259:26 ]
+::endgroup::
+
+🎉 1 test passed.
