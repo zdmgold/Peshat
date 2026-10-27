@@ -55,16 +55,28 @@ class UiLanguagePickerScreen extends StatelessWidget {
           a.englishName.toLowerCase().compareTo(b.englishName.toLowerCase()));
     final groups = _groupByLetter(sorted);
 
+    // Rows have a fixed height so the A-Z index can jump to a letter; grow it
+    // with the text size. Emulator, real fonts: a row overflowed by 5 px at
+    // 100% text and 19 px at 130%, section labels by 9 px and letters by 4 px
+    // at 130%.
+    final textScale = MediaQuery.textScalerOf(context).scale(16) / 16;
+    final rowExtent = (16 + 53 * textScale) > _kRowExtent
+        ? (16 + 53 * textScale)
+        : _kRowExtent;
+    final extra = textScale > 1 ? textScale - 1 : 0.0;
+    final labelExtent = _kLabelExtent + 35 * extra;
+    final letterExtent = _kLetterExtent + 15 * extra;
+
     final entries = <IndexEntry>[
       IndexEntry(
-        extent: _kLabelExtent,
+        extent: labelExtent,
         child: _SectionLabel(
           text: l10n.sectionSystemLabel,
           color: textTertiary,
         ),
       ),
       IndexEntry(
-        extent: _kRowExtent,
+        extent: rowExtent,
         child: _UiLanguageRow(
           leading: AppIcons.smartphone,
           title: l10n.followSystemLabel,
@@ -77,7 +89,7 @@ class UiLanguagePickerScreen extends StatelessWidget {
         ),
       ),
       IndexEntry(
-        extent: _kLabelExtent,
+        extent: labelExtent,
         child: _SectionLabel(
           text: l10n.appLanguageLabel,
           color: textTertiary,
@@ -85,13 +97,13 @@ class UiLanguagePickerScreen extends StatelessWidget {
       ),
       for (final group in groups) ...[
         IndexEntry(
-          extent: _kLetterExtent,
+          extent: letterExtent,
           letter: group.letter,
           child: _LetterLabel(letter: group.letter, color: textTertiary),
         ),
         for (final lang in group.languages)
           IndexEntry(
-            extent: _kRowExtent,
+            extent: rowExtent,
             child: _UiLanguageRow(
               leading: null,
               title: lang.nativeName,

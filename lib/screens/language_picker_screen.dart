@@ -157,8 +157,8 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
             if (_query.isEmpty)
               rowEntry(Language(
                 code: sourceAuto,
-                nativeName: l10n.languageAutoLatin,
-                englishName: l10n.languageAutoLatin,
+                nativeName: l10n.languageAuto,
+                englishName: l10n.languageAuto,
               )),
             if (readable.isNotEmpty) ...[
               labelEntry(l10n.pickerCameraReads),

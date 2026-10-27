@@ -1,5 +1,3 @@
-import 'dart:ui' show Locale;
-
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:integration_test/integration_test.dart';
@@ -73,7 +71,7 @@ void main() {
 
     try {
       for (final locale in AppLocalizations.supportedLocales) {
-       for (final scale in const [1.0, 1.3]) {
+       for (final scale in const [1.0, 1.3, 2.0]) {
         for (final s in screens.entries) {
           where = '${locale.languageCode} ${s.key} x$scale';
           await t.pumpWidget(
@@ -97,8 +95,10 @@ void main() {
       FlutterError.onError = original;
     }
     for (final p in problems) {
-      debugPrint('EMU LOCALE OVERFLOW $p');
+      // ignore: avoid_print
+      print('EMU LOCALE OVERFLOW $p');
     }
-    debugPrint('EMU LOCALE DONE ${problems.length} problems');
+    // ignore: avoid_print
+    print('EMU LOCALE DONE ${problems.length} problems');
   });
 }
