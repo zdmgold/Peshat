@@ -5,6 +5,7 @@ import '../core/models/language.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
 import '../core/utils/locale_resolution.dart';
+import '../core/utils/picker_rows.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/ad_slot.dart';
@@ -60,9 +61,8 @@ class UiLanguagePickerScreen extends StatelessWidget {
     // 100% text and 19 px at 130%, section labels by 9 px and letters by 4 px
     // at 130%.
     final textScale = MediaQuery.textScalerOf(context).scale(16) / 16;
-    final rowExtent = (16 + 53 * textScale) > _kRowExtent
-        ? (16 + 53 * textScale)
-        : _kRowExtent;
+    final rowExtent = pickerRowExtent(context,
+        baseFactor: 53, minimum: _kRowExtent);
     final extra = textScale > 1 ? textScale - 1 : 0.0;
     final labelExtent = _kLabelExtent + 35 * extra;
     final letterExtent = _kLetterExtent + 15 * extra;

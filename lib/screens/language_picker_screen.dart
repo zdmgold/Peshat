@@ -7,6 +7,7 @@ import '../core/services/scan_scripts.dart';
 import '../core/services/translator_service.dart';
 import '../core/utils/app_colors.dart';
 import '../core/utils/app_typography.dart';
+import '../core/utils/picker_rows.dart';
 import '../core/utils/spacing.dart';
 import '../l10n/app_localizations.dart';
 import '../widgets/ad_slot.dart';
@@ -121,9 +122,8 @@ class _LanguagePickerScreenState extends State<LanguagePickerScreen> {
     // with the text size so large text isn't clipped (the row needs about
     // 16 + 36 x scale; measured as a 24 px overflow at 200% text).
     final textScale = MediaQuery.textScalerOf(context).scale(16) / 16;
-    final rowExtent = (16 + 46 * textScale) > _kRowExtent
-        ? (16 + 46 * textScale)
-        : _kRowExtent;
+    final rowExtent = pickerRowExtent(context,
+        baseFactor: 46, minimum: _kRowExtent);
     // Section and letter headers also grow (7 px and 3 px overflow at 200%).
     final extra = textScale > 1 ? textScale - 1 : 0.0;
     final labelExtent = _kLabelExtent + 10 * extra;
