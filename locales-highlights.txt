@@ -1,0 +1,2 @@
+EMU LOCALE OVERFLOW ta settings x1.3: A RenderFlex overflowed by 14 pixels on the right. [CupertinoListTile CupertinoListTile:file:///home/runner/work/Peshat/Peshat/lib/screens/settings_screen.dart:399:29 ]
+EMU LOCALE DONE 1 problems
