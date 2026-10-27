@@ -10,7 +10,11 @@ class AdsRemovedBadge extends StatelessWidget {
   Widget build(BuildContext context) {
     final isDark = CupertinoTheme.of(context).brightness == Brightness.dark;
     final l10n = AppLocalizations.of(context)!;
-    return Container(
+    // The badge sits in a row next to the title, so cap its width and let a
+    // long translation wrap (Tamil overflowed by 14 px at 130% text).
+    return ConstrainedBox(
+      constraints: const BoxConstraints(maxWidth: 140),
+      child: Container(
       padding: const EdgeInsets.symmetric(horizontal: Spacing.sm, vertical: Spacing.xs),
       decoration: BoxDecoration(
         color: isDark ? AppColors.accentDark : AppColors.accentLight,
@@ -18,12 +22,13 @@ class AdsRemovedBadge extends StatelessWidget {
       ),
       child: Text(
         l10n.adsRemovedBadge,
+        textAlign: TextAlign.center,
         style: TextStyle(
           color: isDark ? AppColors.onAccentDark : AppColors.onAccentLight,
           fontSize: 12,
           fontWeight: FontWeight.bold,
         ),
       ),
-    );
+    ));
   }
 }
