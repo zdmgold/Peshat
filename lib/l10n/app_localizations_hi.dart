@@ -248,7 +248,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get typeTextButtonLabel => 'टेक्स्ट टाइप करें';
 
   @override
-  String get removeAdsSubtitle => 'एकमुश्त खरीद';
+  String get removeAdsSubtitle => 'एक बार की खरीद';
 
   @override
   String get removeAdsShortLabel => 'हटाएं';

@@ -1,7 +1,7 @@
 {
   "@@locale": "ar",
   "appName": "Peshat",
-  "scanButtonLabel": "مسح مستند",
+  "scanButtonLabel": "مسح ضوئي للمستند",
   "resultTitle": "النتيجة",
   "copyAction": "نسخ",
   "shareAction": "مشاركة",
@@ -22,7 +22,7 @@
   "supportLink": "الدعم",
   "adsRemovedBadge": "تمت إزالة الإعلانات",
   "semanticsAppIcon": "أيقونة تطبيق Peshat",
-  "semanticsScanButton": "زر مسح مستند",
+  "semanticsScanButton": "زر المسح الضوئي للمستند",
   "semanticsSearchField": "ابحث عن اللغات",
   "semanticsRemoveAds": "إزالة الإعلانات",
   "cameraUsageDescription": "يستخدم Peshat الكاميرا لمسح النص وترجمته. تتم معالجة الصور على الجهاز ولا يتم رفعها.",

@@ -134,7 +134,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get sourceLabel => 'Orihinal';
 
   @override
-  String get translationLabel => 'Salin';
+  String get translationLabel => 'Pagsasalin';
 
   @override
   String get retryButton => 'Subukan muli';

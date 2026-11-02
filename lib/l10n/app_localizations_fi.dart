@@ -242,7 +242,7 @@ class AppLocalizationsFi extends AppLocalizations {
   String get historyYesterday => 'Eilen';
 
   @override
-  String get historyOlder => 'Vanhemmat';
+  String get historyOlder => 'Aiemmat';
 
   @override
   String get typeTextButtonLabel => 'Kirjoita teksti';

@@ -12,7 +12,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get appName => 'Peshat';
 
   @override
-  String get scanButtonLabel => 'مسح مستند';
+  String get scanButtonLabel => 'مسح ضوئي للمستند';
 
   @override
   String get resultTitle => 'النتيجة';
@@ -75,7 +75,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get semanticsAppIcon => 'أيقونة تطبيق Peshat';
 
   @override
-  String get semanticsScanButton => 'زر مسح مستند';
+  String get semanticsScanButton => 'زر المسح الضوئي للمستند';
 
   @override
   String get semanticsSearchField => 'ابحث عن اللغات';
