@@ -323,7 +323,7 @@ class AppLocalizationsPt extends AppLocalizations {
   String get notificationPermissionDenied => 'Ative as notificações nas configurações do sistema para receber lembretes.';
 
   @override
-  String get scanShortLabel => 'Escanear';
+  String get scanShortLabel => 'Digitalizar';
 
   @override
   String get recentLabel => 'Recentes';

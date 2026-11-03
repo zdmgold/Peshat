@@ -218,7 +218,7 @@ class AppLocalizationsFa extends AppLocalizations {
   String get scanResultNote => 'متن اسکن‌شده ممکن است اشتباه داشته باشد. برای دقیق‌ترین ترجمه از «تایپ متن» استفاده کنید.';
 
   @override
-  String get translateToLabel => 'ترجم به';
+  String get translateToLabel => 'ترجمه به';
 
   @override
   String get typeTextLabel => 'متن را تایپ یا جای‌گذاری کنید';
@@ -245,10 +245,10 @@ class AppLocalizationsFa extends AppLocalizations {
   String get historyOlder => 'قدیمی‌تر';
 
   @override
-  String get typeTextButtonLabel => 'متن تایپ کنید';
+  String get typeTextButtonLabel => 'تایپ متن';
 
   @override
-  String get removeAdsSubtitle => 'خرید یکبار';
+  String get removeAdsSubtitle => 'خرید یک‌باره';
 
   @override
   String get removeAdsShortLabel => 'حذف';

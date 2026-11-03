@@ -242,7 +242,7 @@ class AppLocalizationsLo extends AppLocalizations {
   String get historyYesterday => 'ມື້ວານ';
 
   @override
-  String get historyOlder => 'ເກົ່າແກ່';
+  String get historyOlder => 'ເກົ່າກວ່າ';
 
   @override
   String get typeTextButtonLabel => 'ພິມຂໍ້ຄວາມ';

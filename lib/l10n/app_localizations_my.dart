@@ -245,7 +245,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get historyOlder => 'ပိုဟောင်း';
 
   @override
-  String get typeTextButtonLabel => 'စာသားရိုက်ထည့်ပါ';
+  String get typeTextButtonLabel => 'စာသားရိုက်ရန်';
 
   @override
   String get removeAdsSubtitle => 'တစ်ကြိမ်တည်းဝယ်ယူမှု';

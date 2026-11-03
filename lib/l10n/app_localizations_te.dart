@@ -191,13 +191,13 @@ class AppLocalizationsTe extends AppLocalizations {
   String get translatedFrom => 'అనువదించిన మూల భాష';
 
   @override
-  String get scanLatinHint => 'అత్యంత ఖచ్చితమైన అనువాదం కోసం “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి. స్కాన్ మరియు ఇంపోర్ట్ స్పష్టమైన లాటిన్ లిపి వచనంతో ఉత్తమంగా పనిచేస్తాయి.';
+  String get scanLatinHint => 'అత్యంత ఖచ్చితమైన అనువాదం కోసం “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి. స్కాన్ మరియు దిగుమతి స్పష్టమైన లాటిన్ లిపి వచనంతో ఉత్తమంగా పనిచేస్తాయి.';
 
   @override
   String get sourceLanguageLabel => 'మూల భాష';
 
   @override
-  String get destinationLanguageLabel => 'గమ్యం భాష';
+  String get destinationLanguageLabel => 'గమ్య భాష';
 
   @override
   String get languageAuto => 'ఆటో';
@@ -362,5 +362,5 @@ class AppLocalizationsTe extends AppLocalizations {
   String get errorPackTooSlow => 'భాషా ప్యాక్‌ను స్వీకరించడానికి చాలా సమయం పడుతోంది. మీ ఇంటర్నెట్ కనెక్షన్ బలహీనంగా ఉండవచ్చు. మళ్లీ ప్రయత్నించండి.';
 
   @override
-  String get errorNoTextHint => 'అత్యంత ఖచ్చితమైన అనువాదం కోసం “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి. స్కాన్ మరియు ఇంపోర్ట్ స్పష్టమైన లాటిన్ లిపి వచనంతో ఉత్తమంగా పనిచేస్తాయి.';
+  String get errorNoTextHint => 'అత్యంత ఖచ్చితమైన అనువాదం కోసం “టెక్స్ట్ టైప్ చేయండి” ఉపయోగించండి. స్కాన్ మరియు దిగుమతి స్పష్టమైన లాటిన్ లిపి వచనంతో ఉత్తమంగా పనిచేస్తాయి.';
 }

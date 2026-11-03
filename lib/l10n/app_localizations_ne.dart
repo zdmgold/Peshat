@@ -66,7 +66,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get privacyPolicyLink => 'गोपनीयता नीति';
 
   @override
-  String get supportLink => 'समर्थन';
+  String get supportLink => 'सहायता';
 
   @override
   String get adsRemovedBadge => 'विज्ञापन हटाइयो';
@@ -191,7 +191,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get translatedFrom => 'यस भाषाबाट अनुवाद गरियो';
 
   @override
-  String get scanLatinHint => 'सबैभन्दा सही अनुवादका लागि “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्। स्क्यान र इम्पोर्टले स्पष्ट ल्याटिन लिपिको पाठसँग उत्तम काम गर्छन्।';
+  String get scanLatinHint => 'सबैभन्दा सही अनुवादका लागि “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्। स्क्यान र आयातले स्पष्ट ल्याटिन लिपिको पाठसँग उत्तम काम गर्छन्।';
 
   @override
   String get sourceLanguageLabel => 'स्रोत भाषा';
@@ -329,7 +329,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get recentLabel => 'हालैका';
 
   @override
-  String get purchaseUnavailable => 'किनमेल अहिले उपलब्ध छैन। कृपया पछि फेरि प्रयास गर्नुहोस्।';
+  String get purchaseUnavailable => 'खरिद अहिले उपलब्ध छैन। कृपया पछि फेरि प्रयास गर्नुहोस्।';
 
   @override
   String get restoreChecking => 'अघिल्ला खरिदहरू जाँच गर्दै…';
@@ -362,5 +362,5 @@ class AppLocalizationsNe extends AppLocalizations {
   String get errorPackTooSlow => 'भाषा प्याक प्राप्त हुन धेरै समय लागिरहेको छ। तपाईंको इन्टरनेट जडान कमजोर हुन सक्छ। फेरि प्रयास गर्नुहोस्।';
 
   @override
-  String get errorNoTextHint => 'सबैभन्दा सही अनुवादका लागि “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्। स्क्यान र इम्पोर्टले स्पष्ट ल्याटिन लिपिको पाठसँग उत्तम काम गर्छन्।';
+  String get errorNoTextHint => 'सबैभन्दा सही अनुवादका लागि “पाठ टाइप गर्नुहोस्” प्रयोग गर्नुहोस्। स्क्यान र आयातले स्पष्ट ल्याटिन लिपिको पाठसँग उत्तम काम गर्छन्।';
 }

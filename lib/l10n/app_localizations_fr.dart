@@ -227,7 +227,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get importFileLabel => 'Importer un fichier';
 
   @override
-  String get recentScansLabel => 'Analyses récentes';
+  String get recentScansLabel => 'Scans récents';
 
   @override
   String get seeAllLabel => 'Voir tout';
@@ -317,7 +317,7 @@ class AppLocalizationsFr extends AppLocalizations {
   String get reminderNotificationTitle => 'Poursuivez vos traductions';
 
   @override
-  String get reminderNotificationBody => 'Reprenez là où vous vous êtes arrêté avec Peshat.';
+  String get reminderNotificationBody => 'Reprenez là où vous en étiez avec Peshat.';
 
   @override
   String get notificationPermissionDenied => 'Activez les notifications dans les réglages système pour recevoir des rappels.';

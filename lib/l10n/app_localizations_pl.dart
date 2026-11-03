@@ -317,7 +317,7 @@ class AppLocalizationsPl extends AppLocalizations {
   String get reminderNotificationTitle => 'Kontynuuj tłumaczenia';
 
   @override
-  String get reminderNotificationBody => 'Wróć do miejsca, w którym skończyłeś w Peshat.';
+  String get reminderNotificationBody => 'Wróć do Peshat i kontynuuj od miejsca, w którym przerwano.';
 
   @override
   String get notificationPermissionDenied => 'Włącz powiadomienia w ustawieniach systemowych, aby otrzymywać przypomnienia.';

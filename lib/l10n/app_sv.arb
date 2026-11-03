@@ -21,7 +21,7 @@
   "privacyPolicyLink": "Integritetspolicy",
   "supportLink": "Support",
   "adsRemovedBadge": "Annonser borttagna",
-  "semanticsAppIcon": "Peshat app-ikon",
+  "semanticsAppIcon": "Peshat-appikon",
   "semanticsScanButton": "Skanna dokument-knapp",
   "semanticsSearchField": "Sök efter språk",
   "semanticsRemoveAds": "Ta bort annonser",
@@ -115,7 +115,7 @@
   "languageAuto": "Automatiskt",
   "languageAutoLatin": "Automatiskt (latinska bokstäver)",
   "pickerCameraReads": "Kameran kan läsa",
-  "pickerTypeOnly": "Endast skriv eller klistra in",
+  "pickerTypeOnly": "Endast skriva eller klistra in",
   "cameraCannotReadLanguage": "Kameran kan inte läsa det här språket. Använd Skriv text i stället.",
   "scanResultNote": "Skannad text kan innehålla fel. Använd Skriv text för den mest exakta översättningen."
 }

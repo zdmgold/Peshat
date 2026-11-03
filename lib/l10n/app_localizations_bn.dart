@@ -191,7 +191,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get translatedFrom => 'যে ভাষা থেকে অনুবাদ';
 
   @override
-  String get scanLatinHint => 'সবচেয়ে নির্ভুল অনুবাদের জন্য “টেক্সট টাইপ করুন” ব্যবহার করুন। স্ক্যান ও ইমপোর্ট স্পষ্ট ল্যাটিন লিপির লেখায় সবচেয়ে ভালো কাজ করে।';
+  String get scanLatinHint => 'সবচেয়ে নির্ভুল অনুবাদের জন্য “টেক্সট টাইপ করুন” ব্যবহার করুন। স্ক্যান ও আমদানি স্পষ্ট ল্যাটিন লিপির লেখায় সবচেয়ে ভালো কাজ করে।';
 
   @override
   String get sourceLanguageLabel => 'উৎস ভাষা';
@@ -362,5 +362,5 @@ class AppLocalizationsBn extends AppLocalizations {
   String get errorPackTooSlow => 'ভাষা প্যাক গ্রহণ করতে অনেক সময় লাগছে। আপনার ইন্টারনেট সংযোগ দুর্বল হতে পারে। আবার চেষ্টা করুন।';
 
   @override
-  String get errorNoTextHint => 'সবচেয়ে নির্ভুল অনুবাদের জন্য “টেক্সট টাইপ করুন” ব্যবহার করুন। স্ক্যান ও ইমপোর্ট স্পষ্ট ল্যাটিন লিপির লেখায় সবচেয়ে ভালো কাজ করে।';
+  String get errorNoTextHint => 'সবচেয়ে নির্ভুল অনুবাদের জন্য “টেক্সট টাইপ করুন” ব্যবহার করুন। স্ক্যান ও আমদানি স্পষ্ট ল্যাটিন লিপির লেখায় সবচেয়ে ভালো কাজ করে।';
 }

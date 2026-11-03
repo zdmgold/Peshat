@@ -87,7 +87,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get cameraUsageDescription => 'Peshat gebruikt de camera om tekst te scannen en te vertalen. Afbeeldingen worden op het apparaat verwerkt en niet geüpload.';
 
   @override
-  String get trackingUsageDescription => 'Wordt gebruikt om relevante, niet-gepersonaliseerde advertenties weer te geven als u weigert; gepersonaliseerde advertenties als u toestemt.';
+  String get trackingUsageDescription => 'Wordt gebruikt om relevante, niet-gepersonaliseerde advertenties weer te geven als je weigert; gepersonaliseerde advertenties als je toestemt.';
 
   @override
   String get nativeAppName => 'Peshat';
@@ -281,7 +281,7 @@ class AppLocalizationsNl extends AppLocalizations {
   String get clearTextConfirm => 'Tekst wissen?';
 
   @override
-  String get historyEmptySubtitle => 'Scans die u vertaalt verschijnen hier.';
+  String get historyEmptySubtitle => 'Scans die je vertaalt verschijnen hier.';
 
   @override
   String get cancelButtonLabel => 'Annuleren';

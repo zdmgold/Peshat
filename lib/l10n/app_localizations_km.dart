@@ -87,7 +87,7 @@ class AppLocalizationsKm extends AppLocalizations {
   String get cameraUsageDescription => 'Peshat ប្រើកាមេរ៉ាដើម្បីស្កេននិងបកប្រែអត្ថបទ។ រូបភាពត្រូវបានដំណើរការនៅលើឧបករណ៍ហើយមិនត្រូវបានផ្ទុកឡើងទេ។';
 
   @override
-  String get trackingUsageDescription => 'ត្រូវបានប្រើដើម្បីបង្ហាញការផ្សាយពាណិជ្ជកម្មដែលមិនបានបុគ្គលិកកម្មដែលពាក់ព័ន្ធប្រសិនបើអ្នកបដិសេធ; ការផ្សាយពាណិជ្ជកម្មដែលបានបុគ្គលិកកម្មប្រសិនបើអ្នកយល់ព្រម។';
+  String get trackingUsageDescription => 'ត្រូវបានប្រើដើម្បីបង្ហាញការផ្សាយពាណិជ្ជកម្មពាក់ព័ន្ធដែលមិនផ្ទាល់ខ្លួន ប្រសិនបើអ្នកបដិសេធ និងការផ្សាយពាណិជ្ជកម្មផ្ទាល់ខ្លួន ប្រសិនបើអ្នកយល់ព្រម។';
 
   @override
   String get nativeAppName => 'Peshat';

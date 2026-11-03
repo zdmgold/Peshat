@@ -245,7 +245,7 @@ class AppLocalizationsZh extends AppLocalizations {
   String get historyOlder => '更早';
 
   @override
-  String get typeTextButtonLabel => '输入文字';
+  String get typeTextButtonLabel => '输入文本';
 
   @override
   String get removeAdsSubtitle => '一次性购买';

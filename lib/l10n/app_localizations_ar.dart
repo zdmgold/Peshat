@@ -245,7 +245,7 @@ class AppLocalizationsAr extends AppLocalizations {
   String get historyOlder => 'أقدم';
 
   @override
-  String get typeTextButtonLabel => 'اكتب نصاً';
+  String get typeTextButtonLabel => 'كتابة نص';
 
   @override
   String get removeAdsSubtitle => 'شراء لمرة واحدة';

@@ -185,13 +185,13 @@ class AppLocalizationsUr extends AppLocalizations {
   String get exportPdfAction => 'PDF کے طور پر ایکسپورٹ کریں';
 
   @override
-  String get translatedTo => 'ترجمہ کیا گیا';
+  String get translatedTo => 'ترجمہ بزبان';
 
   @override
   String get translatedFrom => 'جس زبان سے ترجمہ کیا گیا';
 
   @override
-  String get scanLatinHint => 'سب سے درست ترجمے کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔ اسکین اور امپورٹ واضح لاطینی رسم الخط کے متن کے ساتھ بہترین کام کرتے ہیں۔';
+  String get scanLatinHint => 'سب سے درست ترجمے کے لیے «متن ٹائپ کریں» استعمال کریں۔ اسکین اور درآمد واضح لاطینی رسم الخط کے متن کے ساتھ بہترین کام کرتے ہیں۔';
 
   @override
   String get sourceLanguageLabel => 'ماخذ زبان';
@@ -212,10 +212,10 @@ class AppLocalizationsUr extends AppLocalizations {
   String get pickerTypeOnly => 'صرف ٹائپ یا پیسٹ';
 
   @override
-  String get cameraCannotReadLanguage => 'کیمرا اس زبان کو نہیں پڑھ سکتا۔ اس کے بجائے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔';
+  String get cameraCannotReadLanguage => 'کیمرا اس زبان کو نہیں پڑھ سکتا۔ اس کے بجائے «متن ٹائپ کریں» استعمال کریں۔';
 
   @override
-  String get scanResultNote => 'اسکین شدہ متن میں غلطیاں ہو سکتی ہیں۔ سب سے درست ترجمے کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔';
+  String get scanResultNote => 'اسکین شدہ متن میں غلطیاں ہو سکتی ہیں۔ سب سے درست ترجمے کے لیے «متن ٹائپ کریں» استعمال کریں۔';
 
   @override
   String get translateToLabel => 'پر ترجمہ کریں';
@@ -362,5 +362,5 @@ class AppLocalizationsUr extends AppLocalizations {
   String get errorPackTooSlow => 'زبان کا پیک موصول ہونے میں بہت وقت لگ رہا ہے۔ ہو سکتا ہے آپ کا انٹرنیٹ کنکشن کمزور ہو۔ دوبارہ کوشش کریں۔';
 
   @override
-  String get errorNoTextHint => 'سب سے درست ترجمے کے لیے «ٹیکسٹ ٹائپ کریں» استعمال کریں۔ اسکین اور امپورٹ واضح لاطینی رسم الخط کے متن کے ساتھ بہترین کام کرتے ہیں۔';
+  String get errorNoTextHint => 'سب سے درست ترجمے کے لیے «متن ٹائپ کریں» استعمال کریں۔ اسکین اور درآمد واضح لاطینی رسم الخط کے متن کے ساتھ بہترین کام کرتے ہیں۔';
 }

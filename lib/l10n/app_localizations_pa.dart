@@ -87,7 +87,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get cameraUsageDescription => 'Peshat ਪਾਠ ਨੂੰ ਸਕੈਨ ਅਤੇ ਅਨੁਵਾਦ ਕਰਨ ਲਈ ਕੈਮਰੇ ਦੀ ਵਰਤੋਂ ਕਰਦਾ ਹੈ। ਚਿੱਤਰ ਡਿਵਾਈਸ \'ਤੇ ਪ੍ਰੋਸੈਸ ਕੀਤੇ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅੱਪਲੋਡ ਨਹੀਂ ਕੀਤੇ ਜਾਂਦੇ।';
 
   @override
-  String get trackingUsageDescription => 'ਜੇਕਰ ਤੁਸੀਂ ਇਨਕਾਰ ਕਰਦੇ ਹੋ ਤਾਂ ਸੰਬੰਧਿਤ ਗੈਰ-ਨਿੱਜੀਕਰਨ ਵਿਗਿਆਪਨ ਦਿਖਾਉਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ; ਜੇਕਰ ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਤਾਂ ਨਿੱਜੀਕਰਨ ਵਿਗਿਆਪਨ।';
+  String get trackingUsageDescription => 'ਜੇਕਰ ਤੁਸੀਂ ਇਨਕਾਰ ਕਰਦੇ ਹੋ ਤਾਂ ਸੰਬੰਧਿਤ ਗੈਰ-ਵਿਅਕਤੀਗਤ ਵਿਗਿਆਪਨ ਦਿਖਾਉਣ ਲਈ ਵਰਤਿਆ ਜਾਂਦਾ ਹੈ; ਜੇਕਰ ਤੁਸੀਂ ਸਹਿਮਤ ਹੋ ਤਾਂ ਵਿਅਕਤੀਗਤ ਵਿਗਿਆਪਨ।';
 
   @override
   String get nativeAppName => 'Peshat';
@@ -191,7 +191,7 @@ class AppLocalizationsPa extends AppLocalizations {
   String get translatedFrom => 'ਇਸ ਤੋਂ ਅਨੁਵਾਦ ਕੀਤਾ ਗਿਆ';
 
   @override
-  String get scanLatinHint => 'ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ। ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਸਾਫ਼ ਲੈਟਿਨ ਲਿਪੀ ਦੇ ਪਾਠ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦੇ ਹਨ।';
+  String get scanLatinHint => 'ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ। ਸਕੈਨ ਅਤੇ ਆਯਾਤ ਸਾਫ਼ ਲੈਟਿਨ ਲਿਪੀ ਦੇ ਪਾਠ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦੇ ਹਨ।';
 
   @override
   String get sourceLanguageLabel => 'ਸਰੋਤ ਭਾਸ਼ਾ';
@@ -362,5 +362,5 @@ class AppLocalizationsPa extends AppLocalizations {
   String get errorPackTooSlow => 'ਭਾਸ਼ਾ ਪੈਕ ਪ੍ਰਾਪਤ ਹੋਣ ਵਿੱਚ ਬਹੁਤ ਸਮਾਂ ਲੱਗ ਰਿਹਾ ਹੈ। ਤੁਹਾਡਾ ਇੰਟਰਨੈੱਟ ਕਨੈਕਸ਼ਨ ਕਮਜ਼ੋਰ ਹੋ ਸਕਦਾ ਹੈ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।';
 
   @override
-  String get errorNoTextHint => 'ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ। ਸਕੈਨ ਅਤੇ ਇੰਪੋਰਟ ਸਾਫ਼ ਲੈਟਿਨ ਲਿਪੀ ਦੇ ਪਾਠ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦੇ ਹਨ।';
+  String get errorNoTextHint => 'ਸਭ ਤੋਂ ਸਹੀ ਅਨੁਵਾਦ ਲਈ “ਟੈਕਸਟ ਟਾਈਪ ਕਰੋ” ਵਰਤੋ। ਸਕੈਨ ਅਤੇ ਆਯਾਤ ਸਾਫ਼ ਲੈਟਿਨ ਲਿਪੀ ਦੇ ਪਾਠ ਨਾਲ ਸਭ ਤੋਂ ਵਧੀਆ ਕੰਮ ਕਰਦੇ ਹਨ।';
 }

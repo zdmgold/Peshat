@@ -60,7 +60,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get removeAdsButton => 'දැන්වීම් ඉවත් කරන්න';
 
   @override
-  String get restorePurchaseButton => 'මිලදී ගැනීම ප්‍රතිස්ථාපනය කරන්න';
+  String get restorePurchaseButton => 'මිලදී ගැනීම ප්‍රතිසාධනය කරන්න';
 
   @override
   String get privacyPolicyLink => 'පෞද්ගලිකත්ව ප්‍රතිපත්තිය';
@@ -185,10 +185,10 @@ class AppLocalizationsSi extends AppLocalizations {
   String get exportPdfAction => 'PDF ලෙස අපනයනය කරන්න';
 
   @override
-  String get translatedTo => 'පරිවර්තනය කරන ලදී';
+  String get translatedTo => 'පරිවර්තනය කළ භාෂාව';
 
   @override
-  String get translatedFrom => 'පරිවර්තනය කළ භාෂාව';
+  String get translatedFrom => 'මුල් භාෂාව';
 
   @override
   String get scanLatinHint => 'වඩාත්ම නිවැරදි පරිවර්තනය සඳහා “පෙළ ටයිප් කරන්න” භාවිත කරන්න. ස්කෑන් සහ ආනයනය හොඳම ක්‍රියා කරන්නේ පැහැදිලි ලතින් අක්ෂර පෙළ සමඟයි.';
@@ -353,7 +353,7 @@ class AppLocalizationsSi extends AppLocalizations {
   String get packReceivingTitle => 'භාෂා පැකේජය ලැබෙමින්…';
 
   @override
-  String get packReceivedTitle => 'පැකේජය ලැබුණා';
+  String get packReceivedTitle => 'පැකේජය ලැබුණි';
 
   @override
   String get errorOfflinePackNeeded => 'අන්තර්ජාල සම්බන්ධතාවයක් නැත. මෙම භාෂාවට එක් වරක් ලබාගත යුතු පැකේජයක් අවශ්‍යයි. අන්තර්ජාලයට සම්බන්ධ වී නැවත උත්සාහ කරන්න.';

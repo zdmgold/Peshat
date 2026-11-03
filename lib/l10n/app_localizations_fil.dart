@@ -191,7 +191,7 @@ class AppLocalizationsFil extends AppLocalizations {
   String get translatedFrom => 'Isinalin mula sa';
 
   @override
-  String get scanLatinHint => 'Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.';
+  String get scanLatinHint => 'Para sa pinakatumpak na pagsasalin, gamitin ang Mag-type ng teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.';
 
   @override
   String get sourceLanguageLabel => 'Wikang pinagmulan';
@@ -212,10 +212,10 @@ class AppLocalizationsFil extends AppLocalizations {
   String get pickerTypeOnly => 'I-type o i-paste lang';
 
   @override
-  String get cameraCannotReadLanguage => 'Hindi mababasa ng camera ang wikang ito. Gamitin na lang ang I-type ang teksto.';
+  String get cameraCannotReadLanguage => 'Hindi mababasa ng camera ang wikang ito. Gamitin na lang ang Mag-type ng teksto.';
 
   @override
-  String get scanResultNote => 'Maaaring may mali ang na-scan na teksto. Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto.';
+  String get scanResultNote => 'Maaaring may mali ang na-scan na teksto. Para sa pinakatumpak na pagsasalin, gamitin ang Mag-type ng teksto.';
 
   @override
   String get translateToLabel => 'Isalin sa';
@@ -362,5 +362,5 @@ class AppLocalizationsFil extends AppLocalizations {
   String get errorPackTooSlow => 'Masyadong matagal ang pagtanggap ng language pack. Maaaring mahina ang iyong koneksyon sa internet. Subukan muli.';
 
   @override
-  String get errorNoTextHint => 'Para sa pinakatumpak na pagsasalin, gamitin ang I-type ang teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.';
+  String get errorNoTextHint => 'Para sa pinakatumpak na pagsasalin, gamitin ang Mag-type ng teksto. Pinakamahusay gumana ang Scan at Import sa malinaw na teksto sa Latin na script.';
 }

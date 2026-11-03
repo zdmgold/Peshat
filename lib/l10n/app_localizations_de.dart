@@ -72,10 +72,10 @@ class AppLocalizationsDe extends AppLocalizations {
   String get adsRemovedBadge => 'Werbung entfernt';
 
   @override
-  String get semanticsAppIcon => 'Peshat App-Symbol';
+  String get semanticsAppIcon => 'Peshat-App-Symbol';
 
   @override
-  String get semanticsScanButton => 'Dokument scannen Schaltfläche';
+  String get semanticsScanButton => 'Schaltfläche „Dokument scannen“';
 
   @override
   String get semanticsSearchField => 'Sprachen suchen';
@@ -87,7 +87,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get cameraUsageDescription => 'Peshat verwendet die Kamera, um Text zu scannen und zu übersetzen. Bilder werden auf dem Gerät verarbeitet und nicht hochgeladen.';
 
   @override
-  String get trackingUsageDescription => 'Wird verwendet, um relevante, nicht personalisierte Anzeigen anzuzeigen, wenn Sie ablehnen; personalisierte Anzeigen, wenn Sie zustimmen.';
+  String get trackingUsageDescription => 'Wird verwendet, um relevante, nicht personalisierte Anzeigen anzuzeigen, wenn du ablehnst; personalisierte Anzeigen, wenn du zustimmst.';
 
   @override
   String get nativeAppName => 'Peshat';
@@ -128,7 +128,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get statusPreparingModel => 'Übersetzung wird vorbereitet…';
 
   @override
-  String get statusTranslating => 'Übersetze…';
+  String get statusTranslating => 'Wird übersetzt…';
 
   @override
   String get sourceLabel => 'Original';
@@ -269,7 +269,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get allLanguagesLabel => 'Alle Sprachen';
 
   @override
-  String get noResultsSubtitle => 'Versuchen Sie eine andere Schreibweise.';
+  String get noResultsSubtitle => 'Versuche eine andere Schreibweise.';
 
   @override
   String get sectionSystemLabel => 'System';
@@ -281,7 +281,7 @@ class AppLocalizationsDe extends AppLocalizations {
   String get clearTextConfirm => 'Text löschen?';
 
   @override
-  String get historyEmptySubtitle => 'Von Ihnen übersetzte Scans erscheinen hier.';
+  String get historyEmptySubtitle => 'Von dir übersetzte Scans erscheinen hier.';
 
   @override
   String get cancelButtonLabel => 'Abbrechen';
@@ -311,16 +311,16 @@ class AppLocalizationsDe extends AppLocalizations {
   String get reminderNotificationsLabel => 'Erinnerungen';
 
   @override
-  String get reminderNotificationsSubtitle => 'Erhalten Sie eine Erinnerung, wenn Sie Peshat einige Tage nicht verwendet haben.';
+  String get reminderNotificationsSubtitle => 'Erhalte eine Erinnerung, wenn du Peshat einige Tage nicht verwendet hast.';
 
   @override
-  String get reminderNotificationTitle => 'Setzen Sie Ihre Übersetzungen fort';
+  String get reminderNotificationTitle => 'Setze deine Übersetzungen fort';
 
   @override
-  String get reminderNotificationBody => 'Machen Sie dort weiter, wo Sie bei Peshat aufgehört haben.';
+  String get reminderNotificationBody => 'Mach dort weiter, wo du bei Peshat aufgehört hast.';
 
   @override
-  String get notificationPermissionDenied => 'Aktivieren Sie Benachrichtigungen in den Systemeinstellungen, um Erinnerungen zu erhalten.';
+  String get notificationPermissionDenied => 'Aktiviere Benachrichtigungen in den Systemeinstellungen, um Erinnerungen zu erhalten.';
 
   @override
   String get scanShortLabel => 'Scannen';

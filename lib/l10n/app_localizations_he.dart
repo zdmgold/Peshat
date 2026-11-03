@@ -185,10 +185,10 @@ class AppLocalizationsHe extends AppLocalizations {
   String get exportPdfAction => 'ייצוא כ-PDF';
 
   @override
-  String get translatedTo => 'תורגם ל';
+  String get translatedTo => 'תורגם לשפה';
 
   @override
-  String get translatedFrom => 'תורגם מ';
+  String get translatedFrom => 'תורגם משפה';
 
   @override
   String get scanLatinHint => 'לתרגום המדויק ביותר השתמשו ב״הקלדת טקסט״. סריקה וייבוא עובדים הכי טוב עם טקסט ברור באותיות לטיניות.';
@@ -218,7 +218,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get scanResultNote => 'טקסט שנסרק עלול להכיל טעויות. לתרגום המדויק ביותר השתמשו ב״הקלדת טקסט״.';
 
   @override
-  String get translateToLabel => 'תרגם ל';
+  String get translateToLabel => 'תרגם לשפה';
 
   @override
   String get typeTextLabel => 'הקלד או הדבק טקסט';
@@ -245,7 +245,7 @@ class AppLocalizationsHe extends AppLocalizations {
   String get historyOlder => 'ישן יותר';
 
   @override
-  String get typeTextButtonLabel => 'הקלד טקסט';
+  String get typeTextButtonLabel => 'הקלדת טקסט';
 
   @override
   String get removeAdsSubtitle => 'רכישה חד-פעמית';

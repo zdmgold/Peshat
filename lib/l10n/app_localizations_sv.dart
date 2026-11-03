@@ -72,7 +72,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get adsRemovedBadge => 'Annonser borttagna';
 
   @override
-  String get semanticsAppIcon => 'Peshat app-ikon';
+  String get semanticsAppIcon => 'Peshat-appikon';
 
   @override
   String get semanticsScanButton => 'Skanna dokument-knapp';
@@ -209,7 +209,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get pickerCameraReads => 'Kameran kan läsa';
 
   @override
-  String get pickerTypeOnly => 'Endast skriv eller klistra in';
+  String get pickerTypeOnly => 'Endast skriva eller klistra in';
 
   @override
   String get cameraCannotReadLanguage => 'Kameran kan inte läsa det här språket. Använd Skriv text i stället.';

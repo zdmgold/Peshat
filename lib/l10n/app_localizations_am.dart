@@ -27,7 +27,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get saveAction => 'አስቀምጥ';
 
   @override
-  String get readyToScan => 'ለመቅረጽ ዝግጁ';
+  String get readyToScan => 'ለመቃኘት ዝግጁ';
 
   @override
   String get selectLanguageTitle => 'ቋንቋ ይምረጡ';
@@ -75,7 +75,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get semanticsAppIcon => 'የPeshat መተግበሪያ አዶ';
 
   @override
-  String get semanticsScanButton => 'ሰነድ የመቅረጽ ቁልፍ';
+  String get semanticsScanButton => 'ሰነድ የመቃኘት ቁልፍ';
 
   @override
   String get semanticsSearchField => 'ቋንቋዎችን ይፈልጉ';
@@ -84,10 +84,10 @@ class AppLocalizationsAm extends AppLocalizations {
   String get semanticsRemoveAds => 'ማስታወቂያዎችን አስወግድ';
 
   @override
-  String get cameraUsageDescription => 'Peshat ጽሑፍን ለመቅረጽ እና ለመተርጎም ካሜራን ይጠቀማል። ምስሎች በመሳሪያው ላይ ይሰራሉ እና አይሰቀሉም።';
+  String get cameraUsageDescription => 'Peshat ጽሑፍን ለመቃኘት እና ለመተርጎም ካሜራን ይጠቀማል። ምስሎች በመሳሪያው ላይ ይሰራሉ እና አይሰቀሉም።';
 
   @override
-  String get trackingUsageDescription => 'ካልተስማሙ ተገቢ ያልሆኑ ያልተለዩ ማስታወቂያዎችን ለማሳየት ያገለግላል፤ ከተስማሙ የተለዩ ማስታወቂያዎችን።';
+  String get trackingUsageDescription => 'ካልተስማሙ ተዛማጅ ግላዊ ያልሆኑ ማስታወቂያዎችን፣ ከተስማሙ ግላዊ የተደረጉ ማስታወቂያዎችን ለማሳየት ያገለግላል።';
 
   @override
   String get nativeAppName => 'Peshat';
@@ -185,7 +185,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get exportPdfAction => 'እንደ PDF ወደ ውጭ ላክ';
 
   @override
-  String get translatedTo => 'ወደ ተተርጉሟል';
+  String get translatedTo => 'የተተረጎመው ወደ';
 
   @override
   String get translatedFrom => 'የተተረጎመው ከ';
@@ -218,7 +218,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get scanResultNote => 'የተቃኘ ጽሑፍ ስህተቶችን ሊይዝ ይችላል። ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ።';
 
   @override
-  String get translateToLabel => 'ወደ ተርጉም';
+  String get translateToLabel => 'ተርጉም ወደ';
 
   @override
   String get typeTextLabel => 'ጽሑፍ ይተይቡ ወይም ይለጥፉ';
@@ -311,13 +311,13 @@ class AppLocalizationsAm extends AppLocalizations {
   String get reminderNotificationsLabel => 'አስታዋሾች';
 
   @override
-  String get reminderNotificationsSubtitle => 'ፔሻትን ለተወሰነ ቀናት ካልተጠቀሙ አስታዋሽ ይደርስዎታል።';
+  String get reminderNotificationsSubtitle => 'ፔሻትን ለጥቂት ቀናት ካልተጠቀሙ አስታዋሽ ይደርስዎታል።';
 
   @override
   String get reminderNotificationTitle => 'ትርጉሞችዎን ይቀጥሉ';
 
   @override
-  String get reminderNotificationBody => 'ፔሻት የቆሙበትን ቦታ ይቀጥሉ።';
+  String get reminderNotificationBody => 'በፔሻት ያቆሙበት ቦታ ይቀጥሉ።';
 
   @override
   String get notificationPermissionDenied => 'አስታዋሾችን ለመቀበል ማሳወቂያዎችን በስርዓት ቅንብሮች ያንቁ።';
@@ -359,7 +359,7 @@ class AppLocalizationsAm extends AppLocalizations {
   String get errorOfflinePackNeeded => 'የበይነመረብ ግንኙነት የለም። ይህ ቋንቋ አንድ ጊዜ የሚቀበሉት ጥቅል ያስፈልገዋል። ከበይነመረብ ጋር ተገናኝተው እንደገና ይሞክሩ።';
 
   @override
-  String get errorPackTooSlow => 'የቋንቋ ጥቅሉ ለመድረስ ከመጠን በላይ እየወሰደ ነው። የበይነመረብ ግንኙነትዎ ደካማ ሊሆን ይችላል። እንደገና ይሞክሩ።';
+  String get errorPackTooSlow => 'የቋንቋ ጥቅሉን ለመቀበል ከመጠን በላይ እየወሰደ ነው። የበይነመረብ ግንኙነትዎ ደካማ ሊሆን ይችላል። እንደገና ይሞክሩ።';
 
   @override
   String get errorNoTextHint => 'ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ። ስካን እና ማስመጣት በግልጽ የላቲን ፊደል ጽሑፍ ላይ በተሻለ ይሰራሉ።';

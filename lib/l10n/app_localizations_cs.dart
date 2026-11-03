@@ -191,7 +191,7 @@ class AppLocalizationsCs extends AppLocalizations {
   String get translatedFrom => 'Přeloženo z';
 
   @override
-  String get scanLatinHint => 'Pro nejpřesnější překlad použijte Napsat text. Skenování a import fungují nejlépe s čitelným textem v latince.';
+  String get scanLatinHint => 'Pro nejpřesnější překlad použijte Zadat text. Skenování a import fungují nejlépe s čitelným textem v latince.';
 
   @override
   String get sourceLanguageLabel => 'Zdrojový jazyk';
@@ -212,10 +212,10 @@ class AppLocalizationsCs extends AppLocalizations {
   String get pickerTypeOnly => 'Pouze psát nebo vložit';
 
   @override
-  String get cameraCannotReadLanguage => 'Fotoaparát tento jazyk přečíst neumí. Použijte Napsat text.';
+  String get cameraCannotReadLanguage => 'Fotoaparát tento jazyk přečíst neumí. Použijte Zadat text.';
 
   @override
-  String get scanResultNote => 'Naskenovaný text může obsahovat chyby. Pro nejpřesnější překlad použijte Napsat text.';
+  String get scanResultNote => 'Naskenovaný text může obsahovat chyby. Pro nejpřesnější překlad použijte Zadat text.';
 
   @override
   String get translateToLabel => 'Přeložit do';
@@ -362,5 +362,5 @@ class AppLocalizationsCs extends AppLocalizations {
   String get errorPackTooSlow => 'Přijetí jazykového balíčku trvá příliš dlouho. Vaše připojení k internetu může být slabé. Zkuste to znovu.';
 
   @override
-  String get errorNoTextHint => 'Pro nejpřesnější překlad použijte Napsat text. Skenování a import fungují nejlépe s čitelným textem v latince.';
+  String get errorNoTextHint => 'Pro nejpřesnější překlad použijte Zadat text. Skenování a import fungují nejlépe s čitelným textem v latince.';
 }

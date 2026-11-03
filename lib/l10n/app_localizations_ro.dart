@@ -191,7 +191,7 @@ class AppLocalizationsRo extends AppLocalizations {
   String get translatedFrom => 'Tradus din';
 
   @override
-  String get scanLatinHint => 'Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.';
+  String get scanLatinHint => 'Pentru cea mai precisă traducere, folosiți Introduceți text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.';
 
   @override
   String get sourceLanguageLabel => 'Limba sursă';
@@ -212,10 +212,10 @@ class AppLocalizationsRo extends AppLocalizations {
   String get pickerTypeOnly => 'Doar tastare sau lipire';
 
   @override
-  String get cameraCannotReadLanguage => 'Camera nu poate citi această limbă. Folosiți Introdu text.';
+  String get cameraCannotReadLanguage => 'Camera nu poate citi această limbă. Folosiți Introduceți text.';
 
   @override
-  String get scanResultNote => 'Textul scanat poate conține greșeli. Pentru cea mai precisă traducere, folosiți Introdu text.';
+  String get scanResultNote => 'Textul scanat poate conține greșeli. Pentru cea mai precisă traducere, folosiți Introduceți text.';
 
   @override
   String get translateToLabel => 'Tradu în';
@@ -362,5 +362,5 @@ class AppLocalizationsRo extends AppLocalizations {
   String get errorPackTooSlow => 'Primirea pachetului de limbă durează prea mult. Conexiunea la internet poate fi slabă. Încercați din nou.';
 
   @override
-  String get errorNoTextHint => 'Pentru cea mai precisă traducere, folosiți Introdu text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.';
+  String get errorNoTextHint => 'Pentru cea mai precisă traducere, folosiți Introduceți text. Scanarea și importul funcționează cel mai bine cu text clar în alfabet latin.';
 }

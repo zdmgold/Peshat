@@ -191,7 +191,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get translatedFrom => 'Đã dịch từ';
 
   @override
-  String get scanLatinHint => 'Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.';
+  String get scanLatinHint => 'Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập tệp hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.';
 
   @override
   String get sourceLanguageLabel => 'Ngôn ngữ nguồn';
@@ -356,11 +356,11 @@ class AppLocalizationsVi extends AppLocalizations {
   String get packReceivedTitle => 'Đã nhận gói';
 
   @override
-  String get errorOfflinePackNeeded => 'Không có kết nối internet. Ngôn ngữ này cần nhận một gói duy nhất một lần. Hãy kết nối internet và thử lại.';
+  String get errorOfflinePackNeeded => 'Không có kết nối internet. Ngôn ngữ này cần nhận một gói, chỉ một lần. Hãy kết nối internet và thử lại.';
 
   @override
   String get errorPackTooSlow => 'Việc nhận gói ngôn ngữ mất quá nhiều thời gian. Kết nối internet của bạn có thể yếu. Hãy thử lại.';
 
   @override
-  String get errorNoTextHint => 'Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.';
+  String get errorNoTextHint => 'Để dịch chính xác nhất, hãy dùng Nhập văn bản. Quét và Nhập tệp hoạt động tốt nhất với văn bản chữ Latinh rõ ràng.';
 }

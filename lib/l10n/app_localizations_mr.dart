@@ -191,7 +191,7 @@ class AppLocalizationsMr extends AppLocalizations {
   String get translatedFrom => 'यामधून भाषांतरित';
 
   @override
-  String get scanLatinHint => 'सर्वात अचूक भाषांतरासाठी “मजकूर टाइप करा” वापरा. स्कॅन आणि इम्पोर्ट स्पष्ट लॅटिन लिपीतील मजकुरासह सर्वोत्तम काम करतात.';
+  String get scanLatinHint => 'सर्वात अचूक भाषांतरासाठी “मजकूर टाइप करा” वापरा. स्कॅन आणि आयात स्पष्ट लॅटिन लिपीतील मजकुरासह सर्वोत्तम काम करतात.';
 
   @override
   String get sourceLanguageLabel => 'स्रोत भाषा';
@@ -362,5 +362,5 @@ class AppLocalizationsMr extends AppLocalizations {
   String get errorPackTooSlow => 'भाषा पॅक मिळण्यास खूप वेळ लागत आहे. तुमचे इंटरनेट कनेक्शन कमकुवत असू शकते. पुन्हा प्रयत्न करा.';
 
   @override
-  String get errorNoTextHint => 'सर्वात अचूक भाषांतरासाठी “मजकूर टाइप करा” वापरा. स्कॅन आणि इम्पोर्ट स्पष्ट लॅटिन लिपीतील मजकुरासह सर्वोत्तम काम करतात.';
+  String get errorNoTextHint => 'सर्वात अचूक भाषांतरासाठी “मजकूर टाइप करा” वापरा. स्कॅन आणि आयात स्पष्ट लॅटिन लिपीतील मजकुरासह सर्वोत्तम काम करतात.';
 }

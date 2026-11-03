@@ -245,7 +245,7 @@ class AppLocalizationsBg extends AppLocalizations {
   String get historyOlder => 'По-стари';
 
   @override
-  String get typeTextButtonLabel => 'Въвеждане на текст';
+  String get typeTextButtonLabel => 'Въведи текст';
 
   @override
   String get removeAdsSubtitle => 'Еднократна покупка';
