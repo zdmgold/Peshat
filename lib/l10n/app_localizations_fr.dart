@@ -206,13 +206,13 @@ class AppLocalizationsFr extends AppLocalizations {
   String get languageAutoLatin => 'Auto (écriture latine)';
 
   @override
-  String get pickerCameraReads => 'La caméra peut lire';
+  String get pickerCameraReads => 'L\'appareil photo peut lire';
 
   @override
   String get pickerTypeOnly => 'Saisie ou collage uniquement';
 
   @override
-  String get cameraCannotReadLanguage => 'La caméra ne peut pas lire cette langue. Utilisez Saisir du texte.';
+  String get cameraCannotReadLanguage => 'L\'appareil photo ne peut pas lire cette langue. Utilisez Saisir du texte.';
 
   @override
   String get scanResultNote => 'Le texte scanné peut contenir des erreurs. Pour la traduction la plus précise, utilisez Saisir du texte.';

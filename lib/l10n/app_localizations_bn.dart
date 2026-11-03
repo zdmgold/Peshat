@@ -185,7 +185,7 @@ class AppLocalizationsBn extends AppLocalizations {
   String get exportPdfAction => 'PDF হিসেবে রপ্তানি করুন';
 
   @override
-  String get translatedTo => 'অনুবাদ করা হয়েছে';
+  String get translatedTo => 'যে ভাষায় অনুবাদ';
 
   @override
   String get translatedFrom => 'যে ভাষা থেকে অনুবাদ';

@@ -59,7 +59,7 @@
   "exportTxtAction": "متن کے طور پر ایکسپورٹ کریں",
   "exportPdfAction": "PDF کے طور پر ایکسپورٹ کریں",
   "translatedTo": "ترجمہ بزبان",
-  "translateToLabel": "پر ترجمہ کریں",
+  "translateToLabel": "میں ترجمہ کریں",
   "typeTextLabel": "متن ٹائپ یا پیسٹ کریں",
   "importFileLabel": "فائل درآمد کریں",
   "recentScansLabel": "حالیہ اسکین",
@@ -114,8 +114,8 @@
   "destinationLanguageLabel": "منزل کی زبان",
   "languageAuto": "خودکار",
   "languageAutoLatin": "خودکار (لاطینی رسم الخط)",
-  "pickerCameraReads": "کیمرا پڑھ سکتا ہے",
+  "pickerCameraReads": "کیمرہ پڑھ سکتا ہے",
   "pickerTypeOnly": "صرف ٹائپ یا پیسٹ",
-  "cameraCannotReadLanguage": "کیمرا اس زبان کو نہیں پڑھ سکتا۔ اس کے بجائے «متن ٹائپ کریں» استعمال کریں۔",
+  "cameraCannotReadLanguage": "کیمرہ اس زبان کو نہیں پڑھ سکتا۔ اس کے بجائے «متن ٹائپ کریں» استعمال کریں۔",
   "scanResultNote": "اسکین شدہ متن میں غلطیاں ہو سکتی ہیں۔ سب سے درست ترجمے کے لیے «متن ٹائپ کریں» استعمال کریں۔"
 }

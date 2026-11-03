@@ -146,7 +146,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get historyLabel => 'မှတ်တမ်း';
 
   @override
-  String get defaultLanguageLabel => 'မူရင်း ဘာသာပြန်ဘာသာစကား';
+  String get defaultLanguageLabel => 'ပုံမှန် ဘာသာပြန်ဘာသာစကား';
 
   @override
   String get aboutLabel => 'အကြောင်း';
@@ -296,7 +296,7 @@ class AppLocalizationsMy extends AppLocalizations {
   String get showMenuTooltip => 'မီနူးပြ';
 
   @override
-  String get licensePackageLabel => 'အစုအဝေး';
+  String get licensePackageLabel => 'ပက်ကေ့ချ်';
 
   @override
   String get licenseEmptyLabel => 'လိုင်စင်အချက်အလက် မရနိုင်ပါ။';

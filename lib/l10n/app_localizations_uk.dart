@@ -72,7 +72,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get adsRemovedBadge => 'Рекламу вимкнено';
 
   @override
-  String get semanticsAppIcon => 'Значок додатку Peshat';
+  String get semanticsAppIcon => 'Значок застосунку Peshat';
 
   @override
   String get semanticsScanButton => 'Кнопка сканування документа';
@@ -197,7 +197,7 @@ class AppLocalizationsUk extends AppLocalizations {
   String get sourceLanguageLabel => 'Мова оригіналу';
 
   @override
-  String get destinationLanguageLabel => 'Мова перекладу';
+  String get destinationLanguageLabel => 'Цільова мова';
 
   @override
   String get languageAuto => 'Авто';

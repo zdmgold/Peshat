@@ -248,7 +248,7 @@ class AppLocalizationsIt extends AppLocalizations {
   String get typeTextButtonLabel => 'Digita testo';
 
   @override
-  String get removeAdsSubtitle => 'Acquisto singolo';
+  String get removeAdsSubtitle => 'Acquisto una tantum';
 
   @override
   String get removeAdsShortLabel => 'Rimuovi';

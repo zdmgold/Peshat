@@ -107,15 +107,15 @@
   "packReceivedTitle": "Paquet rebut",
   "errorOfflinePackNeeded": "No hi ha connexió a internet. Aquest idioma necessita rebre un paquet una sola vegada. Connecta't a internet i torna-ho a provar.",
   "errorPackTooSlow": "El paquet d'idioma triga massa a rebre's. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.",
-  "errorNoTextHint": "Per a la traducció més precisa, feu servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí.",
+  "errorNoTextHint": "Per a la traducció més precisa, fes servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí.",
   "translatedFrom": "Traduït des de",
-  "scanLatinHint": "Per a la traducció més precisa, feu servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí.",
-  "sourceLanguageLabel": "Llengua d'origen",
-  "destinationLanguageLabel": "Llengua de destinació",
+  "scanLatinHint": "Per a la traducció més precisa, fes servir Escriu text. L'escaneig i la importació funcionen millor amb text clar en alfabet llatí.",
+  "sourceLanguageLabel": "Idioma d'origen",
+  "destinationLanguageLabel": "Idioma de destinació",
   "languageAuto": "Automàtic",
   "languageAutoLatin": "Automàtic (alfabet llatí)",
   "pickerCameraReads": "La càmera pot llegir",
   "pickerTypeOnly": "Només escriure o enganxar",
-  "cameraCannotReadLanguage": "La càmera no pot llegir aquesta llengua. Feu servir Escriu text.",
-  "scanResultNote": "El text escanejat pot contenir errors. Per a la traducció més precisa, feu servir Escriu text."
+  "cameraCannotReadLanguage": "La càmera no pot llegir aquest idioma. Fes servir Escriu text.",
+  "scanResultNote": "El text escanejat pot contenir errors. Per a la traducció més precisa, fes servir Escriu text."
 }

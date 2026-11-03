@@ -75,7 +75,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get semanticsAppIcon => 'Peshat-appikon';
 
   @override
-  String get semanticsScanButton => 'Skanna dokument-knapp';
+  String get semanticsScanButton => 'Knappen Skanna dokument';
 
   @override
   String get semanticsSearchField => 'Sök efter språk';
@@ -87,7 +87,7 @@ class AppLocalizationsSv extends AppLocalizations {
   String get cameraUsageDescription => 'Peshat använder kameran för att skanna och översätta text. Bilder bearbetas på enheten och laddas inte upp.';
 
   @override
-  String get trackingUsageDescription => 'Används för att visa relevanta, icke-personaliserade annonser om du avböjer; personliga annonser om du godkänner.';
+  String get trackingUsageDescription => 'Används för att visa relevanta, icke-personaliserade annonser om du avböjer; personaliserade annonser om du godkänner.';
 
   @override
   String get nativeAppName => 'Peshat';

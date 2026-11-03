@@ -185,13 +185,13 @@ class AppLocalizationsHu extends AppLocalizations {
   String get exportPdfAction => 'Exportálás PDF-ként';
 
   @override
-  String get translatedTo => 'Lefordítva';
+  String get translatedTo => 'Lefordítva erre';
 
   @override
-  String get translatedFrom => 'Forrásnyelv';
+  String get translatedFrom => 'Lefordítva ebből';
 
   @override
-  String get scanLatinHint => 'A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.';
+  String get scanLatinHint => 'A legpontosabb fordításhoz használja a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.';
 
   @override
   String get sourceLanguageLabel => 'Forrásnyelv';
@@ -212,10 +212,10 @@ class AppLocalizationsHu extends AppLocalizations {
   String get pickerTypeOnly => 'Csak beírás vagy beillesztés';
 
   @override
-  String get cameraCannotReadLanguage => 'A kamera nem tudja elolvasni ezt a nyelvet. Használd inkább a Szöveg beírása lehetőséget.';
+  String get cameraCannotReadLanguage => 'A kamera nem tudja elolvasni ezt a nyelvet. Használja inkább a Szöveg beírása lehetőséget.';
 
   @override
-  String get scanResultNote => 'A beolvasott szöveg hibákat tartalmazhat. A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget.';
+  String get scanResultNote => 'A beolvasott szöveg hibákat tartalmazhat. A legpontosabb fordításhoz használja a Szöveg beírása lehetőséget.';
 
   @override
   String get translateToLabel => 'Fordítás erre';
@@ -314,7 +314,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get reminderNotificationsSubtitle => 'Kapjon emlékeztetőt, ha néhány napig nem használta a Peshat-ot.';
 
   @override
-  String get reminderNotificationTitle => 'Folytassa fordítéseit';
+  String get reminderNotificationTitle => 'Folytassa fordításait';
 
   @override
   String get reminderNotificationBody => 'Folytassa ott, ahol abbahagyta a Peshat-tal.';
@@ -329,7 +329,7 @@ class AppLocalizationsHu extends AppLocalizations {
   String get recentLabel => 'Legutóbbi';
 
   @override
-  String get purchaseUnavailable => 'A vásárlások jelenleg nem érhetők el. Kérjük, próbáld újra később.';
+  String get purchaseUnavailable => 'A vásárlások jelenleg nem érhetők el. Kérjük, próbálja újra később.';
 
   @override
   String get restoreChecking => 'Korábbi vásárlások ellenőrzése…';
@@ -362,5 +362,5 @@ class AppLocalizationsHu extends AppLocalizations {
   String get errorPackTooSlow => 'A nyelvi csomag fogadása túl sokáig tart. Lehet, hogy gyenge az internetkapcsolata. Próbálja újra.';
 
   @override
-  String get errorNoTextHint => 'A legpontosabb fordításhoz használd a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.';
+  String get errorNoTextHint => 'A legpontosabb fordításhoz használja a Szöveg beírása lehetőséget. A beolvasás és az importálás tiszta, latin betűs szöveggel működik a legjobban.';
 }

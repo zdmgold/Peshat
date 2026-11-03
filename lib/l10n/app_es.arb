@@ -26,7 +26,7 @@
   "semanticsSearchField": "Buscar idiomas",
   "semanticsRemoveAds": "Eliminar anuncios",
   "cameraUsageDescription": "Peshat usa la cámara para escanear texto y traducirlo. Las imágenes se procesan en el dispositivo y no se suben.",
-  "trackingUsageDescription": "Se usa para mostrar anuncios no personalizados relevantes si rechaza; anuncios personalizados si acepta.",
+  "trackingUsageDescription": "Se usa para mostrar anuncios no personalizados relevantes si rechazas; anuncios personalizados si aceptas.",
   "nativeAppName": "Peshat",
   "semanticsLanguageEntry": "{englishName}, {nativeName}",
   "errorNoTextDetected": "No se encontró texto en la imagen",

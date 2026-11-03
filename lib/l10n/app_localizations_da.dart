@@ -209,7 +209,7 @@ class AppLocalizationsDa extends AppLocalizations {
   String get pickerCameraReads => 'Kameraet kan læse';
 
   @override
-  String get pickerTypeOnly => 'Kun skriv eller indsæt';
+  String get pickerTypeOnly => 'Kun indtastning eller indsættelse';
 
   @override
   String get cameraCannotReadLanguage => 'Kameraet kan ikke læse dette sprog. Brug Skriv tekst i stedet.';

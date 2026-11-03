@@ -185,13 +185,13 @@ class AppLocalizationsHi extends AppLocalizations {
   String get exportPdfAction => 'PDF के रूप में निर्यात करें';
 
   @override
-  String get translatedTo => 'अनुवादित';
+  String get translatedTo => 'इस भाषा में अनुवादित';
 
   @override
   String get translatedFrom => 'इस भाषा से अनुवादित';
 
   @override
-  String get scanLatinHint => 'सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें। स्कैन और इम्पोर्ट साफ़ लैटिन लिपि के पाठ के साथ सबसे अच्छा काम करते हैं।';
+  String get scanLatinHint => 'सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें। स्कैन और आयात साफ़ लैटिन लिपि के टेक्स्ट के साथ सबसे अच्छा काम करते हैं।';
 
   @override
   String get sourceLanguageLabel => 'स्रोत भाषा';
@@ -215,7 +215,7 @@ class AppLocalizationsHi extends AppLocalizations {
   String get cameraCannotReadLanguage => 'कैमरा इस भाषा को नहीं पढ़ सकता। इसके बजाय “टेक्स्ट टाइप करें” का उपयोग करें।';
 
   @override
-  String get scanResultNote => 'स्कैन किए गए पाठ में गलतियाँ हो सकती हैं। सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें।';
+  String get scanResultNote => 'स्कैन किए गए टेक्स्ट में गलतियाँ हो सकती हैं। सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें।';
 
   @override
   String get translateToLabel => 'इसमें अनुवाद करें';
@@ -362,5 +362,5 @@ class AppLocalizationsHi extends AppLocalizations {
   String get errorPackTooSlow => 'भाषा पैक प्राप्त होने में बहुत समय लग रहा है। हो सकता है आपका इंटरनेट कनेक्शन कमज़ोर हो। फिर से कोशिश करें।';
 
   @override
-  String get errorNoTextHint => 'सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें। स्कैन और इम्पोर्ट साफ़ लैटिन लिपि के पाठ के साथ सबसे अच्छा काम करते हैं।';
+  String get errorNoTextHint => 'सबसे सटीक अनुवाद के लिए “टेक्स्ट टाइप करें” का उपयोग करें। स्कैन और आयात साफ़ लैटिन लिपि के टेक्स्ट के साथ सबसे अच्छा काम करते हैं।';
 }

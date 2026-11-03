@@ -185,7 +185,7 @@ class AppLocalizationsNe extends AppLocalizations {
   String get exportPdfAction => 'PDF को रूपमा निर्यात गर्नुहोस्';
 
   @override
-  String get translatedTo => 'अनुवाद गरियो';
+  String get translatedTo => 'यसमा अनुवाद गरियो';
 
   @override
   String get translatedFrom => 'यस भाषाबाट अनुवाद गरियो';

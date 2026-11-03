@@ -206,19 +206,19 @@ class AppLocalizationsUr extends AppLocalizations {
   String get languageAutoLatin => 'خودکار (لاطینی رسم الخط)';
 
   @override
-  String get pickerCameraReads => 'کیمرا پڑھ سکتا ہے';
+  String get pickerCameraReads => 'کیمرہ پڑھ سکتا ہے';
 
   @override
   String get pickerTypeOnly => 'صرف ٹائپ یا پیسٹ';
 
   @override
-  String get cameraCannotReadLanguage => 'کیمرا اس زبان کو نہیں پڑھ سکتا۔ اس کے بجائے «متن ٹائپ کریں» استعمال کریں۔';
+  String get cameraCannotReadLanguage => 'کیمرہ اس زبان کو نہیں پڑھ سکتا۔ اس کے بجائے «متن ٹائپ کریں» استعمال کریں۔';
 
   @override
   String get scanResultNote => 'اسکین شدہ متن میں غلطیاں ہو سکتی ہیں۔ سب سے درست ترجمے کے لیے «متن ٹائپ کریں» استعمال کریں۔';
 
   @override
-  String get translateToLabel => 'پر ترجمہ کریں';
+  String get translateToLabel => 'میں ترجمہ کریں';
 
   @override
   String get typeTextLabel => 'متن ٹائپ یا پیسٹ کریں';

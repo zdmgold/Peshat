@@ -185,7 +185,7 @@ class AppLocalizationsTr extends AppLocalizations {
   String get exportPdfAction => 'PDF olarak dışa aktar';
 
   @override
-  String get translatedTo => 'Çevrilen dil';
+  String get translatedTo => 'Çevrildiği dil';
 
   @override
   String get translatedFrom => 'Kaynak dil';

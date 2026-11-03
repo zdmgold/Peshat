@@ -248,7 +248,7 @@ class AppLocalizationsEl extends AppLocalizations {
   String get typeTextButtonLabel => 'Πληκτρολόγηση κειμένου';
 
   @override
-  String get removeAdsSubtitle => 'Αγορά μία φορά';
+  String get removeAdsSubtitle => 'Εφάπαξ αγορά';
 
   @override
   String get removeAdsShortLabel => 'Αφαίρεση';

@@ -87,7 +87,7 @@ class AppLocalizationsEs extends AppLocalizations {
   String get cameraUsageDescription => 'Peshat usa la cámara para escanear texto y traducirlo. Las imágenes se procesan en el dispositivo y no se suben.';
 
   @override
-  String get trackingUsageDescription => 'Se usa para mostrar anuncios no personalizados relevantes si rechaza; anuncios personalizados si acepta.';
+  String get trackingUsageDescription => 'Se usa para mostrar anuncios no personalizados relevantes si rechazas; anuncios personalizados si aceptas.';
 
   @override
   String get nativeAppName => 'Peshat';

@@ -115,7 +115,7 @@
   "languageAuto": "Automatisk",
   "languageAutoLatin": "Automatisk (latinsk skrift)",
   "pickerCameraReads": "Kameraet kan læse",
-  "pickerTypeOnly": "Kun skriv eller indsæt",
+  "pickerTypeOnly": "Kun indtastning eller indsættelse",
   "cameraCannotReadLanguage": "Kameraet kan ikke læse dette sprog. Brug Skriv tekst i stedet.",
   "scanResultNote": "Scannet tekst kan indeholde fejl. Brug Skriv tekst for den mest nøjagtige oversættelse."
 }

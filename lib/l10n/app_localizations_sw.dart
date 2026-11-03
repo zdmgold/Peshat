@@ -281,7 +281,7 @@ class AppLocalizationsSw extends AppLocalizations {
   String get clearTextConfirm => 'Futa maandishi?';
 
   @override
-  String get historyEmptySubtitle => 'Uchanganuzi unaotafsiri utaonekana hapa.';
+  String get historyEmptySubtitle => 'Uchanganuzi ulioutafsiri utaonekana hapa.';
 
   @override
   String get cancelButtonLabel => 'Ghairi';

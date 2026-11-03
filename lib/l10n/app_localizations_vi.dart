@@ -260,7 +260,7 @@ class AppLocalizationsVi extends AppLocalizations {
   String get clearHistoryLabel => 'Xóa toàn bộ lịch sử';
 
   @override
-  String get cameraLabel => 'Máy ảnh';
+  String get cameraLabel => 'Camera';
 
   @override
   String get recentLanguagesLabel => 'Gần đây';

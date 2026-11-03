@@ -58,7 +58,7 @@
   "copiedMessage": "ক্লিপবোর্ডে কপি করা হয়েছে",
   "exportTxtAction": "টেক্সট হিসেবে রপ্তানি করুন",
   "exportPdfAction": "PDF হিসেবে রপ্তানি করুন",
-  "translatedTo": "অনুবাদ করা হয়েছে",
+  "translatedTo": "যে ভাষায় অনুবাদ",
   "translateToLabel": "এতে অনুবাদ করুন",
   "typeTextLabel": "টেক্সট টাইপ বা পেস্ট করুন",
   "importFileLabel": "ফাইল আমদানি করুন",

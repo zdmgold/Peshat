@@ -191,13 +191,13 @@ class AppLocalizationsCa extends AppLocalizations {
   String get translatedFrom => 'Traduït des de';
 
   @override
-  String get scanLatinHint => 'Per a la traducció més precisa, feu servir Escriu text. L\'escaneig i la importació funcionen millor amb text clar en alfabet llatí.';
+  String get scanLatinHint => 'Per a la traducció més precisa, fes servir Escriu text. L\'escaneig i la importació funcionen millor amb text clar en alfabet llatí.';
 
   @override
-  String get sourceLanguageLabel => 'Llengua d\'origen';
+  String get sourceLanguageLabel => 'Idioma d\'origen';
 
   @override
-  String get destinationLanguageLabel => 'Llengua de destinació';
+  String get destinationLanguageLabel => 'Idioma de destinació';
 
   @override
   String get languageAuto => 'Automàtic';
@@ -212,10 +212,10 @@ class AppLocalizationsCa extends AppLocalizations {
   String get pickerTypeOnly => 'Només escriure o enganxar';
 
   @override
-  String get cameraCannotReadLanguage => 'La càmera no pot llegir aquesta llengua. Feu servir Escriu text.';
+  String get cameraCannotReadLanguage => 'La càmera no pot llegir aquest idioma. Fes servir Escriu text.';
 
   @override
-  String get scanResultNote => 'El text escanejat pot contenir errors. Per a la traducció més precisa, feu servir Escriu text.';
+  String get scanResultNote => 'El text escanejat pot contenir errors. Per a la traducció més precisa, fes servir Escriu text.';
 
   @override
   String get translateToLabel => 'Tradueix a';
@@ -362,5 +362,5 @@ class AppLocalizationsCa extends AppLocalizations {
   String get errorPackTooSlow => 'El paquet d\'idioma triga massa a rebre\'s. Pot ser que la connexió a internet sigui feble. Torna-ho a provar.';
 
   @override
-  String get errorNoTextHint => 'Per a la traducció més precisa, feu servir Escriu text. L\'escaneig i la importació funcionen millor amb text clar en alfabet llatí.';
+  String get errorNoTextHint => 'Per a la traducció més precisa, fes servir Escriu text. L\'escaneig i la importació funcionen millor amb text clar en alfabet llatí.';
 }
