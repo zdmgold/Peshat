@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kameraet kan lese",
   "pickerTypeOnly": "Bare skriv eller lim inn",
   "cameraCannotReadLanguage": "Kameraet kan ikke lese dette språket. Bruk Skriv tekst i stedet.",
-  "scanResultNote": "Skannet tekst kan inneholde feil. Bruk Skriv tekst for den mest nøyaktige oversettelsen."
+  "scanResultNote": "Skannet tekst kan inneholde feil. Bruk Skriv tekst for den mest nøyaktige oversettelsen.",
+  "reviewCardTitle": "Liker du Peshat?",
+  "reviewCardSubtitle": "En vurdering hjelper andre med å finne den."
 }

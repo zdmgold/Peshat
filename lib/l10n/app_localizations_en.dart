@@ -305,6 +305,12 @@ class AppLocalizationsEn extends AppLocalizations {
   String get rateAppLabel => 'Rate Peshat';
 
   @override
+  String get reviewCardTitle => 'Enjoying Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'A rating helps other people find it.';
+
+  @override
   String get notificationsSectionLabel => 'Notifications';
 
   @override

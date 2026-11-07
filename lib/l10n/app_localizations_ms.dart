@@ -305,6 +305,12 @@ class AppLocalizationsMs extends AppLocalizations {
   String get rateAppLabel => 'Nilai Peshat';
 
   @override
+  String get reviewCardTitle => 'Suka Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Penilaian membantu orang lain menemuinya.';
+
+  @override
   String get notificationsSectionLabel => 'Pemberitahuan';
 
   @override

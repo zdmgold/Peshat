@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kayang basahin ng camera",
   "pickerTypeOnly": "I-type o i-paste lang",
   "cameraCannotReadLanguage": "Hindi mababasa ng camera ang wikang ito. Gamitin na lang ang Mag-type ng teksto.",
-  "scanResultNote": "Maaaring may mali ang na-scan na teksto. Para sa pinakatumpak na pagsasalin, gamitin ang Mag-type ng teksto."
+  "scanResultNote": "Maaaring may mali ang na-scan na teksto. Para sa pinakatumpak na pagsasalin, gamitin ang Mag-type ng teksto.",
+  "reviewCardTitle": "Nag-e-enjoy ka ba sa Peshat?",
+  "reviewCardSubtitle": "Nakakatulong ang rating para mahanap ito ng ibang tao."
 }

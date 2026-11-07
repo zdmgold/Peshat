@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kameran kan läsa",
   "pickerTypeOnly": "Endast skriva eller klistra in",
   "cameraCannotReadLanguage": "Kameran kan inte läsa det här språket. Använd Skriv text i stället.",
-  "scanResultNote": "Skannad text kan innehålla fel. Använd Skriv text för den mest exakta översättningen."
+  "scanResultNote": "Skannad text kan innehålla fel. Använd Skriv text för den mest exakta översättningen.",
+  "reviewCardTitle": "Gillar du Peshat?",
+  "reviewCardSubtitle": "Ett betyg hjälper andra att hitta appen."
 }

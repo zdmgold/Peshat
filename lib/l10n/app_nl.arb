@@ -117,5 +117,7 @@
   "pickerCameraReads": "Camera kan lezen",
   "pickerTypeOnly": "Alleen typen of plakken",
   "cameraCannotReadLanguage": "De camera kan deze taal niet lezen. Gebruik in plaats daarvan Tekst typen.",
-  "scanResultNote": "Gescande tekst kan fouten bevatten. Gebruik Tekst typen voor de nauwkeurigste vertaling."
+  "scanResultNote": "Gescande tekst kan fouten bevatten. Gebruik Tekst typen voor de nauwkeurigste vertaling.",
+  "reviewCardTitle": "Vind je Peshat leuk?",
+  "reviewCardSubtitle": "Een beoordeling helpt anderen om de app te vinden."
 }

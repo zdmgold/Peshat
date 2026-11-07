@@ -117,5 +117,7 @@
   "pickerCameraReads": "Aparat potrafi czytać",
   "pickerTypeOnly": "Tylko wpisywanie lub wklejanie",
   "cameraCannotReadLanguage": "Aparat nie potrafi odczytać tego języka. Użyj zamiast tego opcji Wpisz tekst.",
-  "scanResultNote": "Zeskanowany tekst może zawierać błędy. Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst."
+  "scanResultNote": "Zeskanowany tekst może zawierać błędy. Aby uzyskać najdokładniejsze tłumaczenie, użyj opcji Wpisz tekst.",
+  "reviewCardTitle": "Podoba Ci się Peshat?",
+  "reviewCardSubtitle": "Ocena pomaga innym znaleźć aplikację."
 }

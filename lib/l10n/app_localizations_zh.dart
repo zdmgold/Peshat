@@ -305,6 +305,12 @@ class AppLocalizationsZh extends AppLocalizations {
   String get rateAppLabel => '评价 Peshat';
 
   @override
+  String get reviewCardTitle => '喜欢 Peshat 吗？';
+
+  @override
+  String get reviewCardSubtitle => '评分可以帮助更多人找到它。';
+
+  @override
   String get notificationsSectionLabel => '通知';
 
   @override

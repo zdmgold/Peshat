@@ -305,6 +305,12 @@ class AppLocalizationsRo extends AppLocalizations {
   String get rateAppLabel => 'Evaluează Peshat';
 
   @override
+  String get reviewCardTitle => 'Vă place Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'O evaluare îi ajută pe alții să îl găsească.';
+
+  @override
   String get notificationsSectionLabel => 'Notificări';
 
   @override

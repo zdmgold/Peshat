@@ -305,6 +305,12 @@ class AppLocalizationsBg extends AppLocalizations {
   String get rateAppLabel => 'Оценете Peshat';
 
   @override
+  String get reviewCardTitle => 'Харесва ли ви Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Оценката помага на други хора да го намерят.';
+
+  @override
   String get notificationsSectionLabel => 'Известия';
 
   @override

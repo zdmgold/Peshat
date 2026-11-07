@@ -305,6 +305,12 @@ class AppLocalizationsMy extends AppLocalizations {
   String get rateAppLabel => 'Peshat ကို အဆင့်သတ်မှတ်ပါ';
 
   @override
+  String get reviewCardTitle => 'Peshat ကို နှစ်သက်ပါသလား။';
+
+  @override
+  String get reviewCardSubtitle => 'အဆင့်သတ်မှတ်ပေးခြင်းက တခြားသူတွေ ရှာတွေ့ဖို့ ကူညီပါတယ်။';
+
+  @override
   String get notificationsSectionLabel => 'အသိပေးချက်များ';
 
   @override

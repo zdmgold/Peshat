@@ -305,6 +305,12 @@ class AppLocalizationsHe extends AppLocalizations {
   String get rateAppLabel => 'דרג את Peshat';
 
   @override
+  String get reviewCardTitle => 'נהנים מ-Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'דירוג עוזר לאנשים אחרים למצוא אותה.';
+
+  @override
   String get notificationsSectionLabel => 'התראות';
 
   @override

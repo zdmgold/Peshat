@@ -117,5 +117,7 @@
   "pickerCameraReads": "A kamera el tudja olvasni",
   "pickerTypeOnly": "Csak beírás vagy beillesztés",
   "cameraCannotReadLanguage": "A kamera nem tudja elolvasni ezt a nyelvet. Használja inkább a Szöveg beírása lehetőséget.",
-  "scanResultNote": "A beolvasott szöveg hibákat tartalmazhat. A legpontosabb fordításhoz használja a Szöveg beírása lehetőséget."
+  "scanResultNote": "A beolvasott szöveg hibákat tartalmazhat. A legpontosabb fordításhoz használja a Szöveg beírása lehetőséget.",
+  "reviewCardTitle": "Tetszik a Peshat?",
+  "reviewCardSubtitle": "Az értékelés segít másoknak megtalálni."
 }

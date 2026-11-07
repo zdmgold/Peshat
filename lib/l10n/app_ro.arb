@@ -117,5 +117,7 @@
   "pickerCameraReads": "Camera poate citi",
   "pickerTypeOnly": "Doar tastare sau lipire",
   "cameraCannotReadLanguage": "Camera nu poate citi această limbă. Folosiți Introduceți text.",
-  "scanResultNote": "Textul scanat poate conține greșeli. Pentru cea mai precisă traducere, folosiți Introduceți text."
+  "scanResultNote": "Textul scanat poate conține greșeli. Pentru cea mai precisă traducere, folosiți Introduceți text.",
+  "reviewCardTitle": "Vă place Peshat?",
+  "reviewCardSubtitle": "O evaluare îi ajută pe alții să îl găsească."
 }

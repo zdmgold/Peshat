@@ -305,6 +305,12 @@ class AppLocalizationsUk extends AppLocalizations {
   String get rateAppLabel => 'Оцінити Peshat';
 
   @override
+  String get reviewCardTitle => 'Подобається Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Оцінка допомагає іншим людям знайти застосунок.';
+
+  @override
   String get notificationsSectionLabel => 'Сповіщення';
 
   @override

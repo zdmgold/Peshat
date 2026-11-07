@@ -305,6 +305,12 @@ class AppLocalizationsCs extends AppLocalizations {
   String get rateAppLabel => 'Ohodnotit Peshat';
 
   @override
+  String get reviewCardTitle => 'Líbí se vám Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Hodnocení pomáhá ostatním lidem aplikaci najít.';
+
+  @override
   String get notificationsSectionLabel => 'Oznámení';
 
   @override

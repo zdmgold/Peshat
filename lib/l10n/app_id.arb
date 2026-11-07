@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kamera dapat membaca",
   "pickerTypeOnly": "Hanya ketik atau tempel",
   "cameraCannotReadLanguage": "Kamera tidak dapat membaca bahasa ini. Gunakan Ketik teks.",
-  "scanResultNote": "Teks hasil pindaian bisa mengandung kesalahan. Untuk terjemahan paling akurat, gunakan Ketik teks."
+  "scanResultNote": "Teks hasil pindaian bisa mengandung kesalahan. Untuk terjemahan paling akurat, gunakan Ketik teks.",
+  "reviewCardTitle": "Suka dengan Peshat?",
+  "reviewCardSubtitle": "Penilaian membantu orang lain menemukannya."
 }

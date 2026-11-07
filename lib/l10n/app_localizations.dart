@@ -775,6 +775,18 @@ abstract class AppLocalizations {
   /// **'Rate Peshat'**
   String get rateAppLabel;
 
+  /// Headline of the home-screen card asking for an app rating.
+  ///
+  /// In en, this message translates to:
+  /// **'Enjoying Peshat?'**
+  String get reviewCardTitle;
+
+  /// Second line of the home-screen rating card.
+  ///
+  /// In en, this message translates to:
+  /// **'A rating helps other people find it.'**
+  String get reviewCardSubtitle;
+
   /// Settings section header for the notifications group.
   ///
   /// In en, this message translates to:

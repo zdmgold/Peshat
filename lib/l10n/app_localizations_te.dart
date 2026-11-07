@@ -305,6 +305,12 @@ class AppLocalizationsTe extends AppLocalizations {
   String get rateAppLabel => 'Peshatను రేట్ చేయండి';
 
   @override
+  String get reviewCardTitle => 'మీకు Peshat నచ్చిందా?';
+
+  @override
+  String get reviewCardSubtitle => 'రేటింగ్ ఇస్తే ఇతరులు దీన్ని కనుగొనడానికి సహాయపడుతుంది.';
+
+  @override
   String get notificationsSectionLabel => 'నోటిఫికేషన్‌లు';
 
   @override

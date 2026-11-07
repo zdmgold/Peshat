@@ -117,5 +117,7 @@
   "pickerCameraReads": "相机可识别",
   "pickerTypeOnly": "仅限输入或粘贴",
   "cameraCannotReadLanguage": "相机无法识别这种语言。请改用“输入文本”。",
-  "scanResultNote": "扫描的文本可能有错误。如需最准确的翻译，请使用“输入文本”。"
+  "scanResultNote": "扫描的文本可能有错误。如需最准确的翻译，请使用“输入文本”。",
+  "reviewCardTitle": "喜欢 Peshat 吗？",
+  "reviewCardSubtitle": "评分可以帮助更多人找到它。"
 }

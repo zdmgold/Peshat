@@ -20,6 +20,7 @@ import 'core/providers/history_provider.dart';
 import 'core/providers/ui_locale_provider.dart';
 import 'l10n/app_localizations.dart';
 import 'core/services/interstitial_service.dart';
+import 'core/services/review_prompt.dart';
 import 'core/services/notification_service.dart';
 import 'core/providers/notification_provider.dart';
 import 'widgets/ad_slot.dart';
@@ -34,6 +35,7 @@ Future<void> main() async {
     unawaited(AdConsent.instance.gatherAndInit());
   }
   await InterstitialService.instance.init(prefs);
+  ReviewPrompt.instance.init(prefs);
   await NotificationService.instance.init(prefs);
   runApp(PeshatApp(prefs: prefs));
 }
@@ -107,6 +109,15 @@ class _PeshatAppState extends State<PeshatApp> with WidgetsBindingObserver {
           await InAppPurchase.instance.completePurchase(p);
         } catch (_) {}
       }
+    }
+  }
+
+  @override
+  void didChangeAppLifecycleState(AppLifecycleState state) {
+    // A consent check that failed (e.g. no connection at launch) is retried
+    // when the app returns to the foreground; Google still decides the result.
+    if (state == AppLifecycleState.resumed && !purchaseProvider.value) {
+      unawaited(AdConsent.instance.retryIfNeeded());
     }
   }
 

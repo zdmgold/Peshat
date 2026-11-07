@@ -305,6 +305,12 @@ class AppLocalizationsUr extends AppLocalizations {
   String get rateAppLabel => 'Peshat کو ریٹنگ دیں';
 
   @override
+  String get reviewCardTitle => 'کیا آپ کو Peshat پسند ہے؟';
+
+  @override
+  String get reviewCardSubtitle => 'ریٹنگ دینے سے دوسرے لوگوں کو اسے تلاش کرنے میں مدد ملتی ہے۔';
+
+  @override
   String get notificationsSectionLabel => 'اطلاعات';
 
   @override

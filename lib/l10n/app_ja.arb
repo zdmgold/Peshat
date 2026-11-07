@@ -117,5 +117,7 @@
   "pickerCameraReads": "カメラで読み取り可能",
   "pickerTypeOnly": "入力または貼り付けのみ",
   "cameraCannotReadLanguage": "カメラはこの言語を読み取れません。代わりに「テキストを入力」をご利用ください。",
-  "scanResultNote": "スキャンしたテキストには誤りが含まれる場合があります。最も正確に翻訳するには「テキストを入力」をご利用ください。"
+  "scanResultNote": "スキャンしたテキストには誤りが含まれる場合があります。最も正確に翻訳するには「テキストを入力」をご利用ください。",
+  "reviewCardTitle": "Peshatを気に入っていただけましたか？",
+  "reviewCardSubtitle": "評価していただくと、ほかの人がこのアプリを見つけやすくなります。"
 }

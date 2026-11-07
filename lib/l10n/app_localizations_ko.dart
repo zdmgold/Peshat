@@ -305,6 +305,12 @@ class AppLocalizationsKo extends AppLocalizations {
   String get rateAppLabel => 'Peshat 평가하기';
 
   @override
+  String get reviewCardTitle => 'Peshat가 마음에 드시나요?';
+
+  @override
+  String get reviewCardSubtitle => '평점은 다른 사람들이 앱을 찾는 데 도움이 됩니다.';
+
+  @override
   String get notificationsSectionLabel => '알림';
 
   @override

@@ -305,6 +305,12 @@ class AppLocalizationsBn extends AppLocalizations {
   String get rateAppLabel => 'Peshat রেটিং দিন';
 
   @override
+  String get reviewCardTitle => 'Peshat কি আপনার ভালো লাগছে?';
+
+  @override
+  String get reviewCardSubtitle => 'রেটিং দিলে অন্যরা এটি খুঁজে পেতে সাহায্য পায়।';
+
+  @override
   String get notificationsSectionLabel => 'বিজ্ঞপ্তি';
 
   @override

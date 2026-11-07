@@ -305,6 +305,12 @@ class AppLocalizationsPt extends AppLocalizations {
   String get rateAppLabel => 'Avaliar o Peshat';
 
   @override
+  String get reviewCardTitle => 'Gostando do Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Uma avaliação ajuda outras pessoas a encontrá-lo.';
+
+  @override
   String get notificationsSectionLabel => 'Notificações';
 
   @override

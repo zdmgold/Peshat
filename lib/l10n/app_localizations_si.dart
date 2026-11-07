@@ -305,6 +305,12 @@ class AppLocalizationsSi extends AppLocalizations {
   String get rateAppLabel => 'Peshat ශ්‍රේණිගත කරන්න';
 
   @override
+  String get reviewCardTitle => 'ඔබට Peshat ප්‍රිය ද?';
+
+  @override
+  String get reviewCardSubtitle => 'ඇගයීමක් අන් අයට එය සොයාගැනීමට උපකාරී වේ.';
+
+  @override
   String get notificationsSectionLabel => 'දැනුම්දීම්';
 
   @override

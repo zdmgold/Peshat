@@ -305,6 +305,12 @@ class AppLocalizationsVi extends AppLocalizations {
   String get rateAppLabel => 'Đánh giá Peshat';
 
   @override
+  String get reviewCardTitle => 'Bạn thích Peshat chứ?';
+
+  @override
+  String get reviewCardSubtitle => 'Đánh giá giúp người khác tìm thấy ứng dụng.';
+
+  @override
   String get notificationsSectionLabel => 'Thông báo';
 
   @override

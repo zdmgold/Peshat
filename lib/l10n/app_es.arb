@@ -117,5 +117,7 @@
   "pickerCameraReads": "La cámara puede leer",
   "pickerTypeOnly": "Solo escribir o pegar",
   "cameraCannotReadLanguage": "La cámara no puede leer este idioma. Usa Escribir texto.",
-  "scanResultNote": "El texto escaneado puede contener errores. Para una traducción más precisa, usa Escribir texto."
+  "scanResultNote": "El texto escaneado puede contener errores. Para una traducción más precisa, usa Escribir texto.",
+  "reviewCardTitle": "¿Te gusta Peshat?",
+  "reviewCardSubtitle": "Una valoración ayuda a otras personas a encontrarla."
 }

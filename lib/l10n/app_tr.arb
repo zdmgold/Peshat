@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kamera okuyabilir",
   "pickerTypeOnly": "Yalnızca yazma veya yapıştırma",
   "cameraCannotReadLanguage": "Kamera bu dili okuyamaz. Bunun yerine Metin yaz seçeneğini kullanın.",
-  "scanResultNote": "Taranan metin hatalar içerebilir. En doğru çeviri için Metin yaz seçeneğini kullanın."
+  "scanResultNote": "Taranan metin hatalar içerebilir. En doğru çeviri için Metin yaz seçeneğini kullanın.",
+  "reviewCardTitle": "Peshat'i beğeniyor musunuz?",
+  "reviewCardSubtitle": "Bir puan vermek, başkalarının uygulamayı bulmasına yardımcı olur."
 }

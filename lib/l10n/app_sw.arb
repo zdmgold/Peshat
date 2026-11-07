@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kamera inaweza kusoma",
   "pickerTypeOnly": "Andika au bandika tu",
   "cameraCannotReadLanguage": "Kamera haiwezi kusoma lugha hii. Tumia Andika maandishi badala yake.",
-  "scanResultNote": "Maandishi yaliyochanganuliwa yanaweza kuwa na makosa. Kwa tafsiri sahihi zaidi, tumia Andika maandishi."
+  "scanResultNote": "Maandishi yaliyochanganuliwa yanaweza kuwa na makosa. Kwa tafsiri sahihi zaidi, tumia Andika maandishi.",
+  "reviewCardTitle": "Je, unafurahia Peshat?",
+  "reviewCardSubtitle": "Ukadiriaji huwasaidia watu wengine kuipata."
 }

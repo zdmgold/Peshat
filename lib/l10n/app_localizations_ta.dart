@@ -305,6 +305,12 @@ class AppLocalizationsTa extends AppLocalizations {
   String get rateAppLabel => 'Peshat-ஐ மதிப்பிடுங்கள்';
 
   @override
+  String get reviewCardTitle => 'Peshat உங்களுக்குப் பிடிக்கிறதா?';
+
+  @override
+  String get reviewCardSubtitle => 'மதிப்பீடு மற்றவர்கள் இதைக் கண்டறிய உதவுகிறது.';
+
+  @override
   String get notificationsSectionLabel => 'அறிவிப்புகள்';
 
   @override

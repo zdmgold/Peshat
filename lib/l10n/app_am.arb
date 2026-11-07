@@ -117,5 +117,7 @@
   "pickerCameraReads": "ካሜራ ማንበብ ይችላል",
   "pickerTypeOnly": "መተየብ ወይም መለጠፍ ብቻ",
   "cameraCannotReadLanguage": "ካሜራው ይህን ቋንቋ ማንበብ አይችልም። በምትኩ «ጽሑፍ ይተይቡ»ን ይጠቀሙ።",
-  "scanResultNote": "የተቃኘ ጽሑፍ ስህተቶችን ሊይዝ ይችላል። ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ።"
+  "scanResultNote": "የተቃኘ ጽሑፍ ስህተቶችን ሊይዝ ይችላል። ለትክክለኛ ትርጉም «ጽሑፍ ይተይቡ»ን ይጠቀሙ።",
+  "reviewCardTitle": "በፔሻት ደስተኛ ነዎት?",
+  "reviewCardSubtitle": "ደረጃ መስጠት ሌሎች ሰዎች እንዲያገኙት ይረዳል።"
 }

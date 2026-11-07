@@ -305,6 +305,12 @@ class AppLocalizationsSw extends AppLocalizations {
   String get rateAppLabel => 'Kadiria Peshat';
 
   @override
+  String get reviewCardTitle => 'Je, unafurahia Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Ukadiriaji huwasaidia watu wengine kuipata.';
+
+  @override
   String get notificationsSectionLabel => 'Arifa';
 
   @override

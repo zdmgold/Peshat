@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kamera osaa lukea",
   "pickerTypeOnly": "Vain kirjoitus tai liittäminen",
   "cameraCannotReadLanguage": "Kamera ei osaa lukea tätä kieltä. Käytä Kirjoita teksti -toimintoa.",
-  "scanResultNote": "Skannattu teksti voi sisältää virheitä. Tarkimman käännöksen saat Kirjoita teksti -toiminnolla."
+  "scanResultNote": "Skannattu teksti voi sisältää virheitä. Tarkimman käännöksen saat Kirjoita teksti -toiminnolla.",
+  "reviewCardTitle": "Pidätkö Peshatista?",
+  "reviewCardSubtitle": "Arvostelu auttaa muita löytämään sovelluksen."
 }

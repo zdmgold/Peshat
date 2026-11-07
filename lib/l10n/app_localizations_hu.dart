@@ -305,6 +305,12 @@ class AppLocalizationsHu extends AppLocalizations {
   String get rateAppLabel => 'Peshat értékelése';
 
   @override
+  String get reviewCardTitle => 'Tetszik a Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Az értékelés segít másoknak megtalálni.';
+
+  @override
   String get notificationsSectionLabel => 'Értesítések';
 
   @override

@@ -305,6 +305,12 @@ class AppLocalizationsNo extends AppLocalizations {
   String get rateAppLabel => 'Vurder Peshat';
 
   @override
+  String get reviewCardTitle => 'Liker du Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'En vurdering hjelper andre med å finne den.';
+
+  @override
   String get notificationsSectionLabel => 'Varsler';
 
   @override

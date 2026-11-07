@@ -305,6 +305,12 @@ class AppLocalizationsFi extends AppLocalizations {
   String get rateAppLabel => 'Arvioi Peshat';
 
   @override
+  String get reviewCardTitle => 'Pidätkö Peshatista?';
+
+  @override
+  String get reviewCardSubtitle => 'Arvostelu auttaa muita löytämään sovelluksen.';
+
+  @override
   String get notificationsSectionLabel => 'Ilmoitukset';
 
   @override

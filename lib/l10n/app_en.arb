@@ -172,5 +172,13 @@
   "pickerCameraReads": "Camera can read",
   "pickerTypeOnly": "Type or paste only",
   "cameraCannotReadLanguage": "The camera can't read this language. Use Type text instead.",
-  "scanResultNote": "Scanned text can contain mistakes. For the most accurate translation, use Type text."
+  "scanResultNote": "Scanned text can contain mistakes. For the most accurate translation, use Type text.",
+  "reviewCardTitle": "Enjoying Peshat?",
+  "@reviewCardTitle": {
+    "description": "Headline of the home-screen card asking for an app rating."
+  },
+  "reviewCardSubtitle": "A rating helps other people find it.",
+  "@reviewCardSubtitle": {
+    "description": "Second line of the home-screen rating card."
+  }
 }

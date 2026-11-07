@@ -14,6 +14,7 @@ import '../core/providers/settings_provider.dart';
 import '../core/providers/theme_provider.dart';
 import '../core/providers/ui_locale_provider.dart';
 import '../core/providers/notification_provider.dart';
+import '../core/services/review_prompt.dart';
 import '../core/services/language_names.dart';
 import '../core/services/scan_scripts.dart';
 import '../core/utils/app_colors.dart';
@@ -26,6 +27,7 @@ import '../widgets/ad_slot.dart';
 import '../widgets/cupertino_toast.dart';
 import '../widgets/language_pair_card.dart';
 import '../widgets/recent_item_card.dart';
+import '../widgets/review_card.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
 import 'result_screen.dart';
@@ -59,6 +61,13 @@ class _ScanScreenState extends State<ScanScreen> {
   final DocumentScannerService _scanner = DocumentScannerService();
   bool _isScanning = false;
 
+  @override
+  void initState() {
+    super.initState();
+    WidgetsBinding.instance
+        .addPostFrameCallback((_) => ReviewPrompt.instance.refresh());
+  }
+
   Future<void> _openSettings() async {
     await Navigator.push(
       context,
@@ -73,6 +82,7 @@ class _ScanScreenState extends State<ScanScreen> {
         ),
       ),
     );
+    ReviewPrompt.instance.refresh();
   }
 
   Future<void> _openHistory() async {
@@ -82,6 +92,7 @@ class _ScanScreenState extends State<ScanScreen> {
         builder: (_) => HistoryScreen(history: widget.history),
       ),
     );
+    ReviewPrompt.instance.refresh();
   }
 
   Future<void> _openTextTranslate() async {
@@ -94,6 +105,7 @@ class _ScanScreenState extends State<ScanScreen> {
         ),
       ),
     );
+    ReviewPrompt.instance.refresh();
   }
 
   Future<void> _pickTargetLanguage() async {
@@ -173,6 +185,7 @@ class _ScanScreenState extends State<ScanScreen> {
           ),
         ),
       );
+      ReviewPrompt.instance.refresh();
     } catch (_) {
     } finally {
       if (mounted) setState(() => _isScanning = false);
@@ -203,6 +216,7 @@ class _ScanScreenState extends State<ScanScreen> {
             ),
           ),
         );
+        ReviewPrompt.instance.refresh();
       } else {
         if (_redirectIfUnreadable()) return;
         await Navigator.push(
@@ -216,6 +230,7 @@ class _ScanScreenState extends State<ScanScreen> {
             ),
           ),
         );
+        ReviewPrompt.instance.refresh();
       }
     } catch (_) {
       if (mounted) {
@@ -419,6 +434,7 @@ class _ScanScreenState extends State<ScanScreen> {
                       },
                     ),
                     const SizedBox(height: 16),
+                    const ReviewCard(),
                   ],
                 ),
               ),

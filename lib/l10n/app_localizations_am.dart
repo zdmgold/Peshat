@@ -305,6 +305,12 @@ class AppLocalizationsAm extends AppLocalizations {
   String get rateAppLabel => 'ፔሻትን ደረጃ ይስጡ';
 
   @override
+  String get reviewCardTitle => 'በፔሻት ደስተኛ ነዎት?';
+
+  @override
+  String get reviewCardSubtitle => 'ደረጃ መስጠት ሌሎች ሰዎች እንዲያገኙት ይረዳል።';
+
+  @override
   String get notificationsSectionLabel => 'ማሳወቂያዎች';
 
   @override

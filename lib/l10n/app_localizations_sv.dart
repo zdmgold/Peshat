@@ -305,6 +305,12 @@ class AppLocalizationsSv extends AppLocalizations {
   String get rateAppLabel => 'Betygsätt Peshat';
 
   @override
+  String get reviewCardTitle => 'Gillar du Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Ett betyg hjälper andra att hitta appen.';
+
+  @override
   String get notificationsSectionLabel => 'Aviseringar';
 
   @override

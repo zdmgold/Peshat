@@ -305,6 +305,12 @@ class AppLocalizationsFr extends AppLocalizations {
   String get rateAppLabel => 'Noter Peshat';
 
   @override
+  String get reviewCardTitle => 'Vous aimez Peshat ?';
+
+  @override
+  String get reviewCardSubtitle => 'Une note aide d\'autres personnes à la trouver.';
+
+  @override
   String get notificationsSectionLabel => 'Notifications';
 
   @override

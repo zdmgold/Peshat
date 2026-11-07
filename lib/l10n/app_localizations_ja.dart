@@ -305,6 +305,12 @@ class AppLocalizationsJa extends AppLocalizations {
   String get rateAppLabel => 'Peshatを評価';
 
   @override
+  String get reviewCardTitle => 'Peshatを気に入っていただけましたか？';
+
+  @override
+  String get reviewCardSubtitle => '評価していただくと、ほかの人がこのアプリを見つけやすくなります。';
+
+  @override
   String get notificationsSectionLabel => '通知';
 
   @override

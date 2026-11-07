@@ -305,6 +305,12 @@ class AppLocalizationsSk extends AppLocalizations {
   String get rateAppLabel => 'Ohodnotiť Peshat';
 
   @override
+  String get reviewCardTitle => 'Páči sa vám Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Hodnotenie pomáha ďalším ľuďom aplikáciu nájsť.';
+
+  @override
   String get notificationsSectionLabel => 'Oznámenia';
 
   @override

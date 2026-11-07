@@ -305,6 +305,12 @@ class AppLocalizationsId extends AppLocalizations {
   String get rateAppLabel => 'Beri rating Peshat';
 
   @override
+  String get reviewCardTitle => 'Suka dengan Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Penilaian membantu orang lain menemukannya.';
+
+  @override
   String get notificationsSectionLabel => 'Notifikasi';
 
   @override

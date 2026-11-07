@@ -16,6 +16,7 @@ import '../core/models/scan_state.dart';
 import '../core/providers/history_provider.dart';
 import '../core/providers/scan_provider.dart';
 import '../core/services/interstitial_service.dart';
+import '../core/services/review_prompt.dart';
 import '../core/services/pdf_fonts.dart';
 import '../core/services/pdf_raster.dart';
 import '../core/services/scan_scripts.dart';
@@ -100,6 +101,7 @@ class _ResultScreenState extends State<ResultScreen> {
       confidence: 1.0,
     ));
     InterstitialService.instance.onTranslationCompleted();
+    ReviewPrompt.instance.onTranslationCompleted();
   }
 
   Future<void> _runPipeline() async {

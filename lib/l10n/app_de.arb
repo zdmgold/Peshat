@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kamera kann lesen",
   "pickerTypeOnly": "Nur Eingabe oder Einfügen",
   "cameraCannotReadLanguage": "Die Kamera kann diese Sprache nicht lesen. Nutze stattdessen Text eingeben.",
-  "scanResultNote": "Gescannter Text kann Fehler enthalten. Für die genaueste Übersetzung nutze Text eingeben."
+  "scanResultNote": "Gescannter Text kann Fehler enthalten. Für die genaueste Übersetzung nutze Text eingeben.",
+  "reviewCardTitle": "Gefällt dir Peshat?",
+  "reviewCardSubtitle": "Eine Bewertung hilft anderen, die App zu finden."
 }

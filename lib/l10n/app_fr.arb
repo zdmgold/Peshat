@@ -117,5 +117,7 @@
   "pickerCameraReads": "L'appareil photo peut lire",
   "pickerTypeOnly": "Saisie ou collage uniquement",
   "cameraCannotReadLanguage": "L'appareil photo ne peut pas lire cette langue. Utilisez Saisir du texte.",
-  "scanResultNote": "Le texte scanné peut contenir des erreurs. Pour la traduction la plus précise, utilisez Saisir du texte."
+  "scanResultNote": "Le texte scanné peut contenir des erreurs. Pour la traduction la plus précise, utilisez Saisir du texte.",
+  "reviewCardTitle": "Vous aimez Peshat ?",
+  "reviewCardSubtitle": "Une note aide d'autres personnes à la trouver."
 }

@@ -305,6 +305,12 @@ class AppLocalizationsKm extends AppLocalizations {
   String get rateAppLabel => 'វាយតម្លៃ Peshat';
 
   @override
+  String get reviewCardTitle => 'តើអ្នកចូលចិត្ត Peshat ទេ?';
+
+  @override
+  String get reviewCardSubtitle => 'ការដាក់ពិន្ទុជួយឱ្យអ្នកផ្សេងរកឃើញវា។';
+
+  @override
   String get notificationsSectionLabel => 'ការជូនដំណឹង';
 
   @override

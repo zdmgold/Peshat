@@ -117,5 +117,7 @@
   "pickerCameraReads": "Fotoaparát umí číst",
   "pickerTypeOnly": "Pouze psát nebo vložit",
   "cameraCannotReadLanguage": "Fotoaparát tento jazyk přečíst neumí. Použijte Zadat text.",
-  "scanResultNote": "Naskenovaný text může obsahovat chyby. Pro nejpřesnější překlad použijte Zadat text."
+  "scanResultNote": "Naskenovaný text může obsahovat chyby. Pro nejpřesnější překlad použijte Zadat text.",
+  "reviewCardTitle": "Líbí se vám Peshat?",
+  "reviewCardSubtitle": "Hodnocení pomáhá ostatním lidem aplikaci najít."
 }

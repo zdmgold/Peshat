@@ -305,6 +305,12 @@ class AppLocalizationsDe extends AppLocalizations {
   String get rateAppLabel => 'Peshat bewerten';
 
   @override
+  String get reviewCardTitle => 'Gefällt dir Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Eine Bewertung hilft anderen, die App zu finden.';
+
+  @override
   String get notificationsSectionLabel => 'Benachrichtigungen';
 
   @override

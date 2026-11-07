@@ -117,5 +117,7 @@
   "pickerCameraReads": "Kameraet kan læse",
   "pickerTypeOnly": "Kun indtastning eller indsættelse",
   "cameraCannotReadLanguage": "Kameraet kan ikke læse dette sprog. Brug Skriv tekst i stedet.",
-  "scanResultNote": "Scannet tekst kan indeholde fejl. Brug Skriv tekst for den mest nøjagtige oversættelse."
+  "scanResultNote": "Scannet tekst kan indeholde fejl. Brug Skriv tekst for den mest nøjagtige oversættelse.",
+  "reviewCardTitle": "Kan du lide Peshat?",
+  "reviewCardSubtitle": "En bedømmelse hjælper andre med at finde den."
 }

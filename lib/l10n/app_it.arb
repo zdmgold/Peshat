@@ -117,5 +117,7 @@
   "pickerCameraReads": "La fotocamera può leggere",
   "pickerTypeOnly": "Solo digitazione o incolla",
   "cameraCannotReadLanguage": "La fotocamera non può leggere questa lingua. Usa Digita testo.",
-  "scanResultNote": "Il testo scansionato può contenere errori. Per la traduzione più accurata usa Digita testo."
+  "scanResultNote": "Il testo scansionato può contenere errori. Per la traduzione più accurata usa Digita testo.",
+  "reviewCardTitle": "Ti piace Peshat?",
+  "reviewCardSubtitle": "Una valutazione aiuta altre persone a trovarla."
 }

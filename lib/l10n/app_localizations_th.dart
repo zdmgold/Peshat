@@ -305,6 +305,12 @@ class AppLocalizationsTh extends AppLocalizations {
   String get rateAppLabel => 'ให้คะแนน Peshat';
 
   @override
+  String get reviewCardTitle => 'ชอบ Peshat ไหม';
+
+  @override
+  String get reviewCardSubtitle => 'การให้คะแนนช่วยให้คนอื่นค้นหาแอปนี้เจอ';
+
+  @override
   String get notificationsSectionLabel => 'การแจ้งเตือน';
 
   @override

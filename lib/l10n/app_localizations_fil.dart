@@ -305,6 +305,12 @@ class AppLocalizationsFil extends AppLocalizations {
   String get rateAppLabel => 'I-rate ang Peshat';
 
   @override
+  String get reviewCardTitle => 'Nag-e-enjoy ka ba sa Peshat?';
+
+  @override
+  String get reviewCardSubtitle => 'Nakakatulong ang rating para mahanap ito ng ibang tao.';
+
+  @override
   String get notificationsSectionLabel => 'Mga notification';
 
   @override
