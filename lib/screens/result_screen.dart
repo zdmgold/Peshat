@@ -6,7 +6,6 @@ import '../widgets/peshat_icon.dart';
 import 'package:flutter/material.dart' show SelectionArea;
 import 'package:flutter/foundation.dart' show kDebugMode;
 import 'package:flutter/services.dart';
-import 'package:path_provider/path_provider.dart';
 import 'package:pdf/pdf.dart';
 import 'package:pdf/widgets.dart' as pw;
 import 'package:share_plus/share_plus.dart';

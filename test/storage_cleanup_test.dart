@@ -27,7 +27,7 @@ void main() {
 
   test('files younger than a day are never deleted, even over the cap', () {
     final out = filesToSweep(
-      [StoredFile('fresh', 80 * mb, now - day ~/ 2), f('old', 10 * mb, 3)],
+      [const StoredFile('fresh', 80 * mb, now - day ~/ 2), f('old', 10 * mb, 3)],
       capBytes: 50 * mb,
       nowMs: now,
     );
