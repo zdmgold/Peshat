@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Solo digitazione o incolla",
   "cameraCannotReadLanguage": "La fotocamera non può leggere questa lingua. Usa Digita testo.",
   "scanResultNote": "Il testo scansionato può contenere errori. Per la traduzione più accurata usa Digita testo.",
-  "reviewCardTitle": "Ti piace Peshat?",
-  "reviewCardSubtitle": "Una valutazione aiuta altre persone a trovarla."
+  "storageLabel": "Archiviazione",
+  "storageClearButton": "Cancella",
+  "storageClearConfirm": "Eliminare i file esportati, i caratteri PDF salvati e le foto di scansione temporanee? I caratteri verranno recuperati di nuovo quando servono.",
+  "storageFullMessage": "Non c'è abbastanza spazio libero sul telefono. Libera dello spazio e riprova."
 }

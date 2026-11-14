@@ -17,6 +17,7 @@ import '../core/providers/history_provider.dart';
 import '../core/providers/scan_provider.dart';
 import '../core/services/interstitial_service.dart';
 import '../core/services/review_prompt.dart';
+import '../core/services/storage_cleanup.dart';
 import '../core/services/pdf_fonts.dart';
 import '../core/services/pdf_raster.dart';
 import '../core/services/scan_scripts.dart';
@@ -436,7 +437,7 @@ class _ResultScreenState extends State<ResultScreen> {
     InterstitialService.instance.onExport();
     final l10n = AppLocalizations.of(context)!;
     try {
-      final dir = await getTemporaryDirectory();
+      final dir = await StorageCleanup.exportsDir();
       late final File file;
       if (asPdf) {
         final scripts = PdfFonts.scriptsIn(text);
@@ -486,6 +487,14 @@ class _ResultScreenState extends State<ResultScreen> {
     } on PdfFontDownloadException {
       if (mounted) {
         CupertinoToast.show(context, l10n.pdfFontDownloadFailed);
+      }
+    } on FileSystemException catch (e) {
+      // errno 28 = no space left on device
+      if (mounted) {
+        CupertinoToast.show(
+          context,
+          e.osError?.errorCode == 28 ? l10n.storageFullMessage : e.toString(),
+        );
       }
     } catch (e) {
       if (mounted) {

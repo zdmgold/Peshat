@@ -305,10 +305,16 @@ class AppLocalizationsId extends AppLocalizations {
   String get rateAppLabel => 'Beri rating Peshat';
 
   @override
-  String get reviewCardTitle => 'Suka dengan Peshat?';
+  String get storageLabel => 'Penyimpanan';
 
   @override
-  String get reviewCardSubtitle => 'Penilaian membantu orang lain menemukannya.';
+  String get storageClearButton => 'Hapus';
+
+  @override
+  String get storageClearConfirm => 'Hapus file yang diekspor, font PDF tersimpan, dan foto pindaian sementara? Font akan diambil lagi saat diperlukan.';
+
+  @override
+  String get storageFullMessage => 'Ruang kosong di ponsel Anda tidak cukup. Kosongkan sebagian ruang lalu coba lagi.';
 
   @override
   String get notificationsSectionLabel => 'Notifikasi';

@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Yalnızca yazma veya yapıştırma",
   "cameraCannotReadLanguage": "Kamera bu dili okuyamaz. Bunun yerine Metin yaz seçeneğini kullanın.",
   "scanResultNote": "Taranan metin hatalar içerebilir. En doğru çeviri için Metin yaz seçeneğini kullanın.",
-  "reviewCardTitle": "Peshat'i beğeniyor musunuz?",
-  "reviewCardSubtitle": "Bir puan vermek, başkalarının uygulamayı bulmasına yardımcı olur."
+  "storageLabel": "Depolama",
+  "storageClearButton": "Temizle",
+  "storageClearConfirm": "Dışa aktarılan dosyalar, kayıtlı PDF yazı tipleri ve geçici tarama fotoğrafları silinsin mi? Yazı tipleri gerektiğinde yeniden alınır.",
+  "storageFullMessage": "Telefonunuzda yeterli boş alan yok. Biraz yer açıp tekrar deneyin."
 }

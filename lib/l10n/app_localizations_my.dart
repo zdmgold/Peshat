@@ -305,10 +305,16 @@ class AppLocalizationsMy extends AppLocalizations {
   String get rateAppLabel => 'Peshat ကို အဆင့်သတ်မှတ်ပါ';
 
   @override
-  String get reviewCardTitle => 'Peshat ကို နှစ်သက်ပါသလား။';
+  String get storageLabel => 'သိုလှောင်ခန်း';
 
   @override
-  String get reviewCardSubtitle => 'အဆင့်သတ်မှတ်ပေးခြင်းက တခြားသူတွေ ရှာတွေ့ဖို့ ကူညီပါတယ်။';
+  String get storageClearButton => 'ရှင်းလင်းရန်';
+
+  @override
+  String get storageClearConfirm => 'ထုတ်ယူထားသော ဖိုင်များ၊ သိမ်းထားသော PDF ဖောင့်များနှင့် ယာယီစကင်ဓာတ်ပုံများကို ဖျက်မလား။ ဖောင့်များကို လိုအပ်သည့်အခါ ပြန်ယူပါမည်။';
+
+  @override
+  String get storageFullMessage => 'သင့်ဖုန်းတွင် နေရာလွတ် မလုံလောက်ပါ။ နေရာအချို့ ရှင်းပြီး ထပ်ကြိုးစားပါ။';
 
   @override
   String get notificationsSectionLabel => 'အသိပေးချက်များ';

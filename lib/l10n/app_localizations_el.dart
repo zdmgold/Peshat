@@ -305,10 +305,16 @@ class AppLocalizationsEl extends AppLocalizations {
   String get rateAppLabel => 'Αξιολογήστε το Peshat';
 
   @override
-  String get reviewCardTitle => 'Σας αρέσει το Peshat;';
+  String get storageLabel => 'Αποθηκευτικός χώρος';
 
   @override
-  String get reviewCardSubtitle => 'Μια βαθμολογία βοηθά και άλλους να το βρουν.';
+  String get storageClearButton => 'Εκκαθάριση';
+
+  @override
+  String get storageClearConfirm => 'Να διαγραφούν τα εξαγμένα αρχεία, οι αποθηκευμένες γραμματοσειρές PDF και οι προσωρινές φωτογραφίες σάρωσης; Οι γραμματοσειρές θα ληφθούν ξανά όταν χρειαστεί.';
+
+  @override
+  String get storageFullMessage => 'Δεν υπάρχει αρκετός ελεύθερος χώρος στο τηλέφωνό σας. Ελευθερώστε χώρο και δοκιμάστε ξανά.';
 
   @override
   String get notificationsSectionLabel => 'Ειδοποιήσεις';

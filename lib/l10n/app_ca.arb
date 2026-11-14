@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Només escriure o enganxar",
   "cameraCannotReadLanguage": "La càmera no pot llegir aquest idioma. Fes servir Escriu text.",
   "scanResultNote": "El text escanejat pot contenir errors. Per a la traducció més precisa, fes servir Escriu text.",
-  "reviewCardTitle": "T'agrada Peshat?",
-  "reviewCardSubtitle": "Una valoració ajuda altres persones a trobar-la."
+  "storageLabel": "Emmagatzematge",
+  "storageClearButton": "Esborra",
+  "storageClearConfirm": "Vols esborrar els fitxers exportats, els tipus de lletra PDF desats i les fotos d'escaneig temporals? Els tipus de lletra es tornaran a obtenir quan calgui.",
+  "storageFullMessage": "No hi ha prou espai lliure al telèfon. Allibera espai i torna-ho a provar."
 }

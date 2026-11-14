@@ -305,10 +305,16 @@ class AppLocalizationsTh extends AppLocalizations {
   String get rateAppLabel => 'ให้คะแนน Peshat';
 
   @override
-  String get reviewCardTitle => 'ชอบ Peshat ไหม';
+  String get storageLabel => 'พื้นที่จัดเก็บ';
 
   @override
-  String get reviewCardSubtitle => 'การให้คะแนนช่วยให้คนอื่นค้นหาแอปนี้เจอ';
+  String get storageClearButton => 'ล้าง';
+
+  @override
+  String get storageClearConfirm => 'ลบไฟล์ที่ส่งออก ฟอนต์ PDF ที่บันทึกไว้ และรูปสแกนชั่วคราวหรือไม่ ฟอนต์จะถูกดึงมาใหม่เมื่อจำเป็น';
+
+  @override
+  String get storageFullMessage => 'พื้นที่ว่างในโทรศัพท์ของคุณไม่เพียงพอ โปรดเพิ่มพื้นที่ว่างแล้วลองอีกครั้ง';
 
   @override
   String get notificationsSectionLabel => 'การแจ้งเตือน';

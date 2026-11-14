@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Doar tastare sau lipire",
   "cameraCannotReadLanguage": "Camera nu poate citi această limbă. Folosiți Introduceți text.",
   "scanResultNote": "Textul scanat poate conține greșeli. Pentru cea mai precisă traducere, folosiți Introduceți text.",
-  "reviewCardTitle": "Vă place Peshat?",
-  "reviewCardSubtitle": "O evaluare îi ajută pe alții să îl găsească."
+  "storageLabel": "Stocare",
+  "storageClearButton": "Șterge",
+  "storageClearConfirm": "Ștergeți fișierele exportate, fonturile PDF salvate și fotografiile temporare de scanare? Fonturile vor fi preluate din nou când este nevoie.",
+  "storageFullMessage": "Nu este suficient spațiu liber pe telefon. Eliberați spațiu și încercați din nou."
 }

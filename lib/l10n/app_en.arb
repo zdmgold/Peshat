@@ -173,12 +173,20 @@
   "pickerTypeOnly": "Type or paste only",
   "cameraCannotReadLanguage": "The camera can't read this language. Use Type text instead.",
   "scanResultNote": "Scanned text can contain mistakes. For the most accurate translation, use Type text.",
-  "reviewCardTitle": "Enjoying Peshat?",
-  "@reviewCardTitle": {
-    "description": "Headline of the home-screen card asking for an app rating."
+  "storageLabel": "Storage",
+  "@storageLabel": {
+    "description": "Settings section/row label for the app's temporary files."
   },
-  "reviewCardSubtitle": "A rating helps other people find it.",
-  "@reviewCardSubtitle": {
-    "description": "Second line of the home-screen rating card."
+  "storageClearButton": "Clear",
+  "@storageClearButton": {
+    "description": "Button that clears the app's temporary files."
+  },
+  "storageClearConfirm": "Delete exported files, stored PDF fonts and temporary scan photos? Fonts are fetched again when needed.",
+  "@storageClearConfirm": {
+    "description": "Confirmation shown before clearing temporary files."
+  },
+  "storageFullMessage": "Not enough free space on your phone. Free some space and try again.",
+  "@storageFullMessage": {
+    "description": "Shown when an export fails because the phone is out of space."
   }
 }

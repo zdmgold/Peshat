@@ -305,10 +305,16 @@ class AppLocalizationsUk extends AppLocalizations {
   String get rateAppLabel => 'Оцінити Peshat';
 
   @override
-  String get reviewCardTitle => 'Подобається Peshat?';
+  String get storageLabel => 'Пам’ять';
 
   @override
-  String get reviewCardSubtitle => 'Оцінка допомагає іншим людям знайти застосунок.';
+  String get storageClearButton => 'Очистити';
+
+  @override
+  String get storageClearConfirm => 'Видалити експортовані файли, збережені шрифти PDF і тимчасові фото сканування? Шрифти буде отримано знову, коли вони знадобляться.';
+
+  @override
+  String get storageFullMessage => 'На телефоні недостатньо вільного місця. Звільніть місце й повторіть спробу.';
 
   @override
   String get notificationsSectionLabel => 'Сповіщення';

@@ -305,10 +305,16 @@ class AppLocalizationsSi extends AppLocalizations {
   String get rateAppLabel => 'Peshat ශ්‍රේණිගත කරන්න';
 
   @override
-  String get reviewCardTitle => 'ඔබට Peshat ප්‍රිය ද?';
+  String get storageLabel => 'ගබඩාව';
 
   @override
-  String get reviewCardSubtitle => 'ඇගයීමක් අන් අයට එය සොයාගැනීමට උපකාරී වේ.';
+  String get storageClearButton => 'මකන්න';
+
+  @override
+  String get storageClearConfirm => 'නිර්යාත කළ ගොනු, සුරැකි PDF අකුරු සහ තාවකාලික ස්කෑන් ඡායාරූප මකන්නද? අවශ්‍ය වූ විට අකුරු නැවත ගෙන එනු ඇත.';
+
+  @override
+  String get storageFullMessage => 'ඔබේ දුරකථනයේ ප්‍රමාණවත් නිදහස් ඉඩක් නැත. ඉඩ ටිකක් නිදහස් කර නැවත උත්සාහ කරන්න.';
 
   @override
   String get notificationsSectionLabel => 'දැනුම්දීම්';

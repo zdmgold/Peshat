@@ -305,10 +305,16 @@ class AppLocalizationsSk extends AppLocalizations {
   String get rateAppLabel => 'Ohodnotiť Peshat';
 
   @override
-  String get reviewCardTitle => 'Páči sa vám Peshat?';
+  String get storageLabel => 'Úložisko';
 
   @override
-  String get reviewCardSubtitle => 'Hodnotenie pomáha ďalším ľuďom aplikáciu nájsť.';
+  String get storageClearButton => 'Vymazať';
+
+  @override
+  String get storageClearConfirm => 'Odstrániť exportované súbory, uložené písma PDF a dočasné fotografie skenov? Písma sa v prípade potreby znova získajú.';
+
+  @override
+  String get storageFullMessage => 'V telefóne nie je dostatok voľného miesta. Uvoľnite miesto a skúste to znova.';
 
   @override
   String get notificationsSectionLabel => 'Oznámenia';

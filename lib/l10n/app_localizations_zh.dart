@@ -305,10 +305,16 @@ class AppLocalizationsZh extends AppLocalizations {
   String get rateAppLabel => '评价 Peshat';
 
   @override
-  String get reviewCardTitle => '喜欢 Peshat 吗？';
+  String get storageLabel => '存储空间';
 
   @override
-  String get reviewCardSubtitle => '评分可以帮助更多人找到它。';
+  String get storageClearButton => '清除';
+
+  @override
+  String get storageClearConfirm => '要删除已导出的文件、已保存的 PDF 字体和临时扫描照片吗？需要时会重新获取字体。';
+
+  @override
+  String get storageFullMessage => '手机可用空间不足。请释放一些空间后重试。';
 
   @override
   String get notificationsSectionLabel => '通知';

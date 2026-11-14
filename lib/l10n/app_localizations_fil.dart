@@ -305,10 +305,16 @@ class AppLocalizationsFil extends AppLocalizations {
   String get rateAppLabel => 'I-rate ang Peshat';
 
   @override
-  String get reviewCardTitle => 'Nag-e-enjoy ka ba sa Peshat?';
+  String get storageLabel => 'Storage';
 
   @override
-  String get reviewCardSubtitle => 'Nakakatulong ang rating para mahanap ito ng ibang tao.';
+  String get storageClearButton => 'I-clear';
+
+  @override
+  String get storageClearConfirm => 'Buburahin ang mga na-export na file, naka-save na PDF font, at pansamantalang larawan ng scan? Kukunin muli ang mga font kapag kailangan.';
+
+  @override
+  String get storageFullMessage => 'Kulang ang libreng espasyo sa iyong telepono. Magbakante ng espasyo at subukang muli.';
 
   @override
   String get notificationsSectionLabel => 'Mga notification';

@@ -305,10 +305,16 @@ class AppLocalizationsMs extends AppLocalizations {
   String get rateAppLabel => 'Nilai Peshat';
 
   @override
-  String get reviewCardTitle => 'Suka Peshat?';
+  String get storageLabel => 'Storan';
 
   @override
-  String get reviewCardSubtitle => 'Penilaian membantu orang lain menemuinya.';
+  String get storageClearButton => 'Kosongkan';
+
+  @override
+  String get storageClearConfirm => 'Padam fail yang dieksport, fon PDF yang disimpan dan foto imbasan sementara? Fon akan diambil semula apabila perlu.';
+
+  @override
+  String get storageFullMessage => 'Ruang kosong pada telefon anda tidak mencukupi. Kosongkan sedikit ruang dan cuba lagi.';
 
   @override
   String get notificationsSectionLabel => 'Pemberitahuan';

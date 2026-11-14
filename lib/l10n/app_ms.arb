@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Taip atau tampal sahaja",
   "cameraCannotReadLanguage": "Kamera tidak dapat membaca bahasa ini. Gunakan Taip teks.",
   "scanResultNote": "Teks yang diimbas mungkin mengandungi kesilapan. Untuk terjemahan paling tepat, gunakan Taip teks.",
-  "reviewCardTitle": "Suka Peshat?",
-  "reviewCardSubtitle": "Penilaian membantu orang lain menemuinya."
+  "storageLabel": "Storan",
+  "storageClearButton": "Kosongkan",
+  "storageClearConfirm": "Padam fail yang dieksport, fon PDF yang disimpan dan foto imbasan sementara? Fon akan diambil semula apabila perlu.",
+  "storageFullMessage": "Ruang kosong pada telefon anda tidak mencukupi. Kosongkan sedikit ruang dan cuba lagi."
 }

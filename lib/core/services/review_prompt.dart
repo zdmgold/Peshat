@@ -7,59 +7,40 @@ const int _kMinTranslations = 10;
 const int _kMinDays = 3;
 const Duration _kAdQuietPeriod = Duration(minutes: 10);
 
-/// Days to wait after the 1st, 2nd and 3rd dismissal. The 4th hides the card
-/// for good.
-const List<int> kReviewCooldownDays = [30, 30, 60];
-
 const String _kPrefDays = 'review_days';
-const String _kPrefDismissCount = 'review_dismiss_count';
-const String _kPrefNextEligibleMs = 'review_next_eligible_ms';
-const String _kPrefDone = 'review_done';
 // Written by InterstitialService; read here only.
 const String _kPrefLifetime = 'lifetime_translations_count';
 const String _kPrefLastInterstitialMs = 'last_interstitial_ms';
 
-/// Pure rule: should the rating card be shown right now?
+/// Pure rule: may Google's in-app review popup be requested right now?
+/// There are no cooldowns of our own (Google controls the quota).
 @visibleForTesting
-bool reviewCardEligible({
-  required bool done,
+bool reviewPopupEligible({
   required int translations,
   required int distinctDays,
   required int nowMs,
-  required int nextEligibleMs,
   required int lastInterstitialMs,
   required bool consentBusy,
-  required bool shownThisLaunch,
+  required bool requestedThisLaunch,
 }) {
-  if (done || shownThisLaunch || consentBusy) return false;
+  if (requestedThisLaunch || consentBusy) return false;
   if (translations < _kMinTranslations) return false;
   if (distinctDays < _kMinDays) return false;
-  if (nowMs < nextEligibleMs) return false;
   if (nowMs - lastInterstitialMs < _kAdQuietPeriod.inMilliseconds) {
     return false;
   }
   return true;
 }
 
-/// Next-eligible time after the [dismissCount]-th dismissal, or null when the
-/// card must stay hidden for good (4th dismissal).
-@visibleForTesting
-int? reviewNextEligibleAfterDismiss(int dismissCount, int nowMs) {
-  if (dismissCount > kReviewCooldownDays.length) return null;
-  return nowMs +
-      Duration(days: kReviewCooldownDays[dismissCount - 1]).inMilliseconds;
-}
-
-/// Home-screen rating card: shown after the 10th translation across at least
-/// 3 different days, at most once per app launch, never within 10 minutes of
-/// an interstitial or while the consent form is up.
+/// Asks Google's in-app review popup after the 10th translation across at
+/// least 3 different days, at most once per app launch, never within 10
+/// minutes of an interstitial or while the consent form is running.
 class ReviewPrompt {
   ReviewPrompt._();
   static final ReviewPrompt instance = ReviewPrompt._();
 
-  final ValueNotifier<bool> visible = ValueNotifier<bool>(false);
   SharedPreferences? _prefs;
-  bool _shownThisLaunch = false;
+  bool _requestedThisLaunch = false;
 
   void init(SharedPreferences prefs) => _prefs = prefs;
 
@@ -77,51 +58,27 @@ class ReviewPrompt {
     p.setStringList(_kPrefDays, [...days, today]);
   }
 
-  /// Re-evaluates; call when the home screen appears or is returned to.
+  /// Re-evaluates; called when the home screen appears or is returned to.
   void refresh() {
     final p = _prefs;
-    if (p == null || visible.value) return;
-    final ok = reviewCardEligible(
-      done: p.getBool(_kPrefDone) ?? false,
+    if (p == null) return;
+    final ok = reviewPopupEligible(
       translations: p.getInt(_kPrefLifetime) ?? 0,
       distinctDays: (p.getStringList(_kPrefDays) ?? const <String>[]).length,
       nowMs: DateTime.now().millisecondsSinceEpoch,
-      nextEligibleMs: p.getInt(_kPrefNextEligibleMs) ?? 0,
       lastInterstitialMs: p.getInt(_kPrefLastInterstitialMs) ?? 0,
       consentBusy: AdConsent.instance.busy,
-      shownThisLaunch: _shownThisLaunch,
+      requestedThisLaunch: _requestedThisLaunch,
     );
-    if (ok) {
-      _shownThisLaunch = true;
-      visible.value = true;
-    }
+    if (!ok) return;
+    _requestedThisLaunch = true;
+    _request();
   }
 
-  Future<void> dismiss() async {
-    visible.value = false;
-    final p = _prefs;
-    if (p == null) return;
-    final count = (p.getInt(_kPrefDismissCount) ?? 0) + 1;
-    await p.setInt(_kPrefDismissCount, count);
-    final next =
-        reviewNextEligibleAfterDismiss(count, DateTime.now().millisecondsSinceEpoch);
-    if (next == null) {
-      await p.setBool(_kPrefDone, true);
-    } else {
-      await p.setInt(_kPrefNextEligibleMs, next);
-    }
-  }
-
-  Future<void> rate() async {
-    visible.value = false;
-    await _prefs?.setBool(_kPrefDone, true);
+  Future<void> _request() async {
     try {
       final review = InAppReview.instance;
-      if (await review.isAvailable()) {
-        await review.requestReview();
-      } else {
-        await review.openStoreListing();
-      }
+      if (await review.isAvailable()) await review.requestReview();
     } catch (_) {
       // The OS may decline to show the prompt; that is not an error.
     }

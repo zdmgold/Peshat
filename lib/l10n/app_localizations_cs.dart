@@ -305,10 +305,16 @@ class AppLocalizationsCs extends AppLocalizations {
   String get rateAppLabel => 'Ohodnotit Peshat';
 
   @override
-  String get reviewCardTitle => 'Líbí se vám Peshat?';
+  String get storageLabel => 'Úložiště';
 
   @override
-  String get reviewCardSubtitle => 'Hodnocení pomáhá ostatním lidem aplikaci najít.';
+  String get storageClearButton => 'Vymazat';
+
+  @override
+  String get storageClearConfirm => 'Smazat exportované soubory, uložená písma PDF a dočasné fotografie skenů? Písma se v případě potřeby znovu získají.';
+
+  @override
+  String get storageFullMessage => 'V telefonu není dost volného místa. Uvolněte místo a zkuste to znovu.';
 
   @override
   String get notificationsSectionLabel => 'Oznámení';

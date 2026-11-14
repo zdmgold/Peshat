@@ -9,13 +9,17 @@ const String _kTestInterstitialUnitId =
     'ca-app-pub-3940256099942544/1033173712';
 
 const int _kThreshold = 5;
-const int _kSessionCap = 4;
-const Duration _kMinInterval = Duration(seconds: 120);
+const Duration _kMinInterval = Duration(minutes: 7);
 const int _kLifetimeWarmUp = 5;
 
 const String _kPrefLaunchedBefore = 'interstitial_launched_before';
 const String _kPrefLifetimeTranslations = 'lifetime_translations_count';
 const String _kPrefLastShownMs = 'last_interstitial_ms';
+
+/// Pure rule: at least [_kMinInterval] since the last interstitial.
+@visibleForTesting
+bool interstitialGapPassed(int nowMs, int lastShownMs) =>
+    nowMs - lastShownMs >= _kMinInterval.inMilliseconds;
 
 /// Singleton managing interstitial ad frequency.
 ///
@@ -23,12 +27,12 @@ const String _kPrefLastShownMs = 'last_interstitial_ms';
 ///   1. Purchased?         → never fire
 ///   2. First session?     → never fire
 ///   3. Warm-up met?       → need >= 5 lifetime translations
-///   4. Session cap?       → max 4 per session
-///   5. Interval?          → min 120s since last
-///   6. Counter >= 5?      → event counter from any of: scan/import/
+///   4. Interval?          → min 7 minutes since last (stored in prefs, so it
+///                            survives restarts); no session/daily/hourly cap
+///   5. Counter >= 5?      → event counter from any of: scan/import/
 ///                            text (all bump on ScanDone), copy, share,
 ///                            export .txt, export .pdf
-/// Only when all six pass does the ad show, and the counter resets.
+/// Only when all five pass does the ad show, and the counter resets.
 class InterstitialService {
   InterstitialService._();
   static final InterstitialService instance = InterstitialService._();
@@ -36,7 +40,6 @@ class InterstitialService {
   SharedPreferences? _prefs;
   bool _purchased = false;
   bool _firstSession = true;
-  int _sessionShown = 0;
   int _eventCounter = 0;
 
   /// Called once from main() after prefs are available.
@@ -90,7 +93,6 @@ class InterstitialService {
               if (!completer.isCompleted) completer.complete(false);
             },
           );
-          _sessionShown++;
           _eventCounter = 0;
           p.setInt(_kPrefLastShownMs,
               DateTime.now().millisecondsSinceEpoch);
@@ -117,17 +119,17 @@ class InterstitialService {
     if (p == null) return false;
     final lifetime = p.getInt(_kPrefLifetimeTranslations) ?? 0;
     if (lifetime < _kLifetimeWarmUp) return false;
-    if (_sessionShown >= _kSessionCap) return false;
     final lastMs = p.getInt(_kPrefLastShownMs) ?? 0;
-    final since = DateTime.now().millisecondsSinceEpoch - lastMs;
-    if (since < _kMinInterval.inMilliseconds) return false;
+    if (!interstitialGapPassed(
+        DateTime.now().millisecondsSinceEpoch, lastMs)) {
+      return false;
+    }
     if (_eventCounter < _kThreshold) return false;
     return true;
   }
 
   @visibleForTesting
   void resetForTest() {
-    _sessionShown = 0;
     _eventCounter = 0;
     _firstSession = true;
     _purchased = false;

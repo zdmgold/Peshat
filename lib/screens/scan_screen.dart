@@ -27,7 +27,6 @@ import '../widgets/ad_slot.dart';
 import '../widgets/cupertino_toast.dart';
 import '../widgets/language_pair_card.dart';
 import '../widgets/recent_item_card.dart';
-import '../widgets/review_card.dart';
 import 'history_screen.dart';
 import 'language_picker_screen.dart';
 import 'result_screen.dart';
@@ -434,7 +433,6 @@ class _ScanScreenState extends State<ScanScreen> {
                       },
                     ),
                     const SizedBox(height: 16),
-                    const ReviewCard(),
                   ],
                 ),
               ),

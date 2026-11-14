@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Saisie ou collage uniquement",
   "cameraCannotReadLanguage": "L'appareil photo ne peut pas lire cette langue. Utilisez Saisir du texte.",
   "scanResultNote": "Le texte scanné peut contenir des erreurs. Pour la traduction la plus précise, utilisez Saisir du texte.",
-  "reviewCardTitle": "Vous aimez Peshat ?",
-  "reviewCardSubtitle": "Une note aide d'autres personnes à la trouver."
+  "storageLabel": "Stockage",
+  "storageClearButton": "Effacer",
+  "storageClearConfirm": "Supprimer les fichiers exportés, les polices PDF enregistrées et les photos de scan temporaires ? Les polices seront récupérées à nouveau si besoin.",
+  "storageFullMessage": "Il n'y a pas assez d'espace libre sur votre téléphone. Libérez de l'espace et réessayez."
 }

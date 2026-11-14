@@ -305,10 +305,16 @@ class AppLocalizationsLo extends AppLocalizations {
   String get rateAppLabel => 'ໃຫ້ຄະແນນ Peshat';
 
   @override
-  String get reviewCardTitle => 'ທ່ານມັກ Peshat ບໍ?';
+  String get storageLabel => 'ການເກັບຂໍ້ມູນ';
 
   @override
-  String get reviewCardSubtitle => 'ການໃຫ້ຄະແນນຊ່ວຍໃຫ້ຄົນອື່ນຊອກຫາມັນໄດ້.';
+  String get storageClearButton => 'ລ້າງ';
+
+  @override
+  String get storageClearConfirm => 'ລຶບໄຟລ໌ທີ່ສົ່ງອອກ, ຟອນ PDF ທີ່ເກັບໄວ້ ແລະ ຮູບສະແກນຊົ່ວຄາວບໍ? ຟອນຈະຖືກເອົາມາໃໝ່ເມື່ອຕ້ອງການ.';
+
+  @override
+  String get storageFullMessage => 'ໂທລະສັບຂອງທ່ານມີພື້ນທີ່ວ່າງບໍ່ພໍ. ກະລຸນາເຮັດພື້ນທີ່ວ່າງ ແລ້ວລອງໃໝ່.';
 
   @override
   String get notificationsSectionLabel => 'ການແຈ້ງເຕືອນ';

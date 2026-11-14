@@ -305,10 +305,16 @@ class AppLocalizationsCa extends AppLocalizations {
   String get rateAppLabel => 'Valora Peshat';
 
   @override
-  String get reviewCardTitle => 'T\'agrada Peshat?';
+  String get storageLabel => 'Emmagatzematge';
 
   @override
-  String get reviewCardSubtitle => 'Una valoració ajuda altres persones a trobar-la.';
+  String get storageClearButton => 'Esborra';
+
+  @override
+  String get storageClearConfirm => 'Vols esborrar els fitxers exportats, els tipus de lletra PDF desats i les fotos d\'escaneig temporals? Els tipus de lletra es tornaran a obtenir quan calgui.';
+
+  @override
+  String get storageFullMessage => 'No hi ha prou espai lliure al telèfon. Allibera espai i torna-ho a provar.';
 
   @override
   String get notificationsSectionLabel => 'Notificacions';

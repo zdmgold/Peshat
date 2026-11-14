@@ -305,10 +305,16 @@ class AppLocalizationsEn extends AppLocalizations {
   String get rateAppLabel => 'Rate Peshat';
 
   @override
-  String get reviewCardTitle => 'Enjoying Peshat?';
+  String get storageLabel => 'Storage';
 
   @override
-  String get reviewCardSubtitle => 'A rating helps other people find it.';
+  String get storageClearButton => 'Clear';
+
+  @override
+  String get storageClearConfirm => 'Delete exported files, stored PDF fonts and temporary scan photos? Fonts are fetched again when needed.';
+
+  @override
+  String get storageFullMessage => 'Not enough free space on your phone. Free some space and try again.';
 
   @override
   String get notificationsSectionLabel => 'Notifications';

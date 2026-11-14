@@ -305,10 +305,16 @@ class AppLocalizationsDa extends AppLocalizations {
   String get rateAppLabel => 'Bedøm Peshat';
 
   @override
-  String get reviewCardTitle => 'Kan du lide Peshat?';
+  String get storageLabel => 'Lagerplads';
 
   @override
-  String get reviewCardSubtitle => 'En bedømmelse hjælper andre med at finde den.';
+  String get storageClearButton => 'Ryd';
+
+  @override
+  String get storageClearConfirm => 'Vil du slette eksporterede filer, gemte PDF-skrifttyper og midlertidige scanningsbilleder? Skrifttyper hentes igen, når de skal bruges.';
+
+  @override
+  String get storageFullMessage => 'Der er ikke nok ledig plads på din telefon. Frigør plads, og prøv igen.';
 
   @override
   String get notificationsSectionLabel => 'Notifikationer';

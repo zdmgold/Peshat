@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Chỉ nhập hoặc dán",
   "cameraCannotReadLanguage": "Camera không thể đọc ngôn ngữ này. Hãy dùng Nhập văn bản.",
   "scanResultNote": "Văn bản quét có thể có lỗi. Để dịch chính xác nhất, hãy dùng Nhập văn bản.",
-  "reviewCardTitle": "Bạn thích Peshat chứ?",
-  "reviewCardSubtitle": "Đánh giá giúp người khác tìm thấy ứng dụng."
+  "storageLabel": "Bộ nhớ",
+  "storageClearButton": "Xóa",
+  "storageClearConfirm": "Xóa các tệp đã xuất, phông chữ PDF đã lưu và ảnh quét tạm thời? Phông chữ sẽ được lấy lại khi cần.",
+  "storageFullMessage": "Điện thoại của bạn không còn đủ dung lượng trống. Hãy giải phóng bớt dung lượng rồi thử lại."
 }

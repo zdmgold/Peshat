@@ -305,10 +305,16 @@ class AppLocalizationsTe extends AppLocalizations {
   String get rateAppLabel => 'Peshatను రేట్ చేయండి';
 
   @override
-  String get reviewCardTitle => 'మీకు Peshat నచ్చిందా?';
+  String get storageLabel => 'నిల్వ';
 
   @override
-  String get reviewCardSubtitle => 'రేటింగ్ ఇస్తే ఇతరులు దీన్ని కనుగొనడానికి సహాయపడుతుంది.';
+  String get storageClearButton => 'క్లియర్ చేయి';
+
+  @override
+  String get storageClearConfirm => 'ఎగుమతి చేసిన ఫైళ్లు, సేవ్ చేసిన PDF ఫాంట్‌లు, తాత్కాలిక స్కాన్ ఫోటోలను తొలగించాలా? అవసరమైనప్పుడు ఫాంట్‌లు మళ్లీ తీసుకోబడతాయి.';
+
+  @override
+  String get storageFullMessage => 'మీ ఫోన్‌లో తగినంత ఖాళీ స్థలం లేదు. కొంత స్థలం ఖాళీ చేసి మళ్లీ ప్రయత్నించండి.';
 
   @override
   String get notificationsSectionLabel => 'నోటిఫికేషన్‌లు';

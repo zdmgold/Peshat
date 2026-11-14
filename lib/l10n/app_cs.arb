@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Pouze psát nebo vložit",
   "cameraCannotReadLanguage": "Fotoaparát tento jazyk přečíst neumí. Použijte Zadat text.",
   "scanResultNote": "Naskenovaný text může obsahovat chyby. Pro nejpřesnější překlad použijte Zadat text.",
-  "reviewCardTitle": "Líbí se vám Peshat?",
-  "reviewCardSubtitle": "Hodnocení pomáhá ostatním lidem aplikaci najít."
+  "storageLabel": "Úložiště",
+  "storageClearButton": "Vymazat",
+  "storageClearConfirm": "Smazat exportované soubory, uložená písma PDF a dočasné fotografie skenů? Písma se v případě potřeby znovu získají.",
+  "storageFullMessage": "V telefonu není dost volného místa. Uvolněte místo a zkuste to znovu."
 }

@@ -305,10 +305,16 @@ class AppLocalizationsHu extends AppLocalizations {
   String get rateAppLabel => 'Peshat értékelése';
 
   @override
-  String get reviewCardTitle => 'Tetszik a Peshat?';
+  String get storageLabel => 'Tárhely';
 
   @override
-  String get reviewCardSubtitle => 'Az értékelés segít másoknak megtalálni.';
+  String get storageClearButton => 'Törlés';
+
+  @override
+  String get storageClearConfirm => 'Törli az exportált fájlokat, a mentett PDF-betűtípusokat és az ideiglenes beolvasási fotókat? A betűtípusok szükség esetén újra beszerzésre kerülnek.';
+
+  @override
+  String get storageFullMessage => 'Nincs elég szabad hely a telefonján. Szabadítson fel helyet, és próbálja újra.';
 
   @override
   String get notificationsSectionLabel => 'Értesítések';

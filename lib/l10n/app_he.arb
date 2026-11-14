@@ -118,6 +118,8 @@
   "pickerTypeOnly": "הקלדה או הדבקה בלבד",
   "cameraCannotReadLanguage": "המצלמה לא יכולה לקרוא שפה זו. השתמשו ב״הקלדת טקסט״ במקום.",
   "scanResultNote": "טקסט שנסרק עלול להכיל טעויות. לתרגום המדויק ביותר השתמשו ב״הקלדת טקסט״.",
-  "reviewCardTitle": "נהנים מ-Peshat?",
-  "reviewCardSubtitle": "דירוג עוזר לאנשים אחרים למצוא אותה."
+  "storageLabel": "אחסון",
+  "storageClearButton": "ניקוי",
+  "storageClearConfirm": "למחוק את הקבצים שיוצאו, גופני ה-PDF השמורים ותמונות הסריקה הזמניות? הגופנים יימשכו שוב לפי הצורך.",
+  "storageFullMessage": "אין מספיק מקום פנוי בטלפון שלך. פנו מקום ונסו שוב."
 }

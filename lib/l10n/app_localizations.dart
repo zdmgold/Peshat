@@ -775,17 +775,31 @@ abstract class AppLocalizations {
   /// **'Rate Peshat'**
   String get rateAppLabel;
 
-  /// Headline of the home-screen card asking for an app rating.
+  /// Settings section/row label for the app's temporary files.
   ///
   /// In en, this message translates to:
-  /// **'Enjoying Peshat?'**
-  String get reviewCardTitle;
+  /// **'Storage'**
+  String get storageLabel;
 
-  /// Second line of the home-screen rating card.
+  /// Button that clears the app's temporary files.
   ///
   /// In en, this message translates to:
-  /// **'A rating helps other people find it.'**
-  String get reviewCardSubtitle;
+  /// **'Clear'**
+  String get storageClearButton;
+
+  /// Confirmation shown before clearing temporary files.
+  ///
+  /// In en, this message translates to:
+  /// **'Delete exported files, stored PDF fonts and temporary scan photos? Fonts are fetched again when needed.'**
+  String get storageClearConfirm;
+
+  /// Shown when an export fails because the phone is out of space.
+  ///
+  /// In en, this message translates to:
+  /// **'Not enough free space on your phone. Free some space and try again.'**
+  String get storageFullMessage;
+
+
 
   /// Settings section header for the notifications group.
   ///

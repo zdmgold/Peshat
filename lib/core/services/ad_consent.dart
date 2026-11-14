@@ -2,24 +2,30 @@ import 'dart:async';
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 
-/// Google UMP consent handling. Ads are only initialised and requested once
-/// the SDK says consent allows it (see [canRequestAds]).
+/// Pure rule: an error always allows ads (the SDK then uses the last saved
+/// choice and Google decides what to serve); otherwise Google's answer is used.
+@visibleForTesting
+bool consentOutcome({required bool errored, required bool sdkCanRequestAds}) =>
+    errored || sdkCanRequestAds;
+
+/// Pure rule: a failed consent check is worth retrying on the next foreground
+/// so a form that could not be shown still gets another chance.
+@visibleForTesting
+bool shouldRetryConsent({
+  required bool infoFailed,
+  required bool refreshFailed,
+}) =>
+    infoFailed || refreshFailed;
+
+/// Google UMP consent handling. Ads are initialised and requested once the
+/// SDK says consent allows it, or when the consent check itself errors (then
+/// the SDK uses the last saved choice; see [consentOutcome]).
 ///
 /// If a person declines, Google decides what (limited or non-personalised ads,
 /// or none) is allowed; this class only follows its answer.
 ///
 /// A consent message (GDPR / US states) must be created in the AdMob console
 /// for the app; without one, users in regions that require consent get no ads.
-/// Pure rule: a failed consent check is worth retrying when it failed and the
-/// SDK still says ads can't be requested. Google's answer is never overridden.
-@visibleForTesting
-bool shouldRetryConsent({
-  required bool infoFailed,
-  required bool refreshFailed,
-  required bool canRequestAds,
-}) =>
-    (infoFailed || refreshFailed) && !canRequestAds;
-
 class AdConsent {
   AdConsent._();
   static final AdConsent instance = AdConsent._();
@@ -69,7 +75,6 @@ class AdConsent {
         !shouldRetryConsent(
           infoFailed: _infoFailed,
           refreshFailed: _refreshFailed,
-          canRequestAds: canRequestAds.value,
         )) {
       return;
     }
@@ -91,20 +96,30 @@ class AdConsent {
 
   Future<void> _refresh() async {
     _refreshFailed = false;
+    var sdkCan = false;
     try {
-      final can = await ConsentInformation.instance.canRequestAds();
+      sdkCan = await ConsentInformation.instance.canRequestAds();
       privacyOptionsRequired.value = await ConsentInformation.instance
               .getPrivacyOptionsRequirementStatus() ==
           PrivacyOptionsRequirementStatus.required;
-      if (can && !_adsStarted) {
-        _adsStarted = true;
-        await MobileAds.instance.initialize();
-      }
-      canRequestAds.value = can;
     } catch (e) {
       // Not silent: remember it so the next foreground retries.
       _refreshFailed = true;
       debugPrint('Ad consent refresh failed: $e');
     }
+    final can = consentOutcome(
+      errored: _infoFailed || _refreshFailed,
+      sdkCanRequestAds: sdkCan,
+    );
+    try {
+      if (can && !_adsStarted) {
+        _adsStarted = true;
+        await MobileAds.instance.initialize();
+      }
+    } catch (e) {
+      _adsStarted = false;
+      debugPrint('Mobile Ads init failed: $e');
+    }
+    canRequestAds.value = can;
   }
 }

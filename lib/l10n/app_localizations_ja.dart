@@ -305,10 +305,16 @@ class AppLocalizationsJa extends AppLocalizations {
   String get rateAppLabel => 'Peshatを評価';
 
   @override
-  String get reviewCardTitle => 'Peshatを気に入っていただけましたか？';
+  String get storageLabel => 'ストレージ';
 
   @override
-  String get reviewCardSubtitle => '評価していただくと、ほかの人がこのアプリを見つけやすくなります。';
+  String get storageClearButton => '消去';
+
+  @override
+  String get storageClearConfirm => '書き出したファイル、保存済みのPDFフォント、一時的なスキャン写真を削除しますか？フォントは必要なときに再度取得されます。';
+
+  @override
+  String get storageFullMessage => 'スマートフォンの空き容量が足りません。容量を空けてからもう一度お試しください。';
 
   @override
   String get notificationsSectionLabel => '通知';

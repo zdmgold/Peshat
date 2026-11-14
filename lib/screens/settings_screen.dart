@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import '../widgets/press_scale.dart';
 import '../core/utils/app_icons.dart';
 import '../widgets/peshat_icon.dart';
-import 'package:in_app_review/in_app_review.dart';
 import 'package:package_info_plus/package_info_plus.dart';
 import 'package:share_plus/share_plus.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -14,6 +13,7 @@ import '../core/providers/theme_provider.dart';
 import '../core/providers/ui_locale_provider.dart';
 import '../core/providers/notification_provider.dart';
 import '../core/services/ad_consent.dart';
+import '../core/services/storage_cleanup.dart';
 import '../core/services/iap_service.dart';
 import '../core/services/language_names.dart';
 import '../core/utils/app_colors.dart';
@@ -76,6 +76,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
   void initState() {
     super.initState();
     AdConsent.instance.privacyOptionsRequired.addListener(_onConsentChanged);
+    _loadStorage();
     PackageInfo.fromPlatform().then((info) {
       if (mounted) {
         setState(() => _version = '${info.version}+${info.buildNumber}');
@@ -150,14 +151,36 @@ class _SettingsScreenState extends State<SettingsScreen> {
     );
   }
 
-  Future<void> _requestReview() async {
-    try {
-      final review = InAppReview.instance;
-      if (await review.isAvailable()) {
-        await review.requestReview();
-      }
-    } catch (_) {
-      // The OS may decline to show the prompt; that is not an error.
+  int _storageBytes = 0;
+
+  Future<void> _loadStorage() async {
+    final n = await StorageCleanup.usedBytes();
+    if (mounted) setState(() => _storageBytes = n);
+  }
+
+  Future<void> _confirmClearStorage() async {
+    final l10n = AppLocalizations.of(context)!;
+    final ok = await showCupertinoDialog<bool>(
+      context: context,
+      builder: (ctx) => CupertinoAlertDialog(
+        title: Text(l10n.storageLabel),
+        content: Text(l10n.storageClearConfirm),
+        actions: [
+          CupertinoDialogAction(
+            onPressed: () => Navigator.pop(ctx, false),
+            child: Text(l10n.cancelButtonLabel),
+          ),
+          CupertinoDialogAction(
+            isDestructiveAction: true,
+            onPressed: () => Navigator.pop(ctx, true),
+            child: Text(l10n.storageClearButton),
+          ),
+        ],
+      ),
+    );
+    if (ok == true) {
+      await StorageCleanup.clearAll();
+      await _loadStorage();
     }
   }
 
@@ -349,6 +372,28 @@ class _SettingsScreenState extends State<SettingsScreen> {
                     ],
                   ),
 
+                  // --- Storage ---
+                  CupertinoListSection.insetGrouped(
+                    backgroundColor: pageBg,
+                    decoration: cardDecoration,
+                    header: hdr(l10n.storageLabel),
+                    children: [
+                      CupertinoListTile(
+                        backgroundColor: cardBg,
+                        leading: const PeshatIcon(icon: AppIcons.delete),
+                        title: Text(l10n.storageLabel, maxLines: 2),
+                        subtitle: Text(StorageCleanup.formatBytes(_storageBytes)),
+                        trailing: CupertinoButton(
+                          padding: EdgeInsets.zero,
+                          minSize: 32,
+                          onPressed:
+                              _storageBytes == 0 ? null : _confirmClearStorage,
+                          child: Text(l10n.storageClearButton),
+                        ),
+                      ),
+                    ],
+                  ),
+
                   // --- Notifications ---
                   CupertinoListSection.insetGrouped(
                     backgroundColor: pageBg,
@@ -488,7 +533,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
                         leading: const PeshatIcon(icon: AppIcons.verified),
                         title: Text(l10n.rateAppLabel, maxLines: 2),
                         trailing: _kChevron,
-                        onTap: _requestReview,
+                        onTap: () => _openUrl(_playStoreUrl),
                       ),
                       CupertinoListTile(
                         backgroundColor: cardBg,

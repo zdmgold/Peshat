@@ -305,10 +305,16 @@ class AppLocalizationsDe extends AppLocalizations {
   String get rateAppLabel => 'Peshat bewerten';
 
   @override
-  String get reviewCardTitle => 'Gefällt dir Peshat?';
+  String get storageLabel => 'Speicher';
 
   @override
-  String get reviewCardSubtitle => 'Eine Bewertung hilft anderen, die App zu finden.';
+  String get storageClearButton => 'Leeren';
+
+  @override
+  String get storageClearConfirm => 'Exportierte Dateien, gespeicherte PDF-Schriften und temporäre Scan-Fotos löschen? Schriften werden bei Bedarf erneut geholt.';
+
+  @override
+  String get storageFullMessage => 'Auf deinem Handy ist nicht genug Speicherplatz frei. Gib etwas Platz frei und versuche es erneut.';
 
   @override
   String get notificationsSectionLabel => 'Benachrichtigungen';

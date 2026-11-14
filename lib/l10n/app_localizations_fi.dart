@@ -305,10 +305,16 @@ class AppLocalizationsFi extends AppLocalizations {
   String get rateAppLabel => 'Arvioi Peshat';
 
   @override
-  String get reviewCardTitle => 'Pidätkö Peshatista?';
+  String get storageLabel => 'Tallennustila';
 
   @override
-  String get reviewCardSubtitle => 'Arvostelu auttaa muita löytämään sovelluksen.';
+  String get storageClearButton => 'Tyhjennä';
+
+  @override
+  String get storageClearConfirm => 'Poistetaanko viedyt tiedostot, tallennetut PDF-fontit ja tilapäiset skannauskuvat? Fontit haetaan uudelleen tarvittaessa.';
+
+  @override
+  String get storageFullMessage => 'Puhelimessa ei ole tarpeeksi vapaata tilaa. Vapauta tilaa ja yritä uudelleen.';
 
   @override
   String get notificationsSectionLabel => 'Ilmoitukset';

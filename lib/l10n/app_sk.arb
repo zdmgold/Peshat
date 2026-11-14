@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Iba písanie alebo vloženie",
   "cameraCannotReadLanguage": "Fotoaparát tento jazyk prečítať nevie. Použite Napísať text.",
   "scanResultNote": "Naskenovaný text môže obsahovať chyby. Pre najpresnejší preklad použite Napísať text.",
-  "reviewCardTitle": "Páči sa vám Peshat?",
-  "reviewCardSubtitle": "Hodnotenie pomáha ďalším ľuďom aplikáciu nájsť."
+  "storageLabel": "Úložisko",
+  "storageClearButton": "Vymazať",
+  "storageClearConfirm": "Odstrániť exportované súbory, uložené písma PDF a dočasné fotografie skenov? Písma sa v prípade potreby znova získajú.",
+  "storageFullMessage": "V telefóne nie je dostatok voľného miesta. Uvoľnite miesto a skúste to znova."
 }

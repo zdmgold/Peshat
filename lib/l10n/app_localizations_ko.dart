@@ -305,10 +305,16 @@ class AppLocalizationsKo extends AppLocalizations {
   String get rateAppLabel => 'Peshat 평가하기';
 
   @override
-  String get reviewCardTitle => 'Peshat가 마음에 드시나요?';
+  String get storageLabel => '저장 공간';
 
   @override
-  String get reviewCardSubtitle => '평점은 다른 사람들이 앱을 찾는 데 도움이 됩니다.';
+  String get storageClearButton => '지우기';
+
+  @override
+  String get storageClearConfirm => '내보낸 파일, 저장된 PDF 글꼴, 임시 스캔 사진을 삭제할까요? 글꼴은 필요할 때 다시 가져옵니다.';
+
+  @override
+  String get storageFullMessage => '휴대전화의 여유 공간이 부족합니다. 공간을 확보한 후 다시 시도해 주세요.';
 
   @override
   String get notificationsSectionLabel => '알림';

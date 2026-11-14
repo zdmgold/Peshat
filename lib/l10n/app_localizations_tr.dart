@@ -305,10 +305,16 @@ class AppLocalizationsTr extends AppLocalizations {
   String get rateAppLabel => 'Peshat\'ı değerlendir';
 
   @override
-  String get reviewCardTitle => 'Peshat\'i beğeniyor musunuz?';
+  String get storageLabel => 'Depolama';
 
   @override
-  String get reviewCardSubtitle => 'Bir puan vermek, başkalarının uygulamayı bulmasına yardımcı olur.';
+  String get storageClearButton => 'Temizle';
+
+  @override
+  String get storageClearConfirm => 'Dışa aktarılan dosyalar, kayıtlı PDF yazı tipleri ve geçici tarama fotoğrafları silinsin mi? Yazı tipleri gerektiğinde yeniden alınır.';
+
+  @override
+  String get storageFullMessage => 'Telefonunuzda yeterli boş alan yok. Biraz yer açıp tekrar deneyin.';
 
   @override
   String get notificationsSectionLabel => 'Bildirimler';

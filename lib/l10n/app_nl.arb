@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Alleen typen of plakken",
   "cameraCannotReadLanguage": "De camera kan deze taal niet lezen. Gebruik in plaats daarvan Tekst typen.",
   "scanResultNote": "Gescande tekst kan fouten bevatten. Gebruik Tekst typen voor de nauwkeurigste vertaling.",
-  "reviewCardTitle": "Vind je Peshat leuk?",
-  "reviewCardSubtitle": "Een beoordeling helpt anderen om de app te vinden."
+  "storageLabel": "Opslag",
+  "storageClearButton": "Wissen",
+  "storageClearConfirm": "Geëxporteerde bestanden, opgeslagen pdf-lettertypen en tijdelijke scanfoto's verwijderen? Lettertypen worden opnieuw opgehaald wanneer nodig.",
+  "storageFullMessage": "Er is niet genoeg vrije ruimte op je telefoon. Maak ruimte vrij en probeer het opnieuw."
 }

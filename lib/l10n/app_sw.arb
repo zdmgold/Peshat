@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Andika au bandika tu",
   "cameraCannotReadLanguage": "Kamera haiwezi kusoma lugha hii. Tumia Andika maandishi badala yake.",
   "scanResultNote": "Maandishi yaliyochanganuliwa yanaweza kuwa na makosa. Kwa tafsiri sahihi zaidi, tumia Andika maandishi.",
-  "reviewCardTitle": "Je, unafurahia Peshat?",
-  "reviewCardSubtitle": "Ukadiriaji huwasaidia watu wengine kuipata."
+  "storageLabel": "Hifadhi",
+  "storageClearButton": "Futa",
+  "storageClearConfirm": "Je, ufute faili zilizohamishwa, fonti za PDF zilizohifadhiwa na picha za muda za uchanganuzi? Fonti zitapatikana tena zikihitajika.",
+  "storageFullMessage": "Hakuna nafasi ya kutosha kwenye simu yako. Futa vitu ili upate nafasi, kisha ujaribu tena."
 }

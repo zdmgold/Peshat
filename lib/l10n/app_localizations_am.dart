@@ -305,10 +305,16 @@ class AppLocalizationsAm extends AppLocalizations {
   String get rateAppLabel => 'ፔሻትን ደረጃ ይስጡ';
 
   @override
-  String get reviewCardTitle => 'በፔሻት ደስተኛ ነዎት?';
+  String get storageLabel => 'ማከማቻ';
 
   @override
-  String get reviewCardSubtitle => 'ደረጃ መስጠት ሌሎች ሰዎች እንዲያገኙት ይረዳል።';
+  String get storageClearButton => 'አጽዳ';
+
+  @override
+  String get storageClearConfirm => 'የተላኩ ፋይሎችን፣ የተቀመጡ የPDF ቅርጸ ቁምፊዎችን እና ጊዜያዊ የስካን ፎቶዎችን ይሰርዙ? ቅርጸ ቁምፊዎች ሲያስፈልጉ እንደገና ይመጣሉ።';
+
+  @override
+  String get storageFullMessage => 'በስልክዎ ላይ በቂ ነጻ ቦታ የለም። ቦታ ያስለቅቁና እንደገና ይሞክሩ።';
 
   @override
   String get notificationsSectionLabel => 'ማሳወቂያዎች';

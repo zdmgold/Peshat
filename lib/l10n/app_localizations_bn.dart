@@ -305,10 +305,16 @@ class AppLocalizationsBn extends AppLocalizations {
   String get rateAppLabel => 'Peshat রেটিং দিন';
 
   @override
-  String get reviewCardTitle => 'Peshat কি আপনার ভালো লাগছে?';
+  String get storageLabel => 'স্টোরেজ';
 
   @override
-  String get reviewCardSubtitle => 'রেটিং দিলে অন্যরা এটি খুঁজে পেতে সাহায্য পায়।';
+  String get storageClearButton => 'মুছুন';
+
+  @override
+  String get storageClearConfirm => 'এক্সপোর্ট করা ফাইল, সংরক্ষিত PDF ফন্ট এবং অস্থায়ী স্ক্যান ছবি মুছবেন? প্রয়োজন হলে ফন্ট আবার আনা হবে।';
+
+  @override
+  String get storageFullMessage => 'আপনার ফোনে পর্যাপ্ত খালি জায়গা নেই। কিছু জায়গা খালি করে আবার চেষ্টা করুন।';
 
   @override
   String get notificationsSectionLabel => 'বিজ্ঞপ্তি';

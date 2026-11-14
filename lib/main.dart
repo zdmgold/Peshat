@@ -21,6 +21,7 @@ import 'core/providers/ui_locale_provider.dart';
 import 'l10n/app_localizations.dart';
 import 'core/services/interstitial_service.dart';
 import 'core/services/review_prompt.dart';
+import 'core/services/storage_cleanup.dart';
 import 'core/services/notification_service.dart';
 import 'core/providers/notification_provider.dart';
 import 'widgets/ad_slot.dart';
@@ -36,6 +37,7 @@ Future<void> main() async {
   }
   await InterstitialService.instance.init(prefs);
   ReviewPrompt.instance.init(prefs);
+  unawaited(StorageCleanup.sweepAtStartup());
   await NotificationService.instance.init(prefs);
   runApp(PeshatApp(prefs: prefs));
 }

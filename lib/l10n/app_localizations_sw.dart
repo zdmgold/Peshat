@@ -305,10 +305,16 @@ class AppLocalizationsSw extends AppLocalizations {
   String get rateAppLabel => 'Kadiria Peshat';
 
   @override
-  String get reviewCardTitle => 'Je, unafurahia Peshat?';
+  String get storageLabel => 'Hifadhi';
 
   @override
-  String get reviewCardSubtitle => 'Ukadiriaji huwasaidia watu wengine kuipata.';
+  String get storageClearButton => 'Futa';
+
+  @override
+  String get storageClearConfirm => 'Je, ufute faili zilizohamishwa, fonti za PDF zilizohifadhiwa na picha za muda za uchanganuzi? Fonti zitapatikana tena zikihitajika.';
+
+  @override
+  String get storageFullMessage => 'Hakuna nafasi ya kutosha kwenye simu yako. Futa vitu ili upate nafasi, kisha ujaribu tena.';
 
   @override
   String get notificationsSectionLabel => 'Arifa';

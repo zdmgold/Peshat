@@ -305,10 +305,16 @@ class AppLocalizationsPt extends AppLocalizations {
   String get rateAppLabel => 'Avaliar o Peshat';
 
   @override
-  String get reviewCardTitle => 'Gostando do Peshat?';
+  String get storageLabel => 'Armazenamento';
 
   @override
-  String get reviewCardSubtitle => 'Uma avaliação ajuda outras pessoas a encontrá-lo.';
+  String get storageClearButton => 'Limpar';
+
+  @override
+  String get storageClearConfirm => 'Excluir os arquivos exportados, as fontes PDF salvas e as fotos de digitalização temporárias? As fontes serão obtidas novamente quando necessário.';
+
+  @override
+  String get storageFullMessage => 'Não há espaço livre suficiente no seu celular. Libere espaço e tente novamente.';
 
   @override
   String get notificationsSectionLabel => 'Notificações';

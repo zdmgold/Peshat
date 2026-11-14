@@ -305,10 +305,16 @@ class AppLocalizationsRo extends AppLocalizations {
   String get rateAppLabel => 'Evaluează Peshat';
 
   @override
-  String get reviewCardTitle => 'Vă place Peshat?';
+  String get storageLabel => 'Stocare';
 
   @override
-  String get reviewCardSubtitle => 'O evaluare îi ajută pe alții să îl găsească.';
+  String get storageClearButton => 'Șterge';
+
+  @override
+  String get storageClearConfirm => 'Ștergeți fișierele exportate, fonturile PDF salvate și fotografiile temporare de scanare? Fonturile vor fi preluate din nou când este nevoie.';
+
+  @override
+  String get storageFullMessage => 'Nu este suficient spațiu liber pe telefon. Eliberați spațiu și încercați din nou.';
 
   @override
   String get notificationsSectionLabel => 'Notificări';

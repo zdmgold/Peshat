@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Solo escribir o pegar",
   "cameraCannotReadLanguage": "La cámara no puede leer este idioma. Usa Escribir texto.",
   "scanResultNote": "El texto escaneado puede contener errores. Para una traducción más precisa, usa Escribir texto.",
-  "reviewCardTitle": "¿Te gusta Peshat?",
-  "reviewCardSubtitle": "Una valoración ayuda a otras personas a encontrarla."
+  "storageLabel": "Almacenamiento",
+  "storageClearButton": "Borrar",
+  "storageClearConfirm": "¿Borrar los archivos exportados, las fuentes PDF guardadas y las fotos de escaneo temporales? Las fuentes se volverán a obtener cuando hagan falta.",
+  "storageFullMessage": "No hay espacio libre suficiente en tu teléfono. Libera espacio e inténtalo de nuevo."
 }

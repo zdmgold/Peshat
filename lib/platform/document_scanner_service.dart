@@ -1,4 +1,5 @@
 import 'package:flutter_doc_scanner/flutter_doc_scanner.dart';
+import '../core/services/storage_cleanup.dart';
 
 class DocumentScannerService {
   Future<List<String>> scan() async {
@@ -8,7 +9,9 @@ class DocumentScannerService {
         quality: 1.0,
       );
       if (result == null || result.images.isEmpty) return const [];
-      return result.images.map(_normalizePath).toList();
+      final paths = result.images.map(_normalizePath).toList();
+      await StorageCleanup.rememberScanPaths(paths);
+      return paths;
     } catch (_) {
       return const [];
     }

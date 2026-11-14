@@ -305,10 +305,16 @@ class AppLocalizationsVi extends AppLocalizations {
   String get rateAppLabel => 'Đánh giá Peshat';
 
   @override
-  String get reviewCardTitle => 'Bạn thích Peshat chứ?';
+  String get storageLabel => 'Bộ nhớ';
 
   @override
-  String get reviewCardSubtitle => 'Đánh giá giúp người khác tìm thấy ứng dụng.';
+  String get storageClearButton => 'Xóa';
+
+  @override
+  String get storageClearConfirm => 'Xóa các tệp đã xuất, phông chữ PDF đã lưu và ảnh quét tạm thời? Phông chữ sẽ được lấy lại khi cần.';
+
+  @override
+  String get storageFullMessage => 'Điện thoại của bạn không còn đủ dung lượng trống. Hãy giải phóng bớt dung lượng rồi thử lại.';
 
   @override
   String get notificationsSectionLabel => 'Thông báo';

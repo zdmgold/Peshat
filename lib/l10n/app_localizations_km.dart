@@ -305,10 +305,16 @@ class AppLocalizationsKm extends AppLocalizations {
   String get rateAppLabel => 'វាយតម្លៃ Peshat';
 
   @override
-  String get reviewCardTitle => 'តើអ្នកចូលចិត្ត Peshat ទេ?';
+  String get storageLabel => 'ការផ្ទុក';
 
   @override
-  String get reviewCardSubtitle => 'ការដាក់ពិន្ទុជួយឱ្យអ្នកផ្សេងរកឃើញវា។';
+  String get storageClearButton => 'សម្អាត';
+
+  @override
+  String get storageClearConfirm => 'លុបឯកសារដែលបាននាំចេញ ពុម្ពអក្សរ PDF ដែលបានរក្សាទុក និងរូបថតស្កេនបណ្តោះអាសន្នឬ? ពុម្ពអក្សរនឹងត្រូវយកមកវិញនៅពេលត្រូវការ។';
+
+  @override
+  String get storageFullMessage => 'ទូរសព្ទរបស់អ្នកមិនមានទំហំទំនេរគ្រប់គ្រាន់ទេ។ សូមបង្កើតទំហំទំនេរ រួចព្យាយាមម្តងទៀត។';
 
   @override
   String get notificationsSectionLabel => 'ការជូនដំណឹង';

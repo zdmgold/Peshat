@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Nur Eingabe oder Einfügen",
   "cameraCannotReadLanguage": "Die Kamera kann diese Sprache nicht lesen. Nutze stattdessen Text eingeben.",
   "scanResultNote": "Gescannter Text kann Fehler enthalten. Für die genaueste Übersetzung nutze Text eingeben.",
-  "reviewCardTitle": "Gefällt dir Peshat?",
-  "reviewCardSubtitle": "Eine Bewertung hilft anderen, die App zu finden."
+  "storageLabel": "Speicher",
+  "storageClearButton": "Leeren",
+  "storageClearConfirm": "Exportierte Dateien, gespeicherte PDF-Schriften und temporäre Scan-Fotos löschen? Schriften werden bei Bedarf erneut geholt.",
+  "storageFullMessage": "Auf deinem Handy ist nicht genug Speicherplatz frei. Gib etwas Platz frei und versuche es erneut."
 }

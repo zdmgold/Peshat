@@ -118,6 +118,8 @@
   "pickerTypeOnly": "I-type o i-paste lang",
   "cameraCannotReadLanguage": "Hindi mababasa ng camera ang wikang ito. Gamitin na lang ang Mag-type ng teksto.",
   "scanResultNote": "Maaaring may mali ang na-scan na teksto. Para sa pinakatumpak na pagsasalin, gamitin ang Mag-type ng teksto.",
-  "reviewCardTitle": "Nag-e-enjoy ka ba sa Peshat?",
-  "reviewCardSubtitle": "Nakakatulong ang rating para mahanap ito ng ibang tao."
+  "storageLabel": "Storage",
+  "storageClearButton": "I-clear",
+  "storageClearConfirm": "Buburahin ang mga na-export na file, naka-save na PDF font, at pansamantalang larawan ng scan? Kukunin muli ang mga font kapag kailangan.",
+  "storageFullMessage": "Kulang ang libreng espasyo sa iyong telepono. Magbakante ng espasyo at subukang muli."
 }

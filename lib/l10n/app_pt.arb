@@ -118,6 +118,8 @@
   "pickerTypeOnly": "Somente digitar ou colar",
   "cameraCannotReadLanguage": "A câmera não consegue ler este idioma. Use Digitar texto.",
   "scanResultNote": "O texto digitalizado pode conter erros. Para a tradução mais precisa, use Digitar texto.",
-  "reviewCardTitle": "Gostando do Peshat?",
-  "reviewCardSubtitle": "Uma avaliação ajuda outras pessoas a encontrá-lo."
+  "storageLabel": "Armazenamento",
+  "storageClearButton": "Limpar",
+  "storageClearConfirm": "Excluir os arquivos exportados, as fontes PDF salvas e as fotos de digitalização temporárias? As fontes serão obtidas novamente quando necessário.",
+  "storageFullMessage": "Não há espaço livre suficiente no seu celular. Libere espaço e tente novamente."
 }
