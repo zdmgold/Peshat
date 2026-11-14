@@ -46,7 +46,7 @@ class NotificationService {
       const InitializationSettings(android: androidInit, iOS: iosInit),
     );
 
-    final enabled = prefs.getBool(_keyEnabled) ?? false;
+    final enabled = prefs.getBool(_keyEnabled) ?? true;
     if (enabled) {
       await _cancelReminder();
       await _scheduleReminder(prefs);

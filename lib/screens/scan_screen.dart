@@ -67,6 +67,13 @@ class _ScanScreenState extends State<ScanScreen> {
         .addPostFrameCallback((_) => ReviewPrompt.instance.refresh());
   }
 
+  /// Back on the home screen: ask the one-time reminder permission first,
+  /// then let the review popup be considered (never both at once).
+  Future<void> _afterReturn() async {
+    await widget.notification.askPermissionOnce();
+    ReviewPrompt.instance.refresh();
+  }
+
   Future<void> _openSettings() async {
     await Navigator.push(
       context,
@@ -81,7 +88,7 @@ class _ScanScreenState extends State<ScanScreen> {
         ),
       ),
     );
-    ReviewPrompt.instance.refresh();
+    _afterReturn();
   }
 
   Future<void> _openHistory() async {
@@ -91,7 +98,7 @@ class _ScanScreenState extends State<ScanScreen> {
         builder: (_) => HistoryScreen(history: widget.history),
       ),
     );
-    ReviewPrompt.instance.refresh();
+    _afterReturn();
   }
 
   Future<void> _openTextTranslate() async {
@@ -104,7 +111,7 @@ class _ScanScreenState extends State<ScanScreen> {
         ),
       ),
     );
-    ReviewPrompt.instance.refresh();
+    _afterReturn();
   }
 
   Future<void> _pickTargetLanguage() async {
@@ -184,7 +191,7 @@ class _ScanScreenState extends State<ScanScreen> {
           ),
         ),
       );
-      ReviewPrompt.instance.refresh();
+      _afterReturn();
     } catch (_) {
     } finally {
       if (mounted) setState(() => _isScanning = false);
@@ -215,7 +222,7 @@ class _ScanScreenState extends State<ScanScreen> {
             ),
           ),
         );
-        ReviewPrompt.instance.refresh();
+        _afterReturn();
       } else {
         if (_redirectIfUnreadable()) return;
         await Navigator.push(
@@ -229,7 +236,7 @@ class _ScanScreenState extends State<ScanScreen> {
             ),
           ),
         );
-        ReviewPrompt.instance.refresh();
+        _afterReturn();
       }
     } catch (_) {
       if (mounted) {

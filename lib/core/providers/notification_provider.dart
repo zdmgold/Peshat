@@ -9,7 +9,18 @@ class NotificationProvider extends ValueNotifier<bool> {
   final SharedPreferences prefs;
 
   NotificationProvider(this.prefs)
-      : super(prefs.getBool('notif_reminder_enabled') ?? false);
+      : super(prefs.getBool('notif_reminder_enabled') ?? true);
+
+  static const _keyAsked = 'notif_perm_asked';
+
+  /// Reminders are on by default. The OS permission is asked once, after the
+  /// first completed translation; if it is refused the switch goes off.
+  Future<void> askPermissionOnce() async {
+    if (!value || prefs.getBool(_keyAsked) == true) return;
+    if ((prefs.getInt('lifetime_translations_count') ?? 0) < 1) return;
+    await prefs.setBool(_keyAsked, true);
+    await enable();
+  }
 
   /// Request permission and enable. Returns true if the OS granted
   /// permission and the reminder was scheduled.

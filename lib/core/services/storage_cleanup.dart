@@ -3,8 +3,8 @@ import 'package:flutter/foundation.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-const int kExportsCapBytes = 50 * 1024 * 1024;
-const int kScanPhotosCapBytes = 50 * 1024 * 1024;
+const int kExportsCapBytes = 200 * 1024 * 1024;
+const int kScanPhotosCapBytes = 200 * 1024 * 1024;
 const Duration _kMinAge = Duration(days: 1);
 const String _kPrefScanPaths = 'scan_photo_paths';
 const int _kMaxTrackedScanPaths = 300;
